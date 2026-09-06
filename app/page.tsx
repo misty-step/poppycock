@@ -358,6 +358,10 @@ function subscribeNetwork(change: () => void) {
   };
 }
 
+function createRequestId() {
+  return crypto.getRandomValues(new Uint32Array(4)).join("-");
+}
+
 function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exit: () => void }) {
   const state = useQuery(api.rooms.getRoomState, { roomId, guestToken: token });
   const game = useQuery(api.game.view, { roomId, guestToken: token });
@@ -381,7 +385,7 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
   const [busy, setBusy] = useState(false);
   const [showShare, setShowShare] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [requestId, setRequestId] = useState(() => crypto.randomUUID());
+  const [requestId, setRequestId] = useState(createRequestId);
   if (!state || game === undefined)
     return (
       <div className="loading">
@@ -409,7 +413,7 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
     setError("");
     try {
       await start({ roomId, guestToken: token, requestId });
-      setRequestId(crypto.randomUUID());
+      setRequestId(createRequestId());
     } catch (cause) {
       setError(message(cause));
     } finally {

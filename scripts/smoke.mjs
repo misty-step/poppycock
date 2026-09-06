@@ -13,7 +13,7 @@ if (local.POPPYCOCK_LOCAL !== "true" || !local.CONVEX_DEPLOYMENT?.startsWith("an
     "Smoke play is restricted to this checkout's anonymous local deployment. Run pnpm bootstrap and pnpm dev first.",
   );
 }
-const base = "http://localhost:3210";
+const base = process.env.POPPYCOCK_BASE_URL ?? "http://localhost:3210";
 const client = new ConvexHttpClient(local.NEXT_PUBLIC_CONVEX_URL);
 const evidenceDirectory = process.env.POPPYCOCK_EVIDENCE_DIR ?? "evidence";
 const evidence = join(root, evidenceDirectory);
@@ -82,6 +82,11 @@ try {
     await page.goto(base);
     await expect(page.getByLabel("What should we call you?")).toBeVisible();
   }
+  report.browserSecurity = await players.Ada.page.evaluate(() => ({
+    secureContext: window.isSecureContext,
+    randomUuidAvailable: typeof crypto.randomUUID === "function",
+    randomValuesAvailable: typeof crypto.getRandomValues === "function",
+  }));
   await capture("Ada", "front-door-desktop.png");
   await capture("Bea", "front-door-phone.png");
   await players.Ada.page.getByLabel("What should we call you?").fill("Ada");

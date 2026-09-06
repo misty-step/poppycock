@@ -27,7 +27,18 @@ pnpm dev
 
 Open **http://localhost:3210**. The bootstrap uses a real anonymous local Convex deployment, isolated from other projects, with backend ports **3220/3221**. It generates local server secrets and seeds the curated deck. No Convex production account is required. Initial setup needs network access to download dependencies and the Convex local backend binary.
 
-Use separate browser profiles or private windows for separate players. Tabs in one browser deliberately share one guest identity. For phones on the same network, use the development machine’s LAN address and configure the browser-visible Convex URL accordingly; localhost URLs refer to the phone itself. A hosted setup should use HTTPS for both application and Convex.
+Use separate browser profiles or private windows for separate players. Tabs in one browser deliberately share one guest identity.
+
+For phones on the same network, put the development machine’s LAN IP in both browser-visible URLs in `.env.local`. For example, if that machine is `192.168.1.50`:
+
+```dotenv
+NEXT_PUBLIC_CONVEX_URL=http://192.168.1.50:3220
+NEXT_PUBLIC_CONVEX_SITE_URL=http://192.168.1.50:3221
+```
+
+Restart `pnpm dev`, then open `http://192.168.1.50:3210` on each phone. Next’s dev-only assets allow only the explicitly configured hostname, not wildcard origins. Localhost URLs refer to the phone itself. Ports 3210/3220/3221 must be reachable from that phone; VPNs, guest Wi-Fi isolation, or a firewall can prevent access. The scripts do not change network/firewall policy. A hosted setup should use HTTPS for both application and Convex.
+
+To repeat the browser exercise over that same non-loopback HTTP origin, run `POPPYCOCK_BASE_URL=http://192.168.1.50:3210 pnpm smoke`. This covers the browser security context used by ordinary HTTP LAN development, where `crypto.randomUUID()` is unavailable.
 
 ```sh
 pnpm check       # vendored package build, application types, regression tests
