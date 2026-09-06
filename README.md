@@ -71,3 +71,5 @@ The room code is an invitation, not a password. People with it may join as spect
 The **72-card deck** contains 18 cards each in Odd words, Curious objects, Wild nature, and Space oddities: twelve complete games before a room exhausts the pool. The longest answer is 90 characters, comfortably below the 180-character bluff limit. Cards use original wording grounded in retained source references, not commercial Balderdash cards. Sources are shown at reveal. See [`docs/content-provenance.md`](docs/content-provenance.md) for the deck and provenance policy.
 
 Gameplay has no runtime LLM or external content-fetch dependency: the seeded database is the deck. Local reset is repeatable and seeding is idempotent by stable card key.
+
+The complete game passed a four-browser six-round exercise from an independent clean clone, with authoritative final scores **18 / 8 / 0**, host transfer, reconnection, and a four-player rematch. Inspect the [verification record](docs/verification.md), [sanitized round-by-round trace](evidence/multiplayer-smoke.json), [phone voting](evidence/voting-phone.png), and [final standings](evidence/final-standings-desktop.png).

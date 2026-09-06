@@ -1,0 +1,12 @@
+{
+  "sourceRevision": "b3bec52847b6b1e6132d057e8eb4c5dae2af5d6c",
+  "parlorRevision": "90a813c83d09fd3ee96dcd35aeb64cee0ca7121e",
+  "verifiedAt": "2026-09-06T22:12:56.824Z",
+  "issuerStatus": 200,
+  "renewalStatus": 200,
+  "accessTokenRotated": true,
+  "playerIdentityPreserved": true,
+  "missingCookieRecoveryStatus": 401,
+  "crossOriginStatus": 403,
+  "identityInjectionStatus": 400
+}
