@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CI: "true"
+      NEXT_TELEMETRY_DISABLED: "1"
+      # Only the job's anonymous local backend; no cloud credentials or services.
+      NEXT_PUBLIC_CONVEX_URL: http://127.0.0.1:3220
+      NEXT_PUBLIC_CONVEX_SITE_URL: http://127.0.0.1:3221
+      POPPYCOCK_EVIDENCE_DIR: test-results/multiplayer
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - name: Install locked workspace dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build genuine vendored Parlor packages
+        run: pnpm build:parlor
+      - name: Typecheck vendored Parlor packages
+        run: pnpm --filter './vendor/parlor/**' -r exec tsc --noEmit -p tsconfig.json
+      - name: Exercise vendored Parlor contracts
+        run: pnpm test:parlor
+      - name: Typecheck Poppycock
+        run: pnpm typecheck
+      - name: Exercise game and issuer contracts
+        run: pnpm test
+      - name: Build production application
+        run: pnpm build
+      - name: Install isolated browser runtime
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Play a real multiplayer game against anonymous local Convex
+        run: pnpm smoke:local
+        env:
+          POPPYCOCK_REVISION: ${{ github.sha }}
+      - name: Retain sanitized browser and scoring evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: multiplayer-evidence-${{ github.sha }}
+          path: test-results/multiplayer/
+          if-no-files-found: ignore

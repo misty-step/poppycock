@@ -1,0 +1,52 @@
+{
+  "name": "poppycock",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:parlor": "pnpm --filter './vendor/parlor/**' -r build",
+    "build": "pnpm build:parlor && next build",
+    "dev": "node scripts/dev.mjs",
+    "bootstrap": "node scripts/bootstrap.mjs",
+    "reset": "node scripts/reset.mjs",
+    "dev:web": "next dev --hostname 0.0.0.0 --port 3210",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "test:parlor": "vitest run --config scripts/vitest.vendor.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "smoke:local": "node scripts/smoke-local.mjs",
+    "format": "oxfmt app lib convex tests scripts *.json *.ts .github",
+    "format:check": "oxfmt --check app lib convex tests scripts *.json *.ts .github",
+    "check": "pnpm build:parlor && pnpm typecheck && pnpm test"
+  },
+  "dependencies": {
+    "@fontsource/atkinson-hyperlegible": "5.3.0",
+    "@fontsource/fredoka": "5.3.0",
+    "@parlor/auth": "workspace:*",
+    "@parlor/convex": "workspace:*",
+    "@parlor/core": "workspace:*",
+    "@parlor/react": "workspace:*",
+    "@parlor/web": "workspace:*",
+    "convex": "1.45.0",
+    "effect": "3.22.1",
+    "next": "16.3.4",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "@types/node": "26.0.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "convex-test": "0.0.56",
+    "oxfmt": "0.66.0",
+    "typescript": "7.0.2",
+    "vite": "8.2.2",
+    "vitest": "5.0.0"
+  },
+  "engines": {
+    "node": ">=22.12.0",
+    "pnpm": ">=11"
+  },
+  "packageManager": "pnpm@11.25.0"
+}
