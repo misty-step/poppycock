@@ -79,7 +79,7 @@ The room code is an invitation, not a password. People with it may join as spect
 
 ## Content and evidence
 
-The **72-card deck** contains 18 cards each in Odd words, Curious objects, Wild nature, and Space oddities: twelve complete games before a room exhausts the pool. The longest answer is 90 characters, comfortably below the 180-character bluff limit. Cards use original wording grounded in retained source references, not commercial Balderdash cards. Sources are shown at reveal. See [`docs/content-provenance.md`](docs/content-provenance.md) for the deck and provenance policy.
+The **108-card deck** contains 27 cards each in Odd words, Curious objects, Wild nature, and Space oddities: eighteen complete games before a room exhausts the pool. The longest answer is 90 characters, comfortably below the 180-character bluff limit. Cards use original wording grounded in retained source references, not commercial Balderdash cards. Sources are shown at reveal. See [`docs/content-provenance.md`](docs/content-provenance.md) for the deck and provenance policy.
 
 Gameplay has no runtime LLM or external content-fetch dependency: the seeded database is the deck. Local reset is repeatable and seeding is idempotent by stable card key.
 

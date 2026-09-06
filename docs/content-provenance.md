@@ -2,15 +2,15 @@
 
 ## Collection
 
-`convex/content.ts` exports **72 cards** as `seedCards: SeedCard[]`. Each card has a stable key, category, original question, concise answer, and retained source title, URL, and explanatory note.
+`convex/content.ts` exports **108 cards** as `seedCards: SeedCard[]`. Each card has a stable key, category, original question, concise answer, and retained source title, URL, and explanatory note.
 
-| Category        |  Cards | Scope                                                                            |
-| --------------- | -----: | -------------------------------------------------------------------------------- |
-| Odd words       |     18 | Uncommon vocabulary and explicitly historical senses                             |
-| Curious objects |     18 | Tools, household vessels, printing equipment, and bathing or ceremonial objects  |
-| Wild nature     |     18 | Marine adaptations, animal behavior, biological materials, and ecosystems        |
-| Space oddities  |     18 | Spaceflight incidents, engineering, astronomical naming, and planetary phenomena |
-| **Total**       | **72** | Enough distinct cards for twelve six-round games before exhausting the pool      |
+| Category        |   Cards | Scope                                                                            |
+| --------------- | ------: | -------------------------------------------------------------------------------- |
+| Odd words       |      27 | Uncommon vocabulary and explicitly historical senses                             |
+| Curious objects |      27 | Tools, household vessels, printing equipment, and bathing or ceremonial objects  |
+| Wild nature     |      27 | Marine adaptations, animal behavior, biological materials, and ecosystems        |
+| Space oddities  |      27 | Spaceflight incidents, engineering, astronomical naming, and planetary phenomena |
+| **Total**       | **108** | Enough distinct cards for eighteen six-round games before exhausting the pool    |
 
 Answers are written below the game's 180-character bluff limit. The collection mixes definitions, purposes, mechanisms, and historical explanations rather than requiring exact dates or numerical estimates. Category counts describe this seed collection, not a promise about the game's random draw order.
 

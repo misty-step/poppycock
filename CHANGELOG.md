@@ -9,3 +9,4 @@
 - Genuine app-local Parlor room, match, authentication, heartbeat, wake-lock, QR, and abandonment lifecycle integration, pinned to `90a813c83d09fd3ee96dcd35aeb64cee0ca7121e`.
 - Reproducible anonymous local Convex bootstrap/reset, private-repository CI, and a self-contained four-browser game exercise that emits sanitized screenshots and authoritative scoring evidence.
 - Explicitly configured HTTP LAN development works without wildcard dev origins or secure-context-only UUID APIs; the browser exercise can target that origin directly.
+- Expanded the sourced deck from 72 to 108 cards (27 per category) using additional Webster 1913, NOAA, and NASA Science pages retrieved on 2026-09-06.
