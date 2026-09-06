@@ -1,0 +1,183 @@
+{
+  "sourceRevision": "29336573cc2ce975b61aa9ac39642ccd8300df30",
+  "parlorRevision": "90a813c83d09fd3ee96dcd35aeb64cee0ca7121e",
+  "startedAt": "2026-09-06T22:47:19.170Z",
+  "origin": "http://<configured-lan-host>:3210",
+  "rounds": [
+    {
+      "round": 1,
+      "question": "Why did Apollo 15 use a falcon feather alongside a geological hammer on the Moon?",
+      "category": "Space oddities",
+      "truth": "To drop them together and show that both fall at the same rate without air resistance.",
+      "source": "https://science.nasa.gov/resource/the-apollo-15-hammer-feather-drop/",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 3,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 1,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "question": "What improvised piece of sports equipment did Alan Shepard make from a lunar sample-tool handle?",
+      "category": "Space oddities",
+      "truth": "A golf club, by attaching the head of a six-iron.",
+      "source": "https://www.nasa.gov/history/50-years-ago-apollo-14-lands-at-fra-mauro/",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 6,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 4,
+          "gained": 3
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "question": "What sort of people lend their names to craters on Mercury?",
+      "category": "Space oddities",
+      "truth": "Deceased artists, musicians, and writers.",
+      "source": "https://science.nasa.gov/mercury/facts/",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 9,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 5,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "question": "Where do the names of Uranus's moons come from, instead of the usual classical gods?",
+      "category": "Space oddities",
+      "truth": "Characters in works by William Shakespeare and Alexander Pope.",
+      "source": "https://science.nasa.gov/uranus/facts/",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 12,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 6,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "question": "In its literal older sense, what activity is 'lucubration'?",
+      "category": "Odd words",
+      "truth": "Studying at night by candlelight.",
+      "source": "https://www.websters1913.com/words/Lucubration",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 15,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 7,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "question": "What sort of knowledge is 'sciolism'?",
+      "category": "Odd words",
+      "truth": "Shallow or superficial knowledge.",
+      "source": "https://www.websters1913.com/words/Sciolism",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 18,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 8,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Three independent guest identities join by code; real Parlor QR invitation renders in the lobby.",
+    "Unauthenticated room game read rejected; writing hides truth, source, and options.",
+    "Explicit host departure transfers host to Bea; rejoining Ada keeps identity, scores, and match eligibility.",
+    "Late joiner can watch but cannot submit; immutable three-player eligibility preserved.",
+    "Phone network interruption and reload preserve the same player and current turn.",
+    "Six rounds have authoritative expected scores18/8/0, private shuffled choices, duplicate-bluff attribution, rejected self-votes, and idempotent submission retries.",
+    "Rematch includes former spectator, resets all scores, draws unseen content, and fits390px screens without horizontal overflow."
+  ],
+  "screenshots": ["lan-writing-phone.png", "lan-final-standings-phone.png"],
+  "browserSecurity": {
+    "secureContext": false,
+    "randomUuidAvailable": false,
+    "randomValuesAvailable": true
+  },
+  "finalScores": [
+    {
+      "name": "Ada",
+      "score": 18
+    },
+    {
+      "name": "Bea",
+      "score": 8
+    },
+    {
+      "name": "Cy",
+      "score": 0
+    }
+  ],
+  "completedAt": "2026-09-06T22:47:29.333Z",
+  "result": "passed"
+}

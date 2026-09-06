@@ -8,3 +8,4 @@
 - Seventy-two original or public-domain-grounded cards across four categories, with retained provenance and idempotent database seeding.
 - Genuine app-local Parlor room, match, authentication, heartbeat, wake-lock, QR, and abandonment lifecycle integration, pinned to `90a813c83d09fd3ee96dcd35aeb64cee0ca7121e`.
 - Reproducible anonymous local Convex bootstrap/reset, private-repository CI, and a self-contained four-browser game exercise that emits sanitized screenshots and authoritative scoring evidence.
+- Explicitly configured HTTP LAN development works without wildcard dev origins or secure-context-only UUID APIs; the browser exercise can target that origin directly.
