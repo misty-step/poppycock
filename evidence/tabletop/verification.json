@@ -1,0 +1,258 @@
+{
+  "sourceRevision": "69e0984",
+  "parlorRevision": "56342bd910a58f255483afdf5a92d3fc4fcc0ae2",
+  "environment": "Anonymous local Convex and real Chromium browser contexts; no production deployment.",
+  "auditScope": "Exploratory interaction audit during implementation, including the fixes frozen in fe914fc. The separately linked full-game receipt reruns the committed source.",
+  "interactionAudit": {
+    "startedAt": "2026-09-07T21:16:32.611Z",
+    "completedAt": "2026-09-07T21:47:58.019Z",
+    "result": "passed",
+    "players": 12,
+    "checks": [
+      "Tabs support arrow-key focus and Enter activation; empty name and short code focus associated errors and preserve field values.",
+      "Twelve real guests join, including the prefilled invite-link flow; full names and roster fit 320px. Leave confirmation traps focus, starts on Stay, cancels with Escape, restores menu focus, and preserves membership.",
+      "At 200% root text, rules and invitations remain bounded and scrollable on 320px; fixed intrinsic grid sizing and an overflowing room code found by this audit.",
+      "Writing drafts survive reload; other submissions do not steal typing focus; accepted answers focus their receipt. End-writing defaults to Keep writing, cancels safely, and restores focus.",
+      "Rules initially focus their heading rather than jumping to the last disclosure. Modal gutters stay 16px during text resizing.",
+      "Thirteen choices including 180-character unbroken bluffs fit 320px; own answer is disabled. Space/arrow keys select without submitting; Lock vote focuses an accepted receipt, which remains private and survives reload.",
+      "Active voting fits 390px portrait and 667×375 landscape; reduced motion removes button transitions; forced-colors choices remain labelled and outlined.",
+      "Canceled reveal keeps truth private; confirmed host reveal skips outstanding votes and shows linked provenance. A non-host continues immediately. An exact-truth author gets a clear two-point/no-vote receipt without radio controls.",
+      "A real all-skipped rematch, advanced through authorized host mutations, renders a twelve-way tie with shared rank 1 and all twelve winners."
+    ],
+    "textResizeBefore": {
+      "font": "32px",
+      "document": 320,
+      "scroll": 352,
+      "dialogClient": 286,
+      "dialogScroll": 349
+    },
+    "textResizeAfter": {
+      "font": "32px",
+      "document": 320,
+      "scroll": 320,
+      "dialogClient": 286,
+      "dialogScroll": 286,
+      "scrollTop": 0,
+      "focused": "How to play"
+    },
+    "contrast": {
+      "body": 13.56,
+      "secondary on mint": 4.57,
+      "secondary on white": 5.59,
+      "truth": 6.16,
+      "error": 6.01,
+      "input boundary": 3.25,
+      "focus on selected": 3.81
+    },
+    "motion": {
+      "normal": "0.15s",
+      "reduced": "0s"
+    },
+    "landscape": {
+      "width": 667,
+      "scroll": 667,
+      "overflow": []
+    }
+  },
+  "checks": {
+    "applicationTests": 19,
+    "productionBuild": "passed",
+    "designFormat": {
+      "cli": "@google/design.md@0.4.0",
+      "errors": 0,
+      "warnings": 3,
+      "note": "The alpha linter does not count CSS border, input-boundary, or focus-ring usage as component token references. These three colors are used in the implementation."
+    },
+    "format": "passed"
+  },
+  "limitations": [
+    "Chromium mobile/touch emulation, not physical-device or screen-reader testing.",
+    "The hosted deployment was not updated or exercised.",
+    "The twelve-way tie was prepared using real authorized host mutations, not by manually playing an additional six rounds."
+  ],
+  "retention": "Six deliberately selected design-reference images and compact receipts are retained here. Full fresh multiplayer screenshots are retained by the revision-specific CI artifact; exploratory captures remain under ignored test-results.",
+  "references": [
+    "front-door-desktop.png",
+    "voting-phone.png",
+    "reveal-phone.png",
+    "final-standings-desktop.png",
+    "rules-200-percent-320.png",
+    "leave-confirmation-320.png"
+  ],
+  "fullGame": {
+    "sourceRevision": "69e0984",
+    "result": "passed",
+    "startedAt": "2026-09-07T22:08:07.470Z",
+    "completedAt": "2026-09-07T22:08:18.373Z",
+    "rounds": [
+      {
+        "round": 1,
+        "question": "What is the dark 'sand' in Titan's vast dune fields made from?",
+        "category": "Space oddities",
+        "truth": "Carbon-rich hydrocarbon grains rather than ordinary rocky sand.",
+        "source": "https://science.nasa.gov/saturn/moons/titan/facts/",
+        "scores": [
+          {
+            "name": "Ada",
+            "score": 3,
+            "gained": 3
+          },
+          {
+            "name": "Bea",
+            "score": 1,
+            "gained": 1
+          },
+          {
+            "name": "Cy",
+            "score": 0,
+            "gained": 0
+          }
+        ]
+      },
+      {
+        "round": 2,
+        "question": "Why did Apollo 15 use a falcon feather alongside a geological hammer on the Moon?",
+        "category": "Space oddities",
+        "truth": "To drop them together and show that both fall at the same rate without air resistance.",
+        "source": "https://science.nasa.gov/resource/the-apollo-15-hammer-feather-drop/",
+        "scores": [
+          {
+            "name": "Ada",
+            "score": 6,
+            "gained": 3
+          },
+          {
+            "name": "Bea",
+            "score": 4,
+            "gained": 3
+          },
+          {
+            "name": "Cy",
+            "score": 0,
+            "gained": 0
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "question": "Why did Max Ernst lay paper on an old wooden floor and rub over it with a pencil?",
+        "category": "Art & music",
+        "truth": "To capture the wood's texture as the starting point for imagined pictures.",
+        "source": "https://www.tate.org.uk/art/art-terms/f/frottage",
+        "scores": [
+          {
+            "name": "Ada",
+            "score": 9,
+            "gained": 3
+          },
+          {
+            "name": "Bea",
+            "score": 5,
+            "gained": 1
+          },
+          {
+            "name": "Cy",
+            "score": 0,
+            "gained": 0
+          }
+        ]
+      },
+      {
+        "round": 4,
+        "question": "What was a printer's 'tympan' used for?",
+        "category": "Curious objects",
+        "truth": "Holding a blank sheet in position to be pressed onto the printing form.",
+        "source": "https://www.websters1913.com/words/Tympan",
+        "scores": [
+          {
+            "name": "Ada",
+            "score": 12,
+            "gained": 3
+          },
+          {
+            "name": "Bea",
+            "score": 6,
+            "gained": 1
+          },
+          {
+            "name": "Cy",
+            "score": 0,
+            "gained": 0
+          }
+        ]
+      },
+      {
+        "round": 5,
+        "question": "What sound does a creature make when it 'ululates'?",
+        "category": "Odd words",
+        "truth": "A howl or wail, as of a dog or wolf.",
+        "source": "https://www.websters1913.com/words/Ululate",
+        "scores": [
+          {
+            "name": "Ada",
+            "score": 15,
+            "gained": 3
+          },
+          {
+            "name": "Bea",
+            "score": 7,
+            "gained": 1
+          },
+          {
+            "name": "Cy",
+            "score": 0,
+            "gained": 0
+          }
+        ]
+      },
+      {
+        "round": 6,
+        "question": "In its literal older sense, what activity is 'lucubration'?",
+        "category": "Odd words",
+        "truth": "Studying at night by candlelight.",
+        "source": "https://www.websters1913.com/words/Lucubration",
+        "scores": [
+          {
+            "name": "Ada",
+            "score": 18,
+            "gained": 3
+          },
+          {
+            "name": "Bea",
+            "score": 8,
+            "gained": 1
+          },
+          {
+            "name": "Cy",
+            "score": 0,
+            "gained": 0
+          }
+        ]
+      }
+    ],
+    "finalScores": [
+      {
+        "name": "Ada",
+        "score": 18
+      },
+      {
+        "name": "Bea",
+        "score": 8
+      },
+      {
+        "name": "Cy",
+        "score": 0
+      }
+    ],
+    "checks": [
+      "Three independent guest identities join by code; real Parlor QR invitation renders in the lobby.",
+      "Unauthenticated room game read rejected; writing hides truth, source, and options.",
+      "Explicit host departure transfers host to Bea; rejoining Ada keeps identity, scores, and match eligibility.",
+      "Late joiner can watch but cannot submit; immutable three-player eligibility preserved.",
+      "Phone network interruption and reload preserve the same player and current turn.",
+      "Six rounds have authoritative expected scores18/8/0, private shuffled choices, duplicate-bluff attribution, rejected self-votes, and idempotent submission retries.",
+      "Rematch includes former spectator, resets all scores, draws unseen content, and fits390px screens without horizontal overflow."
+    ]
+  },
+  "interfaceRevision": "fe914fc"
+}

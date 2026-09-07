@@ -194,7 +194,7 @@ Use the existing twelve illustrations, without cropping ears or accessories. Typ
 
 Use shadcn's **Base Nova / Base UI** source for Button, Input, Textarea, Tabs, Dialog, AlertDialog, DropdownMenu, and RadioGroup. Customize the actual local component recipes to the tokens above. Install only used components; do not add an entire gallery. Keep game ownership in real Convex/Parlor. Do not replace those services with demo state or optimistic score calculations.
 
-The accepted-vote receipt uses the authenticated viewer's `game.view.ownVoteId`; do not infer a chosen answer from the aggregate `voted` flag. Deploy the matching Convex backend before the web application. Other players' votes remain private until reveal.
+The accepted-vote receipt uses the authenticated viewer's `game.view.ownVoteId`; do not infer a chosen answer from the `voted` flag. Deploy the matching Convex backend before the web application. Other players' votes remain private until reveal.
 
 Buttons have a 48px primary touch target, visible focus, a stable action label while pending, and an adjacent explanation when unavailable. Icon-only buttons have at least a 44px hit area and a useful accessible name. Use one primary action per peer group. Links stay links; Base UI Button is not a navigation substitute.
 
@@ -238,3 +238,5 @@ There are no turn timers, reveal delays, or total game caps. Progress counts rep
 - Don't make disabled controls or color-only markers explain themselves.
 - Don't add timers, stock marketing sections, tooltip-only explanations, unused tokens, or new artwork families.
 - Don't treat shadcn defaults or a passing DESIGN.md linter as proof that the actual screens are usable.
+
+Selected local reference screens: [entrance](evidence/tabletop/front-door-desktop.png), [phone voting](evidence/tabletop/voting-phone.png), [reveal](evidence/tabletop/reveal-phone.png), [final scores](evidence/tabletop/final-standings-desktop.png), [enlarged rules](evidence/tabletop/rules-200-percent-320.png), and [leave confirmation](evidence/tabletop/leave-confirmation-320.png). The [compact verification record](evidence/tabletop/verification.json) names the source revisions, measured results, and limitations. These are deliberately selected design references; full fresh multiplayer captures are retained by the revision-specific CI artifact. Browser emulation is not physical-device testing or proof of the current hosted release.
