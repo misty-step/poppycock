@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "poppycock",
+  "account_id": "b069014f6a46558ea9146fb6c4ff8f6c",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-09-06",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "send_metrics": false,
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+  },
+  "routes": [
+    {
+      "pattern": "poppycock.mistystep.io",
+      "custom_domain": true,
+    },
+  ],
+  "vars": {
+    "NEXT_PUBLIC_CONVEX_URL": "https://fiery-spaniel-734.convex.cloud",
+    "NEXT_PUBLIC_CONVEX_SITE_URL": "https://fiery-spaniel-734.convex.site",
+    "PARLOR_GUEST_TOKEN_AUDIENCE": "poppycock",
+  },
+}

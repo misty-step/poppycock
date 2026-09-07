@@ -2,6 +2,8 @@
 
 A phone-first bluffing party game for **3–12 people**. One peculiar question, a table of convincing lies, and exactly one truth. Six rounds; no accounts, payments, or AI service required.
 
+Hosted play: **https://poppycock.mistystep.io** — no account. Local development remains on this machine.
+
 ## Play
 
 1. One person starts a table and shares its four-character code or QR invite.
