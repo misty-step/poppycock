@@ -11,3 +11,4 @@
 - Explicitly configured HTTP LAN development works without wildcard dev origins or secure-context-only UUID APIs; the browser exercise can target that origin directly.
 - Expanded the sourced deck from 72 to 108 cards (27 per category) using additional Webster 1913, NOAA, and NASA Science pages retrieved on 2026-09-06.
 - Hosted the 108-card game at https://poppycock.mistystep.io on Cloudflare Workers with a dedicated Convex production deployment (`fiery-spaniel-734`).
+- Proved one three-browser round on the hosted HTTPS origin (`pnpm smoke:public`), separate from the local Convex smoke client.

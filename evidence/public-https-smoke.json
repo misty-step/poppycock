@@ -1,0 +1,69 @@
+{
+  "sourceRevision": "88029e7098bbad5f723f6a61709d6f7d7e645ff2",
+  "parlorRevision": "90a813c83d09fd3ee96dcd35aeb64cee0ca7121e",
+  "startedAt": "2026-09-07T00:49:53.969Z",
+  "origin": "https://poppycock.mistystep.io",
+  "convexUrl": "https://fiery-spaniel-734.convex.cloud",
+  "rounds": [
+    {
+      "round": 1,
+      "question": "What startling escape tactic can some sea cucumbers use when threatened?",
+      "category": "Wild nature",
+      "truth": "Eject some internal organs from their rear end, then grow the missing parts back.",
+      "source": "https://oceanservice.noaa.gov/facts/seacuke.html",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 3,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 1,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Three isolated HTTPS browsers acquired distinct guest credentials and joined one room.",
+    "Host started a match; writing hid truth, source, and options.",
+    "All three locked bluffs; voting hid truth labels, authors, and voters.",
+    "Reveal showed sourced truth and authoritative 3 / 1 / 0 first-round scores."
+  ],
+  "screenshots": [
+    "public-https-front-door-desktop.png",
+    "public-https-front-door-phone.png",
+    "public-https-lobby-desktop.png",
+    "public-https-writing-phone.png",
+    "public-https-voting-phone.png",
+    "public-https-reveal-desktop.png",
+    "public-https-reveal-phone.png"
+  ],
+  "browserSecurity": {
+    "secureContext": true,
+    "randomUuidAvailable": true,
+    "randomValuesAvailable": true
+  },
+  "finalScores": [
+    {
+      "name": "Ada",
+      "score": 3
+    },
+    {
+      "name": "Bea",
+      "score": 1
+    },
+    {
+      "name": "Cy",
+      "score": 0
+    }
+  ],
+  "completedAt": "2026-09-07T00:50:01.394Z",
+  "result": "passed"
+}

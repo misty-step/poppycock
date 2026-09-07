@@ -15,6 +15,7 @@
     "test:parlor": "vitest run --config scripts/vitest.vendor.mjs",
     "smoke": "node scripts/smoke.mjs",
     "smoke:local": "node scripts/smoke-local.mjs",
+    "smoke:public": "node scripts/smoke-public.mjs",
     "format": "oxfmt app lib convex tests scripts *.json *.ts .github",
     "format:check": "oxfmt --check app lib convex tests scripts *.json *.ts .github",
     "check": "pnpm build:parlor && pnpm typecheck && pnpm test",

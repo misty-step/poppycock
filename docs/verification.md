@@ -77,14 +77,21 @@ Inspect the [sanitized LAN receipt](../evidence/lan-smoke.json), [LAN phone writ
 
 This verifies the application's actual non-loopback origin and backend path from Chromium. It does not claim physical-phone hardware testing or reachability through a particular Wi-Fi network, VPN, or firewall; none of those policies was changed.
 
+## Public HTTPS verification
+
+`pnpm smoke` talks to `.env.local`'s anonymous Convex backend and cannot prove the hosted origin. `pnpm smoke:public` uses three isolated Chromium contexts against **https://poppycock.mistystep.io** and queries `https://fiery-spaniel-734.convex.cloud` with guest tokens from those browsers only.
+
+At source revision `88029e7098bbad5f723f6a61709d6f7d7e645ff2` that exercise passed: join, start, write, vote, and reveal for one round, with secure-context `true` and authoritative scores **Ada 3, Bea 1, Cy 0**. Inspect [`public-https-smoke.json`](../evidence/public-https-smoke.json), [lobby](../evidence/public-https-lobby-desktop.png), [phone writing](../evidence/public-https-writing-phone.png), [phone voting](../evidence/public-https-voting-phone.png), and [desktop reveal](../evidence/public-https-reveal-desktop.png). No guest tokens or cookies are in the receipt.
+
+This is not a six-round or rematch exercise. Those remain documented above on the local and LAN origins.
+
 ## Reproduce
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm exec playwright install chromium
 pnpm smoke:local
+pnpm smoke:public
 ```
 
-The self-contained command needs ports 3210/3220/3221 free, downloads the real Convex backend if needed, seeds it, starts Next.js, plays the game, records evidence, and stops both servers. For a running `pnpm dev`, use `pnpm smoke` instead. Set `CHROMIUM_PATH` to use an existing Chromium installation. `POPPYCOCK_REVISION` labels the source revision; `POPPYCOCK_EVIDENCE_DIR` selects an output directory. CI uses a fresh `test-results/multiplayer/` directory so failed runs cannot upload old tracked evidence as if it were new.
-
-No paid infrastructure was required for the local exercise. Public hosting now uses https://poppycock.mistystep.io (Cloudflare Worker) and the dedicated Convex production deployment `fiery-spaniel-734`. That origin was verified for page load, guest acquire, and room creation; it is not a substitute for the four-browser scoring exercise above.
+The self-contained local command needs ports 3210/3220/3221 free, downloads the real Convex backend if needed, seeds it, starts Next.js, plays the game, records evidence, and stops both servers. For a running `pnpm dev`, use `pnpm smoke` instead. `pnpm smoke:public` needs network access to the hosted Worker and Convex deployment. Set `CHROMIUM_PATH` to use an existing Chromium installation. `POPPYCOCK_REVISION` labels the source revision; `POPPYCOCK_EVIDENCE_DIR` selects an output directory. CI uses a fresh `test-results/multiplayer/` directory so failed runs cannot upload old tracked evidence as if it were new.
