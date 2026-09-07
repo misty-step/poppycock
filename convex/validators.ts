@@ -1,7 +1,11 @@
 import { v } from "convex/values";
-import { AVATAR_IDS } from "../lib/avatars";
+import { AVATAR_IDS, LEGACY_AVATARS } from "../lib/avatars";
 
-export const avatarId = v.union(...AVATAR_IDS.map((id) => v.literal(id)));
+const allAcceptableIds = [
+  ...AVATAR_IDS,
+  ...(Object.keys(LEGACY_AVATARS) as (keyof typeof LEGACY_AVATARS)[]),
+] as const;
+export const avatarId = v.union(...allAcceptableIds.map((id) => v.literal(id)));
 
 export const gamePhase = v.union(
   v.literal("writing"),

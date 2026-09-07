@@ -1,6 +1,6 @@
 import { resolvePlayer } from "@parlor/convex";
 import { v } from "convex/values";
-import type { AvatarId } from "../lib/avatars";
+import { resolveAvatarId, type AvatarId } from "../lib/avatars";
 import { api } from "./_generated/api";
 import { mutation, query } from "./_generated/server";
 import { avatarId } from "./validators";
@@ -10,15 +10,16 @@ export const choose = mutation({
   returns: v.null(),
   handler: async (ctx, args) => {
     const actor = await resolvePlayer(ctx, args.guestToken);
+    const normalizedId = resolveAvatarId(args.avatarId);
     const saved = await ctx.db
       .query("playerAvatars")
       .withIndex("by_player", (q) => q.eq("playerId", actor.playerId))
       .unique();
     if (saved) {
-      if (saved.avatarId !== args.avatarId)
-        await ctx.db.patch(saved._id, { avatarId: args.avatarId });
+      if (saved.avatarId !== normalizedId)
+        await ctx.db.patch(saved._id, { avatarId: normalizedId });
     } else {
-      await ctx.db.insert("playerAvatars", { playerId: actor.playerId, avatarId: args.avatarId });
+      await ctx.db.insert("playerAvatars", { playerId: actor.playerId, avatarId: normalizedId });
     }
     return null;
   },
@@ -49,7 +50,7 @@ export const forRoom = query({
     );
     const result: Record<string, AvatarId> = {};
     for (const choice of choices) {
-      if (choice) result[choice.playerId] = choice.avatarId;
+      if (choice) result[choice.playerId] = resolveAvatarId(choice.avatarId);
     }
     return result;
   },

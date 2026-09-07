@@ -186,7 +186,7 @@ Menus and dialogs have clear backdrops and stay above sticky actions. There are 
 
 Controls and answer options use the 12px radius; large question and dialog surfaces use 20px. Small internal marks use 8px. Account for nested padding so an inner radius does not appear larger than its enclosing surface. Full rounding is reserved for a small avatar backing or radio indicator, not every button and label.
 
-Use the existing twelve illustrations, without cropping ears or accessories. Players can choose their character from the lobby roster or the table options menu at any time; choices stay attached to the player's identity and persist across tables, reloads, and reconnections. The avatar picker uses a compact, keyboard-navigable radiogroup with visible focus, scrolling choices, and a pinned primary save action. Decorative portraits are hidden from assistive technology when the player's adjacent name provides the identity. Do not add a second generic avatar family.
+Use the forty-eight illustrated character portraits sliced from the tabletop avatar sheets. Players can choose their character from the lobby roster or the table options menu at any time; choices stay attached to the player's identity and persist across tables, reloads, and reconnections. The avatar picker uses a compact, keyboard-navigable radiogroup with visible focus, scrolling choices, and a pinned primary save action. Decorative portraits are hidden from assistive technology when the player's adjacent name provides the identity.
 
 ## Components
 
