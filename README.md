@@ -2,20 +2,22 @@
 
 A phone-first bluffing party game for **3–12 people**. One peculiar question, a table of convincing lies, and exactly one truth. Six rounds; no accounts, payments, or AI service required.
 
-Hosted play: **https://poppycock.mistystep.io** — no account. Local development remains on this machine.
+Hosted play: **https://poppycock.mistystep.io** — no account. The untimed, 216-card refinements documented here are verified locally but have **not yet been deployed publicly**. Source-specific receipts and deployment history are in [the verification record](docs/verification.md).
 
 ## Play
 
 1. One person starts a table and shares its four-character code or QR invite.
 2. Everyone joins on their own phone. The host starts when at least three players are present.
-3. **Write:** invent a plausible answer in 90 seconds. Once submitted, it stays locked.
-4. **Vote:** the real answer and the table’s anonymous, shuffled bluffs appear. Pick the truth in 60 seconds; you cannot vote for your own answer.
-5. **Reveal:** see the truth, its source, who wrote each bluff, and who believed it.
-6. Play six rounds, compare final standings, then rematch in the same room.
+3. **Write:** invent a plausible answer at your own pace. Once submitted, it stays locked.
+4. **Vote:** the real answer and the table’s anonymous, shuffled bluffs appear with uniform lowercase styling, spacing, and terminal punctuation. Pick the truth; you cannot vote for your own answer.
+5. **Reveal:** see the truth, its source, who wrote each bluff, and who believed it. Any participant can deal the next question when the table is ready.
+6. Play six untimed rounds, compare final standings, then rematch in the same room.
 
 A correct vote earns **2 points**. Every person fooled earns each author of that bluff **1 point**. Matching answers appear together, not as duplicate choices. An exact normalized match to the truth earns its author **2 points** and makes that author sit out voting. This is literal answer matching, not semantic grading. Ties share the win.
 
-Missing a writing deadline does not prevent voting. Missing a vote earns no voting points. A late joiner watches the current match and can play in the next one. Match eligibility is captured when play starts; reloading does not create a new player. The host can deal the next question immediately after a reveal; after 15 seconds any participant can continue. Parlor transfers a departed or stale host and ends abandoned matches, with a hard 30-minute match limit.
+Writing and voting advance when everyone eligible has finished. Otherwise, only the host can end the phase, through an explicit confirmation: missing bluffs are skipped, and missing votes earn no voting points. Simply waiting never reveals answers. A disconnected participant retains their turn; explicitly leaving the table releases it. A late joiner watches the current match and can play in the next one. Match eligibility is captured when play starts; reloading does not create a new player.
+
+Poppycock opts out of Parlor’s 30-minute match cap. There are no writing, voting, or reveal timers. Parlor still transfers a departed or stale host and abandons a match after everyone has been away for ten minutes; empty-room housekeeping is not a turn timer.
 
 ## Local development
 
@@ -69,9 +71,19 @@ This is one application with one game-owned Convex schema, not a game plus a sep
 - Game mutations compose `beginMatch`, `requireActiveMatch`, and `completeMatch` with game-specific writes in the same transaction. Immutable match participants govern who may submit and vote.
 - `@parlor/auth/server` issues and verifies the access credentials used by those room handlers. The same-origin game endpoint alone may issue a guest credential. A signed HttpOnly continuity cookie preserves identity across short access-token expirations; an arbitrary client-supplied guest ID is never accepted.
 - One `@parlor/react` guest provider lives above all room phases. Real Parlor heartbeat, wake-lock, and QR components/controllers serve the room. `@parlor/core` classifies timestamp-based presence against the local display clock; the server controls actual eligibility and host selection.
-- A game-owned internal schedule calls Parlor’s bounded abandonment sweeper and schedules cursor continuation. Mutation deadline enforcement does not rely on that schedule running on time.
+- A game-owned internal schedule calls Parlor’s bounded abandonment sweeper and schedules cursor continuation. Poppycock starts matches with `hardDeadline: false`; other Parlor consumers retain the default cap unless they explicitly opt out. No scheduled job advances a Poppycock turn.
 
 The exact upstream repository and revision are recorded in [`vendor/parlor/UPSTREAM.json`](vendor/parlor/UPSTREAM.json). Vendored source is not a reimplementation and is not locally patched.
+
+### Upgrading an existing timed deployment
+
+An existing database needs a two-stage cutover; deploying the final schema directly would reject its stored `games.deadline` fields.
+
+1. Use a release worktree at [`4d53b0d`](https://github.com/misty-step/poppycock/commit/4d53b0d), the migration-stage revision. Explicitly target the intended Convex deployment with its authorized configuration; do not use anonymous-local configuration for production.
+2. Deploy that revision’s Convex backend and run its internal **`untimedMigration:run`** action to completion. It pages through old scheduled turn jobs and games, cancels pending turn deadlines, removes stored clocks, and opts still-active matches out of the total cap. It does not reset rooms, submissions, votes, or scores, or reopen terminal matches. At this revision, `pnpm dev` and `pnpm bootstrap` perform the migration automatically for local databases only.
+3. Deploy the current Convex backend, run **`seed:run`** to upsert the 216-card deck, and deploy the matching web build. Ask connected players to reload after the web cutover. Use the migration-stage revision, not the old timed release, if rollback is needed.
+
+Fresh databases need no transitional deployment. Migration code and the obsolete schema field deliberately do not remain in the current source. No production migration or deployment was performed as part of the local refinement verification.
 
 ## Privacy and authority
 
@@ -81,8 +93,8 @@ The room code is an invitation, not a password. People with it may join as spect
 
 ## Content and evidence
 
-The **108-card deck** contains 27 cards each in Odd words, Curious objects, Wild nature, and Space oddities: eighteen complete games before a room exhausts the pool. The longest answer is 90 characters, comfortably below the 180-character bluff limit. Cards use original wording grounded in retained source references, not commercial Balderdash cards. Sources are shown at reveal. See [`docs/content-provenance.md`](docs/content-provenance.md) for the deck and provenance policy.
+The **216-card deck** contains 27 cards each in Odd words, Curious objects, Wild nature, and Space oddities, plus 18 each in **Kitchen secrets, Bright ideas, Living traditions, Remarkable places, Working lives, and Art & music**: thirty-six complete games before a room exhausts the pool. The longest answer is 90 characters, comfortably below the 180-character bluff limit. The original 108 keys and cards are preserved. Cards use original wording grounded in retained source references, not commercial Balderdash cards. Sources are shown at reveal. See [`docs/content-provenance.md`](docs/content-provenance.md) for the deck and provenance policy.
 
 Gameplay has no runtime LLM or external content-fetch dependency: the seeded database is the deck. Local reset is repeatable and seeding is idempotent by stable card key.
 
-The complete game passed a four-browser six-round exercise from an independent clean clone, with authoritative final scores **18 / 8 / 0**, host transfer, reconnection, and a four-player rematch. Inspect the [verification record](docs/verification.md), [sanitized round-by-round trace](evidence/multiplayer-smoke.json), [phone voting](evidence/voting-phone.png), and [final standings](evidence/final-standings-desktop.png).
+The refinement revision passed a four-browser six-round game with authoritative final scores **18 / 8 / 0**, host transfer, reconnection, and a four-player rematch. A separate twelve-guest audit covered 320px and 390px phones, landscape, long names and answers, confirmation/focus behavior, and a real **65-second unanswered vote without revealing**. Inspect the [verification record](docs/verification.md), [audit receipt](evidence/refinements/audit.json), [twelve-character lobby](evidence/refinements/twelve-player-lobby-desktop.png), and [narrow-phone voting](evidence/refinements/long-options-320.png). These are Chromium mobile/touch emulation results, not physical-phone testing.

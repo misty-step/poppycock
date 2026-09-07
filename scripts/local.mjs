@@ -476,7 +476,7 @@ export async function configureBackend(processes, local, backend) {
 }
 
 export async function runInternal(processes, local, name) {
-  if (name !== "seed:run" && name !== "seed:reset" && name !== "untimedMigration:run")
+  if (name !== "seed:run" && name !== "seed:reset")
     throw new Error("Unsupported local maintenance command.");
   const state = await readLocalState(true);
   const response = await fetch(`${BACKEND_URL}/instance_name`, {
@@ -489,12 +489,7 @@ export async function runInternal(processes, local, name) {
     [CLI, "run", name, "{}", "--env-file", CONTROL_FILE, "--typecheck", "disable"],
     {
       env: local.cliEnv,
-      label:
-        name === "untimedMigration:run"
-          ? "untimed match migration"
-          : name === "seed:reset"
-            ? "local game reset"
-            : "local content seed",
+      label: name === "seed:reset" ? "local game reset" : "local content seed",
     },
   );
 }

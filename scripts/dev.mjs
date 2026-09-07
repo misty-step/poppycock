@@ -19,7 +19,6 @@ try {
   await buildParlor(processes);
   const backend = await startBackend(processes, local);
   await configureBackend(processes, local, backend);
-  await runInternal(processes, local, "untimedMigration:run");
   await runInternal(processes, local, "seed:run");
   const web = await startWeb(processes, local);
   console.log(

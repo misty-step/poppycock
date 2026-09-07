@@ -1,0 +1,40 @@
+{
+  "sourceRevision": "4d53b0d",
+  "parlorRevision": "56342bd910a58f255483afdf5a92d3fc4fcc0ae2",
+  "checks": [
+    "Twelve distinct avatars, long names, 320px lobby and leave dialog; Escape preserves membership and returns focus.",
+    "Thirteen uniformly formatted choices remain private and in stable shuffled order after65 seconds with no votes; no automatic reveal.",
+    "Long unbroken answers fit320px;390px and landscape layouts fit; reveal confirmation can be cancelled without advancing.",
+    "Only confirmed host actions end unfinished input; a non-host can advance the revealed round immediately."
+  ],
+  "screenshots": [
+    "front-door-320.png",
+    "twelve-player-lobby-320.png",
+    "twelve-player-lobby-desktop.png",
+    "leave-confirmation-320.png",
+    "long-options-320.png",
+    "voting-390.png",
+    "voting-landscape.png",
+    "reveal-confirmation-320.png",
+    "still-voting-after-former-deadline.png",
+    "untimed-reveal-320.png"
+  ],
+  "startedAt": "2026-09-07T19:15:51.338Z",
+  "avatars": [
+    "Dottie the cockatoo",
+    "Basil the crocodile",
+    "Bea the moth",
+    "Monty the walrus",
+    "Clover the rabbit",
+    "Otto the octopus",
+    "Pip the pear",
+    "Cricket the frog",
+    "Mabel the mushroom",
+    "Finch the fox",
+    "Winnie the whale",
+    "Nell the owl"
+  ],
+  "unvotedWaitMs": 65009,
+  "result": "passed",
+  "completedAt": "2026-09-07T19:17:05.121Z"
+}

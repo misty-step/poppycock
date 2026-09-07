@@ -1,0 +1,196 @@
+{
+  "sourceRevision": "4d53b0d",
+  "parlorRevision": "56342bd910a58f255483afdf5a92d3fc4fcc0ae2",
+  "startedAt": "2026-09-07T19:15:51.627Z",
+  "origin": "http://localhost:3210",
+  "rounds": [
+    {
+      "round": 1,
+      "question": "How does the little moon Enceladus help keep Saturn's E ring supplied?",
+      "category": "Space oddities",
+      "truth": "Its jets spray icy particles into space, and some spread around Saturn as ring material.",
+      "source": "https://science.nasa.gov/saturn/moons/enceladus/",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 3,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 1,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "question": "What sort of talk or behavior is 'nugacity'?",
+      "category": "Odd words",
+      "truth": "Trifling, futile talk or behavior.",
+      "source": "https://www.websters1913.com/words/Nugacity",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 6,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 4,
+          "gained": 3
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "question": "What did John Cage put inside a grand piano to turn it into a 'prepared piano'?",
+      "category": "Art & music",
+      "truth": "Objects placed beneath and between its strings to change the sound.",
+      "source": "https://data-johncage.org/cagePiano.html",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 9,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 5,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "question": "What unpleasant condition is called 'crapulence'?",
+      "category": "Odd words",
+      "truth": "Sickness from eating or drinking too much.",
+      "source": "https://www.websters1913.com/words/Crapulence",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 12,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 6,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "question": "What shared activity occupies participants for hours at the Sanké mon celebration in San, Mali?",
+      "category": "Living traditions",
+      "truth": "Fishing together in the Sanké pond.",
+      "source": "https://www.unesco.org/archives/multimedia/document-299",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 15,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 7,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "question": "How did Zenith's 1956 Space Command remote send instructions without radio waves or a light beam?",
+      "category": "Bright ideas",
+      "truth": "Its buttons struck aluminum rods to produce ultrasonic sounds.",
+      "source": "https://www.invent.org/inductees/robert-adler",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 18,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 8,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Three independent guest identities join by code; real Parlor QR invitation renders in the lobby.",
+    "Unauthenticated room game read rejected; writing hides truth, source, and options.",
+    "Explicit host departure transfers host to Bea; rejoining Ada keeps identity, scores, and match eligibility.",
+    "Late joiner can watch but cannot submit; immutable three-player eligibility preserved.",
+    "Phone network interruption and reload preserve the same player and current turn.",
+    "Six rounds have authoritative expected scores18/8/0, private shuffled choices, duplicate-bluff attribution, rejected self-votes, and idempotent submission retries.",
+    "Rematch includes former spectator, resets all scores, draws unseen content, and fits390px screens without horizontal overflow."
+  ],
+  "screenshots": [
+    "front-door-desktop.png",
+    "front-door-phone.png",
+    "lobby-desktop.png",
+    "writing-phone.png",
+    "voting-phone.png",
+    "reveal-desktop.png",
+    "reveal-phone.png",
+    "host-change-phone.png",
+    "offline-phone.png",
+    "final-standings-desktop.png",
+    "final-standings-phone.png",
+    "rematch-phone.png"
+  ],
+  "browserSecurity": {
+    "secureContext": true,
+    "randomUuidAvailable": true,
+    "randomValuesAvailable": true
+  },
+  "finalScores": [
+    {
+      "name": "Ada",
+      "score": 18
+    },
+    {
+      "name": "Bea",
+      "score": 8
+    },
+    {
+      "name": "Cy",
+      "score": 0
+    }
+  ],
+  "completedAt": "2026-09-07T19:16:01.955Z",
+  "result": "passed"
+}

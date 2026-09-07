@@ -1,5 +1,31 @@
 # Delivery verification
 
+## Untimed refinements — 2026-09-07
+
+The interface and gameplay receipts below exercise [`4d53b0d`](https://github.com/misty-step/poppycock/commit/4d53b0d), including genuine Parlor revision `56342bd910a58f255483afdf5a92d3fc4fcc0ae2`. This was the migration-stage revision; subsequent cutover removes only the one-time migration, its startup calls, and the obsolete schema field. These refinements were **not deployed to the public HTTPS origin**.
+
+| Check                                              | Observed result                                                                                                                                                              |
+| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Application TypeScript and issuer/game regressions | Passed; **19 tests**, including 45-minute writing and voting waits, explicit host skips, stale inputs, and immediate non-host reveal advancement                             |
+| Vendored Parlor regressions                        | **103 tests passed**, including opt-out match caps and retained everyone-away abandonment                                                                                    |
+| `pnpm build`                                       | Production Next.js build passed                                                                                                                                              |
+| Card integrity and real seed                       | **216 unique keys, ten categories**; longest answer **90 characters**, longest added answer **83**; all cards have nonempty question/answer/provenance and HTTPS source URLs |
+| Existing local database migration                  | Six game records migrated; no pending turn jobs remained to cancel; seed inserted **108**, updated **0**, retired **0**                                                      |
+| Full multiplayer browser game                      | Six rounds, authoritative scores **18 / 8 / 0**, duplicate-bluff attribution, host transfer, rejoin, spectator rejection, offline/reload recovery, and rematch               |
+| Twelve-guest mobile/touch audit                    | Twelve distinct portraits; long names and 160-character unbroken answers; no horizontal overflow at **320×844**, **390×844**, or **667×375**                                 |
+| Unanswered voting round                            | Still voting after **65,009 ms**, with zero votes, unchanged shared option order, no attributed truth/source, and `hardDeadline: false`                                      |
+| Destructive/phase confirmations                    | Escape keeps membership and returns focus; cancel leaves the phase unchanged; confirmed host skips work; a non-host advances a reveal immediately                            |
+| Final schema bootstrap                             | Accepted the preserved local database after removing the migration and legacy field; reseed returned **216 cards, zero inserts, updates, or retirements**                    |
+| Terminal preview shutdown                          | Actual `Ctrl+C` released ports **3210/3220/3221**, including under the package-manager wrapper                                                                               |
+
+Receipts: [mobile/untimed audit](../evidence/refinements/audit.json), [content and migration](../evidence/refinements/content-audit.json), and [round-by-round multiplayer trace](../evidence/refinements/full-game/multiplayer-smoke.json). These files contain synthetic player names and no credentials.
+
+Screenshots: [twelve-character desktop lobby](../evidence/refinements/twelve-player-lobby-desktop.png), [320px lobby](../evidence/refinements/twelve-player-lobby-320.png), [narrow long-answer voting](../evidence/refinements/long-options-320.png), [landscape](../evidence/refinements/voting-landscape.png), [leave confirmation](../evidence/refinements/leave-confirmation-320.png), [reveal confirmation](../evidence/refinements/reveal-confirmation-320.png), [still voting past the former timeout](../evidence/refinements/still-voting-after-former-deadline.png), and [final scores](../evidence/refinements/full-game/final-standings-phone.png).
+
+The twelve-guest harness was a throwaway browser audit, not a new permanent test suite. Browser mobile/touch emulation does not prove physical-phone hardware behavior or Wi-Fi/firewall reachability. Existing production databases need the two-stage upgrade described in the README; the old timed release is not a safe schema rollback target.
+
+## Initial release — 2026-09-06
+
 Verified on 2026-09-06 against a real anonymous local Convex backend, not a mocked room service.
 
 - **Clean-clone game source:** [`b3bec52847b6b1e6132d057e8eb4c5dae2af5d6c`](https://github.com/misty-step/poppycock/commit/b3bec52847b6b1e6132d057e8eb4c5dae2af5d6c).

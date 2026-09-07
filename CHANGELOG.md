@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-09-07
+
+- Twelve original paper-puppet portraits with distinct silhouettes, expressions, and accessories; refined colors, responsive layouts, touch targets, focus states, and reduced-motion behavior.
+- Doubled the sourced deck from 108 to 216 cards, adding Kitchen secrets, Bright ideas, Living traditions, Remarkable places, Working lives, and Art & music while preserving every existing card.
+- Anonymous choices share canonical lowercase text, whitespace, and terminal-punctuation treatment in the existing server-shuffled order. Attributed reveals retain the original text and sources.
+- Removed the 90-second writing timer, 60-second vote timer, reveal grace period, and total match cap. Everyone finishing still advances a phase; only confirmed host actions skip unfinished input. Any participant can continue a revealed round immediately.
+- Moved Leave table into the room toolbar with a cancellable, keyboard-accessible confirmation rather than an easy-to-hit gameplay action.
+- Pinned genuine upstream Parlor to `56342bd910a58f255483afdf5a92d3fc4fcc0ae2`, which adds opt-in untimed matches without weakening other games’ default cap or everyone-away cleanup.
+- Preserved a one-time, data-safe upgrade revision in history; removed migration code and legacy deadline fields from the final source. Local preview shutdown keeps handling repeated terminal/package-manager signals until its child processes exit.
+- Verified locally with a full six-round multiplayer game and a twelve-guest mobile audit. This revision is not yet deployed to the public HTTPS game.
+
 ## 1.0.0 — 2026-09-06
 
 - Complete accountless bluffing game for 3–12 people: room codes and QR invitations, six timed rounds, anonymous shuffled options, locked submissions and votes, sourced reveals, final standings, and rematches.

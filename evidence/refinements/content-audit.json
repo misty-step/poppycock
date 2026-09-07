@@ -1,0 +1,31 @@
+{
+  "sourceRevision": "4d53b0d",
+  "cards": 216,
+  "categories": {
+    "Odd words": 27,
+    "Curious objects": 27,
+    "Wild nature": 27,
+    "Space oddities": 27,
+    "Kitchen secrets": 18,
+    "Bright ideas": 18,
+    "Living traditions": 18,
+    "Remarkable places": 18,
+    "Working lives": 18,
+    "Art & music": 18
+  },
+  "uniqueStableKeys": 216,
+  "sourcePages": 192,
+  "maxAnswerLength": 90,
+  "maxNewAnswerLength": 83,
+  "allCardsHaveQuestionAnswerAndHttpsProvenance": true,
+  "localMigration": {
+    "cancelledJobs": 0,
+    "migratedGames": 6
+  },
+  "localSeed": {
+    "inserted": 108,
+    "retired": 0,
+    "total": 216,
+    "updated": 0
+  }
+}

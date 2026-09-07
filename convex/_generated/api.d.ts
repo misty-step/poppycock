@@ -15,7 +15,6 @@ import type * as maintenance from "../maintenance.js";
 import type * as rooms from "../rooms.js";
 import type * as rules from "../rules.js";
 import type * as seed from "../seed.js";
-import type * as untimedMigration from "../untimedMigration.js";
 import type * as validators from "../validators.js";
 
 import type {
@@ -32,7 +31,6 @@ declare const fullApi: ApiFromModules<{
   rooms: typeof rooms;
   rules: typeof rules;
   seed: typeof seed;
-  untimedMigration: typeof untimedMigration;
   validators: typeof validators;
 }>;
 
