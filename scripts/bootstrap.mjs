@@ -18,6 +18,7 @@ try {
   await buildParlor(processes);
   const backend = await startBackend(processes, local, { reuse: true });
   await configureBackend(processes, local, backend);
+  await runInternal(processes, local, "untimedMigration:run");
   await runInternal(processes, local, "seed:run");
   console.log(
     `Local bootstrap complete. Secrets are in gitignored .env.local (mode 600). Run pnpm dev, then open ${WEB_URL}. No Convex account or cloud deployment is used.`,

@@ -6,7 +6,7 @@ import type { TestConvex } from "convex-test";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { api, internal } from "../convex/_generated/api";
 import type { Id } from "../convex/_generated/dataModel";
-import { REVEAL_HOST_GRACE_MS, TOTAL_ROUNDS, WRITING_MS } from "../convex/rules";
+import { normalizeAnswer, TOTAL_ROUNDS } from "../convex/rules";
 import schema from "../convex/schema";
 
 const modules = import.meta.glob("../convex/**/*.ts");
@@ -119,6 +119,10 @@ describe("authoritative Poppycock rounds", () => {
       expect(option).not.toHaveProperty("authors");
       expect(option).not.toHaveProperty("voters");
     }
+    const otherView = await gameView(clients[1]!, room.roomId);
+    expect(otherView.options.map(({ id, text }) => ({ id, text }))).toEqual(
+      voting.options.map(({ id, text }) => ({ id, text })),
+    );
     const own = await optionId(t, gameId, (option) => option.text === "A dancing teapot");
     await expect(host.mutation(api.game.vote, { gameId, round: 1, optionId: own })).rejects.toThrow(
       "SELF_VOTE_NOT_ALLOWED",
@@ -158,7 +162,7 @@ describe("authoritative Poppycock rounds", () => {
     });
     const voting = await gameView(host, room.roomId);
     expect(voting.options.map((option) => option.text).sort()).toEqual(
-      [round.answer, "A dancing teapot.", "A moon-powered unicycle"].sort(),
+      [normalizeAnswer(round.answer), "a dancing teapot", "a moon-powered unicycle"].sort(),
     );
     expect((await gameView(clients[2]!, room.roomId)).voted).toBe(true);
     const truth = await optionId(t, gameId, (option) => option.truth);
@@ -191,64 +195,70 @@ describe("authoritative Poppycock rounds", () => {
     expect(reveal.options.find((option) => option.id === merged)?.voters).toEqual([playerIds[3]]);
   });
 
-  it("enforces deadlines without scheduler delivery and rejects old rounds and foreign-round options", async () => {
+  it("keeps writing and voting open past both former turn timers and the match cap", async () => {
+    const { t, clients, host, room, gameId } = await fixture();
+    await host.mutation(api.game.submit, { gameId, round: 1, text: "A dancing teapot." });
+    async function waitAtTheTable() {
+      vi.advanceTimersByTime(45 * 60_000);
+      await t.finishInProgressScheduledFunctions();
+      for (const client of clients)
+        await client.mutation(api.rooms.heartbeat, { roomId: room.roomId });
+      await t.mutation(internal.maintenance.sweepAbandoned, {});
+    }
+    await waitAtTheTable();
+    expect(await gameView(host, room.roomId)).toMatchObject({
+      phase: "writing",
+      submissionCount: 1,
+      options: [],
+    });
+    await clients[1]!.mutation(api.game.submit, { gameId, round: 1, text: "A silver compass!" });
+    await clients[2]!.mutation(api.game.submit, { gameId, round: 1, text: "A paper submarine?" });
+    await waitAtTheTable();
+    const waiting = await gameView(clients[1]!, room.roomId);
+    expect(waiting).toMatchObject({ phase: "voting", voteCount: 0, canAdvance: false });
+    expect(waiting).not.toHaveProperty("truth");
+    expect(waiting).not.toHaveProperty("source");
+    expect(waiting.options.map((option) => option.text)).toEqual(
+      expect.arrayContaining(["a dancing teapot", "a silver compass", "a paper submarine"]),
+    );
+    await expect(
+      clients[1]!.mutation(api.game.advance, { gameId, round: 1, phase: "voting" }),
+    ).rejects.toThrow("HOST_REQUIRED");
+    const truth = await optionId(t, gameId, (option) => option.truth);
+    for (const client of clients)
+      await client.mutation(api.game.vote, { gameId, round: 1, optionId: truth });
+    expect((await gameView(host, room.roomId)).phase).toBe("reveal");
+  });
+
+  it("allows deliberate host skips without letting retries consume another turn", async () => {
     const { t, clients, host, room, gameId } = await fixture();
     await host.mutation(api.game.submit, { gameId, round: 1, text: "A dancing teapot" });
-    const writing = await gameView(host, room.roomId);
-    vi.setSystemTime(writing.deadline);
     await expect(
-      clients[1]!.mutation(api.game.submit, { gameId, round: 1, text: "Too late" }),
-    ).rejects.toThrow("PHASE_EXPIRED");
-    await t.mutation(internal.game.deadline, {
-      gameId,
-      round: 1,
-      phase: "writing",
-      deadline: writing.deadline,
-    });
-    await t.mutation(internal.game.deadline, {
-      gameId,
-      round: 1,
-      phase: "writing",
-      deadline: writing.deadline,
-    });
-    const voting = await gameView(host, room.roomId);
+      clients[1]!.mutation(api.game.advance, { gameId, round: 1, phase: "writing" }),
+    ).rejects.toThrow("HOST_REQUIRED");
+    await host.mutation(api.game.advance, { gameId, round: 1, phase: "writing" });
+    await host.mutation(api.game.advance, { gameId, round: 1, phase: "writing" });
     const truth = await optionId(t, gameId, (option) => option.truth);
     const bluff = await optionId(t, gameId, (option) => !option.truth);
     await host.mutation(api.game.vote, { gameId, round: 1, optionId: truth });
-    // Missing the writing deadline does not take away the right to vote.
+    // An explicitly skipped writing turn does not take away the right to vote.
     await clients[1]!.mutation(api.game.vote, { gameId, round: 1, optionId: bluff });
-    vi.setSystemTime(voting.deadline);
-    await expect(
-      clients[2]!.mutation(api.game.vote, { gameId, round: 1, optionId: truth }),
-    ).rejects.toThrow("PHASE_EXPIRED");
     await host.mutation(api.game.advance, { gameId, round: 1, phase: "voting" });
-    await t.mutation(internal.game.deadline, {
-      gameId,
-      round: 1,
-      phase: "voting",
-      deadline: voting.deadline,
-    });
+    await host.mutation(api.game.advance, { gameId, round: 1, phase: "voting" });
     expect((await gameView(host, room.roomId)).players.map((player) => player.score)).toEqual([
       3, 0, 0,
     ]);
-    await host.mutation(api.game.advance, { gameId, round: 1, phase: "reveal" });
-    await host.mutation(api.game.advance, { gameId, round: 1, phase: "reveal" });
+    expect((await gameView(clients[1]!, room.roomId)).canAdvance).toBe(true);
+    await clients[1]!.mutation(api.game.advance, { gameId, round: 1, phase: "reveal" });
+    await clients[1]!.mutation(api.game.advance, { gameId, round: 1, phase: "reveal" });
     await expect(
       host.mutation(api.game.submit, { gameId, round: 1, text: "A dancing teapot" }),
     ).rejects.toThrow("STALE_ROUND");
-    const next = await gameView(host, room.roomId);
-    expect(next.round).toBe(2);
-    vi.setSystemTime(next.deadline);
+    expect((await gameView(host, room.roomId)).round).toBe(2);
     await host.mutation(api.game.advance, { gameId, round: 2, phase: "writing" });
     await expect(
       host.mutation(api.game.vote, { gameId, round: 2, optionId: truth }),
     ).rejects.toThrow("OPTION_NOT_FOUND");
-    await t.mutation(internal.game.deadline, {
-      gameId,
-      round: 1,
-      phase: "voting",
-      deadline: voting.deadline,
-    });
     expect(await gameView(host, room.roomId)).toMatchObject({
       round: 2,
       phase: "voting",
@@ -256,7 +266,7 @@ describe("authoritative Poppycock rounds", () => {
     });
   });
 
-  it("finishes six scheduled rounds, allows host-stall recovery, and rematches without repeating content", async () => {
+  it("finishes six untimed rounds and rematches without repeating content", async () => {
     const { t, clients, host, room, gameId } = await fixture();
     const questions = new Set<string>();
     for (let round = 1; round <= TOTAL_ROUNDS; round += 1) {
@@ -264,20 +274,18 @@ describe("authoritative Poppycock rounds", () => {
       expect(writing).toMatchObject({ round, phase: "writing" });
       expect(questions.has(writing.prompt.question)).toBe(false);
       questions.add(writing.prompt.question);
-      vi.advanceTimersByTime(WRITING_MS);
-      await t.finishInProgressScheduledFunctions();
+      for (const [index, client] of clients.entries())
+        await client.mutation(api.game.submit, {
+          gameId,
+          round,
+          text: `A make-believe invention for player ${index}`,
+        });
       expect((await gameView(host, room.roomId)).phase).toBe("voting");
       const truth = await optionId(t, gameId, (option) => option.truth, round);
       for (const client of clients)
         await client.mutation(api.game.vote, { gameId, round, optionId: truth });
       expect((await gameView(host, room.roomId)).phase).toBe("reveal");
-      if (round === 1) {
-        await expect(
-          clients[1]!.mutation(api.game.advance, { gameId, round, phase: "reveal" }),
-        ).rejects.toThrow("HOST_REQUIRED");
-        vi.advanceTimersByTime(REVEAL_HOST_GRACE_MS);
-        await clients[1]!.mutation(api.game.advance, { gameId, round, phase: "reveal" });
-      } else await host.mutation(api.game.advance, { gameId, round, phase: "reveal" });
+      await clients[1]!.mutation(api.game.advance, { gameId, round, phase: "reveal" });
     }
     expect(await gameView(host, room.roomId)).toMatchObject({ phase: "finished", round: 6 });
     expect((await gameView(host, room.roomId)).players.map((player) => player.score)).toEqual([

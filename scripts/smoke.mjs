@@ -61,9 +61,21 @@ async function joinTable(name, code) {
 async function phase(name, expected) {
   await expect.poll(async () => (await view(name))?.phase, { timeout: 15000 }).toBe(expected);
 }
+const optionText = (text) =>
+  text
+    .normalize("NFKC")
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/gu, " ")
+    .replace(/[.!?]+$/u, "")
+    .trim();
+
 async function voteFor(name, text) {
   const page = players[name].page;
-  await page.locator("button.option").filter({ hasText: text }).click();
+  await page
+    .locator("button.option")
+    .filter({ hasText: optionText(text) })
+    .click();
   await page.getByRole("button", { name: "Lock in my vote", exact: true }).click();
   await expect
     .poll(async () => (await view(name)).voted || (await view(name)).phase === "reveal")
@@ -192,7 +204,8 @@ try {
       expect(option.authors).toBeUndefined();
       expect(option.voters).toBeUndefined();
     }
-    const truth = voting.options.find((option) => !Object.values(bluffs).includes(option.text));
+    const knownBluffs = Object.values(bluffs).map(optionText);
+    const truth = voting.options.find((option) => !knownBluffs.includes(option.text));
     expect(truth).toBeDefined();
     const own = voting.options.find((option) => option.own);
     await expect(
@@ -217,14 +230,14 @@ try {
     await voteFor("Cy", bluffs.Bea);
     await phase("Ada", "reveal");
     const reveal = await view("Ada");
-    expect(reveal.truth).toBe(truth.text);
+    expect(optionText(reveal.truth)).toBe(truth.text);
     expect(reveal.source.url).toMatch(/^https:\/\//);
     expect(reveal.players.map((p) => p.roundPoints)).toEqual(round === 2 ? [3, 3, 0] : [3, 1, 0]);
     expect(reveal.options.find((option) => option.truth).authors).toEqual([]);
     if (round === 2)
-      expect(reveal.options.find((option) => option.text === bluffs.Ada).authors.sort()).toEqual(
-        [initialIds.Ada, initialIds.Bea].sort(),
-      );
+      expect(
+        reveal.options.find((option) => option.text === optionText(bluffs.Ada)).authors.sort(),
+      ).toEqual([initialIds.Ada, initialIds.Bea].sort());
     report.rounds.push({
       round,
       question: reveal.prompt.question,
@@ -238,8 +251,11 @@ try {
       await capture("Bea", "reveal-phone.png");
     }
     if (round === 3) {
-      players.Ada.page.once("dialog", (dialog) => dialog.accept());
       await players.Ada.page.getByRole("button", { name: "Leave table", exact: true }).click();
+      await players.Ada.page
+        .getByRole("dialog")
+        .getByRole("button", { name: "Leave table", exact: true })
+        .click();
       await expect(players.Ada.page.getByLabel("What should we call you?")).toBeVisible();
       expect((await room("Bea")).room.hostPlayerId).toBe(initialIds.Bea);
       await joinTable("Ada", code);

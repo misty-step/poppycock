@@ -20,7 +20,6 @@ export interface GameView {
   phase: GamePhase;
   round: number;
   totalRounds: number;
-  deadline: number;
   participant: boolean;
   submitted: boolean;
   voted: boolean;

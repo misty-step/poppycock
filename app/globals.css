@@ -43,17 +43,12 @@ button {
   font-weight: 700;
   cursor: pointer;
   min-height: 48px;
+  max-width: 100%;
+  line-height: 1.25;
   transition:
     transform 0.12s,
-    box-shadow 0.12s;
-}
-button:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 3px 0 var(--ink);
-}
-button:active:not(:disabled) {
-  transform: translateY(1px);
-  box-shadow: none;
+    box-shadow 0.12s,
+    background-color 0.16s;
 }
 button:disabled {
   opacity: 0.55;
@@ -68,6 +63,7 @@ a:focus-visible,
 summary:focus-visible {
   outline: 3px solid #7344b0;
   outline-offset: 4px;
+  scroll-margin-block: 24px;
 }
 input:focus,
 textarea:focus {
@@ -85,6 +81,7 @@ h1,
 h2,
 h3 {
   line-height: 1.13;
+  overflow-wrap: anywhere;
 }
 h1,
 h2 {
@@ -99,6 +96,7 @@ h3 {
 }
 p {
   max-width: 65ch;
+  overflow-wrap: anywhere;
 }
 strong {
   font-weight: 700;
@@ -139,6 +137,11 @@ button.text-button {
   min-height: 490px;
   padding: 60px 0 35px;
   gap: 35px;
+}
+.hero-copy,
+.entry-layout > *,
+.share-panel > div {
+  min-width: 0;
 }
 .invitation {
   font-size: 20px;
@@ -249,90 +252,20 @@ button.text-button {
   font-size: 47px;
 }
 .face {
-  width: 105px;
-  height: 92px;
+  width: 106px;
+  height: 106px;
   display: inline-flex;
-  position: relative;
-  background: var(--yellow);
-  border: 2px solid var(--ink);
-  border-radius: 42% 42% 36% 36%;
-  flex-shrink: 0;
-}
-.face i {
-  position: absolute;
-  width: 8px;
-  height: 15px;
-  top: 29%;
-  left: 27%;
-  background: var(--ink);
-  border-radius: 50%;
-}
-.face i + i {
-  left: 64%;
-}
-.face b {
-  position: absolute;
-  width: 29px;
-  height: 15px;
-  left: 36%;
-  top: 58%;
-  border: 3px solid var(--ink);
-  border-top: 0;
-  border-radius: 0 0 30px 30px;
-}
-.face-1 {
-  background: var(--purple);
-  border-radius: 23% 46% 23% 46%;
-  transform: rotate(5deg);
-}
-.face-2 {
-  background: var(--pool);
-  border-radius: 50%;
-}
-.face-2 b {
-  height: 3px;
-  top: 65%;
-  border-bottom: 0;
-  transform: rotate(-8deg);
-}
-.face-3 {
-  background: var(--pink);
-  border-radius: 38% 38% 15% 15%;
-  transform: rotate(-5deg);
-}
-.face-4 {
-  background: var(--purple);
-  border-radius: 18%;
-}
-.face-4 b {
-  border-radius: 100%;
-  border: 2px solid var(--ink);
-  width: 14px;
-  height: 14px;
-  left: 43%;
-}
-.face-5 {
-  background: #ffbd91;
-  border-radius: 50% 50% 20% 20%;
-}
-.face-small {
-  width: 42px;
-  height: 40px;
-  border-width: 1.5px;
+  flex: none;
   vertical-align: middle;
 }
-.face-small i {
-  width: 3px;
-  height: 6px;
+.face svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.face-small b {
-  width: 12px;
-  height: 7px;
-  border-width: 1.5px;
-}
-.face-small.face-4 b {
-  width: 6px;
-  height: 6px;
+.face-small {
+  width: 48px;
+  height: 48px;
 }
 .entry-layout {
   display: grid;
@@ -379,6 +312,7 @@ textarea {
   display: block;
   background: white;
   width: 100%;
+  min-width: 0;
   color: var(--ink);
   border: 2px solid #b7acbb;
   border-radius: 9px;
@@ -400,7 +334,7 @@ form .wide {
   margin-top: 22px;
 }
 .entry-footnote {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--muted);
   text-align: center;
   margin: 18px 0 0;
@@ -458,10 +392,24 @@ form .wide {
 }
 .table-bar {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 4px 0 20px;
-  gap: 15px;
+  gap: 16px;
+}
+.table-identity {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  min-width: 0;
+}
+.table-leave {
+  flex: none;
+  min-height: 44px;
+  padding: 10px 14px;
+  font-size: 14px;
+  box-shadow: none;
 }
 .room-code {
   background: transparent;
@@ -470,7 +418,7 @@ form .wide {
   display: flex;
   align-items: center;
   gap: 10px;
-  box-shadow: none !important;
+  box-shadow: none;
   font-weight: 400;
 }
 .room-code strong {
@@ -492,6 +440,7 @@ form .wide {
   align-items: center;
   font-size: 13px;
   white-space: nowrap;
+  min-height: 24px;
 }
 .connection i {
   width: 7px;
@@ -552,7 +501,7 @@ form .wide {
 }
 .lobby-intro > .face {
   width: 133px;
-  height: 123px;
+  height: 133px;
   margin-right: 28px;
 }
 .stage-label {
@@ -577,27 +526,33 @@ form .wide {
 }
 .player-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px 24px;
 }
 .player-row {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 9px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #e3dce4;
   min-width: 0;
 }
-.player-row strong {
-  overflow-wrap: anywhere;
+.player-details {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
 }
-.player-row > span:last-child {
-  margin-left: auto;
-  font-size: 12px;
-  white-space: nowrap;
+.player-details strong {
+  overflow-wrap: anywhere;
+  line-height: 1.3;
+}
+.player-details > span {
+  font-size: 14px;
+  color: var(--muted);
 }
 .player-row.away {
-  opacity: 0.55;
+  opacity: 0.7;
 }
 .lobby-action {
   margin-top: 27px;
@@ -613,18 +568,8 @@ form .wide {
   border-radius: 8px;
 }
 .room-bottom {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 30px;
+  display: block;
   margin: 30px 0 25px;
-}
-.room-bottom .rules {
-  flex: 1;
-}
-.leave {
-  white-space: nowrap;
-  color: var(--muted);
 }
 .round-strip {
   display: flex;
@@ -632,29 +577,12 @@ form .wide {
   justify-content: space-between;
   font-size: 16px;
   margin: 9px 0 22px;
-  gap: 20px;
+  gap: 12px;
 }
-.round-dots {
-  display: flex;
-  gap: 7px;
-}
-.round-dots i {
-  width: 9px;
-  height: 9px;
-  border: 1.5px solid var(--ink);
-  border-radius: 50%;
-}
-.round-dots i.filled {
-  background: var(--ink);
-}
-.timer {
-  font-weight: 700;
-  min-width: 88px;
+.phase-name {
+  font-size: 14px;
+  color: var(--muted);
   text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-.timer.urgent {
-  color: #8a1e3b;
 }
 .question-sheet {
   padding: 29px 32px 31px;
@@ -682,8 +610,9 @@ form .wide {
   color: var(--yellow);
 }
 .question-sheet h1 {
-  font-size: 37px;
+  font-size: clamp(29px, 4.5vw, 37px);
   max-width: 26ch;
+  text-wrap: balance;
 }
 .question-sheet p {
   font-size: 16px;
@@ -711,20 +640,35 @@ form .wide {
   font-size: 14px;
   color: var(--muted);
 }
-.progress-note {
+.completion-note {
   padding-top: 20px;
   margin-top: 20px;
   border-top: 1px solid #d9cfdd;
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--muted);
+}
+.phase-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin: 22px 0;
+}
+.phase-actions p {
+  font-size: 14px;
+  color: var(--muted);
+}
+.phase-actions button {
+  flex: none;
 }
 .waiting-state {
   text-align: center;
   padding: 10px 0;
 }
 .waiting-state > .face {
-  margin-bottom: 22px;
+  margin-bottom: 14px;
+  animation: character-nod 360ms ease-out;
 }
 .waiting-state h2 {
   margin-bottom: 12px;
@@ -777,6 +721,7 @@ form .wide {
 }
 .option > span:nth-child(2) {
   overflow-wrap: anywhere;
+  min-width: 0;
 }
 .option small {
   display: block;
@@ -787,22 +732,32 @@ form .wide {
 .option-mark {
   margin-left: auto;
   font-size: 25px;
+  flex: none;
+  transition: transform 0.16s;
 }
 .option.chosen {
   background: var(--yellow);
   box-shadow: 0 3px 0 var(--ink);
+}
+.option.chosen .option-letter {
+  background: var(--ink);
+  color: var(--paper);
+}
+.option.chosen .option-mark {
+  transform: scale(1.12);
 }
 .option.own-option {
   background: #e7dded;
   opacity: 1;
 }
 .option:disabled:not(.own-option) {
-  opacity: 0.75;
+  opacity: 1;
+  cursor: default;
 }
 .vote-lock {
   display: block;
   margin: 27px auto 0;
-  min-width: 240px;
+  width: min(100%, 320px);
 }
 .truth-slip {
   background: var(--yellow);
@@ -811,6 +766,7 @@ form .wide {
   padding: 27px 30px;
   margin: 30px 0;
   box-shadow: 0 4px 0 var(--ink);
+  animation: truth-turn 300ms ease-out;
 }
 .truth-label {
   font-size: 15px;
@@ -823,7 +779,7 @@ form .wide {
   overflow-wrap: anywhere;
 }
 .truth-slip p {
-  font-size: 13px;
+  font-size: 15px;
   margin-top: 19px;
 }
 .source-note {
@@ -896,17 +852,26 @@ form .wide {
 }
 .rank {
   width: 20px;
+  flex: 0 0 20px;
   font-size: 17px;
   text-align: center;
 }
-.score-row > strong {
+.score-name {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px 10px;
   flex: 1;
+  min-width: 0;
+}
+.score-name strong {
   overflow-wrap: anywhere;
 }
 .score {
   font-family: var(--font-display);
   font-size: 29px;
   white-space: nowrap;
+  flex: none;
 }
 .score small {
   font-family: var(--font-body);
@@ -919,6 +884,12 @@ form .wide {
   font-size: 13px;
   padding: 2px 7px;
   font-weight: 700;
+  flex: none;
+}
+.confirmation-unavailable {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 18px;
 }
 .final-scores .score-row.leader {
   background: #fff1b8;
@@ -932,6 +903,69 @@ form .wide {
 }
 .next-round p {
   margin: auto;
+}
+.confirmation {
+  width: min(460px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 28px;
+  margin: auto;
+  color: var(--ink);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.confirmation::backdrop {
+  background: rgb(53 35 63 / 52%);
+  backdrop-filter: blur(3px);
+}
+.confirmation[open] {
+  animation: paper-open 160ms ease-out;
+}
+.confirmation h2 {
+  font-size: 29px;
+}
+.confirmation-copy {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0 24px;
+}
+.confirmation-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.confirmation-actions button {
+  flex: 1;
+}
+@keyframes paper-open {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes character-nod {
+  0% {
+    transform: rotate(-7deg);
+  }
+  65% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes truth-turn {
+  from {
+    opacity: 0;
+    transform: rotate(-0.6deg) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
 }
 .loading {
   text-align: center;
@@ -1063,63 +1097,46 @@ form .wide {
   }
   .hero-description {
     font-size: 16px;
-    max-width: 29ch;
+    max-width: 38ch;
     padding-right: 0;
   }
   .game-facts {
-    font-size: 12px;
+    font-size: 13px;
     margin-top: 21px;
   }
   .game-facts span + span {
-    margin-left: 11px;
-    padding-left: 11px;
+    margin-left: 9px;
+    padding-left: 9px;
   }
   .box-art {
     position: absolute;
-    right: 2px;
-    top: 134px;
-    width: 170px;
-    height: 240px;
+    right: 6px;
+    top: 137px;
+    width: 118px;
+    height: 140px;
     transform: scale(0.6);
     transform-origin: top right;
     z-index: 0;
-    opacity: 0.92;
   }
   .art-slip {
-    width: 158px;
-    height: 200px;
-    font-size: 22px;
+    width: 118px;
+    height: 140px;
+    gap: 7px;
+    font-size: 17px;
   }
   .slip-front {
     left: 0;
-    top: 30px;
-  }
-  .slip-back {
-    right: -8px;
     top: 0;
-    font-size: 17px;
+    transform: rotate(8deg);
   }
-  .slip-back .face {
-    margin-top: 45px;
+  .slip-back,
+  .box-art .stamp,
+  .spark {
+    display: none;
   }
   .box-art .face {
     width: 74px;
-    height: 67px;
-  }
-  .stamp {
-    font-size: 10px;
-    right: -17px;
-    bottom: 12px;
-  }
-  .spark {
-    font-size: 45px;
-    left: -23px;
-  }
-  .spark-two {
-    right: -20px;
-    bottom: -10px;
-    font-size: 40px;
-    left: auto;
+    height: 74px;
   }
   .entry-layout {
     display: block;
@@ -1136,7 +1153,7 @@ form .wide {
     font-size: 15px;
   }
   .entry-footnote {
-    font-size: 12px;
+    font-size: 13px;
   }
   form label {
     font-size: 15px;
@@ -1155,12 +1172,12 @@ form .wide {
     margin-bottom: 12px;
   }
   .site-footer {
-    font-size: 11px;
+    font-size: 12px;
     gap: 12px;
     padding-top: 20px;
   }
   .site-footer span {
-    max-width: 50%;
+    flex: 1;
   }
   .site-footer span:last-child {
     text-align: right;
@@ -1172,8 +1189,17 @@ form .wide {
     display: none;
   }
   .table-bar {
-    gap: 9px;
-    padding-bottom: 15px;
+    gap: 10px;
+    padding-bottom: 18px;
+  }
+  .table-identity {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .table-leave {
+    font-size: 13px;
+    padding: 10px;
   }
   .room-code {
     gap: 7px;
@@ -1185,22 +1211,26 @@ form .wide {
     letter-spacing: 3px;
   }
   .share-hint {
-    font-size: 11px;
-    max-width: 35px;
+    font-size: 12px;
+    max-width: 42px;
     line-height: 1.25;
   }
   .connection {
-    font-size: 11px;
+    font-size: 12px;
     gap: 5px;
   }
   .share-panel {
     padding: 18px;
     gap: 18px;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .share-panel figure {
+    align-self: center;
   }
   .share-panel svg {
-    width: 95px;
-    height: 95px;
+    width: 144px;
+    height: 144px;
   }
   .share-panel h2 {
     font-size: 22px;
@@ -1209,9 +1239,9 @@ form .wide {
     font-size: 14px;
   }
   .share-panel button {
-    font-size: 13px;
-    padding: 7px 10px;
-    min-height: 40px;
+    font-size: 15px;
+    padding: 10px 14px;
+    min-height: 48px;
   }
   .lobby-intro {
     margin: 15px 0 26px;
@@ -1219,38 +1249,30 @@ form .wide {
     align-items: flex-start;
   }
   .lobby-intro h1 {
-    font-size: 34px;
+    font-size: clamp(29px, 8.5vw, 34px);
     max-width: 13ch;
   }
   .lobby-intro p {
     font-size: 15px;
   }
   .lobby-intro > .face {
-    width: 63px;
-    height: 60px;
+    width: 66px;
+    height: 66px;
     margin: 37px 0 0;
-  }
-  .lobby-intro > .face i {
-    width: 5px;
-    height: 9px;
-  }
-  .lobby-intro > .face b {
-    width: 19px;
-    height: 11px;
-    border-width: 2px;
   }
   .lobby-paper {
     padding: 21px 18px;
   }
   .section-heading {
-    gap: 12px;
+    gap: 8px;
+    flex-wrap: wrap;
   }
   .section-heading h2 {
     font-size: 22px;
-    max-width: 14ch;
+    max-width: none;
   }
   .section-heading > span {
-    font-size: 12px;
+    font-size: 13px;
   }
   .player-list {
     grid-template-columns: 1fr;
@@ -1259,8 +1281,9 @@ form .wide {
   .player-row {
     font-size: 16px;
   }
-  .player-row > span:last-child {
-    font-size: 12px;
+  .face-small {
+    width: 44px;
+    height: 44px;
   }
   .lobby-action button {
     width: 100%;
@@ -1275,40 +1298,31 @@ form .wide {
     margin: 25px 0 17px;
   }
   .room-bottom .rules {
-    font-size: 14px;
-  }
-  .leave {
-    font-size: 13px !important;
+    font-size: 15px;
   }
   .round-strip {
     font-size: 14px;
     gap: 12px;
     margin-bottom: 18px;
   }
-  .round-dots {
-    gap: 4px;
-  }
-  .round-dots i {
-    width: 7px;
-    height: 7px;
-  }
-  .timer {
-    min-width: 65px;
+  .phase-name {
+    font-size: 13px;
+    max-width: 14ch;
   }
   .question-sheet {
-    padding: 23px 22px 25px;
+    padding: 22px 20px 24px;
     margin-bottom: 24px;
     border-radius: 15px 15px 0 15px;
   }
   .question-sheet h1 {
-    font-size: 30px;
+    font-size: clamp(27px, 7.5vw, 30px);
   }
   .question-sheet p {
     font-size: 14px;
     margin-top: 15px;
   }
   .category {
-    font-size: 12px;
+    font-size: 13px;
     margin-bottom: 12px;
   }
   .answer-paper {
@@ -1316,7 +1330,7 @@ form .wide {
   }
   .answer-paper textarea {
     min-height: 139px;
-    font-size: 17px;
+    font-size: 18px;
   }
   .answer-footer {
     gap: 10px;
@@ -1331,10 +1345,18 @@ form .wide {
   .answer-paper .muted {
     font-size: 13px;
   }
-  .progress-note {
-    font-size: 13px;
+  .completion-note {
+    font-size: 14px;
     padding-top: 15px;
     margin-top: 16px;
+  }
+  .phase-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .phase-actions button {
+    width: 100%;
   }
   .waiting-state h2 {
     font-size: 25px;
@@ -1343,21 +1365,17 @@ form .wide {
     font-size: 15px;
   }
   .waiting-state > .face {
-    width: 75px;
-    height: 68px;
-  }
-  .waiting-state > .face i {
-    width: 5px;
-    height: 9px;
+    width: 80px;
+    height: 80px;
   }
   .voting-area > h2 {
     font-size: 24px;
   }
   .option {
     font-size: 17px;
-    gap: 12px;
-    padding: 15px 14px;
-    min-height: 80px;
+    gap: 10px;
+    padding: 14px 12px;
+    min-height: 76px;
   }
   .option-letter {
     font-size: 20px;
@@ -1368,11 +1386,11 @@ form .wide {
     font-size: 20px;
   }
   .option small {
-    font-size: 11px;
+    font-size: 13px;
   }
-  .vote-lock {
+  button.vote-lock {
     width: 100%;
-    font-size: 18px !important;
+    font-size: 18px;
   }
   .truth-slip {
     padding: 23px 22px;
@@ -1381,10 +1399,10 @@ form .wide {
     font-size: 27px;
   }
   .truth-label {
-    font-size: 13px;
+    font-size: 14px;
   }
   .truth-slip p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .reveal-options > h2 {
     font-size: 25px;
@@ -1397,14 +1415,14 @@ form .wide {
     font-size: 17px;
   }
   .reveal-option p {
-    font-size: 12px;
+    font-size: 14px;
   }
   .vote-tally {
     font-size: 20px;
     min-width: 27px;
   }
   .vote-tally small {
-    font-size: 10px;
+    font-size: 12px;
   }
   .scoreboard {
     padding: 21px 18px;
@@ -1413,8 +1431,12 @@ form .wide {
     font-size: 23px;
   }
   .score-row {
-    gap: 10px;
+    gap: 9px;
     font-size: 16px;
+  }
+  .score-name strong {
+    flex-basis: 100%;
+    line-height: 1.3;
   }
   .score {
     font-size: 25px;
@@ -1422,9 +1444,10 @@ form .wide {
   .rank {
     font-size: 14px;
     width: 13px;
+    flex-basis: 13px;
   }
   .points-gained {
-    font-size: 11px;
+    font-size: 12px;
     padding: 2px 5px;
   }
   .next-round .primary {
@@ -1445,14 +1468,23 @@ form .wide {
   .recovery h2 {
     font-size: 27px;
   }
+  .confirmation {
+    padding: 23px 20px;
+  }
+  .confirmation h2 {
+    font-size: 27px;
+  }
+  .confirmation-actions {
+    flex-direction: column;
+  }
 }
 @media (max-width: 360px) {
   .box-art {
-    opacity: 0.35;
-    right: -4px;
+    transform: scale(0.5);
+    right: 1px;
   }
   .hero-description {
-    max-width: 27ch;
+    max-width: none;
   }
   .brand {
     font-size: 56px;
@@ -1461,18 +1493,46 @@ form .wide {
     font-size: 30px;
   }
   .game-facts {
-    font-size: 11px;
+    font-size: 12px;
   }
   .game-facts span + span {
     margin-left: 8px;
     padding-left: 8px;
   }
-  .round-dots {
-    display: none;
+  .answer-footer {
+    flex-wrap: wrap;
   }
-  .share-hint {
-    display: none;
+  .answer-footer > span {
+    margin-left: auto;
   }
+  .answer-footer .primary {
+    width: 100%;
+  }
+  .entry-paper,
+  .lobby-paper,
+  .answer-paper,
+  .scoreboard {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 0 var(--ink);
+  }
+  .room-code:hover:not(:disabled),
+  .text-button:hover:not(:disabled),
+  .table-leave:hover:not(:disabled) {
+    transform: none;
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+button:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: none;
 }
 @media (prefers-reduced-motion: reduce) {
   *,

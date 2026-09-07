@@ -5,9 +5,6 @@ export const MIN_PLAYERS = 3;
 export const MAX_PLAYERS = 12;
 export const MAX_CARDS = 1000;
 export const MAX_BLUFF_LENGTH = 180;
-export const WRITING_MS = 90_000;
-export const VOTING_MS = 60_000;
-export const REVEAL_HOST_GRACE_MS = 15_000;
 
 export function fail(code: string): never {
   throw new ConvexError({ code });

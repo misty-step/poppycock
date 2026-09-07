@@ -7,7 +7,6 @@ export const gamePhase = v.union(
   v.literal("finished"),
   v.literal("abandoned"),
 );
-export const timedPhase = v.union(v.literal("writing"), v.literal("voting"));
 export const source = v.object({ title: v.string(), url: v.string(), note: v.string() });
 export const gameView = v.object({
   gameId: v.string(),
@@ -15,7 +14,6 @@ export const gameView = v.object({
   phase: gamePhase,
   round: v.number(),
   totalRounds: v.number(),
-  deadline: v.number(),
   participant: v.boolean(),
   submitted: v.boolean(),
   voted: v.boolean(),

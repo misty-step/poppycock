@@ -266,8 +266,9 @@ export class LocalProcesses {
     this.onTerminate = () => {
       void this.stop(143);
     };
-    process.once("SIGINT", this.onInterrupt);
-    process.once("SIGTERM", this.onTerminate);
+    // pnpm can forward the terminal signal again while detached children are stopping.
+    process.on("SIGINT", this.onInterrupt);
+    process.on("SIGTERM", this.onTerminate);
   }
 
   start(program, args, { env = process.env, label = program } = {}) {
@@ -316,8 +317,6 @@ export class LocalProcesses {
     if (this.stopPromise) return this.stopPromise;
     this.stopping = true;
     if (exitCode !== undefined) process.exitCode = exitCode;
-    process.removeListener("SIGINT", this.onInterrupt);
-    process.removeListener("SIGTERM", this.onTerminate);
     this.stopPromise = (async () => {
       const jobs = [...this.children];
       const signal = (job, name) => {
@@ -336,6 +335,8 @@ export class LocalProcesses {
       ]);
       for (const job of jobs) signal(job, "SIGKILL");
       await Promise.all(jobs.map((job) => job.done));
+      process.removeListener("SIGINT", this.onInterrupt);
+      process.removeListener("SIGTERM", this.onTerminate);
     })();
     return this.stopPromise;
   }
@@ -475,7 +476,7 @@ export async function configureBackend(processes, local, backend) {
 }
 
 export async function runInternal(processes, local, name) {
-  if (name !== "seed:run" && name !== "seed:reset")
+  if (name !== "seed:run" && name !== "seed:reset" && name !== "untimedMigration:run")
     throw new Error("Unsupported local maintenance command.");
   const state = await readLocalState(true);
   const response = await fetch(`${BACKEND_URL}/instance_name`, {
@@ -488,7 +489,12 @@ export async function runInternal(processes, local, name) {
     [CLI, "run", name, "{}", "--env-file", CONTROL_FILE, "--typecheck", "disable"],
     {
       env: local.cliEnv,
-      label: name === "seed:reset" ? "local game reset" : "local content seed",
+      label:
+        name === "untimedMigration:run"
+          ? "untimed match migration"
+          : name === "seed:reset"
+            ? "local game reset"
+            : "local content seed",
     },
   );
 }

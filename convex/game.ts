@@ -1,9 +1,8 @@
 import { beginMatch, completeMatch, requireActiveMatch, resolvePlayer } from "@parlor/convex";
 import { v } from "convex/values";
 import type { GameView } from "../lib/game-types";
-import { internal } from "./_generated/api";
 import type { Doc, Id } from "./_generated/dataModel";
-import { internalMutation, mutation, query } from "./_generated/server";
+import { mutation, query } from "./_generated/server";
 import type { MutationCtx, QueryCtx } from "./_generated/server";
 import {
   cleanBluff,
@@ -13,13 +12,10 @@ import {
   MIN_PLAYERS,
   normalizeAnswer,
   requireRound,
-  REVEAL_HOST_GRACE_MS,
   shuffled,
   TOTAL_ROUNDS,
-  VOTING_MS,
-  WRITING_MS,
 } from "./rules";
-import { gamePhase, gameView, timedPhase } from "./validators";
+import { gamePhase, gameView } from "./validators";
 
 type ReadCtx = QueryCtx | MutationCtx;
 type Game = Doc<"games">;
@@ -71,8 +67,8 @@ async function eligibleIds(ctx: ReadCtx, game: Game): Promise<Set<Id<"players">>
   const open = new Set(
     members.filter((member) => member.closedAt === undefined).map((member) => member.playerId),
   );
-  // A disconnected participant retains their turn until the deadline. Explicit
-  // departures stop blocking early advancement, but never erase earned points.
+  // A disconnected participant keeps their turn. Explicit departures stop
+  // blocking completion, but never erase saved answers or earned points.
   return new Set(
     participants
       .filter((participant) => open.has(participant.playerId))
@@ -187,7 +183,6 @@ async function revealRound(ctx: MutationCtx, game: Game, now: number): Promise<v
   await ctx.db.patch(game._id, {
     phase: "reveal",
     revealedAt: now,
-    deadline: now + REVEAL_HOST_GRACE_MS,
     players: game.players.map((player) => ({
       ...player,
       score: player.score + (points.get(player.playerId) ?? 0),
@@ -232,18 +227,10 @@ async function openVoting(ctx: MutationCtx, game: Game, now: number): Promise<vo
   for (const [order, option] of shuffled([...choices.values()]).entries()) {
     await ctx.db.insert("options", { gameId: game._id, round: game.round, order, ...option });
   }
-  const deadline = now + VOTING_MS;
-  await ctx.db.patch(game._id, { phase: "voting", deadline });
+  await ctx.db.patch(game._id, { phase: "voting" });
   const voting = await ctx.db.get(game._id);
   if (!voting) fail("GAME_DATA_INVALID");
   if (await everyoneDone(ctx, voting)) await revealRound(ctx, voting, now);
-  else
-    await ctx.scheduler.runAt(deadline, internal.game.deadline, {
-      gameId: game._id,
-      round: game.round,
-      phase: "voting",
-      deadline,
-    });
 }
 
 export const view = query({
@@ -276,10 +263,9 @@ export const view = query({
         : await optionsFor(ctx, game);
     let canAdvance = false;
     if (participant && match.status === "active" && room.closedAt === undefined) {
-      if (phase === "reveal")
-        canAdvance = room.hostPlayerId === actor.playerId || Date.now() >= game.deadline;
+      if (phase === "reveal") canAdvance = true;
       else if (phase === "writing" || phase === "voting")
-        canAdvance = Date.now() >= game.deadline || (await everyoneDone(ctx, game));
+        canAdvance = room.hostPlayerId === actor.playerId || (await everyoneDone(ctx, game));
     }
     return {
       gameId: game._id,
@@ -287,7 +273,6 @@ export const view = query({
       phase,
       round: game.round,
       totalRounds: TOTAL_ROUNDS,
-      deadline: game.deadline,
       participant,
       submitted: ownSubmission !== undefined,
       voted: ownVote !== undefined || (phase === "voting" && ownSubmission?.truthMatch === true),
@@ -297,7 +282,7 @@ export const view = query({
       prompt: { category: round.category, question: round.question },
       options: options.map((option) => ({
         id: option._id,
-        text: option.text,
+        text: option.normalized,
         own: option.authorIds.includes(actor.playerId),
         ...(revealed
           ? {
@@ -347,6 +332,7 @@ export const start = mutation({
       minPlayers: MIN_PLAYERS,
       maxPlayers: MAX_PLAYERS,
       nowMs: now,
+      hardDeadline: false,
     });
     const participants = await ctx.db
       .query("matchParticipants")
@@ -369,7 +355,6 @@ export const start = mutation({
         roundPoints: 0,
       };
     });
-    const deadline = now + WRITING_MS;
     const gameId = await ctx.db.insert("games", {
       roomId: room._id,
       matchId: match.id,
@@ -379,16 +364,9 @@ export const start = mutation({
       startedAt: now,
       phase: "writing",
       round: 1,
-      deadline,
       players,
     });
     await drawRound(ctx, gameId, room._id, 1);
-    await ctx.scheduler.runAt(deadline, internal.game.deadline, {
-      gameId,
-      round: 1,
-      phase: "writing",
-      deadline,
-    });
     return gameId;
   },
 });
@@ -420,7 +398,6 @@ export const submit = mutation({
     if (room.closedAt !== undefined) fail("ROOM_NOT_OPEN");
     if (game.phase !== "writing") fail("WRONG_PHASE");
     const now = Date.now();
-    if (now >= game.deadline) fail("PHASE_EXPIRED");
     const round = await currentRound(ctx, game);
     const truthMatch = normalized === round.normalizedAnswer;
     await ctx.db.insert("submissions", {
@@ -469,7 +446,6 @@ export const vote = mutation({
     if (room.closedAt !== undefined) fail("ROOM_NOT_OPEN");
     if (game.phase !== "voting") fail("WRONG_PHASE");
     const now = Date.now();
-    if (now >= game.deadline) fail("PHASE_EXPIRED");
     const submission = await ctx.db
       .query("submissions")
       .withIndex("by_game_round_player", (q) =>
@@ -518,60 +494,25 @@ export const advance = mutation({
     if (room.closedAt !== undefined) fail("ROOM_NOT_OPEN");
     const now = Date.now();
     if (game.phase === "writing" || game.phase === "voting") {
-      if (now < game.deadline && !(await everyoneDone(ctx, game))) fail("PHASE_NOT_READY");
+      if (room.hostPlayerId !== actor.playerId && !(await everyoneDone(ctx, game)))
+        fail("HOST_REQUIRED");
       if (game.phase === "writing") await openVoting(ctx, game, now);
       else await revealRound(ctx, game, now);
     } else if (game.phase === "reveal") {
-      if (room.hostPlayerId !== actor.playerId && now < game.deadline) fail("HOST_REQUIRED");
       if (game.round === TOTAL_ROUNDS) {
         await completeMatch(ctx, { matchId: game.matchId, actor, nowMs: now });
-        await ctx.db.patch(game._id, { phase: "finished", finishedAt: now, deadline: now });
+        await ctx.db.patch(game._id, { phase: "finished", finishedAt: now });
       } else {
         const round = game.round + 1;
-        const deadline = now + WRITING_MS;
         await drawRound(ctx, game._id, game.roomId, round);
         await ctx.db.patch(game._id, {
           phase: "writing",
           round,
-          deadline,
           revealedAt: undefined,
           players: game.players.map((player) => ({ ...player, roundPoints: 0 })),
         });
-        await ctx.scheduler.runAt(deadline, internal.game.deadline, {
-          gameId: game._id,
-          round,
-          phase: "writing",
-          deadline,
-        });
       }
     } else fail("WRONG_PHASE");
-    return null;
-  },
-});
-
-/** Server-only expected-state transitions; delayed or duplicate jobs are inert. */
-export const deadline = internalMutation({
-  args: { gameId: v.id("games"), round: v.number(), phase: timedPhase, deadline: v.number() },
-  returns: v.null(),
-  handler: async (ctx, args): Promise<null> => {
-    const game = await ctx.db.get(args.gameId);
-    if (
-      !game ||
-      game.round !== args.round ||
-      game.phase !== args.phase ||
-      game.deadline !== args.deadline
-    )
-      return null;
-    const match = await ctx.db.get(game.matchId);
-    if (!match || match.status !== "active") return null;
-    await requireActiveMatch(ctx, game.matchId, game.roomId);
-    const now = Date.now();
-    if (now < game.deadline) {
-      await ctx.scheduler.runAt(game.deadline, internal.game.deadline, args);
-      return null;
-    }
-    if (game.phase === "writing") await openVoting(ctx, game, now);
-    else await revealRound(ctx, game, now);
     return null;
   },
 });

@@ -30,7 +30,7 @@ export default defineSchema({
     startedAt: v.number(),
     phase: gamePhase,
     round: v.number(),
-    deadline: v.number(),
+    deadline: v.optional(v.number()),
     revealedAt: v.optional(v.number()),
     finishedAt: v.optional(v.number()),
     players: v.array(

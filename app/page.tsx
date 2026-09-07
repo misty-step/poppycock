@@ -3,6 +3,8 @@
 import {
   Component,
   useEffect,
+  useId,
+  useRef,
   useState,
   useSyncExternalStore,
   type FormEvent,
@@ -15,6 +17,7 @@ import { api } from "../convex/_generated/api";
 import type { Id } from "../convex/_generated/dataModel";
 import type { GameView } from "../lib/game-types";
 import { useGuest } from "./providers";
+import { Face } from "./avatar";
 
 function message(error: unknown): string {
   const data = error !== null && typeof error === "object" && "data" in error ? error.data : null;
@@ -31,8 +34,7 @@ function message(error: unknown): string {
     INVALID_DISPLAY_NAME: "Choose a name between 1 and 24 characters.",
     ROOM_FULL: "This table is full. Poppycock seats up to 12.",
     ROOM_JOIN_RATE_LIMIT: "Too many attempts. Wait a minute before trying again.",
-    HOST_REQUIRED: "The host has changed. The new host can start the game.",
-    PHASE_EXPIRED: "That timer ran out. Your next turn will be ready shortly.",
+    HOST_REQUIRED: "The host has changed. The new host can manage this table.",
     STALE_ROUND: "The table moved to a new round. Your current turn is shown here.",
     SUBMISSION_LOCKED: "Your bluff is already saved. It can’t be changed.",
     VOTE_LOCKED: "Your vote is already saved. Sit tight for the reveal.",
@@ -51,15 +53,6 @@ function message(error: unknown): string {
       .slice(0, 240);
   return "That didn’t go through. Check your connection and try again.";
 }
-function Face({ seat = 0, small = false }: { seat?: number; small?: boolean }) {
-  return (
-    <span className={`face face-${seat % 6}${small ? " face-small" : ""}`} aria-hidden="true">
-      <i />
-      <i />
-      <b />
-    </span>
-  );
-}
 function Brand({ small = false }: { small?: boolean }) {
   return (
     <span className={small ? "brand brand-small" : "brand"}>
@@ -74,11 +67,11 @@ function Rules() {
       <ol>
         <li>
           <strong>Make something up.</strong> Everyone gets the same obscure question. Write a
-          believable answer in 90 seconds.
+          believable answer and lock it in when you’re happy with it.
         </li>
         <li>
-          <strong>Find the real thing.</strong> Your bluffs get mixed with the truth. You have 60
-          seconds to vote. You can’t pick your own.
+          <strong>Find the real thing.</strong> Your bluffs get mixed with the truth. Read every
+          choice, then vote. You can’t pick your own.
         </li>
         <li>
           <strong>Take the credit.</strong> Get 2 points for finding the truth and 1 for each person
@@ -87,9 +80,80 @@ function Rules() {
       </ol>
       <p>
         Six rounds. Most points wins; ties share the glory. Matching bluffs share their fooled-voter
-        points. Miss a deadline? You sit out that action, not the game.
+        points. The table moves on when everyone is done, or the host chooses to finish that part.
+        Any player can deal the next question after the reveal.
       </p>
     </details>
+  );
+}
+function Confirmation({
+  title,
+  confirmLabel,
+  cancelLabel,
+  busy,
+  error,
+  unavailable,
+  onConfirm,
+  onCancel,
+  children,
+}: {
+  title: string;
+  confirmLabel: string;
+  cancelLabel: string;
+  busy: boolean;
+  error: string;
+  unavailable: string | undefined;
+  onConfirm: () => void;
+  onCancel: () => void;
+  children: ReactNode;
+}) {
+  const dialog = useRef<HTMLDialogElement>(null);
+  const cancel = useRef<HTMLButtonElement>(null);
+  const id = useId();
+  useEffect(() => {
+    const element = dialog.current;
+    const previous = document.activeElement;
+    element?.showModal();
+    cancel.current?.focus();
+    return () => {
+      element?.close();
+      if (previous instanceof HTMLElement && previous.isConnected) previous.focus();
+    };
+  }, []);
+  return (
+    <dialog
+      ref={dialog}
+      className="confirmation paper"
+      aria-labelledby={`${id}-title`}
+      aria-describedby={`${id}-description`}
+      onCancel={(event) => {
+        event.preventDefault();
+        if (!busy) onCancel();
+      }}
+    >
+      <h2 id={`${id}-title`}>{title}</h2>
+      <div className="confirmation-copy" id={`${id}-description`}>
+        {children}
+      </div>
+      {error && (
+        <p className="error" role="alert">
+          {error}
+        </p>
+      )}
+      {unavailable && (
+        <p className="confirmation-unavailable" role="status">
+          {unavailable}
+        </p>
+      )}
+      <div className="confirmation-actions" aria-busy={busy}>
+        <button ref={cancel} className="secondary" disabled={busy} onClick={onCancel}>
+          {cancelLabel}
+        </button>
+        <button disabled={busy || Boolean(unavailable)} onClick={onConfirm}>
+          {confirmLabel}
+        </button>
+      </div>
+    </dialog>
   );
 }
 class RoomBoundary extends Component<
@@ -275,10 +339,15 @@ function Entrance({
             <button
               className={mode === "create" ? "selected" : ""}
               onClick={() => setMode("create")}
+              aria-pressed={mode === "create"}
             >
               Start a table
             </button>
-            <button className={mode === "join" ? "selected" : ""} onClick={() => setMode("join")}>
+            <button
+              className={mode === "join" ? "selected" : ""}
+              aria-pressed={mode === "join"}
+              onClick={() => setMode("join")}
+            >
               Join friends
             </button>
           </div>
@@ -343,8 +412,8 @@ function Entrance({
 function useClock() {
   const [now, setNow] = useState(Date.now);
   useEffect(() => {
-    const timer = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(timer);
+    const interval = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(interval);
   }, []);
   return now;
 }
@@ -384,6 +453,7 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   const [showShare, setShowShare] = useState(false);
+  const [showLeave, setShowLeave] = useState(false);
   const [copied, setCopied] = useState(false);
   const [requestId, setRequestId] = useState(createRequestId);
   if (!state || game === undefined)
@@ -395,6 +465,10 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
   const host = state.room.hostPlayerId === state.viewerPlayerId;
   const online = browserOnline && connection.isWebSocketConnected;
   const active = game && !["finished", "abandoned"].includes(game.phase);
+  const viewerSeat =
+    game?.players.find((player) => player.playerId === state.viewerPlayerId)?.seatIndex ??
+    state.members.find((member) => member.playerId === state.viewerPlayerId)?.seatIndex ??
+    0;
   const present = state.members.filter(
     (member) =>
       classifyPresence(
@@ -422,6 +496,7 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
   }
   async function depart() {
     setBusy(true);
+    setError("");
     try {
       await leave({ roomId, guestToken: token });
       exit();
@@ -441,22 +516,35 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
   return (
     <>
       <div className="table-bar">
+        <div className="table-identity">
+          <button
+            className="room-code"
+            onClick={() => setShowShare(!showShare)}
+            aria-expanded={showShare}
+            aria-controls="table-invite"
+          >
+            <span>Room</span> <strong>{state.room.code}</strong>
+            <span className="share-hint">Invite friends</span>
+          </button>
+          <span className={`connection ${online ? "" : "offline"}`} role="status">
+            <i aria-hidden="true" />
+            {!online
+              ? "Reconnecting…"
+              : heartbeat.status === "degraded"
+                ? "Restoring presence…"
+                : "Connected"}
+          </span>
+        </div>
         <button
-          className="room-code"
-          onClick={() => setShowShare(!showShare)}
-          aria-expanded={showShare}
+          className="secondary table-leave"
+          disabled={busy}
+          onClick={() => {
+            setError("");
+            setShowLeave(true);
+          }}
         >
-          <span>Room</span> <strong>{state.room.code}</strong>
-          <span className="share-hint">Invite friends</span>
+          Leave table
         </button>
-        <span className={`connection ${online ? "" : "offline"}`}>
-          <i />
-          {!online
-            ? "Reconnecting…"
-            : heartbeat.status === "degraded"
-              ? "Restoring presence…"
-              : "All connected"}
-        </span>
       </div>
       {!online && (
         <p className="notice" role="status">
@@ -464,7 +552,7 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
         </p>
       )}
       {showShare && (
-        <section className="paper share-panel">
+        <section className="paper share-panel" id="table-invite">
           <QRCodeDisplay
             value={joinUrl}
             size={144}
@@ -492,7 +580,7 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
           </div>
         </section>
       )}
-      {error && (
+      {error && !showLeave && (
         <p className="notice error" role="alert">
           {error}
         </p>
@@ -518,11 +606,11 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
               {game?.phase === "finished"
                 ? "The final scores are in. The most convincing nonsense wins."
                 : game?.phase === "abandoned"
-                  ? "The match ended after everyone left or its 30-minute limit. Your room is still here — gather three players and deal again."
+                  ? "This game has ended. Your room is still here — gather three players and deal again."
                   : "Everyone plays on their own phone. Share the code, settle in, and prepare to sound like you know things."}
             </p>
           </div>
-          <Face seat={game?.phase === "finished" ? 3 : 1} />
+          <Face seat={viewerSeat} />
         </section>
       )}
       {game?.phase === "finished" && <Scoreboard game={game} final />}
@@ -533,7 +621,6 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
           token={token}
           host={host}
           online={online}
-          now={now}
           viewerId={state.viewerPlayerId}
         />
       ) : (
@@ -558,14 +645,28 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
                   className={`player-row ${presence !== "present" ? "away" : ""}`}
                   key={member.playerId}
                 >
-                  <Face small seat={member.seatIndex} />
-                  <strong>
-                    {member.displayName}
-                    {member.playerId === state.viewerPlayerId ? " (you)" : ""}
-                  </strong>
-                  <span>
-                    {member.isHost ? "Host" : presence !== "present" ? "Away" : "Ready to fib"}
-                  </span>
+                  <Face
+                    small
+                    seat={
+                      game?.players.find((player) => player.playerId === member.playerId)
+                        ?.seatIndex ?? member.seatIndex
+                    }
+                  />
+                  <div className="player-details">
+                    <strong>
+                      {member.displayName}
+                      {member.playerId === state.viewerPlayerId ? " (you)" : ""}
+                    </strong>
+                    <span>
+                      {member.isHost
+                        ? presence !== "present"
+                          ? "Host, away"
+                          : "Host"
+                        : presence !== "present"
+                          ? "Away"
+                          : "Ready to fib"}
+                    </span>
+                  </div>
                 </div>
               );
             })}
@@ -598,21 +699,36 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
       )}
       <div className="room-bottom">
         <Rules />
-        <button
-          className="text-button leave"
-          disabled={busy}
-          onClick={() => {
-            if (
-              window.confirm(
-                "Leave this table? Your submitted answers stay in the game. You can rejoin with the room code.",
-              )
-            )
-              void depart();
-          }}
-        >
-          Leave table
-        </button>
       </div>
+      {showLeave && (
+        <Confirmation
+          title="Leave this table?"
+          confirmLabel={busy ? "Leaving…" : "Leave table"}
+          cancelLabel="Stay at the table"
+          busy={busy}
+          error={error}
+          unavailable={!online ? "Reconnect before leaving the table." : undefined}
+          onCancel={() => setShowLeave(false)}
+          onConfirm={() => void depart()}
+        >
+          {state.members.length === 1 ? (
+            <p>
+              You’re the last guest. Leaving closes this room and ends any game still in progress.
+            </p>
+          ) : (
+            <>
+              {game?.participant && (
+                <p>Your saved answers and this game’s score stay in the game.</p>
+              )}
+              <p>
+                Rejoin with <strong>{state.room.code}</strong> in this browser while the room is
+                open and there’s space. Leaving releases your seat; it isn’t reserved.
+              </p>
+              {host && <p>Another guest will become the host.</p>}
+            </>
+          )}
+        </Confirmation>
+      )}
     </>
   );
 }
@@ -630,8 +746,12 @@ function Scoreboard({ game, final = false }: { game: GameView; final?: boolean }
             {index > 0 && player.score === sorted[index - 1]?.score ? "=" : index + 1}
           </span>
           <Face small seat={player.seatIndex} />
-          <strong>{player.name}</strong>
-          {player.roundPoints > 0 && <span className="points-gained">+{player.roundPoints}</span>}
+          <div className="score-name">
+            <strong>{player.name}</strong>
+            {player.roundPoints > 0 && (
+              <span className="points-gained">+{player.roundPoints} this round</span>
+            )}
+          </div>
           <span className="score">
             {player.score}
             <small>pts</small>
@@ -646,14 +766,12 @@ function Play({
   token,
   host,
   online,
-  now,
   viewerId,
 }: {
   game: GameView;
   token: string;
   host: boolean;
   online: boolean;
-  now: number;
   viewerId: string;
 }) {
   const submit = useMutation(api.game.submit);
@@ -664,8 +782,9 @@ function Play({
   const [selected, setSelected] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
-  const seconds = Math.max(0, Math.ceil((game.deadline - now) / 1000));
+  const [finishPhase, setFinishPhase] = useState<"writing" | "voting" | null>(null);
   const reveal = game.phase === "reveal";
+  const viewerSeat = game.players.find((player) => player.playerId === viewerId)?.seatIndex ?? 0;
   const name = (id: string) =>
     game.players.find((player) => player.playerId === id)?.name ?? "A departed friend";
   async function action(kind: "submit" | "vote" | "advance") {
@@ -675,7 +794,10 @@ function Play({
       const args = { gameId: game.gameId as Id<"games">, guestToken: token, round: game.round };
       if (kind === "submit") await submit({ ...args, text });
       if (kind === "vote" && selected) await vote({ ...args, optionId: selected as Id<"options"> });
-      if (kind === "advance") await advance({ ...args, phase: game.phase });
+      if (kind === "advance") {
+        await advance({ ...args, phase: game.phase });
+        setFinishPhase(null);
+      }
     } catch (cause) {
       setError(message(cause));
     } finally {
@@ -688,17 +810,12 @@ function Play({
         <span>
           Round <strong>{game.round}</strong> of {game.totalRounds}
         </span>
-        <div className="round-dots" aria-hidden="true">
-          {Array.from({ length: game.totalRounds }, (_, i) => (
-            <i className={i + 1 <= game.round ? "filled" : ""} key={i} />
-          ))}
-        </div>
-        <span className={`timer ${seconds < 15 && !reveal ? "urgent" : ""}`}>
+        <span className="phase-name">
           {reveal
             ? "The reveal"
-            : seconds > 0
-              ? `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`
-              : "Wrapping up…"}
+            : game.phase === "writing"
+              ? "Make something up"
+              : "Find the truth"}
         </span>
       </div>
       {!game.participant && (
@@ -715,7 +832,7 @@ function Play({
               : "One of these is true. The others? Your friends."}
         </p>
       </section>
-      {error && (
+      {error && finishPhase !== game.phase && (
         <p className="notice error" role="alert">
           {error}
         </p>
@@ -740,22 +857,23 @@ function Play({
                 maxLength={180}
                 minLength={2}
                 placeholder="Say it with confidence…"
+                aria-describedby="bluff-hint bluff-count"
                 required
               />
               <div className="answer-footer">
-                <span>{text.length}/180</span>
-                <button
-                  className="primary"
-                  disabled={busy || !online || seconds === 0 || text.trim().length < 2}
-                >
+                <span id="bluff-count">{text.length}/180</span>
+                <button className="primary" disabled={busy || !online || text.trim().length < 2}>
                   {busy ? "Saving your lie…" : "Lock in my bluff"}
                 </button>
               </div>
-              <p className="muted">Once it’s in, it’s in. Keep your answer to yourself.</p>
+              <p className="muted" id="bluff-hint">
+                Once it’s in, it’s in. Every choice uses lowercase, tidy spaces, and no ending
+                punctuation to keep its author a mystery.
+              </p>
             </form>
           ) : (
             <div className="waiting-state">
-              <Face seat={4} />
+              <Face seat={viewerSeat} />
               <h2>{game.submitted ? "That sounds almost true." : "The bluffs are brewing."}</h2>
               <p>
                 {game.submitted
@@ -765,7 +883,7 @@ function Play({
               {game.ownText && <blockquote>{game.ownText}</blockquote>}
             </div>
           )}
-          <div className="progress-note" role="status">
+          <div className="completion-note" role="status">
             {game.submissionCount} of {game.playerCount} answers are in.
           </div>
         </section>
@@ -784,35 +902,92 @@ function Play({
               <button
                 key={option.id}
                 className={`option ${selected === option.id ? "chosen" : ""} ${option.own ? "own-option" : ""}`}
-                disabled={
-                  !game.participant || game.voted || option.own || busy || !online || seconds === 0
-                }
+                disabled={!game.participant || game.voted || option.own || busy || !online}
                 onClick={() => setSelected(option.id)}
                 aria-pressed={selected === option.id}
               >
-                <span className="option-letter">{String.fromCharCode(65 + i)}</span>
+                <span className="option-letter" aria-hidden="true">
+                  {String.fromCharCode(65 + i)}
+                </span>
                 <span>
                   {option.text}
                   {option.own && <small>Your answer — no self-votes</small>}
                 </span>
-                <span className="option-mark">{selected === option.id ? "●" : "○"}</span>
+                <span className="option-mark" aria-hidden="true">
+                  {selected === option.id ? "●" : "○"}
+                </span>
               </button>
             ))}
           </div>
           {game.participant && !game.voted && (
             <button
               className="primary vote-lock"
-              disabled={!selected || busy || !online || seconds === 0}
+              disabled={!selected || busy || !online}
               onClick={() => void action("vote")}
             >
               {busy ? "Saving your pick…" : "Lock in my vote"}
             </button>
           )}
-          <p className="progress-note" role="status">
+          <p className="completion-note" role="status">
             {game.voteCount} votes locked in.{" "}
             {game.voted ? "Sit tight for the reveal." : "Go with your gut. Or don’t."}
           </p>
         </section>
+      )}
+      {game.participant &&
+        game.canAdvance &&
+        (game.phase === "writing" || game.phase === "voting") && (
+          <div className="phase-actions">
+            <p>
+              {host
+                ? "You’re the host. Move on when the table is ready."
+                : "Everyone’s part is done."}
+            </p>
+            <button
+              className="secondary"
+              disabled={busy || !online}
+              onClick={() => {
+                if (host) {
+                  setError("");
+                  setFinishPhase(game.phase === "writing" ? "writing" : "voting");
+                } else {
+                  void action("advance");
+                }
+              }}
+            >
+              {game.phase === "writing" ? "Finish writing" : "Reveal answers"}
+            </button>
+          </div>
+        )}
+      {finishPhase && finishPhase === game.phase && (
+        <Confirmation
+          title={finishPhase === "writing" ? "Finish writing?" : "Reveal answers?"}
+          confirmLabel={
+            busy
+              ? "Moving the table on…"
+              : finishPhase === "writing"
+                ? "Finish writing"
+                : "Reveal answers"
+          }
+          cancelLabel={finishPhase === "writing" ? "Keep writing" : "Keep voting"}
+          busy={busy}
+          error={error}
+          unavailable={
+            !host
+              ? "The host has changed. Let the new host move the table on."
+              : !online
+                ? "Reconnect before moving the table on."
+                : undefined
+          }
+          onCancel={() => setFinishPhase(null)}
+          onConfirm={() => void action("advance")}
+        >
+          <p>
+            {finishPhase === "writing"
+              ? "Open voting with the answers already saved. Anyone still writing won’t be able to submit a bluff this round."
+              : "Show the truth and score the votes already saved. Anyone still choosing won’t be able to vote this round."}
+          </p>
+        </Confirmation>
       )}
       {reveal && (
         <>
@@ -861,7 +1036,7 @@ function Play({
           </section>
           <Scoreboard game={game} />
           <div className="next-round">
-            {game.participant && (host || game.canAdvance || seconds === 0) ? (
+            {game.participant ? (
               <button
                 className="primary"
                 disabled={busy || !online}
@@ -874,11 +1049,7 @@ function Play({
                     : "Deal the next question"}
               </button>
             ) : (
-              <p>
-                {game.participant
-                  ? `Your host can deal now. Any player can continue in ${seconds}s.`
-                  : "The players will deal the next question shortly."}
-              </p>
+              <p>The players will deal the next question when they’re ready.</p>
             )}
           </div>
         </>

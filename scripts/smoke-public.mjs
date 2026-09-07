@@ -140,14 +140,26 @@ try {
     expect(option.authors).toBeUndefined();
     expect(option.voters).toBeUndefined();
   }
-  const truth = voting.options.find((option) => !Object.values(bluffs).includes(option.text));
+  const optionText = (text) =>
+    text
+      .normalize("NFKC")
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/gu, " ")
+      .replace(/[.!?]+$/u, "")
+      .trim();
+  const knownBluffs = Object.values(bluffs).map(optionText);
+  const truth = voting.options.find((option) => !knownBluffs.includes(option.text));
   expect(truth).toBeDefined();
   await capture("Bea", "public-https-voting-phone.png");
   report.checks.push("All three locked bluffs; voting hid truth labels, authors, and voters.");
 
   async function voteFor(name, text) {
     const page = players[name].page;
-    await page.locator("button.option").filter({ hasText: text }).click();
+    await page
+      .locator("button.option")
+      .filter({ hasText: optionText(text) })
+      .click();
     await page.getByRole("button", { name: "Lock in my vote", exact: true }).click();
     await expect
       .poll(async () => (await view(name)).voted || (await view(name)).phase === "reveal", {
@@ -160,7 +172,7 @@ try {
   await voteFor("Cy", bluffs.Bea);
   await phase("Ada", "reveal");
   const reveal = await view("Ada");
-  expect(reveal.truth).toBe(truth.text);
+  expect(optionText(reveal.truth)).toBe(truth.text);
   expect(reveal.source.url).toMatch(/^https:\/\//);
   expect(reveal.players.map((p) => p.roundPoints)).toEqual([3, 1, 0]);
   await capture("Ada", "public-https-reveal-desktop.png");
