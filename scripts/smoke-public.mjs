@@ -36,7 +36,11 @@ const report = {
 };
 
 async function capture(name, filename) {
-  await players[name].page.screenshot({ path: join(evidence, filename), fullPage: true });
+  const page = players[name].page;
+  if (await page.locator(".action-dock").count()) {
+    await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+  }
+  await page.screenshot({ path: join(evidence, filename), fullPage: true });
   report.screenshots.push(filename);
 }
 
