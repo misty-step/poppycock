@@ -7,11 +7,11 @@ import "./globals.css";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "Poppycock — a game of beautiful nonsense",
+  title: "Poppycock — bluff your friends",
   description:
-    "One strange question. A room full of convincing lies. A party game for 3–12 people, powered by Parlor.",
+    "Write a believable bluff. Find the truth. A free, untimed party game for 3–12 friends, powered by Parlor.",
 };
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#9be3dd" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#F5F7F5" };
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">

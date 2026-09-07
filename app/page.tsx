@@ -7,157 +7,63 @@ import {
   useRef,
   useState,
   useSyncExternalStore,
-  type FormEvent,
   type ReactNode,
 } from "react";
 import { useConvexConnectionState, useMutation, useQuery } from "convex/react";
+import type { FunctionReturnType } from "convex/server";
 import { QRCodeDisplay, useHeartbeat, useWakeLock } from "@parlor/react";
 import { classifyPresence, type TimestampMs } from "@parlor/core";
-import { api } from "../convex/_generated/api";
-import type { Id } from "../convex/_generated/dataModel";
-import type { GameView } from "../lib/game-types";
+import { Check, CircleHelp, Copy, LogOut, MoreHorizontal, Share2, WifiOff } from "lucide-react";
+import { api } from "@/convex/_generated/api";
+import type { Id } from "@/convex/_generated/dataModel";
+import { gameError } from "@/lib/game-error";
 import { useGuest } from "./providers";
 import { Face } from "./avatar";
+import { Entrance } from "@/components/entrance";
+import { GameStage } from "@/components/game-stage";
+import {
+  Brand,
+  BusyIcon,
+  ConfirmDialog,
+  ErrorNotice,
+  RulesDialog,
+  Scoreboard,
+} from "@/components/game-ui";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
-function message(error: unknown): string {
-  const data = error !== null && typeof error === "object" && "data" in error ? error.data : null;
-  const code =
-    data !== null && typeof data === "object" && "code" in data && typeof data.code === "string"
-      ? data.code
-      : null;
-  const messages: Record<string, string> = {
-    NOT_ENOUGH_PRESENT_PLAYERS: "We need at least 3 players here to begin.",
-    MATCH_PARTICIPANT_REQUIRED: "You have a front-row seat. Join the next game to play.",
-    SELF_VOTE_NOT_ALLOWED: "That one’s yours. Pick someone else’s answer.",
-    ROOM_NOT_OPEN: "That room has closed. Check the code or start a new table.",
-    INVALID_ROOM_CODE: "Use the four-character code your host is showing.",
-    INVALID_DISPLAY_NAME: "Choose a name between 1 and 24 characters.",
-    ROOM_FULL: "This table is full. Poppycock seats up to 12.",
-    ROOM_JOIN_RATE_LIMIT: "Too many attempts. Wait a minute before trying again.",
-    HOST_REQUIRED: "The host has changed. The new host can manage this table.",
-    STALE_ROUND: "The table moved to a new round. Your current turn is shown here.",
-    SUBMISSION_LOCKED: "Your bluff is already saved. It can’t be changed.",
-    VOTE_LOCKED: "Your vote is already saved. Sit tight for the reveal.",
-    MATCH_NOT_ACTIVE: "This game ended. Gather at the table to play another.",
-    UNAUTHENTICATED: "Your guest pass needs refreshing. Reconnect to keep the same seat.",
-    BLUFF_REQUIRED: "Write an answer before locking it in.",
-    BLUFF_TOO_LONG: "Keep your answer to 180 characters or fewer.",
-  };
-  if (code && messages[code]) return messages[code];
-  if (error instanceof Error)
-    return error.message
-      .replace(/\[CONVEX[^\]]*\]\s*/g, "")
-      .split("\n")
-      .filter((line) => !/^\s+at\s/.test(line) && !line.includes("Called by client"))
-      .join(" ")
-      .slice(0, 240);
-  return "That didn’t go through. Check your connection and try again.";
-}
-function Brand({ small = false }: { small?: boolean }) {
+type RoomState = FunctionReturnType<typeof api.rooms.getRoomState>;
+type RosterEntry = {
+  member: RoomState["members"][number];
+  presence: ReturnType<typeof classifyPresence>;
+  portrait: number;
+};
+
+function StartHeader() {
   return (
-    <span className={small ? "brand brand-small" : "brand"}>
-      poppycock<span className="brand-dot">!</span>
-    </span>
+    <header className="site-header">
+      <Brand />
+      <RulesDialog />
+    </header>
   );
 }
-function Rules() {
-  return (
-    <details className="rules">
-      <summary>How to play</summary>
-      <ol>
-        <li>
-          <strong>Make something up.</strong> Everyone gets the same obscure question. Write a
-          believable answer and lock it in when you’re happy with it.
-        </li>
-        <li>
-          <strong>Find the real thing.</strong> Your bluffs get mixed with the truth. Read every
-          choice, then vote. You can’t pick your own.
-        </li>
-        <li>
-          <strong>Take the credit.</strong> Get 2 points for finding the truth and 1 for each person
-          you fool. Write the exact truth? You earn 2 points and sit out that vote.
-        </li>
-      </ol>
-      <p>
-        Six rounds. Most points wins; ties share the glory. Matching bluffs share their fooled-voter
-        points. The table moves on when everyone is done, or the host chooses to finish that part.
-        Any player can deal the next question after the reveal.
-      </p>
-    </details>
-  );
-}
-function Confirmation({
-  title,
-  confirmLabel,
-  cancelLabel,
-  busy,
-  error,
-  unavailable,
-  onConfirm,
-  onCancel,
-  children,
-}: {
-  title: string;
-  confirmLabel: string;
-  cancelLabel: string;
-  busy: boolean;
-  error: string;
-  unavailable: string | undefined;
-  onConfirm: () => void;
-  onCancel: () => void;
-  children: ReactNode;
-}) {
-  const dialog = useRef<HTMLDialogElement>(null);
-  const cancel = useRef<HTMLButtonElement>(null);
-  const id = useId();
-  useEffect(() => {
-    const element = dialog.current;
-    const previous = document.activeElement;
-    element?.showModal();
-    cancel.current?.focus();
-    return () => {
-      element?.close();
-      if (previous instanceof HTMLElement && previous.isConnected) previous.focus();
-    };
-  }, []);
-  return (
-    <dialog
-      ref={dialog}
-      className="confirmation paper"
-      aria-labelledby={`${id}-title`}
-      aria-describedby={`${id}-description`}
-      onCancel={(event) => {
-        event.preventDefault();
-        if (!busy) onCancel();
-      }}
-    >
-      <h2 id={`${id}-title`}>{title}</h2>
-      <div className="confirmation-copy" id={`${id}-description`}>
-        {children}
-      </div>
-      {error && (
-        <p className="error" role="alert">
-          {error}
-        </p>
-      )}
-      {unavailable && (
-        <p className="confirmation-unavailable" role="status">
-          {unavailable}
-        </p>
-      )}
-      <div className="confirmation-actions" aria-busy={busy}>
-        <button ref={cancel} className="secondary" disabled={busy} onClick={onCancel}>
-          {cancelLabel}
-        </button>
-        <button disabled={busy || Boolean(unavailable)} onClick={onConfirm}>
-          {confirmLabel}
-        </button>
-      </div>
-    </dialog>
-  );
-}
+
 class RoomBoundary extends Component<
-  { children: ReactNode; recover: () => void; leave: () => void },
+  { children: ReactNode; recover: () => void; exit: () => void },
   { error: unknown }
 > {
   state: { error: unknown } = { error: null };
@@ -167,27 +73,33 @@ class RoomBoundary extends Component<
   render() {
     if (!this.state.error) return this.props.children;
     return (
-      <section className="paper recovery">
-        <h2>Let’s find your seat.</h2>
-        <p role="alert">{message(this.state.error)}</p>
-        <button
-          onClick={() => {
-            this.setState({ error: null });
-            this.props.recover();
-          }}
-        >
-          Reconnect
-        </button>
-        <button className="text-button" onClick={this.props.leave}>
-          Back to the front door
-        </button>
-        <p className="muted">
-          Your identity stays in this browser. Don’t clear browser data during a party.
-        </p>
-      </section>
+      <>
+        <StartHeader />
+        <main className="mx-auto my-10 max-w-lg space-y-5" id="main-content">
+          <h1 className="screen-title">Reconnect to your table</h1>
+          <ErrorNotice message={gameError(this.state.error)} />
+          <p className="supporting-copy">
+            Keep this browser's data to preserve your player identity.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Button
+              onClick={() => {
+                this.setState({ error: null });
+                this.props.recover();
+              }}
+            >
+              Reconnect
+            </Button>
+            <Button variant="outline" onClick={this.props.exit}>
+              Back to start
+            </Button>
+          </div>
+        </main>
+      </>
     );
   }
 }
+
 export default function Home() {
   const guest = useGuest();
   const [mounted, setMounted] = useState(false);
@@ -202,213 +114,56 @@ export default function Home() {
   function enter(id: Id<"rooms">) {
     localStorage.setItem("poppycock:room", id);
     setRoomId(id);
+    setJoinCode("");
     window.history.replaceState(null, "", "/");
+    window.scrollTo(0, 0);
   }
   function exit() {
     localStorage.removeItem("poppycock:room");
     setRoomId(null);
+    setJoinCode("");
     window.history.replaceState(null, "", "/");
+    window.scrollTo(0, 0);
   }
-  if (!mounted)
-    return (
-      <main className="loading">
-        <Brand />
-        <p>Setting the table…</p>
-      </main>
-    );
   return (
-    <main className={roomId ? "room-shell" : "front-door"}>
-      {roomId ? (
-        <header className="room-header">
-          <Brand small />
-          <span className="header-note">A game of beautiful nonsense</span>
-        </header>
-      ) : null}
+    <div className="app-shell">
+      <a className="skip-link" href="#main-content">
+        Skip to game
+      </a>
+      {(!mounted || !guest.credential || !roomId) && <StartHeader />}
       {Boolean(guest.error) && (
-        <div className="notice error" role="alert">
-          {message(guest.error)}{" "}
-          <button className="text-button" onClick={() => void guest.refresh().catch(() => {})}>
-            Retry connection
-          </button>
+        <div className="mt-5 space-y-3">
+          <ErrorNotice message={gameError(guest.error)} />
+          <Button variant="outline" onClick={() => void guest.refresh().catch(() => {})}>
+            Reconnect
+          </Button>
         </div>
       )}
-      {!guest.credential ? (
-        <section className="loading">
-          <Brand />
-          <p>{guest.loading ? "Saving your seat…" : "Connecting your guest seat…"}</p>
-          <p className="muted">No account. Just you and a very convincing lie.</p>
-        </section>
+      {!mounted || !guest.credential ? (
+        <main id="main-content" className="loading-screen" role="status">
+          <p>Connecting to Poppycock…</p>
+        </main>
       ) : roomId ? (
         <RoomBoundary
           key={guest.credential}
           recover={() => void guest.refresh().catch(() => {})}
-          leave={exit}
+          exit={exit}
         >
           <Room roomId={roomId} token={guest.credential} exit={exit} />
         </RoomBoundary>
       ) : (
-        <Entrance token={guest.credential} initialCode={joinCode} enter={enter} />
+        <main id="main-content">
+          <Entrance token={guest.credential} initialCode={joinCode} enter={enter} />
+        </main>
       )}
       <footer className="site-footer">
-        <span>Made for the people around your table.</span>
-        <span>Room & presence by Parlor</span>
+        <span>Bring friends. No accounts needed.</span>
+        <span>Built with Parlor</span>
       </footer>
-    </main>
+    </div>
   );
 }
-function Entrance({
-  token,
-  initialCode,
-  enter,
-}: {
-  token: string;
-  initialCode: string;
-  enter: (id: Id<"rooms">) => void;
-}) {
-  const create = useMutation(api.rooms.createRoom);
-  const join = useMutation(api.rooms.joinRoom);
-  const [name, setName] = useState(() => localStorage.getItem("poppycock:name") ?? "");
-  const [code, setCode] = useState(initialCode);
-  const [mode, setMode] = useState<"create" | "join">(initialCode ? "join" : "create");
-  const [busy, setBusy] = useState(false);
-  const [error, setError] = useState("");
-  async function submit(event: FormEvent) {
-    event.preventDefault();
-    setBusy(true);
-    setError("");
-    try {
-      localStorage.setItem("poppycock:name", name.trim());
-      if (mode === "create") {
-        const result = await create({ displayName: name, guestToken: token });
-        enter(result.roomId);
-      } else {
-        const result = await join({ displayName: name, code, guestToken: token });
-        if (!result.ok) throw { data: { code: result.code } };
-        enter(result.roomId);
-      }
-    } catch (cause) {
-      setError(message(cause));
-    } finally {
-      setBusy(false);
-    }
-  }
-  return (
-    <>
-      <section className="hero">
-        <div className="hero-copy">
-          <p className="invitation">Bring friends. Make stuff up.</p>
-          <h1>
-            <Brand />
-          </h1>
-          <p className="tagline">
-            The truth is strange.
-            <br />
-            Your friends are stranger.
-          </p>
-          <p className="hero-description">
-            One peculiar question. A handful of believable lies. Can you spot the truth — or sell
-            everyone your nonsense?
-          </p>
-          <div className="game-facts">
-            <span>3–12 players</span>
-            <span>6 rounds</span>
-            <span>One phone each</span>
-          </div>
-        </div>
-        <div className="box-art" aria-hidden="true">
-          <div className="art-slip slip-back">
-            <span>Sounds suspicious.</span>
-            <Face seat={2} />
-          </div>
-          <div className="art-slip slip-front">
-            <Face seat={0} />
-            <span>
-              Absolutely
-              <br />
-              made that up.
-            </span>
-            <div className="stamp">A very good lie</div>
-          </div>
-          <span className="spark spark-one">∗</span>
-          <span className="spark spark-two">∗</span>
-        </div>
-      </section>
-      <section className="entry-layout">
-        <div className="paper entry-paper">
-          <div className="mode-switch" aria-label="Choose how to play">
-            <button
-              className={mode === "create" ? "selected" : ""}
-              onClick={() => setMode("create")}
-              aria-pressed={mode === "create"}
-            >
-              Start a table
-            </button>
-            <button
-              className={mode === "join" ? "selected" : ""}
-              aria-pressed={mode === "join"}
-              onClick={() => setMode("join")}
-            >
-              Join friends
-            </button>
-          </div>
-          <form onSubmit={submit}>
-            <label htmlFor="name">What should we call you?</label>
-            <input
-              id="name"
-              autoComplete="nickname"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              maxLength={24}
-              placeholder="Your wonderfully ordinary name"
-              required
-            />
-            {mode === "join" && (
-              <>
-                <label htmlFor="code">Your four-character room code</label>
-                <input
-                  id="code"
-                  className="code-input"
-                  autoCapitalize="characters"
-                  autoComplete="off"
-                  value={code}
-                  onChange={(e) =>
-                    setCode(e.target.value.toUpperCase().replace(/\s/g, "").slice(0, 4))
-                  }
-                  minLength={4}
-                  maxLength={4}
-                  placeholder="ABCD"
-                  required
-                />
-              </>
-            )}
-            {error && (
-              <p className="error" role="alert">
-                {error}
-              </p>
-            )}
-            <button className="primary wide" disabled={busy}>
-              {busy
-                ? "Saving your seat…"
-                : mode === "create"
-                  ? "Make room for nonsense"
-                  : "Take my seat"}
-            </button>
-          </form>
-          <p className="entry-footnote">Free to play. No sign-ups. No one has to know anything.</p>
-        </div>
-        <aside className="how-preview">
-          <h2>A good lie goes a long way.</h2>
-          <p>
-            Invent an answer. Pick the truth.
-            <br />
-            Get points for being right — or very convincing.
-          </p>
-          <Rules />
-        </aside>
-      </section>
-    </>
-  );
-}
+
 function useClock() {
   const [now, setNow] = useState(Date.now);
   useEffect(() => {
@@ -417,7 +172,6 @@ function useClock() {
   }, []);
   return now;
 }
-
 function subscribeNetwork(change: () => void) {
   window.addEventListener("online", change);
   window.addEventListener("offline", change);
@@ -426,9 +180,86 @@ function subscribeNetwork(change: () => void) {
     window.removeEventListener("offline", change);
   };
 }
-
 function createRequestId() {
   return crypto.getRandomValues(new Uint32Array(4)).join("-");
+}
+
+function Invitation({ code, url, showQr = true }: { code: string; url: string; showQr?: boolean }) {
+  const [copied, setCopied] = useState(false);
+  const [manual, setManual] = useState(false);
+  const link = useRef<HTMLInputElement>(null);
+  const id = useId();
+  async function copy() {
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setManual(false);
+    } catch {
+      setManual(true);
+      requestAnimationFrame(() => {
+        link.current?.focus();
+        link.current?.select();
+      });
+    }
+  }
+  return (
+    <div className="invitation space-y-5 text-center">
+      <div>
+        <p className="text-sm text-muted-foreground">Room code</p>
+        <strong className="table-code">{code}</strong>
+      </div>
+      {showQr && (
+        <div className="mx-auto flex w-fit max-w-full rounded-md bg-white p-3">
+          <QRCodeDisplay value={url} size={144} label={`Scan to join table ${code}`} />
+        </div>
+      )}
+      <Button variant="outline" className="w-full" onClick={() => void copy()}>
+        {copied ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />}
+        {copied ? "Link copied" : "Copy invite link"}
+      </Button>
+      <p className="sr-only" role="status">
+        {copied ? "Invite link copied." : manual ? "Select and copy the invite link below." : ""}
+      </p>
+      {manual && (
+        <div className="space-y-2 text-left">
+          <label htmlFor={`${id}-link`} className="text-sm font-bold">
+            Copy this invite link
+          </label>
+          <Input
+            ref={link}
+            id={`${id}-link`}
+            value={url}
+            readOnly
+            onFocus={(event) => event.target.select()}
+          />
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Roster({ entries, viewerId }: { entries: RosterEntry[]; viewerId: string }) {
+  return (
+    <ul className="m-0 list-none p-0">
+      {entries.map(({ member, presence, portrait }) => (
+        <li className="player-row" key={member.playerId}>
+          <Face small seat={portrait} />
+          <div className="roster-name">
+            <strong>
+              {member.displayName}
+              {member.playerId === viewerId && (
+                <span className="ml-1 font-normal text-muted-foreground">(you)</span>
+              )}
+            </strong>
+            <small>
+              {member.isHost ? "Host" : "Player"}
+              {presence !== "present" ? " · Away" : ""}
+            </small>
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exit: () => void }) {
@@ -452,26 +283,51 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
   const now = useClock();
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
-  const [showShare, setShowShare] = useState(false);
-  const [showLeave, setShowLeave] = useState(false);
-  const [copied, setCopied] = useState(false);
+  const [dialog, setDialog] = useState<"invite" | "rules" | "leave" | null>(null);
   const [requestId, setRequestId] = useState(createRequestId);
+  const menuTrigger = useRef<HTMLButtonElement>(null);
+  const inviteTrigger = useRef<HTMLButtonElement>(null);
+  const dialogReturn = useRef<HTMLElement | null>(null);
+  const roomHeading = useRef<HTMLHeadingElement>(null);
+  useEffect(() => {
+    if (state && (game === null || game?.phase === "finished" || game?.phase === "abandoned"))
+      roomHeading.current?.focus();
+  }, [Boolean(state), game?.phase]);
   if (!state || game === undefined)
     return (
-      <div className="loading">
-        <p>Finding everyone at the table…</p>
-      </div>
+      <>
+        <StartHeader />
+        <main id="main-content" className="loading-screen" role="status">
+          Loading your table…
+        </main>
+      </>
     );
   const host = state.room.hostPlayerId === state.viewerPlayerId;
+  const hostName = state.members.find((member) => member.isHost)?.displayName ?? "The host";
   const online = browserOnline && connection.isWebSocketConnected;
   const active = game && !["finished", "abandoned"].includes(game.phase);
-  const viewerSeat =
-    game?.players.find((player) => player.playerId === state.viewerPlayerId)?.seatIndex ??
-    state.members.find((member) => member.playerId === state.viewerPlayerId)?.seatIndex ??
-    0;
-  const present = state.members.filter(
-    (member) =>
-      classifyPresence(
+  const joinUrl = `${window.location.origin}/?join=${state.room.code}`;
+  const seats = new Map(game?.players.map((player) => [player.playerId, player.seatIndex]));
+  const usedPortraits = new Set(
+    state.members.flatMap((member) => {
+      const seat = seats.get(member.playerId);
+      return seat === undefined ? [] : [seat];
+    }),
+  );
+  const entries: RosterEntry[] = state.members.map((member) => {
+    let portrait = seats.get(member.playerId);
+    if (portrait === undefined) {
+      portrait = member.seatIndex;
+      if (usedPortraits.has(portrait)) {
+        portrait = 0;
+        while (usedPortraits.has(portrait)) portrait += 1;
+      }
+      usedPortraits.add(portrait);
+    }
+    return {
+      member,
+      portrait,
+      presence: classifyPresence(
         {
           joinedAt: member.joinedAt as TimestampMs,
           ...(member.lastSeenAt === undefined
@@ -479,581 +335,296 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
             : { lastSeenAt: member.lastSeenAt as TimestampMs }),
         },
         now as TimestampMs,
-      ) === "present",
-  ).length;
-  const joinUrl = `${window.location.origin}/?join=${state.room.code}`;
+      ),
+    };
+  });
+  const present = entries.reduce((count, entry) => count + Number(entry.presence === "present"), 0);
+  const maxScore = game ? Math.max(...game.players.map((player) => player.score)) : 0;
+  const leaders = game?.players.filter((player) => player.score === maxScore) ?? [];
+  const finished = game?.phase === "finished";
+  function openFromMenu(next: "invite" | "rules" | "leave") {
+    dialogReturn.current = menuTrigger.current;
+    setError("");
+    setDialog(next);
+  }
   async function begin() {
+    if (busy) return;
     setBusy(true);
     setError("");
     try {
       await start({ roomId, guestToken: token, requestId });
       setRequestId(createRequestId());
     } catch (cause) {
-      setError(message(cause));
+      setError(gameError(cause));
     } finally {
       setBusy(false);
     }
   }
   async function depart() {
+    if (busy) return;
     setBusy(true);
     setError("");
     try {
       await leave({ roomId, guestToken: token });
       exit();
     } catch (cause) {
-      setError(message(cause));
+      setError(gameError(cause));
       setBusy(false);
     }
   }
   if (state.room.closedAt !== undefined)
     return (
-      <section className="paper recovery">
-        <h2>This table has closed.</h2>
-        <p>Nothing lost but a few beautiful lies. Start another room to play again.</p>
-        <button onClick={exit}>Back to the front door</button>
-      </section>
+      <>
+        <StartHeader />
+        <main className="mx-auto my-10 max-w-lg space-y-5" id="main-content">
+          <h1 className="screen-title">This table has closed</h1>
+          <p className="supporting-copy">Create a new table to play another game.</p>
+          <Button onClick={exit}>Back to start</Button>
+        </main>
+      </>
     );
+  const startAction = (
+    <div className="mt-5 space-y-3 border-t border-border pt-5">
+      {host ? (
+        <>
+          <Button
+            className="w-full"
+            disabled={busy || present < 3 || !online}
+            aria-busy={busy}
+            onClick={() => void begin()}
+          >
+            {busy && <BusyIcon />}
+            {game ? "Play again" : "Start game"}
+          </Button>
+          <p className="text-sm text-muted-foreground" role="status">
+            {!online
+              ? "Reconnect to start a game."
+              : present < 3
+                ? `You need ${3 - present} more ${3 - present === 1 ? "player" : "players"} to start.`
+                : "Start when everyone is here. Each game has six rounds."}
+          </p>
+        </>
+      ) : (
+        <p className="text-sm text-muted-foreground" role="status">
+          {hostName} will start {game ? "the next game" : "when everyone is here"}.
+        </p>
+      )}
+    </div>
+  );
   return (
     <>
-      <div className="table-bar">
-        <div className="table-identity">
-          <button
+      <header className="site-header">
+        <Brand />
+        <nav aria-label="Table controls" className="ml-auto flex items-center gap-2">
+          <Button
+            ref={inviteTrigger}
+            variant="outline"
+            size="sm"
             className="room-code"
-            onClick={() => setShowShare(!showShare)}
-            aria-expanded={showShare}
-            aria-controls="table-invite"
+            aria-label={`Room ${state.room.code}. Invite friends`}
+            aria-haspopup="dialog"
+            onClick={() => {
+              dialogReturn.current = inviteTrigger.current;
+              setDialog("invite");
+            }}
           >
-            <span>Room</span> <strong>{state.room.code}</strong>
-            <span className="share-hint">Invite friends</span>
-          </button>
-          <span className={`connection ${online ? "" : "offline"}`} role="status">
-            <i aria-hidden="true" />
-            {!online
-              ? "Reconnecting…"
-              : heartbeat.status === "degraded"
-                ? "Restoring presence…"
-                : "Connected"}
-          </span>
-        </div>
-        <button
-          className="secondary table-leave"
-          disabled={busy}
-          onClick={() => {
-            setError("");
-            setShowLeave(true);
-          }}
-        >
-          Leave table
-        </button>
-      </div>
-      {!online && (
-        <p className="notice" role="status">
-          Your connection dropped. Keep this page open — your seat and saved answers will return.
-        </p>
-      )}
-      {showShare && (
-        <section className="paper share-panel" id="table-invite">
-          <QRCodeDisplay
-            value={joinUrl}
-            size={144}
-            label={`Scan to join room ${state.room.code}`}
-          />
-          <div>
-            <h2>Pull up a chair.</h2>
-            <p>
-              Open Poppycock on each phone and enter <strong>{state.room.code}</strong>, or scan the
-              code.
-            </p>
-            <button
-              className="secondary"
-              onClick={async () => {
-                try {
-                  await navigator.clipboard.writeText(joinUrl);
-                  setCopied(true);
-                } catch {
-                  setError(`Share this address: ${joinUrl}`);
-                }
-              }}
+            <span className="hidden sm:inline">Room</span>
+            <strong>{state.room.code}</strong>
+          </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              render={
+                <Button
+                  ref={menuTrigger}
+                  variant="ghost"
+                  size="icon-sm"
+                  aria-label="Table options"
+                />
+              }
             >
-              {copied ? "Link copied" : "Copy invite link"}
-            </button>
-          </div>
-        </section>
-      )}
-      {error && !showLeave && (
-        <p className="notice error" role="alert">
-          {error}
-        </p>
-      )}
-      {!active && (
-        <section className="lobby-intro">
-          <div>
-            <p className="stage-label">
-              {game?.phase === "finished"
-                ? "That’s a wrap"
-                : game?.phase === "abandoned"
-                  ? "A fresh start"
-                  : "The gathering of the fibbers"}
-            </p>
-            <h1>
-              {game?.phase === "finished"
-                ? "Well played. Well lied."
-                : game?.phase === "abandoned"
-                  ? "This game took a breather."
-                  : "A few friends.\nZero poker faces."}
-            </h1>
+              <MoreHorizontal aria-hidden="true" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={() => openFromMenu("invite")}>
+                <Share2 aria-hidden="true" />
+                Invite friends
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => openFromMenu("rules")}>
+                <CircleHelp aria-hidden="true" />
+                How to play
+              </DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem
+                variant="destructive"
+                disabled={busy}
+                onClick={() => openFromMenu("leave")}
+              >
+                <LogOut aria-hidden="true" />
+                Leave table
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </nav>
+      </header>
+      <div role="status" aria-live="polite">
+        {(!online || heartbeat.status === "degraded") && (
+          <div className="connection-notice">
+            <WifiOff className="mt-0.5 size-5 shrink-0" aria-hidden="true" />
             <p>
-              {game?.phase === "finished"
-                ? "The final scores are in. The most convincing nonsense wins."
-                : game?.phase === "abandoned"
-                  ? "This game has ended. Your room is still here — gather three players and deal again."
-                  : "Everyone plays on their own phone. Share the code, settle in, and prepare to sound like you know things."}
+              {!online
+                ? "Reconnecting. Keep this page open; your submitted answers and votes are saved."
+                : "Restoring your connection to the table."}
             </p>
           </div>
-          <Face seat={viewerSeat} />
-        </section>
-      )}
-      {game?.phase === "finished" && <Scoreboard game={game} final />}
-      {active ? (
-        <Play
-          key={`${game.gameId}:${game.round}`}
-          game={game}
-          token={token}
-          host={host}
-          online={online}
-          viewerId={state.viewerPlayerId}
-        />
-      ) : (
-        <section className="paper lobby-paper">
-          <div className="section-heading">
-            <h2>{game ? "Same table, new nonsense?" : "Who’s at the table?"}</h2>
-            <span>{present} here / 12 seats</span>
-          </div>
-          <div className="player-list">
-            {state.members.map((member) => {
-              const presence = classifyPresence(
-                {
-                  joinedAt: member.joinedAt as TimestampMs,
-                  ...(member.lastSeenAt === undefined
-                    ? {}
-                    : { lastSeenAt: member.lastSeenAt as TimestampMs }),
-                },
-                now as TimestampMs,
-              );
-              return (
-                <div
-                  className={`player-row ${presence !== "present" ? "away" : ""}`}
-                  key={member.playerId}
-                >
-                  <Face
-                    small
-                    seat={
-                      game?.players.find((player) => player.playerId === member.playerId)
-                        ?.seatIndex ?? member.seatIndex
-                    }
-                  />
-                  <div className="player-details">
-                    <strong>
-                      {member.displayName}
-                      {member.playerId === state.viewerPlayerId ? " (you)" : ""}
-                    </strong>
-                    <span>
-                      {member.isHost
-                        ? presence !== "present"
-                          ? "Host, away"
-                          : "Host"
-                        : presence !== "present"
-                          ? "Away"
-                          : "Ready to fib"}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          <div className="lobby-action">
-            {host ? (
-              <>
-                <button
-                  className="primary"
-                  onClick={() => void begin()}
-                  disabled={busy || present < 3 || !online}
-                >
-                  {busy
-                    ? "Dealing the questions…"
-                    : game
-                      ? "Play another six"
-                      : "Let the nonsense begin"}
-                </button>
-                <p>
-                  {present < 3
-                    ? `Waiting for ${3 - present} more ${3 - present === 1 ? "player" : "players"}. You need at least three.`
-                    : "Six rounds. Two points for truth, one for every friend fooled."}
-                </p>
-              </>
-            ) : (
-              <p className="waiting">You’re in. Your host will start when everyone’s ready.</p>
-            )}
-          </div>
-        </section>
-      )}
-      <div className="room-bottom">
-        <Rules />
+        )}
       </div>
-      {showLeave && (
-        <Confirmation
-          title="Leave this table?"
-          confirmLabel={busy ? "Leaving…" : "Leave table"}
-          cancelLabel="Stay at the table"
-          busy={busy}
-          error={error}
-          unavailable={!online ? "Reconnect before leaving the table." : undefined}
-          onCancel={() => setShowLeave(false)}
-          onConfirm={() => void depart()}
-        >
-          {state.members.length === 1 ? (
+      {error && dialog !== "leave" && (
+        <div className="mt-5">
+          <ErrorNotice message={error} />
+        </div>
+      )}
+      <main id="main-content">
+        {active ? (
+          <GameStage
+            game={game}
+            token={token}
+            host={host}
+            online={online}
+            viewerId={state.viewerPlayerId}
+          />
+        ) : (
+          <>
+            <section className="lobby-heading flex items-start justify-between gap-5">
+              <div className="min-w-0 space-y-2">
+                <h1 ref={roomHeading} tabIndex={-1} className="screen-title outline-none">
+                  {finished
+                    ? leaders.length === 1
+                      ? `${leaders[0]!.name} wins!`
+                      : leaders.length === game.players.length
+                        ? "Everyone ties!"
+                        : `${leaders.length} players tie for first`
+                    : game?.phase === "abandoned"
+                      ? "Ready for another game?"
+                      : "Your table"}
+                </h1>
+                <p className="supporting-copy">
+                  {finished
+                    ? "Six rounds played. One more game?"
+                    : game?.phase === "abandoned"
+                      ? "The last game has ended. Your table is still open."
+                      : "Gather 3–12 players. Everyone uses their own phone."}
+                </p>
+              </div>
+              {finished && leaders.length === 1 && (
+                <div className="hidden sm:block">
+                  <Face seat={leaders[0]!.seatIndex} />
+                </div>
+              )}
+            </section>
+            {finished ? (
+              <div className="grid items-start gap-6 md:grid-cols-[minmax(0,1fr)_320px]">
+                <Scoreboard game={game} final />
+                <section className="surface-panel">
+                  <h2 className="section-title">Same table, next game</h2>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    Everyone at this table can join the next game, including anyone who was
+                    watching.
+                  </p>
+                  {startAction}
+                  <details className="help-disclosure mt-4 border-t border-border">
+                    <summary>{state.members.length} players at the table</summary>
+                    <Roster entries={entries} viewerId={state.viewerPlayerId} />
+                  </details>
+                </section>
+              </div>
+            ) : (
+              <div className="lobby-grid">
+                <aside className="invite-board">
+                  <h2 className="section-title mb-2">Invite your friends</h2>
+                  <p className="mb-5 text-sm text-muted-foreground">
+                    Friends use this code to join your table.
+                  </p>
+                  <Invitation code={state.room.code} url={joinUrl} showQr={false} />
+                  <Button
+                    variant="ghost"
+                    className="mt-3 w-full"
+                    onClick={(event) => {
+                      dialogReturn.current = event.currentTarget;
+                      setDialog("invite");
+                    }}
+                  >
+                    Show QR code
+                  </Button>
+                </aside>
+                <section className="surface-panel">
+                  <div className="mb-2 flex flex-wrap items-baseline justify-between gap-3">
+                    <h2 className="section-title">Players</h2>
+                    <p className="text-sm text-muted-foreground tabular-nums">
+                      {state.members.length} of 12 players
+                    </p>
+                  </div>
+                  <Roster entries={entries} viewerId={state.viewerPlayerId} />
+                  {startAction}
+                </section>
+              </div>
+            )}
+          </>
+        )}
+      </main>
+      <Dialog
+        open={dialog === "invite"}
+        onOpenChange={(open) => {
+          if (!open) setDialog(null);
+        }}
+      >
+        <DialogContent finalFocus={dialogReturn}>
+          <DialogHeader>
+            <DialogTitle>Invite friends</DialogTitle>
+            <DialogDescription>
+              Share this code or link. Each player joins on their own phone.
+            </DialogDescription>
+          </DialogHeader>
+          <Invitation code={state.room.code} url={joinUrl} />
+        </DialogContent>
+      </Dialog>
+      <RulesDialog
+        open={dialog === "rules"}
+        onOpenChange={(open) => {
+          if (!open) setDialog(null);
+        }}
+        returnFocus={dialogReturn}
+      />
+      <ConfirmDialog
+        open={dialog === "leave"}
+        onOpenChange={(open) => {
+          if (!open) setDialog(null);
+        }}
+        title="Leave this table?"
+        description={
+          state.members.length === 1 ? (
             <p>
-              You’re the last guest. Leaving closes this room and ends any game still in progress.
+              You're the last player. Leaving closes the table and ends any game still in progress.
             </p>
           ) : (
             <>
-              {game?.participant && (
-                <p>Your saved answers and this game’s score stay in the game.</p>
-              )}
               <p>
-                Rejoin with <strong>{state.room.code}</strong> in this browser while the room is
-                open and there’s space. Leaving releases your seat; it isn’t reserved.
+                Your submitted answers and scores stay in this game. You can rejoin with code{" "}
+                <strong>{state.room.code}</strong> in this browser if the table is still open and
+                has space.
               </p>
-              {host && <p>Another guest will become the host.</p>}
+              {host && <p>Another player will become the host.</p>}
             </>
-          )}
-        </Confirmation>
-      )}
+          )
+        }
+        confirmLabel="Leave table"
+        cancelLabel="Stay"
+        destructive
+        onConfirm={() => void depart()}
+        busy={busy}
+        error={error}
+        unavailable={!online ? "Reconnect before leaving the table." : undefined}
+        returnFocus={dialogReturn}
+      />
     </>
-  );
-}
-function Scoreboard({ game, final = false }: { game: GameView; final?: boolean }) {
-  const sorted = [...game.players].sort((a, b) => b.score - a.score || a.seatIndex - b.seatIndex);
-  return (
-    <section className={`paper scoreboard ${final ? "final-scores" : ""}`}>
-      <h2>{final ? "The convincingest of the bunch" : "The scores so far"}</h2>
-      {sorted.map((player, index) => (
-        <div
-          className={`score-row ${final && player.score === sorted[0]?.score ? "leader" : ""}`}
-          key={player.playerId}
-        >
-          <span className="rank">
-            {index > 0 && player.score === sorted[index - 1]?.score ? "=" : index + 1}
-          </span>
-          <Face small seat={player.seatIndex} />
-          <div className="score-name">
-            <strong>{player.name}</strong>
-            {player.roundPoints > 0 && (
-              <span className="points-gained">+{player.roundPoints} this round</span>
-            )}
-          </div>
-          <span className="score">
-            {player.score}
-            <small>pts</small>
-          </span>
-        </div>
-      ))}
-    </section>
-  );
-}
-function Play({
-  game,
-  token,
-  host,
-  online,
-  viewerId,
-}: {
-  game: GameView;
-  token: string;
-  host: boolean;
-  online: boolean;
-  viewerId: string;
-}) {
-  const submit = useMutation(api.game.submit);
-  const vote = useMutation(api.game.vote);
-  const advance = useMutation(api.game.advance);
-  const storageKey = `poppycock:draft:${game.gameId}:${game.round}`;
-  const [text, setText] = useState(() => game.ownText ?? sessionStorage.getItem(storageKey) ?? "");
-  const [selected, setSelected] = useState<string | null>(null);
-  const [busy, setBusy] = useState(false);
-  const [error, setError] = useState("");
-  const [finishPhase, setFinishPhase] = useState<"writing" | "voting" | null>(null);
-  const reveal = game.phase === "reveal";
-  const viewerSeat = game.players.find((player) => player.playerId === viewerId)?.seatIndex ?? 0;
-  const name = (id: string) =>
-    game.players.find((player) => player.playerId === id)?.name ?? "A departed friend";
-  async function action(kind: "submit" | "vote" | "advance") {
-    setBusy(true);
-    setError("");
-    try {
-      const args = { gameId: game.gameId as Id<"games">, guestToken: token, round: game.round };
-      if (kind === "submit") await submit({ ...args, text });
-      if (kind === "vote" && selected) await vote({ ...args, optionId: selected as Id<"options"> });
-      if (kind === "advance") {
-        await advance({ ...args, phase: game.phase });
-        setFinishPhase(null);
-      }
-    } catch (cause) {
-      setError(message(cause));
-    } finally {
-      setBusy(false);
-    }
-  }
-  return (
-    <section className="play-area">
-      <div className="round-strip">
-        <span>
-          Round <strong>{game.round}</strong> of {game.totalRounds}
-        </span>
-        <span className="phase-name">
-          {reveal
-            ? "The reveal"
-            : game.phase === "writing"
-              ? "Make something up"
-              : "Find the truth"}
-        </span>
-      </div>
-      {!game.participant && (
-        <p className="notice">You’re watching this game. You’ll get a seat in the next one.</p>
-      )}
-      <section className="question-sheet">
-        <span className="category">{game.prompt.category}</span>
-        <h1>{game.prompt.question}</h1>
-        <p>
-          {reveal
-            ? "And the truth, strange as it seems…"
-            : game.phase === "writing"
-              ? "Make it believable. Make it yours."
-              : "One of these is true. The others? Your friends."}
-        </p>
-      </section>
-      {error && finishPhase !== game.phase && (
-        <p className="notice error" role="alert">
-          {error}
-        </p>
-      )}
-      {game.phase === "writing" && (
-        <section className="paper answer-paper">
-          {game.participant && !game.submitted ? (
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                void action("submit");
-              }}
-            >
-              <label htmlFor="bluff">Your remarkably plausible answer</label>
-              <textarea
-                id="bluff"
-                value={text}
-                onChange={(e) => {
-                  setText(e.target.value);
-                  sessionStorage.setItem(storageKey, e.target.value);
-                }}
-                maxLength={180}
-                minLength={2}
-                placeholder="Say it with confidence…"
-                aria-describedby="bluff-hint bluff-count"
-                required
-              />
-              <div className="answer-footer">
-                <span id="bluff-count">{text.length}/180</span>
-                <button className="primary" disabled={busy || !online || text.trim().length < 2}>
-                  {busy ? "Saving your lie…" : "Lock in my bluff"}
-                </button>
-              </div>
-              <p className="muted" id="bluff-hint">
-                Once it’s in, it’s in. Every choice uses lowercase, tidy spaces, and no ending
-                punctuation to keep its author a mystery.
-              </p>
-            </form>
-          ) : (
-            <div className="waiting-state">
-              <Face seat={viewerSeat} />
-              <h2>{game.submitted ? "That sounds almost true." : "The bluffs are brewing."}</h2>
-              <p>
-                {game.submitted
-                  ? "Your answer is locked in. Put on your most innocent face."
-                  : "See what everyone comes up with when the voting opens."}
-              </p>
-              {game.ownText && <blockquote>{game.ownText}</blockquote>}
-            </div>
-          )}
-          <div className="completion-note" role="status">
-            {game.submissionCount} of {game.playerCount} answers are in.
-          </div>
-        </section>
-      )}
-      {game.phase === "voting" && (
-        <section className="voting-area">
-          <h2>
-            {game.voted
-              ? "Your part is done."
-              : game.participant
-                ? "Which one is the truth?"
-                : "The suspects"}
-          </h2>
-          <div className="options">
-            {game.options.map((option, i) => (
-              <button
-                key={option.id}
-                className={`option ${selected === option.id ? "chosen" : ""} ${option.own ? "own-option" : ""}`}
-                disabled={!game.participant || game.voted || option.own || busy || !online}
-                onClick={() => setSelected(option.id)}
-                aria-pressed={selected === option.id}
-              >
-                <span className="option-letter" aria-hidden="true">
-                  {String.fromCharCode(65 + i)}
-                </span>
-                <span>
-                  {option.text}
-                  {option.own && <small>Your answer — no self-votes</small>}
-                </span>
-                <span className="option-mark" aria-hidden="true">
-                  {selected === option.id ? "●" : "○"}
-                </span>
-              </button>
-            ))}
-          </div>
-          {game.participant && !game.voted && (
-            <button
-              className="primary vote-lock"
-              disabled={!selected || busy || !online}
-              onClick={() => void action("vote")}
-            >
-              {busy ? "Saving your pick…" : "Lock in my vote"}
-            </button>
-          )}
-          <p className="completion-note" role="status">
-            {game.voteCount} votes locked in.{" "}
-            {game.voted ? "Sit tight for the reveal." : "Go with your gut. Or don’t."}
-          </p>
-        </section>
-      )}
-      {game.participant &&
-        game.canAdvance &&
-        (game.phase === "writing" || game.phase === "voting") && (
-          <div className="phase-actions">
-            <p>
-              {host
-                ? "You’re the host. Move on when the table is ready."
-                : "Everyone’s part is done."}
-            </p>
-            <button
-              className="secondary"
-              disabled={busy || !online}
-              onClick={() => {
-                if (host) {
-                  setError("");
-                  setFinishPhase(game.phase === "writing" ? "writing" : "voting");
-                } else {
-                  void action("advance");
-                }
-              }}
-            >
-              {game.phase === "writing" ? "Finish writing" : "Reveal answers"}
-            </button>
-          </div>
-        )}
-      {finishPhase && finishPhase === game.phase && (
-        <Confirmation
-          title={finishPhase === "writing" ? "Finish writing?" : "Reveal answers?"}
-          confirmLabel={
-            busy
-              ? "Moving the table on…"
-              : finishPhase === "writing"
-                ? "Finish writing"
-                : "Reveal answers"
-          }
-          cancelLabel={finishPhase === "writing" ? "Keep writing" : "Keep voting"}
-          busy={busy}
-          error={error}
-          unavailable={
-            !host
-              ? "The host has changed. Let the new host move the table on."
-              : !online
-                ? "Reconnect before moving the table on."
-                : undefined
-          }
-          onCancel={() => setFinishPhase(null)}
-          onConfirm={() => void action("advance")}
-        >
-          <p>
-            {finishPhase === "writing"
-              ? "Open voting with the answers already saved. Anyone still writing won’t be able to submit a bluff this round."
-              : "Show the truth and score the votes already saved. Anyone still choosing won’t be able to vote this round."}
-          </p>
-        </Confirmation>
-      )}
-      {reveal && (
-        <>
-          <section className="truth-slip">
-            <span className="truth-label">The honest-to-goodness truth</span>
-            <h2>{game.truth}</h2>
-            {game.source && (
-              <p>
-                <a href={game.source.url} target="_blank" rel="noreferrer">
-                  Check the source: {game.source.title}
-                </a>
-                <span className="source-note">{game.source.note}</span>
-              </p>
-            )}
-          </section>
-          <section className="reveal-options">
-            <h2>Who sold you what?</h2>
-            {game.options.map((option, i) => (
-              <article
-                key={option.id}
-                className={`reveal-option ${option.truth ? "real-answer" : ""}`}
-              >
-                <span className="option-letter">{String.fromCharCode(65 + i)}</span>
-                <div>
-                  <h3>{option.text}</h3>
-                  <p className="authorship">
-                    {option.truth
-                      ? "The truth"
-                      : `A bluff by ${(option.authors ?? []).map(name).join(" & ")}`}
-                    {option.truth && option.authors?.length
-                      ? ` · Also known by ${option.authors.map(name).join(" & ")}`
-                      : ""}
-                  </p>
-                  <p>
-                    {option.voters?.length
-                      ? `${option.truth ? "Spotted by" : "Fooled"} ${option.voters.map((id) => (id === viewerId ? "you" : name(id))).join(", ")}`
-                      : "No takers"}
-                  </p>
-                </div>
-                <span className="vote-tally">
-                  {option.voters?.length ?? 0}
-                  <small>votes</small>
-                </span>
-              </article>
-            ))}
-          </section>
-          <Scoreboard game={game} />
-          <div className="next-round">
-            {game.participant ? (
-              <button
-                className="primary"
-                disabled={busy || !online}
-                onClick={() => void action("advance")}
-              >
-                {busy
-                  ? "Dealing…"
-                  : game.round === game.totalRounds
-                    ? "See the final standings"
-                    : "Deal the next question"}
-              </button>
-            ) : (
-              <p>The players will deal the next question when they’re ready.</p>
-            )}
-          </div>
-        </>
-      )}
-    </section>
   );
 }

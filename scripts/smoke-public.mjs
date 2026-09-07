@@ -53,10 +53,10 @@ async function view(name) {
 
 async function joinTable(name, code) {
   const page = players[name].page;
-  await page.getByRole("button", { name: "Join friends", exact: true }).click();
-  await page.getByLabel("What should we call you?").fill(name);
-  await page.getByLabel("Your four-character room code").fill(code);
-  await page.getByRole("button", { name: "Take my seat", exact: true }).click();
+  await page.getByRole("tab", { name: "Join table", exact: true }).click();
+  await page.getByLabel("Your name").fill(name);
+  await page.getByLabel("Room code").fill(code);
+  await page.getByRole("button", { name: "Join table", exact: true }).click();
   await expect(page.locator(".room-code strong")).toHaveText(code);
 }
 
@@ -74,7 +74,7 @@ try {
     page.setDefaultTimeout(30000);
     players[name] = { context, page };
     await page.goto(origin);
-    await expect(page.getByLabel("What should we call you?")).toBeVisible();
+    await expect(page.getByLabel("Your name")).toBeVisible();
   }
   report.browserSecurity = await players.Ada.page.evaluate(() => ({
     secureContext: window.isSecureContext,
@@ -85,10 +85,8 @@ try {
   await capture("Ada", "public-https-front-door-desktop.png");
   await capture("Bea", "public-https-front-door-phone.png");
 
-  await players.Ada.page.getByLabel("What should we call you?").fill("Ada");
-  await players.Ada.page
-    .getByRole("button", { name: "Make room for nonsense", exact: true })
-    .click();
+  await players.Ada.page.getByLabel("Your name").fill("Ada");
+  await players.Ada.page.getByRole("button", { name: "Create table", exact: true }).click();
   await expect(players.Ada.page.locator(".room-code strong")).toBeVisible();
   const code = await players.Ada.page.locator(".room-code strong").innerText();
   await joinTable("Bea", code);
@@ -105,13 +103,11 @@ try {
 
   await players.Ada.page.locator(".room-code").click();
   await expect(
-    players.Ada.page.getByRole("img", { name: `Scan to join room ${code}` }),
+    players.Ada.page.getByRole("img", { name: `Scan to join table ${code}` }),
   ).toBeVisible();
   await capture("Ada", "public-https-lobby-desktop.png");
-  await players.Ada.page.locator(".room-code").click();
-  await players.Ada.page
-    .getByRole("button", { name: "Let the nonsense begin", exact: true })
-    .click();
+  await players.Ada.page.keyboard.press("Escape");
+  await players.Ada.page.getByRole("button", { name: "Start game", exact: true }).click();
   await phase("Ada", "writing");
 
   const writing = await view("Ada");
@@ -128,8 +124,8 @@ try {
     Cy: "A secret handshake performed entirely with the elbows, public HTTPS round.",
   };
   for (const name of ["Ada", "Bea", "Cy"]) {
-    await players[name].page.getByLabel("Your remarkably plausible answer").fill(bluffs[name]);
-    await players[name].page.getByRole("button", { name: "Lock in my bluff", exact: true }).click();
+    await players[name].page.getByLabel("Your answer").fill(bluffs[name]);
+    await players[name].page.getByRole("button", { name: "Submit answer", exact: true }).click();
     await expect.poll(async () => (await view(name)).submitted, { timeout: 30000 }).toBe(true);
   }
   await phase("Ada", "voting");
@@ -157,10 +153,10 @@ try {
   async function voteFor(name, text) {
     const page = players[name].page;
     await page
-      .locator("button.option")
+      .locator("label.option")
       .filter({ hasText: optionText(text) })
       .click();
-    await page.getByRole("button", { name: "Lock in my vote", exact: true }).click();
+    await page.getByRole("button", { name: "Lock vote", exact: true }).click();
     await expect
       .poll(async () => (await view(name)).voted || (await view(name)).phase === "reveal", {
         timeout: 30000,

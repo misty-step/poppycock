@@ -30,6 +30,7 @@ export interface GameView {
   options: GameOption[];
   players: GamePlayer[];
   ownText?: string;
+  ownVoteId?: string;
   source?: { title: string; url: string; note: string };
   truth?: string;
   canAdvance: boolean;

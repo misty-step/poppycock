@@ -52,10 +52,10 @@ async function room(name) {
 }
 async function joinTable(name, code) {
   const page = players[name].page;
-  await page.getByRole("button", { name: "Join friends", exact: true }).click();
-  await page.getByLabel("What should we call you?").fill(name);
-  await page.getByLabel("Your four-character room code").fill(code);
-  await page.getByRole("button", { name: "Take my seat", exact: true }).click();
+  await page.getByRole("tab", { name: "Join table", exact: true }).click();
+  await page.getByLabel("Your name").fill(name);
+  await page.getByLabel("Room code").fill(code);
+  await page.getByRole("button", { name: "Join table", exact: true }).click();
   await expect(page.locator(".room-code strong")).toHaveText(code);
 }
 async function phase(name, expected) {
@@ -73,10 +73,10 @@ const optionText = (text) =>
 async function voteFor(name, text) {
   const page = players[name].page;
   await page
-    .locator("button.option")
+    .locator("label.option")
     .filter({ hasText: optionText(text) })
     .click();
-  await page.getByRole("button", { name: "Lock in my vote", exact: true }).click();
+  await page.getByRole("button", { name: "Lock vote", exact: true }).click();
   await expect
     .poll(async () => (await view(name)).voted || (await view(name)).phase === "reveal")
     .toBe(true);
@@ -92,7 +92,7 @@ try {
     page.setDefaultTimeout(15000);
     players[name] = { context, page };
     await page.goto(base);
-    await expect(page.getByLabel("What should we call you?")).toBeVisible();
+    await expect(page.getByLabel("Your name")).toBeVisible();
   }
   report.browserSecurity = await players.Ada.page.evaluate(() => ({
     secureContext: window.isSecureContext,
@@ -101,10 +101,8 @@ try {
   }));
   await capture("Ada", "front-door-desktop.png");
   await capture("Bea", "front-door-phone.png");
-  await players.Ada.page.getByLabel("What should we call you?").fill("Ada");
-  await players.Ada.page
-    .getByRole("button", { name: "Make room for nonsense", exact: true })
-    .click();
+  await players.Ada.page.getByLabel("Your name").fill("Ada");
+  await players.Ada.page.getByRole("button", { name: "Create table", exact: true }).click();
   await expect(players.Ada.page.locator(".room-code strong")).toBeVisible();
   const code = await players.Ada.page.locator(".room-code strong").innerText();
   await joinTable("Bea", code);
@@ -115,16 +113,14 @@ try {
   expect(new Set(Object.values(initialIds)).size).toBe(3);
   await players.Ada.page.locator(".room-code").click();
   await expect(
-    players.Ada.page.getByRole("img", { name: `Scan to join room ${code}` }),
+    players.Ada.page.getByRole("img", { name: `Scan to join table ${code}` }),
   ).toBeVisible();
   await capture("Ada", "lobby-desktop.png");
-  await players.Ada.page.locator(".room-code").click();
+  await players.Ada.page.keyboard.press("Escape");
   report.checks.push(
     "Three independent guest identities join by code; real Parlor QR invitation renders in the lobby.",
   );
-  await players.Ada.page
-    .getByRole("button", { name: "Let the nonsense begin", exact: true })
-    .click();
+  await players.Ada.page.getByRole("button", { name: "Start game", exact: true }).click();
   await phase("Ada", "writing");
   const questions = new Set();
   let host = "Ada";
@@ -152,7 +148,9 @@ try {
       await joinTable("Dax", code);
       const spectator = await view("Dax");
       expect(spectator.participant).toBe(false);
-      await expect(players.Dax.page.locator("#bluff")).toHaveCount(0);
+      await expect(
+        players.Dax.page.getByRole("textbox", { name: "Your answer", exact: true }),
+      ).toHaveCount(0);
       await expect(
         client.mutation(api.game.submit, {
           gameId: savedGameId,
@@ -166,12 +164,14 @@ try {
       );
       await players.Cy.context.setOffline(true);
       await expect(
-        players.Cy.page.getByText("Your connection dropped.", { exact: false }),
+        players.Cy.page.getByText("Reconnecting. Keep this page open", { exact: false }),
       ).toBeVisible({ timeout: 15000 });
       await capture("Cy", "offline-phone.png");
       await players.Cy.context.setOffline(false);
       await players.Cy.page.reload();
-      await expect(players.Cy.page.locator("#bluff")).toBeVisible();
+      await expect(
+        players.Cy.page.getByRole("textbox", { name: "Your answer", exact: true }),
+      ).toBeVisible();
       expect((await room("Cy")).viewerPlayerId).toBe(initialIds.Cy);
       report.checks.push(
         "Phone network interruption and reload preserve the same player and current turn.",
@@ -190,10 +190,8 @@ try {
             Cy: `A secret handshake performed entirely with the elbows, variation ${round}.`,
           };
     for (const name of ["Ada", "Bea", "Cy"]) {
-      await players[name].page.getByLabel("Your remarkably plausible answer").fill(bluffs[name]);
-      await players[name].page
-        .getByRole("button", { name: "Lock in my bluff", exact: true })
-        .click();
+      await players[name].page.getByLabel("Your answer").fill(bluffs[name]);
+      await players[name].page.getByRole("button", { name: "Submit answer", exact: true }).click();
       await expect.poll(async () => (await view(name)).submitted).toBe(true);
     }
     await phase("Ada", "voting");
@@ -251,12 +249,13 @@ try {
       await capture("Bea", "reveal-phone.png");
     }
     if (round === 3) {
-      await players.Ada.page.getByRole("button", { name: "Leave table", exact: true }).click();
+      await players.Ada.page.getByRole("button", { name: "Table options", exact: true }).click();
+      await players.Ada.page.getByRole("menuitem", { name: "Leave table", exact: true }).click();
       await players.Ada.page
-        .getByRole("dialog")
+        .getByRole("alertdialog")
         .getByRole("button", { name: "Leave table", exact: true })
         .click();
-      await expect(players.Ada.page.getByLabel("What should we call you?")).toBeVisible();
+      await expect(players.Ada.page.getByLabel("Your name")).toBeVisible();
       expect((await room("Bea")).room.hostPlayerId).toBe(initialIds.Bea);
       await joinTable("Ada", code);
       expect((await room("Ada")).viewerPlayerId).toBe(initialIds.Ada);
@@ -269,7 +268,7 @@ try {
     }
     await players[host].page
       .getByRole("button", {
-        name: round === 6 ? "See the final standings" : "Deal the next question",
+        name: round === 6 ? "Final scores" : "Next round",
         exact: true,
       })
       .click();
@@ -288,7 +287,7 @@ try {
   report.checks.push(
     "Six rounds have authoritative expected scores18/8/0, private shuffled choices, duplicate-bluff attribution, rejected self-votes, and idempotent submission retries.",
   );
-  await players.Bea.page.getByRole("button", { name: "Play another six", exact: true }).click();
+  await players.Bea.page.getByRole("button", { name: "Play again", exact: true }).click();
   await phase("Dax", "writing");
   const rematch = await view("Dax");
   expect(rematch.gameId).not.toBe(savedGameId);

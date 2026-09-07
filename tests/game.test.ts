@@ -134,6 +134,13 @@ describe("authoritative Poppycock rounds", () => {
       late.mutation(api.game.advance, { gameId, round: 1, phase: "voting" }),
     ).rejects.toThrow("MATCH_PARTICIPANT_REQUIRED");
     expect((await gameView(late, room.roomId)).canAdvance).toBe(false);
+    const truth = await optionId(t, gameId, (option) => option.truth);
+    await host.mutation(api.game.vote, { gameId, round: 1, optionId: truth });
+    const receipt = await gameView(host, room.roomId);
+    expect(receipt).toMatchObject({ phase: "voting", voted: true, ownVoteId: truth });
+    expect(receipt).not.toHaveProperty("truth");
+    expect(await gameView(clients[1]!, room.roomId)).not.toHaveProperty("ownVoteId");
+    expect(await gameView(late, room.roomId)).not.toHaveProperty("ownVoteId");
   });
 
   it("merges duplicate bluffs, credits all authors, and makes truth bonuses and retries non-exploitable", async () => {

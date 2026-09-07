@@ -41,6 +41,7 @@ export const gameView = v.object({
     }),
   ),
   ownText: v.optional(v.string()),
+  ownVoteId: v.optional(v.string()),
   source: v.optional(source),
   truth: v.optional(v.string()),
   canAdvance: v.boolean(),

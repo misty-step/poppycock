@@ -2,6 +2,10 @@
 
 ## Unreleased — 2026-09-07
 
+- Added a root `DESIGN.md` following Google's alpha token-and-prose format, with Poppycock's palette, typography, layout, component states, accessibility behavior, and copy contract.
+- Rebuilt the interface with locally owned shadcn Base UI controls: create/join tabs, whole-row radio choices, table menus, invitation/rules dialogs, and consequence-specific confirmations. Replaced the layered decorative styles with a restrained tabletop system and plain action labels.
+- Kept the viewer's accepted vote visible after reload through a private server projection, without exposing other players' votes. Drafts survive reload; submitted answers and locked votes move focus to their receipts.
+- Fixed enlarged-text overflow in invitations and rules, made rules open at their heading, and kept writing actions in normal document flow rather than a sticky overlay. Updated both local and hosted smoke producers to the new controls.
 - Twelve original paper-puppet portraits with distinct silhouettes, expressions, and accessories; refined colors, responsive layouts, touch targets, focus states, and reduced-motion behavior.
 - Doubled the sourced deck from 108 to 216 cards, adding Kitchen secrets, Bright ideas, Living traditions, Remarkable places, Working lives, and Art & music while preserving every existing card.
 - Anonymous choices share canonical lowercase text, whitespace, and terminal-punctuation treatment in the existing server-shuffled order. Attributed reveals retain the original text and sources.
@@ -9,7 +13,7 @@
 - Moved Leave table into the room toolbar with a cancellable, keyboard-accessible confirmation rather than an easy-to-hit gameplay action.
 - Pinned genuine upstream Parlor to `56342bd910a58f255483afdf5a92d3fc4fcc0ae2`, which adds opt-in untimed matches without weakening other games’ default cap or everyone-away cleanup.
 - Preserved a one-time, data-safe upgrade revision in history; removed migration code and legacy deadline fields from the final source. Local preview shutdown keeps handling repeated terminal/package-manager signals until its child processes exit.
-- Verified locally with a full six-round multiplayer game and a twelve-guest mobile audit. This revision is not yet deployed to the public HTTPS game.
+- Verified the redesigned interface locally with the full six-round multiplayer game, a twelve-guest interaction audit, 320px/390px/landscape layouts, 200% text, keyboard and reduced-motion checks, and backend-driven shared-rank standings. No public deployment was performed.
 
 ## 1.0.0 — 2026-09-06
 

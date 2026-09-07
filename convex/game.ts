@@ -302,6 +302,7 @@ export const view = query({
         roundPoints: revealed ? player.roundPoints : 0,
       })),
       ...(ownSubmission ? { ownText: ownSubmission.text } : {}),
+      ...(ownVote ? { ownVoteId: ownVote.optionId } : {}),
       ...(revealed ? { source: round.source, truth: round.answer } : {}),
       canAdvance,
     };

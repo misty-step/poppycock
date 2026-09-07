@@ -26,6 +26,7 @@
     "next-env.d.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
+    "components/**/*.tsx",
     "lib/**/*.ts",
     "lib/**/*.tsx",
     "convex/**/*.ts",
