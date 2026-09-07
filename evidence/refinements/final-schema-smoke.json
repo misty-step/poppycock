@@ -1,0 +1,196 @@
+{
+  "sourceRevision": "9346712",
+  "parlorRevision": "56342bd910a58f255483afdf5a92d3fc4fcc0ae2",
+  "startedAt": "2026-09-07T19:27:59.370Z",
+  "origin": "http://localhost:3210",
+  "rounds": [
+    {
+      "round": 1,
+      "question": "What are the needle-like 'trees' of Madagascar's tsingy landscapes made from?",
+      "category": "Remarkable places",
+      "truth": "Limestone shaped into sharp peaks and pinnacles.",
+      "source": "https://whc.unesco.org/en/list/494/",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 3,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 1,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "question": "Why did Max Ernst lay paper on an old wooden floor and rub over it with a pencil?",
+      "category": "Art & music",
+      "truth": "To capture the wood's texture as the starting point for imagined pictures.",
+      "source": "https://www.tate.org.uk/art/art-terms/f/frottage",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 6,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 4,
+          "gained": 3
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "question": "Why does Mars look reddish from a distance?",
+      "category": "Space oddities",
+      "truth": "Iron in its rocks, dust, and soil oxidizes, or rusts.",
+      "source": "https://science.nasa.gov/mars/facts/",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 9,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 5,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "question": "How can a candy's aroma reach your nose while the candy is still inside your mouth?",
+      "category": "Kitchen secrets",
+      "truth": "Scent molecules travel up a passage behind the throat into the nose.",
+      "source": "https://www.exploratorium.edu/snacks/your-sense-of-taste",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 12,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 6,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "question": "What did an artilleryman use a 'linstock' to hold?",
+      "category": "Curious objects",
+      "truth": "A lighted match for firing a cannon.",
+      "source": "https://www.websters1913.com/words/Linstock",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 15,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 7,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "question": "What makes an ocean organism count as plankton?",
+      "category": "Wild nature",
+      "truth": "It is carried by tides and currents and cannot swim well against them.",
+      "source": "https://oceanservice.noaa.gov/facts/plankton.html",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 18,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 8,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Three independent guest identities join by code; real Parlor QR invitation renders in the lobby.",
+    "Unauthenticated room game read rejected; writing hides truth, source, and options.",
+    "Explicit host departure transfers host to Bea; rejoining Ada keeps identity, scores, and match eligibility.",
+    "Late joiner can watch but cannot submit; immutable three-player eligibility preserved.",
+    "Phone network interruption and reload preserve the same player and current turn.",
+    "Six rounds have authoritative expected scores18/8/0, private shuffled choices, duplicate-bluff attribution, rejected self-votes, and idempotent submission retries.",
+    "Rematch includes former spectator, resets all scores, draws unseen content, and fits390px screens without horizontal overflow."
+  ],
+  "screenshots": [
+    "front-door-desktop.png",
+    "front-door-phone.png",
+    "lobby-desktop.png",
+    "writing-phone.png",
+    "voting-phone.png",
+    "reveal-desktop.png",
+    "reveal-phone.png",
+    "host-change-phone.png",
+    "offline-phone.png",
+    "final-standings-desktop.png",
+    "final-standings-phone.png",
+    "rematch-phone.png"
+  ],
+  "browserSecurity": {
+    "secureContext": true,
+    "randomUuidAvailable": true,
+    "randomValuesAvailable": true
+  },
+  "finalScores": [
+    {
+      "name": "Ada",
+      "score": 18
+    },
+    {
+      "name": "Bea",
+      "score": 8
+    },
+    {
+      "name": "Cy",
+      "score": 0
+    }
+  ],
+  "completedAt": "2026-09-07T19:28:09.640Z",
+  "result": "passed"
+}
