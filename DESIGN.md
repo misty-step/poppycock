@@ -186,7 +186,7 @@ Menus and dialogs have clear backdrops and stay above sticky actions. There are 
 
 Controls and answer options use the 12px radius; large question and dialog surfaces use 20px. Small internal marks use 8px. Account for nested padding so an inner radius does not appear larger than its enclosing surface. Full rounding is reserved for a small avatar backing or radio indicator, not every button and label.
 
-Use the existing twelve illustrations, without cropping ears or accessories. Typical avatar size is 40px in rosters and 72–96px in an intentional character moment. Decorative portraits are hidden from assistive technology when the player's adjacent name provides the identity. Do not add a second generic avatar family.
+Use the existing twelve illustrations, without cropping ears or accessories. Players can choose their character from the lobby roster or the table options menu at any time; choices stay attached to the player's identity and persist across tables, reloads, and reconnections. The avatar picker uses a compact, keyboard-navigable radiogroup with visible focus, scrolling choices, and a pinned primary save action. Decorative portraits are hidden from assistive technology when the player's adjacent name provides the identity. Do not add a second generic avatar family.
 
 ## Components
 
@@ -220,6 +220,7 @@ Long instructional dialogs initially focus their title, not a lower disclosure t
 | Continue after reveal         | Next round / Final scores               |
 | Replay                        | Play again                              |
 | Departure                     | Leave table / Stay                      |
+| Character selection           | Change avatar → Save avatar             |
 
 Use **table** for the persistent shared room, **game** for six rounds, **round** for a question, **answer** for a choice, and **bluff** for an invented answer. Do not alternate room/table/seat or lie/fib/nonsense just to avoid repeating a word. Room code is a familiar exception: it identifies the invitation code.
 
@@ -238,5 +239,6 @@ There are no turn timers, reveal delays, or total game caps. Progress counts rep
 - Don't make disabled controls or color-only markers explain themselves.
 - Don't add timers, stock marketing sections, tooltip-only explanations, unused tokens, or new artwork families.
 - Don't treat shadcn defaults or a passing DESIGN.md linter as proof that the actual screens are usable.
+- Don't reset a player's chosen character when they switch tables, rejoin, or take a different seat.
 
 Selected local reference screens: [entrance](evidence/tabletop/front-door-desktop.png), [phone voting](evidence/tabletop/voting-phone.png), [reveal](evidence/tabletop/reveal-phone.png), [final scores](evidence/tabletop/final-standings-desktop.png), [enlarged rules](evidence/tabletop/rules-200-percent-320.png), and [leave confirmation](evidence/tabletop/leave-confirmation-320.png). The [compact verification record](evidence/tabletop/verification.json) names the source revisions, measured results, and limitations. These are deliberately selected design references; full fresh multiplayer captures are retained by the revision-specific CI artifact. Browser emulation is not physical-device testing or proof of the current hosted release.

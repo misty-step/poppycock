@@ -1,4 +1,7 @@
 import { v } from "convex/values";
+import { AVATAR_IDS } from "../lib/avatars";
+
+export const avatarId = v.union(...AVATAR_IDS.map((id) => v.literal(id)));
 
 export const gamePhase = v.union(
   v.literal("writing"),

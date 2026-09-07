@@ -3,6 +3,7 @@
 ## Unreleased — 2026-09-07
 
 - Added a root `DESIGN.md` following Google's alpha token-and-prose format, with Poppycock's palette, typography, layout, component states, accessibility behavior, and copy contract.
+- Added persistent avatar selection across all twelve characters. Players can change their avatar from the lobby roster or the table options menu during a game; choices stay tied to the player's identity and persist across tables, reloads, and reconnections.
 - Rebuilt the interface with locally owned shadcn Base UI controls: create/join tabs, whole-row radio choices, table menus, invitation/rules dialogs, and consequence-specific confirmations. Replaced the layered decorative styles with a restrained tabletop system and plain action labels.
 - Kept the viewer's accepted vote visible after reload through a private server projection, without exposing other players' votes. Drafts survive reload; submitted answers and locked votes move focus to their receipts.
 - Fixed enlarged-text overflow in invitations and rules, made rules open at their heading, and kept writing actions in normal document flow rather than a sticky overlay. Updated both local and hosted smoke producers to the new controls.

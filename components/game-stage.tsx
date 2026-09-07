@@ -372,7 +372,7 @@ function RoundPhase({ game, token, host, online, viewerId }: GameStageProps) {
                   <div className="surface-panel space-y-4">
                     <div className="flex items-center gap-3">
                       <span className="shrink-0" aria-hidden="true">
-                        <Face seat={viewerSeat} small />
+                        <Face playerId={viewerId} seat={viewerSeat} small />
                       </span>
                       <p>Your answer can't be changed. Voting opens when writing ends.</p>
                     </div>

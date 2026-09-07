@@ -79,6 +79,40 @@ afterEach(() => {
 });
 
 describe("authoritative Poppycock rounds", () => {
+  it("keeps chosen avatars attached to players, not seats or room membership", async () => {
+    const { t, host, clients, room, playerIds } = await fixture();
+    const original = await gameView(clients[1]!, room.roomId);
+    await expect(t.mutation(api.avatars.choose, { avatarId: "owl" })).rejects.toThrow();
+    await expect(t.query(api.avatars.forRoom, { roomId: room.roomId })).rejects.toThrow();
+    await host.mutation(api.avatars.choose, { avatarId: "owl" });
+    await clients[1]!.mutation(api.avatars.choose, { avatarId: "pear" });
+    await host.mutation(api.avatars.choose, { avatarId: "fox" });
+    expect(await clients[1]!.query(api.avatars.forRoom, { roomId: room.roomId })).toEqual({
+      [playerIds[0]!]: "fox",
+      [playerIds[1]!]: "pear",
+    });
+
+    const outsider = t.withIdentity({ subject: "elsewhere", issuer: "poppycock-test" });
+    const elsewhere = await outsider.mutation(api.rooms.createRoom, { displayName: "Elsewhere" });
+    await expect(outsider.query(api.avatars.forRoom, { roomId: room.roomId })).rejects.toThrow(
+      "NOT_A_ROOM_MEMBER",
+    );
+    await host.mutation(api.rooms.leaveRoom, { roomId: room.roomId });
+    expect(await clients[1]!.query(api.avatars.forRoom, { roomId: room.roomId })).toEqual({
+      [playerIds[0]!]: "fox",
+      [playerIds[1]!]: "pear",
+    });
+    const joined = await host.mutation(api.rooms.joinRoom, {
+      code: elsewhere.code,
+      displayName: "Host",
+    });
+    expect(joined).toMatchObject({ ok: true, seatIndex: 1 });
+    expect(await outsider.query(api.avatars.forRoom, { roomId: elsewhere.roomId })).toEqual({
+      [playerIds[0]!]: "fox",
+    });
+    expect((await gameView(clients[1]!, room.roomId)).players).toEqual(original.players);
+  });
+
   it("keeps secrets private, freezes eligibility, and rejects self-votes and spectator writes", async () => {
     const { t, clients, host, room, gameId } = await fixture();
     const late = t.withIdentity({ subject: "late", issuer: "poppycock-test" });
@@ -417,7 +451,8 @@ describe("authoritative Poppycock rounds", () => {
   });
 
   it("seeds idempotently and restricts complete, content-preserving resets to local deployments", async () => {
-    const { t, gameId } = await fixture();
+    const { t, host, gameId } = await fixture();
+    await host.mutation(api.avatars.choose, { avatarId: "owl" });
     const before = await t.run((ctx) => ctx.db.query("cards").collect());
     expect(await t.mutation(internal.seed.run, {})).toEqual({
       inserted: 0,
@@ -433,6 +468,7 @@ describe("authoritative Poppycock rounds", () => {
     expect(await t.run((ctx) => ctx.db.query("games").collect())).toEqual([]);
     expect(await t.run((ctx) => ctx.db.query("rooms").collect())).toEqual([]);
     expect(await t.run((ctx) => ctx.db.query("players").collect())).toEqual([]);
+    expect(await t.run((ctx) => ctx.db.query("playerAvatars").collect())).toEqual([]);
     expect(await t.run((ctx) => ctx.db.query("cards").collect())).toEqual(before);
   });
 });

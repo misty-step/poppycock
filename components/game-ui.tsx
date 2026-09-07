@@ -230,7 +230,7 @@ export function Scoreboard({ game, final = false }: { game: GameView; final?: bo
                 <span className="sr-only">Rank </span>
                 {rank}
               </span>
-              <Face small seat={player.seatIndex} />
+              <Face small playerId={player.playerId} seat={player.seatIndex} />
               <div className="min-w-0 flex-1">
                 <p className="font-bold wrap-anywhere">{player.name}</p>
                 {!final && player.roundPoints > 0 && (

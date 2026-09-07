@@ -84,6 +84,7 @@ const resetTables = [
   "matches",
   "roomMembers",
   "rooms",
+  "playerAvatars",
   "players",
 ] as const;
 

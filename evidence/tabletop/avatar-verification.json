@@ -1,0 +1,38 @@
+{
+  "contract": "Poppycock persistent avatar selection",
+  "generatedAt": "2026-09-07T18:05:00Z",
+  "characters": 12,
+  "storage": "Convex playerAvatars table indexed by playerId",
+  "authoritativeRules": [
+    "Avatars attach to durable player records, never seats, room memberships, or active matches.",
+    "Unauthenticated queries for room avatars are rejected; room members receive only the current participants' chosen portraits.",
+    "Lobby roster provides Change avatar beside the viewer's own name.",
+    "Table options provides Change avatar during active writing, voting, reveal, and finished match phases.",
+    "The avatar picker maintains single radio navigation, stable short labels with accessible full names, a pinned save button, and a scrollable choice area.",
+    "Cancelling or escaping from the picker preserves the existing selection and returns focus to the trigger.",
+    "Chosen avatars persist across browser reloads, explicit table departures, and new room joins.",
+    "Local complete resets clear player avatars along with games and rooms without dropping cards or deployment configuration."
+  ],
+  "measuredScreenshots": {
+    "desktop": "test-results/avatar-choice/picker-desktop.png",
+    "phone390": "test-results/avatar-choice/picker-390.png",
+    "phone320": "test-results/avatar-choice/picker-320.png",
+    "phone200Percent": "test-results/avatar-choice/picker-200-percent.png",
+    "phoneLandscape": "test-results/avatar-choice/picker-landscape.png",
+    "multiplayerReveal": "test-results/avatar-choice/chosen-avatars-reveal.png"
+  },
+  "measuredLayout": {
+    "viewport320": { "dialogWidth": 286, "horizontalOverflow": false },
+    "viewport390": { "horizontalOverflow": false },
+    "viewport667x375Landscape": { "saveButtonVisible": true, "horizontalOverflow": false },
+    "zoom200Percent": { "saveButtonVisible": true, "horizontalOverflow": false }
+  },
+  "checks": [
+    "pnpm build:parlor && pnpm typecheck && pnpm test (20 passed)",
+    "Three-guest live interaction: Ada, Bea, and Cy choose independent characters.",
+    "Ada selects Nell, cancels with Escape (stays Dottie, focus restored), saves Nell, broadcasts to peers, and survives full reload.",
+    "Ada starts game and changes from Nell to Cricket via Table options during Round 1; answer receipt and subsequent reveal scoreboard use Cricket.",
+    "Bea changes from Basil to Pip during Round 1; scoreboards on all three clients agree.",
+    "Offline mode disables the Save avatar button; cancelling while offline leaves the previous choice untouched."
+  ]
+}

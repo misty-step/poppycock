@@ -1,10 +1,14 @@
 import { parlorTables } from "@parlor/convex/schema";
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
-import { gamePhase, source } from "./validators";
+import { avatarId, gamePhase, source } from "./validators";
 
 export default defineSchema({
   ...parlorTables,
+  playerAvatars: defineTable({
+    playerId: v.id("players"),
+    avatarId,
+  }).index("by_player", ["playerId"]),
   cards: defineTable({
     key: v.string(),
     category: v.string(),

@@ -261,6 +261,50 @@
     color: var(--muted-foreground);
     font-size: 0.875rem;
   }
+  .avatar-dialog {
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+  .avatar-form {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto;
+    min-height: 0;
+    gap: 20px;
+  }
+  .avatar-options {
+    min-height: 0;
+    overflow: auto;
+    padding: 5px;
+  }
+  .avatar-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 4rem), 1fr));
+    max-width: 20rem;
+    margin-inline: auto;
+  }
+  .avatar-choice {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    gap: 4px;
+    min-width: 0;
+    padding: 20px 4px 8px;
+    border: 1px solid var(--input);
+    border-radius: 12px;
+    background: var(--card);
+    cursor: pointer;
+  }
+  .avatar-choice .face {
+    width: 56px;
+    height: 56px;
+  }
+  .avatar-choice:has([data-checked]) {
+    border-color: var(--primary);
+    background: var(--accent);
+  }
+  .avatar-choice:has([role="radio"]:focus-visible) {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
   .question-card {
     min-width: 0;
     border-radius: 20px;

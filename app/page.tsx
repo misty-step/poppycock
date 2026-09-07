@@ -13,12 +13,23 @@ import { useConvexConnectionState, useMutation, useQuery } from "convex/react";
 import type { FunctionReturnType } from "convex/server";
 import { QRCodeDisplay, useHeartbeat, useWakeLock } from "@parlor/react";
 import { classifyPresence, type TimestampMs } from "@parlor/core";
-import { Check, CircleHelp, Copy, LogOut, MoreHorizontal, Share2, WifiOff } from "lucide-react";
+import {
+  Check,
+  CircleHelp,
+  Copy,
+  LogOut,
+  MoreHorizontal,
+  Share2,
+  Smile,
+  WifiOff,
+} from "lucide-react";
 import { api } from "@/convex/_generated/api";
 import type { Id } from "@/convex/_generated/dataModel";
 import { gameError } from "@/lib/game-error";
+import { avatarForSeat } from "@/lib/avatars";
 import { useGuest } from "./providers";
-import { Face } from "./avatar";
+import { AvatarContext, Face } from "./avatar";
+import { AvatarPicker } from "@/components/avatar-picker";
 import { Entrance } from "@/components/entrance";
 import { GameStage } from "@/components/game-stage";
 import {
@@ -238,12 +249,20 @@ function Invitation({ code, url, showQr = true }: { code: string; url: string; s
   );
 }
 
-function Roster({ entries, viewerId }: { entries: RosterEntry[]; viewerId: string }) {
+function Roster({
+  entries,
+  viewerId,
+  onChangeAvatar,
+}: {
+  entries: RosterEntry[];
+  viewerId: string;
+  onChangeAvatar: (trigger: HTMLButtonElement) => void;
+}) {
   return (
     <ul className="m-0 list-none p-0">
       {entries.map(({ member, presence, portrait }) => (
-        <li className="player-row" key={member.playerId}>
-          <Face small seat={portrait} />
+        <li className="player-row flex-wrap" key={member.playerId}>
+          <Face small playerId={member.playerId} seat={portrait} />
           <div className="roster-name">
             <strong>
               {member.displayName}
@@ -256,6 +275,15 @@ function Roster({ entries, viewerId }: { entries: RosterEntry[]; viewerId: strin
               {presence !== "present" ? " · Away" : ""}
             </small>
           </div>
+          {member.playerId === viewerId && (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={(event) => onChangeAvatar(event.currentTarget)}
+            >
+              Change avatar
+            </Button>
+          )}
         </li>
       ))}
     </ul>
@@ -265,6 +293,7 @@ function Roster({ entries, viewerId }: { entries: RosterEntry[]; viewerId: strin
 function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exit: () => void }) {
   const state = useQuery(api.rooms.getRoomState, { roomId, guestToken: token });
   const game = useQuery(api.game.view, { roomId, guestToken: token });
+  const avatars = useQuery(api.avatars.forRoom, { roomId, guestToken: token });
   const heartbeatMutation = useMutation(api.rooms.heartbeat);
   const leave = useMutation(api.rooms.leaveRoom);
   const start = useMutation(api.game.start);
@@ -283,17 +312,21 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
   const now = useClock();
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
-  const [dialog, setDialog] = useState<"invite" | "rules" | "leave" | null>(null);
+  const [dialog, setDialog] = useState<"invite" | "rules" | "leave" | "avatar" | null>(null);
   const [requestId, setRequestId] = useState(createRequestId);
   const menuTrigger = useRef<HTMLButtonElement>(null);
   const inviteTrigger = useRef<HTMLButtonElement>(null);
   const dialogReturn = useRef<HTMLElement | null>(null);
   const roomHeading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-    if (state && (game === null || game?.phase === "finished" || game?.phase === "abandoned"))
+    if (
+      state &&
+      avatars &&
+      (game === null || game?.phase === "finished" || game?.phase === "abandoned")
+    )
       roomHeading.current?.focus();
-  }, [Boolean(state), game?.phase]);
-  if (!state || game === undefined)
+  }, [Boolean(state && avatars), game?.phase]);
+  if (!state || game === undefined || avatars === undefined)
     return (
       <>
         <StartHeader />
@@ -338,14 +371,23 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
       ),
     };
   });
+  const viewerAvatar =
+    avatars[state.viewerPlayerId] ??
+    avatarForSeat(
+      entries.find((entry) => entry.member.playerId === state.viewerPlayerId)?.portrait ?? 0,
+    );
   const present = entries.reduce((count, entry) => count + Number(entry.presence === "present"), 0);
   const maxScore = game ? Math.max(...game.players.map((player) => player.score)) : 0;
   const leaders = game?.players.filter((player) => player.score === maxScore) ?? [];
   const finished = game?.phase === "finished";
-  function openFromMenu(next: "invite" | "rules" | "leave") {
+  function openFromMenu(next: "invite" | "rules" | "leave" | "avatar") {
     dialogReturn.current = menuTrigger.current;
     setError("");
     setDialog(next);
+  }
+  function openAvatar(trigger: HTMLButtonElement) {
+    dialogReturn.current = trigger;
+    setDialog("avatar");
   }
   async function begin() {
     if (busy) return;
@@ -412,7 +454,7 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
     </div>
   );
   return (
-    <>
+    <AvatarContext.Provider value={avatars}>
       <header className="site-header">
         <Brand />
         <nav aria-label="Table controls" className="ml-auto flex items-center gap-2">
@@ -452,6 +494,10 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
               <DropdownMenuItem onClick={() => openFromMenu("rules")}>
                 <CircleHelp aria-hidden="true" />
                 How to play
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => openFromMenu("avatar")}>
+                <Smile aria-hidden="true" />
+                Change avatar
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem
@@ -517,7 +563,7 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
               </div>
               {finished && leaders.length === 1 && (
                 <div className="hidden sm:block">
-                  <Face seat={leaders[0]!.seatIndex} />
+                  <Face playerId={leaders[0]!.playerId} seat={leaders[0]!.seatIndex} />
                 </div>
               )}
             </section>
@@ -533,7 +579,11 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
                   {startAction}
                   <details className="help-disclosure mt-4 border-t border-border">
                     <summary>{state.members.length} players at the table</summary>
-                    <Roster entries={entries} viewerId={state.viewerPlayerId} />
+                    <Roster
+                      entries={entries}
+                      viewerId={state.viewerPlayerId}
+                      onChangeAvatar={openAvatar}
+                    />
                   </details>
                 </section>
               </div>
@@ -563,7 +613,11 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
                       {state.members.length} of 12 players
                     </p>
                   </div>
-                  <Roster entries={entries} viewerId={state.viewerPlayerId} />
+                  <Roster
+                    entries={entries}
+                    viewerId={state.viewerPlayerId}
+                    onChangeAvatar={openAvatar}
+                  />
                   {startAction}
                 </section>
               </div>
@@ -592,6 +646,14 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
         onOpenChange={(open) => {
           if (!open) setDialog(null);
         }}
+        returnFocus={dialogReturn}
+      />
+      <AvatarPicker
+        open={dialog === "avatar"}
+        current={viewerAvatar}
+        token={token}
+        online={online}
+        onClose={() => setDialog(null)}
         returnFocus={dialogReturn}
       />
       <ConfirmDialog
@@ -625,6 +687,6 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
         unavailable={!online ? "Reconnect before leaving the table." : undefined}
         returnFocus={dialogReturn}
       />
-    </>
+    </AvatarContext.Provider>
   );
 }
