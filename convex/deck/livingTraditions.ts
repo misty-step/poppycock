@@ -174,14 +174,15 @@ export const livingTraditions = definePack(
       },
     },
     {
-      key: "custom-burial-of-the-sardine",
+      key: "custom-egremont-gurning",
       question:
-        "On Ash Wednesday across towns in Spain, what bizarre mock-funeral procession marks the end of Carnival?",
-      answer: "Mourners in black funeral dress carry and 'bury' a giant sardine in a coffin.",
+        "At the 750-year-old Egremont Crab Fair in England, how do competitors in the World Gurning Championship compete?",
+      answer:
+        "By thrusting their head through a leather horse collar and pulling the most grotesque face possible.",
       source: {
-        title: "Spain.info — La Bañeza Carnival: Burial of the Sardine",
-        url: "https://www.spain.info/en/calendar/carnival-baneza/",
-        note: "El Entierro de la Sardina is a satirical Spanish ritual where mourners weeping in black carry a papier-mâché sardine in a coffin to be buried or burned on the beach.",
+        title: "BBC News — Tommy Mattinson retains Egremont Crab Fair gurning crown",
+        url: "https://www.bbc.co.uk/news/uk-england-cumbria-29301914",
+        note: "Original question and factual summary. The medieval fair hosts the World Gurning Championship where contestants frame their heads in a horse collar (braffin) to contort their faces.",
       },
     },
     {

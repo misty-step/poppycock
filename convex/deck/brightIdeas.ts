@@ -53,14 +53,15 @@ export const brightIdeas = definePack(
       },
     },
     {
-      key: "idea-vester-coffin",
+      key: "idea-motorized-ice-cream-cone",
       question:
-        "What did Franz Vester install inside his 1868 patented 'burial-case' in case someone was buried alive?",
-      answer: "A ladder and a bell cord inside a tube leading to the surface.",
+        "What did Richard B. Hartman's 1999 patented novelty eating device do to ice cream?",
+      answer:
+        "It motorized the cone to automatically rotate the ice cream scoop against the eater's stationary tongue.",
       source: {
-        title: "US Patent 81,437 — Improved burial-case",
-        url: "https://patents.google.com/patent/US81437A/en",
-        note: "Original question and factual summary. Granted August 25, 1868 to Franz Vester of Newark, NJ. A safety coffin with an ascent ladder and bell pull.",
+        title: "US Patent 5,971,829 — Motorized ice cream cone",
+        url: "https://patents.google.com/patent/US5971829A/en",
+        note: "Original question and factual summary. Granted October 26, 1999 to Richard B. Hartman. A handheld battery-driven housing that rotates an ice cream cup against the tongue.",
       },
     },
     {
@@ -151,8 +152,9 @@ export const brightIdeas = definePack(
     },
     {
       key: "idea-bird-diaper",
-      question: "What pet accessory was officially granted US Patent 5,934,226 in 1999?",
-      answer: "A reusable bird diaper to catch droppings from indoor pets.",
+      question:
+        "In 1999, what messy household problem was Lorraine Moore's patented avian 'flight suit' designed to solve?",
+      answer: "Catching droppings from indoor flighted pet birds with a washable diaper pouch.",
       source: {
         title: "US Patent 5,934,226 — Bird diaper",
         url: "https://patents.google.com/patent/US5934226A/en",

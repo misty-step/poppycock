@@ -170,7 +170,7 @@ Eighteen verified historical patents, bizarre contraptions, and curious inventio
 | `idea-chicken-goggles`       | [US Patent 730,918 — Eye-protector for chickens](https://patents.google.com/patent/US730918A/en)                                                                                 |
 | `idea-dimple-maker`          | [US Patent 2,091,276 — Dimple making appliance](https://patents.google.com/patent/US2091276A/en)                                                                                |
 | `idea-anti-eating-mask`      | [US Patent 4,344,424 — Anti-eating face mask](https://patents.google.com/patent/US4344424A/en)                                                                                   |
-| `idea-vester-coffin`         | [US Patent 81,437 — Improved burial-case](https://patents.google.com/patent/US81437A/en)                                                                                         |
+| `idea-motorized-ice-cream-cone`| [US Patent 5,971,829 — Motorized ice cream cone](https://patents.google.com/patent/US5971829A/en)                                                                               |
 | `idea-alarm-bed`             | [The Victorian Web — The Great Exhibition of 1851](https://victorianweb.org/history/1851/wenham.html)                                                                           |
 | `idea-cat-meow-machine`      | [BBC Science Focus — 15 of the world's weirdest-ever inventions](https://www.sciencefocus.com/science/the-weirdest-inventions-ever-in-pictures-2)                                    |
 | `idea-oppenheimer-fire-escape`| [US Patent 221,855 — Improvement in fire-escapes](https://patents.google.com/patent/US221855A/en)                                                                               |
@@ -205,7 +205,7 @@ Eighteen cards covering extraordinary community celebrations, bizarre traditiona
 | `custom-shrimp-horses`     | [UNESCO Multimedia Archives — Shrimp Fishing on Horseback in Oostduinkerke](https://www.unesco.org/archives/multimedia/document-3534)                                                   |
 | `custom-namur-jousting`    | [UNESCO Multimedia Archives — Namur Stilt Jousting](https://www.unesco.org/archives/multimedia/document-5780)                                                                           |
 | `custom-takanakuy-fistfights` | [BBC News — Peru stages Christmas Day fighting festival](https://www.bbc.com/news/av/world-latin-america-12084478)                                                                        |
-| `custom-burial-of-the-sardine`| [Spain.info — La Bañeza Carnival: Burial of the Sardine](https://www.spain.info/en/calendar/carnival-baneza/)                                                                            |
+| `custom-egremont-gurning`    | [BBC News — Tommy Mattinson retains Egremont Crab Fair gurning crown](https://www.bbc.co.uk/news/uk-england-cumbria-29301914)                                                           |
 | `custom-wrestling-kispet`  | [UNESCO Multimedia Archives — Kirkpinar oil Wrestling Festival](https://www.unesco.org/archives/multimedia/document-1686)                                                               |
 | `custom-camel-coaxing`     | [UNESCO Multimedia Archives — The Mongolian Traditional Coaxins Rituals for Baby Animals: The Special Case of the Baby Camel](https://www.unesco.org/archives/multimedia/document-4021) |
 #### Remarkable places — 18 cards
