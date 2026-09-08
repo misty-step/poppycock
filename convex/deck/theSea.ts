@@ -92,12 +92,12 @@ export const theSea = definePack(
     {
       key: "sea-the-bloop",
       question:
-        "In 1997, what caused 'The Bloop', an ultra-low-frequency sound detected by NOAA hydrophones across 3,000 miles of the Pacific?",
-      answer: "An icequake: a massive Antarctic glacier calving and cracking against the seabed.",
+        "In 1997, what caused 'The Bloop', a mysterious deep sound detected by hydrophones over 2,000 miles apart in the Pacific?",
+      answer: "An icequake: a huge iceberg cracking and breaking away from an Antarctic glacier.",
       source: {
         title: "NOAA National Ocean Service — What is the bloop?",
         url: "https://oceanservice.noaa.gov/facts/bloop.html",
-        note: "Original question and factual summary. The powerful sound was originally speculated to be a giant unknown marine creature before NOAA identified it as an icequake.",
+        note: "Original question and factual summary. The thunderous rumble was originally speculated to be a giant sea creature before NOAA PMEL researchers traced it to an Antarctic glacial icequake.",
       },
     },
     {
