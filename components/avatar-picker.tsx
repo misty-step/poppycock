@@ -2,6 +2,8 @@
 
 import { useRef, useState, type RefObject } from "react";
 import { useMutation } from "convex/react";
+import { Radio as RadioPrimitive } from "@base-ui/react/radio";
+import { CheckIcon } from "lucide-react";
 import { Face } from "@/app/avatar";
 import { api } from "@/convex/_generated/api";
 import { AVATAR_IDS, AVATAR_NAMES, type AvatarId } from "@/lib/avatars";
@@ -16,7 +18,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { RadioGroup } from "@/components/ui/radio-group";
 
 const characters = AVATAR_IDS.map((id) => ({
   id,
@@ -76,7 +78,7 @@ export function AvatarPicker({
       }}
     >
       <DialogContent
-        className="avatar-dialog"
+        className="avatar-dialog max-w-[40rem] gap-2"
         initialFocus={title}
         finalFocus={returnFocus}
         showCloseButton={!busy}
@@ -85,7 +87,6 @@ export function AvatarPicker({
           <DialogTitle ref={title} tabIndex={-1} className="outline-none">
             Choose your avatar
           </DialogTitle>
-          <DialogDescription>Pick a character to use at every table.</DialogDescription>
         </DialogHeader>
         <form
           className="avatar-form min-w-0"
@@ -94,7 +95,12 @@ export function AvatarPicker({
             void save();
           }}
         >
-          <div className="avatar-options">
+          <div className="avatar-options space-y-5">
+            <DialogDescription>Pick a character to use at every table.</DialogDescription>
+            <div className="avatar-preview" aria-hidden="true">
+              <Face avatarId={selected} />
+              <p className="avatar-preview-name">{AVATAR_NAMES[selected]}</p>
+            </div>
             <RadioGroup
               aria-label="Your avatar"
               value={selected}
@@ -106,16 +112,22 @@ export function AvatarPicker({
               className="avatar-grid"
             >
               {characters.map(({ id, label, name }) => (
-                <label className="avatar-choice" key={id}>
-                  <span className="justify-self-center">
+                <RadioPrimitive.Root
+                  className="avatar-choice"
+                  key={id}
+                  value={id}
+                  aria-label={label}
+                >
+                  <span className="avatar-choice-portrait" aria-hidden="true">
                     <Face avatarId={id} />
+                    <RadioPrimitive.Indicator className="avatar-choice-check">
+                      <CheckIcon aria-hidden="true" size={14} strokeWidth={3} />
+                    </RadioPrimitive.Indicator>
                   </span>
-                  <span className="text-center text-sm leading-snug wrap-anywhere">
-                    <span aria-hidden="true">{name}</span>
-                    <span className="sr-only">{label}</span>
+                  <span className="avatar-choice-name" aria-hidden="true">
+                    {name}
                   </span>
-                  <RadioGroupItem value={id} className="absolute top-1 right-1 size-4" />
-                </label>
+                </RadioPrimitive.Root>
               ))}
             </RadioGroup>
           </div>

@@ -28,7 +28,10 @@ export function Face({
       <img
         src={`/avatars/${selected}.webp`}
         alt=""
-        className="size-full object-cover select-none pointer-events-none"
+        width={256}
+        height={256}
+        className="select-none"
+        decoding="async"
         loading="lazy"
         draggable={false}
       />
