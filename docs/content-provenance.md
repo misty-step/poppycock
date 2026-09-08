@@ -31,7 +31,7 @@ Sources were retrieved and read on **2026-09-06–07**. Search results were used
 2. Draft a new question that permits plausible invented explanations without requiring the source's prose.
 3. Condense the answer to its central, supported fact. Names, technical terms, and short public-domain definitions sometimes remain unchanged; the per-card note distinguishes this from paraphrase.
 4. Preserve qualifiers that affect truth: **some** sea cucumbers eject organs; **some locations** on Mercury have a reversing sunrise; only **some** Enceladus ejecta enters Saturn's ring.
-5. Supply context for polysemous words: the printing sense of _tympan_, the philosophical sense of _quiddity_, and the rope-splicing sense of _fid_, for example.
+5. Supply context for polysemous words: the printing sense of _tympan_, the bodily sense of _wamble_, and the rope-splicing sense of _fid_, for example.
 6. Keep beliefs separate from science. _Tarantism_ records a historical spider-bite explanation; it does not endorse that explanation. Historical medical words and instruments are descriptions, not treatment recommendations.
 7. Retain the title, retrievable URL, and an editorial/source-location note on every card. The pack modules in `convex/deck/` are the authoritative card-level provenance index; this document records the collection-level method and reuse basis.
 
@@ -57,7 +57,7 @@ Ten cards in `Curious objects` draw from verified historical artifacts preserved
 | `object-fuddling-cup`         | [The Fitzwilliam Museum (University of Cambridge) — Fuddling cups](https://data.fitzmuseum.cam.ac.uk/id/terminology/term-91176)                                                                  |
 | `object-bamboo-flea-trap`     | [Science Museum Group Collection — Bamboo flea trap, China, 1751-1850](https://collection.sciencemuseumgroup.org.uk/objects/co147562/bamboo-flea-trap-china-1751-1850)                         |
 | `object-drunkards-cloak`       | [BBC HistoryExtra — Q&A: what was a drunkard's cloak used for?](https://www.historyextra.com/period/stuart/medieval-punishments-what-was-drunkards-cloak/)                                     |
-The deck reuses or paraphrases the historical definitions and object records, not the modern hosts' site designs. `word-brontolith` cross-references the public-domain Aërolite definition. Gutenberg links are scholarly acknowledgements only; no ebook, Gutenberg wrapper, or trademark asset is shipped.
+The deck reuses or paraphrases the historical definitions and object records, not the modern hosts' site designs. Gutenberg links are scholarly acknowledgements only; no ebook, Gutenberg wrapper, or trademark asset is shipped.
 ### Wild nature: 27 cards
 
 Fifteen cards cite NOAA Ocean Exploration and National Ocean Service resources for marine biology, hydrothermal vents, deep-sea ecology, and geological formations. Twelve cards draw verified, extraordinary biological adaptations from peer-reviewed research documented by National Geographic, Smithsonian Magazine, New Scientist, and BBC:
