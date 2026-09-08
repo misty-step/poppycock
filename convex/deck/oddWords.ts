@@ -71,12 +71,12 @@ export const oddWords = definePack(
     },
     {
       key: "word-toadeater",
-      question: "In historical slang, why was a sycophantic flatterer called a 'toadeater'?",
-      answer: "Mountebanks' assistants ate toads so their masters could pretend to cure them.",
+      question: "In older English, what sort of person was called a 'toadeater'?",
+      answer: "A fawning, obsequious sycophant or flatterer.",
       source: {
         title: "Webster's 1913 — Toadeater",
         url: "https://www.websters1913.com/words/Toadeater",
-        note: "Original question; condensed public-domain definition of the mountebank origin and sycophantic meaning.",
+        note: "Original question; condensed public-domain definition. Webster notes the alleged traditional lore of mountebanks' boys supposedly eating toads to demonstrate fake cures.",
       },
     },
     {

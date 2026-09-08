@@ -45,12 +45,13 @@ export const remarkablePlaces = definePack(
     {
       key: "place-darvaza-door-to-hell",
       question:
-        "What natural phenomenon has burned continuously in the Karakum Desert crater known as the 'Door to Hell'?",
-      answer: "A natural gas fire that has burned continuously for decades.",
+        "In 1971, why did Soviet geologists intentionally set fire to the collapsed Darvaza crater in Turkmenistan's desert?",
+      answer:
+        "They expected escaping methane gas to burn off in a few weeks, but it has burned for over fifty years.",
       source: {
         title: "BBC News — Turkmenistan plans to close its 'Gateway to Hell'",
         url: "https://www.bbc.com/news/world-asia-59920221",
-        note: "Original question and factual summary. A 230-foot desert crater burning methane gas continuously for decades; exact origin is a collapsed Soviet drilling site.",
+        note: "Geologists ignited the 230-foot crater to prevent toxic gas from poisoning nearby villages, expecting it to burn out quickly.",
       },
     },
     {
@@ -68,11 +69,11 @@ export const remarkablePlaces = definePack(
       key: "place-colma-cemetery-city",
       question:
         "Why does the town of Colma, California have roughly 1,500 living residents but over 1.5 million dead?",
-      answer: "Over 1.5 million dead people, because San Francisco banned cemeteries.",
+      answer: "San Francisco banned cemeteries and evicted its dead to make room for the living.",
       source: {
         title: "Atlas Obscura — Colma Necropolis in Daly City",
         url: "https://www.atlasobscura.com/places/colma-necropolis",
-        note: "Original question and factual summary. In 1900 San Francisco banned cemeteries and evicted corpses; over 1.5 million bodies were relocated to Colma cemeteries.",
+        note: "In 1900 San Francisco banned cemeteries and evicted corpses; over 1.5 million bodies were relocated to Colma cemeteries.",
       },
     },
     {
@@ -112,13 +113,13 @@ export const remarkablePlaces = definePack(
     {
       key: "place-snake-island-forbidden",
       question:
-        "Why has the Brazilian government strictly banned civilians from visiting Snake Island?",
-      answer: "Thousands of critically venomous golden lancehead pit vipers.",
+        "Why has the Brazilian government strictly banned civilians from stepping foot on the island of Ilha da Queimada Grande?",
+      answer: "It is densely infested with thousands of deadly golden lancehead pit vipers.",
       source: {
         title:
           "Smithsonian Magazine — This Terrifying Brazilian Island Has Highest Concentration of Venomous Snakes",
         url: "https://www.smithsonianmag.com/science-nature/snake-infested-island-deadliest-place-brazil-180951782/",
-        note: "Original question and factual summary. Ilha da Queimada Grande is inhabited by thousands of golden lancehead vipers whose venom causes rapid hemotoxic tissue damage.",
+        note: "Ilha da Queimada Grande is inhabited by thousands of golden lancehead vipers whose venom causes rapid hemotoxic tissue damage.",
       },
     },
     {
@@ -177,14 +178,15 @@ export const remarkablePlaces = definePack(
       },
     },
     {
-      key: "place-svalbard-seed-vault",
+      key: "place-boiling-river-amazon",
       question:
-        "What is stored deep inside a permafrost mountain on the Arctic island of Spitsbergen?",
-      answer: "Backup seed samples for the world's food crops in case of global disaster.",
+        "What makes the remote Amazonian river known in Quechua as Shanay-Timpishka astonishing to geologists?",
+      answer:
+        "It naturally reaches boiling temperatures for over four miles, despite not being near any active volcano.",
       source: {
-        title: "Crop Trust — Svalbard Global Seed Vault",
-        url: "https://www.croptrust.org/what-we-do/programs/svalbard-global-seed-vault/",
-        note: "Original question and factual summary. The vault secures over 1.3 million duplicate crop seed samples in frozen permafrost rock 100 meters inside the mountain.",
+        title: "National Geographic — Episode 13: Solving the mystery of the boiling river",
+        url: "https://www.nationalgeographic.com/podcasts/article/episode-13-solving-the-mystery-of-the-boiling-river",
+        note: "Geothermal waters heated by deep-fault hydrothermal systems reach up to 99°C, flowing through four miles of Peruvian rainforest.",
       },
     },
     {
