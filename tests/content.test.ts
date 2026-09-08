@@ -16,7 +16,13 @@ const HOUSE_PACKS = [
   "art-and-music",
 ] as const;
 
-const EXPANSION_PACKS = ["the-sea", "lost-gear", "rarer-words"] as const;
+const EXPANSION_PACKS = [
+  "the-sea",
+  "lost-gear",
+  "rarer-words",
+  "uncanny-laws",
+  "folk-beliefs",
+] as const;
 
 describe("sourced pack catalog", () => {
   it("validates every pack and card", () => {
@@ -30,6 +36,8 @@ describe("sourced pack catalog", () => {
     expect(seedCards.filter((card) => card.packKey === "the-sea")).toHaveLength(18);
     expect(seedCards.filter((card) => card.packKey === "lost-gear")).toHaveLength(18);
     expect(seedCards.filter((card) => card.packKey === "rarer-words")).toHaveLength(18);
+    expect(seedCards.filter((card) => card.packKey === "uncanny-laws")).toHaveLength(18);
+    expect(seedCards.filter((card) => card.packKey === "folk-beliefs")).toHaveLength(18);
     expect(seedCards.length).toBeGreaterThanOrEqual(270);
     expect(Math.max(...seedCards.map((card) => card.answer.length))).toBeLessThanOrEqual(
       MAX_BLUFF_LENGTH,

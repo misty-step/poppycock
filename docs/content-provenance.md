@@ -17,7 +17,9 @@ The catalog is a **fixed, sourced, AI-assisted editorial deck**. There is no run
 | The sea             |      18 | Winds, waves, hidden cataracts, and the names sailors gave them                  |
 | Lost gear           |      18 | Clothes, boats, and tools whose names outlived everyday use                      |
 | Rarer words         |      18 | More historical vocabulary whose everyday job has slipped out of sight           |
-| **Total**           | **270** | Forty-five six-round games' worth of distinct cards; deal mixes categories       |
+| Uncanny laws        |      18 | Bizarre historical statutes, royal decrees, and peculiar legal codes             |
+| Folk beliefs        |      18 | Apotropaic charms, ritual protections, and bizarre historical superstitions      |
+| **Total**           | **306** | Fifty-one six-round games' worth of distinct cards; deal mixes categories        |
 
 Answers are written below the game's 180-character bluff limit. The collection mixes definitions, purposes, mechanisms, and historical explanations rather than requiring exact dates or numerical estimates. Category counts describe this seed collection, not a promise about the game's random draw order. A live match prefers a category not yet used in that game.
 
@@ -362,6 +364,56 @@ Eighteen deep-cut vocabulary cards drawn from public-domain entries in [Webster'
 | `rare-galligaskins`        | [Webster's 1913 — Galligaskins](https://www.websters1913.com/words/Galligaskins)                                                                             |
 | `rare-pilgarlic`           | [Webster's 1913 — Pilgarlic](https://www.websters1913.com/words/Pilgarlic)                                                                                   |
 | `rare-dudgeon`             | [Webster's 1913 — Dudgeon](https://www.websters1913.com/words/Dudgeon)                                                                                       |
+
+#### Uncanny laws — 18 cards
+
+Eighteen cards covering extraordinary historical legislation, royal proclamations, ancient voting rituals, and sumptuary codes. Every card is verified against official primary legislation and parliamentary records (The National Archives, UK Legislation, UK Parliament Hansard), national museums (British Museum, Victoria and Albert Museum, Science Museum Group), and peer-reviewed scholarly references (Encyclopedia Britannica, BBC News):
+
+| Card                                  | Consulted source                                                                                                                                              |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `law-peter-beard-token`               | [British Museum — Beard token, Russia, 1705](https://www.britishmuseum.org/collection/object/C_C-3701)                                                       |
+| `law-armour-in-parliament`            | [The National Archives (UK Legislation) — A Statute forbidding Bearing of Armour (1313)](https://www.legislation.gov.uk/aep/Edw2/7/0)                         |
+| `law-salmon-suspicious-circumstances` | [The National Archives (UK Legislation) — Salmon Act 1986, Section 32](https://www.legislation.gov.uk/ukpga/1986/62/section/32)                              |
+| `law-deodand-forfeiture`              | [UK Parliament (Hansard) — Deodands Abolition Bill (1846)](https://api.parliament.uk/historic-hansard/commons/1846/aug/11/deodands-abolition-no-2-bill)       |
+| `law-window-tax-brick`                | [UK Parliament — Window Tax](https://www.parliament.uk/about/living-heritage/transformingsociety/towncountry/towns/tyne-and-wear-case-study/about-the-group/housing/window-tax/) |
+| `law-act-of-parliament-clock`         | [Science Museum Group Collection — Tavern clock by Vulliamy](https://collection.sciencemuseumgroup.org.uk/objects/co8558147/tavern-clock-by-vulliamy)        |
+| `law-venetian-black-gondolas`         | [Encyclopedia Britannica — Gondola](https://kids.britannica.com/scholars/article/gondola/37343)                                                              |
+| `law-hywel-dda-cat-guarantee`         | [BBC News — The Story of Wales: Dr Sara Elin Roberts on Hywel Dda's laws](https://www.bbc.com/news/uk-wales-17186291)                                        |
+| `law-dog-shogun-tsunayoshi`           | [Encyclopedia Britannica — Tokugawa Tsunayoshi](https://www.britannica.com/biography/Tokugawa-Tsunayoshi)                                                   |
+| `law-athenian-ostracism-shards`       | [Encyclopedia Britannica — Ostracism](https://www.britannica.com/topic/ostracism)                                                                             |
+| `law-hair-powder-certificate`         | [The National Archives (UK Legislation) — Hair Powder Certificate Act 1795 (1795 c. 49)](https://www.legislation.gov.uk/primary+secondary/1795?sort=title)    |
+| `law-tudor-bowling-tennis-ban`        | [UK Parliament (Hansard) — Unlawful Games Act 1541](https://api.parliament.uk/historic-hansard/acts/unlawful-games-act-1541)                                  |
+| `law-licensing-act-steam-engine`      | [The National Archives (UK Legislation) — Licensing Act 1872, Section 12](https://www.legislation.gov.uk/ukpga/Vict/35-36/94/section/12)                     |
+| `law-puritan-christmas-ban`           | [UK Parliament (Hansard) — Business of the House (Christmas Prohibitions)](https://hansard.parliament.uk/commons/2024-12-19/debates/4E534BAA-0759-42BE-BF39-71029ADC443E/BusinessOfTheHouse) |
+| `law-roman-lex-claudia-ships`         | [Encyclopedia Britannica — Lex Claudia](https://www.britannica.com/topic/Lex-Claudia)                                                                        |
+| `law-edward-iii-sumptuary-fur`        | [Encyclopedia Britannica — Government regulation of dress (Sumptuary Laws)](https://www.britannica.com/topic/dress-clothing/Government-regulation-of-dress)  |
+| `law-roman-lex-oppia-gold`            | [Encyclopedia Britannica — Lex Oppia](https://www.britannica.com/topic/Lex-Oppia)                                                                            |
+| `law-medieval-animal-trials`          | [BBC News — Should animals have the same rights as humans?](https://www.bbc.com/news/world-32854504)                                                         |
+
+#### Folk beliefs — 18 cards
+
+Eighteen cards covering apotropaic charms, ritual protections, historical superstitions, and folk-healing customs. Every card is verified against national and regional museum collections (National Museums Scotland, Science Museum Group, Natural History Museum London, British Museum, Amgueddfa Cymru / Museum Wales, Whitby Museum, Historic England, and Project Gutenberg folklore archives):
+
+| Card                                  | Consulted source                                                                                                                                                              |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `folk-daisy-wheel-witch-mark`         | [Historic England — What Are Witches’ Marks?](https://historicengland.org.uk/whats-new/features/discovering-witches-marks/what-are-witches-marks/)                          |
+| `folk-concealed-shoe-chimney`         | [BBC News — The shoes hidden in homes to ward off evil](https://www.bbc.com/news/uk-england-northamptonshire-41507752)                                                       |
+| `folk-telling-the-bees`               | [Project Gutenberg — Rustic Speech and Folk-lore (by Elizabeth Mary Wright)](https://www.gutenberg.org/files/47364/47364-h/47364-h.htm)                                      |
+| `folk-kings-evil-touch-piece`         | [Science Museum Group Collection — Gold touchpiece issued by James II](https://collection.sciencemuseumgroup.org.uk/objects/co105125/gold-touchpiece-issued-by-james-ii)     |
+| `folk-cramp-ring-monarch`             | [Science Museum Group Collection — Metal cramp ring, English, 1308-1558](https://collection.sciencemuseumgroup.org.uk/objects/co106807/metal-cramp-ring-english-1308-1558) |
+| `folk-whitby-snakestones`             | [Natural History Museum London — Snakestones: The myth, magic and science of ammonites](https://www.nhm.ac.uk/discover/snakestones-ammonites-myth-magic-science.html)      |
+| `folk-timber-burn-marks`              | [Historic England — The Difference Between Apotropaic Marks and Carpenters’ Marks](https://historicengland.org.uk/whats-new/features/discovering-witches-marks/types-of-marks/) |
+| `folk-druid-mistletoe-harvest`        | [Tufts Perseus Digital Library — Pliny the Elder, Natural History 16.95](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0137%3Abook%3D16%3Achapter%3D95) |
+| `folk-welsh-mari-lwyd`                | [Amgueddfa Cymru (Museum Wales) — Mari Lwyd](https://museum.wales/collections/online/object/23aa02a8-fcef-3cab-aca3-590b7427236d/Mari-Lwyd/)                                 |
+| `folk-17th-century-witch-bottle`      | [BBC News — 17th-century witch bottle identified as anti-witchcraft device](https://www.bbc.com/news/uk-england-kent-59052737)                                               |
+| `folk-prehistoric-axe-thunderstone`   | [British Museum — The World of Stonehenge (Thunderstone Folklore)](https://www.britishmuseum.org/sites/default/files/2022-02/The_world_of_Stonehenge_The_British_Musuem_large_print_guide.pdf) |
+| `folk-hand-of-glory-burglary`         | [Whitby Museum — The Hand of Glory](https://whitbymuseum.org.uk/the-hand-of-glory/)                                                                                           |
+| `folk-hag-stone-stable-charm`         | [Science Museum Group Collection — Gritstone pebble or witch stone, Yorkshire](https://collection.sciencemuseumgroup.org.uk/objects/co102812/gritstone-pebble-or-witch-stone-perforated-with-white-cloth-sling) |
+| `folk-moles-foot-amulet`              | [Science Museum Group Collection — Mole's foot amulet, Norfolk, 1890-1910](https://collection.sciencemuseumgroup.org.uk/objects/co103787/moles-foot-amulet-norfolk-england-1890-1910-mole-footamulets) |
+| `folk-amber-beads-eyelids`            | [National Museums Scotland — From amulets to elf bolts: 11 Scottish Charms](https://www.nms.ac.uk/discover-catalogue/from-amulets-to-elf-bolts-10-scottish-charms)          |
+| `folk-scottish-elf-bolts`             | [National Museums Scotland — From amulets to elf bolts: 11 Scottish Charms](https://www.nms.ac.uk/discover-catalogue/from-amulets-to-elf-bolts-10-scottish-charms)          |
+| `folk-goose-thrapple-charm`           | [National Museums Scotland — From amulets to elf bolts: 11 Scottish Charms](https://www.nms.ac.uk/discover-catalogue/from-amulets-to-elf-bolts-10-scottish-charms)          |
+| `folk-marys-nut-drift-seed`           | [National Museums Scotland — From amulets to elf bolts: 11 Scottish Charms](https://www.nms.ac.uk/discover-catalogue/from-amulets-to-elf-bolts-10-scottish-charms)          |
 
 ## Precision choices worth preserving
 

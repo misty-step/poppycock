@@ -12,6 +12,8 @@ import { artAndMusic } from "./artAndMusic";
 import { theSea } from "./theSea";
 import { lostGear } from "./lostGear";
 import { rarerWords } from "./rarerWords";
+import { uncannyLaws } from "./uncannyLaws";
+import { folkBeliefs } from "./folkBeliefs";
 
 export const seedPacks: SeedPack[] = [
   oddWords,
@@ -27,6 +29,8 @@ export const seedPacks: SeedPack[] = [
   theSea,
   lostGear,
   rarerWords,
+  uncannyLaws,
+  folkBeliefs,
 ];
 
 export const seedCards: SeedCard[] = seedPacks.flatMap((pack) => pack.cards);
