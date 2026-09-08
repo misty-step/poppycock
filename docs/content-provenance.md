@@ -12,7 +12,7 @@ The catalog is a **fixed, sourced, AI-assisted editorial deck**. There is no run
 | Bright ideas        |      18 | Eccentric patents, bizarre contraptions, and curious historical inventions       |
 | Living traditions   |      18 | Bizarre community celebrations, extraordinary festivals, and ancient customs      |
 | Remarkable places   |      18 | Bizarre towns, eccentric architecture, and extraordinary geographic anomalies     |
-| Working lives       |      18 | Historical trades, specialist labour and living traditional work                 |
+| Working lives       |      18 | Historical trades, specialist labour, and bizarre vanished occupations           |
 | Art & music         |      18 | Shocking artworks, bizarre musical instruments, eccentric stunts, and pigments    |
 | The sea             |      18 | Winds, waves, hidden cataracts, and the names sailors gave them                  |
 | Lost gear           |      18 | Clothes, boats, and tools whose names outlived everyday use                      |
@@ -230,28 +230,28 @@ Eighteen cards covering extraordinary towns, eccentric architectural oddities, a
 
 #### Working lives — 18 cards
 
-Eighteen cards grounded in museum collections, preserved historical accounts and skilled practitioners: London Museum (7), Colonial Williamsburg (2), Historic Royal Palaces (2), and one each from UNESCO, the National Park Service, the National Coal Mining Museum, NASA, Royal Museums Greenwich, Sunny Bank Mills, and Imperial War Museums. The category includes living traditional work as well as vanished roles. Child labour and poverty are documented without romanticizing them.
+Eighteen cards covering extraordinary historical trades, specialist artisanal skills, and bizarre vanished occupations. Every card is checked against full-text source retrieval from major institutions (BBC News, Tufts Digital Library / Henry Mayhew, National Churches Trust, Science Museum Group, Smithsonian Magazine, Royal College of Surgeons, Historic Royal Palaces, National Park Service, Imperial War Museums, Sunny Bank Mills, Colonial Williamsburg, and London Museum).
 
 | Card                       | Consulted source                                                                                                                                                                             |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `work-mush-faker`           | [London Museum — Street life & work in 1877](https://www.londonmuseum.org.uk/collections/london-stories/street-life-work-1877-john-thomson/)                                                                                  |
-| `work-flying-dustmen`       | [London Museum — Street life & work in 1877](https://www.londonmuseum.org.uk/collections/london-stories/street-life-work-1877-john-thomson/)                                                                                  |
-| `work-swag-selling`         | [London Museum — Street life & work in 1877](https://www.londonmuseum.org.uk/collections/london-stories/street-life-work-1877-john-thomson/)                                                                                  |
-| `work-mobile-darkroom`      | [London Museum — Street life & work in 1877](https://www.londonmuseum.org.uk/collections/london-stories/street-life-work-1877-john-thomson/)                                                                                  |
-| `work-crossing-sweeper`     | [London Museum — Henry Mayhew brings Victorian London to life](https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/)                                                         |
-| `work-mudlarks`             | [London Museum — Henry Mayhew brings Victorian London to life](https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/)                                                         |
-| `work-cooper-sound`         | [Colonial Williamsburg — Making Circles](https://research.colonialwilliamsburg.org/Foundation/journal/Autumn03/cooper.cfm)                                                                                                    |
-| `work-wigmaker-baking`      | [Colonial Williamsburg — Lies My Docent Told Me](https://research.colonialwilliamsburg.org/Foundation/journal/Autumn10/myths.cfm)                                                                                             |
-| `work-foggara-water-shares` | [UNESCO Multimedia Archives — Les savoirs et savoir-faire des mesureurs d'eau des foggaras ou aiguadiers du Touat-Tidikelt](https://www.unesco.org/archives/multimedia/document-4787)                                         |
-| `work-cigar-lector`         | [National Park Service — American Latino Theme Study: Media](https://www.nps.gov/articles/latinothemestudymedia.htm)                                                                                                          |
-| `work-mine-trapper`         | [National Coal Mining Museum — Voices in the Coalshed: Career Options](https://www.ncm.org.uk/news/voices-in-the-coalshed-career-options/)                                                                                    |
+| `work-knocker-upper`       | [BBC News — Knocker uppers: Waking up the workers in industrial Britain](https://www.bbc.com/news/uk-england-35840393)                                                                     |
+| `work-pure-finder`         | [Tufts Digital Library — Mayhew's London Labour and the London Poor: Of the 'Pure'-Finders](https://dl.tufts.edu/teiviewer/parent/rv043431c/chapter/c6s3)                                  |
+| `work-sewer-tosher`        | [Tufts Digital Library — Mayhew's London Labour and the London Poor: Of the Sewer-Hunters](https://dl.tufts.edu/teiviewer/parent/rv043431c/chapter/c6s7)                                  |
+| `work-dog-whipper`         | [National Churches Trust — Cyfylliog St Mary (Dog Tongs and Dog Whippers)](https://www.nationalchurchestrust.org/church/st-mary-cyfylliog)                                                 |
+| `work-leech-collector`     | [Science Museum — Blood: Leeches and Leech Collectors](https://www.sciencemuseum.org.uk/objects-and-stories/medicine/blood)                                                                |
+| `work-ice-harvester`       | [Smithsonian Magazine — Chilly Reception](https://www.smithsonianmag.com/history/chilly-reception-66099329/)                                                                               |
+| `work-resurrectionists-graves` | [Royal College of Surgeons — Diary of a resurrectionist: The unique record of a frightening trade](https://www.rcseng.ac.uk/library-and-publications/library/blog/diary-of-a-resurrectionist/) |
 | `work-gong-farmer`          | [Historic Royal Palaces — Tudor world brought to life in new display at Hampton Court Palace](https://www.hrp.org.uk/media-and-press/press-releases-2024/tudor-world-brought-to-life-in-new-display-at-hampton-court-palace/) |
+| `work-cigar-lector`         | [National Park Service — American Latino Theme Study: Media](https://www.nps.gov/articles/latinothemestudymedia.htm)                                                                           |
+| `work-mush-faker`           | [London Museum — Street life & work in 1877](https://www.londonmuseum.org.uk/collections/london-stories/street-life-work-1877-john-thomson/)                                                  |
+| `work-aircraft-listeners`   | [Imperial War Museums — Locator, Sound No1 Mark 1](https://www.iwm.org.uk/collections/item/object/30028540)                                                                                   |
+| `work-tazzle-men`           | [Sunny Bank Mills — Teazles](https://www.sunnybankmills.co.uk/our-story/blog/teazles-dan-sykes-museum-archive-assistant/)                                                                      |
+| `work-cooper-sound`         | [Colonial Williamsburg — Making Circles](https://research.colonialwilliamsburg.org/Foundation/journal/Autumn03/cooper.cfm)                                                                     |
+| `work-wigmaker-baking`      | [Colonial Williamsburg — Lies My Docent Told Me](https://research.colonialwilliamsburg.org/Foundation/journal/Autumn10/myths.cfm)                                                              |
+| `work-insurance-brigades`   | [London Museum — How the Great Fire of London created insurance](https://www.londonmuseum.org.uk/blog/how-the-great-fire-of-london-created-insurance/)                                         |
+| `work-mudlarks`             | [London Museum — Henry Mayhew brings Victorian London to life](https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/)                                                        |
+| `work-foggara-water-shares` | [UNESCO Multimedia Archives — Les savoirs et savoir-faire des mesureurs d'eau des foggaras ou aiguadiers du Touat-Tidikelt](https://www.unesco.org/archives/multimedia/document-4787)                                        |
 | `work-mary-rose-diver`      | [Historic Royal Palaces — Tudor world brought to life in new display at Hampton Court Palace](https://www.hrp.org.uk/media-and-press/press-releases-2024/tudor-world-brought-to-life-in-new-display-at-hampton-court-palace/) |
-| `work-human-computers`      | [NASA History — When the Computer Wore a Skirt: Langley's Computers, 1935–1970](https://www.nasa.gov/history/langleys-computers-1935-1970/)                                                                                   |
-| `work-powder-monkeys`       | [Royal Museums Greenwich — Pirate Objects: Gunpowder Tin](https://www.rmg.co.uk/sites/default/files/import/media/pdf/SFTS_Objects24_GunpowderTin.pdf)                                                                         |
-| `work-tazzle-men`           | [Sunny Bank Mills — Teazles](https://www.sunnybankmills.co.uk/our-story/blog/teazles-dan-sykes-museum-archive-assistant/)                                                                                                     |
-| `work-aircraft-listeners`   | [Imperial War Museums — Locator, Sound No1 Mark 1](https://www.iwm.org.uk/collections/item/object/30028540)                                                                                                                   |
-| `work-insurance-brigades`   | [London Museum — How the Great Fire of London created insurance](https://www.londonmuseum.org.uk/blog/how-the-great-fire-of-london-created-insurance/)                                                                        |
 
 #### Art & music — 18 cards
 

@@ -4,11 +4,114 @@ export const workingLives = definePack(
   {
     key: "working-lives",
     title: "Working lives",
-    blurb: "Historical trades, specialist labour and living traditional work.",
+    blurb: "Historical trades, specialist labour and bizarre vanished occupations.",
     category: "Working lives",
     sort: 90,
   },
   [
+    {
+      key: "work-knocker-upper",
+      question:
+        "How did a British 'knocker-upper' wake sleeping factory workers before alarm clocks were affordable?",
+      answer: "By tapping on upstairs windows with long poles or shooting dried peas.",
+      source: {
+        title: "BBC News — Knocker uppers: Waking up the workers in industrial Britain",
+        url: "https://www.bbc.com/news/uk-england-35840393",
+        note: "Original question and factual summary. Before alarm clocks, knocker-uppers in industrial towns tapped upstairs windows using bamboo poles or blew dried peas through pea-shooters.",
+      },
+    },
+    {
+      key: "work-pure-finder",
+      question:
+        "What street substance did Victorian London's 'pure-finders' collect in buckets to sell to leather tanners?",
+      answer: "Dog feces, used to purify and soften bookbinding leather.",
+      source: {
+        title:
+          "Tufts Digital Library — Mayhew's London Labour and the London Poor: Of the 'Pure'-Finders",
+        url: "https://dl.tufts.edu/teiviewer/parent/rv043431c/chapter/c6s3",
+        note: "Original question and factual summary. Pure-finders gathered dog dung from streets to sell by the bucket to Bermondsey tanyards for dressing bookbinding and glove leather.",
+      },
+    },
+    {
+      key: "work-sewer-tosher",
+      question:
+        "Where did Victorian London scavengers known as 'toshers' spend their working days wading in search of dropped coins and scrap copper?",
+      answer: "Inside the dark brick sewer tunnels beneath the city.",
+      source: {
+        title:
+          "Tufts Digital Library — Mayhew's London Labour and the London Poor: Of the Sewer-Hunters",
+        url: "https://dl.tufts.edu/teiviewer/parent/rv043431c/chapter/c6s7",
+        note: "Original question and factual summary. Toshers entered tidal sewer outlets armed with hoes, lanterns, and canvas coats to rake sludge for coins, copper nails, and dropped silverware.",
+      },
+    },
+    {
+      key: "work-dog-whipper",
+      question:
+        "What was the official parish duty of an English or Welsh 'dog whipper' during church services?",
+      answer: "Expelling unruly or barking dogs from the congregation with whips and tongs.",
+      source: {
+        title: "National Churches Trust — Cyfylliog St Mary (Dog Tongs and Dog Whippers)",
+        url: "https://www.nationalchurchestrust.org/church/st-mary-cyfylliog",
+        note: "Original question and factual summary. Parish officer appointed from the 16th to 19th centuries to remove disruptive or fighting dogs from church pews using whips and expanding tongs.",
+      },
+    },
+    {
+      key: "work-leech-collector",
+      question:
+        "How did 19th-century British 'leech collectors' typically catch wild medicinal leeches in ponds and bogs?",
+      answer: "By wading bare-legged into the water and letting leeches feed on their legs.",
+      source: {
+        title: "Science Museum — Blood: Leeches and Leech Collectors",
+        url: "https://www.sciencemuseum.org.uk/objects-and-stories/medicine/blood",
+        note: "Original question and factual summary. During the 19th-century medical bloodletting craze, collectors waded bare-legged into bogs, using their own flesh and blood to attract wild leeches.",
+      },
+    },
+    {
+      key: "work-ice-harvester",
+      question:
+        "What tool did 19th-century American 'ice harvesters' use to cut frozen lake ice into uniform export blocks?",
+      answer: "Horse-drawn iron ice plows with serrated steel blades.",
+      source: {
+        title: "Smithsonian Magazine — Chilly Reception",
+        url: "https://www.smithsonianmag.com/history/chilly-reception-66099329/",
+        note: "Original question and factual summary. In the 1820s Nathaniel Wyeth invented horse-drawn ice plows that scored frozen New England ponds into symmetrical blocks for global shipment.",
+      },
+    },
+    {
+      key: "work-resurrectionists-graves",
+      question:
+        "What did 18th- and 19th-century British 'resurrectionists' secretly dig up at night to sell to medical schools?",
+      answer: "Freshly buried human corpses from church graveyards.",
+      source: {
+        title:
+          "Royal College of Surgeons — Diary of a resurrectionist: The unique record of a frightening trade",
+        url: "https://www.rcseng.ac.uk/library-and-publications/library/blog/diary-of-a-resurrectionist/",
+        note: "Original question and factual summary. Body snatchers illegally exhumed freshly interred corpses from churchyards to supply anatomists and surgeons with dissection subjects.",
+      },
+    },
+    {
+      key: "work-gong-farmer",
+      question:
+        "What did a Tudor palace's 'gong farmers' look after rather than agricultural crops?",
+      answer: "Cleaning the toilets and removing their waste.",
+      source: {
+        title:
+          "Historic Royal Palaces — Tudor world brought to life in new display at Hampton Court Palace",
+        url: "https://www.hrp.org.uk/media-and-press/press-releases-2024/tudor-world-brought-to-life-in-new-display-at-hampton-court-palace/",
+        note: "Original question and factual paraphrase. Ordinary workers paragraph and surviving cesspool chain-pump description. No source prose or media reproduced.",
+      },
+    },
+    {
+      key: "work-cigar-lector",
+      question:
+        "What did a 'lector' do while workers rolled cigars in early-20th-century Ybor City, Florida?",
+      answer: "Read newspapers, literature and political works aloud to them.",
+      source: {
+        title: "National Park Service — American Latino Theme Study: Media",
+        url: "https://www.nps.gov/articles/latinothemestudymedia.htm",
+        note: "Original question and factual paraphrase. Félix F. Gutiérrez's Ybor City paragraph; workers chose reading material and contributed to the lector's pay. No source prose or media reproduced.",
+      },
+    },
     {
       key: "work-mush-faker",
       question: "What did a Victorian London 'mush-faker' repair and sell?",
@@ -20,55 +123,24 @@ export const workingLives = definePack(
       },
     },
     {
-      key: "work-flying-dustmen",
-      question: "What service did London's freelance 'flying dustmen' offer in 1877?",
-      answer: "Collecting rubbish as they moved from parish to parish.",
-      source: {
-        title: "London Museum — Street life & work in 1877",
-        url: "https://www.londonmuseum.org.uk/collections/london-stories/street-life-work-1877-john-thomson/",
-        note: "Original question and factual paraphrase. The flying dustmen section; 'flying' is not a claim about aircraft. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "work-swag-selling",
-      question: "In Victorian London street trade, what sort of goods did 'swag-selling' mean?",
-      answer: "Fancy trinkets such as jewellery, vases, combs and picture frames.",
-      source: {
-        title: "London Museum — Street life & work in 1877",
-        url: "https://www.londonmuseum.org.uk/collections/london-stories/street-life-work-1877-john-thomson/",
-        note: "Original question and factual paraphrase. A dealer in fancy-ware section; does not assume the goods were stolen. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "work-mobile-darkroom",
+      key: "work-aircraft-listeners",
       question:
-        "Why did some 1870s street photographers take a little wheeled cabin to Clapham Common?",
-      answer: "It was a mobile darkroom for developing photographs on the spot.",
+        "Before radar, why did air-defence crews listen through sets of giant wooden trumpets?",
+      answer: "To locate unseen aircraft by their engine sounds.",
       source: {
-        title: "London Museum — Street life & work in 1877",
-        url: "https://www.londonmuseum.org.uk/collections/london-stories/street-life-work-1877-john-thomson/",
-        note: "Original question and factual paraphrase. Getting a photo at Clapham Common section and photograph description; no photograph reproduced. No source prose or media reproduced.",
+        title: "Imperial War Museums — Locator, Sound No1 Mark 1",
+        url: "https://www.iwm.org.uk/collections/item/object/30028540",
+        note: "Original question and factual paraphrase. Object history note and quoted original caption; no claim that the system was consistently accurate. No source prose or media reproduced.",
       },
     },
     {
-      key: "work-crossing-sweeper",
-      question:
-        "How did a Victorian London crossing-sweeper hope to earn money from a passing pedestrian?",
-      answer: "By sweeping a clean path in front of them and receiving a tip.",
+      key: "work-tazzle-men",
+      question: "Why did Yorkshire's specialist 'tazzle men' grow plants with hooked seed heads?",
+      answer: "The heads were sold for raising the soft nap on woollen cloth.",
       source: {
-        title: "London Museum — Henry Mayhew brings Victorian London to life",
-        url: "https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/",
-        note: "Original question and factual paraphrase. Street-sweeper paragraphs; records work without repeating Mayhew's dismissive judgments. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "work-mudlarks",
-      question: "Where did Victorian London's working 'mudlarks' search for things to sell?",
-      answer: "On the exposed foreshore of the River Thames.",
-      source: {
-        title: "London Museum — Henry Mayhew brings Victorian London to life",
-        url: "https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/",
-        note: "Original question and factual paraphrase. Money for nothing section; historical livelihood, not instructions or permission for present-day searching. No source prose or media reproduced.",
+        title: "Sunny Bank Mills — Teazles",
+        url: "https://www.sunnybankmills.co.uk/our-story/blog/teazles-dan-sykes-museum-archive-assistant/",
+        note: "Original question and factual paraphrase. Dan Sykes's museum and archive account of growers and cloth dressers; raising finished cloth, not carding loose wool. No source prose or media reproduced.",
       },
     },
     {
@@ -92,6 +164,26 @@ export const workingLives = definePack(
       },
     },
     {
+      key: "work-insurance-brigades",
+      question: "What kind of businesses employed their own London fire brigades around 1700?",
+      answer: "Property insurance companies.",
+      source: {
+        title: "London Museum — How the Great Fire of London created insurance",
+        url: "https://www.londonmuseum.org.uk/blog/how-the-great-fire-of-london-created-insurance/",
+        note: "Original question and factual paraphrase. Marked and insured houses section; does not repeat the myth that crews always let other companies' houses burn. No source prose or media reproduced.",
+      },
+    },
+    {
+      key: "work-mudlarks",
+      question: "Where did Victorian London's working 'mudlarks' search for things to sell?",
+      answer: "On the exposed foreshore of the River Thames.",
+      source: {
+        title: "London Museum — Henry Mayhew brings Victorian London to life",
+        url: "https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/",
+        note: "Original question and factual paraphrase. Money for nothing section; historical livelihood, not instructions or permission for present-day searching. No source prose or media reproduced.",
+      },
+    },
+    {
       key: "work-foggara-water-shares",
       question:
         "What do the traditional 'aiguadiers' of Algeria's Touat and Tidikelt communities calculate?",
@@ -104,39 +196,6 @@ export const workingLives = definePack(
       },
     },
     {
-      key: "work-cigar-lector",
-      question:
-        "What did a 'lector' do while workers rolled cigars in early-20th-century Ybor City, Florida?",
-      answer: "Read newspapers, literature and political works aloud to them.",
-      source: {
-        title: "National Park Service — American Latino Theme Study: Media",
-        url: "https://www.nps.gov/articles/latinothemestudymedia.htm",
-        note: "Original question and factual paraphrase. Félix F. Gutiérrez's Ybor City paragraph; workers chose reading material and contributed to the lector's pay. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "work-mine-trapper",
-      question: "What was a 'trapper' responsible for in a 19th-century coal mine?",
-      answer: "Opening and closing ventilation doors as coal wagons passed.",
-      source: {
-        title: "National Coal Mining Museum — Voices in the Coalshed: Career Options",
-        url: "https://www.ncm.org.uk/news/voices-in-the-coalshed-career-options/",
-        note: "Original question and factual paraphrase. Trapper paragraph; the source documents child labour, which is neither romanticized nor treated as acceptable. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "work-gong-farmer",
-      question:
-        "What did a Tudor palace's 'gong farmers' look after rather than agricultural crops?",
-      answer: "Cleaning the toilets and removing their waste.",
-      source: {
-        title:
-          "Historic Royal Palaces — Tudor world brought to life in new display at Hampton Court Palace",
-        url: "https://www.hrp.org.uk/media-and-press/press-releases-2024/tudor-world-brought-to-life-in-new-display-at-hampton-court-palace/",
-        note: "Original question and factual paraphrase. Ordinary workers paragraph and surviving cesspool chain-pump description. No source prose or media reproduced.",
-      },
-    },
-    {
       key: "work-mary-rose-diver",
       question:
         "What was the West African free-diver Jacques Francis helping to recover from the sunken Mary Rose?",
@@ -146,58 +205,6 @@ export const workingLives = definePack(
           "Historic Royal Palaces — Tudor world brought to life in new display at Hampton Court Palace",
         url: "https://www.hrp.org.uk/media-and-press/press-releases-2024/tudor-world-brought-to-life-in-new-display-at-hampton-court-palace/",
         note: "Original question and factual paraphrase. Paragraph identifying Francis and the salvage expedition; no invented biography or diving equipment. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "work-human-computers",
-      question: "What job did a person hired as a 'computer' at Langley in the 1930s perform?",
-      answer: "Calculating and plotting research data by hand.",
-      source: {
-        title: "NASA History — When the Computer Wore a Skirt: Langley's Computers, 1935–1970",
-        url: "https://www.nasa.gov/history/langleys-computers-1935-1970/",
-        note: "Original question and factual paraphrase. Sarah McLennan and Mary Gainer's opening history; the term is a historical job title, not an electronic machine. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "work-powder-monkeys",
-      question:
-        "What did the young sailors historically nicknamed 'powder monkeys' carry around a ship?",
-      answer: "Gunpowder for its guns.",
-      source: {
-        title: "Royal Museums Greenwich — Pirate Objects: Gunpowder Tin",
-        url: "https://www.rmg.co.uk/sites/default/files/import/media/pdf/SFTS_Objects24_GunpowderTin.pdf",
-        note: "Original question and factual paraphrase. Museum object sheet for Great Yarmouth Museums tin GRYEH:1966.12; a historical human role, not trained animals. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "work-tazzle-men",
-      question: "Why did Yorkshire's specialist 'tazzle men' grow plants with hooked seed heads?",
-      answer: "The heads were sold for raising the soft nap on woollen cloth.",
-      source: {
-        title: "Sunny Bank Mills — Teazles",
-        url: "https://www.sunnybankmills.co.uk/our-story/blog/teazles-dan-sykes-museum-archive-assistant/",
-        note: "Original question and factual paraphrase. Dan Sykes's museum and archive account of growers and cloth dressers; raising finished cloth, not carding loose wool. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "work-aircraft-listeners",
-      question:
-        "Before radar, why did air-defence crews listen through sets of giant wooden trumpets?",
-      answer: "To locate unseen aircraft by their engine sounds.",
-      source: {
-        title: "Imperial War Museums — Locator, Sound No1 Mark 1",
-        url: "https://www.iwm.org.uk/collections/item/object/30028540",
-        note: "Original question and factual paraphrase. Object history note and quoted original caption; no claim that the system was consistently accurate. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "work-insurance-brigades",
-      question: "What kind of businesses employed their own London fire brigades around 1700?",
-      answer: "Property insurance companies.",
-      source: {
-        title: "London Museum — How the Great Fire of London created insurance",
-        url: "https://www.londonmuseum.org.uk/blog/how-the-great-fire-of-london-created-insurance/",
-        note: "Original question and factual paraphrase. Marked and insured houses section; does not repeat the myth that crews always let other companies' houses burn. No source prose or media reproduced.",
       },
     },
   ],
