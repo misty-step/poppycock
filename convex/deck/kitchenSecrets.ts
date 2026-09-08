@@ -32,14 +32,15 @@ export const kitchenSecrets = definePack(
       },
     },
     {
-      key: "food-charles-ii-ambergris",
+      key: "food-chicha-saliva-chew",
       question:
-        "What costly perfume ingredient was King Charles II famously fond of having melted over his breakfast eggs?",
-      answer: "Ambergris, a waxy secretion produced in the guts of sperm whales.",
+        "In traditional Amazonian and Andean brewing of chicha, how is fermentation started?",
+      answer:
+        "Brewers chew the starchy mash and spit it into the pot so saliva enzymes break down the sugars.",
       source: {
-        title: "Smithsonian Ocean — The Mystery of Ambergris",
-        url: "https://ocean.si.edu/ocean-life/marine-mammals/mystery-ambergris",
-        note: "Original question and factual summary. Records Charles II of England frequently seasoning his breakfast eggs with ambergris, the valuable sperm-whale digestive byproduct.",
+        title: "National Geographic — We Are What We Eat: Foraging in the Amazon Rainforest",
+        url: "https://www.nationalgeographic.com/photography/article/we-are-what-we-eat-foraging-in-the-amazon-rainforest",
+        note: "Original question and factual summary. Traditional brewers chew manioc or corn and spit it back into the bowl; salivary amylase initiates fermentation.",
       },
     },
     {

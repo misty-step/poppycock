@@ -43,15 +43,15 @@ export const remarkablePlaces = definePack(
       },
     },
     {
-      key: "place-darvaza-door-to-hell",
+      key: "place-lake-maracaibo-lightning",
       question:
-        "In 1971, why did Soviet geologists intentionally set fire to the collapsed Darvaza crater in Turkmenistan's desert?",
+        "Why does Venezuela's Lake Maracaibo hold the official record as Earth's 'lightning capital'?",
       answer:
-        "They expected escaping methane gas to burn off in a few weeks, but it has burned for over fifty years.",
+        "It averages 297 nocturnal thunderstorms a year, producing tens of thousands of lightning flashes a night.",
       source: {
-        title: "BBC News — Turkmenistan plans to close its 'Gateway to Hell'",
-        url: "https://www.bbc.com/news/world-asia-59920221",
-        note: "Geologists ignited the 230-foot crater to prevent toxic gas from poisoning nearby villages, expecting it to burn out quickly.",
+        title: "NASA — Earth's New Lightning Capital Revealed",
+        url: "https://www.nasa.gov/missions/trmm/earths-new-lightning-capital-revealed/",
+        note: "Original question and factual summary. Satellite LIS data recorded an average rate of 233 flashes/km²/year, fueled by mountain breezes generating 297 nightly thunderstorms annually.",
       },
     },
     {
