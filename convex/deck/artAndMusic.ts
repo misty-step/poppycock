@@ -149,11 +149,12 @@ export const artAndMusic = definePack(
       key: "art-semple-pinkest-pink",
       question:
         "When artist Anish Kapoor bought exclusive artistic rights to Vantablack, the blackest black, how did rival artist Stuart Semple retaliate?",
-      answer: "He created 'The Pinkest Pink' and legally banned Anish Kapoor from buying it.",
+      answer:
+        "He created 'The Pinkest Pink' and sold it to anyone in the world except Anish Kapoor.",
       source: {
         title: "BBC News — 'Whitest ever' paint reflects 98% of sunlight",
         url: "https://www.bbc.co.uk/news/science-environment-56749105",
-        note: "Original question and factual summary. Semple released his hyper-pigmented 'Pinkest Pink' with a legal disclaimer requiring buyers to declare under contract that they are not Anish Kapoor.",
+        note: "Original question and factual summary. In protest of Kapoor's exclusive Vantablack rights, Semple made his ultra-fluorescent 'Pinkest Pink' available to everyone except Kapoor.",
       },
     },
     {

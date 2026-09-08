@@ -253,10 +253,10 @@ Eighteen cards covering extraordinary historical trades, specialist artisanal sk
 | `work-tazzle-men`           | [Sunny Bank Mills — Teazles](https://www.sunnybankmills.co.uk/our-story/blog/teazles-dan-sykes-museum-archive-assistant/)                                                                      |
 | `work-cooper-sound`         | [Colonial Williamsburg — Making Circles](https://research.colonialwilliamsburg.org/Foundation/journal/Autumn03/cooper.cfm)                                                                     |
 | `work-wigmaker-baking`      | [Colonial Williamsburg — Lies My Docent Told Me](https://research.colonialwilliamsburg.org/Foundation/journal/Autumn10/myths.cfm)                                                              |
-| `work-insurance-brigades`   | [London Museum — How the Great Fire of London created insurance](https://www.londonmuseum.org.uk/blog/how-the-great-fire-of-london-created-insurance/)                                         |
-| `work-mudlarks`             | [London Museum — Henry Mayhew brings Victorian London to life](https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/)                                                        |
-| `work-foggara-water-shares` | [UNESCO Multimedia Archives — Les savoirs et savoir-faire des mesureurs d'eau des foggaras ou aiguadiers du Touat-Tidikelt](https://www.unesco.org/archives/multimedia/document-4787)                                        |
-| `work-mary-rose-diver`      | [Historic Royal Palaces — Tudor world brought to life in new display at Hampton Court Palace](https://www.hrp.org.uk/media-and-press/press-releases-2024/tudor-world-brought-to-life-in-new-display-at-hampton-court-palace/) |
+| `work-sin-eater`           | [BBC News — Last 'sin-eater' celebrated with church service](https://www.bbc.co.uk/news/uk-england-shropshire-11360659)                                                                      |
+| `work-saltpetre-man`       | [House of Commons Journal Volume 2: 29 January 1641 — British History Online](https://www.british-history.ac.uk/commons-jrnl/vol2/pp74-75)                                                 |
+| `work-loblolly-boy`        | [USNI News — A Brief List of Old, Obscure and Obsolete U.S. Navy Jobs](https://news.usni.org/2014/12/03/brief-list-old-obscure-obsolete-u-s-navy-jobs)                                      |
+| `work-groom-of-the-stool`  | [Historic Royal Palaces — Artefacts: Groom of the Stool](https://www.hrp.org.uk/media/1333/teach100_applyinghistoryhcp_artefacts.pdf)                                                       |
 
 #### Art & music — 18 cards
 

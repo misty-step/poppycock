@@ -164,47 +164,48 @@ export const workingLives = definePack(
       },
     },
     {
-      key: "work-insurance-brigades",
-      question: "What kind of businesses employed their own London fire brigades around 1700?",
-      answer: "Property insurance companies.",
-      source: {
-        title: "London Museum — How the Great Fire of London created insurance",
-        url: "https://www.londonmuseum.org.uk/blog/how-the-great-fire-of-london-created-insurance/",
-        note: "Original question and factual paraphrase. Marked and insured houses section; does not repeat the myth that crews always let other companies' houses burn. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "work-mudlarks",
-      question: "Where did Victorian London's working 'mudlarks' search for things to sell?",
-      answer: "On the exposed foreshore of the River Thames.",
-      source: {
-        title: "London Museum — Henry Mayhew brings Victorian London to life",
-        url: "https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/",
-        note: "Original question and factual paraphrase. Money for nothing section; historical livelihood, not instructions or permission for present-day searching. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "work-foggara-water-shares",
+      key: "work-sin-eater",
       question:
-        "What do the traditional 'aiguadiers' of Algeria's Touat and Tidikelt communities calculate?",
-      answer: "Each user's share of water from the foggara irrigation system.",
+        "In 17th- to 19th-century Welsh and English border villages, what did a 'sin-eater' do at a funeral?",
+      answer: "Ate bread and drank ale over the corpse to take on the deceased person's sins.",
       source: {
-        title:
-          "UNESCO Multimedia Archives — Les savoirs et savoir-faire des mesureurs d'eau des foggaras ou aiguadiers du Touat-Tidikelt",
-        url: "https://www.unesco.org/archives/multimedia/document-4787",
-        note: "Original question and factual paraphrase. Original English paraphrase of the French catalogue's calculation of water shares; a living skilled role, not an extinct job. No source prose or media reproduced.",
+        title: "BBC News — Last 'sin-eater' celebrated with church service",
+        url: "https://www.bbc.co.uk/news/uk-england-shropshire-11360659",
+        note: "Original question and factual summary. Village sin-eaters consumed food and drink placed upon or passed across the corpse to spiritually absorb their unconfessed sins.",
       },
     },
     {
-      key: "work-mary-rose-diver",
+      key: "work-saltpetre-man",
       question:
-        "What was the West African free-diver Jacques Francis helping to recover from the sunken Mary Rose?",
-      answer: "The ship's guns.",
+        "In 16th- and 17th-century England, what did royal 'saltpetre men' have the legal authority to dig up from inside private homes and stables?",
+      answer: "Urine-soaked earth and cellar floors to extract potassium nitrate for gunpowder.",
       source: {
-        title:
-          "Historic Royal Palaces — Tudor world brought to life in new display at Hampton Court Palace",
-        url: "https://www.hrp.org.uk/media-and-press/press-releases-2024/tudor-world-brought-to-life-in-new-display-at-hampton-court-palace/",
-        note: "Original question and factual paraphrase. Paragraph identifying Francis and the salvage expedition; no invented biography or diving equipment. No source prose or media reproduced.",
+        title: "House of Commons Journal Volume 2: 29 January 1641 — British History Online",
+        url: "https://www.british-history.ac.uk/commons-jrnl/vol2/pp74-75",
+        note: "Original question and factual summary. Parliamentary records document royal saltpetre men exercising crown commissions to dig up dirt floors in private houses and stables to extract nitrates.",
+      },
+    },
+    {
+      key: "work-loblolly-boy",
+      question:
+        "On 18th-century warships, what grim tasks were assigned to the surgeon's assistant known as the 'loblolly boy'?",
+      answer:
+        "Feeding patients porridge, gathering amputated limbs, and spreading sand to absorb blood.",
+      source: {
+        title: "USNI News — A Brief List of Old, Obscure and Obsolete U.S. Navy Jobs",
+        url: "https://news.usni.org/2014/12/03/brief-list-old-obscure-obsolete-u-s-navy-jobs",
+        note: "Original question and factual summary. Naval surgeon attendants fed sick sailors 'loblolly' porridge and assisted during battle surgery by holding limbs and clearing blood.",
+      },
+    },
+    {
+      key: "work-groom-of-the-stool",
+      question:
+        "In Tudor and Stuart England, why was the 'Groom of the Stool' one of the most powerful and coveted court offices?",
+      answer: "He assisted the King with his private toilet and intimate bodily hygiene.",
+      source: {
+        title: "Historic Royal Palaces — Artefacts: Groom of the Stool",
+        url: "https://www.hrp.org.uk/media/1333/teach100_applyinghistoryhcp_artefacts.pdf",
+        note: "Original question and factual summary. Responsible for attending the monarch's close-stool and personal hygiene, granting intimate daily access that made the office holder an influential royal confidant.",
       },
     },
   ],
