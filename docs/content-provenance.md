@@ -204,8 +204,8 @@ Eighteen cards covering extraordinary community celebrations, bizarre traditiona
 | `custom-bridge-straw`      | [UNESCO Multimedia Archives — Knowledge, Skills and Rituals Related to the Annual Renewal of the Q’eswachaka Bridge](https://www.unesco.org/archives/multimedia/document-3540)          |
 | `custom-shrimp-horses`     | [UNESCO Multimedia Archives — Shrimp Fishing on Horseback in Oostduinkerke](https://www.unesco.org/archives/multimedia/document-3534)                                                   |
 | `custom-namur-jousting`    | [UNESCO Multimedia Archives — Namur Stilt Jousting](https://www.unesco.org/archives/multimedia/document-5780)                                                                           |
-| `custom-sand-continuous`   | [UNESCO Multimedia Archives — Vanuatu Sand-drawings](https://www.unesco.org/archives/multimedia/document-3757)                                                                          |
-| `custom-wine-horse-cloaks` | [UNESCO Multimedia Archives — Wine Horses](https://www.unesco.org/archives/multimedia/document-5351-eng-2)                                                                              |
+| `custom-takanakuy-fistfights` | [BBC News — Peru stages Christmas Day fighting festival](https://www.bbc.com/news/av/world-latin-america-12084478)                                                                        |
+| `custom-burial-of-the-sardine`| [Spain.info — La Bañeza Carnival: Burial of the Sardine](https://www.spain.info/en/calendar/carnival-baneza/)                                                                            |
 | `custom-wrestling-kispet`  | [UNESCO Multimedia Archives — Kirkpinar oil Wrestling Festival](https://www.unesco.org/archives/multimedia/document-1686)                                                               |
 | `custom-camel-coaxing`     | [UNESCO Multimedia Archives — The Mongolian Traditional Coaxins Rituals for Baby Animals: The Special Case of the Baby Camel](https://www.unesco.org/archives/multimedia/document-4021) |
 #### Remarkable places — 18 cards

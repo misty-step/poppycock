@@ -34,13 +34,13 @@ export const kitchenSecrets = definePack(
     {
       key: "food-chicha-saliva-chew",
       question:
-        "In traditional Amazonian and Andean brewing of chicha, how is fermentation started?",
+        "How do Tsimane brewers in the Bolivian Amazon kick-start the fermentation of manioc into chicha?",
       answer:
-        "Brewers chew the starchy mash and spit it into the pot so saliva enzymes break down the sugars.",
+        "They chew pieces of manioc and spit them back into the bowl so saliva starts fermentation.",
       source: {
         title: "National Geographic — We Are What We Eat: Foraging in the Amazon Rainforest",
         url: "https://www.nationalgeographic.com/photography/article/we-are-what-we-eat-foraging-in-the-amazon-rainforest",
-        note: "Original question and factual summary. Traditional brewers chew manioc or corn and spit it back into the bowl; salivary amylase initiates fermentation.",
+        note: "Original question and factual summary. Tsimane brewers chew pieces of boiled manioc and spit them back into the bowl, using salivary enzymes to initiate fermentation.",
       },
     },
     {

@@ -12,8 +12,8 @@ export const livingTraditions = definePack(
     {
       key: "custom-cheese-rolling",
       question:
-        "What do competitors chase while tumbling head-over-heels down Cooper's Hill in Gloucestershire, England?",
-      answer: "A round wheel of Double Gloucester cheese.",
+        "At the annual extreme sports race down Cooper's Hill in Gloucestershire, England, what prize does the winner receive after tumbling 200 yards down the near-vertical cliff?",
+      answer: "An eight-pound wheel of Double Gloucester cheese.",
       source: {
         title: "BBC News — Cooper's Hill cheese rolling: origins, myths and history",
         url: "https://www.bbc.com/news/articles/cz024gnm9z4o",
@@ -163,35 +163,36 @@ export const livingTraditions = definePack(
       },
     },
     {
-      key: "custom-sand-continuous",
-      question: "What technique joins the geometric patterns of traditional Vanuatu sand drawings?",
-      answer: "Tracing a single continuous line with one finger.",
+      key: "custom-takanakuy-fistfights",
+      question:
+        "On Christmas Day in the Chumbivilcas Province of Peru, how do villagers traditionally settle their year-long grudges?",
+      answer: "By fighting each other in public bare-knuckle fistfights overseen by referees.",
       source: {
-        title: "UNESCO Multimedia Archives — Vanuatu Sand-drawings",
-        url: "https://www.unesco.org/archives/multimedia/document-3757",
-        note: "Original question and factual paraphrase. Indigenous geometric art and communication system executed on the ground using one finger in an unbroken flowing line.",
+        title: "BBC News — Peru stages Christmas Day fighting festival",
+        url: "https://www.bbc.com/news/av/world-latin-america-12084478",
+        note: "Takanakuy is an Andean celebration where community members settle interpersonal disputes in regulated bare-knuckle bouts before dancing together for the New Year.",
       },
     },
     {
-      key: "custom-wine-horse-cloaks",
+      key: "custom-burial-of-the-sardine",
       question:
-        "At Caravaca de la Cruz's Wine Horses celebration, what does 'enjaezamiento' involve?",
-      answer: "Dressing horses in cloaks embroidered with silk and gold thread.",
+        "On Ash Wednesday across towns in Spain, what bizarre mock-funeral procession marks the end of Carnival?",
+      answer: "Mourners in black funeral dress carry and 'bury' a giant sardine in a coffin.",
       source: {
-        title: "UNESCO Multimedia Archives — Wine Horses",
-        url: "https://www.unesco.org/archives/multimedia/document-5351-eng-2",
-        note: "Original question and factual paraphrase. Horses are cloaked in elaborate hand-embroidered silk and gold textiles before racing up the steep hill to the castle.",
+        title: "Spain.info — La Bañeza Carnival: Burial of the Sardine",
+        url: "https://www.spain.info/en/calendar/carnival-baneza/",
+        note: "El Entierro de la Sardina is a satirical Spanish ritual where mourners weeping in black carry a papier-mâché sardine in a coffin to be buried or burned on the beach.",
       },
     },
     {
       key: "custom-wrestling-kispet",
       question:
-        "What are the 'kispet' trousers worn by wrestlers at Kırkpınar traditionally made from?",
-      answer: "Thick water-buffalo or cow leather.",
+        "In Turkey's 650-year-old Kırkpınar wrestling tournament, what must competitors douse themselves with before grappling?",
+      answer: "Gallons of olive oil.",
       source: {
         title: "UNESCO Multimedia Archives — Kirkpinar oil Wrestling Festival",
         url: "https://www.unesco.org/archives/multimedia/document-1686",
-        note: "Original question and factual paraphrase. Olive-oil-soaked wrestlers wear heavy hand-stitched leather pants weighing up to 13 kg that provide only limited grip.",
+        note: "Wrestlers are doused in olive oil, wearing heavy leather trousers (kispet) that provide the only viable grip during matches.",
       },
     },
     {
