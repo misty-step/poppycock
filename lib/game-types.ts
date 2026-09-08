@@ -35,10 +35,3 @@ export interface GameView {
   truth?: string;
   canAdvance: boolean;
 }
-export interface SeedCard {
-  key: string;
-  category: string;
-  question: string;
-  answer: string;
-  source: { title: string; url: string; note: string };
-}

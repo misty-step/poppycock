@@ -78,7 +78,7 @@ An existing database needs a two-stage cutover; deploying the final schema direc
 
 1. Use a release worktree at [`4d53b0d`](https://github.com/misty-step/poppycock/commit/4d53b0d), the migration-stage revision. Explicitly target the intended Convex deployment with its authorized configuration; do not use anonymous-local configuration for production.
 2. Deploy that revision’s Convex backend and run its internal **`untimedMigration:run`** action to completion. It pages through old scheduled turn jobs and games, cancels pending turn deadlines, removes stored clocks, and opts still-active matches out of the total cap. It does not reset rooms, submissions, votes, or scores, or reopen terminal matches. At this revision, `pnpm dev` and `pnpm bootstrap` perform the migration automatically for local databases only.
-3. Deploy the current Convex backend, run **`seed:run`** to upsert the 216-card deck, and deploy the matching web build. Ask connected players to reload after the web cutover. Use the migration-stage revision, not the old timed release, if rollback is needed.
+3. Deploy the current Convex backend, run **`seed:run`** to upsert the pack catalog, and deploy the matching web build. Ask connected players to reload after the web cutover. Use the migration-stage revision, not the old timed release, if rollback is needed.
 
 Fresh databases need no transitional deployment. Migration code and the obsolete schema field deliberately do not remain in the current source. The production deployment completed this migration on 2026-09-08; the earlier local refinement records remain historical.
 
@@ -90,13 +90,13 @@ The room code is an invitation, not a password. People with it may join as spect
 
 ## Content and documentation ownership
 
-The **216-card deck** contains 27 cards each in Odd words, Curious objects, Wild nature, and Space oddities, plus 18 each in **Kitchen secrets, Bright ideas, Living traditions, Remarkable places, Working lives, and Art & music**: thirty-six complete games before a room exhausts the pool. The longest answer is 90 characters, comfortably below the 180-character bluff limit. The original 108 keys and cards are preserved. Cards use original wording grounded in retained source references, not commercial Balderdash cards. Sources are shown at reveal. See [`docs/content-provenance.md`](docs/content-provenance.md) for the deck and provenance policy.
+The **270-card catalog** is organized as **13 packs**. Ten house packs keep the original 216 cards (27 each in Odd words, Curious objects, Wild nature, and Space oddities; 18 each in Kitchen secrets, Bright ideas, Living traditions, Remarkable places, Working lives, and Art & music). Three expansion packs add 18 cards each: **The sea**, **Lost gear**, and **Rarer words**. A six-round game prefers a different category each round. The longest house answer is 90 characters, comfortably below the 180-character bluff limit. The original 216 keys and cards are preserved. Cards use original wording grounded in retained source references, not commercial Balderdash cards. Sources are shown at reveal. See [`docs/content-provenance.md`](docs/content-provenance.md).
 
-Gameplay has no runtime LLM or external content-fetch dependency: the seeded database is the deck. Local reset is repeatable and seeding is idempotent by stable card key.
+Gameplay has no runtime LLM or external content-fetch dependency: the seeded database is the deck. Packs live as separate Convex modules so the catalog can grow without loading every card into a draw. Local reset is repeatable and seeding is idempotent by stable card key.
 
 This README owns the current rules and contributor orientation;
 `docs/content-provenance.md` owns collection-level editorial policy, alongside
-the card-level source index in `convex/content.ts`. Linear owns current work and
+the card-level notes on each pack in `convex/deck/`. Linear owns current work and
 prioritization, not the rulebook or deck. Current requests authorize changes;
 historical issues and receipts are context, not an automatic intake queue.
 

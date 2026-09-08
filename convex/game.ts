@@ -5,13 +5,14 @@ import type { Doc, Id } from "./_generated/dataModel";
 import { mutation, query } from "./_generated/server";
 import type { MutationCtx, QueryCtx } from "./_generated/server";
 import {
+  CATEGORY_DRAW_PROBE,
   cleanBluff,
   fail,
-  MAX_CARDS,
   MAX_PLAYERS,
   MIN_PLAYERS,
   normalizeAnswer,
   requireRound,
+  SEEN_RECENT,
   shuffled,
   TOTAL_ROUNDS,
 } from "./rules";
@@ -125,34 +126,88 @@ async function everyoneDone(ctx: ReadCtx, game: Game): Promise<boolean> {
   return false;
 }
 
+async function activeCategories(ctx: MutationCtx): Promise<string[]> {
+  const packs = await ctx.db
+    .query("packs")
+    .withIndex("by_active_sort", (q) => q.eq("active", true))
+    .take(200);
+  const names: string[] = [];
+  const seen = new Set<string>();
+  for (const pack of packs) {
+    if (seen.has(pack.category)) continue;
+    seen.add(pack.category);
+    names.push(pack.category);
+  }
+  return names;
+}
+
+async function pickInCategory(
+  ctx: MutationCtx,
+  category: string,
+  seen: Set<Id<"cards">>,
+  lastCardId: Id<"cards"> | undefined,
+) {
+  const pivot = Math.floor(Math.random() * 0x100000000);
+  const ahead = await ctx.db
+    .query("cards")
+    .withIndex("by_active_category_salt", (q) =>
+      q.eq("active", true).eq("category", category).gte("drawSalt", pivot),
+    )
+    .take(CATEGORY_DRAW_PROBE);
+  const wrap = await ctx.db
+    .query("cards")
+    .withIndex("by_active_category_salt", (q) =>
+      q.eq("active", true).eq("category", category).lt("drawSalt", pivot),
+    )
+    .take(CATEGORY_DRAW_PROBE);
+  const open = [...ahead, ...wrap].filter((card) => !seen.has(card._id) && card._id !== lastCardId);
+  if (open.length === 0) return null;
+  return open[Math.floor(Math.random() * open.length)]!;
+}
+
 async function drawRound(
   ctx: MutationCtx,
   gameId: Id<"games">,
   roomId: Id<"rooms">,
   round: number,
 ): Promise<void> {
-  const [pool, deck] = await Promise.all([
-    ctx.db
-      .query("cards")
-      .withIndex("by_active_key", (q) => q.eq("active", true))
-      .take(MAX_CARDS + 1),
+  const [deck, prior, categories] = await Promise.all([
     ctx.db
       .query("roomDecks")
       .withIndex("by_room", (q) => q.eq("roomId", roomId))
       .unique(),
+    ctx.db
+      .query("rounds")
+      .withIndex("by_game_round", (q) => q.eq("gameId", gameId))
+      .take(TOTAL_ROUNDS),
+    activeCategories(ctx),
   ]);
-  if (pool.length < TOTAL_ROUNDS) fail("CONTENT_NOT_READY");
-  if (pool.length > MAX_CARDS) fail("CONTENT_POOL_TOO_LARGE");
+  if (categories.length === 0) fail("CONTENT_NOT_READY");
   const seen = new Set(deck?.seenCardIds ?? []);
-  let available = pool.filter((card) => !seen.has(card._id));
-  if (available.length === 0) {
-    seen.clear();
-    available = pool.filter((card) => card._id !== deck?.lastCardId);
+  const used = new Set(prior.map((entry) => entry.category));
+  const unused = shuffled(categories.filter((name) => !used.has(name)));
+  const reused = shuffled(categories.filter((name) => used.has(name)));
+  const order = unused.length > 0 ? [...unused, ...reused] : shuffled([...categories]);
+  let card = null;
+  let wrapped = false;
+  for (const category of order) {
+    card = await pickInCategory(ctx, category, seen, deck?.lastCardId);
+    if (card) break;
   }
-  const card = available[Math.floor(Math.random() * available.length)];
+  if (!card) {
+    wrapped = true;
+    seen.clear();
+    for (const category of shuffled([...categories])) {
+      card = await pickInCategory(ctx, category, seen, deck?.lastCardId);
+      if (card) break;
+    }
+  }
   if (!card) fail("CONTENT_NOT_READY");
-  seen.add(card._id);
-  const state = { roomId, seenCardIds: [...seen], lastCardId: card._id };
+  const seenCardIds = wrapped
+    ? [card._id]
+    : [...(deck?.seenCardIds ?? []).filter((id) => id !== card._id), card._id];
+  while (seenCardIds.length > SEEN_RECENT) seenCardIds.shift();
+  const state = { roomId, seenCardIds, lastCardId: card._id };
   if (deck) await ctx.db.replace(deck._id, state);
   else await ctx.db.insert("roomDecks", state);
   // Copy the chosen card, not its future pool: reseeding cannot alter a live

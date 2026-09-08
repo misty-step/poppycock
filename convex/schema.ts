@@ -9,17 +9,30 @@ export default defineSchema({
     playerId: v.id("players"),
     avatarId,
   }).index("by_player", ["playerId"]),
+  packs: defineTable({
+    key: v.string(),
+    title: v.string(),
+    blurb: v.string(),
+    category: v.string(),
+    sort: v.number(),
+    active: v.boolean(),
+  })
+    .index("by_key", ["key"])
+    .index("by_active_sort", ["active", "sort"]),
   cards: defineTable({
     key: v.string(),
+    packKey: v.optional(v.string()),
     category: v.string(),
     question: v.string(),
     answer: v.string(),
     normalizedAnswer: v.string(),
     source,
     active: v.boolean(),
+    drawSalt: v.optional(v.number()),
   })
     .index("by_key", ["key"])
-    .index("by_active_key", ["active", "key"]),
+    .index("by_active_key", ["active", "key"])
+    .index("by_active_category_salt", ["active", "category", "drawSalt"]),
   roomDecks: defineTable({
     roomId: v.id("rooms"),
     seenCardIds: v.array(v.id("cards")),

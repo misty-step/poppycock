@@ -1,26 +1,27 @@
 # Poppycock content provenance
 
-## Collection
+The catalog is a **fixed, sourced, AI-assisted editorial deck**. There is no runtime generation. `convex/deck/` holds one module per pack; `convex/content.ts` re-exports `seedPacks` and `seedCards`. Each card has a stable key, pack, category, original question, concise answer, and retained source title, URL, and editorial note.
 
-`convex/content.ts` exports **216 cards** as `seedCards: SeedCard[]`: the preserved 108-card collection plus 108 newly sourced cards in six additional categories. Each card has a stable key, category, original question, concise answer, and retained source title, URL, and explanatory note.
+| Pack / category     |   Cards | Scope                                                                            |
+| ------------------- | ------: | -------------------------------------------------------------------------------- |
+| Odd words           |      27 | Uncommon vocabulary and explicitly historical senses                             |
+| Curious objects     |      27 | Tools, household vessels, printing equipment, and bathing or ceremonial objects  |
+| Wild nature         |      27 | Marine adaptations, animal behavior, biological materials, and ecosystems        |
+| Space oddities      |      27 | Spaceflight incidents, engineering, astronomical naming, and planetary phenomena |
+| Kitchen secrets     |      18 | Ingredient anatomy, food transformations, fermentation and flavour               |
+| Bright ideas        |      18 | Inventions' unexpected origins, practical problems and mechanisms                |
+| Living traditions   |      18 | Community practices, communication, celebration and shared skills                |
+| Remarkable places   |      18 | Unusual architecture, landscapes, archaeology and water engineering              |
+| Working lives       |      18 | Historical trades, specialist labour and living traditional work                 |
+| Art & music         |      18 | Musical mechanisms, visual-art processes, pigments and materials                 |
+| The sea             |      18 | Winds, waves, hidden cataracts, and the names sailors gave them                  |
+| Lost gear           |      18 | Clothes, boats, and tools whose names outlived everyday use                      |
+| Rarer words         |      18 | More historical vocabulary whose everyday job has slipped out of sight           |
+| **Total**           | **270** | Forty-five six-round games' worth of distinct cards; deal mixes categories       |
 
-| Category          |   Cards | Scope                                                                            |
-| ----------------- | ------: | -------------------------------------------------------------------------------- |
-| Odd words         |      27 | Uncommon vocabulary and explicitly historical senses                             |
-| Curious objects   |      27 | Tools, household vessels, printing equipment, and bathing or ceremonial objects  |
-| Wild nature       |      27 | Marine adaptations, animal behavior, biological materials, and ecosystems        |
-| Space oddities    |      27 | Spaceflight incidents, engineering, astronomical naming, and planetary phenomena |
-| Kitchen secrets   |      18 | Ingredient anatomy, food transformations, fermentation and flavour               |
-| Bright ideas      |      18 | Inventions' unexpected origins, practical problems and mechanisms                |
-| Living traditions |      18 | Community practices, communication, celebration and shared skills                |
-| Remarkable places |      18 | Unusual architecture, landscapes, archaeology and water engineering              |
-| Working lives     |      18 | Historical trades, specialist labour and living traditional work                 |
-| Art & music       |      18 | Musical mechanisms, visual-art processes, pigments and materials                 |
-| **Total**         | **216** | Thirty-six six-round games' worth of distinct cards in the pool                  |
+Answers are written below the game's 180-character bluff limit. The collection mixes definitions, purposes, mechanisms, and historical explanations rather than requiring exact dates or numerical estimates. Category counts describe this seed collection, not a promise about the game's random draw order. A live match prefers a category not yet used in that game.
 
-Answers are written below the game's 180-character bluff limit. The collection mixes definitions, purposes, mechanisms, and historical explanations rather than requiring exact dates or numerical estimates. Category counts describe this seed collection, not a promise about the game's random draw order.
-
-The answer-bearing module belongs on the Convex side. Client code must not import this collection. Source titles and URLs can themselves give away an answer, so they belong with the reveal, not the writing or voting prompt.
+The answer-bearing modules belong on the Convex side. Client code must not import this collection. Source titles and URLs can themselves give away an answer, so they belong with the reveal, not the writing or voting prompt.
 
 ## Research and editorial method
 
@@ -32,9 +33,9 @@ Sources were retrieved and read on **2026-09-06–07**. Search results were used
 4. Preserve qualifiers that affect truth: **some** sea cucumbers eject organs; **some locations** on Mercury have a reversing sunrise; only **some** Enceladus ejecta enters Saturn's ring.
 5. Supply context for polysemous words: the printing sense of _tympan_, the philosophical sense of _quiddity_, and the rope-splicing sense of _fid_, for example.
 6. Keep beliefs separate from science. _Tarantism_ records a historical spider-bite explanation; it does not endorse that explanation. Historical medical words and instruments are descriptions, not treatment recommendations.
-7. Retain the title, retrievable URL, and an editorial/source-location note on every card. `convex/content.ts` is the authoritative card-level provenance index; this document records the collection-level method and reuse basis.
+7. Retain the title, retrievable URL, and an editorial/source-location note on every card. The pack modules in `convex/deck/` are the authoritative card-level provenance index; this document records the collection-level method and reuse basis.
 
-Questions and factual answers were drafted for Poppycock with AI assistance. They are Poppycock game text, not statements authored, reviewed, approved, or warranted by the cited institutions or publishers. No commercial Balderdash cards, commercial trivia decks, or collections of player bluffs were used. No illustrations, photographs, recordings, videos, website layouts, or agency logos are included in the card data.
+Questions and factual answers were drafted for Poppycock with AI assistance from retrieved source pages. They are Poppycock game text, not statements authored, reviewed, approved, or warranted by the cited institutions or publishers. No commercial Balderdash cards, commercial trivia decks, or collections of player bluffs were used. No illustrations, photographs, recordings, videos, website layouts, or agency logos are included in the card data.
 
 ## Sources and reuse basis
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Split the sourced deck into packs and made seeding and draw scale past a single in-memory pool. A match prefers a fresh category each round; a room only remembers recent cards.
+- Added three expansion packs — The sea, Lost gear, and Rarer words — 54 sourced cards, bringing the catalog to 270. The original 216 keys are unchanged. Still a fixed, sourced, AI-assisted editorial deck; no runtime generation.
+
 ## 1.2.0 — 2026-09-08
 
 - Rebuilt the visual design as a party game rather than a calm tabletop: a lilac room, grape ink and actions, marigold entrance ticket, coral invitation board, mint question bubbles, speech-bubble corners, and flat printed shadows.

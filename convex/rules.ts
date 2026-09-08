@@ -3,7 +3,10 @@ import { ConvexError } from "convex/values";
 export const TOTAL_ROUNDS = 6;
 export const MIN_PLAYERS = 3;
 export const MAX_PLAYERS = 12;
-export const MAX_CARDS = 1000;
+export const MAX_SEED_CARDS = 20000;
+export const SEED_BATCH = 40;
+export const SEEN_RECENT = 180;
+export const CATEGORY_DRAW_PROBE = 12;
 export const MAX_BLUFF_LENGTH = 180;
 
 export function fail(code: string): never {

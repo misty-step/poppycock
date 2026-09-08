@@ -15,7 +15,7 @@ type Client = Omit<TestContext, "withIdentity" | "registerComponent">;
 
 async function fixture(count = 3) {
   const t = convexTest(schema, modules);
-  await t.mutation(internal.seed.run, {});
+  await t.action(internal.seed.run, {});
   const clients = Array.from({ length: count }, (_, index) =>
     t.withIdentity({ subject: `player-${index}`, issuer: "poppycock-test" }),
   );
@@ -310,11 +310,13 @@ describe("authoritative Poppycock rounds", () => {
   it("finishes six untimed rounds and rematches without repeating content", async () => {
     const { t, clients, host, room, gameId } = await fixture();
     const questions = new Set<string>();
+    const categories = new Set<string>();
     for (let round = 1; round <= TOTAL_ROUNDS; round += 1) {
       const writing = await gameView(host, room.roomId);
       expect(writing).toMatchObject({ round, phase: "writing" });
       expect(questions.has(writing.prompt.question)).toBe(false);
       questions.add(writing.prompt.question);
+      categories.add(writing.prompt.category);
       for (const [index, client] of clients.entries())
         await client.mutation(api.game.submit, {
           gameId,
@@ -353,6 +355,7 @@ describe("authoritative Poppycock rounds", () => {
     });
     expect(rematch.players.map((player) => player.score)).toEqual([0, 0, 0, 0]);
     expect(questions.has(rematch.prompt.question)).toBe(false);
+    expect(categories.size).toBe(TOTAL_ROUNDS);
   });
 
   it("retains departed authors and their points without making them block early phase completion", async () => {
@@ -454,7 +457,7 @@ describe("authoritative Poppycock rounds", () => {
     const { t, host, gameId } = await fixture();
     await host.mutation(api.avatars.choose, { avatarId: "owl" });
     const before = await t.run((ctx) => ctx.db.query("cards").collect());
-    expect(await t.mutation(internal.seed.run, {})).toEqual({
+    expect(await t.action(internal.seed.run, {})).toEqual({
       inserted: 0,
       updated: 0,
       retired: 0,
