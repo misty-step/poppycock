@@ -2,7 +2,7 @@
 
 A phone-first bluffing party game for **3–12 people**. One peculiar question, a table of convincing lies, and exactly one truth. Six rounds; no accounts, payments, or AI service required.
 
-Hosted play: **https://poppycock.mistystep.io** — no account. The untimed, 216-card refinements documented here are verified locally but have **not yet been deployed publicly**. Source-specific receipts and deployment history are in [the verification record](docs/verification.md).
+Hosted play: **https://poppycock.mistystep.io** — no account. The untimed, 216-card game and polished 48-character avatar picker were deployed and checked on **2026-09-08**. See the [revision-specific verification history](docs/verification.md#verification-history); these docs are not a live deployment-status service.
 
 ## Play
 
@@ -53,15 +53,12 @@ pnpm reset --yes-delete-local-data  # reset only the isolated local game databas
 
 The local scripts reject production resets and missing configuration rather than switching to fake data. Keep `.env.local` and `.convex/` private and untracked. See `.env.example` for the server/browser environment boundary.
 
-For repeatable browser verification:
-
-```sh
-pnpm exec playwright install chromium
-pnpm smoke         # four independent guests against an already-running pnpm dev
-pnpm smoke:local   # alternatively: own the full local runtime, then stop it
-```
-
-`smoke:local` needs ports 3210/3220/3221 free. Both smoke commands exercise the real game and write sanitized screenshots and scoring evidence to `evidence/`; they create synthetic rooms, not mocked game state. Set `CHROMIUM_PATH` to use an installed Chromium instead of Playwright's download. CI builds and checks the app and vendored packages, runs this anonymous-local browser exercise, and retains fresh per-revision evidence as an artifact. It uses no deployment credentials.
+For repeatable browser verification, use the [smoke procedure](docs/verification.md#reproduce).
+It separates the local six-round/rematch exercise from the separately authorized
+hosted one-round check. New runs should use `POPPYCOCK_EVIDENCE_DIR` with a fresh
+`test-results/` subdirectory rather than overwrite the retained `evidence/`
+collection. CI already retains fresh per-revision local output as an artifact
+without deployment credentials.
 
 ## How Parlor is used
 
@@ -83,7 +80,7 @@ An existing database needs a two-stage cutover; deploying the final schema direc
 2. Deploy that revision’s Convex backend and run its internal **`untimedMigration:run`** action to completion. It pages through old scheduled turn jobs and games, cancels pending turn deadlines, removes stored clocks, and opts still-active matches out of the total cap. It does not reset rooms, submissions, votes, or scores, or reopen terminal matches. At this revision, `pnpm dev` and `pnpm bootstrap` perform the migration automatically for local databases only.
 3. Deploy the current Convex backend, run **`seed:run`** to upsert the 216-card deck, and deploy the matching web build. Ask connected players to reload after the web cutover. Use the migration-stage revision, not the old timed release, if rollback is needed.
 
-Fresh databases need no transitional deployment. Migration code and the obsolete schema field deliberately do not remain in the current source. No production migration or deployment was performed as part of the local refinement verification.
+Fresh databases need no transitional deployment. Migration code and the obsolete schema field deliberately do not remain in the current source. The production deployment completed this migration on 2026-09-08; the earlier local refinement records remain historical.
 
 ## Privacy and authority
 
@@ -91,10 +88,20 @@ The server owns phase transitions, option order, scoring, and eligibility. Writi
 
 The room code is an invitation, not a password. People with it may join as spectators during a game. Choose display names you are comfortable sharing with the room. Guest access tokens are bearer credentials; do not paste browser storage or request headers into bug reports.
 
-## Content and evidence
+## Content and documentation ownership
 
 The **216-card deck** contains 27 cards each in Odd words, Curious objects, Wild nature, and Space oddities, plus 18 each in **Kitchen secrets, Bright ideas, Living traditions, Remarkable places, Working lives, and Art & music**: thirty-six complete games before a room exhausts the pool. The longest answer is 90 characters, comfortably below the 180-character bluff limit. The original 108 keys and cards are preserved. Cards use original wording grounded in retained source references, not commercial Balderdash cards. Sources are shown at reveal. See [`docs/content-provenance.md`](docs/content-provenance.md) for the deck and provenance policy.
 
 Gameplay has no runtime LLM or external content-fetch dependency: the seeded database is the deck. Local reset is repeatable and seeding is idempotent by stable card key.
 
-The refinement revision passed a four-browser six-round game with authoritative final scores **18 / 8 / 0**, host transfer, reconnection, and a four-player rematch. A separate twelve-guest audit covered 320px and 390px phones, landscape, long names and answers, confirmation/focus behavior, and a real **65-second unanswered vote without revealing**. Inspect the [verification record](docs/verification.md), [audit receipt](evidence/refinements/audit.json), [twelve-character lobby](evidence/refinements/twelve-player-lobby-desktop.png), and [narrow-phone voting](evidence/refinements/long-options-320.png). These are Chromium mobile/touch emulation results, not physical-phone testing.
+This README owns the current rules and contributor orientation;
+`docs/content-provenance.md` owns collection-level editorial policy, alongside
+the card-level source index in `convex/content.ts`. Linear owns current work and
+prioritization, not the rulebook or deck. Current requests authorize changes;
+historical issues and receipts are context, not an automatic intake queue.
+
+The [verification guide](docs/verification.md) keeps a reusable smoke procedure
+separate from dated delivery records, including the untimed six-round run,
+twelve-guest audit, and older local/LAN/hosted exercises. Those records retain
+their source revisions, receipts, screenshots, and limitations; Chromium
+mobile/touch emulation is not physical-phone testing or current hosted proof.
