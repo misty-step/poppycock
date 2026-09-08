@@ -43,17 +43,16 @@ Questions and factual answers were drafted for Poppycock with AI assistance from
 
 Twenty-seven cards in `Odd words` and twenty-one cards in `Curious objects` draw from individual public-domain entries in [Webster's 1913](https://www.websters1913.com/) and [Project Gutenberg catalog ebook 29765](https://www.gutenberg.org/ebooks/29765) ([accessible text](https://www.gutenberg.org/ebooks/29765.txt.utf-8), [license explanation](https://www.gutenberg.org/policy/license.html)).
 
-Six cards in `Curious objects` draw from verified historical artifacts preserved by the Victoria and Albert Museum, the Science Museum Group, National Museums Scotland, and BBC HistoryExtra:
+Six cards in `Curious objects` draw from verified historical artifacts preserved by the Science Museum Group, the Fitzwilliam Museum (University of Cambridge), the Victoria and Albert Museum, National Museums Scotland, and BBC HistoryExtra:
 
 | Card                    | Source                                                                                                                                                                                            |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `object-antimonial-cup` | [Victoria and Albert Museum — The antimonial cup](https://www.vam.ac.uk/articles/the-antimonial-cup)                                                                                              |
+| `object-antimonial-cup` | [Science Museum Group Collection — Antimony cup, Europe, 1501-1700](https://collection.sciencemuseumgroup.org.uk/objects/co142080/antimony-cup-europe-1501-1700)                                |
 | `object-mortsafe`       | [National Museums Scotland — An unsolved mystery: The coffins found on Arthur's Seat](https://www.nms.ac.uk/discover-catalogue/the-coffins-found-on-arthurs-seat)                                 |
 | `object-lovers-eye`     | [Victoria and Albert Museum — Eye with a blue iris looking right](https://collections.vam.ac.uk/item/O1067699/eye-with-a-blue-iris-eye-miniature-unknown/)                                       |
-| `object-fuddling-cup`   | [Victoria and Albert Museum — Fuddling Cup](https://collections.vam.ac.uk/item/O21042/fuddling-cup-unknown/)                                                                                      |
+| `object-fuddling-cup`   | [The Fitzwilliam Museum (University of Cambridge) — Fuddling cups](https://data.fitzmuseum.cam.ac.uk/id/terminology/term-91176)                                                                  |
 | `object-bamboo-flea-trap` | [Science Museum Group Collection — Bamboo flea trap, China, 1751-1850](https://collection.sciencemuseumgroup.org.uk/objects/co147562/bamboo-flea-trap-china-1751-1850)                         |
 | `object-drunkards-cloak` | [BBC HistoryExtra — Q&A: what was a drunkard's cloak used for?](https://www.historyextra.com/period/stuart/medieval-punishments-what-was-drunkards-cloak/)                                     |
-
 The deck reuses or paraphrases the historical definitions and object records, not the modern hosts' site designs. `word-brontolith` cross-references the public-domain Aërolite definition. Gutenberg links are scholarly acknowledgements only; no ebook, Gutenberg wrapper, or trademark asset is shipped.
 ### Wild nature: 27 cards
 
@@ -283,6 +282,31 @@ Eighteen cards covering extraordinary artworks, bizarre musical instruments, ecc
 | `art-glass-harmonica`      | [Science Museum Group — Glass Harmonica](https://collection.sciencemuseumgroup.org.uk/objects/co5862/glass-harmonica)                                                                       |
 | `art-hurdy-gurdy-wheel`    | [Smithsonian Music — Hurdy-gurdy](https://music.si.edu/object-day/hurdy-gurdy)                                                                                                              |
 | `art-smalt-glass`          | [National Gallery — Smalt](https://www.nationalgallery.org.uk/paintings/glossary/smalt)                                                                                                     |
+
+#### The sea — 18 cards
+
+Eighteen cards covering maritime phenomena, navigational hazards, oceanographic anomalies, and naval traditions. Each card is verified against primary scientific and museum resources (NOAA, NASA Earth Observatory, European Space Agency, National Weather Service, National Park Service, Natural History Museum London, Royal Museums Greenwich, Scientific American, Smithsonian Magazine, and BBC News).
+
+| Card                       | Consulted source                                                                                                                                                                             |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sea-doldrums`             | [NOAA National Ocean Service — What are the doldrums?](https://oceanservice.noaa.gov/facts/doldrums.html)                                                                                  |
+| `sea-horse-latitudes`      | [NOAA National Ocean Service — What are the horse latitudes?](https://oceanservice.noaa.gov/facts/horse-latitudes.html)                                                                      |
+| `sea-roaring-forties`      | [NOAA National Ocean Service — What are the Roaring Forties?](https://oceanservice.noaa.gov/facts/roaring-forties.html)                                                                      |
+| `sea-point-nemo`           | [NOAA National Ocean Service — Where is Point Nemo?](https://oceanservice.noaa.gov/facts/nemo.html)                                                                                          |
+| `sea-brinicle`             | [Scientific American — How Eerie Sea-Ice 'Brinicles' Form](https://www.scientificamerican.com/article/how-sea-ice-brinicles-form/)                                                          |
+| `sea-line-crossing`        | [Royal Museums Greenwich — Crossing the line](https://www.rmg.co.uk/stories/ocean/curatorial/crossing-line)                                                                                 |
+| `sea-milky-seas`           | [NASA Science — Hunting Milky Seas by Satellite](https://science.nasa.gov/earth/earth-observatory/hunting-milky-seas-by-satellite-149017/)                                                   |
+| `sea-ghost-forest`         | [NOAA National Ocean Service — What is a ghost forest?](https://oceanservice.noaa.gov/facts/ghost-forest.html)                                                                              |
+| `sea-denmark-strait-fall`  | [NOAA National Ocean Service — Where is Earth's Largest Waterfall?](https://oceanservice.noaa.gov/facts/largest-waterfall.html)                                                              |
+| `sea-old-sow`              | [NOAA National Ocean Service — What is Old Sow?](https://oceanservice.noaa.gov/facts/old-sow.html)                                                                                          |
+| `sea-cross-sea`            | [European Space Agency — Cross seas](https://www.esa.int/ESA_Multimedia/Images/2011/06/Cross_seas)                                                                                           |
+| `sea-sargasso-eels`        | [BBC News — Ancient eel migration mystery unravelled](https://www.bbc.com/news/science-environment-63259738)                                                                                |
+| `sea-ambergris`            | [Natural History Museum London — What is ambergris?](https://www.nhm.ac.uk/discover/what-is-ambergris.html)                                                                                 |
+| `sea-mary-celeste`         | [Smithsonian Magazine — Abandoned Ship: The Mary Celeste](https://www.smithsonianmag.com/history/abandoned-ship-the-mary-celeste-174488104/)                                                 |
+| `sea-st-elmos-fire`        | [National Weather Service — Marine Definitions: St. Elmo's Fire](https://www.weather.gov/okx/marinedef)                                                                                     |
+| `sea-right-whale-name`     | [NOAA National Ocean Service — What makes the right whale "right"?](https://oceanservice.noaa.gov/facts/rtwhale.html)                                                                        |
+| `sea-old-man-of-the-lake`  | [National Park Service — The Old Man - Crater Lake National Park](https://www.nps.gov/crla/learn/nature/theoldman.htm)                                                                      |
+| `sea-corryvreckan-orwell`  | [BBC News — The Scottish island where George Orwell created 1984](https://www.bbc.co.uk/news/uk-scotland-43821334)                                                                         |
 
 ## Precision choices worth preserving
 

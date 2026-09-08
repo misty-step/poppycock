@@ -42,45 +42,49 @@ export const theSea = definePack(
       },
     },
     {
-      key: "sea-furious-fifties",
+      key: "sea-point-nemo",
       question:
-        "What did sailors call the still-stronger gales ten degrees south of the Roaring Forties?",
-      answer: "The Furious Fifties.",
+        "Why is the remote South Pacific oceanic coordinate known as 'Point Nemo' famous among geographers?",
+      answer: "It is the point on Earth farthest from any land.",
       source: {
-        title: "NOAA National Ocean Service — What are the Roaring Forties?",
-        url: "https://oceanservice.noaa.gov/facts/roaring-forties.html",
-        note: "Original question; NOAA's own nickname from the same page. Ten degrees farther south are the Screaming Sixties.",
+        title: "NOAA National Ocean Service — Where is Point Nemo?",
+        url: "https://oceanservice.noaa.gov/facts/nemo.html",
+        note: "The oceanic pole of inaccessibility is located over 1,600 miles from the nearest islands in every direction.",
       },
     },
     {
-      key: "sea-gyre",
-      question: "In oceanography, what is a gyre?",
-      answer: "A large, lasting system of rotating ocean currents.",
-      source: {
-        title: "NOAA National Ocean Service — What is a gyre?",
-        url: "https://oceanservice.noaa.gov/facts/gyre.html",
-        note: "Original question; NOAA's traditional sense. The page notes that 'gyre' is sometimes used for debris patches; this card uses the current-system meaning.",
-      },
-    },
-    {
-      key: "sea-meteotsunami",
+      key: "sea-brinicle",
       question:
-        "What kind of large coastal wave is driven by a storm's air pressure rather than an earthquake?",
-      answer: "A meteotsunami.",
+        "What eerie underwater structure, nicknamed an 'icy finger of death', forms beneath polar sea ice?",
+      answer:
+        "A brinicle: a descending hollow tube of ice formed around sinking, supercooled salt brine.",
       source: {
-        title: "NOAA National Ocean Service — What is a meteotsunami?",
-        url: "https://oceanservice.noaa.gov/facts/meteotsunami.html",
-        note: "Original question; NOAA distinguishes meteotsunamis from seismic tsunamis and from seiches. Height figures are omitted.",
+        title: "Scientific American — How Eerie Sea-Ice 'Brinicles' Form",
+        url: "https://www.scientificamerican.com/article/how-sea-ice-brinicles-form/",
+        note: "Dense supercooled brine rejected from freezing sea ice sinks and freezes surrounding seawater upon contact.",
       },
     },
     {
-      key: "sea-seiche",
-      question: "What is a seiche in a lake or bay?",
-      answer: "A standing wave that sloshes back and forth across the basin.",
+      key: "sea-line-crossing",
+      question:
+        "In maritime tradition, what theatrical ordeal must a sailor who has never crossed the equator undergo?",
+      answer:
+        "A mock trial before King Neptune's court, where 'pollywogs' are lathered in slop and dunked in seawater.",
       source: {
-        title: "NOAA National Ocean Service — What is a seiche?",
-        url: "https://oceanservice.noaa.gov/facts/seiche.html",
-        note: "Original question; NOAA's standing-wave definition. Historical Lake Erie death tolls and heights are omitted.",
+        title: "Royal Museums Greenwich — Crossing the line",
+        url: "https://www.rmg.co.uk/stories/ocean/curatorial/crossing-line",
+        note: "A naval initiation rite where novices (pollywogs) face Neptune's court before becoming shellbacks.",
+      },
+    },
+    {
+      key: "sea-milky-seas",
+      question:
+        "What mysterious nocturnal ocean phenomenon can cause up to 100,000 square kilometers of open sea to glow uniformly white for days?",
+      answer: "A 'milky sea' produced by trillions of luminous bacteria colonizing algal blooms.",
+      source: {
+        title: "NASA Science — Hunting Milky Seas by Satellite",
+        url: "https://science.nasa.gov/earth/earth-observatory/hunting-milky-seas-by-satellite-149017/",
+        note: "A continuous, massive bioluminescent glow visible from space, distinct from transient flashing plankton.",
       },
     },
     {
@@ -114,53 +118,61 @@ export const theSea = definePack(
       },
     },
     {
-      key: "sea-upwelling",
-      question: "In the ocean, what is upwelling?",
-      answer: "Deep, cold, nutrient-rich water rising to replace surface water blown away.",
+      key: "sea-cross-sea",
+      question:
+        "What maritime condition causes the surface of the ocean to form a checkered grid of 'square waves'?",
+      answer:
+        "A cross sea: two opposing wave systems traveling from perpendicular directions that collide.",
       source: {
-        title: "NOAA National Ocean Service — What is upwelling?",
-        url: "https://oceanservice.noaa.gov/facts/upwelling.html",
-        note: "Original question; NOAA's process description. The reverse process is downwelling.",
+        title: "European Space Agency — Cross seas",
+        url: "https://www.esa.int/ESA_Multimedia/Images/2011/06/Cross_seas",
+        note: "Occurs when two weather systems generate swell trains that intersect at right angles, creating a grid of short-crested waves.",
       },
     },
     {
-      key: "sea-turbidity-current",
-      question: "What is a turbidity current on the seafloor?",
-      answer: "A rapid downhill avalanche of water made dense by sediment.",
+      key: "sea-sargasso-eels",
+      question:
+        "Where do freshwater eels from across Europe and North America make a multi-thousand-mile ocean journey to reproduce and die?",
+      answer: "The Sargasso Sea, a landless region of the North Atlantic Ocean.",
       source: {
-        title: "NOAA National Ocean Service — What is a turbidity current?",
-        url: "https://oceanservice.noaa.gov/facts/turbidity.html",
-        note: "Original question; NOAA's density-flow definition. Earthquakes and collapsing slopes can start one.",
+        title: "BBC News — Ancient eel migration mystery unravelled",
+        url: "https://www.bbc.com/news/science-environment-63259738",
+        note: "European eels migrate thousands of miles to spawn once in the Sargasso Sea, an ancient mystery confirmed by satellite tagging.",
       },
     },
     {
-      key: "sea-totten-beacons",
-      question: "What were the Totten Beacons in the Florida Keys?",
-      answer: "Nineteenth-century iron poles, lettered A to P, that marked the reefs for sailors.",
+      key: "sea-ambergris",
+      question:
+        "What foul-smelling substance from sperm whale intestines can sell for thousands of dollars an ounce after floating at sea?",
+      answer:
+        "Ambergris: hardened masses of squid beaks and bile, used as a fixative in luxury perfumes.",
       source: {
-        title: "NOAA National Ocean Service — What are the Totten Beacons?",
-        url: "https://oceanservice.noaa.gov/facts/totten-beacons.html",
-        note: "Original question; NOAA's account of Lt. James Totten's iron signal poles. The earlier wooden poles and later GPS aids are omitted.",
+        title: "Natural History Museum London — What is ambergris?",
+        url: "https://www.nhm.ac.uk/discover/what-is-ambergris.html",
+        note: "Indigestible squid beaks bind in the whale's intestines and cure in seawater into an aromatic, musky perfume fixative.",
       },
     },
     {
-      key: "sea-rogue-wave",
-      question: "What makes a wave a 'rogue wave' to scientists?",
-      answer: "It is more than twice as tall as the waves around it, and arrives without warning.",
+      key: "sea-mary-celeste",
+      question:
+        "When the undamaged ghost ship Mary Celeste was found adrift in 1872 with all crew belongings aboard, what was its cargo?",
+      answer: "1,701 barrels of industrial alcohol.",
       source: {
-        title: "NOAA National Ocean Service — What is a rogue wave?",
-        url: "https://oceanservice.noaa.gov/facts/roguewaves.html",
-        note: "Original question; NOAA's 'greater than twice the size of surrounding waves' criterion, plus unpredictability. Specific measured heights are omitted.",
+        title: "Smithsonian Magazine — Abandoned Ship: The Mary Celeste",
+        url: "https://www.smithsonianmag.com/history/abandoned-ship-the-mary-celeste-174488104/",
+        note: "The seaworthy vessel was found deserted with intact provisions and 1,701 barrels of alcohol, with clogged pumps explaining the evacuation panic.",
       },
     },
     {
-      key: "sea-foam",
-      question: "What is sea foam mostly made from?",
-      answer: "Dissolved organic matter churned into bubbles by wind and waves.",
+      key: "sea-st-elmos-fire",
+      question:
+        "At sea, why does the eerie blue glow known as 'St. Elmo's Fire' on a ship's mast warn sailors to seek immediate shelter?",
+      answer:
+        "It is an electrical coronal discharge indicating lightning is likely to strike the mast within minutes.",
       source: {
-        title: "NOAA National Ocean Service — What is sea foam?",
-        url: "https://oceanservice.noaa.gov/facts/seafoam.html",
-        note: "Original question; NOAA's formation mechanism. Harmful-algal-bloom health effects are omitted from the answer.",
+        title: "National Weather Service — Marine Definitions: St. Elmo's Fire",
+        url: "https://www.weather.gov/okx/marinedef",
+        note: "Atmospheric electrostatic charge produces a plasma glow on mastheads, warning of imminent lightning strikes.",
       },
     },
     {
@@ -174,23 +186,25 @@ export const theSea = definePack(
       },
     },
     {
-      key: "sea-dead-zone",
-      question: "What is a marine 'dead zone'?",
-      answer: "Water so low in oxygen that most animals die or leave.",
+      key: "sea-old-man-of-the-lake",
+      question: "What is 'The Old Man of the Lake' in Oregon's Crater Lake?",
+      answer:
+        "A 30-foot hemlock tree trunk that has bobbed and drifted completely upright for over 120 years.",
       source: {
-        title: "NOAA National Ocean Service — What is a dead zone?",
-        url: "https://oceanservice.noaa.gov/facts/deadzone.html",
-        note: "Original question; NOAA's hypoxia definition. Year-specific Gulf area figures are omitted. Nutrient pollution is a primary human cause.",
+        title: "National Park Service — The Old Man - Crater Lake National Park",
+        url: "https://www.nps.gov/crla/learn/nature/theoldman.htm",
+        note: "The vertical floating log was first tracked in 1896 and was recorded traveling over 60 miles across the lake in three months.",
       },
     },
     {
-      key: "sea-screaming-sixties",
-      question: "What did sailors call the gales ten degrees south of the Furious Fifties?",
-      answer: "The Screaming Sixties.",
+      key: "sea-corryvreckan-orwell",
+      question:
+        "In 1947, which treacherous Scottish sea hazard nearly killed George Orwell while he was writing '1984'?",
+      answer: "The Corryvreckan whirlpool, which ripped the motor off his boat and capsized it.",
       source: {
-        title: "NOAA National Ocean Service — What are the Roaring Forties?",
-        url: "https://oceanservice.noaa.gov/facts/roaring-forties.html",
-        note: "Original question; NOAA's third nickname on the same Roaring Forties page.",
+        title: "BBC News — The Scottish island where George Orwell created 1984",
+        url: "https://www.bbc.co.uk/news/uk-scotland-43821334",
+        note: "Orwell and his adopted son escaped onto rocks after their dinghy was pulled into the notorious tidal whirlpool off Jura.",
       },
     },
   ],

@@ -116,9 +116,9 @@ export const curiousObjects = definePack(
       answer:
         "They left wine in it overnight to leach toxic antimony so the patient would vomit violently.",
       source: {
-        title: "Victoria and Albert Museum — The antimonial cup",
-        url: "https://www.vam.ac.uk/articles/the-antimonial-cup",
-        note: "Wine stored in the antimony alloy cup dissolved metallic salts, functioning as an emetic to purge ailments.",
+        title: "Science Museum Group Collection — Antimony cup, Europe, 1501-1700",
+        url: "https://collection.sciencemuseumgroup.org.uk/objects/co142080/antimony-cup-europe-1501-1700",
+        note: "Wine left standing for 24 hours in the toxic metallic cup dissolved small amounts of antimony to induce violent vomiting and purging.",
       },
     },
     {
@@ -251,9 +251,9 @@ export const curiousObjects = definePack(
       answer:
         "It was three or more interlinked cups connected by hidden channels so drinking drained them all together.",
       source: {
-        title: "Victoria and Albert Museum — Fuddling Cup",
-        url: "https://collections.vam.ac.uk/item/O21042/fuddling-cup-unknown/",
-        note: "A puzzle drinking vessel designed as a tavern game where users had to empty all chambers without spilling.",
+        title: "The Fitzwilliam Museum (University of Cambridge) — Fuddling cups",
+        url: "https://data.fitzmuseum.cam.ac.uk/id/terminology/term-91176",
+        note: "A 17th-century drinking vessel formed as a cluster of three or more cups joined laterally and connected internally so the entire vessel can be drained from any single cup.",
       },
     },
     {
