@@ -10,13 +10,14 @@ export const rarerWords = definePack(
   },
   [
     {
-      key: "rare-factotum",
-      question: "What kind of employee is a 'factotum'?",
-      answer: "Someone hired to do every kind of work or business.",
+      key: "rare-boustrophedon",
+      question: "What unique pattern defines the ancient writing style called 'boustrophedon'?",
+      answer:
+        "Lines alternating directions: writing left-to-right on one line, then right-to-left on the next, like an ox plowing a field.",
       source: {
-        title: "Webster's 1913 — Factotum",
-        url: "https://www.websters1913.com/words/Factotum",
-        note: "Original question; condensed public-domain definition from Latin 'do everything'.",
+        title: "Webster's 1913 — Boustrophedon",
+        url: "https://www.websters1913.com/words/Boustrophedon",
+        note: "Original question; condensed public-domain definition: alternate lines reading left-to-right and right-to-left, named from Greek for turning like oxen in plowing.",
       },
     },
     {
@@ -120,23 +121,23 @@ export const rarerWords = definePack(
       },
     },
     {
-      key: "rare-obumbrate",
-      question: "What does it mean to 'obumbrate' something?",
-      answer: "To shade, darken, or cloud it.",
+      key: "rare-mulligrubs",
+      question: "In older English slang, what unpleasant mood or condition was 'the mulligrubs'?",
+      answer: "A fit of sullen depression or the sulks, originally arising from a stomach ache.",
       source: {
-        title: "Webster's 1913 — Obumbrate",
-        url: "https://www.websters1913.com/words/Obumbrate",
-        note: "Original question; condensed public-domain definition. Marked rare in the dictionary.",
+        title: "Webster's 1913 — Mulligrubs",
+        url: "https://www.websters1913.com/words/Mulligrubs",
+        note: "Original question; condensed public-domain slang definition: intestinal colic, hence sullenness or the sulks.",
       },
     },
     {
-      key: "rare-coxcomb",
-      question: "What was a licensed jester's 'coxcomb' originally?",
-      answer: "A strip of red cloth, notched like a cock's comb, worn in the cap.",
+      key: "rare-slubberdegullion",
+      question: "In 17th-century English insult vocabulary, what was a 'slubberdegullion'?",
+      answer: "A mean, dirty, slovenly wretch.",
       source: {
-        title: "Webster's 1913 — Coxcomb",
-        url: "https://www.websters1913.com/words/Coxcomb",
-        note: "Original question; public-domain sense 1a, not the later 'vain fop' or plant senses.",
+        title: "Webster's 1913 — Slubberdegullion",
+        url: "https://www.websters1913.com/words/Slubberdegullion",
+        note: "Original question; condensed public-domain definition: a mean, dirty wretch, labeled low or provincial.",
       },
     },
     {
@@ -151,23 +152,23 @@ export const rarerWords = definePack(
       },
     },
     {
-      key: "rare-helve",
-      question: "What is the 'helve' of an axe?",
-      answer: "Its handle.",
+      key: "rare-deipnosophist",
+      question: "Originally, what was a 'deipnosophist'?",
+      answer: "A philosopher who specialized in learned, witty conversation during meals.",
       source: {
-        title: "Webster's 1913 — Helve",
-        url: "https://www.websters1913.com/words/Helve",
-        note: "Original question; public-domain sense 1, not the forge-hammer senses.",
+        title: "Webster's 1913 — Deipnosophist",
+        url: "https://www.websters1913.com/words/Deipnosophist",
+        note: "Original question; condensed public-domain definition: one who cultivated learned conversation at dinner, from Greek deipnon (meal) + sophistes (philosopher).",
       },
     },
     {
-      key: "rare-fain",
-      question: "In older English, if you are 'fain' to do something, how do you feel about it?",
-      answer: "Glad, or well pleased; sometimes so willing you would rather do it than not.",
+      key: "rare-galligaskins",
+      question: "In older jocular English, what articles of clothing were 'galligaskins'?",
+      answer: "Loose, wide trousers or breeches.",
       source: {
-        title: "Webster's 1913 — Fain",
-        url: "https://www.websters1913.com/words/Fain",
-        note: "Original question; public-domain adjective senses of gladness and willingness. The adverb 'gladly' in 'would fain' follows from that.",
+        title: "Webster's 1913 — Galligaskins",
+        url: "https://www.websters1913.com/words/Galligaskins",
+        note: "Original question; condensed public-domain definition: loose hose or breeches, often used in a jocular sense.",
       },
     },
     {

@@ -345,24 +345,24 @@ Eighteen deep-cut vocabulary cards drawn from public-domain entries in [Webster'
 
 | Card                       | Consulted source                                                                                                                                                                             |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `rare-factotum`            | [Webster's 1913 — Factotum](https://www.websters1913.com/words/Factotum)                                                                                                                     |
-| `rare-quidnunc`            | [Webster's 1913 — Quidnunc](https://www.websters1913.com/words/Quidnunc)                                                                                                                     |
-| `rare-welkin`              | [Webster's 1913 — Welkin](https://www.websters1913.com/words/Welkin)                                                                                                                         |
-| `rare-yare`                | [Webster's 1913 — Yare](https://www.websters1913.com/words/Yare)                                                                                                                             |
-| `rare-tittle`              | [Webster's 1913 — Tittle](https://www.websters1913.com/words/Tittle)                                                                                                                         |
-| `rare-limn`                | [Webster's 1913 — Limn](https://www.websters1913.com/words/Limn)                                                                                                                             |
-| `rare-mountebank`          | [Webster's 1913 — Mountebank](https://www.websters1913.com/words/Mountebank)                                                                                                                 |
-| `rare-recusant`            | [Webster's 1913 — Recusant](https://www.websters1913.com/words/Recusant)                                                                                                                     |
-| `rare-antephialtic`        | [Webster's 1913 — Antephialtic](https://www.websters1913.com/words/Antephialtic)                                                                                                             |
-| `rare-belly-god`           | [Webster's 1913 — Belly-god](https://www.websters1913.com/words/Belly-god)                                                                                                                   |
-| `rare-vaticinate`          | [Webster's 1913 — Vaticinate](https://www.websters1913.com/words/Vaticinate)                                                                                                                 |
-| `rare-obumbrate`           | [Webster's 1913 — Obumbrate](https://www.websters1913.com/words/Obumbrate)                                                                                                                   |
-| `rare-coxcomb`             | [Webster's 1913 — Coxcomb](https://www.websters1913.com/words/Coxcomb)                                                                                                                       |
-| `rare-flibbertigibbet`     | [Webster's 1913 — Flibbertigibbet](https://www.websters1913.com/words/Flibbertigibbet)                                                                                                       |
-| `rare-helve`               | [Webster's 1913 — Helve](https://www.websters1913.com/words/Helve)                                                                                                                           |
-| `rare-fain`                | [Webster's 1913 — Fain](https://www.websters1913.com/words/Fain)                                                                                                                             |
-| `rare-pilgarlic`           | [Webster's 1913 — Pilgarlic](https://www.websters1913.com/words/Pilgarlic)                                                                                                                   |
-| `rare-dudgeon`             | [Webster's 1913 — Dudgeon](https://www.websters1913.com/words/Dudgeon)                                                                                                                       |
+| `rare-boustrophedon`       | [Webster's 1913 — Boustrophedon](https://www.websters1913.com/words/Boustrophedon)                                                                           |
+| `rare-quidnunc`            | [Webster's 1913 — Quidnunc](https://www.websters1913.com/words/Quidnunc)                                                                                     |
+| `rare-welkin`              | [Webster's 1913 — Welkin](https://www.websters1913.com/words/Welkin)                                                                                         |
+| `rare-yare`                | [Webster's 1913 — Yare](https://www.websters1913.com/words/Yare)                                                                                             |
+| `rare-tittle`              | [Webster's 1913 — Tittle](https://www.websters1913.com/words/Tittle)                                                                                         |
+| `rare-limn`                | [Webster's 1913 — Limn](https://www.websters1913.com/words/Limn)                                                                                             |
+| `rare-mountebank`          | [Webster's 1913 — Mountebank](https://www.websters1913.com/words/Mountebank)                                                                                 |
+| `rare-recusant`            | [Webster's 1913 — Recusant](https://www.websters1913.com/words/Recusant)                                                                                     |
+| `rare-antephialtic`        | [Webster's 1913 — Antephialtic](https://www.websters1913.com/words/Antephialtic)                                                                             |
+| `rare-belly-god`           | [Webster's 1913 — Belly-god](https://www.websters1913.com/words/Belly-god)                                                                                   |
+| `rare-vaticinate`          | [Webster's 1913 — Vaticinate](https://www.websters1913.com/words/Vaticinate)                                                                                 |
+| `rare-mulligrubs`          | [Webster's 1913 — Mulligrubs](https://www.websters1913.com/words/Mulligrubs)                                                                                 |
+| `rare-slubberdegullion`    | [Webster's 1913 — Slubberdegullion](https://www.websters1913.com/words/Slubberdegullion)                                                                     |
+| `rare-flibbertigibbet`     | [Webster's 1913 — Flibbertigibbet](https://www.websters1913.com/words/Flibbertigibbet)                                                                       |
+| `rare-deipnosophist`       | [Webster's 1913 — Deipnosophist](https://www.websters1913.com/words/Deipnosophist)                                                                           |
+| `rare-galligaskins`        | [Webster's 1913 — Galligaskins](https://www.websters1913.com/words/Galligaskins)                                                                             |
+| `rare-pilgarlic`           | [Webster's 1913 — Pilgarlic](https://www.websters1913.com/words/Pilgarlic)                                                                                   |
+| `rare-dudgeon`             | [Webster's 1913 — Dudgeon](https://www.websters1913.com/words/Dudgeon)                                                                                       |
 
 ## Precision choices worth preserving
 
