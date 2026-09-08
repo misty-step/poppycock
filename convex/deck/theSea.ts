@@ -10,13 +10,14 @@ export const theSea = definePack(
   },
   [
     {
-      key: "sea-doldrums",
-      question: "What did sailors call the windless belt of ocean near the equator?",
-      answer: "The doldrums, where rising air can becalm a ship for weeks.",
+      key: "sea-whale-fall",
+      question: "In deep-sea oceanography, what is a 'whale fall'?",
+      answer:
+        "A sunken whale carcass on the ocean floor that sustains an entire complex ecosystem of scavengers for decades.",
       source: {
-        title: "NOAA National Ocean Service — What are the doldrums?",
-        url: "https://oceanservice.noaa.gov/facts/doldrums.html",
-        note: "Original question; paraphrase of NOAA's description of the Inter-Tropical Convergence Zone and its lack of surface wind.",
+        title: "NOAA National Ocean Service — What is a whale fall?",
+        url: "https://oceanservice.noaa.gov/facts/whale-fall.html",
+        note: "Original question and factual summary. Decomposition of a sunken whale carcass provides food and chemical sulfide energy to deep-sea communities for up to 50 years.",
       },
     },
     {
@@ -31,14 +32,15 @@ export const theSea = definePack(
       },
     },
     {
-      key: "sea-roaring-forties",
+      key: "sea-titanic-rusticles",
       question:
-        "What did Age of Sail crews call the fierce westerlies between 40 and 50 degrees south?",
-      answer: "The Roaring Forties.",
+        "What eerie formations did deep-sea explorers find hanging from the steel hull of the sunken RMS Titanic?",
+      answer:
+        "'Rusticles': delicate, icicle-like stalactites created by iron-eating bacteria that are slowly consuming the wreck.",
       source: {
-        title: "NOAA National Ocean Service — What are the Roaring Forties?",
-        url: "https://oceanservice.noaa.gov/facts/roaring-forties.html",
-        note: "Original question; NOAA's name and latitude band, not a speed or a claim about the Northern Hemisphere.",
+        title: "NOAA Ocean Exploration — Rusticles",
+        url: "https://oceanexplorer.noaa.gov/multimedia/daily-image-media-20201014/",
+        note: "Original question and factual summary. Iron-oxidizing bacterial and fungal communities form porous, icicle-like structures that dissolve the ship's steel into the ocean.",
       },
     },
     {
@@ -88,13 +90,14 @@ export const theSea = definePack(
       },
     },
     {
-      key: "sea-ghost-forest",
-      question: "What is a coastal 'ghost forest'?",
-      answer: "Dead trees still standing after saltwater overtook a woodland.",
+      key: "sea-the-bloop",
+      question:
+        "In 1997, what caused 'The Bloop', an ultra-low-frequency sound detected by NOAA hydrophones across 3,000 miles of the Pacific?",
+      answer: "An icequake: a massive Antarctic glacier calving and cracking against the seabed.",
       source: {
-        title: "NOAA National Ocean Service — What is a ghost forest?",
-        url: "https://oceanservice.noaa.gov/facts/ghost-forest.html",
-        note: "Original question; NOAA's description of saltwater poisoning deciduous trees as sea level rises. Subsidence details are omitted.",
+        title: "NOAA National Ocean Service — What is the bloop?",
+        url: "https://oceanservice.noaa.gov/facts/bloop.html",
+        note: "Original question and factual summary. The powerful sound was originally speculated to be a giant unknown marine creature before NOAA identified it as an icequake.",
       },
     },
     {
@@ -108,13 +111,15 @@ export const theSea = definePack(
       },
     },
     {
-      key: "sea-old-sow",
-      question: "What is Old Sow, off Maine and New Brunswick?",
-      answer: "The Western Hemisphere's largest whirlpool.",
+      key: "sea-brine-pool",
+      question:
+        "On the deep floor of the Gulf of Mexico, what are the surreal geographic features known as 'brine pools'?",
+      answer:
+        "Underwater lakes with their own shorelines, waves, and surfaces, so dense that submersibles can float on top of them.",
       source: {
-        title: "NOAA National Ocean Service — What is Old Sow?",
-        url: "https://oceanservice.noaa.gov/facts/old-sow.html",
-        note: "Original question; NOAA's identification. Diameter and drop figures are omitted. The page records folklore about the name.",
+        title: "NOAA Ocean Exploration — Brine Pool",
+        url: "https://oceanexplorer.noaa.gov/multimedia/daily-image-media-20200720/",
+        note: "Original question and factual summary. Hypersaline water seeping through seafloor salt deposits forms distinct underwater lakes up to five times saltier than seawater, complete with shorelines and ripples.",
       },
     },
     {
