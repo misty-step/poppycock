@@ -90,23 +90,23 @@ export const rarerWords = definePack(
       },
     },
     {
-      key: "rare-somnambulist",
-      question: "What is a 'somnambulist' doing?",
-      answer: "Walking in their sleep.",
+      key: "rare-antephialtic",
+      question: "In 19th-century medicine, what was an 'antephialtic' remedy good against?",
+      answer: "Nightmares.",
       source: {
-        title: "Webster's 1913 — Somnambulist",
-        url: "https://www.websters1913.com/words/Somnambulist",
-        note: "Original question; condensed public-domain definition.",
+        title: "Webster's 1913 — Antephialtic",
+        url: "https://www.websters1913.com/words/Antephialtic",
+        note: "Original question; condensed public-domain definition from Dunglison: good against nightmare.",
       },
     },
     {
-      key: "rare-gallivant",
-      question: "If you 'gallivant', what are you doing?",
-      answer: "Roaming about for pleasure, or playing the beau.",
+      key: "rare-belly-god",
+      question: "What sort of person was once called a 'belly-god'?",
+      answer: "A glutton whose chief pleasure is gratifying his appetite.",
       source: {
-        title: "Webster's 1913 — Gallivant",
-        url: "https://www.websters1913.com/words/Gallivant",
-        note: "Original question; public-domain slang definition. Marked slang in the dictionary.",
+        title: "Webster's 1913 — Belly-god",
+        url: "https://www.websters1913.com/words/Belly-god",
+        note: "Original question; condensed public-domain definition: one whose great pleasure it is to gratify his appetite.",
       },
     },
     {
@@ -140,13 +140,14 @@ export const rarerWords = definePack(
       },
     },
     {
-      key: "rare-peruke",
-      question: "What is a 'peruke'?",
-      answer: "A wig; a periwig.",
+      key: "rare-flibbertigibbet",
+      question:
+        "In Shakespearean and archaic usage, what kind of creature was a 'flibbertigibbet'?",
+      answer: "An imp or fiend.",
       source: {
-        title: "Webster's 1913 — Peruke",
-        url: "https://www.websters1913.com/words/Peruke",
-        note: "Original question; condensed public-domain definition.",
+        title: "Webster's 1913 — Flibbertigibbet",
+        url: "https://www.websters1913.com/words/Flibbertigibbet",
+        note: "Original question; brief public-domain definition from Shakespeare.",
       },
     },
     {
@@ -170,13 +171,13 @@ export const rarerWords = definePack(
       },
     },
     {
-      key: "rare-jocund",
-      question: "What kind of mood is 'jocund'?",
-      answer: "Merry, cheerful, and lively.",
+      key: "rare-pilgarlic",
+      question: "In older colloquial English, what was a 'pilgarlic'?",
+      answer: "A sneaking, bald fellow, or someone poorly treated.",
       source: {
-        title: "Webster's 1913 — Jocund",
-        url: "https://www.websters1913.com/words/Jocund",
-        note: "Original question; condensed public-domain definition.",
+        title: "Webster's 1913 — Pilgarlic",
+        url: "https://www.websters1913.com/words/Pilgarlic",
+        note: "Original question; condensed public-domain definition: one who has lost his hair by disease; a sneaking fellow.",
       },
     },
     {
