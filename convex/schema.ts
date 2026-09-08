@@ -34,7 +34,7 @@ export default defineSchema({
   })
     .index("by_key", ["key"])
     .index("by_active_key", ["active", "key"])
-    .index("by_active_category_ordinal", ["active", "category", "ordinal"]),
+    .index("by_active_category", ["active", "category"]),
   roomDecks: defineTable({
     roomId: v.id("rooms"),
     seenCardIds: v.array(v.id("cards")),

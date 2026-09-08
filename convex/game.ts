@@ -4,7 +4,6 @@ import type { GameView } from "../lib/game-types";
 import type { Doc, Id } from "./_generated/dataModel";
 import { mutation, query } from "./_generated/server";
 import type { MutationCtx, QueryCtx } from "./_generated/server";
-import { ordinalWindow } from "./deck/sample";
 import {
   cleanBluff,
   fail,
@@ -133,24 +132,14 @@ async function activePacks(ctx: MutationCtx) {
     .take(200);
 }
 
-async function pickInCategory(
-  ctx: MutationCtx,
-  category: string,
-  count: number,
-  exclude: Set<Id<"cards">>,
-) {
-  if (count <= 0) return null;
-  const start = Math.floor(Math.random() * count);
-  for (const ordinal of ordinalWindow(count, start)) {
-    const card = await ctx.db
-      .query("cards")
-      .withIndex("by_active_category_ordinal", (q) =>
-        q.eq("active", true).eq("category", category).eq("ordinal", ordinal),
-      )
-      .unique();
-    if (card && !exclude.has(card._id)) return card;
-  }
-  return null;
+async function pickInCategory(ctx: MutationCtx, category: string, exclude: Set<Id<"cards">>) {
+  const cards = await ctx.db
+    .query("cards")
+    .withIndex("by_active_category", (q) => q.eq("active", true).eq("category", category))
+    .collect();
+  const open = cards.filter((card) => !exclude.has(card._id));
+  if (open.length === 0) return null;
+  return open[Math.floor(Math.random() * open.length)]!;
 }
 
 async function drawRound(
@@ -179,12 +168,9 @@ async function drawRound(
   const unused = shuffled(categories.filter((name) => !used.has(name)));
   const reused = shuffled(categories.filter((name) => used.has(name)));
   const order = unused.length > 0 ? [...unused, ...reused] : shuffled([...categories]);
-  const countByCategory = new Map(
-    packs.map((pack) => [pack.category, pack.cardCount ?? 0] as const),
-  );
   const tryOrder = async (exclude: Set<Id<"cards">>) => {
     for (const category of order) {
-      const card = await pickInCategory(ctx, category, countByCategory.get(category) ?? 0, exclude);
+      const card = await pickInCategory(ctx, category, exclude);
       if (card) return card;
     }
     return null;
