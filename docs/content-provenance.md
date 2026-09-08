@@ -92,18 +92,23 @@ The [National Ocean Service reuse statement](https://oceanservice.noaa.gov/discl
 
 ### NASA and JPL: 28 cards
 
-Twenty-seven cards belong to Space oddities; one added Working lives card uses NASA's own history of Langley's human computers. Of the space cards, six concern human spaceflight or mission engineering:
+Twenty-seven cards belong to Space oddities, combining human spaceflight missions, engineering hazards, planetary anomalies, and astronomical naming history:
 
-| Card                         | Source                                                                                                                                                                                 |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `space-gemini-sandwich`      | Jennifer Ross-Nazzal, [Fallout from the Unauthorized Gemini III Space Sandwich](https://www.nasa.gov/history/fallout-from-the-unauthorized-gemini-iii-space-sandwich/)                 |
-| `space-apollo-golf-tool`     | John Uri, [50 Years Ago: Apollo 14 Lands at Fra Mauro](https://www.nasa.gov/history/50-years-ago-apollo-14-lands-at-fra-mauro/)                                                        |
-| `space-apollo-feather`       | [The Apollo 15 Hammer-Feather Drop](https://science.nasa.gov/resource/the-apollo-15-hammer-feather-drop/), including its citation to the Apollo 15 Preliminary Science Report, p. 2-11 |
-| `space-gemini-music`         | [55 Years Ago: The Spirit of 76 — The First Rendezvous in Space](https://www.nasa.gov/history/55-years-ago-the-spirit-of-76-the-first-rendezvous-in-space/)                            |
-| `space-curiosity-wheel-code` | JPL, [Rover Leaves Tracks in Morse Code](https://www.jpl.nasa.gov/news/rover-leaves-tracks-in-morse-code/)                                                                             |
-| `space-moon-trees`           | [Moon Trees](https://www.nasa.gov/history/moon-trees/), Apollo 14 section                                                                                                              |
+| Card                          | Source                                                                                                                                                             |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `space-gemini-sandwich`       | Jennifer Ross-Nazzal, [Fallout from the Unauthorized Gemini III Space Sandwich](https://www.nasa.gov/history/fallout-from-the-unauthorized-gemini-iii-space-sandwich/)            |
+| `space-apollo-golf-tool`      | John Uri, [50 Years Ago: Apollo 14 Lands at Fra Mauro](https://www.nasa.gov/history/50-years-ago-apollo-14-lands-at-fra-mauro/)                                                   |
+| `space-salyut-7-frozen`       | [NASA SP-4225 — Mir Hardware Heritage: Salyut 7 Principal Expedition 4](https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/documentation/mhh/mirheritage.pdf)        |
+| `space-gemini-music`          | [55 Years Ago: The Spirit of 76 — The First Rendezvous in Space](https://www.nasa.gov/history/55-years-ago-the-spirit-of-76-the-first-rendezvous-in-space/)                       |
+| `space-curiosity-wheel-code`  | JPL, [Rover Leaves Tracks in Morse Code](https://www.jpl.nasa.gov/news/rover-leaves-tracks-in-morse-code/)                                                                        |
+| `space-moon-trees`            | [Moon Trees](https://www.nasa.gov/history/moon-trees/), Apollo 14 section                                                                                           |
+| `space-soviet-shotgun`        | [BBC News — Sent into space: Guns, a lamb chop and sea urchin sperm](https://www.bbc.com/news/uk-england-34964686)                                                                 |
+| `space-scent-of-space`        | [BBC Future — From cat urine to gunpowder: Exploring the peculiar smells of outer space](https://www.bbc.com/future/article/20250522-what-does-outer-space-smell-like)           |
+| `space-aldrin-communion`      | [BBC News — Sent into space: Guns, a lamb chop and sea urchin sperm](https://www.bbc.com/news/uk-england-34964686)                                                                 |
+| `space-south-atlantic-anomaly`| [NASA — Seeing Cosmic Rays in Space](https://www.nasa.gov/wp-content/uploads/2021/11/seeingcosmicraysinspace.pdf)                                                                 |
+| `space-pencil-graphite-hazard`| [Scientific American — Fact or Fiction?: NASA Spent Millions to Develop a Pen](https://www.scientificamerican.com/article/fact-or-fiction-nasa-spen/)                             |
 
-The remaining twenty-one space cards use these directly retrieved NASA Science pages:
+The remaining sixteen space cards use these directly retrieved NASA Science pages:
 
 | Source                                                             | Cards and supporting sections                                                                          |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
@@ -114,11 +119,9 @@ The remaining twenty-one space cards use these directly retrieved NASA Science p
 | [Titan Facts](https://science.nasa.gov/saturn/moons/titan/facts/)  | 2: hydrocarbon lakes; organic dune grains (Introduction, Surface, Atmosphere)                          |
 | [Enceladus](https://science.nasa.gov/saturn/moons/enceladus/)      | 1: jets supplying Saturn's E ring (Overview)                                                           |
 | [Io](https://science.nasa.gov/jupiter/jupiter-moons/io/)           | 1: volcanism erasing impact craters (opening explanation)                                              |
-| [Mars Facts](https://science.nasa.gov/mars/facts/)                 | 4: rust colour; Olympus Mons; Valles Marineris; possible fate of Phobos                                |
-| [Jupiter Facts](https://science.nasa.gov/jupiter/jupiter-facts/)   | 2: Great Red Spot; rapid rotation                                                                      |
+| [Mars Facts](https://science.nasa.gov/mars/facts/)                 | 1: possible fate of Phobos (Moons and Rings)                                                           |
 | [Europa](https://science.nasa.gov/jupiter/jupiter-moons/europa/)   | 1: evidence for a subsurface ocean                                                                     |
 | [Pluto Facts](https://science.nasa.gov/dwarf-planets/pluto/facts/) | 2: Venetia Burney's name suggestion; dwarf-planet classification                                       |
-
 These are original factual summaries, not copied article passages. NASA's [content-use guidance](https://www.nasa.gov/nasa-brand-center/images-and-media/) describes the general U.S. reuse status of NASA content while preserving restrictions on third-party material, branding, endorsement, and identifiable people in promotional material. Source links are factual disclosure only; no NASA review or endorsement is implied. NASA is not responsible for the accuracy of these AI-assisted game formulations.
 
 JPL is managed by the California Institute of Technology; **do not assume that every JPL article or asset is public domain merely because its URL ends in nasa.gov**. The Curiosity card uses the mission operator's primary engineering account as evidence for an independently worded fact. No license to republish its prose, photographs, or graphics is asserted or needed for this collection. The distinction between an underlying principle/discovery and its protected written or illustrated expression is explained in the U.S. Copyright Office's [Circular 33](https://www.copyright.gov/circs/circ33.pdf).

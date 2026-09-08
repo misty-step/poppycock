@@ -31,14 +31,14 @@ export const spaceOddities = definePack(
       },
     },
     {
-      key: "space-apollo-feather",
-      question: "Why did Apollo 15 use a falcon feather alongside a geological hammer on the Moon?",
-      answer:
-        "To drop them together and show that both fall at the same rate without air resistance.",
+      key: "space-salyut-7-frozen",
+      question:
+        "What eerie condition did cosmonauts find inside the dead Soviet Salyut 7 station during their 1985 rescue mission?",
+      answer: "It was pitch-black, below freezing, and coated in a thick layer of frost and ice.",
       source: {
-        title: "NASA Science — The Apollo 15 Hammer-Feather Drop",
-        url: "https://science.nasa.gov/resource/the-apollo-15-hammer-feather-drop/",
-        note: "Original game wording based on the demonstration summary and the cited Apollo 15 Preliminary Science Report, p. 2-11. No transcript or video reused.",
+        title: "NASA SP-4225 — Mir Hardware Heritage: Salyut 7 Principal Expedition 4",
+        url: "https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/documentation/mhh/mirheritage.pdf",
+        note: "Original question and factual summary. Cosmonauts Dzhanibekov and Savinykh docked manually with the dead station; all systems were dark and freezing with frost on every surface.",
       },
     },
     {
@@ -200,54 +200,60 @@ export const spaceOddities = definePack(
       },
     },
     {
-      key: "space-mars-rust",
-      question: "Why does Mars look reddish from a distance?",
-      answer: "Iron in its rocks, dust, and soil oxidizes, or rusts.",
+      key: "space-soviet-shotgun",
+      question:
+        "Why was a triple-barreled shotgun with a machete stock included in Soviet cosmonaut survival kits?",
+      answer: "To fend off aggressive brown bears and wolves after landing in Siberia.",
       source: {
-        title: "NASA Science — Mars Facts",
-        url: "https://science.nasa.gov/mars/facts/",
-        note: "Original game wording based on the Namesake and Surface sections. Up close the surface also shows brown, gold, and tan.",
+        title: "BBC News — Sent into space: Guns, a lamb chop and sea urchin sperm",
+        url: "https://www.bbc.com/news/uk-england-34964686",
+        note: "Original question and factual summary. Soviet cosmonauts carried the TP-82 triple-barrel pistol and machete stock for protection against wildlife if stranded after Earth landing.",
       },
     },
     {
-      key: "space-olympus-mons",
-      question: "What makes Olympus Mons stand out among volcanoes in the solar system?",
-      answer: "It is the largest, more than 25 miles tall from base to summit.",
+      key: "space-scent-of-space",
+      question:
+        "What distinct scent do spacewalking astronauts consistently report when re-entering the spacecraft airlock?",
+      answer: "Hot metal, charred meat, and spent gunpowder.",
       source: {
-        title: "NASA Science — Mars Facts",
-        url: "https://science.nasa.gov/mars/facts/",
-        note: "Original game wording based on The Largest Volcano. Earth's Mount Everest is cited only as a smaller comparison, not as a Mars feature.",
+        title:
+          "BBC Future — From cat urine to gunpowder: Exploring the peculiar smells of outer space",
+        url: "https://www.bbc.com/future/article/20250522-what-does-outer-space-smell-like",
+        note: "Original question and factual summary. Astronauts report persistent smells of hot metal, burnt steak, and spent gunpowder clinging to suits after spacewalks.",
       },
     },
     {
-      key: "space-valles-marineris",
-      question: "How vast is Mars's canyon system Valles Marineris?",
-      answer:
-        "Long enough to stretch from California to New York, and the solar system's largest canyon.",
+      key: "space-aldrin-communion",
+      question:
+        "What private religious ritual did Buzz Aldrin perform inside the Lunar Module shortly after landing on the Moon?",
+      answer: "He took Christian communion with wine and bread.",
       source: {
-        title: "NASA Science — Mars Facts",
-        url: "https://science.nasa.gov/mars/facts/",
-        note: "Original game wording based on A Very Large Canyon. Length, not depth, is the California-to-New-York comparison.",
+        title: "BBC News — Sent into space: Guns, a lamb chop and sea urchin sperm",
+        url: "https://www.bbc.com/news/uk-england-34964686",
+        note: "Original question and factual summary. Aldrin poured communion wine into a chalice and consumed consecrated bread inside the Eagle before the moonwalk.",
       },
     },
     {
-      key: "space-great-red-spot",
-      question: "What is Jupiter's Great Red Spot?",
-      answer: "A giant storm bigger than Earth that has raged for hundreds of years.",
+      key: "space-south-atlantic-anomaly",
+      question:
+        "What eerie phenomenon do astronauts experience when passing through the 'South Atlantic Anomaly' in orbit?",
+      answer: "Seeing phantom flashes of light in their eyes even with eyelids closed.",
       source: {
-        title: "NASA Science — Jupiter Facts",
-        url: "https://science.nasa.gov/jupiter/jupiter-facts/",
-        note: "Original game wording based on the introduction and atmosphere sections. Observed for more than 300 years.",
+        title: "NASA — Seeing Cosmic Rays in Space",
+        url: "https://www.nasa.gov/wp-content/uploads/2021/11/seeingcosmicraysinspace.pdf",
+        note: "Original question and factual summary. Trapped high-energy protons striking astronaut retinas cause visible light flashes in the dark; radiation also triggers laptop crashes.",
       },
     },
     {
-      key: "space-jupiter-short-day",
-      question: "What extreme timekeeping fact belongs to Jupiter despite its huge size?",
-      answer: "It has the shortest day in the solar system, about 9.9 hours.",
+      key: "space-pencil-graphite-hazard",
+      question:
+        "Why did both NASA and Soviet space programs stop using ordinary pencils in spacecraft?",
+      answer: "Broken graphite conducts electricity and floats into circuitry, risking fires.",
       source: {
-        title: "NASA Science — Jupiter Facts",
-        url: "https://science.nasa.gov/jupiter/jupiter-facts/",
-        note: "Original game wording based on the opening and Orbit and Rotation sections. A Jovian year is about 12 Earth years.",
+        title:
+          "Scientific American — Fact or Fiction?: NASA Spent Millions to Develop a Pen that Would Write in Space",
+        url: "https://www.scientificamerican.com/article/fact-or-fiction-nasa-spen/",
+        note: "Original question and factual summary. Pencils were replaced by pressurized Fisher space pens because floating conductive graphite shards caused electrical short circuits and fire hazards.",
       },
     },
     {
