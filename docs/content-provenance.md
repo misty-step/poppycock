@@ -39,16 +39,22 @@ Questions and factual answers were drafted for Poppycock with AI assistance from
 
 ## Sources and reuse basis
 
-### Historical dictionary: 54 cards
+### Odd words and Curious objects: 54 cards
 
-The `word-*` and `object-*` cards use the entries linked individually at [Webster's 1913](https://www.websters1913.com/). The underlying 1913 dictionary text is public domain in the United States. The [Project Gutenberg catalog for Webster's Unabridged Dictionary, ebook 29765](https://www.gutenberg.org/ebooks/29765) independently identifies its historical Webster dictionary text as public domain in the USA. Its [accessible text](https://www.gutenberg.org/ebooks/29765.txt.utf-8) and [license explanation](https://www.gutenberg.org/policy/license.html) were also consulted.
+Twenty-seven cards in `Odd words` and twenty-one cards in `Curious objects` draw from individual public-domain entries in [Webster's 1913](https://www.websters1913.com/) and [Project Gutenberg catalog ebook 29765](https://www.gutenberg.org/ebooks/29765) ([accessible text](https://www.gutenberg.org/ebooks/29765.txt.utf-8), [license explanation](https://www.gutenberg.org/policy/license.html)).
 
-The deck reuses or paraphrases the historical definitions, not the modern host's site design or any claimed new editorial material. Most definitions are shortened or restated; `object-scrutoire` retains the brief definition “A writing desk.” Dictionary cards explicitly identify public-domain material in their notes. Public-domain status here is a U.S. statement, not a universal license determination for every jurisdiction.
+Six cards in `Curious objects` draw from verified historical artifacts preserved by the Victoria and Albert Museum, the Science Museum Group, National Museums Scotland, and BBC HistoryExtra:
 
-`word-brontolith` needs a cross-reference: its entry defines it as an _aerolite_. The separately consulted [Aërolite entry](https://www.websters1913.com/words/A%C3%ABrolite) explains that this is a stone or metallic mass fallen from space, a meteorite. The card uses that explanation rather than replacing one obscure word with another.
+| Card                    | Source                                                                                                                                                                                            |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `object-antimonial-cup` | [Victoria and Albert Museum — The antimonial cup](https://www.vam.ac.uk/articles/the-antimonial-cup)                                                                                              |
+| `object-mortsafe`       | [National Museums Scotland — An unsolved mystery: The coffins found on Arthur's Seat](https://www.nms.ac.uk/discover-catalogue/the-coffins-found-on-arthurs-seat)                                 |
+| `object-lovers-eye`     | [Victoria and Albert Museum — Eye with a blue iris looking right](https://collections.vam.ac.uk/item/O1067699/eye-with-a-blue-iris-eye-miniature-unknown/)                                       |
+| `object-fuddling-cup`   | [Victoria and Albert Museum — Fuddling Cup](https://collections.vam.ac.uk/item/O21042/fuddling-cup-unknown/)                                                                                      |
+| `object-bamboo-flea-trap` | [Science Museum Group Collection — Bamboo flea trap, China, 1751-1850](https://collection.sciencemuseumgroup.org.uk/objects/co147562/bamboo-flea-trap-china-1751-1850)                         |
+| `object-drunkards-cloak` | [BBC HistoryExtra — Q&A: what was a drunkard's cloak used for?](https://www.historyextra.com/period/stuart/medieval-punishments-what-was-drunkards-cloak/)                                     |
 
-The Gutenberg links above are scholarly acknowledgements, not branding of a redistributed Gutenberg ebook. No ebook, Gutenberg wrapper, cover, or trademark asset is shipped with the game. Gutenberg's license explanation expressly distinguishes acknowledgements/reference links from use of its trademark on distributed ebooks.
-
+The deck reuses or paraphrases the historical definitions and object records, not the modern hosts' site designs. `word-brontolith` cross-references the public-domain Aërolite definition. Gutenberg links are scholarly acknowledgements only; no ebook, Gutenberg wrapper, or trademark asset is shipped.
 ### Wild nature: 27 cards
 
 Nineteen cards cite NOAA Ocean Exploration and National Ocean Service resources for marine biology, hydrothermal vents, deep-sea ecology, and geological formations. Eight cards draw verified, extraordinary biological adaptations from peer-reviewed research documented by National Geographic, New Scientist, BBC, and Smithsonian Magazine:

@@ -110,13 +110,15 @@ export const curiousObjects = definePack(
       },
     },
     {
-      key: "object-porringer",
-      question: "What would a child traditionally use a 'porringer' for?",
-      answer: "Eating porridge from a small bowl or cup.",
+      key: "object-antimonial-cup",
+      question:
+        "In 17th-century England, how did doctors use a small metal 'antimonial cup' to treat patients?",
+      answer:
+        "They left wine in it overnight to leach toxic antimony so the patient would vomit violently.",
       source: {
-        title: "Webster's 1913 — Porringer",
-        url: "https://www.websters1913.com/words/Porringer",
-        note: "Original question; paraphrase of the public-domain porridge-dish definition, especially a vessel for feeding children.",
+        title: "Victoria and Albert Museum — The antimonial cup",
+        url: "https://www.vam.ac.uk/articles/the-antimonial-cup",
+        note: "Wine stored in the antimony alloy cup dissolved metallic salts, functioning as an emetic to purge ailments.",
       },
     },
     {
@@ -130,13 +132,16 @@ export const curiousObjects = definePack(
       },
     },
     {
-      key: "object-scrutoire",
-      question: "What piece of furniture was called a 'scrutoire'?",
-      answer: "A writing desk.",
+      key: "object-mortsafe",
+      question:
+        "In 19th-century Scotland, what was a heavy iron 'mortsafe' locked over a fresh grave used for?",
+      answer:
+        "To prevent resurrectionists and grave robbers from exhuming the corpse for medical dissection.",
       source: {
-        title: "Webster's 1913 — Scrutoire",
-        url: "https://www.websters1913.com/words/Scrutoire",
-        note: "Original question; the brief public-domain definition is retained.",
+        title:
+          "National Museums Scotland — An unsolved mystery: The coffins found on Arthur's Seat",
+        url: "https://www.nms.ac.uk/discover-catalogue/the-coffins-found-on-arthurs-seat",
+        note: "Families locked iron cages over coffins for six weeks until the body decomposed beyond anatomical use.",
       },
     },
     {
@@ -200,13 +205,14 @@ export const curiousObjects = definePack(
       },
     },
     {
-      key: "object-astrolabe",
-      question: "What did an astronomer or navigator do with an 'astrolabe'?",
-      answer: "Observe or show the positions of the stars.",
+      key: "object-lovers-eye",
+      question: "In late Georgian Britain, what was a 'lover's eye' piece of jewelry?",
+      answer:
+        "A painted miniature of just one eye, worn so the wearer could gaze upon a lover without revealing their identity.",
       source: {
-        title: "Webster's 1913 — Astrolabe",
-        url: "https://www.websters1913.com/words/Astrolabe",
-        note: "Original question; public-domain astronomical sense 1. Later planisphere and 18th-century altitude-circle senses are not required.",
+        title: "Victoria and Albert Museum — Eye with a blue iris looking right",
+        url: "https://collections.vam.ac.uk/item/O1067699/eye-with-a-blue-iris-eye-miniature-unknown/",
+        note: "Watercolour eye miniatures mounted in rings or brooches served as intimate, anonymous tokens of affection.",
       },
     },
     {
@@ -240,23 +246,25 @@ export const curiousObjects = definePack(
       },
     },
     {
-      key: "object-snuffers",
-      question: "What household job are 'snuffers' made for?",
-      answer: "Cropping and holding the snuff of a candle.",
+      key: "object-fuddling-cup",
+      question: "What was the trick behind an English 17th-century 'fuddling cup'?",
+      answer:
+        "It was three or more interlinked cups connected by hidden channels so drinking drained them all together.",
       source: {
-        title: "Webster's 1913 — Snuffers",
-        url: "https://www.websters1913.com/words/Snuffers",
-        note: "Original question; public-domain definition used nearly intact.",
+        title: "Victoria and Albert Museum — Fuddling Cup",
+        url: "https://collections.vam.ac.uk/item/O21042/fuddling-cup-unknown/",
+        note: "A puzzle drinking vessel designed as a tavern game where users had to empty all chambers without spilling.",
       },
     },
     {
-      key: "object-sconce",
-      question: "In the lighting sense, what is a wall 'sconce'?",
-      answer: "A fixed hanging or projecting candlestick.",
+      key: "object-bamboo-flea-trap",
+      question:
+        "In 18th-century China, what was a hollow, perforated bamboo cylinder placed inside a bed used for?",
+      answer: "Trapping fleas on a removable sticky inner tube coated in birdlime.",
       source: {
-        title: "Webster's 1913 — Sconce",
-        url: "https://www.websters1913.com/words/Sconce",
-        note: "Original question; public-domain lighting sense of a hanging or projecting candlestick, not the fort, helmet, or skull senses.",
+        title: "Science Museum Group Collection — Bamboo flea trap, China, 1751-1850",
+        url: "https://collection.sciencemuseumgroup.org.uk/objects/co147562/bamboo-flea-trap-china-1751-1850",
+        note: "A slotted outer cylinder allowed biting fleas to enter and adhere to the sticky inner core.",
       },
     },
     {
@@ -270,13 +278,15 @@ export const curiousObjects = definePack(
       },
     },
     {
-      key: "object-retort",
-      question: "In a laboratory, what is a 'retort' used for?",
-      answer: "Heating substances so they distill or decompose.",
+      key: "object-drunkards-cloak",
+      question:
+        "In 17th-century England, what kind of garment was the humiliating 'drunkard's cloak'?",
+      answer:
+        "A wooden ale barrel with holes cut for the head and arms, worn while paraded through town.",
       source: {
-        title: "Webster's 1913 — Retort",
-        url: "https://www.websters1913.com/words/Retort",
-        note: "Original question; public-domain chemical-vessel sense, not the witty-reply sense. Named from its bent shape.",
+        title: "BBC HistoryExtra — Q&A: what was a drunkard's cloak used for?",
+        url: "https://www.historyextra.com/period/stuart/medieval-punishments-what-was-drunkards-cloak/",
+        note: "Also known as the Newcastle cloak, this barrel pillory was used to publicly shame habitual drunkenness.",
       },
     },
   ],
