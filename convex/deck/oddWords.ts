@@ -242,7 +242,8 @@ export const oddWords = definePack(
     },
     {
       key: "word-fustilugs",
-      question: "In 17th-century English slang, what sort of person was dismissed as a 'fustilugs'?",
+      question:
+        "In 17th-century English slang, what sort of person was dismissed as a 'fustilugs'?",
       answer: "A gross, clumsy, and unwieldy person.",
       source: {
         title: "Webster's 1913 — Fustilugs",
