@@ -182,7 +182,7 @@ function RoundPhase({ game, token, host, online, viewerId }: GameStageProps) {
   }
 
   const question = (
-    <section className="min-w-0 space-y-3" aria-label="This round's question">
+    <section className="question-block min-w-0 space-y-3" aria-label="This round's question">
       <p className="round-category inline-flex max-w-full text-sm font-bold [overflow-wrap:anywhere]">
         {game.prompt.category}
       </p>

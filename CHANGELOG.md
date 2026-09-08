@@ -3,7 +3,7 @@
 ## Unreleased
 
 - Rebuilt the visual design as a party game rather than a calm tabletop: a lilac room, grape ink and actions, marigold entrance ticket, coral invitation board, mint question bubbles, speech-bubble corners, and flat printed shadows.
-- Made Fredoka the voice of the game across the wordmark, headlines, titles, questions, round markers, and score totals; questions now scale to their own column instead of breaking apart in the narrow reveal layout.
+- Made Fredoka the voice of the game across the wordmark, headlines, titles, questions, round markers, and score totals. Question type uses container query units from the wrapping question section so a narrow reveal column shrinks the heading instead of using the viewport and breaking the sentence.
 - Gave the entrance a real hook — “Your friends are full of it.” — with a labelled example bluff in a speech bubble and a small cast of characters below the form, so phones still reach the inputs first.
 - Celebrated results: a lilac winner banner with the winner's portrait on a marigold burst, a trophy-marked scoreboard, a clearer round marker and category chip, and “The truth, at last!” at reveal. Questions, answers, scores, ties, and every action label stay literal.
 - Moved keyboard focus to a distinct blue so a focused control is never mistaken for a selected one; all new party surfaces carry darkened rather than faded supporting text.

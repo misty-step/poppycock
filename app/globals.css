@@ -500,8 +500,11 @@
       display: none;
     }
   }
-  .question-card {
+  .question-block {
     container-type: inline-size;
+    min-width: 0;
+  }
+  .question-card {
     min-width: 0;
     border: 1px solid color-mix(in srgb, var(--foreground) 18%, transparent);
     border-radius: 24px 24px 24px 6px;
