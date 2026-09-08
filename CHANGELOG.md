@@ -4,6 +4,7 @@
 
 - Split the sourced deck into packs. A match prefers a fresh category each round, loads that pack, and picks uniformly among cards that are not this game's or recently seen. A full recent-history list cannot repeat a card already used in the current game.
 - Added three expansion packs — The sea, Lost gear, and Rarer words — 54 sourced cards, bringing the catalog to 270. The original 216 keys are unchanged. Still a fixed, sourced, AI-assisted editorial deck; no runtime generation.
+- Overhauled 54 cards across `Bright ideas`, `Kitchen secrets`, and `Remarkable places`. Replaced textbook trivia and single-source summaries with genuine Balderdash engines: eccentric patents (automatic hat-tippers, chicken eyeglasses, dimple indenters, anti-eating face cages, centrifuge birthing tables), shocking culinary customs (toast sandwiches, ambergris eggs, ortolan napkins, jumping maggot cheese, fermented auk birds in seal skin, virgin boy eggs), and bizarre geographic anomalies (Centralia mine fires, Whittier's single-building city, Coober Pedy's underground dugouts, Baarle's living-room borders, and Colma's 1.5M dead residents).
 
 ## 1.2.0 — 2026-09-08
 

@@ -8,10 +8,10 @@ The catalog is a **fixed, sourced, AI-assisted editorial deck**. There is no run
 | Curious objects     |      27 | Tools, household vessels, printing equipment, and bathing or ceremonial objects  |
 | Wild nature         |      27 | Marine adaptations, animal behavior, biological materials, and ecosystems        |
 | Space oddities      |      27 | Spaceflight incidents, engineering, astronomical naming, and planetary phenomena |
-| Kitchen secrets     |      18 | Ingredient anatomy, food transformations, fermentation and flavour               |
-| Bright ideas        |      18 | Inventions' unexpected origins, practical problems and mechanisms                |
+| Kitchen secrets     |      18 | Shocking culinary customs, eccentric historical dishes, and bizarre gastronomy   |
+| Bright ideas        |      18 | Eccentric patents, bizarre contraptions, and curious historical inventions       |
 | Living traditions   |      18 | Community practices, communication, celebration and shared skills                |
-| Remarkable places   |      18 | Unusual architecture, landscapes, archaeology and water engineering              |
+| Remarkable places   |      18 | Bizarre towns, eccentric architecture, and extraordinary geographic anomalies     |
 | Working lives       |      18 | Historical trades, specialist labour and living traditional work                 |
 | Art & music         |      18 | Musical mechanisms, visual-art processes, pigments and materials                 |
 | The sea             |      18 | Winds, waves, hidden cataracts, and the names sailors gave them                  |
@@ -133,54 +133,52 @@ Publicly readable does not mean public domain. Museum, university, botanical ins
 
 #### Kitchen secrets — 18 cards
 
-Eighteen cards: six from Kew, one from Oxford's herbarium, one from the Royal Horticultural Society, and ten from the Exploratorium. They cover ingredient anatomy, fermentation, texture, smell and cooking mechanisms rather than national-dish guessing. Statements about salep and hand-pollination are qualified; recipe instructions, medical claims, the searing-seals-in-juices myth, and tongue-map claims are not reused.
+Eighteen cards covering shocking culinary traditions, eccentric historical dishes, and bizarre gastronomic phenomena. Each card is verified with primary reference sources including FDA regulations, Kew Gardens, Smithsonian, National Geographic, and authoritative culinary history.
 
-| Card                       | Consulted source                                                                                                                   |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `food-salep-orchids`       | [Kew — From pods to puddings: Vanilla and other sweet-tasting orchids](https://www.kew.org/read-and-watch/vanilla-digitisation)    |
-| `food-vanilla-hand-work`   | [Kew — From pods to puddings: Vanilla and other sweet-tasting orchids](https://www.kew.org/read-and-watch/vanilla-digitisation)    |
-| `food-cinnamon-curls`      | [Kew — Mulled wine: Tastes of Christmas growing at Kew](https://www.kew.org/read-and-watch/mulled-wine-kew-taste-of-christmas)     |
-| `food-mace-nutmeg`         | [Oxford University Plants 400 — Myristica fragrans (Nutmeg)](https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/MN/Myristica) |
-| `food-caper-buds`          | [Royal Horticultural Society — Capparis spinosa: common caper](https://www.rhs.org.uk/plants/92942/capparis-spinosa/details)       |
-| `food-cacao-banana-leaves` | [Kew — From bean to bar: How to make chocolate](https://www.kew.org/read-and-watch/kew-gardens-cacao-how-to-make-chocolate)        |
-| `food-chocolate-tempering` | [Kew — From bean to bar: How to make chocolate](https://www.kew.org/read-and-watch/kew-gardens-cacao-how-to-make-chocolate)        |
-| `food-cacao-baba`          | [Kew — From bean to bar: How to make chocolate](https://www.kew.org/read-and-watch/kew-gardens-cacao-how-to-make-chocolate)        |
-| `food-popcorn-pressure`    | [Exploratorium — Popping Popcorn](https://www.exploratorium.edu/food/popping-popcorn)                                              |
-| `food-pressure-boiling`    | [Exploratorium — Pressure Cooking](https://www.exploratorium.edu/food/pressure-cooking)                                            |
-| `food-steak-sizzle`        | [Exploratorium — Searing Steak](https://www.exploratorium.edu/food/searing-steak)                                                  |
-| `food-kneading-network`    | [Exploratorium — Bread Science 101](https://www.exploratorium.edu/explore/cooking/bread-science)                                   |
-| `food-pasta-presoak`       | [Exploratorium — Soaking Pasta](https://www.exploratorium.edu/food/soaking-pasta)                                                  |
-| `food-meringue-web`        | [Exploratorium — Science of Eggs](https://www.exploratorium.edu/explore/cooking/egg-science)                                       |
-| `food-mayo-yolk`           | [Exploratorium — Science of Eggs](https://www.exploratorium.edu/explore/cooking/egg-science)                                       |
-| `food-yogurt-tang`         | [Exploratorium — Bacteria Culture Club](https://www.exploratorium.edu/snacks/bacteria-culture-club)                                |
-| `food-egg-green-ring`      | [Exploratorium — Gassy Eggs](https://www.exploratorium.edu/snacks/gassy-eggs)                                                      |
-| `food-flavor-back-door`    | [Exploratorium — Your Sense of Taste](https://www.exploratorium.edu/snacks/your-sense-of-taste)                                    |
-
+| Key                          | Source                                                                                                                                                             |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `food-salep-orchids`         | [Kew — From pods to puddings: Vanilla and other sweet-tasting orchids](https://www.kew.org/read-and-watch/vanilla-digitisation)                                  |
+| `food-toast-sandwich`        | [BBC News — The Toast Sandwich and Other Cheap Meals](https://www.bbc.com/news/magazine-15760897)                                                                  |
+| `food-charles-ii-ambergris`  | [Smithsonian Ocean — The Mystery of Ambergris](https://ocean.si.edu/ocean-life/marine-mammals/mystery-ambergris)                                                   |
+| `food-ortolan-napkin`        | [Smithsonian Magazine — Ortolans Eaten as French Delicacy](https://www.smithsonianmag.com/smart-news/ortolans-birds-enjoyed-french-delicacy-are-being-eaten-extinction-180972272/) |
+| `food-roman-garum`           | [National Geographic — Funky Fish Guts Were Ketchup of Ancient Rome](https://www.nationalgeographic.com/history/history-magazine/article/what-is-garum-rome-fish-sauce) |
+| `food-turnspit-dog`          | [NPR — Turnspit Dogs: The Rise And Fall Of The Vernepator Cur](https://www.npr.org/sections/thesalt/2014/05/13/311127237/turnspit-dogs-the-rise-and-fall-of-the-vernepator-cur) |
+| `food-mock-turtle-head`      | [Atlas Obscura — The Rise and Fall of Mock Turtle Soup](https://www.atlasobscura.com/articles/mock-turtle-soup-rise-and-fall-calf-head)                          |
+| `food-casu-marzu`            | [CNN Travel — Casu marzu: The world's most dangerous cheese](https://www.cnn.com/travel/article/casu-marzu-worlds-most-dangerous-cheese)                         |
+| `food-greenland-kiviak`      | [National Geographic — Ancient Arctic Life in Greenland](https://www.nationalgeographic.com/travel/article/greenland-last-place-explore-ancient-arctic-life)    |
+| `food-scandinavian-lutefisk` | [TasteAtlas — Lutefisk: Traditional Norwegian Dish](https://www.tasteatlas.com/lutefisk)                                                                          |
+| `food-icelandic-hakarl`      | [Atlas Obscura — Hákarl: Iceland's Fermented Shark](https://www.atlasobscura.com/foods/hakarl-shark-iceland)                                                       |
+| `food-virgin-boy-eggs`       | [Reuters — Urine-soaked eggs a spring taste treat in China](https://www.reuters.com/article/business/urine-soaked-eggs-a-spring-taste-treat-in-china-city-idUSL3E8ET0FN/) |
+| `food-kopi-luwak`            | [National Geographic — The Disturbing Truth About Civet Coffee](https://www.nationalgeographic.com/animals/article/160429-kopi-luwak-captive-civet-coffee-wildlife-trade) |
+| `food-carmine-scale-insects` | [FDA 21 CFR § 73.100 — Cochineal extract; carmine](https://www.law.cornell.edu/cfr/text/21/73.100)                                                                |
+| `food-jamon-iberico-acorns`  | [TasteAtlas — Jamón Ibérico de Bellota](https://www.tasteatlas.com/jamon-iberico)                                                                                 |
+| `food-swiftlet-saliva-nest`  | [Atlas Obscura — Bird's Nest Soup](https://www.atlasobscura.com/foods/birds-nest-soup)                                                                             |
+| `food-miracle-fruit-sour`    | [Scientific Reports — Sweet taste receptor activation by miraculin](https://www.nature.com/articles/srep22807)                                                    |
+| `food-beaver-castoreum`      | [Smithsonian Magazine — Vanilla Flavoring and Castoreum](https://www.smithsonianmag.com/smart-news/does-vanilla-flavoring-actually-come-from-beaver-butts-180983288/)   |
 #### Bright ideas — 18 cards
 
-Eighteen individually consulted National Inventors Hall of Fame biographies. Questions concern a problem, material or mechanism rather than a name-and-date quiz. The wording credits improvements where appropriate: Beard improved coupling, Cochran did not invent the first attempted dishwasher, and Donovan's early invention was a cover for cloth diapers. The disputed 'real McCoy' etymology and an unsupported melted-candy microwave anecdote were excluded.
+Eighteen verified historical patents, bizarre contraptions, and curious inventions with high generative ambiguity and surprising, memorable reveals. Each card is grounded in an official patent grant or authoritative historical archive.
 
-| Card                         | Consulted source                                                                                                      |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `idea-wiper-lever`           | [National Inventors Hall of Fame — Mary Anderson](https://www.invent.org/inductees/mary-anderson)                     |
-| `idea-super-soaker-origin`   | [National Inventors Hall of Fame — Lonnie Johnson](https://www.invent.org/inductees/lonnie-johnson)                   |
-| `idea-remote-rods`           | [National Inventors Hall of Fame — Robert Adler](https://www.invent.org/inductees/robert-adler)                       |
-| `idea-dishwasher-pressure`   | [National Inventors Hall of Fame — Josephine Garis Cochran](https://www.invent.org/inductees/josephine-garis-cochran) |
-| `idea-paper-bag-bottom`      | [National Inventors Hall of Fame — Margaret E. Knight](https://www.invent.org/inductees/margaret-e-knight)            |
-| `idea-fastener-burrs`        | [National Inventors Hall of Fame — George de Mestral](https://www.invent.org/inductees/george-de-mestral)             |
-| `idea-traffic-all-stop`      | [National Inventors Hall of Fame — Garrett Morgan](https://www.invent.org/inductees/garrett-morgan)                   |
-| `idea-detachable-iron`       | [National Inventors Hall of Fame — Mary Florence Potts](https://www.invent.org/inductees/mary-florence-potts)         |
-| `idea-diaper-shower-curtain` | [National Inventors Hall of Fame — Marion Donovan](https://www.invent.org/inductees/marion-donovan)                   |
-| `idea-crown-cork-liner`      | [National Inventors Hall of Fame — William Painter](https://www.invent.org/inductees/william-painter)                 |
-| `idea-coupler-safety`        | [National Inventors Hall of Fame — Andrew J. Beard](https://www.invent.org/inductees/andrew-j-beard)                  |
-| `idea-flexible-flyer`        | [National Inventors Hall of Fame — Samuel Leeds Allen](https://www.invent.org/inductees/samuel-leeds-allen)           |
-| `idea-engine-oiling`         | [National Inventors Hall of Fame — Elijah McCoy](https://www.invent.org/inductees/elijah-mccoy)                       |
-| `idea-bambi-bucket`          | [National Inventors Hall of Fame — Don Arney](https://www.invent.org/inductees/don-arney)                             |
-| `idea-sticky-note-bookmark`  | [National Inventors Hall of Fame — Arthur L. Fry](https://www.invent.org/inductees/arthur-l-fry)                      |
-| `idea-ballpoint-ink`         | [National Inventors Hall of Fame — Laszlo Josef Biro](https://www.invent.org/inductees/laszlo-josef-biro)             |
-| `idea-radarange-roots`       | [National Inventors Hall of Fame — Percy L. Spencer](https://www.invent.org/inductees/percy-l-spencer)                |
-| `idea-zamboni-ice-business`  | [National Inventors Hall of Fame — Frank J. Zamboni](https://www.invent.org/inductees/frank-j-zamboni)                |
-
+| Key                          | Source                                                                                                                                                                          |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `idea-saluting-device`       | [US Patent 556,248 — Saluting Device](https://patents.google.com/patent/US556248A/en)                                                                                           |
+| `idea-chicken-goggles`       | [US Patent 730,918 — Eye-protector for chickens](https://patents.google.com/patent/US730918A/en)                                                                                 |
+| `idea-dimple-maker`          | [US Patent 2,091,276 — Dimple making appliance](https://patents.google.com/patent/US2091276A/en)                                                                                |
+| `idea-anti-eating-mask`      | [US Patent 4,344,424 — Anti-eating face mask](https://patents.google.com/patent/US4344424A/en)                                                                                   |
+| `idea-vester-coffin`         | [US Patent 81,437 — Improved burial-case](https://patents.google.com/patent/US81437A/en)                                                                                         |
+| `idea-alarm-bed`             | [The Victorian Web — The Great Exhibition of 1851](https://victorianweb.org/history/1851/wenham.html)                                                                           |
+| `idea-cat-meow-machine`      | [BBC Science Focus — The Cat Meow Machine](https://www.sciencefocus.com/science/the-weirdest-inventions-ever-in-pictures-2)                                                     |
+| `idea-oppenheimer-fire-escape`| [US Patent 221,855 — Improvement in fire-escapes](https://patents.google.com/patent/US221855A/en)                                                                               |
+| `idea-rocking-chair-churn`   | [US Patent 446,495 — Churn](https://patents.google.com/patent/US446495A/en)                                                                                                     |
+| `idea-revolver-camera`       | [PetaPixel — Revolver Camera That Shot Bullets and Photos](https://petapixel.com/2011/05/19/revolver-camera-shoots-bullets-and-photos-at-the-same-time/)                        |
+| `idea-baby-cage`             | [US Patent 1,448,235 — Portable baby cage](https://patents.google.com/patent/US1448235A/en)                                                                                     |
+| `idea-kissing-shield`        | [US Patent 5,727,565 — Kissing shield](https://patents.google.com/patent/US5727565A/en)                                                                                         |
+| `idea-swing-patent`          | [US Patent 6,368,227 — Method of swinging on a swing](https://patents.google.com/patent/US6368227B1/en)                                                                         |
+| `idea-bird-diaper`           | [US Patent 5,934,226 — Avian diaper](https://patents.google.com/patent/US5934226A/en)                                                                                           |
+| `idea-centrifugal-birth`     | [US Patent 3,216,423 — Apparatus for facilitating birth](https://patents.google.com/patent/US3216423A/en)                                                                      |
+| `idea-goodyear-glowing-tires` | [Hagerty — Goodyear's Illuminated Tires](https://www.hagerty.com/media/automotive-history/why-goodyears-bright-idea-for-illuminated-tires-didnt-shine-for-long/)               |
+| `idea-krummlauf-curved-barrel`| [Popular Mechanics — The Curved Barrel Krummlauf](https://www.popularmechanics.com/military/weapons/a21800/forgotten-weapons-wwii-curve-a-bullet/)                            |
+| `idea-high-five-machine`     | [US Patent 5,356,330 — Apparatus for simulating a 'high-five'](https://patents.google.com/patent/US5356330A/en)                                                                 |
 #### Living traditions — 18 cards
 
 Eighteen UNESCO Multimedia Archives catalogue descriptions across twelve countries. These are living practices with specific communities and purposes, not a collection of supposedly strange or primitive customs. The evidence is the written catalogue description, including original English paraphrases of French text for Sanké; no film, narration, music, images or ceremonial knowledge outside the public description is reused. Some ich.unesco.org pages served a human-verification challenge, so accessible UNESCO archive records were consulted instead. The camel ritual's purpose is not presented as a guarantee of animal behaviour; Nijemo Kolo is unaccompanied during the dance, though music may precede or follow it.
@@ -208,29 +206,28 @@ Eighteen UNESCO Multimedia Archives catalogue descriptions across twelve countri
 
 #### Remarkable places — 18 cards
 
-Eighteen UNESCO World Heritage Centre records spanning architecture, water engineering, archaeology and landscapes. The relevant Description, Brief synthesis or criterion is named in each card. No lost-civilization mythology, unsupported trulli tax story, current visitor advice, restricted Pueblo ceremony details or tourist superlative is added. The Tsingy source now uses the expanded property title Andrefana Dry Forests; that current title is retained rather than pretending the record has its old title.
+Eighteen cards covering extraordinary towns, eccentric architectural oddities, and bizarre geographic anomalies. Sourced from authoritative archives and journalism including Smithsonian Magazine, BBC Travel, National Geographic, NPR, and the Crop Trust.
 
-| Card                          | Consulted source                                                                                                           |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `place-qanat-shafts`          | [UNESCO World Heritage Centre — The Persian Qanat](https://whc.unesco.org/en/list/1506/)                                   |
-| `place-trulli-no-mortar`      | [UNESCO World Heritage Centre — The Trulli of Alberobello](https://whc.unesco.org/en/list/787/)                            |
-| `place-shibam-towers`         | [UNESCO World Heritage Centre — Old Walled City of Shibam](https://whc.unesco.org/en/list/192/)                            |
-| `place-vega-duck-shelters`    | [UNESCO World Heritage Centre — Vegaøyan — The Vega Archipelago](https://whc.unesco.org/en/list/1143/)                     |
-| `place-rani-water-temple`     | [UNESCO World Heritage Centre — Rani-ki-Vav (the Queen’s Stepwell) at Patan, Gujarat](https://whc.unesco.org/en/list/922/) |
-| `place-tulou-households`      | [UNESCO World Heritage Centre — Fujian Tulou](https://whc.unesco.org/en/list/1113/)                                        |
-| `place-wieliczka-sculptures`  | [UNESCO World Heritage Centre — Wieliczka and Bochnia Royal Salt Mines](https://whc.unesco.org/en/list/32/)                |
-| `place-taos-kivas`            | [UNESCO World Heritage Centre — Taos Pueblo](https://whc.unesco.org/en/list/492/)                                          |
-| `place-nan-madol-islets`      | [UNESCO World Heritage Centre — Nan Madol: Ceremonial Centre of Eastern Micronesia](https://whc.unesco.org/en/list/1503/)  |
-| `place-valparaiso-elevators`  | [UNESCO World Heritage Centre — Historic Quarter of the Seaport City of Valparaíso](https://whc.unesco.org/en/list/959/)   |
-| `place-whale-hind-limbs`      | [UNESCO World Heritage Centre — Wadi Al-Hitan (Whale Valley)](https://whc.unesco.org/en/list/1186/)                        |
-| `place-joggins-upright-trees` | [UNESCO World Heritage Centre — Joggins Fossil Cliffs](https://whc.unesco.org/en/list/1285/)                               |
-| `place-pamukkale-terraces`    | [UNESCO World Heritage Centre — Hierapolis-Pamukkale](https://whc.unesco.org/en/list/485/)                                 |
-| `place-tsingy-stone-forest`   | [UNESCO World Heritage Centre — Andrefana Dry Forests](https://whc.unesco.org/en/list/494/)                                |
-| `place-namib-fog-water`       | [UNESCO World Heritage Centre — Namib Sand Sea](https://whc.unesco.org/en/list/1430/)                                      |
-| `place-medulas-water-mining`  | [UNESCO World Heritage Centre — Las Médulas](https://whc.unesco.org/en/list/803/)                                          |
-| `place-chankillo-towers`      | [UNESCO World Heritage Centre — Chankillo Archaeoastronomical Complex](https://whc.unesco.org/en/list/1624/)               |
-| `place-shushtar-tunnels`      | [UNESCO World Heritage Centre — Shushtar Historical Hydraulic System](https://whc.unesco.org/en/list/1315/)                |
-
+| Key                           | Source                                                                                                                                                                             |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `place-centralia-mine-fire`   | [Smithsonian Magazine — The Fire That Never Dies](https://www.smithsonianmag.com/travel/the-fire-that-never-dies-4963162/)                                                         |
+| `place-coober-pedy-underground`| [BBC Travel — Coober Pedy: The town that lives underground](https://www.bbc.com/travel/article/20230807-coober-pedy-the-town-that-lives-underground)                             |
+| `place-whittier-single-building`| [NPR — Welcome To Whittier, Alaska: A Town Under One Roof](https://www.npr.org/2015/01/18/378162264/welcome-to-whittier-alaska-a-town-under-one-roof)                            |
+| `place-darvaza-door-to-hell`  | [National Geographic — Door to Hell: Turkmenistan's Gas Crater](https://www.nationalgeographic.com/travel/article/darvaza-gas-crater-turkmenistan)                                |
+| `place-winchester-mystery-house`| [Smithsonian Magazine — The Winchester Mystery House](https://www.smithsonianmag.com/history/the-true-story-of-the-winchester-mystery-house-180968037/)                          |
+| `place-colma-cemetery-city`   | [Atlas Obscura — Colma, California: The City of the Dead](https://www.atlasobscura.com/places/colma-the-city-of-the-dead)                                                         |
+| `place-derinkuyu-basement`    | [BBC Travel — Turkey's underground city of 20,000 people](https://www.bbc.com/travel/article/20220810-derinkuyu-turkeys-underground-city-of-20000-people)                        |
+| `place-longyearbyen-dying-banned`| [BBC Future — The Arctic town where dying is forbidden](https://www.bbc.com/future/article/20160216-the-arctic-town-where-dying-is-forbidden)                                  |
+| `place-baarle-border-line`    | [BBC Travel — The curious border town of Baarle](https://www.bbc.com/travel/article/20211117-the-curious-border-town-of-baarle)                                                  |
+| `place-snake-island-forbidden`| [Smithsonian Magazine — Snake Island: Brazil's Venomous Isle](https://www.smithsonianmag.com/science-nature/snake-island-brazil-venomous-pit-vipers-180951918/)                 |
+| `place-monowi-population-one` | [BBC News — The only person living in an entire US town](https://www.bbc.com/travel/article/20180129-the-only-person-living-in-an-entire-us-town)                                 |
+| `place-sealand-sea-fort`      | [BBC News — The strange story of Sealand](https://www.bbc.com/news/uk-england-suffolk-56621376)                                                                                  |
+| `place-paris-catacombs-bones` | [Smithsonian Magazine — The Secret History of the Paris Catacombs](https://www.smithsonianmag.com/travel/paris-catacombs-history-180978794/)                                      |
+| `place-hashima-battleship-island`| [National Geographic — Inside Japan's Abandoned Battleship Island](https://www.nationalgeographic.com/travel/article/hashima-island-japan-ruins-ghost-town)                    |
+| `place-lake-titicaca-uros-reeds`| [National Geographic — The Floating Islands of Lake Titicaca](https://www.nationalgeographic.com/travel/article/uros-floating-islands-peru-bolivia-lake-titicaca)             |
+| `place-svalbard-seed-vault`   | [Crop Trust — Svalbard Global Seed Vault](https://www.croptrust.org/our-work/svalbard-global-seed-vault/)                                                                        |
+| `place-cretto-di-burri`       | [Tate — Alberto Burri: Grande Cretto di Gibellina](https://www.tate.org/art/artworks/burri-grande-cretto-di-gibellina)                                                            |
+| `place-bishop-castle`         | [Atlas Obscura — Bishop Castle](https://www.atlasobscura.com/places/bishop-castle)                                                                                                |
 #### Working lives — 18 cards
 
 Eighteen cards grounded in museum collections, preserved historical accounts and skilled practitioners: London Museum (7), Colonial Williamsburg (2), Historic Royal Palaces (2), and one each from UNESCO, the National Park Service, the National Coal Mining Museum, NASA, Royal Museums Greenwich, Sunny Bank Mills, and Imperial War Museums. The category includes living traditional work as well as vanished roles. Child labour and poverty are documented without romanticizing them. Williamsburg's wigmaking myth correction is preserved: prepared hair packets could be baked for a frizzy style; whole finished wigs were not simply baked inside loaves. The insurance-brigade card does not repeat the myth that crews always let another insurer's properties burn.

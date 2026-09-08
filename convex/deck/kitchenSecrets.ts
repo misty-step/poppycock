@@ -4,7 +4,7 @@ export const kitchenSecrets = definePack(
   {
     key: "kitchen-secrets",
     title: "Kitchen secrets",
-    blurb: "Ingredient anatomy, food transformations, fermentation and flavour.",
+    blurb: "Shocking culinary customs, eccentric historical dishes, and bizarre gastronomy.",
     category: "Kitchen secrets",
     sort: 50,
   },
@@ -12,186 +12,199 @@ export const kitchenSecrets = definePack(
     {
       key: "food-salep-orchids",
       question:
-        "What botanical ingredient traditionally gives salep, used in Turkish dondurma, its thickening power?",
+        "What botanical ingredient traditionally gives Turkish dondurma ice cream its stretchy chew?",
       answer: "Powdered orchid tubers.",
       source: {
         title: "Kew — From pods to puddings: Vanilla and other sweet-tasting orchids",
         url: "https://www.kew.org/read-and-watch/vanilla-digitisation",
-        note: "Original question and factual paraphrase. Spicy orchids section; a traditional ingredient, not a claim about every commercial ice cream. No source prose or media reproduced.",
+        note: "Original question and factual summary. Salep is made from ground wild orchid tubers; gives Turkish mastic ice cream its dense, stretchy texture.",
       },
     },
     {
-      key: "food-vanilla-hand-work",
+      key: "food-toast-sandwich",
       question:
-        "What delicate job must workers do flower by flower on many commercial vanilla farms?",
-      answer: "Pollinate the flowers by hand.",
+        "What was the filling of the Victorian 'toast sandwich' published in Mrs. Beeton's 1861 cookbook?",
+      answer: "A slice of cold toast seasoned with salt and pepper.",
       source: {
-        title: "Kew — From pods to puddings: Vanilla and other sweet-tasting orchids",
-        url: "https://www.kew.org/read-and-watch/vanilla-digitisation",
-        note: "Original question and factual paraphrase. Botanical silver section describes the hand-pollination method; no exclusive bee species or cost claim. No source prose or media reproduced.",
+        title: "BBC News — The Toast Sandwich and Other Cheap Meals",
+        url: "https://www.bbc.com/news/magazine-15760897",
+        note: "Original question and factual summary. Published in Mrs. Beeton's 1861 Book of Household Management; places a slice of cold toast between two buttered slices of bread.",
       },
     },
     {
-      key: "food-cinnamon-curls",
-      question: "How does a cinnamon stick acquire its curled-up shape?",
-      answer: "Strips of inner bark curl naturally as they dry.",
-      source: {
-        title: "Kew — Mulled wine: Tastes of Christmas growing at Kew",
-        url: "https://www.kew.org/read-and-watch/mulled-wine-kew-taste-of-christmas",
-        note: "Original question and factual paraphrase. Cinnamon and Chopped back sections; medicinal claims and the recipe are not used. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-mace-nutmeg",
-      question: "How are the spices mace and nutmeg related before they reach the spice rack?",
-      answer: "Mace is the lacy covering around the seed that becomes nutmeg.",
-      source: {
-        title: "Oxford University Plants 400 — Myristica fragrans (Nutmeg)",
-        url: "https://herbaria.plants.ox.ac.uk/bol/plants400/Profiles/MN/Myristica",
-        note: "Original question and factual paraphrase. Stephen Harris's botanical description distinguishes the dried aril from the seed. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-caper-buds",
-      question: "What part of a caper bush goes into the little jars of ordinary capers?",
-      answer: "Its unopened flower buds, pickled or salted.",
-      source: {
-        title: "Royal Horticultural Society — Capparis spinosa: common caper",
-        url: "https://www.rhs.org.uk/plants/92942/capparis-spinosa/details",
-        note: "Original question and factual paraphrase. Plant description; caperberries are the separate fruit, not the buds asked about. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-cacao-banana-leaves",
+      key: "food-charles-ii-ambergris",
       question:
-        "Why are cacao beans traditionally tucked into a bed of banana leaves during fermentation?",
-      answer: "The leaves help keep the fermenting beans warm.",
+        "What costly perfume ingredient was King Charles II famously fond of having melted over his breakfast eggs?",
+      answer: "Ambergris, a waxy secretion produced in the guts of sperm whales.",
       source: {
-        title: "Kew — From bean to bar: How to make chocolate",
-        url: "https://www.kew.org/read-and-watch/kew-gardens-cacao-how-to-make-chocolate",
-        note: "Original question and factual paraphrase. Hannah Button and Ellen McHale's fermentation section; no claim that every producer uses leaves. No source prose or media reproduced.",
+        title: "Smithsonian Ocean — The Mystery of Ambergris",
+        url: "https://ocean.si.edu/ocean-life/marine-mammals/mystery-ambergris",
+        note: "Original question and factual summary. Records Charles II of England frequently seasoning his breakfast eggs with ambergris, the valuable sperm-whale digestive byproduct.",
       },
     },
     {
-      key: "food-chocolate-tempering",
-      question: "What is a chocolatier trying to control by carefully tempering melted chocolate?",
-      answer: "How its cocoa-butter crystals form, for a glossy bar with a clean snap.",
-      source: {
-        title: "Kew — From bean to bar: How to make chocolate",
-        url: "https://www.kew.org/read-and-watch/kew-gardens-cacao-how-to-make-chocolate",
-        note: "Original question and factual paraphrase. Tempering section; omits the source's questionable count of crystal forms and all recipe instructions. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-cacao-baba",
-      question: "What is the 'baba' found inside a freshly opened cacao pod?",
-      answer: "Sweet, edible white pulp surrounding the beans.",
-      source: {
-        title: "Kew — From bean to bar: How to make chocolate",
-        url: "https://www.kew.org/read-and-watch/kew-gardens-cacao-how-to-make-chocolate",
-        note: "Original question and factual paraphrase. Extracting the beans section; flavor comparisons are subjective and are omitted. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-popcorn-pressure",
-      question: "What actually forces a popcorn kernel to burst open?",
-      answer: "Steam pressure building inside its tough outer coat.",
-      source: {
-        title: "Exploratorium — Popping Popcorn",
-        url: "https://www.exploratorium.edu/food/popping-popcorn",
-        note: "Original question and factual paraphrase. Mechanism paragraphs explain trapped water, the shell bursting, and expanding starch. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-pressure-boiling",
-      question: "Why can a pressure cooker cook food faster than an ordinary pot of boiling water?",
-      answer: "Higher pressure lets the water boil at a higher temperature.",
-      source: {
-        title: "Exploratorium — Pressure Cooking",
-        url: "https://www.exploratorium.edu/food/pressure-cooking",
-        note: "Original question and factual paraphrase. Water and pressure explanation; no claim that all cookers reach one fixed temperature. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-steak-sizzle",
-      question: "What produces the loud sizzle when a steak first meets a very hot pan?",
-      answer: "Water at the surface rapidly turning into steam.",
-      source: {
-        title: "Exploratorium — Searing Steak",
-        url: "https://www.exploratorium.edu/food/searing-steak",
-        note: "Original question and factual paraphrase. Protein and water explanation; the card does not repeat the myth that searing seals in juices. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-kneading-network",
-      question: "What invisible structure does kneading develop in a wheat bread dough?",
-      answer: "A stretchy gluten network that can hold gas bubbles.",
-      source: {
-        title: "Exploratorium — Bread Science 101",
-        url: "https://www.exploratorium.edu/explore/cooking/bread-science",
-        note: "Original question and factual paraphrase. Flour and gluten paragraphs; the question specifies wheat rather than every kind of bread. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-pasta-presoak",
+      key: "food-ortolan-napkin",
       question:
-        "Why can dried spaghetti soaked in room-temperature water later finish cooking so quickly?",
-      answer: "It has already absorbed the water; heat still has to cook its starch and proteins.",
+        "Why do French gourmets traditionally drape a white napkin over their head when eating an ortolan bunting?",
+      answer: "To trap the aromas and hide their gluttony from God while eating it whole.",
       source: {
-        title: "Exploratorium — Soaking Pasta",
-        url: "https://www.exploratorium.edu/food/soaking-pasta",
-        note: "Original question and factual paraphrase. Distinguishes hydration from cooking; soaked pasta alone is not described as fully cooked. No source prose or media reproduced.",
+        title: "Smithsonian Magazine — Ortolans Eaten as French Delicacy",
+        url: "https://www.smithsonianmag.com/smart-news/ortolans-birds-enjoyed-french-delicacy-are-being-eaten-extinction-180972272/",
+        note: "Original question and factual summary. The traditional ritual requires draping a large napkin over the head to trap steam and aromas, hide spitting bones, and symbolically hide from God.",
       },
     },
     {
-      key: "food-meringue-web",
-      question: "What keeps the air bubbles trapped when egg whites are beaten into meringue?",
-      answer: "Unfolded egg proteins link up into a network around the bubbles.",
-      source: {
-        title: "Exploratorium — Science of Eggs",
-        url: "https://www.exploratorium.edu/explore/cooking/egg-science",
-        note: "Original question and factual paraphrase. Beat 'em section; no recipe or instructional wording reused. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-mayo-yolk",
-      question: "What useful job does egg yolk do in a traditional mayonnaise?",
-      answer: "It keeps tiny oil droplets dispersed instead of letting them join back together.",
-      source: {
-        title: "Exploratorium — Science of Eggs",
-        url: "https://www.exploratorium.edu/explore/cooking/egg-science",
-        note: "Original question and factual paraphrase. Mix 'em up section; proteins and lecithin act as emulsifiers. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-yogurt-tang",
-      question: "What gives plain yogurt its tang even when nobody has added lemon juice?",
-      answer: "Lactic acid made by bacteria as they consume milk sugar.",
-      source: {
-        title: "Exploratorium — Bacteria Culture Club",
-        url: "https://www.exploratorium.edu/snacks/bacteria-culture-club",
-        note: "Original question and factual paraphrase. What's Going On section; no food-preparation or storage-safety instructions reproduced. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-egg-green-ring",
-      question: "What creates the gray-green ring sometimes seen around a hard-boiled egg yolk?",
-      answer: "Sulfur compounds from the white react with iron in the yolk.",
-      source: {
-        title: "Exploratorium — Gassy Eggs",
-        url: "https://www.exploratorium.edu/snacks/gassy-eggs",
-        note: "Original question and factual paraphrase. What's Going On section identifies iron sulfide; not a freshness or safety test. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "food-flavor-back-door",
+      key: "food-roman-garum",
       question:
-        "How can a candy's aroma reach your nose while the candy is still inside your mouth?",
-      answer: "Scent molecules travel up a passage behind the throat into the nose.",
+        "What was the primary raw ingredient fermented in the sun to make ancient Rome's favorite condiment, garum?",
+      answer: "Salted fish guts and blood left in open vats for months.",
       source: {
-        title: "Exploratorium — Your Sense of Taste",
-        url: "https://www.exploratorium.edu/snacks/your-sense-of-taste",
-        note: "Original question and factual paraphrase. What's Going On section on retronasal smell; omits taste-percentage estimates and tongue-map claims. No source prose or media reproduced.",
+        title: "National Geographic — Funky Fish Guts Were Ketchup of Ancient Rome",
+        url: "https://www.nationalgeographic.com/history/history-magazine/article/what-is-garum-rome-fish-sauce",
+        note: "Original question and factual summary. Garum was Rome's ubiquitous umami seasoning, produced by leaving salted fish viscera in the Mediterranean sun to autolyze.",
+      },
+    },
+    {
+      key: "food-turnspit-dog",
+      question:
+        "What specialized job did the now-extinct British 'turnspit dog' perform in large kitchens?",
+      answer: "Running inside a wooden wheel to turn roasting meat over the hearth.",
+      source: {
+        title: "NPR — Turnspit Dogs: The Rise And Fall Of The Vernepator Cur",
+        url: "https://www.npr.org/sections/thesalt/2014/05/13/311127237/turnspit-dogs-the-rise-and-fall-of-the-vernepator-cur",
+        note: "Original question and factual summary. From the 16th to 19th centuries in Britain, small, long-bodied dogs ran in wheel mechanisms linked by chains to roasting spits.",
+      },
+    },
+    {
+      key: "food-mock-turtle-head",
+      question:
+        "What animal cut was boiled down in Victorian kitchens to imitate turtle meat for 'mock turtle soup'?",
+      answer: "A whole calf's head with the brains and tongue.",
+      source: {
+        title: "Atlas Obscura — The Rise and Fall of Mock Turtle Soup",
+        url: "https://www.atlasobscura.com/articles/mock-turtle-soup-rise-and-fall-calf-head",
+        note: "Original question and factual summary. In the 18th and 19th centuries, British and American cooks boiled a whole calf's head to replicate the gelatinous texture of green sea turtle meat.",
+      },
+    },
+    {
+      key: "food-casu-marzu",
+      question:
+        "What living creature is considered an essential ingredient in traditional Sardinian casu marzu cheese?",
+      answer: "Thousands of live fly maggots that can jump several inches when disturbed.",
+      source: {
+        title: "CNN Travel — Casu marzu: The world's most dangerous cheese",
+        url: "https://www.cnn.com/travel/article/casu-marzu-worlds-most-dangerous-cheese",
+        note: "Original question and factual summary. Sardinian sheep's-milk cheese inoculated with Piophila casei skipper fly larvae that digest the fats; diners often shield their eyes from jumping maggots.",
+      },
+    },
+    {
+      key: "food-greenland-kiviak",
+      question:
+        "How is the traditional winter feast dish 'kiviak' prepared in northwestern Greenland?",
+      answer: "Hundreds of whole little auk seabirds are sewn into a seal skin and fermented.",
+      source: {
+        title: "National Geographic — Ancient Arctic Life in Greenland",
+        url: "https://www.nationalgeographic.com/travel/article/greenland-last-place-explore-ancient-arctic-life",
+        note: "Original question and factual summary. Traditional Inughuit dish; 300 to 500 whole dovekies (little auks) with feathers intact are sewn into a seal carcass and fermented under stones.",
+      },
+    },
+    {
+      key: "food-scandinavian-lutefisk",
+      question:
+        "What caustic cleaning chemical is dried cod soaked in to produce gelatinous Scandinavian lutefisk?",
+      answer: "Lye, a corrosive alkaline solution of sodium or potassium hydroxide.",
+      source: {
+        title: "TasteAtlas — Lutefisk: Traditional Norwegian Dish",
+        url: "https://www.tasteatlas.com/lutefisk",
+        note: "Original question and factual summary. Dried stockfish is soaked in a cold water-and-lye solution (pH 11–12) for days until its proteins break down into jelly.",
+      },
+    },
+    {
+      key: "food-icelandic-hakarl",
+      question:
+        "Why must Greenland shark meat be fermented in gravel for months to make Icelandic hákarl?",
+      answer: "Fresh Greenland shark meat is poisonous with toxic urea and antifreeze compounds.",
+      source: {
+        title: "Atlas Obscura — Hákarl: Iceland's Fermented Shark",
+        url: "https://www.atlasobscura.com/foods/hakarl-shark-iceland",
+        note: "Original question and factual summary. Greenland shark lacks a urinary tract and concentrates toxic urea and trimethylamine oxide in its flesh; fermenting underground renders it edible.",
+      },
+    },
+    {
+      key: "food-virgin-boy-eggs",
+      question:
+        "In Dongyang, China, what unusual liquid are springtime 'virgin boy eggs' simmered in?",
+      answer: "The collected urine of prepubescent schoolboys.",
+      source: {
+        title: "Reuters — Urine-soaked eggs a spring taste treat in China",
+        url: "https://www.reuters.com/article/business/urine-soaked-eggs-a-spring-taste-treat-in-china-city-idUSL3E8ET0FN/",
+        note: "Original question and factual summary. Dongyang intangible cultural heritage; chicken eggs soaked and simmered in urine collected from primary schools.",
+      },
+    },
+    {
+      key: "food-kopi-luwak",
+      question:
+        "What animal's digestive tract must coffee cherries pass through to make authentic Kopi Luwak?",
+      answer: "The Asian palm civet, a small cat-like mammal.",
+      source: {
+        title: "National Geographic — The Disturbing Truth About Civet Coffee",
+        url: "https://www.nationalgeographic.com/animals/article/160429-kopi-luwak-captive-civet-coffee-wildlife-trade",
+        note: "Original question and factual summary. Indonesian luxury coffee produced from partially digested coffee cherries collected from the feces of the Asian palm civet.",
+      },
+    },
+    {
+      key: "food-carmine-scale-insects",
+      question:
+        "What biological creature is harvested, dried, and crushed to make the common red food dye 'carmine'?",
+      answer: "The cochineal scale insect, which lives on prickly pear cacti.",
+      source: {
+        title: "FDA 21 CFR § 73.100 — Cochineal extract; carmine",
+        url: "https://www.law.cornell.edu/cfr/text/21/73.100",
+        note: "Original question and factual summary. Federal regulations define carmine as the pigment extracted from the dried bodies of female Dactylopius coccus insects.",
+      },
+    },
+    {
+      key: "food-jamon-iberico-acorns",
+      question:
+        "What exclusive food must Spanish black Iberian pigs forage in oak forests to earn the prized 'de bellota' label?",
+      answer: "Acorns fallen from holm and cork oak trees.",
+      source: {
+        title: "TasteAtlas — Jamón Ibérico de Bellota",
+        url: "https://www.tasteatlas.com/jamon-iberico",
+        note: "Original question and factual summary. Pigs roam the dehesa oak forests feeding exclusively on fallen acorns during the montanera period, giving the cured ham its melting oleic fat.",
+      },
+    },
+    {
+      key: "food-swiftlet-saliva-nest",
+      question:
+        "What biological substance actually forms the costly nests used in Chinese bird's nest soup?",
+      answer: "Solidified saliva regurgitated by cave-dwelling swiftlets.",
+      source: {
+        title: "Atlas Obscura — Bird's Nest Soup",
+        url: "https://www.atlasobscura.com/foods/birds-nest-soup",
+        note: "Original question and factual summary. White and black-nest swiftlets weave cave nests entirely from sticky, solidified salivary secretions.",
+      },
+    },
+    {
+      key: "food-miracle-fruit-sour",
+      question:
+        "What temporary effect does chewing an African 'miracle berry' have on human taste buds?",
+      answer: "It makes intensely sour foods like lemons and vinegar taste deliciously sweet.",
+      source: {
+        title: "Scientific Reports — Sweet taste receptor activation by miraculin",
+        url: "https://www.nature.com/articles/srep22807",
+        note: "Original question and factual summary. The glycoprotein miraculin binds to sweet receptors and activates them specifically in the presence of acids, turning sour sensations into intense sweetness.",
+      },
+    },
+    {
+      key: "food-beaver-castoreum",
+      question:
+        "What animal organ was historically harvested to produce FDA-approved 'natural' vanilla and raspberry flavoring?",
+      answer: "The castor scent sacs located near the tail and anus of beavers.",
+      source: {
+        title: "Smithsonian Magazine — Vanilla Flavoring and Castoreum",
+        url: "https://www.smithsonianmag.com/smart-news/does-vanilla-flavoring-actually-come-from-beaver-butts-180983288/",
+        note: "Original question and factual summary. Castoreum from beaver castor sacs is FDA GRAS (21 CFR 182.50) as a natural vanilla, raspberry, and strawberry flavor enhancer.",
       },
     },
   ],

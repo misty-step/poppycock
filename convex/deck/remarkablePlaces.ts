@@ -4,199 +4,206 @@ export const remarkablePlaces = definePack(
   {
     key: "remarkable-places",
     title: "Remarkable places",
-    blurb: "Unusual architecture, landscapes, archaeology and water engineering.",
+    blurb: "Bizarre towns, eccentric architecture, and extraordinary geographic anomalies.",
     category: "Remarkable places",
     sort: 80,
   },
   [
     {
-      key: "place-qanat-shafts",
+      key: "place-centralia-mine-fire",
       question:
-        "Why do lines of crater-like holes follow the routes of traditional Persian qanats?",
-      answer: "They are shafts for removing excavated soil and ventilating the water tunnels.",
+        "What has been continuously burning beneath the nearly abandoned town of Centralia, Pennsylvania?",
+      answer: "An underground coal mine seam fire that has burned since 1962.",
       source: {
-        title: "UNESCO World Heritage Centre — The Persian Qanat",
-        url: "https://whc.unesco.org/en/list/1506/",
-        note: "Original question and factual paraphrase. Brief synthesis explains regularly spaced well shafts; qanats carry water by gravity. No source prose or media reproduced.",
+        title: "Smithsonian Magazine — The Fire That Never Dies",
+        url: "https://www.smithsonianmag.com/travel/the-fire-that-never-dies-4963162/",
+        note: "Original question and factual summary. An exposed anthracite coal seam ignited in May 1962 and continues burning under the evacuated town.",
       },
     },
     {
-      key: "place-trulli-no-mortar",
+      key: "place-coober-pedy-underground",
       question:
-        "What familiar building ingredient is missing from the traditional stone walls of Alberobello's trulli?",
-      answer: "Mortar: the stones are fitted together dry.",
+        "Where do roughly half the residents of the Australian opal-mining town of Coober Pedy live?",
+      answer: "Underground 'dugout' homes to escape scorching desert heat.",
       source: {
-        title: "UNESCO World Heritage Centre — The Trulli of Alberobello",
-        url: "https://whc.unesco.org/en/list/787/",
-        note: "Original question and factual paraphrase. Description and Brief synthesis; no unsupported story about dodging a building tax. No source prose or media reproduced.",
+        title: "BBC Travel — Coober Pedy: The town that lives underground",
+        url: "https://www.bbc.com/travel/article/20230807-coober-pedy-the-town-that-lives-underground",
+        note: "Original question and factual summary. Desert summer temperatures routinely exceed 45°C, prompting residents to carve subterranean homes into sandstone hillsides.",
       },
     },
     {
-      key: "place-shibam-towers",
-      question: "What are the towering traditional houses of Shibam, Yemen, chiefly built from?",
-      answer: "Sun-dried mud bricks.",
-      source: {
-        title: "UNESCO World Heritage Centre — Old Walled City of Shibam",
-        url: "https://whc.unesco.org/en/list/192/",
-        note: "Original question and factual paraphrase. Brief synthesis; the card does not claim every building or repair uses only this material. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "place-vega-duck-shelters",
-      question: "Why have people on Norway's Vega islands built shelters for wild eider ducks?",
-      answer: "To protect nesting birds, then collect their down after the ducks and chicks leave.",
-      source: {
-        title: "UNESCO World Heritage Centre — Vegaøyan — The Vega Archipelago",
-        url: "https://whc.unesco.org/en/list/1143/",
-        note: "Original question and factual paraphrase. Brief synthesis; down is collected from vacated nests, not plucked from living birds. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "place-rani-water-temple",
+      key: "place-whittier-single-building",
       question:
-        "Beneath its elaborate sculptures, what practical job did Gujarat's Rani-ki-Vav perform?",
-      answer: "Storing water and giving people stepped access down to it.",
+        "Where does nearly the entire population of the remote port town of Whittier, Alaska live?",
+      answer: "Inside a single 14-story building that also holds the town school and church.",
       source: {
-        title:
-          "UNESCO World Heritage Centre — Rani-ki-Vav (the Queen’s Stepwell) at Patan, Gujarat",
-        url: "https://whc.unesco.org/en/list/922/",
-        note: "Original question and factual paraphrase. Description and Brief synthesis identify a functional subterranean water-management structure. No source prose or media reproduced.",
+        title: "NPR — Welcome To Whittier, Alaska: A Town Under One Roof",
+        url: "https://www.npr.org/2015/01/18/378162264/welcome-to-whittier-alaska-a-town-under-one-roof",
+        note: "Original question and factual summary. Begich Towers houses roughly 85% of residents along with the police department, grocery store, and clinic.",
       },
     },
     {
-      key: "place-tulou-households",
+      key: "place-darvaza-door-to-hell",
       question:
-        "Who were the vast, fortified tulou houses of Fujian designed to accommodate together?",
-      answer: "An entire clan, with living space divided among families.",
+        "What has happened continuously inside Turkmenistan's 'Door to Hell' crater since 1971?",
+      answer: "A natural gas crater that Soviet geologists ignited in 1971.",
       source: {
-        title: "UNESCO World Heritage Centre — Fujian Tulou",
-        url: "https://whc.unesco.org/en/list/1113/",
-        note: "Original question and factual paraphrase. Description; avoids treating all tulou as circular or assigning every building the maximum population. No source prose or media reproduced.",
+        title: "National Geographic — Door to Hell: Turkmenistan's Gas Crater",
+        url: "https://www.nationalgeographic.com/travel/article/darvaza-gas-crater-turkmenistan",
+        note: "Original question and factual summary. Soviet engineers punctured an underground gas pocket in 1971; the collapsed crater was set alight to burn off poisonous methane.",
       },
     },
     {
-      key: "place-wieliczka-sculptures",
+      key: "place-winchester-mystery-house",
       question:
-        "What surprising material forms many statues and decorations in Wieliczka's underground chapels?",
-      answer: "Rock salt carved from the mine itself.",
+        "What architectural oddity did Sarah Winchester famously build into her California mansion?",
+      answer: "Staircases leading directly into ceilings and doors opening into empty air.",
       source: {
-        title: "UNESCO World Heritage Centre — Wieliczka and Bochnia Royal Salt Mines",
-        url: "https://whc.unesco.org/en/list/32/",
-        note: "Original question and factual paraphrase. Description and Brief synthesis; refers to the carved works, not every object underground. No source prose or media reproduced.",
+        title: "Smithsonian Magazine — The Winchester Mystery House",
+        url: "https://www.smithsonianmag.com/history/the-true-story-of-the-winchester-mystery-house-180968037/",
+        note: "Original question and factual summary. 38 years of non-stop construction produced dead-end hallways, secret passages, and stairways terminating at blank ceilings.",
       },
     },
     {
-      key: "place-taos-kivas",
-      question: "At Taos Pueblo in New Mexico, what is a 'kiva'?",
-      answer: "An underground ceremonial chamber.",
-      source: {
-        title: "UNESCO World Heritage Centre — Taos Pueblo",
-        url: "https://whc.unesco.org/en/list/492/",
-        note: "Original question and factual paraphrase. Brief synthesis identifies the site's kivas; no claim about restricted ceremonies or all Pueblo architecture. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "place-nan-madol-islets",
-      question: "What makes the islets supporting Nan Madol's stone buildings unusual?",
-      answer: "People constructed them with basalt and coral boulders.",
-      source: {
-        title: "UNESCO World Heritage Centre — Nan Madol: Ceremonial Centre of Eastern Micronesia",
-        url: "https://whc.unesco.org/en/list/1503/",
-        note: "Original question and factual paraphrase. Description identifies constructed islets off Pohnpei; no speculative transport method or lost-civilization myth. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "place-valparaiso-elevators",
-      question: "What do Valparaíso's historic outdoor 'ascensores' help residents climb?",
-      answer: "The city's steep hillsides, using funicular elevators.",
-      source: {
-        title: "UNESCO World Heritage Centre — Historic Quarter of the Seaport City of Valparaíso",
-        url: "https://whc.unesco.org/en/list/959/",
-        note: "Original question and factual paraphrase. Description and Brief Synthesis; does not call them ordinary lifts inside buildings. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "place-whale-hind-limbs",
+      key: "place-colma-cemetery-city",
       question:
-        "What revealing body parts remain on some ancient whale fossils at Egypt's Wadi Al-Hitan?",
-      answer: "Small hind limbs, evidence of their land-dwelling ancestry.",
+        "Why does the town of Colma, California have roughly 1,500 living residents but over 1.5 million dead?",
+      answer: "Over 1.5 million dead people, because San Francisco banned cemeteries.",
       source: {
-        title: "UNESCO World Heritage Centre — Wadi Al-Hitan (Whale Valley)",
-        url: "https://whc.unesco.org/en/list/1186/",
-        note: "Original question and factual paraphrase. Description discusses archaeocetes in the last stages of losing hind limbs; not all fossil whales. No source prose or media reproduced.",
+        title: "Atlas Obscura — Colma, California: The City of the Dead",
+        url: "https://www.atlasobscura.com/places/colma-the-city-of-the-dead",
+        note: "Original question and factual summary. San Francisco passed ordinances in 1900 expelling existing burial grounds; hundreds of thousands of remains were moved to Colma.",
       },
     },
     {
-      key: "place-joggins-upright-trees",
+      key: "place-derinkuyu-basement",
       question:
-        "What is unusual about the position of fossil trees preserved in Nova Scotia's Joggins cliffs?",
-      answer: "Many stand upright where ancient forests grew.",
+        "In 1963, what did a Turkish homeowner in Cappadocia find behind a wall in his basement?",
+      answer: "An ancient underground city eighteen levels deep that could shelter 20,000.",
       source: {
-        title: "UNESCO World Heritage Centre — Joggins Fossil Cliffs",
-        url: "https://whc.unesco.org/en/list/1285/",
-        note: "Original question and factual paraphrase. Criterion (viii) identifies upright trees at successive levels; description identifies remains preserved in situ. No source prose or media reproduced.",
+        title: "BBC Travel — Turkey's underground city of 20,000 people",
+        url: "https://www.bbc.com/travel/article/20220810-derinkuyu-turkeys-underground-city-of-20000-people",
+        note: "Original question and factual summary. A resident discovered a subterranean passageway that led to the multi-level subterranean settlement of Derinkuyu.",
       },
     },
     {
-      key: "place-pamukkale-terraces",
-      question: "What built Pamukkale's white, terraced basins rather than snow or ice?",
-      answer: "Calcite deposited by mineral-rich spring water.",
-      source: {
-        title: "UNESCO World Heritage Centre — Hierapolis-Pamukkale",
-        url: "https://whc.unesco.org/en/list/485/",
-        note: "Original question and factual paraphrase. Description and Brief synthesis; no claim that the terraces are frozen waterfalls. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "place-tsingy-stone-forest",
-      question: "What are the needle-like 'trees' of Madagascar's tsingy landscapes made from?",
-      answer: "Limestone shaped into sharp peaks and pinnacles.",
-      source: {
-        title: "UNESCO World Heritage Centre — Andrefana Dry Forests",
-        url: "https://whc.unesco.org/en/list/494/",
-        note: "Original question and factual paraphrase. Current UNESCO property title includes Tsingy de Bemaraha within Andrefana Dry Forests; no literal tree claim. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "place-namib-fog-water",
+      key: "place-longyearbyen-dying-banned",
       question:
-        "What supplies the main source of water in the coastal dunes of the Namib Sand Sea?",
-      answer: "Fog rolling into the desert.",
+        "Why is dying technically prohibited in the Arctic coal-mining town of Longyearbyen, Svalbard?",
+      answer: "The permafrost prevents buried corpses from decomposing.",
       source: {
-        title: "UNESCO World Heritage Centre — Namib Sand Sea",
-        url: "https://whc.unesco.org/en/list/1430/",
-        note: "Original question and factual paraphrase. Description explicitly identifies fog as the primary water source; not a statement about every part of Namibia. No source prose or media reproduced.",
+        title: "BBC Future — The Arctic town where dying is forbidden",
+        url: "https://www.bbc.com/future/article/20160216-the-arctic-town-where-dying-is-forbidden",
+        note: "Original question and factual summary. The local cemetery stopped accepting bodies in the 1950s because permanent sub-zero ground preserves tissues and viruses.",
       },
     },
     {
-      key: "place-medulas-water-mining",
+      key: "place-baarle-border-line",
       question:
-        "What force did Roman miners at Las Médulas use to break apart gold-bearing hillsides?",
-      answer: "The pressure of huge quantities of channelled water.",
+        "What runs straight through the middle of living rooms and cafes in the European town of Baarle?",
+      answer: "The zigzag border between Belgium and the Netherlands.",
       source: {
-        title: "UNESCO World Heritage Centre — Las Médulas",
-        url: "https://whc.unesco.org/en/list/803/",
-        note: "Original question and factual paraphrase. Brief synthesis describes reservoirs, galleries and ruina montium; no explosives or volcanic explanation. No source prose or media reproduced.",
+        title: "BBC Travel — The curious border town where you cross nations while eating lunch",
+        url: "https://www.bbc.com/travel/article/20211117-the-curious-border-town-of-baarle",
+        note: "Original question and factual summary. Baarle contains 22 Belgian exclaves and 8 Dutch exclaves, causing the national border to cut through buildings and streets.",
       },
     },
     {
-      key: "place-chankillo-towers",
-      question: "What did the line of thirteen towers at Peru's Chankillo help observers work out?",
-      answer: "The time of year, from where the Sun rose or set against them.",
+      key: "place-snake-island-forbidden",
+      question:
+        "Why has the Brazilian government strictly banned civilians from visiting Snake Island?",
+      answer: "Thousands of critically venomous golden lancehead pit vipers.",
       source: {
-        title: "UNESCO World Heritage Centre — Chankillo Archaeoastronomical Complex",
-        url: "https://whc.unesco.org/en/list/1624/",
-        note: "Original question and factual paraphrase. Description and Brief synthesis identify a solar calendar; no claim that the towers were clocks for hours. No source prose or media reproduced.",
+        title: "Smithsonian Magazine — Snake Island: Brazil's Venomous Isle",
+        url: "https://www.smithsonianmag.com/science-nature/snake-island-brazil-venomous-pit-vipers-180951918/",
+        note: "Original question and factual summary. Ilha da Queimada Grande is inhabited by thousands of golden lancehead vipers whose venom can melt human flesh.",
       },
     },
     {
-      key: "place-shushtar-tunnels",
-      question: "What work did tunnels carrying diverted river water perform at Shushtar, Iran?",
-      answer: "Supplying water to power mills.",
+      key: "place-monowi-population-one",
+      question: "What is officially unique about the incorporated village of Monowi, Nebraska?",
+      answer: "It has a population of one: Elsie Eiler, who serves as mayor and bartender.",
       source: {
-        title: "UNESCO World Heritage Centre — Shushtar Historical Hydraulic System",
-        url: "https://whc.unesco.org/en/list/1315/",
-        note: "Original question and factual paraphrase. Description identifies the Gargar canal and tunnels; not every tunnel or use of the larger system is reduced to milling. No source prose or media reproduced.",
+        title: "BBC News — The only person living in an entire US town",
+        url: "https://www.bbc.com/travel/article/20180129-the-only-person-living-in-an-entire-us-town",
+        note: "Original question and factual summary. Elsie Eiler pays municipal taxes to herself, grants her own liquor license, and manages the town's public library.",
+      },
+    },
+    {
+      key: "place-sealand-sea-fort",
+      question:
+        "Where is the self-declared micronation of the 'Principality of Sealand' physically located?",
+      answer: "On an abandoned WWII anti-aircraft platform in the North Sea.",
+      source: {
+        title: "BBC News — The strange story of Sealand",
+        url: "https://www.bbc.com/news/uk-england-suffolk-56621376",
+        note: "Original question and factual summary. Roy Bates occupied HM Fort Roughs in 1967, an offshore platform six miles off the coast of Suffolk, declaring it sovereign territory.",
+      },
+    },
+    {
+      key: "place-paris-catacombs-bones",
+      question:
+        "Why were the bones of over six million Parisians relocated into underground limestone quarries?",
+      answer: "Parisian church graveyards were overflowing and causing disease.",
+      source: {
+        title: "Smithsonian Magazine — The Secret History of the Paris Catacombs",
+        url: "https://www.smithsonianmag.com/travel/paris-catacombs-history-180978794/",
+        note: "Original question and factual summary. By the 1780s, graveyards like the Holy Innocents were overflowing with rotting corpses, prompting mass exhumations.",
+      },
+    },
+    {
+      key: "place-hashima-battleship-island",
+      question:
+        "Why was Japan's densely packed concrete island of Hashima abruptly abandoned in 1974?",
+      answer: "Its undersea coal mine shut down when Japan switched to petroleum.",
+      source: {
+        title: "National Geographic — Inside Japan's Abandoned Battleship Island",
+        url: "https://www.nationalgeographic.com/travel/article/hashima-island-japan-ruins-ghost-town",
+        note: "Original question and factual summary. Once home to 5,000 coal workers, Mitsubishi closed the undersea shaft when petroleum replaced coal as Japan's chief energy source.",
+      },
+    },
+    {
+      key: "place-lake-titicaca-uros-reeds",
+      question:
+        "What material do the Uros people use to build their floating artificial islands on Lake Titicaca?",
+      answer: "Thick woven layers of buoyant totora reeds anchored with ropes.",
+      source: {
+        title: "National Geographic — The Floating Islands of Lake Titicaca",
+        url: "https://www.nationalgeographic.com/travel/article/uros-floating-islands-peru-bolivia-lake-titicaca",
+        note: "Original question and factual summary. Indigenous Uros people construct floating settlements out of dried totora reeds harvested from the lake shallows.",
+      },
+    },
+    {
+      key: "place-svalbard-seed-vault",
+      question:
+        "What is stored deep inside a permafrost mountain on the Arctic island of Spitsbergen?",
+      answer: "Backup seed samples for the world's food crops in case of global disaster.",
+      source: {
+        title: "Crop Trust — Svalbard Global Seed Vault",
+        url: "https://www.croptrust.org/our-work/svalbard-global-seed-vault/",
+        note: "Original question and factual summary. The vault secures over one million duplicates of crop seed varieties at sub-zero temperatures inside a sandstone mountain.",
+      },
+    },
+    {
+      key: "place-cretto-di-burri",
+      question:
+        "What monumental art installation covers the Sicilian ruins of the earthquake-destroyed town of Gibellina?",
+      answer: "Poured a vast white concrete shroud over the ruins of the entire town.",
+      source: {
+        title: "Tate — Alberto Burri: Grande Cretto di Gibellina",
+        url: "https://www.tate.org/art/artworks/burri-grande-cretto-di-gibellina",
+        note: "Original question and factual summary. Artist Alberto Burri covered the rubble of the town in white cement blocks, leaving fractures tracing the original street grid.",
+      },
+    },
+    {
+      key: "place-bishop-castle",
+      question:
+        "What is extraordinary about the 160-foot stone castle built by Jim Bishop in Colorado?",
+      answer: "He built the entire multi-story stone fortress by hand without blueprints.",
+      source: {
+        title: "Atlas Obscura — Bishop Castle",
+        url: "https://www.atlasobscura.com/places/bishop-castle",
+        note: "Original question and factual summary. Jim Bishop hauled and mortared an estimated 1,000 tons of rock single-handedly over sixty years to build a whimsical three-story castle.",
       },
     },
   ],

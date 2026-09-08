@@ -4,200 +4,204 @@ export const brightIdeas = definePack(
   {
     key: "bright-ideas",
     title: "Bright ideas",
-    blurb: "Inventions' unexpected origins, practical problems and mechanisms.",
+    blurb: "Eccentric patents, bizarre contraptions, and curious historical inventions.",
     category: "Bright ideas",
     sort: 60,
   },
   [
     {
-      key: "idea-wiper-lever",
-      question: "How did a driver operate Mary Anderson's 1903 windshield-clearing device?",
-      answer: "By moving a lever inside the vehicle.",
+      key: "idea-saluting-device",
+      question: "What was James C. Boyle's 1896 patented 'Saluting Device' designed to do?",
+      answer: "Automatically lift and tip the wearer's hat whenever he bowed.",
       source: {
-        title: "National Inventors Hall of Fame — Mary Anderson",
-        url: "https://www.invent.org/inductees/mary-anderson",
-        note: "Original question and factual paraphrase. The device description specifies a lever and spring-loaded rubber blade. No source prose or media reproduced.",
+        title: "US Patent 556,248 — Saluting Device",
+        url: "https://patents.google.com/patent/US556248A/en",
+        note: "Original question and factual summary. March 10, 1896 patent by James C. Boyle; a gravity-tripped mechanism inside a hat to tip it politely without hands.",
       },
     },
     {
-      key: "idea-super-soaker-origin",
+      key: "idea-chicken-goggles",
       question:
-        "What was Lonnie Johnson researching when the idea behind the Super Soaker emerged?",
-      answer: "An environmentally friendly heat pump.",
+        "What did Andrew Jackson Jr.'s 1903 patent for 'chicken eye-protectors' prevent chickens from doing?",
+      answer: "Pecking out each other's eyes.",
       source: {
-        title: "National Inventors Hall of Fame — Lonnie Johnson",
-        url: "https://www.invent.org/inductees/lonnie-johnson",
-        note: "Original question and factual paraphrase. Opening research history; the toy is not described as a NASA invention. No source prose or media reproduced.",
+        title: "US Patent 730,918 — Eye-protector for chickens",
+        url: "https://patents.google.com/patent/US730918A/en",
+        note: "Original question and factual summary. Granted June 16, 1903 to Andrew Jackson Jr. of Tennessee to curb cannibalistic pecking in poultry flocks.",
       },
     },
     {
-      key: "idea-remote-rods",
+      key: "idea-dimple-maker",
       question:
-        "How did Zenith's 1956 Space Command remote send instructions without radio waves or a light beam?",
-      answer: "Its buttons struck aluminum rods to produce ultrasonic sounds.",
+        "What did Evangeline Gilbert's patented 1930s 'dimple making appliance' press into a wearer's face?",
+      answer: "Spring-loaded knobs to indent the cheeks or chin.",
       source: {
-        title: "National Inventors Hall of Fame — Robert Adler",
-        url: "https://www.invent.org/inductees/robert-adler",
-        note: "Original question and factual paraphrase. Ultrasound mechanism paragraph; not a description of modern infrared remotes. No source prose or media reproduced.",
+        title: "US Patent 2,091,276 — Dimple making appliance",
+        url: "https://patents.google.com/patent/US2091276A/en",
+        note: "Original question and factual summary. Granted August 31, 1937 to Evangeline I. Gilbert of Rochester, NY. An adjustable wire head-frame pressing knobs into the flesh.",
       },
     },
     {
-      key: "idea-dishwasher-pressure",
+      key: "idea-anti-eating-mask",
       question:
-        "What did Josephine Cochran's dishwasher use to clean dishes instead of mechanical scrubbers?",
-      answer: "Pressurized hot, soapy water.",
+        "What did Lucy Barmby's 1982 patented 'Anti-Eating Face Mask' use to stop dieters from cheating?",
+      answer: "A locked metal cage over the mouth with a padlock.",
       source: {
-        title: "National Inventors Hall of Fame — Josephine Garis Cochran",
-        url: "https://www.invent.org/inductees/josephine-garis-cochran",
-        note: "Original question and factual paraphrase. Design paragraph; does not claim she invented the first attempted dishwashing machine. No source prose or media reproduced.",
+        title: "US Patent 4,344,424 — Anti-eating face mask",
+        url: "https://patents.google.com/patent/US4344424A/en",
+        note: "Original question and factual summary. Granted August 17, 1982 to Lucy L. Barmby. Features a cup-shaped barrier over the mouth secured with straps and a padlock.",
       },
     },
     {
-      key: "idea-paper-bag-bottom",
+      key: "idea-vester-coffin",
       question:
-        "What useful change did Margaret Knight's machine make to mass-produced paper bags?",
-      answer: "It gave them flat bottoms instead of an envelope-like shape.",
+        "What did Franz Vester install inside his 1868 patented 'burial-case' in case someone was buried alive?",
+      answer: "A ladder and a bell cord inside a tube leading to the surface.",
       source: {
-        title: "National Inventors Hall of Fame — Margaret E. Knight",
-        url: "https://www.invent.org/inductees/margaret-e-knight",
-        note: "Original question and factual paraphrase. Paper bag manufacturing account; no unsupported claim that she invented paper bags. No source prose or media reproduced.",
+        title: "US Patent 81,437 — Improved burial-case",
+        url: "https://patents.google.com/patent/US81437A/en",
+        note: "Original question and factual summary. Granted August 25, 1868 to Franz Vester of Newark, NJ. A safety coffin with an ascent ladder and bell pull.",
       },
     },
     {
-      key: "idea-fastener-burrs",
-      question: "What did George de Mestral study to work out the fastening trick behind Velcro?",
-      answer: "The tiny hooks on plant burrs that cling to clothing.",
-      source: {
-        title: "National Inventors Hall of Fame — George de Mestral",
-        url: "https://www.invent.org/inductees/george-de-mestral",
-        note: "Original question and factual paraphrase. Opening invention account; no unsupported detail about a particular walk or dog. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "idea-traffic-all-stop",
+      key: "idea-alarm-bed",
       question:
-        "What pause did Garrett Morgan's 1923 traffic-signal design add between changes of direction?",
-      answer: "It stopped traffic in every direction so the intersection could clear.",
+        "How did R.W. Savage's 'alarm bed', showcased at the 1851 Great Exhibition, wake a sleeping person?",
+      answer: "By mechanically tilting up to dump the sleeper onto the floor.",
       source: {
-        title: "National Inventors Hall of Fame — Garrett Morgan",
-        url: "https://www.invent.org/inductees/garrett-morgan",
-        note: "Original question and factual paraphrase. The account quotes the patent's all-directions stop; no claim that this was an electric yellow light. No source prose or media reproduced.",
+        title: "The Victorian Web — The Great Exhibition of 1851",
+        url: "https://victorianweb.org/history/1851/wenham.html",
+        note: "Original question and factual summary. R.W. Savage exhibited a mechanical alarm bed that tilted its occupant onto the floor at a predetermined hour.",
       },
     },
     {
-      key: "idea-detachable-iron",
-      question: "Why did Mary Florence Potts make the handle of her 1871 clothing iron detachable?",
-      answer: "The base could heat on the stove while the handle stayed cool.",
-      source: {
-        title: "National Inventors Hall of Fame — Mary Florence Potts",
-        url: "https://www.invent.org/inductees/mary-florence-potts",
-        note: "Original question and factual paraphrase. 1871 patent paragraph; no assertion that earlier irons all had identical handles. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "idea-diaper-shower-curtain",
+      key: "idea-cat-meow-machine",
       question:
-        "What bathroom item did Marion Donovan cut up for an early waterproof diaper-cover prototype?",
-      answer: "A shower curtain.",
+        "How was a 1963 Japanese pest-control device designed to scare mice without traps or poison?",
+      answer: "It meowed ten times a minute while flashing mechanical eyes.",
       source: {
-        title: "National Inventors Hall of Fame — Marion Donovan",
-        url: "https://www.invent.org/inductees/marion-donovan",
-        note: "Original question and factual paraphrase. Prototype account; this was a cover for cloth diapers, not a modern disposable diaper. No source prose or media reproduced.",
+        title: "BBC Science Focus — The Cat Meow Machine",
+        url: "https://www.sciencefocus.com/science/the-weirdest-inventions-ever-in-pictures-2",
+        note: "Original question and factual summary. Motorized electromechanical device made in Japan in 1963 to frighten rodents with repeated recorded meows and flashing eyes.",
       },
     },
     {
-      key: "idea-crown-cork-liner",
-      question: "Why did William Painter put a cork disc inside his original crown bottle cap?",
-      answer: "To seal the bottle and keep the drink from touching the metal cap.",
-      source: {
-        title: "National Inventors Hall of Fame — William Painter",
-        url: "https://www.invent.org/inductees/william-painter",
-        note: "Original question and factual paraphrase. Original Crown Cork design paragraph; modern caps need not use cork. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "idea-coupler-safety",
+      key: "idea-oppenheimer-fire-escape",
       question:
-        "What dangerous maneuver did automatic railroad couplers, improved by Andrew Beard, make unnecessary?",
-      answer: "A worker squeezing between railcars to connect them with a pin.",
+        "What two items made up Benjamin Oppenheimer's 1879 patented personal fire-escape outfit?",
+      answer: "A head-mounted parachute and thick rubber shock-absorbing shoes.",
       source: {
-        title: "National Inventors Hall of Fame — Andrew J. Beard",
-        url: "https://www.invent.org/inductees/andrew-j-beard",
-        note: "Original question and factual paraphrase. Railroad work and 1897 patent paragraphs; credits an improvement, not sole invention of automatic coupling. No source prose or media reproduced.",
+        title: "US Patent 221,855 — Improvement in fire-escapes",
+        url: "https://patents.google.com/patent/US221855A/en",
+        note: "Original question and factual summary. Granted November 18, 1879 to Benjamin B. Oppenheimer of Trenton, TN. Combines a parachute fastened to the head with padded footwear.",
       },
     },
     {
-      key: "idea-flexible-flyer",
-      question: "What made Samuel Allen's Flexible Flyer easier to steer than his earlier sleds?",
-      answer: "Its runners could flex to guide the sled.",
-      source: {
-        title: "National Inventors Hall of Fame — Samuel Leeds Allen",
-        url: "https://www.invent.org/inductees/samuel-leeds-allen",
-        note: "Original question and factual paraphrase. Runner design paragraph; not a claim that every modern sled steers this way. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "idea-engine-oiling",
-      question: "What repeated interruption did Elijah McCoy's 1872 device spare steam engines?",
-      answer: "Stopping so someone could lubricate their moving parts.",
-      source: {
-        title: "National Inventors Hall of Fame — Elijah McCoy",
-        url: "https://www.invent.org/inductees/elijah-mccoy",
-        note: "Original question and factual paraphrase. Automatic lubrication account; deliberately excludes the disputed origin of 'the real McCoy'. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "idea-bambi-bucket",
+      key: "idea-rocking-chair-churn",
       question:
-        "What could Don Arney's Bambi Bucket do between firefighting trips that older rigid buckets could not?",
-      answer: "Collapse so it could be carried inside the helicopter.",
+        "What household chore was Alfred Clark's 1891 patented rocking chair designed to perform while you relaxed?",
+      answer: "Churning butter.",
       source: {
-        title: "National Inventors Hall of Fame — Don Arney",
-        url: "https://www.invent.org/inductees/don-arney",
-        note: "Original question and factual paraphrase. Design comparison; no market-share, first-invention, or performance-total claims. No source prose or media reproduced.",
+        title: "US Patent 446,495 — Churn",
+        url: "https://patents.google.com/patent/US446495A/en",
+        note: "Original question and factual summary. Granted February 17, 1891 to Alfred Clark. Uses rocking chair motion transmitted through pitman arms to operate a butter churn.",
       },
     },
     {
-      key: "idea-sticky-note-bookmark",
-      question: "What small frustration in a church choir helped Art Fry develop Post-it Notes?",
-      answer: "Paper bookmarks kept falling out of his hymn book.",
-      source: {
-        title: "National Inventors Hall of Fame — Arthur L. Fry",
-        url: "https://www.invent.org/inductees/arthur-l-fry",
-        note: "Original question and factual paraphrase. 1974 account; Spencer Silver's prior adhesive research remains credited in the source. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "idea-ballpoint-ink",
+      key: "idea-revolver-camera",
       question:
-        "Why couldn't Laszlo Biro simply put fast-drying newspaper ink in an ordinary fountain pen?",
-      answer: "The ink was too thick to flow through its tip.",
+        "What did a 1938 custom Colt .38 revolver automatically do every time the shooter pulled the trigger?",
+      answer: "Take a photograph of whatever the gun was pointed at.",
       source: {
-        title: "National Inventors Hall of Fame — Laszlo Josef Biro",
-        url: "https://www.invent.org/inductees/laszlo-josef-biro",
-        note: "Original question and factual paraphrase. Ink comparison and rotating-ball mechanism paragraphs. No source prose or media reproduced.",
+        title: "PetaPixel — Revolver Camera That Shot Bullets and Photos",
+        url: "https://petapixel.com/2011/05/19/revolver-camera-shoots-bullets-and-photos-at-the-same-time/",
+        note: "Original question and factual summary. 1938 New York custom Colt .38 with an attached small camera mechanically linked to trigger actuation.",
       },
     },
     {
-      key: "idea-radarange-roots",
+      key: "idea-baby-cage",
       question:
-        "What wartime technology used magnetrons before Percy Spencer adapted them to cook food?",
-      answer: "Radar.",
+        "Where was Emma Read's 1922 patented 'portable baby cage' designed to be suspended?",
+      answer: "Outside an open tenement window so city infants could get fresh air.",
       source: {
-        title: "National Inventors Hall of Fame — Percy L. Spencer",
-        url: "https://www.invent.org/inductees/percy-l-spencer",
-        note: "Original question and factual paraphrase. Magnetron manufacturing and cooking-device history; no unverified melted-candy anecdote. No source prose or media reproduced.",
+        title: "US Patent 1,448,235 — Portable baby cage",
+        url: "https://patents.google.com/patent/US1448235A/en",
+        note: "Original question and factual summary. Granted March 13, 1923 to Emma Read of Spokane, WA. A wire-mesh compartment clamped to the exterior of an apartment window.",
       },
     },
     {
-      key: "idea-zamboni-ice-business",
-      question:
-        "Before building an ice rink and inventing his resurfacing machine, what did Frank Zamboni's business sell?",
-      answer: "Large blocks of ice.",
+      key: "idea-kissing-shield",
+      question: "What was Deloris Gray Wood's 1998 patented 'Kissing Shield' designed to do?",
+      answer: "Place a thin plastic barrier between people's lips while they kiss.",
       source: {
-        title: "National Inventors Hall of Fame — Frank J. Zamboni",
-        url: "https://www.invent.org/inductees/frank-j-zamboni",
-        note: "Original question and factual paraphrase. Business history; not a claim that the resurfacing machine manufactures saleable ice blocks. No source prose or media reproduced.",
+        title: "US Patent 5,727,565 — Kissing shield",
+        url: "https://patents.google.com/patent/US5727565A/en",
+        note: "Original question and factual summary. Granted March 17, 1998 to Deloris Gray Wood. A plastic membrane mounted on a handled frame to reduce germ transfer during kisses.",
+      },
+    },
+    {
+      key: "idea-swing-patent",
+      question:
+        "What physical playground action was officially granted US Patent 6,368,227 in 2002?",
+      answer: "Swinging side-to-side on a swing by pulling alternately on the chains.",
+      source: {
+        title: "US Patent 6,368,227 — Method of swinging on a swing",
+        url: "https://patents.google.com/patent/US6368227B1/en",
+        note: "Original question and factual summary. Granted April 9, 2002 to 5-year-old Steven Olson via his patent attorney father to illustrate patent office procedures.",
+      },
+    },
+    {
+      key: "idea-bird-diaper",
+      question: "What pet accessory was officially granted US Patent 5,934,226 in 1999?",
+      answer: "A reusable bird diaper to catch droppings from indoor pets.",
+      source: {
+        title: "US Patent 5,934,226 — Avian diaper",
+        url: "https://patents.google.com/patent/US5934226A/en",
+        note: "Original question and factual summary. Granted August 10, 1999 to Lorraine Moore. A fabric harness and removable waste pouch fitted to pet birds.",
+      },
+    },
+    {
+      key: "idea-centrifugal-birth",
+      question:
+        "How did George and Charlotte Blonsky's 1965 patented medical apparatus assist during difficult childbirth?",
+      answer: "By strapping the mother to a circular table that spun at high speed.",
+      source: {
+        title:
+          "US Patent 3,216,423 — Apparatus for facilitating the birth of a child by centrifugal force",
+        url: "https://patents.google.com/patent/US3216423A/en",
+        note: "Original question and factual summary. Granted November 9, 1965 to George and Charlotte Blonsky. A motorized centrifuge table fitted with a net to catch the baby.",
+      },
+    },
+    {
+      key: "idea-goodyear-glowing-tires",
+      question: "What futuristic feature did Goodyear's experimental 1961 car tires have?",
+      answer: "They were made of translucent rubber with 18 light bulbs inside.",
+      source: {
+        title: "Hagerty — Goodyear's Illuminated Tires",
+        url: "https://www.hagerty.com/media/automotive-history/why-goodyears-bright-idea-for-illuminated-tires-didnt-shine-for-long/",
+        note: "Original question and factual summary. 1961 experimental project using translucent Neothane synthetic rubber and internal incandescent bulbs inside the wheel rim.",
+      },
+    },
+    {
+      key: "idea-krummlauf-curved-barrel",
+      question:
+        "What unusual capability did the German 'Krummlauf' barrel attachment give a rifle?",
+      answer: "It allowed a soldier to shoot around corners using a periscope sight.",
+      source: {
+        title: "Popular Mechanics — The Curved Barrel Krummlauf",
+        url: "https://www.popularmechanics.com/military/weapons/a21800/forgotten-weapons-wwii-curve-a-bullet/",
+        note: "Original question and factual summary. WWII attachment for the StG 44 rifle with bent barrels (30 or 90 degrees) and periscope optics for shooting around cover.",
+      },
+    },
+    {
+      key: "idea-high-five-machine",
+      question:
+        "What social problem was Albert Cohen's 1994 patented mechanical apparatus designed to solve?",
+      answer: "Giving solitary sports fans a way to celebrate with a high five.",
+      source: {
+        title: "US Patent 5,356,330 — Apparatus for simulating a 'high-five'",
+        url: "https://patents.google.com/patent/US5356330A/en",
+        note: "Original question and factual summary. Granted October 18, 1994 to Albert Cohen. A spring-loaded synthetic forearm and hand mounted on a wall or table to slap when alone.",
       },
     },
   ],
