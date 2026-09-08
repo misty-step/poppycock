@@ -194,9 +194,9 @@ export const wildNature = definePack(
     {
       key: "nature-mimic-octopus",
       question:
-        "Unlike ordinary camouflaged octopuses, what unique defense does the Indo-Pacific 'mimic octopus' employ when threatened?",
+        "Discovered in 1998 off the coast of Indonesia, what unusual defense mechanism does the small sand-dwelling octopus Thaumoctopus use to repel predators?",
       answer:
-        "It contorts its body and behavior to impersonate venomous animals, including lionfish, sea snakes, and jellyfish.",
+        "It contorts its body and swimming motion to impersonate dangerous venomous animals, including sea snakes, lionfish, and jellyfish.",
       source: {
         title: "National Geographic — Mimic Octopus Facts",
         url: "https://www.nationalgeographic.com/animals/invertebrates/facts/mimic-octopus",
