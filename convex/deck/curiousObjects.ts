@@ -40,13 +40,15 @@ export const curiousObjects = definePack(
       },
     },
     {
-      key: "object-clepsydra",
-      question: "How does a 'clepsydra' measure something?",
-      answer: "It measures time by water flowing through a small opening.",
+      key: "object-puzzle-jug",
+      question:
+        "In 18th-century English taverns, what was the secret trick to drinking from a ceramic 'puzzle jug' without spilling?",
+      answer:
+        "Covering secret holes on the hollow handle and rim with your fingers to suck ale through a hidden spout.",
       source: {
-        title: "Webster's 1913 — Clepsydra",
-        url: "https://www.websters1913.com/words/Clepsydra",
-        note: "Original question; paraphrase of the public-domain water-clock definition.",
+        title: "Victoria and Albert Museum — How was it made? A puzzle jug",
+        url: "https://www.vam.ac.uk/articles/how-was-it-made-a-puzzle-jug",
+        note: "Original question and factual summary. The perforated neck spilled liquid unless the drinker uncovered the secret passage through the hollow handle and rim, blocking extra holes with fingers.",
       },
     },
     {
@@ -90,13 +92,16 @@ export const curiousObjects = definePack(
       },
     },
     {
-      key: "object-gnomon",
-      question: "What job does the 'gnomon' of a sundial perform?",
-      answer: "It casts the shadow that indicates the time.",
+      key: "object-ridged-poison-bottle",
+      question:
+        "In late 19th-century Britain, why did medicine bottles containing lethal poisons have prominent raised glass ridges along their sides?",
+      answer:
+        "So people reaching into a dark medicine cabinet could instantly identify deadly poison purely by touch.",
       source: {
-        title: "Webster's 1913 — Gnomon",
-        url: "https://www.websters1913.com/words/Gnomon",
-        note: "Original question; paraphrase of public-domain sense 1, the sundial's style or pin.",
+        title:
+          "Science Museum Group Collection — Glass bottle used for tincture of belladonna, England, 1880-1900",
+        url: "https://collection.sciencemuseumgroup.org.uk/objects/co111769/glass-bottle-used-for-tincture-of-belladonna-england-1880-1900",
+        note: "Original question and factual summary. Tactile ridges and sharp fluting were mandated on poison bottles so they could be immediately recognized in the dark without relying on paper labels.",
       },
     },
     {
@@ -195,13 +200,15 @@ export const curiousObjects = definePack(
       },
     },
     {
-      key: "object-alembic",
-      question: "What was an 'alembic' formerly used to do?",
-      answer: "Distill substances, usually in a glass or metal apparatus.",
+      key: "object-whaler-staybusk",
+      question:
+        "In 19th-century maritime tradition, what was an engraved whalebone 'staybusk'?",
+      answer:
+        "A rigid corset slat carved with scrimshaw love tokens for a sailor's sweetheart to wear against her chest.",
       source: {
-        title: "Webster's 1913 — Alembic",
-        url: "https://www.websters1913.com/words/Alembic",
-        note: "Original question; condensed public-domain laboratory sense. The metaphorical literary use is not the card's answer.",
+        title: "Royal Museums Greenwich — Staybusk from the Cyrus",
+        url: "https://www.rmg.co.uk/collections/objects/rmgc-object-210268",
+        note: "Original question and factual summary. Whalers at sea carved rigid sperm whale bone slats with love poems and motifs to be worn inside a woman's stays/corset.",
       },
     },
     {
@@ -216,13 +223,15 @@ export const curiousObjects = definePack(
       },
     },
     {
-      key: "object-orrery",
-      question: "What does an 'orrery' demonstrate with its moving balls?",
-      answer: "The relative sizes, motions, and orbits of bodies in the solar system.",
+      key: "object-posset-pot",
+      question:
+        "In 17th-century England, why was a ceramic 'posset pot' made with a long spout rising from the bottom of the vessel?",
+      answer:
+        "To sip the spiced warm ale or wine from underneath the floating layer of curdled cream and bread.",
       source: {
-        title: "Webster's 1913 — Orrery",
-        url: "https://www.websters1913.com/words/Orrery",
-        note: "Original question; condensed public-domain definition. Named for the Earl of Orrery; no claim is made about any particular maker.",
+        title: "Victoria and Albert Museum — Posset Pot",
+        url: "https://collections.vam.ac.uk/item/O20991/posset-pot-unknown/",
+        note: "Original question and factual summary. Posset separated into layers when hot spiced alcohol curdled milk or eggs; the bottom-feeding spout allowed drinking the warm alcohol from beneath the thick head.",
       },
     },
     {

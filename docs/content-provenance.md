@@ -41,18 +41,22 @@ Questions and factual answers were drafted for Poppycock with AI assistance from
 
 ### Odd words and Curious objects: 54 cards
 
-Twenty-seven cards in `Odd words` and twenty-one cards in `Curious objects` draw from individual public-domain entries in [Webster's 1913](https://www.websters1913.com/) and [Project Gutenberg catalog ebook 29765](https://www.gutenberg.org/ebooks/29765) ([accessible text](https://www.gutenberg.org/ebooks/29765.txt.utf-8), [license explanation](https://www.gutenberg.org/policy/license.html)).
+Twenty-seven cards in `Odd words` and seventeen cards in `Curious objects` draw from individual public-domain entries in [Webster's 1913](https://www.websters1913.com/) and [Project Gutenberg catalog ebook 29765](https://www.gutenberg.org/ebooks/29765) ([accessible text](https://www.gutenberg.org/ebooks/29765.txt.utf-8), [license explanation](https://www.gutenberg.org/policy/license.html)).
 
-Six cards in `Curious objects` draw from verified historical artifacts preserved by the Science Museum Group, the Fitzwilliam Museum (University of Cambridge), the Victoria and Albert Museum, National Museums Scotland, and BBC HistoryExtra:
+Ten cards in `Curious objects` draw from verified historical artifacts preserved by the Science Museum Group, the Fitzwilliam Museum (University of Cambridge), the Victoria and Albert Museum, Royal Museums Greenwich, National Museums Scotland, and BBC HistoryExtra:
 
-| Card                    | Source                                                                                                                                                                                            |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `object-antimonial-cup` | [Science Museum Group Collection — Antimony cup, Europe, 1501-1700](https://collection.sciencemuseumgroup.org.uk/objects/co142080/antimony-cup-europe-1501-1700)                                |
-| `object-mortsafe`       | [National Museums Scotland — An unsolved mystery: The coffins found on Arthur's Seat](https://www.nms.ac.uk/discover-catalogue/the-coffins-found-on-arthurs-seat)                                 |
-| `object-lovers-eye`     | [Victoria and Albert Museum — Eye with a blue iris looking right](https://collections.vam.ac.uk/item/O1067699/eye-with-a-blue-iris-eye-miniature-unknown/)                                       |
-| `object-fuddling-cup`   | [The Fitzwilliam Museum (University of Cambridge) — Fuddling cups](https://data.fitzmuseum.cam.ac.uk/id/terminology/term-91176)                                                                  |
-| `object-bamboo-flea-trap` | [Science Museum Group Collection — Bamboo flea trap, China, 1751-1850](https://collection.sciencemuseumgroup.org.uk/objects/co147562/bamboo-flea-trap-china-1751-1850)                         |
-| `object-drunkards-cloak` | [BBC HistoryExtra — Q&A: what was a drunkard's cloak used for?](https://www.historyextra.com/period/stuart/medieval-punishments-what-was-drunkards-cloak/)                                     |
+| Card                          | Source                                                                                                                                                                                            |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `object-puzzle-jug`           | [Victoria and Albert Museum — How was it made? A puzzle jug](https://www.vam.ac.uk/articles/how-was-it-made-a-puzzle-jug)                                                                        |
+| `object-ridged-poison-bottle` | [Science Museum Group Collection — Glass bottle used for tincture of belladonna, England, 1880-1900](https://collection.sciencemuseumgroup.org.uk/objects/co111769/glass-bottle-used-for-tincture-of-belladonna-england-1880-1900) |
+| `object-whaler-staybusk`      | [Royal Museums Greenwich — Staybusk from the Cyrus](https://www.rmg.co.uk/collections/objects/rmgc-object-210268)                                                                                 |
+| `object-posset-pot`           | [Victoria and Albert Museum — Posset Pot](https://collections.vam.ac.uk/item/O20991/posset-pot-unknown/)                                                                                         |
+| `object-antimonial-cup`       | [Science Museum Group Collection — Antimony cup, Europe, 1501-1700](https://collection.sciencemuseumgroup.org.uk/objects/co142080/antimony-cup-europe-1501-1700)                                |
+| `object-mortsafe`             | [National Museums Scotland — An unsolved mystery: The coffins found on Arthur's Seat](https://www.nms.ac.uk/discover-catalogue/the-coffins-found-on-arthurs-seat)                                 |
+| `object-lovers-eye`           | [Victoria and Albert Museum — Eye with a blue iris looking right](https://collections.vam.ac.uk/item/O1067699/eye-with-a-blue-iris-eye-miniature-unknown/)                                       |
+| `object-fuddling-cup`         | [The Fitzwilliam Museum (University of Cambridge) — Fuddling cups](https://data.fitzmuseum.cam.ac.uk/id/terminology/term-91176)                                                                  |
+| `object-bamboo-flea-trap`     | [Science Museum Group Collection — Bamboo flea trap, China, 1751-1850](https://collection.sciencemuseumgroup.org.uk/objects/co147562/bamboo-flea-trap-china-1751-1850)                         |
+| `object-drunkards-cloak`       | [BBC HistoryExtra — Q&A: what was a drunkard's cloak used for?](https://www.historyextra.com/period/stuart/medieval-punishments-what-was-drunkards-cloak/)                                     |
 The deck reuses or paraphrases the historical definitions and object records, not the modern hosts' site designs. `word-brontolith` cross-references the public-domain Aërolite definition. Gutenberg links are scholarly acknowledgements only; no ebook, Gutenberg wrapper, or trademark asset is shipped.
 ### Wild nature: 27 cards
 
