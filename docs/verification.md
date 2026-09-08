@@ -66,6 +66,13 @@ filename or claim an old screenshot proves current behavior.
 
 ## Verification history
 
+### Party interface — 2026-09-08
+
+Frontend [`5b3d1b0`](https://github.com/misty-step/poppycock/commit/5b3d1b0) on Cloudflare Worker `83b3b83e-0b1d-4f57-aadd-700492591c6c`. The Convex backend remains `fiery-spaniel-734`; no schema change shipped with this cutover.
+
+- Local six-round smoke passed **18 / 8 / 0**. Question headings use the wrapping `.question-block` as the size container: at 1280px both the writing and reveal `2fr` columns are 403px and render **28.2px**, matching `7cqi` of the column rather than the **36px** viewport fallback.
+- Hosted three-browser smoke against https://poppycock.mistystep.io completed one round with authoritative scores **3 / 1 / 0**. This is not a hosted six-round or rematch result. Per-run receipts stayed in ignored `test-results/party-pass/hosted-live/`.
+
 ### Polished avatars and production cutover — 2026-09-08
 
 The release combined avatar polish at `1a0180d6446ce98e2bc8c25a066963751776dd2e`

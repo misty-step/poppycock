@@ -2,7 +2,7 @@
 
 A phone-first bluffing party game for **3–12 people**. One peculiar question, a table of convincing lies, and exactly one truth. Six rounds; no accounts, payments, or AI service required.
 
-Hosted play: **https://poppycock.mistystep.io** — no account. The untimed, 216-card game and polished 48-character avatar picker were deployed and checked on **2026-09-08**. See the [revision-specific verification history](docs/verification.md#verification-history); these docs are not a live deployment-status service.
+Hosted play: **https://poppycock.mistystep.io** — no account. The party interface, untimed 216-card game, and 48-character avatar picker were deployed and checked on **2026-09-08**. See the [revision-specific verification history](docs/verification.md#verification-history); these docs are not a live deployment-status service.
 
 ## Play
 

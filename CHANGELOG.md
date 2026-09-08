@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.2.0 — 2026-09-08
 
 - Rebuilt the visual design as a party game rather than a calm tabletop: a lilac room, grape ink and actions, marigold entrance ticket, coral invitation board, mint question bubbles, speech-bubble corners, and flat printed shadows.
 - Made Fredoka the voice of the game across the wordmark, headlines, titles, questions, round markers, and score totals. Question type uses container query units from the wrapping question section so a narrow reveal column shrinks the heading instead of using the viewport and breaking the sentence.
@@ -8,6 +8,8 @@
 - Celebrated results: a lilac winner banner with the winner's portrait on a marigold burst, a trophy-marked scoreboard, a clearer round marker and category chip, and “The truth, at last!” at reveal. Questions, answers, scores, ties, and every action label stay literal.
 - Moved keyboard focus to a distinct blue so a focused control is never mistaken for a selected one; all new party surfaces carry darkened rather than faded supporting text.
 - Linked the footer credits to [Misty Step](https://mistystep.io) and [Parlor](https://parlor.mistystep.io).
+- Deployed the party interface to https://poppycock.mistystep.io (Cloudflare Worker `83b3b83e-0b1d-4f57-aadd-700492591c6c`). Hosted three-browser smoke scored **3 / 1 / 0**.
+
 
 ## 1.1.0 — 2026-09-08
 
