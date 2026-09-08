@@ -201,8 +201,7 @@ export const curiousObjects = definePack(
     },
     {
       key: "object-whaler-staybusk",
-      question:
-        "In 19th-century maritime tradition, what was an engraved whalebone 'staybusk'?",
+      question: "In 19th-century maritime tradition, what was an engraved whalebone 'staybusk'?",
       answer:
         "A rigid corset slat carved with scrimshaw love tokens for a sailor's sweetheart to wear against her chest.",
       source: {
