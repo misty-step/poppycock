@@ -80,9 +80,9 @@ export const brightIdeas = definePack(
         "How was a 1963 Japanese pest-control device designed to scare mice without traps or poison?",
       answer: "It meowed ten times a minute while flashing mechanical eyes.",
       source: {
-        title: "BBC Science Focus — The Cat Meow Machine",
+        title: "BBC Science Focus — 15 of the world's weirdest-ever inventions",
         url: "https://www.sciencefocus.com/science/the-weirdest-inventions-ever-in-pictures-2",
-        note: "Original question and factual summary. Motorized electromechanical device made in Japan in 1963 to frighten rodents with repeated recorded meows and flashing eyes.",
+        note: "Original question and factual summary. Motorized electromechanical cat head developed in Japan in 1963 to frighten rodents with repeated recorded meows and flashing eyes.",
       },
     },
     {
@@ -97,14 +97,13 @@ export const brightIdeas = definePack(
       },
     },
     {
-      key: "idea-rocking-chair-churn",
-      question:
-        "What household chore was Alfred Clark's 1891 patented rocking chair designed to perform while you relaxed?",
-      answer: "Churning butter.",
+      key: "idea-cat-laser-exercise",
+      question: "What common household pet interaction was granted an official US Patent in 1995?",
+      answer: "Exercising a cat by shining a handheld laser pointer on the floor.",
       source: {
-        title: "US Patent 446,495 — Churn",
-        url: "https://patents.google.com/patent/US446495A/en",
-        note: "Original question and factual summary. Granted February 17, 1891 to Alfred Clark. Uses rocking chair motion transmitted through pitman arms to operate a butter churn.",
+        title: "US Patent 5,443,036 — Method of exercising a cat",
+        url: "https://patents.google.com/patent/US5443036A/en",
+        note: "Original question and factual summary. Granted August 22, 1995 to Kevin T. Amiss and Martin H. Abbott for directing a laser beam onto a floor to induce cats to chase it.",
       },
     },
     {
@@ -113,7 +112,7 @@ export const brightIdeas = definePack(
         "What did a 1938 custom Colt .38 revolver automatically do every time the shooter pulled the trigger?",
       answer: "Take a photograph of whatever the gun was pointed at.",
       source: {
-        title: "PetaPixel — Revolver Camera That Shot Bullets and Photos",
+        title: "PetaPixel — Revolver Camera That Shot Bullets and Photos at the Same Time",
         url: "https://petapixel.com/2011/05/19/revolver-camera-shoots-bullets-and-photos-at-the-same-time/",
         note: "Original question and factual summary. 1938 New York custom Colt .38 with an attached small camera mechanically linked to trigger actuation.",
       },
@@ -155,7 +154,7 @@ export const brightIdeas = definePack(
       question: "What pet accessory was officially granted US Patent 5,934,226 in 1999?",
       answer: "A reusable bird diaper to catch droppings from indoor pets.",
       source: {
-        title: "US Patent 5,934,226 — Avian diaper",
+        title: "US Patent 5,934,226 — Bird diaper",
         url: "https://patents.google.com/patent/US5934226A/en",
         note: "Original question and factual summary. Granted August 10, 1999 to Lorraine Moore. A fabric harness and removable waste pouch fitted to pet birds.",
       },
@@ -177,7 +176,8 @@ export const brightIdeas = definePack(
       question: "What futuristic feature did Goodyear's experimental 1961 car tires have?",
       answer: "They were made of translucent rubber with 18 light bulbs inside.",
       source: {
-        title: "Hagerty — Goodyear's Illuminated Tires",
+        title:
+          "Hagerty Media — Why Goodyear’s bright idea for illuminated tires didn’t shine for long",
         url: "https://www.hagerty.com/media/automotive-history/why-goodyears-bright-idea-for-illuminated-tires-didnt-shine-for-long/",
         note: "Original question and factual summary. 1961 experimental project using translucent Neothane synthetic rubber and internal incandescent bulbs inside the wheel rim.",
       },
@@ -188,7 +188,8 @@ export const brightIdeas = definePack(
         "What unusual capability did the German 'Krummlauf' barrel attachment give a rifle?",
       answer: "It allowed a soldier to shoot around corners using a periscope sight.",
       source: {
-        title: "Popular Mechanics — The Curved Barrel Krummlauf",
+        title:
+          "Popular Mechanics — Forgotten Weapons: The Nazis' Desperate Attempts to Curve a Bullet",
         url: "https://www.popularmechanics.com/military/weapons/a21800/forgotten-weapons-wwii-curve-a-bullet/",
         note: "Original question and factual summary. WWII attachment for the StG 44 rifle with bent barrels (30 or 90 degrees) and periscope optics for shooting around cover.",
       },
@@ -199,7 +200,7 @@ export const brightIdeas = definePack(
         "What social problem was Albert Cohen's 1994 patented mechanical apparatus designed to solve?",
       answer: "Giving solitary sports fans a way to celebrate with a high five.",
       source: {
-        title: "US Patent 5,356,330 — Apparatus for simulating a 'high-five'",
+        title: "US Patent 5,356,330 — Apparatus for simulating a 'high five'",
         url: "https://patents.google.com/patent/US5356330A/en",
         note: "Original question and factual summary. Granted October 18, 1994 to Albert Cohen. A spring-loaded synthetic forearm and hand mounted on a wall or table to slap when alone.",
       },

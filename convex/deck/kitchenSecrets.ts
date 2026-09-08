@@ -17,7 +17,7 @@ export const kitchenSecrets = definePack(
       source: {
         title: "Kew — From pods to puddings: Vanilla and other sweet-tasting orchids",
         url: "https://www.kew.org/read-and-watch/vanilla-digitisation",
-        note: "Original question and factual summary. Salep is made from ground wild orchid tubers; gives Turkish mastic ice cream its dense, stretchy texture.",
+        note: "Original question and factual summary. Tuberous roots of Orchis mascula are ground into powder (salep) that gives Turkish dondurma its thickening power and stretchy texture.",
       },
     },
     {
@@ -26,9 +26,9 @@ export const kitchenSecrets = definePack(
         "What was the filling of the Victorian 'toast sandwich' published in Mrs. Beeton's 1861 cookbook?",
       answer: "A slice of cold toast seasoned with salt and pepper.",
       source: {
-        title: "BBC News — The Toast Sandwich and Other Cheap Meals",
+        title: "BBC News — The toast sandwich and other hyper-cheap meals",
         url: "https://www.bbc.com/news/magazine-15760897",
-        note: "Original question and factual summary. Published in Mrs. Beeton's 1861 Book of Household Management; places a slice of cold toast between two buttered slices of bread.",
+        note: "Original question and factual summary. Published in Mrs. Beeton's 1861 Book of Household Management; places a slice of cold toast between two thin slices of buttered bread.",
       },
     },
     {
@@ -48,9 +48,9 @@ export const kitchenSecrets = definePack(
         "Why do French gourmets traditionally drape a white napkin over their head when eating an ortolan bunting?",
       answer: "To trap the aromas and hide their gluttony from God while eating it whole.",
       source: {
-        title: "Smithsonian Magazine — Ortolans Eaten as French Delicacy",
+        title: "Smithsonian Magazine — Ortolans, Songbirds Enjoyed as French Delicacy",
         url: "https://www.smithsonianmag.com/smart-news/ortolans-birds-enjoyed-french-delicacy-are-being-eaten-extinction-180972272/",
-        note: "Original question and factual summary. The traditional ritual requires draping a large napkin over the head to trap steam and aromas, hide spitting bones, and symbolically hide from God.",
+        note: "Original question and factual summary. Diners veil their faces with a napkin to trap aromas, conceal spitting out bones, and hide their shame from God while eating the whole bird.",
       },
     },
     {
@@ -59,9 +59,9 @@ export const kitchenSecrets = definePack(
         "What was the primary raw ingredient fermented in the sun to make ancient Rome's favorite condiment, garum?",
       answer: "Salted fish guts and blood left in open vats for months.",
       source: {
-        title: "National Geographic — Funky Fish Guts Were Ketchup of Ancient Rome",
+        title: "National Geographic — Funky Fish Guts Were the Ketchup of Ancient Rome",
         url: "https://www.nationalgeographic.com/history/history-magazine/article/what-is-garum-rome-fish-sauce",
-        note: "Original question and factual summary. Garum was Rome's ubiquitous umami seasoning, produced by leaving salted fish viscera in the Mediterranean sun to autolyze.",
+        note: "Original question and factual summary. Vats were filled with fresh fish guts placed between layers of salt and herbs and left in the Mediterranean sun to ferment.",
       },
     },
     {
@@ -72,7 +72,7 @@ export const kitchenSecrets = definePack(
       source: {
         title: "NPR — Turnspit Dogs: The Rise And Fall Of The Vernepator Cur",
         url: "https://www.npr.org/sections/thesalt/2014/05/13/311127237/turnspit-dogs-the-rise-and-fall-of-the-vernepator-cur",
-        note: "Original question and factual summary. From the 16th to 19th centuries in Britain, small, long-bodied dogs ran in wheel mechanisms linked by chains to roasting spits.",
+        note: "Original question and factual summary. Small, strong dogs bred to run inside an elevated wooden wheel connected by chains to a roasting spit in British kitchens.",
       },
     },
     {
@@ -81,9 +81,9 @@ export const kitchenSecrets = definePack(
         "What animal cut was boiled down in Victorian kitchens to imitate turtle meat for 'mock turtle soup'?",
       answer: "A whole calf's head with the brains and tongue.",
       source: {
-        title: "Atlas Obscura — The Rise and Fall of Mock Turtle Soup",
+        title: "Atlas Obscura — How America Fell Into—and Out of—Love With Mock Turtle Soup",
         url: "https://www.atlasobscura.com/articles/mock-turtle-soup-rise-and-fall-calf-head",
-        note: "Original question and factual summary. In the 18th and 19th centuries, British and American cooks boiled a whole calf's head to replicate the gelatinous texture of green sea turtle meat.",
+        note: "Original question and factual summary. Cooks prepared mock turtle soup by opening a calf's skull, extracting the brains and tongue, and boiling the head to replicate green sea turtle meat.",
       },
     },
     {
@@ -92,9 +92,9 @@ export const kitchenSecrets = definePack(
         "What living creature is considered an essential ingredient in traditional Sardinian casu marzu cheese?",
       answer: "Thousands of live fly maggots that can jump several inches when disturbed.",
       source: {
-        title: "CNN Travel — Casu marzu: The world's most dangerous cheese",
+        title: "CNN Travel — Casu marzu: The world’s ‘most dangerous’ cheese",
         url: "https://www.cnn.com/travel/article/casu-marzu-worlds-most-dangerous-cheese",
-        note: "Original question and factual summary. Sardinian sheep's-milk cheese inoculated with Piophila casei skipper fly larvae that digest the fats; diners often shield their eyes from jumping maggots.",
+        note: "Original question and factual summary. Cheese skipper fly larvae (Piophila casei) hatch and digest fats in pecorino; diners consume the cheese with live writhing maggots.",
       },
     },
     {
@@ -103,9 +103,10 @@ export const kitchenSecrets = definePack(
         "How is the traditional winter feast dish 'kiviak' prepared in northwestern Greenland?",
       answer: "Hundreds of whole little auk seabirds are sewn into a seal skin and fermented.",
       source: {
-        title: "National Geographic — Ancient Arctic Life in Greenland",
+        title:
+          "National Geographic — Greenland is one of the last places on Earth to explore ancient Arctic life",
         url: "https://www.nationalgeographic.com/travel/article/greenland-last-place-explore-ancient-arctic-life",
-        note: "Original question and factual summary. Traditional Inughuit dish; 300 to 500 whole dovekies (little auks) with feathers intact are sewn into a seal carcass and fermented under stones.",
+        note: "Original question and factual summary. Inughuit delicacy made by stuffing hundreds of little auks (dovekies) whole into a fresh seal skin, sealed under stones to ferment.",
       },
     },
     {
@@ -114,9 +115,9 @@ export const kitchenSecrets = definePack(
         "What caustic cleaning chemical is dried cod soaked in to produce gelatinous Scandinavian lutefisk?",
       answer: "Lye, a corrosive alkaline solution of sodium or potassium hydroxide.",
       source: {
-        title: "TasteAtlas — Lutefisk: Traditional Norwegian Dish",
-        url: "https://www.tasteatlas.com/lutefisk",
-        note: "Original question and factual summary. Dried stockfish is soaked in a cold water-and-lye solution (pH 11–12) for days until its proteins break down into jelly.",
+        title: "Smithsonian Magazine — Scandinavians’ Strange Holiday Lutefisk Tradition",
+        url: "https://www.smithsonianmag.com/travel/scandinavians-strange-holiday-lutefisk-tradition-2218218/",
+        note: "Original question and factual summary. Dried cod is reconstituted by soaking in lye (an industrial drain-cleaning chemical) before extensive rinsing and cooking.",
       },
     },
     {
@@ -125,9 +126,9 @@ export const kitchenSecrets = definePack(
         "Why must Greenland shark meat be fermented in gravel for months to make Icelandic hákarl?",
       answer: "Fresh Greenland shark meat is poisonous with toxic urea and antifreeze compounds.",
       source: {
-        title: "Atlas Obscura — Hákarl: Iceland's Fermented Shark",
+        title: "Atlas Obscura — Hákarl",
         url: "https://www.atlasobscura.com/foods/hakarl-shark-iceland",
-        note: "Original question and factual summary. Greenland shark lacks a urinary tract and concentrates toxic urea and trimethylamine oxide in its flesh; fermenting underground renders it edible.",
+        note: "Original question and factual summary. Fresh Greenland shark meat is poisonous, causing powerful intoxication; burying the meat under gravel for weeks neutralizes the toxins.",
       },
     },
     {
@@ -136,9 +137,9 @@ export const kitchenSecrets = definePack(
         "In Dongyang, China, what unusual liquid are springtime 'virgin boy eggs' simmered in?",
       answer: "The collected urine of prepubescent schoolboys.",
       source: {
-        title: "Reuters — Urine-soaked eggs a spring taste treat in China",
-        url: "https://www.reuters.com/article/business/urine-soaked-eggs-a-spring-taste-treat-in-china-city-idUSL3E8ET0FN/",
-        note: "Original question and factual summary. Dongyang intangible cultural heritage; chicken eggs soaked and simmered in urine collected from primary schools.",
+        title: "NBC News — Urine-soaked 'virgin boy eggs' are a springtime taste treat in China",
+        url: "https://www.nbcnews.com/news/world/urine-soaked-virgin-boy-eggs-are-springtime-taste-treat-china-flna593952",
+        note: "Original question and factual summary. Dongyang intangible cultural heritage; eggs are boiled and simmered in urine collected from young schoolboys in primary schools.",
       },
     },
     {
@@ -147,9 +148,10 @@ export const kitchenSecrets = definePack(
         "What animal's digestive tract must coffee cherries pass through to make authentic Kopi Luwak?",
       answer: "The Asian palm civet, a small cat-like mammal.",
       source: {
-        title: "National Geographic — The Disturbing Truth About Civet Coffee",
-        url: "https://www.nationalgeographic.com/animals/article/160429-kopi-luwak-captive-civet-coffee-wildlife-trade",
-        note: "Original question and factual summary. Indonesian luxury coffee produced from partially digested coffee cherries collected from the feces of the Asian palm civet.",
+        title:
+          "National Geographic — The Disturbing Secret Behind the World’s Most Expensive Coffee",
+        url: "https://www.nationalgeographic.com/animals/article/160429-kopi-luwak-captive-civet-coffee-Indonesia",
+        note: "Original question and factual summary. Indonesian luxury coffee produced from coffee beans plucked from the feces of the Asian palm civet after digestive fermentation.",
       },
     },
     {
@@ -160,7 +162,7 @@ export const kitchenSecrets = definePack(
       source: {
         title: "FDA 21 CFR § 73.100 — Cochineal extract; carmine",
         url: "https://www.law.cornell.edu/cfr/text/21/73.100",
-        note: "Original question and factual summary. Federal regulations define carmine as the pigment extracted from the dried bodies of female Dactylopius coccus insects.",
+        note: "Original question and factual summary. Federal food additive regulation 21 CFR 73.100 defines carmine and cochineal extract as derived from Dactylopius coccus costa insects.",
       },
     },
     {
@@ -169,9 +171,9 @@ export const kitchenSecrets = definePack(
         "What exclusive food must Spanish black Iberian pigs forage in oak forests to earn the prized 'de bellota' label?",
       answer: "Acorns fallen from holm and cork oak trees.",
       source: {
-        title: "TasteAtlas — Jamón Ibérico de Bellota",
-        url: "https://www.tasteatlas.com/jamon-iberico",
-        note: "Original question and factual summary. Pigs roam the dehesa oak forests feeding exclusively on fallen acorns during the montanera period, giving the cured ham its melting oleic fat.",
+        title: "BBC Travel — The world’s most expensive ham",
+        url: "https://www.bbc.com/travel/article/20181114-the-worlds-most-expensive-ham",
+        note: "Original question and factual summary. To earn 'de bellota' status, Iberian pigs must feed on acorns fallen from oak trees in the dehesa savannah, giving the ham its high oleic fat.",
       },
     },
     {
@@ -182,7 +184,7 @@ export const kitchenSecrets = definePack(
       source: {
         title: "Atlas Obscura — Bird's Nest Soup",
         url: "https://www.atlasobscura.com/foods/birds-nest-soup",
-        note: "Original question and factual summary. White and black-nest swiftlets weave cave nests entirely from sticky, solidified salivary secretions.",
+        note: "Original question and factual summary. Cave-dwelling swiftlets weave edible nests from saliva that hardens on rock walls; harvested to produce gelatinous soup.",
       },
     },
     {
@@ -191,9 +193,10 @@ export const kitchenSecrets = definePack(
         "What temporary effect does chewing an African 'miracle berry' have on human taste buds?",
       answer: "It makes intensely sour foods like lemons and vinegar taste deliciously sweet.",
       source: {
-        title: "Scientific Reports — Sweet taste receptor activation by miraculin",
+        title:
+          "Scientific Reports — Intracellular acidification is required for full activation of sweet receptor by miraculin",
         url: "https://www.nature.com/articles/srep22807",
-        note: "Original question and factual summary. The glycoprotein miraculin binds to sweet receptors and activates them specifically in the presence of acids, turning sour sensations into intense sweetness.",
+        note: "Original question and factual summary. The glycoprotein miraculin from miracle fruit binds sweet receptors in an inactive state until exposed to acids, triggering intense sweetness.",
       },
     },
     {
@@ -202,9 +205,9 @@ export const kitchenSecrets = definePack(
         "What animal organ was historically harvested to produce FDA-approved 'natural' vanilla and raspberry flavoring?",
       answer: "The castor scent sacs located near the tail and anus of beavers.",
       source: {
-        title: "Smithsonian Magazine — Vanilla Flavoring and Castoreum",
+        title: "Smithsonian Magazine — Does Vanilla Flavoring Actually Come From Beaver Butts?",
         url: "https://www.smithsonianmag.com/smart-news/does-vanilla-flavoring-actually-come-from-beaver-butts-180983288/",
-        note: "Original question and factual summary. Castoreum from beaver castor sacs is FDA GRAS (21 CFR 182.50) as a natural vanilla, raspberry, and strawberry flavor enhancer.",
+        note: "Original question and factual summary. Castoreum is harvested from beaver castor sacs located near the tail; recognized as safe by the FDA and historically used as a vanilla enhancer.",
       },
     },
   ],
