@@ -150,12 +150,12 @@ export const wildNature = definePack(
       question:
         "What bizarre miniature ecosystem lives permanently inside the fur of a three-toed sloth?",
       answer:
-        "Dozens of specialized moths that lay their eggs only in the sloth's fresh dung when it climbs down to poop.",
+        "Dozens of specialized moths that lay their eggs only in the sloth's fresh dung when it climbs down to defecate.",
       source: {
         title:
           "Smithsonian National Museum of Natural History — Seven Bizarre Moths to Celebrate National Moth Week",
         url: "https://www.smithsonianmag.com/blogs/national-museum-of-natural-history/2021/07/20/seven-bizarre-moths-celebrate-national-moth-week/",
-        note: "Original question and factual summary. Cryptoses choloepi moths live exclusively in sloth fur, laying eggs in sloth dung; decaying moths fertilize algae growing on the hair that sloths eat and use as camouflage.",
+        note: "Original question and factual summary. Cryptoses choloepi moths live exclusively in sloth fur and lay eggs in sloth dung when the host descends to defecate; moths increase nitrogen in fur that promotes camouflaging algae.",
       },
     },
     {
@@ -181,14 +181,14 @@ export const wildNature = definePack(
     {
       key: "nature-archerfish-jets",
       question:
-        "How does a tropical archerfish hunt insects perched on tree branches several feet above the water?",
+        "How does a tropical archerfish hunt insects perched above the surface of the water?",
       answer:
-        "It compresses its gills and tongue into a gun barrel to shoot high-pressure water jets that knock prey into the stream.",
+        "It shoots targeted streams of water from its mouth to stun prey and knock them into the water.",
       source: {
         title:
           "Smithsonian National Museum of Natural History — Meet the Expert Studying Fishes That Spit Water to Hunt",
         url: "https://www.smithsonianmag.com/blogs/national-museum-of-natural-history/2021/09/23/meet-the-expert-studying-fishes-that-spit-water-to-hunt/",
-        note: "Original question and factual summary. Archerfish press their tongue against the roof of their mouth to form a groove, firing water jets that compensate for optical refraction to knock insects off branches.",
+        note: "Original question and factual summary. The Smithsonian profile of ichthyologist Matt Girard documents how archerfishes use specialized mouth structures to shoot water and stun prey.",
       },
     },
     {
@@ -196,11 +196,11 @@ export const wildNature = definePack(
       question:
         "Unlike ordinary camouflaged octopuses, what unique defense does the Indo-Pacific 'mimic octopus' employ when threatened?",
       answer:
-        "It impersonates specific venomous creatures, contorting its arms and swimming style to resemble sea snakes, lionfish, and soles.",
+        "It contorts its body and behavior to impersonate venomous animals, including lionfish, sea snakes, and jellyfish.",
       source: {
         title: "National Geographic — Mimic Octopus Facts",
         url: "https://www.nationalgeographic.com/animals/invertebrates/facts/mimic-octopus",
-        note: "Original question and factual summary. Discovered in 1998 off Sulawesi, Thaumoctopus mimicus actively adopts the body posture and motion of venomous animals.",
+        note: "Original question and factual summary. Discovered in 1998 off Sulawesi, Thaumoctopus mimicus contorts its body and changes its behavior to mimic multiple dangerous animals such as lionfish, sea snakes, and jellyfish.",
       },
     },
     {
@@ -287,12 +287,12 @@ export const wildNature = definePack(
       question:
         "In Lake Tanganyika, what parasitic trick does the cuckoo catfish play on female cichlid fish?",
       answer:
-        "It slips its eggs into the cichlid's clutch so she mouthbroods them, where they hatch first and eat her babies.",
+        "It slips its eggs into the cichlid's clutch so the mother gathers them in her mouth, where they hatch first and eat her eggs.",
       source: {
         title:
           "National Geographic — Cuckoo Catfish Force Others to Raise Their Young—in Their Mouths",
         url: "https://www.nationalgeographic.com/animals/article/fish-parasites-cuckoo-catfish-cichlids-africa-news",
-        note: "Original question and factual summary. Synodontis multipunctatus is an obligate brood parasite that tricks mouthbrooding cichlids into protecting catfish eggs in their mouths, where the catfish fry hatch earlier and devour the host's eggs.",
+        note: "Original question and factual summary. Synodontis multipunctatus exploits mouthbrooding cichlids by laying eggs among the cichlid's clutch; the host gathers them into her mouth where the catfish hatch in 2-4 days and consume the unhatched cichlid eggs.",
       },
     },
     {
