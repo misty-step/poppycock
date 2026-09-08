@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Split the sourced deck into packs and made seeding and draw scale past a single in-memory pool. A match prefers a fresh category each round; a room only remembers recent cards.
+- Split the sourced deck into packs and made seeding and draw scale past a single in-memory pool. A match prefers a fresh category each round and samples by per-category ordinal; a full recent-history list cannot repeat a card already used in the current game.
 - Added three expansion packs — The sea, Lost gear, and Rarer words — 54 sourced cards, bringing the catalog to 270. The original 216 keys are unchanged. Still a fixed, sourced, AI-assisted editorial deck; no runtime generation.
 
 ## 1.2.0 — 2026-09-08

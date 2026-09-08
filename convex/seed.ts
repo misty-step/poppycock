@@ -1,8 +1,7 @@
 import { v } from "convex/values";
 import { internal } from "./_generated/api";
 import { internalAction, internalMutation } from "./_generated/server";
-import { seedCards, seedPacks } from "./content";
-import { drawSalt } from "./deck/salt";
+import { cardOrdinalByKey, seedCards, seedPacks } from "./deck/catalog";
 import { validateSeedCatalog } from "./deck/validate";
 import { fail, MAX_SEED_CARDS, normalizeAnswer, SEED_BATCH, TOTAL_ROUNDS } from "./rules";
 
@@ -66,6 +65,7 @@ export const upsertPacks = internalMutation({
         blurb: pack.blurb,
         category: pack.category,
         sort: pack.sort,
+        cardCount: pack.cards.length,
         active: true,
       };
       if (!existing) await ctx.db.insert("packs", value);
@@ -74,7 +74,8 @@ export const upsertPacks = internalMutation({
         existing.title !== pack.title ||
         existing.blurb !== pack.blurb ||
         existing.category !== pack.category ||
-        existing.sort !== pack.sort
+        existing.sort !== pack.sort ||
+        existing.cardCount !== value.cardCount
       )
         await ctx.db.replace(existing._id, value);
     }
@@ -96,6 +97,8 @@ export const upsertBatch = internalMutation({
         .query("cards")
         .withIndex("by_key", (q) => q.eq("key", card.key))
         .unique();
+      const ordinal = cardOrdinalByKey.get(card.key);
+      if (ordinal === undefined) fail("CONTENT_CARD_INVALID");
       const value = {
         key: card.key,
         packKey: card.packKey,
@@ -105,7 +108,7 @@ export const upsertBatch = internalMutation({
         normalizedAnswer: normalizeAnswer(card.answer),
         source: card.source,
         active: true,
-        drawSalt: drawSalt(card.key),
+        ordinal,
       };
       if (!existing) {
         await ctx.db.insert("cards", value);
@@ -120,7 +123,7 @@ export const upsertBatch = internalMutation({
         existing.source.title !== value.source.title ||
         existing.source.url !== value.source.url ||
         existing.source.note !== value.source.note ||
-        existing.drawSalt !== value.drawSalt
+        existing.ordinal !== value.ordinal
       ) {
         await ctx.db.replace(existing._id, value);
         updated += 1;

@@ -15,6 +15,7 @@ export default defineSchema({
     blurb: v.string(),
     category: v.string(),
     sort: v.number(),
+    cardCount: v.optional(v.number()),
     active: v.boolean(),
   })
     .index("by_key", ["key"])
@@ -29,10 +30,11 @@ export default defineSchema({
     source,
     active: v.boolean(),
     drawSalt: v.optional(v.number()),
+    ordinal: v.optional(v.number()),
   })
     .index("by_key", ["key"])
     .index("by_active_key", ["active", "key"])
-    .index("by_active_category_salt", ["active", "category", "drawSalt"]),
+    .index("by_active_category_ordinal", ["active", "category", "ordinal"]),
   roomDecks: defineTable({
     roomId: v.id("rooms"),
     seenCardIds: v.array(v.id("cards")),

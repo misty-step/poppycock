@@ -358,6 +358,99 @@ describe("authoritative Poppycock rounds", () => {
     expect(categories.size).toBe(TOTAL_ROUNDS);
   });
 
+  it("does not repeat a current-game card when recent history covers the pool", async () => {
+    const { t, clients, host, room, gameId } = await fixture();
+    const first = await gameView(host, room.roomId);
+    for (const [index, client] of clients.entries())
+      await client.mutation(api.game.submit, {
+        gameId,
+        round: 1,
+        text: `A make-believe invention for player ${index}`,
+      });
+    const truth = await optionId(t, gameId, (option) => option.truth);
+    for (const client of clients)
+      await client.mutation(api.game.vote, { gameId, round: 1, optionId: truth });
+    await t.run(async (ctx) => {
+      const cards = await ctx.db.query("cards").collect();
+      const deck = await ctx.db
+        .query("roomDecks")
+        .withIndex("by_room", (q) => q.eq("roomId", room.roomId))
+        .unique();
+      if (!deck) throw new Error("Expected a room deck");
+      await ctx.db.patch(deck._id, { seenCardIds: cards.map((card) => card._id) });
+    });
+    await clients[1]!.mutation(api.game.advance, { gameId, round: 1, phase: "reveal" });
+    const second = await gameView(host, room.roomId);
+    expect(second).toMatchObject({ round: 2, phase: "writing" });
+    expect(second.prompt.question).not.toBe(first.prompt.question);
+  });
+
+  it("can draw a high ordinal from a large category", async () => {
+    const t = convexTest(schema, modules);
+    await t.action(internal.seed.run, {});
+    await t.run(async (ctx) => {
+      const packs = await ctx.db.query("packs").collect();
+      const extra = 80;
+      for (const pack of packs) {
+        if (pack.key === "odd-words") await ctx.db.patch(pack._id, { cardCount: 27 + extra });
+        else await ctx.db.patch(pack._id, { active: false });
+      }
+      for (let index = 0; index < extra; index += 1) {
+        await ctx.db.insert("cards", {
+          key: `test-odd-extra-${index}`,
+          packKey: "odd-words",
+          category: "Odd words",
+          question: `Sampler expansion question ${index}?`,
+          answer: `Sampler expansion answer ${index}.`,
+          normalizedAnswer: `sampler expansion answer ${index}`,
+          source: {
+            title: "Sampler test",
+            url: "https://example.com/sampler",
+            note: "Test-only card.",
+          },
+          active: true,
+          ordinal: 27 + index,
+        });
+      }
+    });
+    const drawn: number[] = [];
+    for (let index = 0; index < 8; index += 1) {
+      const guest = t.withIdentity({ subject: `sampler-${index}`, issuer: "poppycock-test" });
+      const created = await guest.mutation(api.rooms.createRoom, { displayName: `Host ${index}` });
+      for (const seat of [1, 2]) {
+        const player = t.withIdentity({
+          subject: `sampler-${index}-${seat}`,
+          issuer: "poppycock-test",
+        });
+        const joined = await player.mutation(api.rooms.joinRoom, {
+          code: created.code,
+          displayName: `P${seat}`,
+        });
+        if (!joined.ok) throw new Error(joined.code);
+      }
+      await guest.mutation(api.game.start, {
+        roomId: created.roomId,
+        requestId: `sample-${index}`,
+      });
+      const view = await guest.query(api.game.view, { roomId: created.roomId });
+      if (!view) throw new Error("Expected a game");
+      expect(view.prompt.category).toBe("Odd words");
+      const ordinal = await t.run(async (ctx) => {
+        const round = await ctx.db
+          .query("rounds")
+          .withIndex("by_game_round", (q) =>
+            q.eq("gameId", view.gameId as Id<"games">).eq("round", 1),
+          )
+          .unique();
+        if (!round) return -1;
+        const card = await ctx.db.get(round.cardId);
+        return card?.ordinal ?? -1;
+      });
+      drawn.push(ordinal);
+    }
+    expect(drawn.some((ordinal) => ordinal >= 27)).toBe(true);
+  });
+
   it("retains departed authors and their points without making them block early phase completion", async () => {
     const { t, clients, host, room, gameId, playerIds } = await fixture();
     await host.mutation(api.game.submit, { gameId, round: 1, text: "A dancing teapot" });

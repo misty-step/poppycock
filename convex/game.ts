@@ -4,8 +4,8 @@ import type { GameView } from "../lib/game-types";
 import type { Doc, Id } from "./_generated/dataModel";
 import { mutation, query } from "./_generated/server";
 import type { MutationCtx, QueryCtx } from "./_generated/server";
+import { ordinalWindow } from "./deck/sample";
 import {
-  CATEGORY_DRAW_PROBE,
   cleanBluff,
   fail,
   MAX_PLAYERS,
@@ -126,43 +126,31 @@ async function everyoneDone(ctx: ReadCtx, game: Game): Promise<boolean> {
   return false;
 }
 
-async function activeCategories(ctx: MutationCtx): Promise<string[]> {
-  const packs = await ctx.db
+async function activePacks(ctx: MutationCtx) {
+  return ctx.db
     .query("packs")
     .withIndex("by_active_sort", (q) => q.eq("active", true))
     .take(200);
-  const names: string[] = [];
-  const seen = new Set<string>();
-  for (const pack of packs) {
-    if (seen.has(pack.category)) continue;
-    seen.add(pack.category);
-    names.push(pack.category);
-  }
-  return names;
 }
 
 async function pickInCategory(
   ctx: MutationCtx,
   category: string,
-  seen: Set<Id<"cards">>,
-  lastCardId: Id<"cards"> | undefined,
+  count: number,
+  exclude: Set<Id<"cards">>,
 ) {
-  const pivot = Math.floor(Math.random() * 0x100000000);
-  const ahead = await ctx.db
-    .query("cards")
-    .withIndex("by_active_category_salt", (q) =>
-      q.eq("active", true).eq("category", category).gte("drawSalt", pivot),
-    )
-    .take(CATEGORY_DRAW_PROBE);
-  const wrap = await ctx.db
-    .query("cards")
-    .withIndex("by_active_category_salt", (q) =>
-      q.eq("active", true).eq("category", category).lt("drawSalt", pivot),
-    )
-    .take(CATEGORY_DRAW_PROBE);
-  const open = [...ahead, ...wrap].filter((card) => !seen.has(card._id) && card._id !== lastCardId);
-  if (open.length === 0) return null;
-  return open[Math.floor(Math.random() * open.length)]!;
+  if (count <= 0) return null;
+  const start = Math.floor(Math.random() * count);
+  for (const ordinal of ordinalWindow(count, start)) {
+    const card = await ctx.db
+      .query("cards")
+      .withIndex("by_active_category_ordinal", (q) =>
+        q.eq("active", true).eq("category", category).eq("ordinal", ordinal),
+      )
+      .unique();
+    if (card && !exclude.has(card._id)) return card;
+  }
+  return null;
 }
 
 async function drawRound(
@@ -171,7 +159,7 @@ async function drawRound(
   roomId: Id<"rooms">,
   round: number,
 ): Promise<void> {
-  const [deck, prior, categories] = await Promise.all([
+  const [deck, prior, packs] = await Promise.all([
     ctx.db
       .query("roomDecks")
       .withIndex("by_room", (q) => q.eq("roomId", roomId))
@@ -180,33 +168,43 @@ async function drawRound(
       .query("rounds")
       .withIndex("by_game_round", (q) => q.eq("gameId", gameId))
       .take(TOTAL_ROUNDS),
-    activeCategories(ctx),
+    activePacks(ctx),
   ]);
-  if (categories.length === 0) fail("CONTENT_NOT_READY");
-  const seen = new Set(deck?.seenCardIds ?? []);
+  if (packs.length === 0) fail("CONTENT_NOT_READY");
+  const gameBlocked = new Set(prior.map((entry) => entry.cardId));
+  const roomSeen = new Set(deck?.seenCardIds ?? []);
+  if (deck?.lastCardId) roomSeen.add(deck.lastCardId);
   const used = new Set(prior.map((entry) => entry.category));
+  const categories = packs.map((pack) => pack.category);
   const unused = shuffled(categories.filter((name) => !used.has(name)));
   const reused = shuffled(categories.filter((name) => used.has(name)));
   const order = unused.length > 0 ? [...unused, ...reused] : shuffled([...categories]);
-  let card = null;
+  const countByCategory = new Map(
+    packs.map((pack) => [pack.category, pack.cardCount ?? 0] as const),
+  );
+  const tryOrder = async (exclude: Set<Id<"cards">>) => {
+    for (const category of order) {
+      const card = await pickInCategory(ctx, category, countByCategory.get(category) ?? 0, exclude);
+      if (card) return card;
+    }
+    return null;
+  };
+  const prefer = new Set<Id<"cards">>([...gameBlocked, ...roomSeen]);
+  let card = await tryOrder(prefer);
   let wrapped = false;
-  for (const category of order) {
-    card = await pickInCategory(ctx, category, seen, deck?.lastCardId);
-    if (card) break;
-  }
   if (!card) {
     wrapped = true;
-    seen.clear();
-    for (const category of shuffled([...categories])) {
-      card = await pickInCategory(ctx, category, seen, deck?.lastCardId);
-      if (card) break;
-    }
+    card = await tryOrder(gameBlocked);
   }
   if (!card) fail("CONTENT_NOT_READY");
   const seenCardIds = wrapped
-    ? [card._id]
+    ? [...gameBlocked, card._id]
     : [...(deck?.seenCardIds ?? []).filter((id) => id !== card._id), card._id];
-  while (seenCardIds.length > SEEN_RECENT) seenCardIds.shift();
+  while (seenCardIds.length > SEEN_RECENT) {
+    const drop = seenCardIds.find((id) => !gameBlocked.has(id) && id !== card._id);
+    if (drop === undefined) break;
+    seenCardIds.splice(seenCardIds.indexOf(drop), 1);
+  }
   const state = { roomId, seenCardIds, lastCardId: card._id };
   if (deck) await ctx.db.replace(deck._id, state);
   else await ctx.db.insert("roomDecks", state);

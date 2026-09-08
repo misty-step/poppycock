@@ -6,11 +6,19 @@ export function validateSeedCatalog(): void {
   if (seedCards.length < TOTAL_ROUNDS || seedCards.length > MAX_SEED_CARDS)
     throw new Error("CONTENT_POOL_INVALID");
   const packKeys = new Set<string>();
+  const categories = new Set<string>();
   const packByKey = new Map(seedPacks.map((pack) => [pack.key, pack]));
   for (const pack of seedPacks) {
-    if (!pack.key.trim() || packKeys.has(pack.key) || !pack.title.trim() || !pack.category.trim())
+    if (
+      !pack.key.trim() ||
+      packKeys.has(pack.key) ||
+      !pack.title.trim() ||
+      !pack.category.trim() ||
+      categories.has(pack.category)
+    )
       throw new Error("CONTENT_PACK_INVALID");
     packKeys.add(pack.key);
+    categories.add(pack.category);
   }
   const keys = new Set<string>();
   const questions = new Set<string>();

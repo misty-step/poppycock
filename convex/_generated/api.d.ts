@@ -21,7 +21,7 @@ import type * as deck_lostGear from "../deck/lostGear.js";
 import type * as deck_oddWords from "../deck/oddWords.js";
 import type * as deck_rarerWords from "../deck/rarerWords.js";
 import type * as deck_remarkablePlaces from "../deck/remarkablePlaces.js";
-import type * as deck_salt from "../deck/salt.js";
+import type * as deck_sample from "../deck/sample.js";
 import type * as deck_spaceOddities from "../deck/spaceOddities.js";
 import type * as deck_theSea from "../deck/theSea.js";
 import type * as deck_types from "../deck/types.js";
@@ -55,7 +55,7 @@ declare const fullApi: ApiFromModules<{
   "deck/oddWords": typeof deck_oddWords;
   "deck/rarerWords": typeof deck_rarerWords;
   "deck/remarkablePlaces": typeof deck_remarkablePlaces;
-  "deck/salt": typeof deck_salt;
+  "deck/sample": typeof deck_sample;
   "deck/spaceOddities": typeof deck_spaceOddities;
   "deck/theSea": typeof deck_theSea;
   "deck/types": typeof deck_types;

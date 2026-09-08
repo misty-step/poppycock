@@ -30,3 +30,10 @@ export const seedPacks: SeedPack[] = [
 ];
 
 export const seedCards: SeedCard[] = seedPacks.flatMap((pack) => pack.cards);
+
+export const cardOrdinalByKey = new Map<string, number>();
+export const categoryCount = new Map<string, number>();
+for (const pack of seedPacks) {
+  pack.cards.forEach((card, index) => cardOrdinalByKey.set(card.key, index));
+  categoryCount.set(pack.category, pack.cards.length);
+}
