@@ -60,20 +60,24 @@ Ten cards in `Curious objects` draw from verified historical artifacts preserved
 The deck reuses or paraphrases the historical definitions and object records, not the modern hosts' site designs. `word-brontolith` cross-references the public-domain Aërolite definition. Gutenberg links are scholarly acknowledgements only; no ebook, Gutenberg wrapper, or trademark asset is shipped.
 ### Wild nature: 27 cards
 
-Nineteen cards cite NOAA Ocean Exploration and National Ocean Service resources for marine biology, hydrothermal vents, deep-sea ecology, and geological formations. Eight cards draw verified, extraordinary biological adaptations from peer-reviewed research documented by National Geographic, New Scientist, BBC, and Smithsonian Magazine:
+Fifteen cards cite NOAA Ocean Exploration and National Ocean Service resources for marine biology, hydrothermal vents, deep-sea ecology, and geological formations. Twelve cards draw verified, extraordinary biological adaptations from peer-reviewed research documented by National Geographic, Smithsonian Magazine, New Scientist, and BBC:
 
 | Card                          | Source                                                                                                                                                                                            |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `nature-horned-lizard-blood`  | [National Geographic — Short-Horned Lizard](https://www.nationalgeographic.com/animals/reptiles/facts/short-horned-lizard)                                                                      |
 | `nature-bombardier-beetle`    | [National Geographic — Bombardier beetles, facts and photos](https://www.nationalgeographic.com/animals/invertebrates/facts/bombardier-beetle)                                                    |
 | `nature-zombie-ant-fungus`    | [National Geographic — How a cordyceps fungus turns ants into 'zombies'](https://www.nationalgeographic.com/animals/article/cordyceps-zombie-fungus-takes-over-ants)                              |
+| `nature-sloth-moths`          | [Smithsonian NMNH — Seven Bizarre Moths to Celebrate National Moth Week](https://www.smithsonianmag.com/blogs/national-museum-of-natural-history/2021/07/20/seven-bizarre-moths-celebrate-national-moth-week/) |
+| `nature-archerfish-jets`      | [Smithsonian NMNH — Meet the Expert Studying Fishes That Spit Water to Hunt](https://www.smithsonianmag.com/blogs/national-museum-of-natural-history/2021/09/23/meet-the-expert-studying-fishes-that-spit-water-to-hunt/) |
+| `nature-mimic-octopus`        | [National Geographic — Mimic Octopus Facts](https://www.nationalgeographic.com/animals/invertebrates/facts/mimic-octopus)                                                                        |
+| `nature-cuckoo-catfish`       | [National Geographic — Cuckoo Catfish Force Others to Raise Their Young—in Their Mouths](https://www.nationalgeographic.com/animals/article/fish-parasites-cuckoo-catfish-cichlids-africa-news) |
 | `nature-horror-frog-claws`    | [New Scientist — 'Horror frog' breaks own bones to produce claws](https://www.newscientist.com/article/1909580-horror-frog-breaks-own-bones-to-produce-claws/)                                    |
 | `nature-pistol-shrimp-bubble` | [BBC Future — Why the US military is listening to shrimp](https://www.bbc.com/future/article/20220616-the-new-sonar-built-from-sealife-noises)                                                  |
 | `nature-immortal-jellyfish`   | [National Geographic — 'Immortal' Jellyfish Swarm World's Oceans](https://www.nationalgeographic.com/animals/article/immortal-jellyfish-swarm-oceans-animals)                                    |
 | `nature-lyrebird-mimicry`     | [BBC Travel — An Australian bird that mimics the sound of a chainsaw](https://www.bbc.com/travel/article/20140416-an-australian-bird-that-mimics-the-sound-of-a-chainsaw)                       |
 | `nature-hagfish-slime`        | [Smithsonian Magazine — If We Can Get Past the Ickiness, Hagfish Slime May Actually Be Useful to Us](https://www.smithsonianmag.com/innovation/if-we-can-get-past-ickiness-hagfish-slime-may-actually-be-useful-to-us-180962300/) |
 
-The remaining nineteen nature cards draw from Emily Crum, NOAA Ocean Exploration, [“Wild and Bizarre Marine Life”](https://oceanexplorer.noaa.gov/explainers/marine-life/) and fifteen National Ocean Service fact pages:
+The remaining fifteen nature cards draw from Emily Crum, NOAA Ocean Exploration, [“Wild and Bizarre Marine Life”](https://oceanexplorer.noaa.gov/explainers/marine-life/) and eleven National Ocean Service fact pages:
 
 - `nature-rimicaris-food` (bacteria grown on shrimp)
 - `nature-armored-searobin` (strolling on pectoral fin rays)
@@ -85,16 +89,11 @@ The remaining nineteen nature cards draw from Emily Crum, NOAA Ocean Exploration
 - [The vampire squid and the vampire fish](https://oceanservice.noaa.gov/facts/vampire-squid-fish.html) (`nature-vampire-squid-defense`)
 - [What is a Portuguese Man o' War?](https://oceanservice.noaa.gov/facts/portuguese-man-o-war.html) (`nature-man-o-war-colony`)
 - [What is a platypus?](https://oceanservice.noaa.gov/facts/platypus.html) (`nature-platypus-gravel`)
-- [What is a whale fall?](https://oceanservice.noaa.gov/facts/whale-fall.html) (`nature-whale-fall`)
 - [Are horseshoe crabs really crabs?](https://oceanservice.noaa.gov/facts/horseshoe-crab.html) (`nature-horseshoe-crab-blood`)
 - [What makes the green turtle...green?](https://oceanservice.noaa.gov/facts/green-turtle.html) (`nature-green-turtle-name`)
-- [What does peanut butter have to do with the ocean?](https://oceanservice.noaa.gov/facts/peanutbutter.html) (`nature-carrageenan`)
-- [What are barnacles?](https://oceanservice.noaa.gov/facts/barnacles.html) (`nature-barnacle-cement`)
 - [How long do Greenland sharks live?](https://oceanservice.noaa.gov/facts/greenland-shark.html) (`nature-greenland-shark-age`)
 - [What are coquina and tabby?](https://oceanservice.noaa.gov/facts/coquina-tabby.html) (`nature-coquina`)
-- [What is a mangrove forest?](https://oceanservice.noaa.gov/facts/mangroves.html) (`nature-mangrove`)
 - [What is marine snow?](https://oceanservice.noaa.gov/facts/marinesnow.html) (`nature-marine-snow`)
-
 All cards are original factual paraphrases. NOAA's and institutional reuse guidelines were followed, citing original discoveries without copying proprietary imagery or narrative prose.
 ### NASA and JPL: 28 cards
 

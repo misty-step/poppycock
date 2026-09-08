@@ -146,13 +146,16 @@ export const wildNature = definePack(
       },
     },
     {
-      key: "nature-whale-fall",
-      question: "What is a 'whale fall' to a deep-sea biologist?",
-      answer: "A sunken whale carcass that feeds a seafloor community, sometimes for decades.",
+      key: "nature-sloth-moths",
+      question:
+        "What bizarre miniature ecosystem lives permanently inside the fur of a three-toed sloth?",
+      answer:
+        "Dozens of specialized moths that lay their eggs only in the sloth's fresh dung when it climbs down to poop.",
       source: {
-        title: "NOAA — What is a whale fall?",
-        url: "https://oceanservice.noaa.gov/facts/whale-fall.html",
-        note: "Original factual paraphrase of NOAA public-information text. The long-lived food source includes the bones and their chemical breakdown.",
+        title:
+          "Smithsonian National Museum of Natural History — Seven Bizarre Moths to Celebrate National Moth Week",
+        url: "https://www.smithsonianmag.com/blogs/national-museum-of-natural-history/2021/07/20/seven-bizarre-moths-celebrate-national-moth-week/",
+        note: "Original question and factual summary. Cryptoses choloepi moths live exclusively in sloth fur, laying eggs in sloth dung; decaying moths fertilize algae growing on the hair that sloths eat and use as camouflage.",
       },
     },
     {
@@ -176,24 +179,28 @@ export const wildNature = definePack(
       },
     },
     {
-      key: "nature-carrageenan",
+      key: "nature-archerfish-jets",
       question:
-        "Where does carrageenan, a thickener used in some foods and toothpastes, come from?",
-      answer: "Red algae, processed to extract their thickening compounds.",
+        "How does a tropical archerfish hunt insects perched on tree branches several feet above the water?",
+      answer:
+        "It compresses its gills and tongue into a gun barrel to shoot high-pressure water jets that knock prey into the stream.",
       source: {
-        title: "NOAA — What does peanut butter have to do with the ocean?",
-        url: "https://oceanservice.noaa.gov/facts/peanutbutter.html",
-        note: "Original factual paraphrase of NOAA public-information text. Some products use it; the card does not say every brand contains it.",
+        title:
+          "Smithsonian National Museum of Natural History — Meet the Expert Studying Fishes That Spit Water to Hunt",
+        url: "https://www.smithsonianmag.com/blogs/national-museum-of-natural-history/2021/09/23/meet-the-expert-studying-fishes-that-spit-water-to-hunt/",
+        note: "Original question and factual summary. Archerfish press their tongue against the roof of their mouth to form a groove, firing water jets that compensate for optical refraction to knock insects off branches.",
       },
     },
     {
-      key: "nature-barnacle-cement",
-      question: "How do barnacles fasten themselves so firmly to a ship's hull?",
-      answer: "They secrete a powerful, fast-setting natural cement.",
+      key: "nature-mimic-octopus",
+      question:
+        "Unlike ordinary camouflaged octopuses, what unique defense does the Indo-Pacific 'mimic octopus' employ when threatened?",
+      answer:
+        "It impersonates specific venomous creatures, contorting its arms and swimming style to resemble sea snakes, lionfish, and soles.",
       source: {
-        title: "NOAA — What are barnacles?",
-        url: "https://oceanservice.noaa.gov/facts/barnacles.html",
-        note: "Original factual paraphrase of NOAA public-information text about barnacle adhesive.",
+        title: "National Geographic — Mimic Octopus Facts",
+        url: "https://www.nationalgeographic.com/animals/invertebrates/facts/mimic-octopus",
+        note: "Original question and factual summary. Discovered in 1998 off Sulawesi, Thaumoctopus mimicus actively adopts the body posture and motion of venomous animals.",
       },
     },
     {
@@ -276,13 +283,16 @@ export const wildNature = definePack(
       },
     },
     {
-      key: "nature-mangrove",
-      question: "Where do mangrove trees and shrubs live?",
-      answer: "In the coastal intertidal zone of tropical and subtropical latitudes.",
+      key: "nature-cuckoo-catfish",
+      question:
+        "In Lake Tanganyika, what parasitic trick does the cuckoo catfish play on female cichlid fish?",
+      answer:
+        "It slips its eggs into the cichlid's clutch so she mouthbroods them, where they hatch first and eat her babies.",
       source: {
-        title: "NOAA National Ocean Service — What is a mangrove forest?",
-        url: "https://oceanservice.noaa.gov/facts/mangroves.html",
-        note: "Original factual paraphrase. They cannot withstand freezing temperatures; prop roots help them handle daily tides.",
+        title:
+          "National Geographic — Cuckoo Catfish Force Others to Raise Their Young—in Their Mouths",
+        url: "https://www.nationalgeographic.com/animals/article/fish-parasites-cuckoo-catfish-cichlids-africa-news",
+        note: "Original question and factual summary. Synodontis multipunctatus is an obligate brood parasite that tricks mouthbrooding cichlids into protecting catfish eggs in their mouths, where the catfish fry hatch earlier and devour the host's eggs.",
       },
     },
     {
