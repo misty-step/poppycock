@@ -70,13 +70,13 @@ export const oddWords = definePack(
       },
     },
     {
-      key: "word-logomachy",
-      question: "Outside the name of a word game, what is a 'logomachy'?",
-      answer: "A quarrel over words or their meanings.",
+      key: "word-toadeater",
+      question: "In historical slang, why was a sycophantic flatterer called a 'toadeater'?",
+      answer: "Mountebanks' assistants ate toads so their masters could pretend to cure them.",
       source: {
-        title: "Webster's 1913 — Logomachy",
-        url: "https://www.websters1913.com/words/Logomachy",
-        note: "Original question; paraphrase of public-domain sense 1. The question excludes the separate word-game sense.",
+        title: "Webster's 1913 — Toadeater",
+        url: "https://www.websters1913.com/words/Toadeater",
+        note: "Original question; condensed public-domain definition of the mountebank origin and sycophantic meaning.",
       },
     },
     {
@@ -90,13 +90,13 @@ export const oddWords = definePack(
       },
     },
     {
-      key: "word-nidification",
-      question: "What is an animal doing when it engages in 'nidification'?",
-      answer: "Building a nest.",
+      key: "word-cacodoxy",
+      question: "What is 'cacodoxy'?",
+      answer: "Erroneous doctrine or heterodox opinion; a heresy.",
       source: {
-        title: "Webster's 1913 — Nidification",
-        url: "https://www.websters1913.com/words/Nidification",
-        note: "Original question; shortened public-domain definition of the nest-building process.",
+        title: "Webster's 1913 — Cacodoxy",
+        url: "https://www.websters1913.com/words/Cacodoxy",
+        note: "Original question; public-domain definition from Greek kakos (bad) + doxa (opinion).",
       },
     },
     {
@@ -190,13 +190,14 @@ export const oddWords = definePack(
       },
     },
     {
-      key: "word-funambulist",
-      question: "What kind of performer is a 'funambulist'?",
-      answer: "A ropewalker or ropedancer.",
+      key: "word-pugil",
+      question: "In old apothecaries' measurements, what quantity was a 'pugil'?",
+      answer:
+        "As much powder or dried herb as can be taken up between the thumb and first two fingers.",
       source: {
-        title: "Webster's 1913 — Funambulist",
-        url: "https://www.websters1913.com/words/Funambulist",
-        note: "Original question; public-domain definition used in full because it is already a short gloss.",
+        title: "Webster's 1913 — Pugil",
+        url: "https://www.websters1913.com/words/Pugil",
+        note: "Original question; public-domain definition from Latin pugillus: a pinch held by thumb and two fingers.",
       },
     },
     {
@@ -210,34 +211,33 @@ export const oddWords = definePack(
       },
     },
     {
-      key: "word-tatterdemalion",
-      question: "What sort of person is a 'tatterdemalion'?",
-      answer: "A ragged fellow; a ragamuffin.",
+      key: "word-blatteroon",
+      question: "What sort of person was called a 'blatteroon' in older English?",
+      answer: "A senseless babbler or boaster.",
       source: {
-        title: "Webster's 1913 — Tatterdemalion",
-        url: "https://www.websters1913.com/words/Tatterdemalion",
-        note: "Original question; public-domain gloss used nearly intact because it is already brief.",
+        title: "Webster's 1913 — Blatteroon",
+        url: "https://www.websters1913.com/words/Blatteroon",
+        note: "Original question; brief public-domain definition from Latin blatero.",
       },
     },
     {
-      key: "word-sesquipedalian",
-      question:
-        "Besides meaning a foot and a half long, how is 'sesquipedalian' sometimes used humorously?",
-      answer: "To describe very long words.",
+      key: "word-callithump",
+      question: "In 19th-century American slang, what was a 'callithump'?",
+      answer: "A noisy, mocking parade or serenade with tin horns and clattering pots.",
       source: {
-        title: "Webster's 1913 — Sesquipedalian",
-        url: "https://www.websters1913.com/words/Sesquipedalian",
-        note: "Original question; public-domain note that the word is sometimes humorously applied to long words.",
+        title: "Webster's 1913 — Callithump",
+        url: "https://www.websters1913.com/words/Callithump",
+        note: "Original question; condensed public-domain definition of a discordant, riotous burlesque parade or charivari.",
       },
     },
     {
-      key: "word-ululate",
-      question: "What sound does a creature make when it 'ululates'?",
-      answer: "A howl or wail, as of a dog or wolf.",
+      key: "word-fribble",
+      question: "In older English, what sort of person was dismissed as a 'fribble'?",
+      answer: "A frivolous, contemptible fellow; a silly fop.",
       source: {
-        title: "Webster's 1913 — Ululate",
-        url: "https://www.websters1913.com/words/Ululate",
-        note: "Original question; condensed public-domain definition. The jackal example is not required by the card.",
+        title: "Webster's 1913 — Fribble",
+        url: "https://www.websters1913.com/words/Fribble",
+        note: "Original question; condensed public-domain noun definition.",
       },
     },
     {
