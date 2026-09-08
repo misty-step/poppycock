@@ -316,28 +316,28 @@ Eighteen cards covering maritime phenomena, navigational hazards, oceanographic 
 
 #### Lost gear — 18 cards
 
-Eighteen cards covering historical equipment, specialized martial gear, obsolete attire, and material culture artifacts. Verified against museum collections (Victoria and Albert Museum, Science Museum Group, National Museums Scotland) and unabridged public-domain reference works (Webster's 1913).
+Eighteen cards covering historical equipment, specialized martial gear, obsolete attire, and material culture artifacts. Verified against museum collections (Victoria and Albert Museum, Science Museum Group, Royal Museums Greenwich, National Museums Scotland) and unabridged public-domain reference works (Webster's 1913).
 
-| Card                       | Consulted source                                                                                                                                                                             |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `gear-cresset`             | [Webster's 1913 — Cresset](https://www.websters1913.com/words/Cresset)                                                                                                                       |
-| `gear-quintain`            | [Webster's 1913 — Quintain](https://www.websters1913.com/words/Quintain)                                                                                                                     |
-| `gear-distaff`             | [Webster's 1913 — Distaff](https://www.websters1913.com/words/Distaff)                                                                                                                       |
-| `gear-tumbril`             | [Webster's 1913 — Tumbril](https://www.websters1913.com/words/Tumbril)                                                                                                                       |
-| `gear-claude-glass`        | [Victoria and Albert Museum — Claude Glass](https://collections.vam.ac.uk/item/O78676/claude-glass-unknown/)                                                                                |
-| `gear-xebec`               | [Webster's 1913 — Xebec](https://www.websters1913.com/words/Xebec)                                                                                                                           |
-| `gear-inkhorn`             | [Webster's 1913 — Inkhorn](https://www.websters1913.com/words/Inkhorn)                                                                                                                       |
-| `gear-scolds-bridle`       | [Science Museum Group Collection — Scold's bridle mask](https://collection.sciencemuseumgroup.org.uk/objects/co155218/scolds-bridle-mask-which-partially-covers-face)                       |
-| `gear-caltrop`             | [Webster's 1913 — Caltrop](https://www.websters1913.com/words/Caltrop)                                                                                                                       |
-| `gear-binnacle`            | [Webster's 1913 — Binnacle](https://www.websters1913.com/words/Binnacle)                                                                                                                     |
-| `gear-man-catcher`         | [Science Museum Group Collection — Man Catcher, Germany, 1601-1800](https://collection.sciencemuseumgroup.org.uk/objects/co155263/man-catcher-germany-1601-1800)                           |
-| `gear-farthingale`         | [Webster's 1913 — Farthingale](https://www.websters1913.com/words/Farthingale)                                                                                                               |
-| `gear-pomander`            | [Webster's 1913 — Pomander](https://www.websters1913.com/words/Pomander)                                                                                                                   |
-| `gear-chopine`             | [Webster's 1913 — Chopine](https://www.websters1913.com/words/Chopine)                                                                                                                       |
-| `gear-tappit-hen`          | [National Museums Scotland — The 'tappit hen'](https://www.nms.ac.uk/discover-catalogue/a-tappit-hen-a-type-of-drinking-vessel-used-during-the-lifetime-of-robert-burns)                   |
-| `gear-betty`               | [Webster's 1913 — Betty](https://www.websters1913.com/words/Betty)                                                                                                                           |
-| `gear-thole`               | [Webster's 1913 — Thole](https://www.websters1913.com/words/Thole)                                                                                                                           |
-| `gear-gibbet-cage`         | [Science Museum Group Collection — Iron Torture Gibbet](https://collection.sciencemuseumgroup.org.uk/objects/co156089/iron-torture-gibbet)                                                   |
+| Card                       | Source                                                                                                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `gear-cresset`             | [Webster's 1913 — Cresset](https://www.websters1913.com/words/Cresset)                                                                                       |
+| `gear-quintain`            | [Webster's 1913 — Quintain](https://www.websters1913.com/words/Quintain)                                                                                     |
+| `gear-distaff`             | [Webster's 1913 — Distaff](https://www.websters1913.com/words/Distaff)                                                                                       |
+| `gear-tumbril`             | [Webster's 1913 — Tumbril](https://www.websters1913.com/words/Tumbril)                                                                                       |
+| `gear-claude-glass`        | [Victoria and Albert Museum — Claude Glass](https://collections.vam.ac.uk/item/O78676/claude-glass-unknown/)                                                |
+| `gear-dark-lantern`        | [Science Museum Group Collection — Dark lantern (iron and brass), 1910](https://collection.sciencemuseumgroup.org.uk/objects/co43102/dark-lantern-iron-and-brass-from-italy-1910) |
+| `gear-inkhorn`             | [Webster's 1913 — Inkhorn](https://www.websters1913.com/words/Inkhorn)                                                                                       |
+| `gear-scolds-bridle`       | [Science Museum Group Collection — Scold's bridle mask](https://collection.sciencemuseumgroup.org.uk/objects/co155218/scolds-bridle-mask-which-partially-covers-face)      |
+| `gear-caltrop`             | [Webster's 1913 — Caltrop](https://www.websters1913.com/words/Caltrop)                                                                                       |
+| `gear-sounding-lead-tallow`| [Royal Museums Greenwich — Sounding lead and line](https://www.rmg.co.uk/collections/objects/rmgc-object-42893)                                             |
+| `gear-man-catcher`         | [Science Museum Group Collection — Man Catcher, Germany, 1601-1800](https://collection.sciencemuseumgroup.org.uk/objects/co155263/man-catcher-germany-1601-1800)          |
+| `gear-farthingale`         | [Webster's 1913 — Farthingale](https://www.websters1913.com/words/Farthingale)                                                                               |
+| `gear-pomander`            | [Webster's 1913 — Pomander](https://www.websters1913.com/words/Pomander)                                                                                   |
+| `gear-chopine`             | [Webster's 1913 — Chopine](https://www.websters1913.com/words/Chopine)                                                                                       |
+| `gear-tappit-hen`          | [National Museums Scotland — The 'tappit hen'](https://www.nms.ac.uk/discover-catalogue/a-tappit-hen-a-type-of-drinking-vessel-used-during-the-lifetime-of-robert-burns)  |
+| `gear-betty`               | [Webster's 1913 — Betty](https://www.websters1913.com/words/Betty)                                                                                           |
+| `gear-misericord`          | [Victoria and Albert Museum — Misericord](https://collections.vam.ac.uk/item/O131751/)                                                                      |
+| `gear-breeches-buoy`       | [Royal Museums Greenwich — Shipwreck Objects: Breeches Buoy](https://www.rmg.co.uk/sites/default/files/import/pages/files/shipwreck_objects26_breechesbuoy.pdf) |
 
 #### Rarer words — 18 cards
 

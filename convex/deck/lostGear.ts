@@ -63,13 +63,14 @@ export const lostGear = definePack(
       },
     },
     {
-      key: "gear-xebec",
-      question: "What kind of ship was a 'xebec'?",
-      answer: "A small three-masted Mediterranean trader, once also armed by corsairs.",
+      key: "gear-dark-lantern",
+      question: "What was the special design feature of an 18th- or 19th-century 'dark lantern'?",
+      answer:
+        "A sliding cylindrical shutter that could instantly hide all light without extinguishing the candle inside.",
       source: {
-        title: "Webster's 1913 — Xebec",
-        url: "https://www.websters1913.com/words/Xebec",
-        note: "Original question; condensed public-domain nautical definition.",
+        title: "Science Museum Group Collection — Dark lantern (iron and brass), 1910",
+        url: "https://collection.sciencemuseumgroup.org.uk/objects/co43102/dark-lantern-iron-and-brass-from-italy-1910",
+        note: "Original question and factual summary. Also known as a bullseye lantern, popular with night watchmen and burglars, its sliding shield concealed the beam without putting out the flame.",
       },
     },
     {
@@ -105,13 +106,15 @@ export const lostGear = definePack(
       },
     },
     {
-      key: "gear-binnacle",
-      question: "What did a ship's 'binnacle' hold beside the helmsman?",
-      answer: "The compass, with a light so it could be read at night.",
+      key: "gear-sounding-lead-tallow",
+      question:
+        "Why did historical sailors pack the hollow bottom cavity of a heavy 'sounding lead' with sticky tallow fat?",
+      answer:
+        "To bring up a sample of sand, mud, or shells from the sea floor to help navigators determine their position.",
       source: {
-        title: "Webster's 1913 — Binnacle",
-        url: "https://www.websters1913.com/words/Binnacle",
-        note: "Original question; condensed public-domain nautical definition.",
+        title: "Royal Museums Greenwich — Sounding lead and line",
+        url: "https://www.rmg.co.uk/collections/objects/rmgc-object-42893",
+        note: "Original question and factual summary. 'Arming the lead' with tallow picked up bottom sediment so sailors could compare the seabed sample against nautical charts to confirm location.",
       },
     },
     {
@@ -179,24 +182,27 @@ export const lostGear = definePack(
       },
     },
     {
-      key: "gear-thole",
-      question: "On a rowboat, what is a 'thole'?",
-      answer: "A pin in the gunwale that the oar works against.",
+      key: "gear-misericord",
+      question:
+        "In medieval monasteries, what clever function did a hinged wooden 'misericord' perform?",
+      answer:
+        "It folded up into a small hidden shelf that monks could secretly lean on while appearing to stand during long prayer services.",
       source: {
-        title: "Webster's 1913 — Thole",
-        url: "https://www.websters1913.com/words/Thole",
-        note: "Original question; public-domain noun sense 1. The obsolete verb 'to endure' and the scythe-snath pin are omitted.",
+        title: "Victoria and Albert Museum — Misericord",
+        url: "https://collections.vam.ac.uk/item/O131751/",
+        note: "Original question and factual summary. Carved on the underside of hinged choir stall seats, misericords ('acts of mercy') provided a perch so monks could take weight off their feet while maintaining an upright posture.",
       },
     },
     {
-      key: "gear-gibbet-cage",
-      question: "In historical criminal punishment, what was the purpose of an iron 'gibbet cage'?",
+      key: "gear-breeches-buoy",
+      question:
+        "In historical shipwreck rescues, what was the lifesaving apparatus known as a 'breeches buoy'?",
       answer:
-        "To hold an executed criminal's corpse suspended in chains at crossroads as a public warning.",
+        "A cork lifebuoy ring fitted with canvas trousers, hauled along a rope between ship and shore to pull survivors to safety.",
       source: {
-        title: "Science Museum Group Collection — Iron Torture Gibbet",
-        url: "https://collection.sciencemuseumgroup.org.uk/objects/co156089/iron-torture-gibbet",
-        note: "An iron armature fitted around a corpse to keep it hanging in chains for months as a deterrent.",
+        title: "Royal Museums Greenwich — Shipwreck Objects: Breeches Buoy",
+        url: "https://www.rmg.co.uk/sites/default/files/import/pages/files/shipwreck_objects26_breechesbuoy.pdf",
+        note: "Original question and factual summary. Rocket apparatus fired a hawser line to stranded ships so survivors could be pulled ashore seated inside the canvas breeches.",
       },
     },
   ],
