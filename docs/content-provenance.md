@@ -253,10 +253,10 @@ Eighteen cards covering extraordinary historical trades, specialist artisanal sk
 | `work-tazzle-men`           | [Sunny Bank Mills — Teazles](https://www.sunnybankmills.co.uk/our-story/blog/teazles-dan-sykes-museum-archive-assistant/)                                                                      |
 | `work-cooper-sound`         | [Colonial Williamsburg — Making Circles](https://research.colonialwilliamsburg.org/Foundation/journal/Autumn03/cooper.cfm)                                                                     |
 | `work-wigmaker-baking`      | [Colonial Williamsburg — Lies My Docent Told Me](https://research.colonialwilliamsburg.org/Foundation/journal/Autumn10/myths.cfm)                                                              |
-| `work-sin-eater`           | [BBC News — Last 'sin-eater' celebrated with church service](https://www.bbc.co.uk/news/uk-england-shropshire-11360659)                                                                      |
-| `work-saltpetre-man`       | [House of Commons Journal Volume 2: 29 January 1641 — British History Online](https://www.british-history.ac.uk/commons-jrnl/vol2/pp74-75)                                                 |
-| `work-loblolly-boy`        | [USNI News — A Brief List of Old, Obscure and Obsolete U.S. Navy Jobs](https://news.usni.org/2014/12/03/brief-list-old-obscure-obsolete-u-s-navy-jobs)                                      |
-| `work-groom-of-the-stool`  | [Historic Royal Palaces — Artefacts: Groom of the Stool](https://www.hrp.org.uk/media/1333/teach100_applyinghistoryhcp_artefacts.pdf)                                                       |
+| `work-greenwich-time-lady` | [Royal Museums Greenwich — The Greenwich Time Lady: Ruth Belville](https://www.rmg.co.uk/stories/time/greenwich-time-lady-ruth-belville)                                                    |
+| `work-canary-resuscitator` | [Science Museum Group Collection — Cage for reviving canary](https://collection.sciencemuseumgroup.org.uk/objects/co8412250/cage-for-reviving-canary)                                     |
+| `work-royal-herb-strewer`  | [Royal Collection Trust — Royal Gold: Reflections of Power](https://media.rct.uk/sites/default/files/transcript_royal_gold.pdf)                                                             |
+| `work-theatre-claqueur`    | [Encyclopedia Britannica — Claque](https://www.britannica.com/art/claque)                                                                                                                   |
 
 #### Art & music — 18 cards
 

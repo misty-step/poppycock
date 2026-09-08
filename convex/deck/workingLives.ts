@@ -164,48 +164,48 @@ export const workingLives = definePack(
       },
     },
     {
-      key: "work-sin-eater",
+      key: "work-greenwich-time-lady",
       question:
-        "In 17th- to 19th-century Welsh and English border villages, what did a 'sin-eater' do at a funeral?",
-      answer: "Ate bread and drank ale over the corpse to take on the deceased person's sins.",
-      source: {
-        title: "BBC News — Last 'sin-eater' celebrated with church service",
-        url: "https://www.bbc.co.uk/news/uk-england-shropshire-11360659",
-        note: "Original question and factual summary. Village sin-eaters consumed food and drink placed upon or passed across the corpse to spiritually absorb their unconfessed sins.",
-      },
-    },
-    {
-      key: "work-saltpetre-man",
-      question:
-        "In 16th- and 17th-century England, what did royal 'saltpetre men' have the legal authority to dig up from inside private homes and stables?",
-      answer: "Urine-soaked earth and cellar floors to extract potassium nitrate for gunpowder.",
-      source: {
-        title: "House of Commons Journal Volume 2: 29 January 1641 — British History Online",
-        url: "https://www.british-history.ac.uk/commons-jrnl/vol2/pp74-75",
-        note: "Original question and factual summary. Parliamentary records document royal saltpetre men exercising crown commissions to dig up dirt floors in private houses and stables to extract nitrates.",
-      },
-    },
-    {
-      key: "work-loblolly-boy",
-      question:
-        "On 18th-century warships, what grim tasks were assigned to the surgeon's assistant known as the 'loblolly boy'?",
+        "For nearly fifty years until 1940, what unusual service did London's 'Greenwich Time Lady' Ruth Belville sell to businesses?",
       answer:
-        "Feeding patients porridge, gathering amputated limbs, and spreading sand to absorb blood.",
+        "She carried a precision pocket watch set to Greenwich Observatory time for clients to set their clocks by.",
       source: {
-        title: "USNI News — A Brief List of Old, Obscure and Obsolete U.S. Navy Jobs",
-        url: "https://news.usni.org/2014/12/03/brief-list-old-obscure-obsolete-u-s-navy-jobs",
-        note: "Original question and factual summary. Naval surgeon attendants fed sick sailors 'loblolly' porridge and assisted during battle surgery by holding limbs and clearing blood.",
+        title: "Royal Museums Greenwich — The Greenwich Time Lady: Ruth Belville",
+        url: "https://www.rmg.co.uk/stories/time/greenwich-time-lady-ruth-belville",
+        note: "Original question and factual summary. Every week Ruth Belville calibrated her John Arnold pocket chronometer at Greenwich and visited 30-40 subscribers so they could adjust their clocks.",
       },
     },
     {
-      key: "work-groom-of-the-stool",
+      key: "work-canary-resuscitator",
       question:
-        "In Tudor and Stuart England, why was the 'Groom of the Stool' one of the most powerful and coveted court offices?",
-      answer: "He assisted the King with his private toilet and intimate bodily hygiene.",
+        "In 20th-century British coal mines, what special feature did a miner's 'canary resuscitator cage' have?",
+      answer: "An attached oxygen cylinder to revive the bird when it collapsed from toxic gas.",
       source: {
-        title: "Historic Royal Palaces — Artefacts: Groom of the Stool",
-        url: "https://www.hrp.org.uk/media/1333/teach100_applyinghistoryhcp_artefacts.pdf",
-        note: "Original question and factual summary. Responsible for attending the monarch's close-stool and personal hygiene, granting intimate daily access that made the office holder an influential royal confidant.",
+        title: "Science Museum Group Collection — Cage for reviving canary",
+        url: "https://collection.sciencemuseumgroup.org.uk/objects/co8412250/cage-for-reviving-canary",
+        note: "Original question and factual summary. When the sentinel bird showed signs of carbon monoxide poisoning, miners sealed the circular door and opened an oxygen valve to revive it.",
+      },
+    },
+    {
+      key: "work-royal-herb-strewer",
+      question:
+        "In historical British royal coronations, what duty was performed by the official 'Herb Strewer'?",
+      answer:
+        "Walking ahead of the royal procession scattering sweet herbs and flowers to scent the path.",
+      source: {
+        title: "Royal Collection Trust — Royal Gold: Reflections of Power",
+        url: "https://media.rct.uk/sites/default/files/transcript_royal_gold.pdf",
+        note: "Original question and factual summary. Herb strewers walked before the royal procession scattering fragrant herbs and flowers to sweeten the air and symbolize health.",
+      },
+    },
+    {
+      key: "work-theatre-claqueur",
+      question: "In 19th-century Parisian theatres, what was the job of a professional 'claqueur'?",
+      answer: "To sit in the audience and artificially orchestrate applause, laughter, or weeping.",
+      source: {
+        title: "Encyclopedia Britannica — Claque",
+        url: "https://www.britannica.com/art/claque",
+        note: "Original question and factual summary. Organized claques included specialized hired laughers (rieurs), weepers (pleureuses), and cheerers paid by actors and managements to sway audience reactions.",
       },
     },
   ],
