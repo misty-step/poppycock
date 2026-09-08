@@ -212,15 +212,14 @@ export const uncannyLaws = definePack(
       },
     },
     {
-      key: "law-medieval-animal-trials",
+      key: "law-medieval-pig-trial-1266",
       question:
-        "In medieval and early modern European courts, what formal legal process was routinely conducted against pigs, cows, and swarms of insects?",
-      answer:
-        "Full criminal trials with appointed defense lawyers, sworn witness testimony, and formal execution sentences.",
+        "In the earliest surviving official record of an animal trial from 1266 in Fontenay-aux-Roses, France, what happened to an accused pig?",
+      answer: "It was formally tried in court for murder and publicly executed by hanging.",
       source: {
         title: "BBC News — Should animals have the same rights as humans?",
         url: "https://www.bbc.com/news/world-32854504",
-        note: "Original question and factual summary. Over 200 documented cases across Europe show animals being formally indicted, held in secular jails, assigned defense counsel, and sentenced to public hanging.",
+        note: "Original question and factual summary. BBC News notes the earliest surviving record of an animal trial dates to 1266 in Fontenay-aux-Roses, where a pig was formally tried for murder and executed by hanging.",
       },
     },
   ],

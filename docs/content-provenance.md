@@ -388,7 +388,7 @@ Eighteen cards covering extraordinary historical legislation, royal proclamation
 | `law-roman-lex-claudia-ships`         | [Encyclopedia Britannica — Lex Claudia](https://www.britannica.com/topic/Lex-Claudia)                                                                        |
 | `law-edward-iii-sumptuary-fur`        | [Encyclopedia Britannica — Government regulation of dress (Sumptuary Laws)](https://www.britannica.com/topic/dress-clothing/Government-regulation-of-dress)  |
 | `law-roman-lex-oppia-gold`            | [Encyclopedia Britannica — Lex Oppia](https://www.britannica.com/topic/Lex-Oppia)                                                                            |
-| `law-medieval-animal-trials`          | [BBC News — Should animals have the same rights as humans?](https://www.bbc.com/news/world-32854504)                                                         |
+| `law-medieval-pig-trial-1266`         | [BBC News — Should animals have the same rights as humans?](https://www.bbc.com/news/world-32854504)                                                         |
 
 #### Folk beliefs — 18 cards
 
