@@ -142,13 +142,13 @@ components:
 
 Poppycock is a shared-table bluffing game for 3–12 friends, played on separate phones. The interface should help people look back up at one another. It is not a dashboard, a children's learning app, or a page of advertising slogans.
 
-The direction is **a well-made tabletop game**: paper surfaces, clear printed instructions, a restrained mint-and-gold palette, and twelve expressive paper-puppet characters. The characters and wordmark provide the personality. The controls stay calm and literal. Use whitespace before adding another box, border, badge, or joke.
+The direction is **a well-made tabletop game**: paper surfaces, clear printed instructions, a restrained mint-and-gold palette, and forty-eight expressive illustrated characters. The characters and wordmark provide the personality. The controls stay calm and literal. Use whitespace before adding another box, border, badge, or joke.
 
-This document follows Google's [DESIGN.md alpha specification](https://github.com/google-labs-code/design.md/blob/main/docs/spec.md). Frontmatter holds normative tokens; prose explains their application. The implementation uses those values in `app/globals.css`, genuine locally owned [shadcn Base UI components](https://ui.shadcn.com/docs), and the existing `app/avatar.tsx` artwork. Interface guidance is informed by [Jakub Krehel's skills](https://github.com/jakubkrehel/skills), especially layout, accessibility, typography, and product writing. Neither a component library nor this document is a claim of accessibility certification.
+This document follows Google's [DESIGN.md alpha specification](https://github.com/google-labs-code/design.md/blob/main/docs/spec.md). Frontmatter holds normative tokens; prose explains their application. The implementation uses those values in `app/globals.css`, genuine locally owned [shadcn Base UI components](https://ui.shadcn.com/docs), and the portraits in `public/avatars`, rendered by `app/avatar.tsx`. Interface guidance is informed by [Jakub Krehel's skills](https://github.com/jakubkrehel/skills), especially layout, accessibility, typography, and product writing. Neither a component library nor this document is a claim of accessibility certification.
 
 ## Colors
 
-**Night ink** (`primary`) anchors text and the one primary action. **Cool chalk** (`background`) is the page. **White paper** (`surface`) separates controls and readable content. **Mint board** (`mint`) marks the question. **Pencil gold** (`accent`) identifies a selected choice or a final winner; it never means an error. **Garden green** (`success`) identifies revealed truth and earned points.
+**Night ink** (`primary`) anchors text and the one primary action. **Cool chalk** (`background`) is the page. **White paper** (`surface`) separates controls and readable content. **Mint board** (`mint`) marks the question. **Pencil gold** (`accent`) identifies a selected answer or a final winner; it never means an error. **Garden green** (`success`) identifies revealed truth and earned points.
 
 Use semantic tokens, not ad hoc hexadecimal colors in screen components. Artwork is the deliberate exception: its existing illustrated colors remain intact. Muted text is `on-muted`, never the border color or a translucent foreground. Danger is reserved for an error or leaving a table, not an ordinary next round. Selection, truth, errors, and locked states also have text, icons, or a border change; color alone is insufficient.
 
@@ -184,9 +184,13 @@ Menus and dialogs have clear backdrops and stay above sticky actions. There are 
 
 ## Shapes
 
-Controls and answer options use the 12px radius; large question and dialog surfaces use 20px. Small internal marks use 8px. Account for nested padding so an inner radius does not appear larger than its enclosing surface. Full rounding is reserved for a small avatar backing or radio indicator, not every button and label.
+Controls and answer options use the 12px radius; large question and dialog surfaces use 20px. Small internal marks use 8px. Account for nested padding so an inner radius does not appear larger than its enclosing surface. Full rounding is reserved for portraits and radio indicators, not every button and label.
 
-Use the forty-eight illustrated character portraits sliced from the tabletop avatar sheets. Players can choose their character from the lobby roster or the table options menu at any time; choices stay attached to the player's identity and persist across tables, reloads, and reconnections. The avatar picker uses a compact, keyboard-navigable radiogroup with visible focus, scrolling choices, and a pinned primary save action. Decorative portraits are hidden from assistive technology when the player's adjacent name provides the identity.
+Use the forty-eight illustrated character portraits from the tabletop avatar sheets, framed as circles with a fine inset edge and subtle shadow. Roster and scoreboard portraits are 48px; standalone portraits are 80px. Preserve the illustrations and their original colors rather than adding another artwork family. Players can choose their character from the lobby roster or the table options menu at any time; choices stay attached to the player's identity across tables, reloads, and reconnections.
+
+The picker is a quiet portrait gallery, not a collection of boxed cards. Show an 88px preview with the full character name. Each whole portrait-and-name option is a keyboard-navigable radio with a short visible name and full accessible name. Selection uses a night-ink ring and checkmark, separate from keyboard focus. Let the instructions, preview, and choices scroll together while the title and save/cancel actions stay visible, including with enlarged text. Omit the preview on short landscape screens. Decorative portraits are hidden from assistive technology; adjacent player names or radio labels supply the identity.
+
+Avatar framing references: [desktop picker](evidence/tabletop/avatar-polish-desktop.png) and [phone picker](evidence/tabletop/avatar-polish-phone.png), captured from the local running interface.
 
 ## Components
 

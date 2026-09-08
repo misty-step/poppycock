@@ -277,7 +277,7 @@ function Roster({
           </div>
           {member.playerId === viewerId && (
             <Button
-              variant="outline"
+              variant="ghost"
               size="sm"
               onClick={(event) => onChangeAvatar(event.currentTarget)}
             >

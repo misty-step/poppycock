@@ -3,11 +3,11 @@
 ## Unreleased — 2026-09-07
 
 - Added a root `DESIGN.md` following Google's alpha token-and-prose format, with Poppycock's palette, typography, layout, component states, accessibility behavior, and copy contract.
-- Added persistent avatar selection across all twelve characters. Players can change their avatar from the lobby roster or the table options menu during a game; choices stay tied to the player's identity and persist across tables, reloads, and reconnections.
+- Added persistent avatar selection across all forty-eight characters. Players can change their avatar from the lobby roster or the table options menu during a game; choices stay tied to the player's identity and persist across tables, reloads, and reconnections.
 - Rebuilt the interface with locally owned shadcn Base UI controls: create/join tabs, whole-row radio choices, table menus, invitation/rules dialogs, and consequence-specific confirmations. Replaced the layered decorative styles with a restrained tabletop system and plain action labels.
 - Kept the viewer's accepted vote visible after reload through a private server projection, without exposing other players' votes. Drafts survive reload; submitted answers and locked votes move focus to their receipts.
 - Fixed enlarged-text overflow in invitations and rules, made rules open at their heading, and kept writing actions in normal document flow rather than a sticky overlay. Updated both local and hosted smoke producers to the new controls.
-- Twelve original paper-puppet portraits with distinct silhouettes, expressions, and accessories; refined colors, responsive layouts, touch targets, focus states, and reduced-motion behavior.
+- Polished portraits with circular framing and consistent sizing throughout the game. Replaced boxed avatar choices with a portrait gallery, larger preview, and clear selection ring/checkmark; kept browsing and save actions usable on narrow screens with enlarged text.
 - Doubled the sourced deck from 108 to 216 cards, adding Kitchen secrets, Bright ideas, Living traditions, Remarkable places, Working lives, and Art & music while preserving every existing card.
 - Anonymous choices share canonical lowercase text, whitespace, and terminal-punctuation treatment in the existing server-shuffled order. Attributed reveals retain the original text and sources.
 - Removed the 90-second writing timer, 60-second vote timer, reveal grace period, and total match cap. Everyone finishing still advances a phase; only confirmed host actions skip unfinished input. Any participant can continue a revealed round immediately.
