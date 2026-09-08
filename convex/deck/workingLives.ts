@@ -45,14 +45,14 @@ export const workingLives = definePack(
       },
     },
     {
-      key: "work-dog-whipper",
+      key: "work-church-dog-tongs",
       question:
-        "What was the official parish duty of an English or Welsh 'dog whipper' during church services?",
-      answer: "Expelling unruly or barking dogs from the congregation with whips and tongs.",
+        "What was the purpose of the folding iron 'dog tongs' displayed on the wall of Wales's historic St Mary's Church?",
+      answer: "To separate fighting dogs during church services.",
       source: {
-        title: "National Churches Trust — Cyfylliog St Mary (Dog Tongs and Dog Whippers)",
+        title: "National Churches Trust — Cyfylliog St Mary",
         url: "https://www.nationalchurchestrust.org/church/st-mary-cyfylliog",
-        note: "Original question and factual summary. Parish officer appointed from the 16th to 19th centuries to remove disruptive or fighting dogs from church pews using whips and expanding tongs.",
+        note: "Original question and factual summary. St Mary's Church in Cyffylliog displays historic folding dog tongs that were used to separate fighting dogs during worship.",
       },
     },
     {
