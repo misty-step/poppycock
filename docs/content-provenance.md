@@ -308,6 +308,56 @@ Eighteen cards covering maritime phenomena, navigational hazards, oceanographic 
 | `sea-old-man-of-the-lake`  | [National Park Service — The Old Man - Crater Lake National Park](https://www.nps.gov/crla/learn/nature/theoldman.htm)                                                                      |
 | `sea-corryvreckan-orwell`  | [BBC News — The Scottish island where George Orwell created 1984](https://www.bbc.co.uk/news/uk-scotland-43821334)                                                                         |
 
+#### Lost gear — 18 cards
+
+Eighteen cards covering historical equipment, specialized martial gear, obsolete attire, and material culture artifacts. Verified against museum collections (Victoria and Albert Museum, Science Museum Group, National Museums Scotland) and unabridged public-domain reference works (Webster's 1913).
+
+| Card                       | Consulted source                                                                                                                                                                             |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `gear-cresset`             | [Webster's 1913 — Cresset](https://www.websters1913.com/words/Cresset)                                                                                                                       |
+| `gear-quintain`            | [Webster's 1913 — Quintain](https://www.websters1913.com/words/Quintain)                                                                                                                     |
+| `gear-distaff`             | [Webster's 1913 — Distaff](https://www.websters1913.com/words/Distaff)                                                                                                                       |
+| `gear-tumbril`             | [Webster's 1913 — Tumbril](https://www.websters1913.com/words/Tumbril)                                                                                                                       |
+| `gear-claude-glass`        | [Victoria and Albert Museum — Claude Glass](https://collections.vam.ac.uk/item/O78676/claude-glass-unknown/)                                                                                |
+| `gear-xebec`               | [Webster's 1913 — Xebec](https://www.websters1913.com/words/Xebec)                                                                                                                           |
+| `gear-inkhorn`             | [Webster's 1913 — Inkhorn](https://www.websters1913.com/words/Inkhorn)                                                                                                                       |
+| `gear-scolds-bridle`       | [Science Museum Group Collection — Scold's bridle mask](https://collection.sciencemuseumgroup.org.uk/objects/co155218/scolds-bridle-mask-which-partially-covers-face)                       |
+| `gear-caltrop`             | [Webster's 1913 — Caltrop](https://www.websters1913.com/words/Caltrop)                                                                                                                       |
+| `gear-binnacle`            | [Webster's 1913 — Binnacle](https://www.websters1913.com/words/Binnacle)                                                                                                                     |
+| `gear-man-catcher`         | [Science Museum Group Collection — Man Catcher, Germany, 1601-1800](https://collection.sciencemuseumgroup.org.uk/objects/co155263/man-catcher-germany-1601-1800)                           |
+| `gear-farthingale`         | [Webster's 1913 — Farthingale](https://www.websters1913.com/words/Farthingale)                                                                                                               |
+| `gear-pomander`            | [Webster's 1913 — Pomander](https://www.websters1913.com/words/Pomander)                                                                                                                   |
+| `gear-chopine`             | [Webster's 1913 — Chopine](https://www.websters1913.com/words/Chopine)                                                                                                                       |
+| `gear-tappit-hen`          | [National Museums Scotland — The 'tappit hen'](https://www.nms.ac.uk/discover-catalogue/a-tappit-hen-a-type-of-drinking-vessel-used-during-the-lifetime-of-robert-burns)                   |
+| `gear-betty`               | [Webster's 1913 — Betty](https://www.websters1913.com/words/Betty)                                                                                                                           |
+| `gear-thole`               | [Webster's 1913 — Thole](https://www.websters1913.com/words/Thole)                                                                                                                           |
+| `gear-gibbet-cage`         | [Science Museum Group Collection — Iron Torture Gibbet](https://collection.sciencemuseumgroup.org.uk/objects/co156089/iron-torture-gibbet)                                                   |
+
+#### Rarer words — 18 cards
+
+Eighteen deep-cut vocabulary cards drawn from public-domain entries in [Webster's 1913](https://www.websters1913.com/) and [Project Gutenberg catalog ebook 29765](https://www.gutenberg.org/ebooks/29765). Every card represents an authentic historical English or cant term whose meaning provides fertile ground for deceptive, plausible party bluffs.
+
+| Card                       | Consulted source                                                                                                                                                                             |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rare-factotum`            | [Webster's 1913 — Factotum](https://www.websters1913.com/words/Factotum)                                                                                                                     |
+| `rare-quidnunc`            | [Webster's 1913 — Quidnunc](https://www.websters1913.com/words/Quidnunc)                                                                                                                     |
+| `rare-welkin`              | [Webster's 1913 — Welkin](https://www.websters1913.com/words/Welkin)                                                                                                                         |
+| `rare-yare`                | [Webster's 1913 — Yare](https://www.websters1913.com/words/Yare)                                                                                                                             |
+| `rare-tittle`              | [Webster's 1913 — Tittle](https://www.websters1913.com/words/Tittle)                                                                                                                         |
+| `rare-limn`                | [Webster's 1913 — Limn](https://www.websters1913.com/words/Limn)                                                                                                                             |
+| `rare-mountebank`          | [Webster's 1913 — Mountebank](https://www.websters1913.com/words/Mountebank)                                                                                                                 |
+| `rare-recusant`            | [Webster's 1913 — Recusant](https://www.websters1913.com/words/Recusant)                                                                                                                     |
+| `rare-antephialtic`        | [Webster's 1913 — Antephialtic](https://www.websters1913.com/words/Antephialtic)                                                                                                             |
+| `rare-belly-god`           | [Webster's 1913 — Belly-god](https://www.websters1913.com/words/Belly-god)                                                                                                                   |
+| `rare-vaticinate`          | [Webster's 1913 — Vaticinate](https://www.websters1913.com/words/Vaticinate)                                                                                                                 |
+| `rare-obumbrate`           | [Webster's 1913 — Obumbrate](https://www.websters1913.com/words/Obumbrate)                                                                                                                   |
+| `rare-coxcomb`             | [Webster's 1913 — Coxcomb](https://www.websters1913.com/words/Coxcomb)                                                                                                                       |
+| `rare-flibbertigibbet`     | [Webster's 1913 — Flibbertigibbet](https://www.websters1913.com/words/Flibbertigibbet)                                                                                                       |
+| `rare-helve`               | [Webster's 1913 — Helve](https://www.websters1913.com/words/Helve)                                                                                                                           |
+| `rare-fain`                | [Webster's 1913 — Fain](https://www.websters1913.com/words/Fain)                                                                                                                             |
+| `rare-pilgarlic`           | [Webster's 1913 — Pilgarlic](https://www.websters1913.com/words/Pilgarlic)                                                                                                                   |
+| `rare-dudgeon`             | [Webster's 1913 — Dudgeon](https://www.websters1913.com/words/Dudgeon)                                                                                                                       |
+
 ## Precision choices worth preserving
 
 - A Venus **full rotation** lasts longer than its year. This is not a claim about the interval between sunrises.

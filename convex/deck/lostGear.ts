@@ -51,13 +51,15 @@ export const lostGear = definePack(
       },
     },
     {
-      key: "gear-wimple",
-      question: "What part of a woman's outdoor dress was a 'wimple'?",
-      answer: "A cloth covering for the neck and chin, later kept in some nuns' dress.",
+      key: "gear-claude-glass",
+      question:
+        "What was the purpose of an 18th-century 'Claude glass' carried by landscape tourists?",
+      answer:
+        "A tinted, convex pocket mirror that made real scenery reflected in it look like an oil painting.",
       source: {
-        title: "Webster's 1913 — Wimple",
-        url: "https://www.websters1913.com/words/Wimple",
-        note: "Original question; public-domain noun sense 1, not the flag or verb senses.",
+        title: "Victoria and Albert Museum — Claude Glass",
+        url: "https://collections.vam.ac.uk/item/O78676/claude-glass-unknown/",
+        note: "Tourists and artists turned their backs to a landscape to view a painterly, Claude Lorrain-style reflection.",
       },
     },
     {
@@ -81,23 +83,25 @@ export const lostGear = definePack(
       },
     },
     {
-      key: "gear-halberd",
-      question: "What kind of weapon was a 'halberd'?",
-      answer: "A long-handled axe-like head with a point and several sharp edges.",
+      key: "gear-scolds-bridle",
+      question: "In 16th- and 17th-century Britain, what was a 'scold's bridle' (or 'brank')?",
+      answer:
+        "An iron mask with a spiked gag locked over the head to silence and humiliate people accused of nagging or quarrelling.",
       source: {
-        title: "Webster's 1913 — Halberd",
-        url: "https://www.websters1913.com/words/Halberd",
-        note: "Original question; condensed public-domain military definition.",
+        title: "Science Museum Group Collection — Scold's bridle mask which partially covers face",
+        url: "https://collection.sciencemuseumgroup.org.uk/objects/co155218/scolds-bridle-mask-which-partially-covers-face",
+        note: "A punitive iron cage fitted with an internal tongue plate or spiked gag to enforce silence.",
       },
     },
     {
-      key: "gear-aglet",
-      question: "On old clothing, what was an 'aglet'?",
-      answer: "The tagged metal or decorative tip of a lace, braid, or cord.",
+      key: "gear-caltrop",
+      question:
+        "In historical warfare, what was the ingenious design of a four-pointed iron 'caltrop'?",
+      answer: "Whichever way it lands on the ground, one sharp point always sticks straight up.",
       source: {
-        title: "Webster's 1913 — Aglet",
-        url: "https://www.websters1913.com/words/Aglet",
-        note: "Original question; public-domain sense 1 (tagged points on dress), not the later staylace sense.",
+        title: "Webster's 1913 — Caltrop",
+        url: "https://www.websters1913.com/words/Caltrop",
+        note: "Four spikes arranged tetrahedrally so one always points upward to pierce charging horses' hooves.",
       },
     },
     {
@@ -111,13 +115,15 @@ export const lostGear = definePack(
       },
     },
     {
-      key: "gear-grapnel",
-      question: "What is a nautical 'grapnel'?",
-      answer: "A small many-clawed anchor used to hold a boat, or any similar grabbing iron.",
+      key: "gear-man-catcher",
+      question:
+        "In European warfare and policing from the 16th to 18th centuries, what was a 'man catcher'?",
+      answer:
+        "A long pole with a spring-loaded spiked collar to drag riders from horseback or catch prisoners by the neck.",
       source: {
-        title: "Webster's 1913 — Grapnel",
-        url: "https://www.websters1913.com/words/Grapnel",
-        note: "Original question; condensed public-domain definition.",
+        title: "Science Museum Group Collection — Man Catcher, Germany, 1601-1800",
+        url: "https://collection.sciencemuseumgroup.org.uk/objects/co155263/man-catcher-germany-1601-1800",
+        note: "A polearm ending in a hinged, spiked collar used to pin or unseat opponents without killing them.",
       },
     },
     {
@@ -152,23 +158,24 @@ export const lostGear = definePack(
       },
     },
     {
-      key: "gear-buskin",
-      question: "Why did tragic actors in Greece and Rome wear 'buskins'?",
-      answer: "Thick soles that made them look taller; the boot later stood for tragedy itself.",
+      key: "gear-tappit-hen",
+      question: "In 18th-century Scotland, what was a 'tappit hen' in a public house?",
+      answer: "A pewter ale flagon with a knob shaped like a crested hen's head on its lid.",
       source: {
-        title: "Webster's 1913 — Buskin",
-        url: "https://www.websters1913.com/words/Buskin",
-        note: "Original question; public-domain sense 2, not the hunting-boot sense.",
+        title:
+          "National Museums Scotland — The 'tappit hen': A drinking vessel used during the lifetime of Robert Burns",
+        url: "https://www.nms.ac.uk/discover-catalogue/a-tappit-hen-a-type-of-drinking-vessel-used-during-the-lifetime-of-robert-burns",
+        note: "A durable Scottish tavern vessel named after the distinctive crested (tappit) hen-shaped finial on its lid.",
       },
     },
     {
-      key: "gear-patten",
-      question: "What were 'pattens' worn for in mud or wet streets?",
-      answer: "Wooden soles, often on an iron ring, that lifted the feet clear of the ground.",
+      key: "gear-betty",
+      question: "In 18th-century thieves' cant, what was a 'betty'?",
+      answer: "A small iron crowbar used by burglars to pry open doors.",
       source: {
-        title: "Webster's 1913 — Patten",
-        url: "https://www.websters1913.com/words/Patten",
-        note: "Original question; public-domain sense 1, not the provincial 'stilt' sense.",
+        title: "Webster's 1913 — Betty",
+        url: "https://www.websters1913.com/words/Betty",
+        note: "Original question; condensed public-domain definition: a short bar used by thieves to wrench doors open.",
       },
     },
     {
@@ -182,13 +189,14 @@ export const lostGear = definePack(
       },
     },
     {
-      key: "gear-treenail",
-      question: "In shipbuilding, what is a 'treenail'?",
-      answer: "A long wooden pin fastening planks to the ship's timbers.",
+      key: "gear-gibbet-cage",
+      question: "In historical criminal punishment, what was the purpose of an iron 'gibbet cage'?",
+      answer:
+        "To hold an executed criminal's corpse suspended in chains at crossroads as a public warning.",
       source: {
-        title: "Webster's 1913 — Treenail",
-        url: "https://www.websters1913.com/words/Treenail",
-        note: "Original question; condensed public-domain shipbuilding definition. Also spelled trenail or trunnel.",
+        title: "Science Museum Group Collection — Iron Torture Gibbet",
+        url: "https://collection.sciencemuseumgroup.org.uk/objects/co156089/iron-torture-gibbet",
+        note: "An iron armature fitted around a corpse to keep it hanging in chains for months as a deterrent.",
       },
     },
   ],
