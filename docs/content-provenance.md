@@ -10,7 +10,7 @@ The catalog is a **fixed, sourced, AI-assisted editorial deck**. There is no run
 | Space oddities      |      27 | Spaceflight incidents, engineering, astronomical naming, and planetary phenomena |
 | Kitchen secrets     |      18 | Shocking culinary customs, eccentric historical dishes, and bizarre gastronomy   |
 | Bright ideas        |      18 | Eccentric patents, bizarre contraptions, and curious historical inventions       |
-| Living traditions   |      18 | Community practices, communication, celebration and shared skills                |
+| Living traditions   |      18 | Bizarre community celebrations, extraordinary festivals, and ancient customs      |
 | Remarkable places   |      18 | Bizarre towns, eccentric architecture, and extraordinary geographic anomalies     |
 | Working lives       |      18 | Historical trades, specialist labour and living traditional work                 |
 | Art & music         |      18 | Shocking artworks, bizarre musical instruments, eccentric stunts, and pigments    |
@@ -181,29 +181,28 @@ Eighteen verified historical patents, bizarre contraptions, and curious inventio
 | `idea-high-five-machine`     | [US Patent 5,356,330 — Apparatus for simulating a 'high five'](https://patents.google.com/patent/US5356330A/en)                                                                 |
 #### Living traditions — 18 cards
 
-Eighteen UNESCO Multimedia Archives catalogue descriptions across twelve countries. These are living practices with specific communities and purposes, not a collection of supposedly strange or primitive customs. The evidence is the written catalogue description, including original English paraphrases of French text for Sanké; no film, narration, music, images or ceremonial knowledge outside the public description is reused. Some ich.unesco.org pages served a human-verification challenge, so accessible UNESCO archive records were consulted instead. The camel ritual's purpose is not presented as a guarantee of animal behaviour; Nijemo Kolo is unaccompanied during the dance, though music may precede or follow it.
+Eighteen cards covering extraordinary community celebrations, bizarre traditional contests, and living cultural practices. Every card is checked against full-text source retrieval from major archives and journalism (BBC News, BBC Travel, National Geographic, The Guardian, and UNESCO Multimedia Archives).
 
 | Card                       | Consulted source                                                                                                                                                                        |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `custom-cheese-rolling`    | [BBC News — Cooper's Hill cheese rolling: origins, myths and history](https://www.bbc.com/news/articles/cz024gnm9z4o)                                                                  |
+| `custom-el-colacho-baby-jump` | [National Geographic — Look Inside Spain’s Unusual Baby Jumping Festival](https://www.nationalgeographic.com/culture/article/el-colacho-baby-jumping-festival-murcia-spain)         |
+| `custom-wife-carrying-beer`| [BBC Travel — Finland’s swamp soccer and sauna endurance](https://www.bbc.com/travel/article/20110620-finlands-swamp-soccer-and-sauna-endurance)                                       |
+| `custom-monkey-buffet`     | [The Guardian — No more monkey business: Thai city’s macaques to be put in enclosures](https://www.theguardian.com/world/2024/apr/05/no-more-monkey-business-thai-lopburi-macaques-to-be-rounded-up-and-put-in-enclosures) |
+| `custom-la-tomatina-pole-ham` | [BBC Travel — Spain's La Tomatina festival](https://www.bbc.com/travel/article/20100816-spains-la-tomatina-festival)                                                                |
+| `custom-ivrea-orange-battle`| [BBC Travel — The Italian city where life is sweetest in winter](https://www.bbc.com/travel/article/20260130-the-italian-city-where-life-is-sweetest-in-winter)                       |
+| `custom-up-helly-aa-galley`| [BBC News — Famous Up Helly Aa festival sets Shetland's skies ablaze](https://www.bbc.com/news/articles/cy8p2rjeyveo)                                                                  |
+| `custom-ottery-tar-barrels`| [BBC News — Ottery St Mary Tar Barrels 2025: Everything you need to know](https://www.bbc.com/news/articles/c5y4g23x7pzo)                                                             |
+| `custom-nakizumo-crying-baby` | [The Guardian — The Nakizumo crying baby festival in Tokyo – in pictures](https://www.theguardian.com/world/gallery/2013/apr/29/crying-baby-festival-tokyo-pictures)                  |
+| `custom-catalan-human-towers` | [BBC Travel — Human pyramids in Catalonia](https://www.bbc.com/travel/article/20120614-human-pyramids-in-catalonia)                                                                   |
 | `custom-silbo-speech`      | [UNESCO Multimedia Archives — Whistled Language of the Island of La Gomera (Canary Islands), the Silbo Gomero](https://www.unesco.org/archives/multimedia/document-370)                 |
-| `custom-camel-coaxing`     | [UNESCO Multimedia Archives — The Mongolian Traditional Coaxins Rituals for Baby Animals: The Special Case of the Baby Camel](https://www.unesco.org/archives/multimedia/document-4021) |
-| `custom-sand-continuous`   | [UNESCO Multimedia Archives — Vanuatu Sand-drawings](https://www.unesco.org/archives/multimedia/document-3757)                                                                          |
 | `custom-bridge-straw`      | [UNESCO Multimedia Archives — Knowledge, Skills and Rituals Related to the Annual Renewal of the Q’eswachaka Bridge](https://www.unesco.org/archives/multimedia/document-3540)          |
 | `custom-shrimp-horses`     | [UNESCO Multimedia Archives — Shrimp Fishing on Horseback in Oostduinkerke](https://www.unesco.org/archives/multimedia/document-3534)                                                   |
-| `custom-knuckle-targets`   | [UNESCO Multimedia Archives — Mongolian Knuckle-bone Shooting](https://www.unesco.org/archives/multimedia/document-3688)                                                                |
-| `custom-sauna-meat`        | [UNESCO Multimedia Archives — Smoke Sauna in Voromaa](https://www.unesco.org/archives/multimedia/document-3693)                                                                         |
-| `custom-cordoba-patios`    | [UNESCO Multimedia Archives — Fiesta of the Patios in Cordoba](https://www.unesco.org/archives/multimedia/document-2246)                                                                |
 | `custom-namur-jousting`    | [UNESCO Multimedia Archives — Namur Stilt Jousting](https://www.unesco.org/archives/multimedia/document-5780)                                                                           |
-| `custom-empaako-names`     | [UNESCO Multimedia Archives — Empaako Tradition of the Batooro, Banyoro, Batuku, Batagwenda and Banyabindi of western Uganda](https://www.unesco.org/archives/multimedia/document-3501) |
-| `custom-kimjang-sharing`   | [UNESCO Multimedia Archives — Kimjang, Making and Sharing Kimchi](https://www.unesco.org/archives/multimedia/document-3508)                                                             |
-| `custom-wrestling-kispet`  | [UNESCO Multimedia Archives — Kirkpinar oil Wrestling Festival](https://www.unesco.org/archives/multimedia/document-1686)                                                               |
-| `custom-nijemo-no-music`   | [UNESCO Multimedia Archives — Nijemo Kolo, Silent Circle Dance of the Dalmatian Hinterland](https://www.unesco.org/archives/multimedia/document-2247)                                   |
-| `custom-sanke-fishing`     | [UNESCO Multimedia Archives — Le Sanké mon : rite de pêche collective dans le Sanké (Sanke mo a 608 ans)](https://www.unesco.org/archives/multimedia/document-299)                      |
+| `custom-sand-continuous`   | [UNESCO Multimedia Archives — Vanuatu Sand-drawings](https://www.unesco.org/archives/multimedia/document-3757)                                                                          |
 | `custom-wine-horse-cloaks` | [UNESCO Multimedia Archives — Wine Horses](https://www.unesco.org/archives/multimedia/document-5351-eng-2)                                                                              |
-| `custom-keskek-cauldrons`  | [UNESCO Multimedia Archives — Ceremonial Keskek Tradition](https://www.unesco.org/archives/multimedia/document-2242)                                                                    |
-| `custom-saman-posture`     | [UNESCO Multimedia Archives — Saman Dance](https://www.unesco.org/archives/multimedia/document-2219)                                                                                    |
-| `custom-noken-offering`    | [UNESCO Multimedia Archives — Noken Handcraft of the People of Papua](https://www.unesco.org/archives/multimedia/document-3763)                                                         |
-
+| `custom-wrestling-kispet`  | [UNESCO Multimedia Archives — Kirkpinar oil Wrestling Festival](https://www.unesco.org/archives/multimedia/document-1686)                                                               |
+| `custom-camel-coaxing`     | [UNESCO Multimedia Archives — The Mongolian Traditional Coaxins Rituals for Baby Animals: The Special Case of the Baby Camel](https://www.unesco.org/archives/multimedia/document-4021) |
 #### Remarkable places — 18 cards
 
 Eighteen cards covering extraordinary towns, eccentric architectural oddities, and bizarre geographic anomalies. Sourced from authoritative archives and journalism including Smithsonian Magazine, BBC Travel, National Geographic, NPR, and the Crop Trust.

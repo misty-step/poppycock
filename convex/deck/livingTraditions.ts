@@ -4,11 +4,120 @@ export const livingTraditions = definePack(
   {
     key: "living-traditions",
     title: "Living traditions",
-    blurb: "Community practices, communication, celebration and shared skills.",
+    blurb: "Bizarre community celebrations, extraordinary festivals, and ancient customs.",
     category: "Living traditions",
     sort: 70,
   },
   [
+    {
+      key: "custom-cheese-rolling",
+      question:
+        "What do competitors chase while tumbling head-over-heels down Cooper's Hill in Gloucestershire, England?",
+      answer: "A round wheel of Double Gloucester cheese.",
+      source: {
+        title: "BBC News — Cooper's Hill cheese rolling: origins, myths and history",
+        url: "https://www.bbc.com/news/articles/cz024gnm9z4o",
+        note: "Original question and factual summary. Centuries-old annual race down a 1:2 gradient slope chasing a rolling wheel of Double Gloucester cheese.",
+      },
+    },
+    {
+      key: "custom-el-colacho-baby-jump",
+      question:
+        "What happens during the climax of the 400-year-old Spanish festival of El Colacho?",
+      answer: "Men costumed as the Devil leap over mattresses of newborn babies.",
+      source: {
+        title: "National Geographic — Look Inside Spain’s Unusual Baby Jumping Festival",
+        url: "https://www.nationalgeographic.com/culture/article/el-colacho-baby-jumping-festival-murcia-spain",
+        note: "Original question and factual summary. In Castrillo de Murcia, men in yellow devil masks jump over infants laid on street mattresses to cleanse original sin.",
+      },
+    },
+    {
+      key: "custom-wife-carrying-beer",
+      question:
+        "What is the grand prize awarded to the winner of Finland's Wife-Carrying World Championship?",
+      answer: "The carried partner's exact weight in beer.",
+      source: {
+        title: "BBC Travel — Finland’s swamp soccer and sauna endurance",
+        url: "https://www.bbc.com/travel/article/20110620-finlands-swamp-soccer-and-sauna-endurance",
+        note: "Original question and factual summary. Annual contest in Sonkajärvi, Finland; competitors navigate a 253.5m obstacle course for the partner's weight in beer.",
+      },
+    },
+    {
+      key: "custom-monkey-buffet",
+      question: "What is served on banquet tables at the annual Lopburi festival in Thailand?",
+      answer: "Huge feasts of fruit and treats served exclusively to wild monkeys.",
+      source: {
+        title:
+          "The Guardian — No more monkey business: Thai city’s macaques to be put in enclosures",
+        url: "https://www.theguardian.com/world/2024/apr/05/no-more-monkey-business-thai-lopburi-macaques-to-be-rounded-up-and-put-in-enclosures",
+        note: "Original question and factual summary. Lopburi hosts an annual Monkey Buffet Festival laying out tons of fresh fruits and sweets for the city's wild macaques.",
+      },
+    },
+    {
+      key: "custom-la-tomatina-pole-ham",
+      question:
+        "What must someone successfully climb and retrieve to trigger the start of Spain's La Tomatina tomato fight?",
+      answer: "A whole cured ham mounted at the top of a greased wooden pole.",
+      source: {
+        title: "BBC Travel — Spain's La Tomatina festival",
+        url: "https://www.bbc.com/travel/article/20100816-spains-la-tomatina-festival",
+        note: "Original question and factual summary. In Buñol, crowds scramble up a greased pole (palo jabón) to retrieve a ham before water cannons signal the tomato battle.",
+      },
+    },
+    {
+      key: "custom-ivrea-orange-battle",
+      question:
+        "What food serves as the ammunition hurled during the historic annual Carnival battle in Ivrea, Italy?",
+      answer: "Hundreds of tons of fresh oranges.",
+      source: {
+        title: "BBC Travel — The Italian city where life is sweetest in winter",
+        url: "https://www.bbc.com/travel/article/20260130-the-italian-city-where-life-is-sweetest-in-winter",
+        note: "Original question and factual summary. Reenacts a medieval rebellion against tyranny, pitting foot throwers against cart crews hurling tons of oranges.",
+      },
+    },
+    {
+      key: "custom-up-helly-aa-galley",
+      question: "What is the fiery climax of the annual Up Helly Aa festival in Lerwick, Shetland?",
+      answer: "Throwing a thousand torches into a handcrafted Viking longship to burn it.",
+      source: {
+        title: "BBC News — Famous Up Helly Aa festival sets Shetland's skies ablaze",
+        url: "https://www.bbc.com/news/articles/cy8p2rjeyveo",
+        note: "Original question and factual summary. A thousand torchbearing 'guizers' parade through Lerwick before hurling flaming torches into a full-sized replica galley.",
+      },
+    },
+    {
+      key: "custom-ottery-tar-barrels",
+      question:
+        "What do residents of Ottery St Mary, England run through crowded town streets carrying on their shoulders every November?",
+      answer: "Burning wooden barrels soaked in flaming coal tar.",
+      source: {
+        title: "BBC News — Ottery St Mary Tar Barrels 2025: Everything you need to know",
+        url: "https://www.bbc.com/news/articles/c5y4g23x7pzo",
+        note: "Original question and factual summary. Centuries-old Devon tradition where residents carry flaming barrels of burning tar on their shoulders through packed crowds.",
+      },
+    },
+    {
+      key: "custom-nakizumo-crying-baby",
+      question:
+        "In the 400-year-old Japanese festival of Nakizumo, how do two babies compete in a sumo ring?",
+      answer: "By seeing who cries first or loudest while held by sumo wrestlers.",
+      source: {
+        title: "The Guardian — The Nakizumo crying baby festival in Tokyo – in pictures",
+        url: "https://www.theguardian.com/world/gallery/2013/apr/29/crying-baby-festival-tokyo-pictures",
+        note: "Original question and factual summary. Amateur sumo wrestlers hold babies in the ring while referees provoke crying, believed to ward off demons and bring good health.",
+      },
+    },
+    {
+      key: "custom-catalan-human-towers",
+      question:
+        "In the 200-year-old Catalan tradition of human towers (castells), who climbs to the very peak of the 9-story tower?",
+      answer: "A young child called the enxaneta who raises their hand.",
+      source: {
+        title: "BBC Travel — Human pyramids in Catalonia",
+        url: "https://www.bbc.com/travel/article/20120614-human-pyramids-in-catalonia",
+        note: "Original question and factual summary. After multiple tiers form on a dense human base (pinya), a small child climbs to the apex and raises four fingers to signal completion.",
+      },
+    },
     {
       key: "custom-silbo-speech",
       question:
@@ -18,7 +127,71 @@ export const livingTraditions = definePack(
         title:
           "UNESCO Multimedia Archives — Whistled Language of the Island of La Gomera (Canary Islands), the Silbo Gomero",
         url: "https://www.unesco.org/archives/multimedia/document-370",
-        note: "Original question and factual paraphrase. English catalogue description; avoids population estimates and exclusivity claims. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
+        note: "Original question and factual paraphrase. Canary Islands whistled language translating vowels and consonants into whistling frequencies across deep mountain ravines.",
+      },
+    },
+    {
+      key: "custom-bridge-straw",
+      question: "What do Quechua communities braid to rebuild Peru's Q'eswachaka bridge each year?",
+      answer: "Straw, made into thick ropes and woven into the bridge.",
+      source: {
+        title:
+          "UNESCO Multimedia Archives — Knowledge, Skills and Rituals Related to the Annual Renewal of the Q’eswachaka Bridge",
+        url: "https://www.unesco.org/archives/multimedia/document-3540",
+        note: "Original question and factual paraphrase. Indigenous communities braid native q'oya grass into thick suspension ropes to renew the last remaining Incan grass bridge annually.",
+      },
+    },
+    {
+      key: "custom-shrimp-horses",
+      question:
+        "What unusual helpers pull traditional shrimp-fishing nets through the surf at Oostduinkerke, Belgium?",
+      answer: "Horses ridden by the shrimpers.",
+      source: {
+        title: "UNESCO Multimedia Archives — Shrimp Fishing on Horseback in Oostduinkerke",
+        url: "https://www.unesco.org/archives/multimedia/document-3534",
+        note: "Original question and factual paraphrase. Brabant draft horses wade breast-deep through the North Sea surf towing funnel-shaped shrimp nets.",
+      },
+    },
+    {
+      key: "custom-namur-jousting",
+      question: "How do the traditional jousters of Namur, Belgium, tower above the ground?",
+      answer: "They compete while standing on stilts.",
+      source: {
+        title: "UNESCO Multimedia Archives — Namur Stilt Jousting",
+        url: "https://www.unesco.org/archives/multimedia/document-5780",
+        note: "Original question and factual paraphrase. Six-century-old tradition where two costumed brigades on stilts attempt to knock opponents to the ground.",
+      },
+    },
+    {
+      key: "custom-sand-continuous",
+      question: "What technique joins the geometric patterns of traditional Vanuatu sand drawings?",
+      answer: "Tracing a single continuous line with one finger.",
+      source: {
+        title: "UNESCO Multimedia Archives — Vanuatu Sand-drawings",
+        url: "https://www.unesco.org/archives/multimedia/document-3757",
+        note: "Original question and factual paraphrase. Indigenous geometric art and communication system executed on the ground using one finger in an unbroken flowing line.",
+      },
+    },
+    {
+      key: "custom-wine-horse-cloaks",
+      question:
+        "At Caravaca de la Cruz's Wine Horses celebration, what does 'enjaezamiento' involve?",
+      answer: "Dressing horses in cloaks embroidered with silk and gold thread.",
+      source: {
+        title: "UNESCO Multimedia Archives — Wine Horses",
+        url: "https://www.unesco.org/archives/multimedia/document-5351-eng-2",
+        note: "Original question and factual paraphrase. Horses are cloaked in elaborate hand-embroidered silk and gold textiles before racing up the steep hill to the castle.",
+      },
+    },
+    {
+      key: "custom-wrestling-kispet",
+      question:
+        "What are the 'kispet' trousers worn by wrestlers at Kırkpınar traditionally made from?",
+      answer: "Thick water-buffalo or cow leather.",
+      source: {
+        title: "UNESCO Multimedia Archives — Kirkpinar oil Wrestling Festival",
+        url: "https://www.unesco.org/archives/multimedia/document-1686",
+        note: "Original question and factual paraphrase. Olive-oil-soaked wrestlers wear heavy hand-stitched leather pants weighing up to 13 kg that provide only limited grip.",
       },
     },
     {
@@ -30,181 +203,7 @@ export const livingTraditions = definePack(
         title:
           "UNESCO Multimedia Archives — The Mongolian Traditional Coaxins Rituals for Baby Animals: The Special Case of the Baby Camel",
         url: "https://www.unesco.org/archives/multimedia/document-4021",
-        note: "Original question and factual paraphrase. English catalogue description; states the ritual's purpose, not a guarantee of success. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-sand-continuous",
-      question: "What technique joins the geometric patterns of traditional Vanuatu sand drawings?",
-      answer: "Tracing a single continuous line with one finger.",
-      source: {
-        title: "UNESCO Multimedia Archives — Vanuatu Sand-drawings",
-        url: "https://www.unesco.org/archives/multimedia/document-3757",
-        note: "Original question and factual paraphrase. English catalogue description; this is a communication tradition, not an assertion about all sand art. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-bridge-straw",
-      question: "What do Quechua communities braid to rebuild Peru's Q'eswachaka bridge each year?",
-      answer: "Straw, made into thick ropes and woven into the bridge.",
-      source: {
-        title:
-          "UNESCO Multimedia Archives — Knowledge, Skills and Rituals Related to the Annual Renewal of the Q’eswachaka Bridge",
-        url: "https://www.unesco.org/archives/multimedia/document-3540",
-        note: "Original question and factual paraphrase. English catalogue description attached to the Spanish-language film; no film frames or narration reused. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-shrimp-horses",
-      question:
-        "What unusual helpers pull traditional shrimp-fishing nets through the surf at Oostduinkerke, Belgium?",
-      answer: "Horses ridden by the shrimpers.",
-      source: {
-        title: "UNESCO Multimedia Archives — Shrimp Fishing on Horseback in Oostduinkerke",
-        url: "https://www.unesco.org/archives/multimedia/document-3534",
-        note: "Original question and factual paraphrase. English catalogue description; NAVIGO and the National Fisheries Museum production; no current household total. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-knuckle-targets",
-      question: "In Mongolian knuckle-bone shooting, what are the little tablets flicked toward?",
-      answer: "Targets made from sheep knuckle-bones.",
-      source: {
-        title: "UNESCO Multimedia Archives — Mongolian Knuckle-bone Shooting",
-        url: "https://www.unesco.org/archives/multimedia/document-3688",
-        note: "Original question and factual paraphrase. English catalogue description distinguishes the flicked tablets from the target bones. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-sauna-meat",
-      question:
-        "Besides bathing, what food-related activity belongs to Estonia's Võro smoke-sauna tradition?",
-      answer: "Smoking meat in the sauna.",
-      source: {
-        title: "UNESCO Multimedia Archives — Smoke Sauna in Voromaa",
-        url: "https://www.unesco.org/archives/multimedia/document-3693",
-        note: "Original question and factual paraphrase. English catalogue description; not a claim about all Estonian or Finnish saunas. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-cordoba-patios",
-      question:
-        "What part of their homes do Córdoba residents decorate and open to visitors for a May fiesta?",
-      answer: "Shared courtyards filled with carefully arranged plants.",
-      source: {
-        title: "UNESCO Multimedia Archives — Fiesta of the Patios in Cordoba",
-        url: "https://www.unesco.org/archives/multimedia/document-2246",
-        note: "Original question and factual paraphrase. English catalogue description; no present-day dates or judging rules inferred. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-namur-jousting",
-      question: "How do the traditional jousters of Namur, Belgium, tower above the ground?",
-      answer: "They compete while standing on stilts.",
-      source: {
-        title: "UNESCO Multimedia Archives — Namur Stilt Jousting",
-        url: "https://www.unesco.org/archives/multimedia/document-5780",
-        note: "Original question and factual paraphrase. Brief English catalogue description; no unsupported combat rules or exact founding date. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-empaako-names",
-      question:
-        "In western Uganda's Empaako tradition, what does a child receive that can later express affection or respect?",
-      answer: "A special shared name used as a warm form of address.",
-      source: {
-        title:
-          "UNESCO Multimedia Archives — Empaako Tradition of the Batooro, Banyoro, Batuku, Batagwenda and Banyabindi of western Uganda",
-        url: "https://www.unesco.org/archives/multimedia/document-3501",
-        note: "Original question and factual paraphrase. English catalogue description; applies to the named communities, not all Ugandans. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-kimjang-sharing",
-      question:
-        "What collective task brings Korean communities together for kimjang before winter?",
-      answer: "Making and sharing large batches of kimchi.",
-      source: {
-        title: "UNESCO Multimedia Archives — Kimjang, Making and Sharing Kimchi",
-        url: "https://www.unesco.org/archives/multimedia/document-3508",
-        note: "Original question and factual paraphrase. English catalogue description; the card does not define every kimchi recipe as containing seafood. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-wrestling-kispet",
-      question:
-        "What are the 'kispet' trousers worn by wrestlers at Kırkpınar traditionally made from?",
-      answer: "Thick water-buffalo or cow leather.",
-      source: {
-        title: "UNESCO Multimedia Archives — Kirkpinar oil Wrestling Festival",
-        url: "https://www.unesco.org/archives/multimedia/document-1686",
-        note: "Original question and factual paraphrase. English catalogue description of clothing; no unsupported oil type or contest rules. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-nijemo-no-music",
-      question: "What is unusual about the musical accompaniment to Croatia's Nijemo Kolo dance?",
-      answer: "There is none during the dance itself.",
-      source: {
-        title:
-          "UNESCO Multimedia Archives — Nijemo Kolo, Silent Circle Dance of the Dalmatian Hinterland",
-        url: "https://www.unesco.org/archives/multimedia/document-2247",
-        note: "Original question and factual paraphrase. English catalogue description; music can precede or follow the performance. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-sanke-fishing",
-      question:
-        "What shared activity occupies participants for hours at the Sanké mon celebration in San, Mali?",
-      answer: "Fishing together in the Sanké pond.",
-      source: {
-        title:
-          "UNESCO Multimedia Archives — Le Sanké mon : rite de pêche collective dans le Sanké (Sanke mo a 608 ans)",
-        url: "https://www.unesco.org/archives/multimedia/document-299",
-        note: "Original question and factual paraphrase. Original English paraphrase of the French catalogue description; spiritual beliefs are not asserted as facts. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-wine-horse-cloaks",
-      question:
-        "At Caravaca de la Cruz's Wine Horses celebration, what does 'enjaezamiento' involve?",
-      answer: "Dressing horses in cloaks embroidered with silk and gold thread.",
-      source: {
-        title: "UNESCO Multimedia Archives — Wine Horses",
-        url: "https://www.unesco.org/archives/multimedia/document-5351-eng-2",
-        note: "Original question and factual paraphrase. English catalogue description; no unsupported legend about the festival's origin. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-keskek-cauldrons",
-      question:
-        "What two main ingredients fill the communal cauldrons for a traditional Turkish keşkek ceremony?",
-      answer: "Wheat and meat.",
-      source: {
-        title: "UNESCO Multimedia Archives — Ceremonial Keskek Tradition",
-        url: "https://www.unesco.org/archives/multimedia/document-2242",
-        note: "Original question and factual paraphrase. English catalogue description; no single meat species or universal recipe is imposed. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-saman-posture",
-      question: "What position do Gayo performers take for the Saman dance of Aceh, Indonesia?",
-      answer: "Kneeling or sitting on their heels in tightly packed rows.",
-      source: {
-        title: "UNESCO Multimedia Archives — Saman Dance",
-        url: "https://www.unesco.org/archives/multimedia/document-2219",
-        note: "Original question and factual paraphrase. English catalogue description; no generalization to other Indonesian dances. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
-      },
-    },
-    {
-      key: "custom-noken-offering",
-      question:
-        "In communities of Papua, what practical handmade item can also be given as a peace offering called a noken?",
-      answer: "A knotted or woven bag made from plant fibres.",
-      source: {
-        title: "UNESCO Multimedia Archives — Noken Handcraft of the People of Papua",
-        url: "https://www.unesco.org/archives/multimedia/document-3763",
-        note: "Original question and factual paraphrase. English catalogue description; materials and methods vary among communities. Uses the written catalogue, not the audiovisual work. No source prose or media reproduced.",
+        note: "Original question and factual paraphrase. Herders use guttural chanting, singing, and horsehead fiddle music to calm stressed mother camels and induce them to nurse calves.",
       },
     },
   ],
