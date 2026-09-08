@@ -116,13 +116,15 @@ export const spaceOddities = definePack(
       },
     },
     {
-      key: "space-uranus-george",
-      question: "Whom did William Herschel try to honor by naming Uranus 'Georgium Sidus'?",
-      answer: "King George III of Britain.",
+      key: "space-apollo-12-lightning",
+      question:
+        "Thirty-six seconds after liftoff, what catastrophic emergency struck the Apollo 12 rocket, nearly forcing an abort?",
+      answer:
+        "It was struck by lightning twice, knocking out electrical power and scrambling all telemetry.",
       source: {
-        title: "NASA Science — Uranus Facts",
-        url: "https://science.nasa.gov/uranus/facts/",
-        note: "Original game wording based on the Namesake section's account of Herschel's unsuccessful proposed name.",
+        title: "NASA — Apollo 12 Spacecraft Commentary",
+        url: "https://www.nasa.gov/wp-content/uploads/2026/01/as12-cm.pdf?emrc=dabf2a",
+        note: "Original question and factual summary. Lightning discharged through the Saturn V twice in early ascent, knocking fuel cells offline until controller John Aaron called 'Try SCE to aux'.",
       },
     },
     {
@@ -257,14 +259,15 @@ export const spaceOddities = definePack(
       },
     },
     {
-      key: "space-europa-ocean",
+      key: "space-parmitano-water-leak",
       question:
-        "What lies beneath the icy shell of Jupiter's moon Europa, according to strong evidence?",
-      answer: "A saltwater ocean that may hold twice as much water as Earth's oceans.",
+        "In 2013, why did European astronaut Luca Parmitano's spacewalk outside the ISS have to be aborted as a life-threatening emergency?",
+      answer:
+        "Over a liter of water leaked from his suit's cooling loop into his helmet, blinding his eyes and nostrils in zero gravity.",
       source: {
-        title: "NASA Science — Europa",
-        url: "https://science.nasa.gov/jupiter/jupiter-moons/europa/",
-        note: "Original factual paraphrase. The card states evidence for an ocean, not a claim that life has been found.",
+        title: "NASA Technical Reports Server (NTRS) — ISS EVA 23 Lessons Learned",
+        url: "https://ntrs.nasa.gov/citations/20230002544",
+        note: "Original question and factual summary. NASA EVA 23 report documents water accumulating in the helmet from cooling loop contamination, covering the astronaut's eyes and nose.",
       },
     },
     {
@@ -278,23 +281,25 @@ export const spaceOddities = definePack(
       },
     },
     {
-      key: "space-pluto-dwarf",
-      question: "Why did the IAU reclassify Pluto as a dwarf planet in 2006?",
-      answer: "It has not cleared its orbit of other debris.",
+      key: "space-shoemaker-moon-burial",
+      question: "Whose cremated remains are currently the only human ashes buried on the Moon?",
+      answer:
+        "Planetary geologist Eugene Shoemaker, carried aboard NASA's Lunar Prospector in 1999.",
       source: {
-        title: "NASA Science — Pluto Facts",
-        url: "https://science.nasa.gov/dwarf-planets/pluto/facts/",
-        note: "Original game wording based on the 2006 IAU dwarf-planet definition quoted on the page. Other objects may cross Pluto's path in the trans-Neptunian region.",
+        title: "NASA Science — Lunar Prospector",
+        url: "https://science.nasa.gov/mission/lunar-prospector/",
+        note: "Original question and factual summary. NASA's Lunar Prospector deliberately impacted the Moon at Shoemaker crater in July 1999 carrying a capsule of the planetary scientist's ashes.",
       },
     },
     {
-      key: "space-phobos-doom",
-      question: "What is expected to happen to Mars's inner moon Phobos in about 50 million years?",
-      answer: "It will crash into Mars or break apart.",
+      key: "space-voyager-love-brainwaves",
+      question:
+        "What biological human recording was encoded onto the Voyager Golden Record sent into interstellar space?",
+      answer: "The brainwaves and heartbeats of a woman meditating on falling in love.",
       source: {
-        title: "NASA Science — Mars Facts",
-        url: "https://science.nasa.gov/mars/facts/",
-        note: "Original game wording based on the Moons and Rings sections. A dusty ring is one possible outcome if it breaks apart.",
+        title: "NASA JPL — Voyager Set to Enter Interstellar Space",
+        url: "https://www.jpl.nasa.gov/news/voyager-set-to-enter-interstellar-space/",
+        note: "Original question and factual summary. Creative director Ann Druyan had her EEG and ECG recorded while thinking about her feelings of love for Carl Sagan, compressed into audio for the Golden Record.",
       },
     },
   ],

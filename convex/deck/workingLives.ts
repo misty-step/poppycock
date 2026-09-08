@@ -166,7 +166,7 @@ export const workingLives = definePack(
     {
       key: "work-greenwich-time-lady",
       question:
-        "For nearly fifty years until 1940, what unusual service did London's 'Greenwich Time Lady' Ruth Belville sell to businesses?",
+        "For nearly fifty years until 1940, what unusual weekly commercial service did Londoner Ruth Belville sell to businesses?",
       answer:
         "She carried a precision pocket watch set to Greenwich Observatory time for clients to set their clocks by.",
       source: {
@@ -178,8 +178,8 @@ export const workingLives = definePack(
     {
       key: "work-canary-resuscitator",
       question:
-        "In 20th-century British coal mines, what special feature did a miner's 'canary resuscitator cage' have?",
-      answer: "An attached oxygen cylinder to revive the bird when it collapsed from toxic gas.",
+        "In 20th-century British coal mines, why did miners carry a specialized airtight brass cage equipped with a small gas cylinder?",
+      answer: "To revive their sentinel canary with oxygen when it collapsed from toxic gas.",
       source: {
         title: "Science Museum Group Collection — Cage for reviving canary",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co8412250/cage-for-reviving-canary",
@@ -187,15 +187,15 @@ export const workingLives = definePack(
       },
     },
     {
-      key: "work-royal-herb-strewer",
+      key: "work-bowling-pinboy",
       question:
-        "In historical British royal coronations, what duty was performed by the official 'Herb Strewer'?",
+        "Before mechanical automation in the 1950s, what was the physical job of a bowling alley 'pin boy'?",
       answer:
-        "Walking ahead of the royal procession scattering sweet herbs and flowers to scent the path.",
+        "Crouching at the end of the lane to manually reset knocked-down pins and roll bowling balls back.",
       source: {
-        title: "Royal Collection Trust — Royal Gold: Reflections of Power",
-        url: "https://media.rct.uk/sites/default/files/transcript_royal_gold.pdf",
-        note: "Original question and factual summary. Herb strewers walked before the royal procession scattering fragrant herbs and flowers to sweeten the air and symbolize health.",
+        title: "Library of Congress — Pin boys working in Subway Bowling Alleys, 1910",
+        url: "https://www.loc.gov/pictures/item/2018674610/",
+        note: "Original question and factual summary. Lewis Hine's 1910 National Child Labor Committee investigation documented boys working in pit lanes to clear knocked pins, reset racks, and return balls.",
       },
     },
     {

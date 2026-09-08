@@ -109,21 +109,23 @@ Twenty-seven cards belong to Space oddities, combining human spaceflight mission
 | `space-aldrin-communion`      | [BBC News — Sent into space: Guns, a lamb chop and sea urchin sperm](https://www.bbc.com/news/uk-england-34964686)                                                                 |
 | `space-south-atlantic-anomaly`| [NASA — Seeing Cosmic Rays in Space](https://www.nasa.gov/wp-content/uploads/2021/11/seeingcosmicraysinspace.pdf)                                                                 |
 | `space-pencil-graphite-hazard`| [Scientific American — Fact or Fiction?: NASA Spent Millions to Develop a Pen](https://www.scientificamerican.com/article/fact-or-fiction-nasa-spen/)                             |
+| `space-apollo-12-lightning`   | [NASA — Apollo 12 Spacecraft Commentary](https://www.nasa.gov/wp-content/uploads/2026/01/as12-cm.pdf?emrc=dabf2a)                                                                  |
+| `space-parmitano-water-leak`  | [NASA Technical Reports Server (NTRS) — ISS EVA 23 Lessons Learned](https://ntrs.nasa.gov/citations/20230002544)                                                                 |
+| `space-shoemaker-moon-burial` | [NASA Science — Lunar Prospector](https://science.nasa.gov/mission/lunar-prospector/)                                                                                             |
+| `space-voyager-love-brainwaves`| [NASA JPL — Voyager Set to Enter Interstellar Space](https://www.jpl.nasa.gov/news/voyager-set-to-enter-interstellar-space/)                                                       |
 
-The remaining sixteen space cards use these directly retrieved NASA Science pages:
+The remaining twelve space cards use these directly retrieved NASA Science pages:
 
 | Source                                                             | Cards and supporting sections                                                                          |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
 | [Mercury Facts](https://science.nasa.gov/mercury/facts/)           | 2: reversing sunrise (Orbit and Rotation); crater names (Surface)                                      |
 | [Venus Facts](https://science.nasa.gov/venus/venus-facts/)         | 2: Zoozve naming history; full rotation versus orbital period                                          |
-| [Uranus Facts](https://science.nasa.gov/uranus/facts/)             | 3: proposed royal name (Namesake); literary moon names (Moons); long polar winter (Orbit and Rotation) |
+| [Uranus Facts](https://science.nasa.gov/uranus/facts/)             | 2: literary moon names (Moons); long polar winter (Orbit and Rotation)                                 |
 | [Triton](https://science.nasa.gov/neptune/moons/triton/)           | 1: retrograde orbit (Overview)                                                                         |
 | [Titan Facts](https://science.nasa.gov/saturn/moons/titan/facts/)  | 2: hydrocarbon lakes; organic dune grains (Introduction, Surface, Atmosphere)                          |
 | [Enceladus](https://science.nasa.gov/saturn/moons/enceladus/)      | 1: jets supplying Saturn's E ring (Overview)                                                           |
 | [Io](https://science.nasa.gov/jupiter/jupiter-moons/io/)           | 1: volcanism erasing impact craters (opening explanation)                                              |
-| [Mars Facts](https://science.nasa.gov/mars/facts/)                 | 1: possible fate of Phobos (Moons and Rings)                                                           |
-| [Europa](https://science.nasa.gov/jupiter/jupiter-moons/europa/)   | 1: evidence for a subsurface ocean                                                                     |
-| [Pluto Facts](https://science.nasa.gov/dwarf-planets/pluto/facts/) | 2: Venetia Burney's name suggestion; dwarf-planet classification                                       |
+| [Pluto Facts](https://science.nasa.gov/dwarf-planets/pluto/facts/) | 1: Venetia Burney's name suggestion                                                                    |
 These are original factual summaries, not copied article passages. NASA's [content-use guidance](https://www.nasa.gov/nasa-brand-center/images-and-media/) describes the general U.S. reuse status of NASA content while preserving restrictions on third-party material, branding, endorsement, and identifiable people in promotional material. Source links are factual disclosure only; no NASA review or endorsement is implied. NASA is not responsible for the accuracy of these AI-assisted game formulations.
 
 JPL is managed by the California Institute of Technology; **do not assume that every JPL article or asset is public domain merely because its URL ends in nasa.gov**. The Curiosity card uses the mission operator's primary engineering account as evidence for an independently worded fact. No license to republish its prose, photographs, or graphics is asserted or needed for this collection. The distinction between an underlying principle/discovery and its protected written or illustrated expression is explained in the U.S. Copyright Office's [Circular 33](https://www.copyright.gov/circs/circ33.pdf).
@@ -255,7 +257,7 @@ Eighteen cards covering extraordinary historical trades, specialist artisanal sk
 | `work-wigmaker-baking`      | [Colonial Williamsburg — Lies My Docent Told Me](https://research.colonialwilliamsburg.org/Foundation/journal/Autumn10/myths.cfm)                                                              |
 | `work-greenwich-time-lady` | [Royal Museums Greenwich — The Greenwich Time Lady: Ruth Belville](https://www.rmg.co.uk/stories/time/greenwich-time-lady-ruth-belville)                                                    |
 | `work-canary-resuscitator` | [Science Museum Group Collection — Cage for reviving canary](https://collection.sciencemuseumgroup.org.uk/objects/co8412250/cage-for-reviving-canary)                                     |
-| `work-royal-herb-strewer`  | [Royal Collection Trust — Royal Gold: Reflections of Power](https://media.rct.uk/sites/default/files/transcript_royal_gold.pdf)                                                             |
+| `work-bowling-pinboy`      | [Library of Congress — Pin boys working in Subway Bowling Alleys, 1910](https://www.loc.gov/pictures/item/2018674610/)                                                                     |
 | `work-theatre-claqueur`    | [Encyclopedia Britannica — Claque](https://www.britannica.com/art/claque)                                                                                                                   |
 
 #### Art & music — 18 cards
