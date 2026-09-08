@@ -103,12 +103,13 @@ export const artAndMusic = definePack(
     {
       key: "art-kastner-pyrophone",
       question:
-        "What unusual heat source did Frédéric Kastner's 1873 'Pyrophone' organ use inside its glass pipes to make sound?",
-      answer: "Burning gas flames encased in glass tubes.",
+        "How did Frédéric Kastner's 1873 'pyrophone' organ generate musical tones from its glass pipes?",
+      answer:
+        "By playing gas flames positioned inside the tubes, whose flickering created acoustic vibrations.",
       source: {
         title: "Science Museum Group — Kastner's Pyrophone, 1873-1876",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co5867/kastners-pyrophone-1873-1876",
-        note: "Original question and factual summary. Patented in 1873 by Frédéric Kastner; known as the 'Fire Organ', using singing gas flames positioned inside glass tubes.",
+        note: "Original question and factual summary. Patented in 1873 by Frédéric Kastner; known as the 'Fire Organ', using singing gas flames positioned inside glass tubes to elicit acoustic resonances.",
       },
     },
     {
@@ -145,14 +146,14 @@ export const artAndMusic = definePack(
       },
     },
     {
-      key: "art-singing-ringing-tree",
+      key: "art-semple-pinkest-pink",
       question:
-        "What plays the 10-foot 'Singing Ringing Tree' sculpture overlooking Burnley in Lancashire?",
-      answer: "The wind blowing through stacked steel pipes of varying lengths.",
+        "When artist Anish Kapoor bought exclusive artistic rights to Vantablack, the blackest black, how did rival artist Stuart Semple retaliate?",
+      answer: "He created 'The Pinkest Pink' and legally banned Anish Kapoor from buying it.",
       source: {
-        title: "RIBA — Singing Ringing Tree by Tonkin Liu",
-        url: "https://find-an-architect.architecture.com/tonkin-liu/london/singing-ringing-tree",
-        note: "Original question and factual summary. Public musical sculpture designed by Tonkin Liu; wind passing through pipes of different lengths sounds chords across the moorland.",
+        title: "BBC News — 'Whitest ever' paint reflects 98% of sunlight",
+        url: "https://www.bbc.co.uk/news/science-environment-56749105",
+        note: "Original question and factual summary. Semple released his hyper-pigmented 'Pinkest Pink' with a legal disclaimer requiring buyers to declare under contract that they are not Anish Kapoor.",
       },
     },
     {

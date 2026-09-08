@@ -153,12 +153,12 @@ export const brightIdeas = definePack(
     {
       key: "idea-bird-diaper",
       question:
-        "In 1999, what messy household problem was Lorraine Moore's patented avian 'flight suit' designed to solve?",
-      answer: "Catching droppings from indoor flighted pet birds with a washable diaper pouch.",
+        "What was Lorraine Moore's 1999 patented 'flight suit' for pet birds designed to do?",
+      answer: "Hold a removable diaper pouch to catch droppings while birds fly indoors.",
       source: {
         title: "US Patent 5,934,226 — Bird diaper",
         url: "https://patents.google.com/patent/US5934226A/en",
-        note: "Original question and factual summary. Granted August 10, 1999 to Lorraine Moore. A fabric harness and removable waste pouch fitted to pet birds.",
+        note: "Original question and factual summary. Granted August 10, 1999 to Lorraine Moore. An avian harness incorporating a disposable or washable diaper pouch to catch droppings.",
       },
     },
     {
