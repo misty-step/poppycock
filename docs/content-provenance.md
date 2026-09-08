@@ -13,7 +13,7 @@ The catalog is a **fixed, sourced, AI-assisted editorial deck**. There is no run
 | Living traditions   |      18 | Community practices, communication, celebration and shared skills                |
 | Remarkable places   |      18 | Bizarre towns, eccentric architecture, and extraordinary geographic anomalies     |
 | Working lives       |      18 | Historical trades, specialist labour and living traditional work                 |
-| Art & music         |      18 | Musical mechanisms, visual-art processes, pigments and materials                 |
+| Art & music         |      18 | Shocking artworks, bizarre musical instruments, eccentric stunts, and pigments    |
 | The sea             |      18 | Winds, waves, hidden cataracts, and the names sailors gave them                  |
 | Lost gear           |      18 | Clothes, boats, and tools whose names outlived everyday use                      |
 | Rarer words         |      18 | More historical vocabulary whose everyday job has slipped out of sight           |
@@ -256,28 +256,28 @@ Eighteen cards grounded in museum collections, preserved historical accounts and
 
 #### Art & music — 18 cards
 
-Eighteen cards covering seven musical mechanisms or instruments and eleven visual-art materials or processes. Sources are the institutions describing their own collections, the John Cage Trust, and the American Institute of Physics' Physics Today. The one commercial publisher source is explicitly primary: Ubisoft Montréal's own recording-project account with Montreal Symphony player Eric Chappell, used only for the replica original-model octobass mechanism. It is not a trivia-card source, and no game, music or promotional asset is reused. Later keyboard-controlled octobasses are not conflated with the lever-and-pedal replica. Duke's serpent card uses its documented object's wood body, not uncertain general invention history.
+Eighteen cards covering extraordinary artworks, bizarre musical instruments, eccentric performances, and historical pigments. Every single card is verified against primary museum collections and authoritative arts journalism (Smithsonian Magazine, Atlas Obscura, Centre Pompidou, Tate Research, Science Museum Group, The Franklin Institute, Dia Art Foundation, Artangel, RIBA, and The Guardian).
 
-| Card                      | Consulted source                                                                                                                                                                    |
-| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `art-theremin-hands`      | [Physics Today — Playing with electromagnetic waves: The science of the theremin](https://physicstoday.aip.org/news/playing-with-electromagnetic-waves-the-science-of-the-theremin) |
-| `art-glass-harmonica`     | [Science Museum Group — Glass Harmonica](https://collection.sciencemuseumgroup.org.uk/objects/co5862/glass-harmonica)                                                               |
-| `art-hurdy-gurdy-wheel`   | [Smithsonian Music — Hurdy-gurdy](https://music.si.edu/object-day/hurdy-gurdy)                                                                                                      |
-| `art-octobass-controls`   | [Ubisoft Montréal — The OSM triumphs on the Rainbow Six Extraction soundtrack](https://montreal.ubisoft.com/en/the-osm-triumphs-on-the-rainbow-six-extraction-soundtrack/)          |
-| `art-prepared-piano`      | [John Cage Trust — John Cage Prepared Piano](https://data-johncage.org/cagePiano.html)                                                                                              |
-| `art-aeolian-wind`        | [Exploratorium — Aeolian Harp](https://www.exploratorium.edu/exhibits/aeolian-harp)                                                                                                 |
-| `art-serpent-material`    | [Duke University Musical Instrument Collections — Serpent](https://sites.duke.edu/dumic/instruments/brass/west-europe/serpent/)                                                     |
-| `art-smalt-glass`         | [National Gallery — Smalt](https://www.nationalgallery.org.uk/paintings/glossary/smalt)                                                                                             |
-| `art-tempera-binder`      | [National Gallery — Tempera](https://www.nationalgallery.org.uk/paintings/glossary/tempera)                                                                                         |
-| `art-metalpoint-lines`    | [National Gallery of Art — Drawing in Silver and Gold: From Leonardo to Jasper Johns](https://www.nga.gov/exhibitions/drawing-silver-and-gold-leonardo-jasper-johns)                |
-| `art-ambassadors-skull`   | [National Gallery — Hans Holbein the Younger, The Ambassadors](https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors)                               |
-| `art-frottage-floor`      | [Tate — Frottage](https://www.tate.org.uk/art/art-terms/f/frottage)                                                                                                                 |
-| `art-cyanotype-metals`    | [V&A — Photographic processes](https://www.vam.ac.uk/articles/photographic-processes)                                                                                               |
-| `art-repousse-reverse`    | [V&A — A guide to metalworking techniques](https://www.vam.ac.uk/articles/metalworking-techniques)                                                                                  |
-| `art-pouncing-powder`     | [National Gallery — Pouncing](https://www.nationalgallery.org.uk/paintings/glossary/pouncing)                                                                                       |
-| `art-mezzotint-polishing` | [V&A — What is print?](https://www.vam.ac.uk/articles/what-is-print)                                                                                                                |
-| `art-lithography-water`   | [V&A — What is print?](https://www.vam.ac.uk/articles/what-is-print)                                                                                                                |
-| `art-print-plate-mark`    | [V&A — What is print?](https://www.vam.ac.uk/articles/what-is-print)                                                                                                                |
+| Card                       | Consulted source                                                                                                                                                                             |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `art-mummy-brown`          | [Smithsonian Magazine — Ground Up Mummies Were Once an Ingredient in Paint](https://www.smithsonianmag.com/smart-news/ground-mummies-were-once-ingredient-paint-180950350/)                 |
+| `art-stalacpipe-organ`     | [Atlas Obscura — The Great Stalacpipe Organ in Luray](https://www.atlasobscura.com/places/the-great-stalacpipe-organ-luray-virginia)                                                       |
+| `art-zadar-sea-organ`      | [Atlas Obscura — Sea Organ in Zadar](https://www.atlasobscura.com/places/sea-organ)                                                                                                         |
+| `art-museum-bad-art`       | [Smithsonian Magazine — Why Is Some Art So Bad That It’s Good?](https://www.smithsonianmag.com/arts-culture/why-is-some-art-so-bad-its-good-180967878/)                                      |
+| `art-cattelan-banana`      | [Smithsonian Magazine — That Viral Banana Duct-Taped to a Wall? It Just Sold for $6.2 Million](https://www.smithsonianmag.com/smart-news/that-viral-banana-duct-taped-to-a-wall-it-just-sold-for-6-2-million-180985523/) |
+| `art-maillardet-automaton`  | [The Franklin Institute — Maillardet's Automaton](https://fi.edu/en/science-and-education/collection/maillardets-automaton)                                                                |
+| `art-yves-klein-void`      | [Centre Pompidou — Yves Klein, Chèque (1959)](https://www.centrepompidou.fr/en/ressources/oeuvre/cMedK9X)                                                                                  |
+| `art-russolo-intonarumori` | [Tate Research — A Transformative Exhibition: Historiography of the Processes of Production](https://www.tate.org.uk/research/in-focus/abstract-kinetic-collage-painting-sound/transformative-exhibition) |
+| `art-kastner-pyrophone`    | [Science Museum Group — Kastner's Pyrophone, 1873-1876](https://collection.sciencemuseumgroup.org.uk/objects/co5867/kastners-pyrophone-1873-1876)                                         |
+| `art-de-maria-lightning`   | [Dia Art Foundation — Walter De Maria, The Lightning Field](https://www.diaart.org/visit/visit-our-locations-sites/walter-de-maria-the-lightning-field)                                    |
+| `art-hugo-ball-costume`    | [Tate Research — Behold the Buffoon: Dada, Nietzsche's Ecce Homo and the Sublime](https://www.tate.org.uk/art/research-publications/the-sublime/christine-battersby-behold-the-buffoon-dada-nietzsches-ecce-homo-and-the-sublime-r1136833) |
+| `art-longplayer-millennium`| [Artangel — Longplayer](https://www.artangel.org.uk/project/longplayer/)                                                                                                                    |
+| `art-singing-ringing-tree` | [RIBA — Singing Ringing Tree by Tonkin Liu](https://find-an-architect.architecture.com/tonkin-liu/london/singing-ringing-tree)                                                              |
+| `art-octobass-frequency`   | [Atlas Obscura — Octobass in Phoenix](https://www.atlasobscura.com/places/octobass)                                                                                                          |
+| `art-le-petomane-pujol`    | [The Guardian — Fart history? Joseph Pujol trumps them all](https://www.theguardian.com/culture/2021/aug/20/fart-history-joseph-pujol-trumps-them-all)                                    |
+| `art-glass-harmonica`      | [Science Museum Group — Glass Harmonica](https://collection.sciencemuseumgroup.org.uk/objects/co5862/glass-harmonica)                                                                       |
+| `art-hurdy-gurdy-wheel`    | [Smithsonian Music — Hurdy-gurdy](https://music.si.edu/object-day/hurdy-gurdy)                                                                                                              |
+| `art-smalt-glass`          | [National Gallery — Smalt](https://www.nationalgallery.org.uk/paintings/glossary/smalt)                                                                                                     |
 
 ## Precision choices worth preserving
 
