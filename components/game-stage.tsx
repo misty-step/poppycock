@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { useMutation } from "convex/react";
-import { ChevronDownIcon, LockKeyholeIcon } from "lucide-react";
+import { BadgeCheckIcon, ChevronDownIcon, LockKeyholeIcon } from "lucide-react";
 import { Face } from "@/app/avatar";
 import { api } from "@/convex/_generated/api";
 import type { Id } from "@/convex/_generated/dataModel";
@@ -182,8 +182,10 @@ function RoundPhase({ game, token, host, online, viewerId }: GameStageProps) {
   }
 
   const question = (
-    <section className="min-w-0 space-y-2" aria-label="This round's question">
-      <p className="supporting-copy">{game.prompt.category}</p>
+    <section className="min-w-0 space-y-3" aria-label="This round's question">
+      <p className="round-category inline-flex max-w-full text-sm font-bold [overflow-wrap:anywhere]">
+        {game.prompt.category}
+      </p>
       <h2 className="question-card [overflow-wrap:anywhere]">{game.prompt.question}</h2>
     </section>
   );
@@ -271,10 +273,10 @@ function RoundPhase({ game, token, host, online, viewerId }: GameStageProps) {
       data-phase={game.phase}
       data-round={game.round}
     >
-      <header className="space-y-3">
+      <header className="round-heading space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <p id={`${id}-round`} className="supporting-copy tabular-nums">
-            Round {game.round} of {game.totalRounds}
+          <p id={`${id}-round`} className="round-marker tabular-nums">
+            Round <strong className="text-2xl">{game.round}</strong> of {game.totalRounds}
           </p>
           {unfinished && host && game.participant && (
             <DropdownMenu>
@@ -365,7 +367,8 @@ function RoundPhase({ game, token, host, online, viewerId }: GameStageProps) {
                       </p>
                     </div>
                     <p id={`${id}-answer-hint`} className="supporting-copy">
-                      Make it believable. Once submitted, your answer is locked.
+                      Make it believable enough to fool the table. Once submitted, your answer is
+                      locked.
                     </p>
                   </form>
                 ) : game.submitted ? (
@@ -436,7 +439,10 @@ function RoundPhase({ game, token, host, online, viewerId }: GameStageProps) {
         <>
           <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-8">
             <section className="truth-slip surface-panel min-w-0 space-y-3 border-success bg-success-surface text-success">
-              <p className="font-bold">The truth</p>
+              <p className="reveal-heading flex items-center gap-2 font-bold">
+                <BadgeCheckIcon className="size-6 shrink-0" aria-hidden="true" />
+                The truth, at last!
+              </p>
               <h2 className="screen-title [overflow-wrap:anywhere]">{game.truth}</h2>
               {game.source && (
                 <div className="space-y-2 text-foreground [overflow-wrap:anywhere]">

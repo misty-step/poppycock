@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useRef, type ReactNode, type RefObject } from "react";
-import { CircleAlert, CircleHelp, LoaderCircle } from "lucide-react";
+import { CircleAlert, CircleHelp, LoaderCircle, Trophy } from "lucide-react";
 import type { GameView } from "@/lib/game-types";
 import { Face } from "@/app/avatar";
 import { Button } from "@/components/ui/button";
@@ -211,11 +211,17 @@ export function Scoreboard({ game, final = false }: { game: GameView; final?: bo
   let rank = 0;
   return (
     <section className="surface-panel scoreboard" aria-labelledby={id}>
-      <div className="mb-4 flex items-baseline justify-between gap-4">
-        <h2 id={id} className="section-title">
-          {final ? "Final scores" : "Scores"}
-        </h2>
-        <span className="text-sm text-muted-foreground">Points</span>
+      <div className="mb-4 flex items-end justify-between gap-4">
+        <div className="min-w-0 space-y-1">
+          <h2 id={id} className="section-title flex items-center gap-2">
+            <Trophy className="size-6 shrink-0 text-primary" aria-hidden="true" />
+            {final ? "Final scores" : "Scores"}
+          </h2>
+          {final && (
+            <p className="supporting-copy text-sm">A round of applause for the whole table.</p>
+          )}
+        </div>
+        <span className="shrink-0 text-sm text-muted-foreground">Points</span>
       </div>
       <ol className="score-list">
         {sorted.map((player, index) => {
@@ -226,7 +232,7 @@ export function Scoreboard({ game, final = false }: { game: GameView; final?: bo
               data-leader={final && rank === 1 ? "true" : undefined}
               key={player.playerId}
             >
-              <span className="w-4 shrink-0 text-center text-sm tabular-nums">
+              <span className="w-5 shrink-0 text-center text-sm font-bold tabular-nums">
                 <span className="sr-only">Rank </span>
                 {rank}
               </span>
@@ -234,12 +240,12 @@ export function Scoreboard({ game, final = false }: { game: GameView; final?: bo
               <div className="min-w-0 flex-1">
                 <p className="font-bold wrap-anywhere">{player.name}</p>
                 {!final && player.roundPoints > 0 && (
-                  <p className="text-sm text-success tabular-nums">
+                  <p className="text-sm font-bold text-success tabular-nums">
                     +{player.roundPoints} this round
                   </p>
                 )}
               </div>
-              <strong className="text-2xl tabular-nums">
+              <strong className="score-total text-2xl tabular-nums">
                 {player.score}
                 <span className="sr-only"> points</span>
               </strong>

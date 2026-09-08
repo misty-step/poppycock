@@ -1,6 +1,15 @@
 # Changelog
 
-## Unreleased — 2026-09-07
+## Unreleased
+
+- Rebuilt the visual design as a party game rather than a calm tabletop: a lilac room, grape ink and actions, marigold entrance ticket, coral invitation board, mint question bubbles, speech-bubble corners, and flat printed shadows.
+- Made Fredoka the voice of the game across the wordmark, headlines, titles, questions, round markers, and score totals; questions now scale to their own column instead of breaking apart in the narrow reveal layout.
+- Gave the entrance a real hook — “Your friends are full of it.” — with a labelled example bluff in a speech bubble and a small cast of characters below the form, so phones still reach the inputs first.
+- Celebrated results: a lilac winner banner with the winner's portrait on a marigold burst, a trophy-marked scoreboard, a clearer round marker and category chip, and “The truth, at last!” at reveal. Questions, answers, scores, ties, and every action label stay literal.
+- Moved keyboard focus to a distinct blue so a focused control is never mistaken for a selected one; all new party surfaces carry darkened rather than faded supporting text.
+- Linked the footer credits to [Misty Step](https://mistystep.io) and [Parlor](https://parlor.mistystep.io).
+
+## 1.1.0 — 2026-09-08
 
 - Added a root `DESIGN.md` following Google's alpha token-and-prose format, with Poppycock's palette, typography, layout, component states, accessibility behavior, and copy contract.
 - Added persistent avatar selection across all forty-eight characters. Players can change their avatar from the lobby roster or the table options menu during a game; choices stay tied to the player's identity and persist across tables, reloads, and reconnections.
@@ -14,7 +23,8 @@
 - Moved Leave table into the room toolbar with a cancellable, keyboard-accessible confirmation rather than an easy-to-hit gameplay action.
 - Pinned genuine upstream Parlor to `56342bd910a58f255483afdf5a92d3fc4fcc0ae2`, which adds opt-in untimed matches without weakening other games’ default cap or everyone-away cleanup.
 - Preserved a one-time, data-safe upgrade revision in history; removed migration code and legacy deadline fields from the final source. Local preview shutdown keeps handling repeated terminal/package-manager signals until its child processes exit.
-- Verified the redesigned interface locally with the full six-round multiplayer game, a twelve-guest interaction audit, 320px/390px/landscape layouts, 200% text, keyboard and reduced-motion checks, and backend-driven shared-rank standings. No public deployment was performed.
+- Verified the redesigned interface locally with the full six-round multiplayer game, a twelve-guest interaction audit, 320px/390px/landscape layouts, 200% text, keyboard and reduced-motion checks, and backend-driven shared-rank standings.
+- Deployed to https://poppycock.mistystep.io on 2026-09-08 after running the data-safe untimed migration against the production Convex deployment; the hosted three-browser round and live avatar checks passed.
 
 ## 1.0.0 — 2026-09-06
 

@@ -197,19 +197,23 @@ export function Entrance({
       aria-labelledby="entrance-title"
       className={
         directJoin
-          ? "mx-auto w-full max-w-lg py-8 md:py-12"
-          : "grid min-w-0 gap-6 py-8 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,26rem)] lg:gap-x-12 lg:gap-y-8 lg:py-12"
+          ? "mx-auto w-full max-w-lg py-6 sm:py-8 lg:py-12"
+          : "entrance-layout grid min-w-0 gap-6 py-6 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,26rem)] lg:gap-x-12 lg:gap-y-8 lg:py-10"
       }
     >
       {!directJoin && (
-        <div className="min-w-0 space-y-4 lg:col-start-1 lg:row-start-1">
-          <h1 id="entrance-title" className="font-display text-hero text-balance">
-            Make it up. Make them believe it.
+        <div className="entrance-intro min-w-0 space-y-4 lg:col-start-1 lg:row-start-1">
+          <h1 id="entrance-title" className="entrance-title font-display text-hero text-balance">
+            Your friends are full of it.
           </h1>
-          <p className="max-w-prose text-base leading-relaxed">
-            Make up a believable answer. Then find the truth among your friends’ bluffs.
+          <p className="max-w-lg text-base leading-relaxed sm:text-lg">
+            Invent a convincing answer to a weird question. Fool your friends, then find the truth
+            hiding among the bluffs.
           </p>
-          <ul className="supporting-copy flex flex-wrap gap-x-5 gap-y-1" aria-label="Game details">
+          <ul
+            className="party-details flex flex-wrap gap-2 text-sm font-bold"
+            aria-label="Game details"
+          >
             <li>3–12 players</li>
             <li>Six untimed rounds</li>
             <li>One phone each</li>
@@ -217,17 +221,28 @@ export function Entrance({
         </div>
       )}
 
-      <div className="surface-panel min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
-        {directJoin && (
-          <div className="mb-6 space-y-2">
-            <h1 id="entrance-title" className="screen-title text-balance">
-              Join your friends
-            </h1>
-            <p className="text-base leading-relaxed">
-              Check your name and room code, then join the table.
+      <div className="entrance-panel min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+        <div className="mb-5 flex items-start justify-between gap-3 border-b-2 border-dashed border-border pb-5">
+          <div className="min-w-0 space-y-2">
+            {directJoin ? (
+              <h1 id="entrance-title" className="screen-title text-balance">
+                You’re invited.
+              </h1>
+            ) : (
+              <h2 className="font-display text-3xl leading-tight">Pull up a chair.</h2>
+            )}
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              {directJoin
+                ? "Check your name and room code, then join your friends."
+                : "Create a table or join one with your room code."}
             </p>
           </div>
-        )}
+          {directJoin && (
+            <div aria-hidden="true" className="shrink-0">
+              <Face avatarId="pigeon" small />
+            </div>
+          )}
+        </div>
         <Tabs
           value={mode}
           onValueChange={(value) => {
@@ -259,16 +274,26 @@ export function Entrance({
       </div>
 
       {!directJoin && (
-        <figure className="flex min-w-0 items-center gap-4 border-t border-border pt-6 lg:col-start-1 lg:row-start-2">
-          <div className="shrink-0">
-            <Face seat={0} />
-          </div>
-          <figcaption className="min-w-0 space-y-1 wrap-anywhere">
-            <p className="supporting-copy">Example bluff: What was a knocker-up?</p>
-            <blockquote className="text-base font-bold leading-relaxed">
+        <figure className="bluff-scene min-w-0 space-y-4 lg:col-start-1 lg:row-start-2">
+          <figcaption className="bluff-card relative max-w-lg space-y-2 wrap-anywhere">
+            <p className="text-sm text-muted-foreground">
+              Example bluff for “What was a knocker-up?”
+            </p>
+            <blockquote className="font-display text-2xl leading-tight sm:text-3xl">
               “A carpenter who tested door knockers.”
             </blockquote>
           </figcaption>
+          <div aria-hidden="true" className="bluff-cast flex items-end -space-x-3 pl-4">
+            <div className="-rotate-6">
+              <Face avatarId="pigeon" />
+            </div>
+            <div className="relative z-10 mb-2 rotate-3">
+              <Face avatarId="cool_frog" />
+            </div>
+            <div className="rotate-12">
+              <Face avatarId="skeleton" />
+            </div>
+          </div>
         </figure>
       )}
     </section>

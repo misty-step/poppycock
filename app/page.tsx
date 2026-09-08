@@ -168,8 +168,18 @@ export default function Home() {
         </main>
       )}
       <footer className="site-footer">
-        <span>Bring friends. No accounts needed.</span>
-        <span>Built with Parlor</span>
+        <span>Good friends. Questionable answers.</span>
+        <p>
+          A{" "}
+          <a href="https://mistystep.io" target="_blank" rel="noopener noreferrer">
+            Misty Step<span className="sr-only"> (opens in a new tab)</span>
+          </a>{" "}
+          game. Built with{" "}
+          <a href="https://parlor.mistystep.io" target="_blank" rel="noopener noreferrer">
+            Parlor<span className="sr-only"> (opens in a new tab)</span>
+          </a>
+          .
+        </p>
       </footer>
     </div>
   );
@@ -540,7 +550,10 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
           />
         ) : (
           <>
-            <section className="lobby-heading flex items-start justify-between gap-5">
+            <section
+              className="lobby-heading flex items-start justify-between gap-5"
+              data-finished={finished || undefined}
+            >
               <div className="min-w-0 space-y-2">
                 <h1 ref={roomHeading} tabIndex={-1} className="screen-title outline-none">
                   {finished
@@ -551,18 +564,18 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
                         : `${leaders.length} players tie for first`
                     : game?.phase === "abandoned"
                       ? "Ready for another game?"
-                      : "Your table"}
+                      : "Your table of tall tales"}
                 </h1>
                 <p className="supporting-copy">
                   {finished
-                    ? "Six rounds played. One more game?"
+                    ? "Take a bow. Then demand a rematch."
                     : game?.phase === "abandoned"
                       ? "The last game has ended. Your table is still open."
-                      : "Gather 3–12 players. Everyone uses their own phone."}
+                      : "Invite your favorite troublemakers. One phone each."}
                 </p>
               </div>
               {finished && leaders.length === 1 && (
-                <div className="hidden sm:block">
+                <div className="winner-portrait hidden sm:block">
                   <Face playerId={leaders[0]!.playerId} seat={leaders[0]!.seatIndex} />
                 </div>
               )}
@@ -606,9 +619,9 @@ function Room({ roomId, token, exit }: { roomId: Id<"rooms">; token: string; exi
                     Show QR code
                   </Button>
                 </aside>
-                <section className="surface-panel">
+                <section className="surface-panel roster-panel">
                   <div className="mb-2 flex flex-wrap items-baseline justify-between gap-3">
-                    <h2 className="section-title">Players</h2>
+                    <h2 className="section-title">Your fellow fibbers</h2>
                     <p className="text-sm text-muted-foreground tabular-nums">
                       {state.members.length} of 12 players
                     </p>
