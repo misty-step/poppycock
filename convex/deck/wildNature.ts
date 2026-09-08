@@ -20,13 +20,14 @@ export const wildNature = definePack(
       },
     },
     {
-      key: "nature-christmas-tree-worm",
-      question: "What are the colorful 'trees' on a Christmas tree worm actually for?",
-      answer: "Breathing and catching tiny drifting food particles.",
+      key: "nature-horned-lizard-blood",
+      question:
+        "What shocking last-resort defense mechanism does the desert horned lizard use against coyotes and wolves?",
+      answer: "It squirts a foul-tasting stream of blood from the corners of its eyes.",
       source: {
-        title: "NOAA — What are Christmas tree worms?",
-        url: "https://oceanservice.noaa.gov/facts/xmas-tree.html",
-        note: "Original factual paraphrase of NOAA public-information text describing the crowns and their radioles.",
+        title: "National Geographic — Short-Horned Lizard",
+        url: "https://www.nationalgeographic.com/animals/reptiles/facts/short-horned-lizard",
+        note: "Ocular autohemorrhaging can shoot a noxious stream of blood up to three feet to repel predatory canids.",
       },
     },
     {
@@ -112,13 +113,14 @@ export const wildNature = definePack(
       },
     },
     {
-      key: "nature-nautilus-chambers",
-      question: "What useful job do the unoccupied chambers in a nautilus shell perform?",
-      answer: "They act as ballast tanks, helping it adjust its buoyancy.",
+      key: "nature-bombardier-beetle",
+      question:
+        "What chemical weapon can a bombardier beetle fire from its rear end when attacked?",
+      answer: "A boiling-hot, caustic spray mixed in an internal reaction chamber.",
       source: {
-        title: "NOAA — What is a nautilus?",
-        url: "https://oceanservice.noaa.gov/facts/nautilus.html",
-        note: "Original factual paraphrase of NOAA public-information text about shell chambers and the siphuncle.",
+        title: "National Geographic — Bombardier beetles, facts and photos",
+        url: "https://www.nationalgeographic.com/animals/invertebrates/facts/bombardier-beetle",
+        note: "Catalyzed mixing of hydroquinone and hydrogen peroxide produces pulsing boiling jets up to 100°C.",
       },
     },
     {
@@ -132,13 +134,15 @@ export const wildNature = definePack(
       },
     },
     {
-      key: "nature-oyster-spat",
-      question: "On an oyster farm, what does 'spat' refer to?",
-      answer: "Young oysters that have settled and attached to a surface.",
+      key: "nature-zombie-ant-fungus",
+      question:
+        "How does the parasitic fungus Ophiocordyceps unilateralis ensure its spores are spread by carpenter ants?",
+      answer:
+        "It hijacks the ant's muscles to force it to climb a plant and lock its jaws onto a leaf before dying.",
       source: {
-        title: "NOAA — What is spat?",
-        url: "https://oceanservice.noaa.gov/facts/spat.html",
-        note: "Original factual paraphrase of NOAA public-information text on oyster larval settlement.",
+        title: "National Geographic — How a cordyceps fungus turns ants into 'zombies'",
+        url: "https://www.nationalgeographic.com/animals/article/cordyceps-zombie-fungus-takes-over-ants",
+        note: "The fungus directs the host to a humid microclimate where a fungal stalk erupts from the dead ant's head.",
       },
     },
     {
@@ -203,34 +207,39 @@ export const wildNature = definePack(
       },
     },
     {
-      key: "nature-plankton-drifters",
-      question: "What makes an ocean organism count as plankton?",
-      answer: "It is carried by tides and currents and cannot swim well against them.",
-      source: {
-        title: "NOAA National Ocean Service — What are plankton?",
-        url: "https://oceanservice.noaa.gov/facts/plankton.html",
-        note: "Original factual paraphrase of the marine-drifter definition. Some animals are plankton only when young.",
-      },
-    },
-    {
-      key: "nature-ocean-oxygen",
+      key: "nature-horror-frog-claws",
       question:
-        "About how much of Earth's oxygen production comes from the ocean, and what happens to most of it?",
-      answer: "About half; marine life consumes roughly the same amount.",
+        "When threatened, how does the Central African hairy frog (or 'horror frog') produce sharp defensive claws?",
+      answer:
+        "It actively breaks its own toe bones to force sharp bone fragments through its skin.",
       source: {
-        title: "NOAA National Ocean Service — How much oxygen comes from the ocean?",
-        url: "https://oceanservice.noaa.gov/facts/ocean-oxygen.html",
-        note: "Original factual paraphrase. Most production is from phytoplankton; the card does not claim land animals mainly breathe newly made ocean oxygen.",
+        title: "New Scientist — 'Horror frog' breaks own bones to produce claws",
+        url: "https://www.newscientist.com/article/1909580-horror-frog-breaks-own-bones-to-produce-claws/",
+        note: "Trichobatrachus robustus contracts foot muscles that snap distal phalanges and puncture the toe pads.",
       },
     },
     {
-      key: "nature-barrier-island",
-      question: "What is a barrier island, geographically?",
-      answer: "A constantly changing deposit of sand that forms parallel to the coast.",
+      key: "nature-pistol-shrimp-bubble",
+      question:
+        "How does a tiny pistol shrimp generate an underwater shockwave capable of stunning or killing prey?",
+      answer:
+        "It snaps its claw shut so fast that it creates a collapsing cavitation bubble that produces extreme heat and sound.",
       source: {
-        title: "NOAA National Ocean Service — What is a barrier island?",
-        url: "https://oceanservice.noaa.gov/facts/barrier-islands.html",
-        note: "Original factual paraphrase of the lead definition. The card does not claim every coast has them.",
+        title: "BBC Future — Why the US military is listening to shrimp",
+        url: "https://www.bbc.com/future/article/20220616-the-new-sonar-built-from-sealife-noises",
+        note: "Claw closure produces a localized cavitation bubble reaching thousands of degrees and up to 218 decibels.",
+      },
+    },
+    {
+      key: "nature-immortal-jellyfish",
+      question:
+        "How does the 'immortal jellyfish' (Turritopsis dohrnii) respond when facing starvation, physical trauma, or extreme age?",
+      answer:
+        "It reverts its adult cells into a younger state, transforming back into a juvenile polyp colony.",
+      source: {
+        title: "National Geographic — 'Immortal' Jellyfish Swarm World's Oceans",
+        url: "https://www.nationalgeographic.com/animals/article/immortal-jellyfish-swarm-oceans-animals",
+        note: "Through transdifferentiation, adult medusa cells transform into a cyst that generates a new polyp colony.",
       },
     },
     {
@@ -244,24 +253,26 @@ export const wildNature = definePack(
       },
     },
     {
-      key: "nature-bioluminescence",
-      question: "What is bioluminescence?",
-      answer: "Light produced and emitted by a living organism.",
+      key: "nature-lyrebird-mimicry",
+      question:
+        "Beyond songs of other birds, what startling sounds can the Australian superb lyrebird mimic with near-perfect accuracy to impress mates?",
+      answer: "Human mechanical sounds including chainsaws, car alarms, and camera shutters.",
       source: {
-        title: "NOAA National Ocean Service — What is bioluminescence?",
-        url: "https://oceanservice.noaa.gov/facts/biolum.html",
-        note: "Original factual paraphrase of the lead definition. Biofluorescence, which absorbs and re-emits light, is a different phenomenon.",
+        title: "BBC Travel — An Australian bird that mimics the sound of a chainsaw",
+        url: "https://www.bbc.com/travel/article/20140416-an-australian-bird-that-mimics-the-sound-of-a-chainsaw",
+        note: "Male superb lyrebirds reproduce industrial and human acoustic sounds heard in their habitat during courtship displays.",
       },
     },
     {
-      key: "nature-seamount",
-      question: "What counts as a seamount?",
+      key: "nature-hagfish-slime",
+      question: "How does the deep-sea hagfish defend itself when bitten by a predatory shark?",
       answer:
-        "An underwater mountain with steep sides rising at least 1,000 meters from the seafloor.",
+        "It secretes protein filaments and mucus that expand thousands of times in seawater to choke the predator's gills.",
       source: {
-        title: "NOAA Ocean Exploration — What is a seamount?",
-        url: "https://oceanexplorer.noaa.gov/ocean-fact/seamounts/",
-        note: "Original factual paraphrase. Most are extinct-volcano remnants; guyots with flat summits are a subset.",
+        title:
+          "Smithsonian Magazine — If We Can Get Past the Ickiness, Hagfish Slime May Actually Be Useful to Us",
+        url: "https://www.smithsonianmag.com/innovation/if-we-can-get-past-ickiness-hagfish-slime-may-actually-be-useful-to-us-180962300/",
+        note: "Slime pores release tightly coiled protein threads that unravel and trap water, expanding near 10,000 times in volume.",
       },
     },
     {
