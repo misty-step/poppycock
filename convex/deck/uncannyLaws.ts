@@ -214,12 +214,12 @@ export const uncannyLaws = definePack(
     {
       key: "law-medieval-pig-trial-1266",
       question:
-        "In the earliest surviving official record of an animal trial from 1266 in Fontenay-aux-Roses, France, what happened to an accused pig?",
-      answer: "It was formally tried in court for murder and publicly executed by hanging.",
+        "In the earliest surviving record of an animal trial from 1266 in Fontenay-aux-Roses, France, what happened to an accused pig?",
+      answer: "It was put on trial and executed.",
       source: {
         title: "BBC News — Should animals have the same rights as humans?",
         url: "https://www.bbc.com/news/world-32854504",
-        note: "Original question and factual summary. BBC News notes the earliest surviving record of an animal trial dates to 1266 in Fontenay-aux-Roses, where a pig was formally tried for murder and executed by hanging.",
+        note: "Original question and factual summary. BBC News notes the earliest surviving record of an animal trial dates to 1266 in Fontenay-aux-Roses, where a pig was put on trial and executed.",
       },
     },
   ],

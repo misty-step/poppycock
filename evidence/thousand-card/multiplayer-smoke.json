@@ -1,0 +1,196 @@
+{
+  "sourceRevision": "4646116-wt",
+  "parlorRevision": "56342bd910a58f255483afdf5a92d3fc4fcc0ae2",
+  "startedAt": "2026-09-09T01:48:39.388Z",
+  "origin": "http://localhost:3210",
+  "rounds": [
+    {
+      "round": 1,
+      "question": "What did Jacques de Meulles improvise to pay troops in New France when coins ran short in 1685?",
+      "category": "Strange currency",
+      "truth": "Playing cards, cut to different shapes and signed with their monetary values on the backs.",
+      "source": "https://www.bankofcanadamuseum.ca/2018/12/a-good-deal/",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 3,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 1,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "question": "Why could two copies of the same early Bible edition disagree even though neither reader had altered a word?",
+      "category": "Printing oddities",
+      "truth": "Corrections were made while the press kept working, so uncorrected sheets could be mixed with corrected ones in finished copies.",
+      "source": "https://folgerpedia.folger.edu/Manifold_Greatness_exhibition_material",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 6,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 4,
+          "gained": 3
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "question": "How can traces of Egyptian blue reveal themselves even when their colour is hard to see?",
+      "category": "Ancient secrets",
+      "truth": "They emit near-infrared light when illuminated, allowing specialised imaging to map the pigment.",
+      "source": "https://www.nature.com/articles/s40494-021-00639-5",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 9,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 5,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "question": "What did Shackleton’s men call “the thief” during their 1916 voyage in the James Caird?",
+      "category": "Polar oddities",
+      "truth": "A narrow metal dipper used to measure out their drinking water.",
+      "source": "https://www.spri.cam.ac.uk/museum/resources/teacherpackshackletonobjectsfromantarctica(1).pdf",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 12,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 6,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "question": "What did Special Operations Executive agents tie over their boots before wading ashore in the Pacific theatre?",
+      "category": "Military blunders",
+      "truth": "Rubber overshoes cast as bare human feet, so their tracks would read as a local's rather than a soldier's.",
+      "source": "https://www.iwm.org.uk/collections/item/object/30103004",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 15,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 7,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "question": "Why can Actaea pachypoda use birds as delivery agents even though its berries are dangerously toxic to people?",
+      "category": "Botanical wonders",
+      "truth": "Many birds are immune to the berries' toxic effects and spread the seeds after eating them.",
+      "source": "https://www.kew.org/read-and-watch/13-creepy-plants-fungi",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 18,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 8,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Three independent guest identities join by code; real Parlor QR invitation renders in the lobby.",
+    "Unauthenticated room game read rejected; writing hides truth, source, and options.",
+    "Explicit host departure transfers host to Bea; rejoining Ada keeps identity, scores, and match eligibility.",
+    "Late joiner can watch but cannot submit; immutable three-player eligibility preserved.",
+    "Phone network interruption and reload preserve the same player and current turn.",
+    "Six rounds have authoritative expected scores18/8/0, private shuffled choices, duplicate-bluff attribution, rejected self-votes, and idempotent submission retries.",
+    "Rematch includes former spectator, resets all scores, draws unseen content, and fits390px screens without horizontal overflow."
+  ],
+  "screenshots": [
+    "front-door-desktop.png",
+    "front-door-phone.png",
+    "lobby-desktop.png",
+    "writing-phone.png",
+    "voting-phone.png",
+    "reveal-desktop.png",
+    "reveal-phone.png",
+    "host-change-phone.png",
+    "offline-phone.png",
+    "final-standings-desktop.png",
+    "final-standings-phone.png",
+    "rematch-phone.png"
+  ],
+  "browserSecurity": {
+    "secureContext": true,
+    "randomUuidAvailable": true,
+    "randomValuesAvailable": true
+  },
+  "finalScores": [
+    {
+      "name": "Ada",
+      "score": 18
+    },
+    {
+      "name": "Bea",
+      "score": 8
+    },
+    {
+      "name": "Cy",
+      "score": 0
+    }
+  ],
+  "completedAt": "2026-09-09T01:48:50.871Z",
+  "result": "passed"
+}

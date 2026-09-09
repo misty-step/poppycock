@@ -2,24 +2,7 @@
 
 The catalog is a **fixed, sourced, AI-assisted editorial deck**. There is no runtime generation. `convex/deck/` holds one module per pack; `convex/content.ts` re-exports `seedPacks` and `seedCards`. Each card has a stable key, pack, category, original question, concise answer, and retained source title, URL, and editorial note.
 
-| Pack / category     |   Cards | Scope                                                                            |
-| ------------------- | ------: | -------------------------------------------------------------------------------- |
-| Odd words           |      27 | Uncommon vocabulary and explicitly historical senses                             |
-| Curious objects     |      27 | Tools, household vessels, printing equipment, and bathing or ceremonial objects  |
-| Wild nature         |      27 | Marine adaptations, animal behavior, biological materials, and ecosystems        |
-| Space oddities      |      27 | Spaceflight incidents, engineering, astronomical naming, and planetary phenomena |
-| Kitchen secrets     |      18 | Shocking culinary customs, eccentric historical dishes, and bizarre gastronomy   |
-| Bright ideas        |      18 | Eccentric patents, bizarre contraptions, and curious historical inventions       |
-| Living traditions   |      18 | Bizarre community celebrations, extraordinary festivals, and ancient customs      |
-| Remarkable places   |      18 | Bizarre towns, eccentric architecture, and extraordinary geographic anomalies     |
-| Working lives       |      18 | Historical trades, specialist labour, and bizarre vanished occupations           |
-| Art & music         |      18 | Shocking artworks, bizarre musical instruments, eccentric stunts, and pigments    |
-| The sea             |      18 | Winds, waves, hidden cataracts, and the names sailors gave them                  |
-| Lost gear           |      18 | Clothes, boats, and tools whose names outlived everyday use                      |
-| Rarer words         |      18 | More historical vocabulary whose everyday job has slipped out of sight           |
-| Uncanny laws        |      18 | Bizarre historical statutes, royal decrees, and peculiar legal codes             |
-| Folk beliefs        |      18 | Apotropaic charms, ritual protections, and bizarre historical superstitions      |
-| **Total**           | **306** | Fifty-one six-round games' worth of distinct cards; deal mixes categories        |
+The pack modules are the authoritative card-level record. **[content-index.md](content-index.md) lists every shipped card and the source consulted for it**; it is generated from the deck by `pnpm catalog`, so it cannot drift from the cards it documents, and `tests/content.test.ts` fails when it is stale. This document records the collection-level method and reuse basis, which no generator can derive.
 
 Answers are written below the game's 180-character bluff limit. The collection mixes definitions, purposes, mechanisms, and historical explanations rather than requiring exact dates or numerical estimates. Category counts describe this seed collection, not a promise about the game's random draw order. A live match prefers a category not yet used in that game.
 
@@ -27,7 +10,7 @@ The answer-bearing modules belong on the Convex side. Client code must not impor
 
 ## Research and editorial method
 
-Sources were retrieved and read on **2026-09-06–07**. Search results were used to locate material; a search summary alone was not accepted as a card's evidence. The collection uses individual historical dictionary entries, NOAA explanations, NASA/JPL mission and science accounts, and the primary/institutional sources listed below for the expansion. Failed or irrelevant candidate links were not used as card sources.
+Sources are retrieved and read before a card is written. Search results are used to locate material; a search summary alone is not accepted as a card's evidence. Failed or irrelevant candidate links are not used as card sources.
 
 1. Read the actual source passage supporting the answer, including the relevant sense, section, or caption.
 2. Draft a new question that permits plausible invented explanations without requiring the source's prose.
@@ -35,385 +18,35 @@ Sources were retrieved and read on **2026-09-06–07**. Search results were used
 4. Preserve qualifiers that affect truth: **some** sea cucumbers eject organs; **some locations** on Mercury have a reversing sunrise; only **some** Enceladus ejecta enters Saturn's ring.
 5. Supply context for polysemous words: the printing sense of _tympan_, the bodily sense of _wamble_, and the rope-splicing sense of _fid_, for example.
 6. Keep beliefs separate from science. _Tarantism_ records a historical spider-bite explanation; it does not endorse that explanation. Historical medical words and instruments are descriptions, not treatment recommendations.
-7. Retain the title, retrievable URL, and an editorial/source-location note on every card. The pack modules in `convex/deck/` are the authoritative card-level provenance index; this document records the collection-level method and reuse basis.
+7. Retain the title, retrievable URL, and an editorial/source-location note on every card.
 
 Questions and factual answers were drafted for Poppycock with AI assistance from retrieved source pages. They are Poppycock game text, not statements authored, reviewed, approved, or warranted by the cited institutions or publishers. No commercial Balderdash cards, commercial trivia decks, or collections of player bluffs were used. No illustrations, photographs, recordings, videos, website layouts, or agency logos are included in the card data.
 
-## Sources and reuse basis
+`pnpm sources` re-checks that every cited URL still resolves. Museum, encyclopedia, and journal hosts answer scripted requests with a challenge rather than the page, so the check reports those separately from genuinely missing citations.
 
-### Odd words and Curious objects: 54 cards
+## Reuse basis
 
-Twenty-seven cards in `Odd words` and seventeen cards in `Curious objects` draw from individual public-domain entries in [Webster's 1913](https://www.websters1913.com/) and [Project Gutenberg catalog ebook 29765](https://www.gutenberg.org/ebooks/29765) ([accessible text](https://www.gutenberg.org/ebooks/29765.txt.utf-8), [license explanation](https://www.gutenberg.org/policy/license.html)).
+**Publicly readable does not mean public domain.** Museum, university, botanical institution, UNESCO, inventor-profile and publisher prose may be copyrighted. This deck ships independently worded facts, not copied passages, and asserts no blanket reuse licence. Proper names, titles and short factual labels may necessarily coincide. Institutional images, captions as prose, audio, video, diagrams, scores and logos are not distributed. The distinction between an underlying principle or discovery and its protected written or illustrated expression is explained in the U.S. Copyright Office's [Circular 33](https://www.copyright.gov/circs/circ33.pdf).
 
-Ten cards in `Curious objects` draw from verified historical artifacts preserved by the Science Museum Group, the Fitzwilliam Museum (University of Cambridge), the Victoria and Albert Museum, Royal Museums Greenwich, National Museums Scotland, and BBC HistoryExtra:
+### Historical dictionaries and object records
 
-| Card                          | Source                                                                                                                                                                                            |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `object-puzzle-jug`           | [Victoria and Albert Museum — How was it made? A puzzle jug](https://www.vam.ac.uk/articles/how-was-it-made-a-puzzle-jug)                                                                        |
-| `object-ridged-poison-bottle` | [Science Museum Group Collection — Glass bottle used for tincture of belladonna, England, 1880-1900](https://collection.sciencemuseumgroup.org.uk/objects/co111769/glass-bottle-used-for-tincture-of-belladonna-england-1880-1900) |
-| `object-whaler-staybusk`      | [Royal Museums Greenwich — Staybusk from the Cyrus](https://www.rmg.co.uk/collections/objects/rmgc-object-210268)                                                                                 |
-| `object-posset-pot`           | [Victoria and Albert Museum — Posset Pot](https://collections.vam.ac.uk/item/O20991/posset-pot-unknown/)                                                                                         |
-| `object-antimonial-cup`       | [Science Museum Group Collection — Antimony cup, Europe, 1501-1700](https://collection.sciencemuseumgroup.org.uk/objects/co142080/antimony-cup-europe-1501-1700)                                |
-| `object-mortsafe`             | [National Museums Scotland — An unsolved mystery: The coffins found on Arthur's Seat](https://www.nms.ac.uk/discover-catalogue/the-coffins-found-on-arthurs-seat)                                 |
-| `object-lovers-eye`           | [Victoria and Albert Museum — Eye with a blue iris looking right](https://collections.vam.ac.uk/item/O1067699/eye-with-a-blue-iris-eye-miniature-unknown/)                                       |
-| `object-fuddling-cup`         | [The Fitzwilliam Museum (University of Cambridge) — Fuddling cups](https://data.fitzmuseum.cam.ac.uk/id/terminology/term-91176)                                                                  |
-| `object-bamboo-flea-trap`     | [Science Museum Group Collection — Bamboo flea trap, China, 1751-1850](https://collection.sciencemuseumgroup.org.uk/objects/co147562/bamboo-flea-trap-china-1751-1850)                         |
-| `object-drunkards-cloak`       | [BBC HistoryExtra — Q&A: what was a drunkard's cloak used for?](https://www.historyextra.com/period/stuart/medieval-punishments-what-was-drunkards-cloak/)                                     |
-The deck reuses or paraphrases the historical definitions and object records, not the modern hosts' site designs. Gutenberg links are scholarly acknowledgements only; no ebook, Gutenberg wrapper, or trademark asset is shipped.
-### Wild nature: 27 cards
+Vocabulary cards draw on individual public-domain entries in [Webster's 1913](https://www.websters1913.com/) and [Project Gutenberg catalog ebook 29765](https://www.gutenberg.org/ebooks/29765) ([accessible text](https://www.gutenberg.org/ebooks/29765.txt.utf-8), [license explanation](https://www.gutenberg.org/policy/license.html)), and on period slang glossaries by Grose and Hotten. Object cards draw on catalogue records from the Science Museum Group, the Victoria and Albert Museum, the British Museum, Royal Museums Greenwich, National Museums Scotland, the Fitzwilliam Museum, and comparable institutions. The deck reuses or paraphrases the historical definitions and object records, not the modern hosts' site designs. Gutenberg links are scholarly acknowledgements only; no ebook, Gutenberg wrapper, or trademark asset is shipped.
 
-Fifteen cards cite NOAA Ocean Exploration and National Ocean Service resources for marine biology, hydrothermal vents, deep-sea ecology, and geological formations. Twelve cards draw verified, extraordinary biological adaptations from peer-reviewed research documented by National Geographic, Smithsonian Magazine, New Scientist, and BBC:
+### Government science agencies
 
-| Card                          | Source                                                                                                                                                                                            |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `nature-horned-lizard-blood`  | [National Geographic — Short-Horned Lizard](https://www.nationalgeographic.com/animals/reptiles/facts/short-horned-lizard)                                                                      |
-| `nature-bombardier-beetle`    | [National Geographic — Bombardier beetles, facts and photos](https://www.nationalgeographic.com/animals/invertebrates/facts/bombardier-beetle)                                                    |
-| `nature-zombie-ant-fungus`    | [National Geographic — How a cordyceps fungus turns ants into 'zombies'](https://www.nationalgeographic.com/animals/article/cordyceps-zombie-fungus-takes-over-ants)                              |
-| `nature-sloth-moths`          | [Smithsonian NMNH — Seven Bizarre Moths to Celebrate National Moth Week](https://www.smithsonianmag.com/blogs/national-museum-of-natural-history/2021/07/20/seven-bizarre-moths-celebrate-national-moth-week/) |
-| `nature-archerfish-jets`      | [Smithsonian NMNH — Meet the Expert Studying Fishes That Spit Water to Hunt](https://www.smithsonianmag.com/blogs/national-museum-of-natural-history/2021/09/23/meet-the-expert-studying-fishes-that-spit-water-to-hunt/) |
-| `nature-mimic-octopus`        | [National Geographic — Mimic Octopus Facts](https://www.nationalgeographic.com/animals/invertebrates/facts/mimic-octopus)                                                                        |
-| `nature-cuckoo-catfish`       | [National Geographic — Cuckoo Catfish Force Others to Raise Their Young—in Their Mouths](https://www.nationalgeographic.com/animals/article/fish-parasites-cuckoo-catfish-cichlids-africa-news) |
-| `nature-horror-frog-claws`    | [New Scientist — 'Horror frog' breaks own bones to produce claws](https://www.newscientist.com/article/1909580-horror-frog-breaks-own-bones-to-produce-claws/)                                    |
-| `nature-pistol-shrimp-bubble` | [BBC Future — Why the US military is listening to shrimp](https://www.bbc.com/future/article/20220616-the-new-sonar-built-from-sealife-noises)                                                  |
-| `nature-immortal-jellyfish`   | [National Geographic — 'Immortal' Jellyfish Swarm World's Oceans](https://www.nationalgeographic.com/animals/article/immortal-jellyfish-swarm-oceans-animals)                                    |
-| `nature-lyrebird-mimicry`     | [BBC Travel — An Australian bird that mimics the sound of a chainsaw](https://www.bbc.com/travel/article/20140416-an-australian-bird-that-mimics-the-sound-of-a-chainsaw)                       |
-| `nature-hagfish-slime`        | [Smithsonian Magazine — If We Can Get Past the Ickiness, Hagfish Slime May Actually Be Useful to Us](https://www.smithsonianmag.com/innovation/if-we-can-get-past-ickiness-hagfish-slime-may-actually-be-useful-to-us-180962300/) |
+NOAA, USGS, the National Weather Service, the National Science Foundation and comparable agencies supply marine biology, geology, and atmospheric cards. Their reuse guidelines were followed: original discoveries are cited without copying proprietary imagery or narrative prose.
 
-The remaining fifteen nature cards draw from Emily Crum, NOAA Ocean Exploration, [“Wild and Bizarre Marine Life”](https://oceanexplorer.noaa.gov/explainers/marine-life/) and eleven National Ocean Service fact pages:
+### NASA and JPL
 
-- `nature-rimicaris-food` (bacteria grown on shrimp)
-- `nature-armored-searobin` (strolling on pectoral fin rays)
-- `nature-dandelion-siphonophore` (tethering to seafloor)
-- `nature-red-camouflage` (ambient red light invisibility)
-- [Are sea cucumbers vegetables?](https://oceanservice.noaa.gov/facts/seacuke.html) (`nature-sea-cucumber-defense`)
-- [What is a glass sponge?](https://oceanservice.noaa.gov/facts/glass-sponge.html) (`nature-venus-flower-basket`)
-- [How does sand form?](https://oceanservice.noaa.gov/facts/sand.html) (`nature-parrotfish-sand`)
-- [The vampire squid and the vampire fish](https://oceanservice.noaa.gov/facts/vampire-squid-fish.html) (`nature-vampire-squid-defense`)
-- [What is a Portuguese Man o' War?](https://oceanservice.noaa.gov/facts/portuguese-man-o-war.html) (`nature-man-o-war-colony`)
-- [What is a platypus?](https://oceanservice.noaa.gov/facts/platypus.html) (`nature-platypus-gravel`)
-- [Are horseshoe crabs really crabs?](https://oceanservice.noaa.gov/facts/horseshoe-crab.html) (`nature-horseshoe-crab-blood`)
-- [What makes the green turtle...green?](https://oceanservice.noaa.gov/facts/green-turtle.html) (`nature-green-turtle-name`)
-- [How long do Greenland sharks live?](https://oceanservice.noaa.gov/facts/greenland-shark.html) (`nature-greenland-shark-age`)
-- [What are coquina and tabby?](https://oceanservice.noaa.gov/facts/coquina-tabby.html) (`nature-coquina`)
-- [What is marine snow?](https://oceanservice.noaa.gov/facts/marinesnow.html) (`nature-marine-snow`)
-All cards are original factual paraphrases. NOAA's and institutional reuse guidelines were followed, citing original discoveries without copying proprietary imagery or narrative prose.
-### NASA and JPL: 28 cards
+NASA's [content-use guidance](https://www.nasa.gov/nasa-brand-center/images-and-media/) describes the general U.S. reuse status of NASA content while preserving restrictions on third-party material, branding, endorsement, and identifiable people in promotional material. Source links are factual disclosure only; no NASA review or endorsement is implied, and NASA is not responsible for the accuracy of these AI-assisted game formulations.
 
-Twenty-seven cards belong to Space oddities, combining human spaceflight missions, engineering hazards, planetary anomalies, and astronomical naming history:
+JPL is managed by the California Institute of Technology; **do not assume that every JPL article or asset is public domain merely because its URL ends in nasa.gov**. Mission-operator pages are used as evidence for independently worded facts. No license to republish their prose, photographs, or graphics is asserted or needed.
 
-| Card                          | Source                                                                                                                                                             |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `space-gemini-sandwich`       | Jennifer Ross-Nazzal, [Fallout from the Unauthorized Gemini III Space Sandwich](https://www.nasa.gov/history/fallout-from-the-unauthorized-gemini-iii-space-sandwich/)            |
-| `space-apollo-golf-tool`      | John Uri, [50 Years Ago: Apollo 14 Lands at Fra Mauro](https://www.nasa.gov/history/50-years-ago-apollo-14-lands-at-fra-mauro/)                                                   |
-| `space-salyut-7-frozen`       | [NASA SP-4225 — Mir Hardware Heritage: Salyut 7 Principal Expedition 4](https://www.nasa.gov/wp-content/uploads/static/history/SP-4225/documentation/mhh/mirheritage.pdf)        |
-| `space-gemini-music`          | [55 Years Ago: The Spirit of 76 — The First Rendezvous in Space](https://www.nasa.gov/history/55-years-ago-the-spirit-of-76-the-first-rendezvous-in-space/)                       |
-| `space-curiosity-wheel-code`  | JPL, [Rover Leaves Tracks in Morse Code](https://www.jpl.nasa.gov/news/rover-leaves-tracks-in-morse-code/)                                                                        |
-| `space-moon-trees`            | [Moon Trees](https://www.nasa.gov/history/moon-trees/), Apollo 14 section                                                                                           |
-| `space-soviet-shotgun`        | [BBC News — Sent into space: Guns, a lamb chop and sea urchin sperm](https://www.bbc.com/news/uk-england-34964686)                                                                 |
-| `space-scent-of-space`        | [BBC Future — From cat urine to gunpowder: Exploring the peculiar smells of outer space](https://www.bbc.com/future/article/20250522-what-does-outer-space-smell-like)           |
-| `space-aldrin-communion`      | [BBC News — Sent into space: Guns, a lamb chop and sea urchin sperm](https://www.bbc.com/news/uk-england-34964686)                                                                 |
-| `space-south-atlantic-anomaly`| [NASA — Seeing Cosmic Rays in Space](https://www.nasa.gov/wp-content/uploads/2021/11/seeingcosmicraysinspace.pdf)                                                                 |
-| `space-pencil-graphite-hazard`| [Scientific American — Fact or Fiction?: NASA Spent Millions to Develop a Pen](https://www.scientificamerican.com/article/fact-or-fiction-nasa-spen/)                             |
-| `space-apollo-12-lightning`   | [NASA — Apollo 12 Spacecraft Commentary](https://www.nasa.gov/wp-content/uploads/2026/01/as12-cm.pdf?emrc=dabf2a)                                                                  |
-| `space-parmitano-water-leak`  | [NASA Technical Reports Server (NTRS) — ISS EVA 23 Lessons Learned](https://ntrs.nasa.gov/citations/20230002544)                                                                 |
-| `space-shoemaker-moon-burial` | [NASA Science — Lunar Prospector](https://science.nasa.gov/mission/lunar-prospector/)                                                                                             |
-| `space-voyager-love-brainwaves`| [NASA JPL — Voyager Set to Enter Interstellar Space](https://www.jpl.nasa.gov/news/voyager-set-to-enter-interstellar-space/)                                                       |
+The separately copyrighted Apollo Lunar Surface Journal was encountered during research, but its transcript and commentary are neither reproduced nor relied on as a cited source. The hammer-feather card cites NASA's own summary and science-report reference.
 
-The remaining twelve space cards use these directly retrieved NASA Science pages:
+### Evidence, not permission
 
-| Source                                                             | Cards and supporting sections                                                                          |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| [Mercury Facts](https://science.nasa.gov/mercury/facts/)           | 2: reversing sunrise (Orbit and Rotation); crater names (Surface)                                      |
-| [Venus Facts](https://science.nasa.gov/venus/venus-facts/)         | 2: Zoozve naming history; full rotation versus orbital period                                          |
-| [Uranus Facts](https://science.nasa.gov/uranus/facts/)             | 2: literary moon names (Moons); long polar winter (Orbit and Rotation)                                 |
-| [Triton](https://science.nasa.gov/neptune/moons/triton/)           | 1: retrograde orbit (Overview)                                                                         |
-| [Titan Facts](https://science.nasa.gov/saturn/moons/titan/facts/)  | 2: hydrocarbon lakes; organic dune grains (Introduction, Surface, Atmosphere)                          |
-| [Enceladus](https://science.nasa.gov/saturn/moons/enceladus/)      | 1: jets supplying Saturn's E ring (Overview)                                                           |
-| [Io](https://science.nasa.gov/jupiter/jupiter-moons/io/)           | 1: volcanism erasing impact craters (opening explanation)                                              |
-| [Pluto Facts](https://science.nasa.gov/dwarf-planets/pluto/facts/) | 1: Venetia Burney's name suggestion                                                                    |
-These are original factual summaries, not copied article passages. NASA's [content-use guidance](https://www.nasa.gov/nasa-brand-center/images-and-media/) describes the general U.S. reuse status of NASA content while preserving restrictions on third-party material, branding, endorsement, and identifiable people in promotional material. Source links are factual disclosure only; no NASA review or endorsement is implied. NASA is not responsible for the accuracy of these AI-assisted game formulations.
-
-JPL is managed by the California Institute of Technology; **do not assume that every JPL article or asset is public domain merely because its URL ends in nasa.gov**. The Curiosity card uses the mission operator's primary engineering account as evidence for an independently worded fact. No license to republish its prose, photographs, or graphics is asserted or needed for this collection. The distinction between an underlying principle/discovery and its protected written or illustrated expression is explained in the U.S. Copyright Office's [Circular 33](https://www.copyright.gov/circs/circ33.pdf).
-
-The separately copyrighted Apollo Lunar Surface Journal was encountered during research, but its transcript/commentary is neither reproduced nor relied on as the final hammer-feather card's cited source. The final card cites NASA's own summary and science-report reference.
-
-### Expansion sources: 108 added cards
-
-The expansion appends 108 new stable keys without changing or deleting any of the prior 108 cards. Every added question and answer is newly drafted factual game wording, with an exact source URL/title and a scoped paraphrase note retained in the server-side array. All added answers are at most 100 characters, comfortably below the 180-character submission limit. Sources and cards appear below in category order; these are a card-level index, not additional totals to add to the institutional counts above.
-
-Publicly readable does not mean public domain. Museum, university, botanical institution, UNESCO, inventor-profile and publisher prose may be copyrighted; this deck uses independently worded facts, not copied passages or an asserted blanket reuse licence. Proper names, titles and short factual labels may necessarily coincide. In particular, the UNESCO film catalogue is evidence, not permission to reuse an audiovisual work; the John Cage Trust page is evidence about a technique, not permission to reuse a composition or sound recording. Institutional images, captions as prose, audio, video, diagrams, scores and logos are not distributed. The underlying fact/protected expression distinction is the same one discussed in Copyright Office Circular 33 above. No source institution has reviewed or endorsed these AI-assisted cards.
-
-#### Kitchen secrets — 18 cards
-
-Eighteen cards covering shocking culinary traditions, eccentric historical dishes, and bizarre gastronomy. Every single card has been checked against primary or established institutional sources (FDA regulations, Kew Gardens, Smithsonian, National Geographic, BBC News, NBC News, and Nature Scientific Reports).
-
-| Key                          | Source                                                                                                                                                                                                    |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `food-salep-orchids`         | [Kew — From pods to puddings: Vanilla and other sweet-tasting orchids](https://www.kew.org/read-and-watch/vanilla-digitisation)                                                                         |
-| `food-toast-sandwich`        | [BBC News — The toast sandwich and other hyper-cheap meals](https://www.bbc.com/news/magazine-15760897)                                                                                                  |
-| `food-chicha-saliva-chew`   | [National Geographic — We Are What We Eat: Foraging in the Amazon Rainforest](https://www.nationalgeographic.com/photography/article/we-are-what-we-eat-foraging-in-the-amazon-rainforest)              |
-| `food-ortolan-napkin`        | [Smithsonian Magazine — Ortolans, Songbirds Enjoyed as French Delicacy](https://www.smithsonianmag.com/smart-news/ortolans-birds-enjoyed-french-delicacy-are-being-eaten-extinction-180972272/)         |
-| `food-roman-garum`           | [National Geographic — Funky Fish Guts Were the Ketchup of Ancient Rome](https://www.nationalgeographic.com/history/history-magazine/article/what-is-garum-rome-fish-sauce)                           |
-| `food-turnspit-dog`          | [NPR — Turnspit Dogs: The Rise And Fall Of The Vernepator Cur](https://www.npr.org/sections/thesalt/2014/05/13/311127237/turnspit-dogs-the-rise-and-fall-of-the-vernepator-cur)                        |
-| `food-mock-turtle-head`      | [Atlas Obscura — How America Fell Into—and Out of—Love With Mock Turtle Soup](https://www.atlasobscura.com/articles/mock-turtle-soup-rise-and-fall-calf-head)                                           |
-| `food-casu-marzu`            | [CNN Travel — Casu marzu: The world’s ‘most dangerous’ cheese](https://www.cnn.com/travel/article/casu-marzu-worlds-most-dangerous-cheese)                                                               |
-| `food-greenland-kiviak`      | [National Geographic — Greenland is one of the last places on Earth to explore ancient Arctic life](https://www.nationalgeographic.com/travel/article/greenland-last-place-explore-ancient-arctic-life) |
-| `food-scandinavian-lutefisk` | [Smithsonian Magazine — Scandinavians’ Strange Holiday Lutefisk Tradition](https://www.smithsonianmag.com/travel/scandinavians-strange-holiday-lutefisk-tradition-2218218/)                             |
-| `food-icelandic-hakarl`      | [Atlas Obscura — Hákarl](https://www.atlasobscura.com/foods/hakarl-shark-iceland)                                                                                                                        |
-| `food-virgin-boy-eggs`       | [NBC News — Urine-soaked 'virgin boy eggs' are a springtime taste treat in China](https://www.nbcnews.com/news/world/urine-soaked-virgin-boy-eggs-are-springtime-taste-treat-china-flna593952)          |
-| `food-kopi-luwak`            | [National Geographic — The Disturbing Secret Behind the World’s Most Expensive Coffee](https://www.nationalgeographic.com/animals/article/160429-kopi-luwak-captive-civet-coffee-Indonesia)            |
-| `food-carmine-scale-insects` | [FDA 21 CFR § 73.100 — Cochineal extract; carmine](https://www.law.cornell.edu/cfr/text/21/73.100)                                                                                                       |
-| `food-jamon-iberico-acorns`  | [BBC Travel — The world’s most expensive ham](https://www.bbc.com/travel/article/20181114-the-worlds-most-expensive-ham)                                                                               |
-| `food-swiftlet-saliva-nest`  | [Atlas Obscura — Bird's Nest Soup](https://www.atlasobscura.com/foods/birds-nest-soup)                                                                                                                    |
-| `food-miracle-fruit-sour`    | [Scientific Reports — Intracellular acidification is required for full activation of sweet receptor by miraculin](https://www.nature.com/articles/srep22807)                                            |
-| `food-beaver-castoreum`      | [Smithsonian Magazine — Does Vanilla Flavoring Actually Come From Beaver Butts?](https://www.smithsonianmag.com/smart-news/does-vanilla-flavoring-actually-come-from-beaver-butts-180983288/)            |
-#### Bright ideas — 18 cards
-
-Eighteen verified historical patents, bizarre contraptions, and curious inventions with high generative ambiguity and surprising, memorable reveals. Each card is verified against an official patent grant or authoritative historical publication.
-
-| Key                          | Source                                                                                                                                                                          |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `idea-saluting-device`       | [US Patent 556,248 — Saluting Device](https://patents.google.com/patent/US556248A/en)                                                                                           |
-| `idea-chicken-goggles`       | [US Patent 730,918 — Eye-protector for chickens](https://patents.google.com/patent/US730918A/en)                                                                                 |
-| `idea-dimple-maker`          | [US Patent 2,091,276 — Dimple making appliance](https://patents.google.com/patent/US2091276A/en)                                                                                |
-| `idea-anti-eating-mask`      | [US Patent 4,344,424 — Anti-eating face mask](https://patents.google.com/patent/US4344424A/en)                                                                                   |
-| `idea-motorized-ice-cream-cone`| [US Patent 5,971,829 — Motorized ice cream cone](https://patents.google.com/patent/US5971829A/en)                                                                               |
-| `idea-alarm-bed`             | [The Victorian Web — The Great Exhibition of 1851](https://victorianweb.org/history/1851/wenham.html)                                                                           |
-| `idea-cat-meow-machine`      | [BBC Science Focus — 15 of the world's weirdest-ever inventions](https://www.sciencefocus.com/science/the-weirdest-inventions-ever-in-pictures-2)                                    |
-| `idea-oppenheimer-fire-escape`| [US Patent 221,855 — Improvement in fire-escapes](https://patents.google.com/patent/US221855A/en)                                                                               |
-| `idea-cat-laser-exercise`    | [US Patent 5,443,036 — Method of exercising a cat](https://patents.google.com/patent/US5443036A/en)                                                                             |
-| `idea-revolver-camera`       | [PetaPixel — Revolver Camera That Shot Bullets and Photos at the Same Time](https://petapixel.com/2011/05/19/revolver-camera-shoots-bullets-and-photos-at-the-same-time/)        |
-| `idea-baby-cage`             | [US Patent 1,448,235 — Portable baby cage](https://patents.google.com/patent/US1448235A/en)                                                                                     |
-| `idea-kissing-shield`        | [US Patent 5,727,565 — Kissing shield](https://patents.google.com/patent/US5727565A/en)                                                                                         |
-| `idea-swing-patent`          | [US Patent 6,368,227 — Method of swinging on a swing](https://patents.google.com/patent/US6368227B1/en)                                                                         |
-| `idea-bird-diaper`           | [US Patent 5,934,226 — Bird diaper](https://patents.google.com/patent/US5934226A/en)                                                                                           |
-| `idea-centrifugal-birth`     | [US Patent 3,216,423 — Apparatus for facilitating the birth of a child by centrifugal force](https://patents.google.com/patent/US3216423A/en)                                   |
-| `idea-goodyear-glowing-tires` | [Hagerty Media — Why Goodyear’s bright idea for illuminated tires didn’t shine for long](https://www.hagerty.com/media/automotive-history/why-goodyears-bright-idea-for-illuminated-tires-didnt-shine-for-long/) |
-| `idea-krummlauf-curved-barrel`| [Popular Mechanics — Forgotten Weapons: The Nazis' Desperate Attempts to Curve a Bullet](https://www.popularmechanics.com/military/weapons/a21800/forgotten-weapons-wwii-curve-a-bullet/) |
-| `idea-high-five-machine`     | [US Patent 5,356,330 — Apparatus for simulating a 'high five'](https://patents.google.com/patent/US5356330A/en)                                                                 |
-#### Living traditions — 18 cards
-
-Eighteen cards covering extraordinary community celebrations, bizarre traditional contests, and living cultural practices. Every card is checked against full-text source retrieval from major archives and journalism (BBC News, BBC Travel, National Geographic, The Guardian, and UNESCO Multimedia Archives).
-
-| Card                       | Consulted source                                                                                                                                                                        |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `custom-cheese-rolling`    | [BBC News — Cooper's Hill cheese rolling: origins, myths and history](https://www.bbc.com/news/articles/cz024gnm9z4o)                                                                  |
-| `custom-el-colacho-baby-jump` | [National Geographic — Look Inside Spain’s Unusual Baby Jumping Festival](https://www.nationalgeographic.com/culture/article/el-colacho-baby-jumping-festival-murcia-spain)         |
-| `custom-wife-carrying-beer`| [BBC Travel — Finland’s swamp soccer and sauna endurance](https://www.bbc.com/travel/article/20110620-finlands-swamp-soccer-and-sauna-endurance)                                       |
-| `custom-monkey-buffet`     | [The Guardian — No more monkey business: Thai city’s macaques to be put in enclosures](https://www.theguardian.com/world/2024/apr/05/no-more-monkey-business-thai-lopburi-macaques-to-be-rounded-up-and-put-in-enclosures) |
-| `custom-la-tomatina-pole-ham` | [BBC Travel — Spain's La Tomatina festival](https://www.bbc.com/travel/article/20100816-spains-la-tomatina-festival)                                                                |
-| `custom-ivrea-orange-battle`| [BBC Travel — The Italian city where life is sweetest in winter](https://www.bbc.com/travel/article/20260130-the-italian-city-where-life-is-sweetest-in-winter)                       |
-| `custom-up-helly-aa-galley`| [BBC News — Famous Up Helly Aa festival sets Shetland's skies ablaze](https://www.bbc.com/news/articles/cy8p2rjeyveo)                                                                  |
-| `custom-ottery-tar-barrels`| [BBC News — Ottery St Mary Tar Barrels 2025: Everything you need to know](https://www.bbc.com/news/articles/c5y4g23x7pzo)                                                             |
-| `custom-nakizumo-crying-baby` | [The Guardian — The Nakizumo crying baby festival in Tokyo – in pictures](https://www.theguardian.com/world/gallery/2013/apr/29/crying-baby-festival-tokyo-pictures)                  |
-| `custom-catalan-human-towers` | [BBC Travel — Human pyramids in Catalonia](https://www.bbc.com/travel/article/20120614-human-pyramids-in-catalonia)                                                                   |
-| `custom-silbo-speech`      | [UNESCO Multimedia Archives — Whistled Language of the Island of La Gomera (Canary Islands), the Silbo Gomero](https://www.unesco.org/archives/multimedia/document-370)                 |
-| `custom-bridge-straw`      | [UNESCO Multimedia Archives — Knowledge, Skills and Rituals Related to the Annual Renewal of the Q’eswachaka Bridge](https://www.unesco.org/archives/multimedia/document-3540)          |
-| `custom-shrimp-horses`     | [UNESCO Multimedia Archives — Shrimp Fishing on Horseback in Oostduinkerke](https://www.unesco.org/archives/multimedia/document-3534)                                                   |
-| `custom-namur-jousting`    | [UNESCO Multimedia Archives — Namur Stilt Jousting](https://www.unesco.org/archives/multimedia/document-5780)                                                                           |
-| `custom-takanakuy-fistfights` | [BBC News — Peru stages Christmas Day fighting festival](https://www.bbc.com/news/av/world-latin-america-12084478)                                                                        |
-| `custom-egremont-gurning`    | [BBC News — Tommy Mattinson retains Egremont Crab Fair gurning crown](https://www.bbc.co.uk/news/uk-england-cumbria-29301914)                                                           |
-| `custom-wrestling-kispet`  | [UNESCO Multimedia Archives — Kirkpinar oil Wrestling Festival](https://www.unesco.org/archives/multimedia/document-1686)                                                               |
-| `custom-camel-coaxing`     | [UNESCO Multimedia Archives — The Mongolian Traditional Coaxins Rituals for Baby Animals: The Special Case of the Baby Camel](https://www.unesco.org/archives/multimedia/document-4021) |
-#### Remarkable places — 18 cards
-
-Eighteen cards covering extraordinary towns, eccentric architectural oddities, and bizarre geographic anomalies. Sourced from authoritative archives and journalism including Smithsonian Magazine, BBC Travel, National Geographic, NPR, and the Crop Trust.
-
-| Key                           | Source                                                                                                                                                                                                                 |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `place-centralia-mine-fire`   | [USGS Fact Sheet 2009–3084 — Emissions from Coal Fires](https://pubs.usgs.gov/fs/2009/3084/pdf/fs2009-3084.pdf)                                                                                                      |
-| `place-coober-pedy-underground`| [BBC Future — The Australian town where people live underground](https://www.bbc.com/future/article/20230803-the-town-where-people-live-underground)                                                                |
-| `place-whittier-single-building`| [NPR — Welcome To Whittier, Alaska, A Community Under One Roof](https://www.npr.org/2015/01/18/378162264/welcome-to-whittier-alaska-a-community-under-one-roof)                                                      |
-| `place-lake-maracaibo-lightning`| [NASA — Earth's New Lightning Capital Revealed](https://www.nasa.gov/missions/trmm/earths-new-lightning-capital-revealed/)                                                             |
-| `place-winchester-mystery-house`| [Smithsonian Magazine — The Heiress to a Gun Empire Built a Mansion](https://www.smithsonianmag.com/history/heiress-gun-empire-built-mansion-forever-haunted-blood-money-built-it-180959712/)                        |
-| `place-colma-cemetery-city`   | [Atlas Obscura — Colma Necropolis in Daly City](https://www.atlasobscura.com/places/colma-necropolis)                                                                                                                 |
-| `place-derinkuyu-basement`    | [BBC Travel — Turkey's underground city of 20,000 people](https://www.bbc.com/travel/article/20220810-derinkuyu-turkeys-underground-city-of-20000-people)                                                            |
-| `place-longyearbyen-coffin-burials`| [Visit Svalbard — Frequently Asked Questions](https://en.visitsvalbard.com/visitor-information/faq)                                                                                                                |
-| `place-baarle-border-line`    | [BBC Travel — Europe's strange border anomaly](https://www.bbc.com/travel/article/20171210-europes-strange-border-anomaly)                                                                                              |
-| `place-snake-island-forbidden`| [Smithsonian Magazine — This Terrifying Brazilian Island Has Highest Concentration of Venomous Snakes](https://www.smithsonianmag.com/science-nature/snake-infested-island-deadliest-place-brazil-180951782/)         |
-| `place-monowi-population-one` | [BBC Travel — Welcome to Monowi, Nebraska: population 1](https://www.bbc.com/travel/article/20180129-welcome-to-monowi-nebraska-population-1)                                                                         |
-| `place-sealand-sea-fort`      | [BBC News — The off-shore fort 'state' of Sealand marks 50 years](https://www.bbc.com/news/uk-england-suffolk-41135081)                                                                                                |
-| `place-paris-catacombs-bones` | [Smithsonian Magazine — Beneath Paris' City Streets, There's an Empire of Death](https://www.smithsonianmag.com/travel/paris-catacombs-180950160/)                                                                    |
-| `place-hashima-battleship-island`| [UNESCO World Heritage Centre — Sites of Japan’s Meiji Industrial Revolution (Hashima Coal Mine)](https://whc.unesco.org/en/list/1484/)                                                                               |
-| `place-lake-titicaca-uros-reeds`| [BBC Travel — The floating homes of Lake Titicaca](https://www.bbc.com/travel/article/20220814-the-floating-homes-of-lake-titicaca)                                                                                   |
-| `place-boiling-river-amazon`  | [National Geographic — Episode 13: Solving the mystery of the boiling river](https://www.nationalgeographic.com/podcasts/article/episode-13-solving-the-mystery-of-the-boiling-river)                                |
-| `place-cretto-di-burri`       | [Atlas Obscura — Cretto di Burri in Gibellina Vecchia](https://www.atlasobscura.com/places/cretto-di-gibellina)                                                                                                        |
-| `place-bishop-castle`         | [Atlas Obscura — Bishop Castle in Rye, Colorado](https://www.atlasobscura.com/places/bishop-castle)                                                                                                                    |
-
-#### Working lives — 18 cards
-
-Eighteen cards covering extraordinary historical trades, specialist artisanal skills, and bizarre vanished occupations. Every card is checked against full-text source retrieval from major institutions (BBC News, Tufts Digital Library / Henry Mayhew, National Churches Trust, Science Museum Group, Smithsonian Magazine, Royal College of Surgeons, Historic Royal Palaces, National Park Service, Imperial War Museums, Sunny Bank Mills, Colonial Williamsburg, and London Museum).
-
-| Card                       | Consulted source                                                                                                                                                                             |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `work-knocker-upper`       | [BBC News — Knocker uppers: Waking up the workers in industrial Britain](https://www.bbc.com/news/uk-england-35840393)                                                                     |
-| `work-pure-finder`         | [Tufts Digital Library — Mayhew's London Labour and the London Poor: Of the 'Pure'-Finders](https://dl.tufts.edu/teiviewer/parent/rv043431c/chapter/c6s3)                                  |
-| `work-sewer-tosher`        | [Tufts Digital Library — Mayhew's London Labour and the London Poor: Of the Sewer-Hunters](https://dl.tufts.edu/teiviewer/parent/rv043431c/chapter/c6s7)                                  |
-| `work-church-dog-tongs`    | [National Churches Trust — Cyfylliog St Mary (Dog Tongs)](https://www.nationalchurchestrust.org/church/st-mary-cyfylliog)                                                                   |
-| `work-leech-collector`     | [Science Museum — Blood: Leeches and Leech Collectors](https://www.sciencemuseum.org.uk/objects-and-stories/medicine/blood)                                                                |
-| `work-ice-harvester`       | [Smithsonian Magazine — Chilly Reception](https://www.smithsonianmag.com/history/chilly-reception-66099329/)                                                                               |
-| `work-resurrectionists-graves` | [Royal College of Surgeons — Diary of a resurrectionist: The unique record of a frightening trade](https://www.rcseng.ac.uk/library-and-publications/library/blog/diary-of-a-resurrectionist/) |
-| `work-gong-farmer`          | [Historic Royal Palaces — Tudor world brought to life in new display at Hampton Court Palace](https://www.hrp.org.uk/media-and-press/press-releases-2024/tudor-world-brought-to-life-in-new-display-at-hampton-court-palace/) |
-| `work-cigar-lector`         | [National Park Service — American Latino Theme Study: Media](https://www.nps.gov/articles/latinothemestudymedia.htm)                                                                           |
-| `work-mush-faker`           | [London Museum — Street life & work in 1877](https://www.londonmuseum.org.uk/collections/london-stories/street-life-work-1877-john-thomson/)                                                  |
-| `work-aircraft-listeners`   | [Imperial War Museums — Locator, Sound No1 Mark 1](https://www.iwm.org.uk/collections/item/object/30028540)                                                                                   |
-| `work-tazzle-men`           | [Sunny Bank Mills — Teazles](https://www.sunnybankmills.co.uk/our-story/blog/teazles-dan-sykes-museum-archive-assistant/)                                                                      |
-| `work-cooper-sound`         | [Colonial Williamsburg — Making Circles](https://research.colonialwilliamsburg.org/Foundation/journal/Autumn03/cooper.cfm)                                                                     |
-| `work-wigmaker-baking`      | [Colonial Williamsburg — Lies My Docent Told Me](https://research.colonialwilliamsburg.org/Foundation/journal/Autumn10/myths.cfm)                                                              |
-| `work-greenwich-time-lady` | [Royal Museums Greenwich — The Greenwich Time Lady: Ruth Belville](https://www.rmg.co.uk/stories/time/greenwich-time-lady-ruth-belville)                                                    |
-| `work-canary-resuscitator` | [Science Museum Group Collection — Cage for reviving canary](https://collection.sciencemuseumgroup.org.uk/objects/co8412250/cage-for-reviving-canary)                                     |
-| `work-bowling-pinboy`      | [Library of Congress — Pin boys working in Subway Bowling Alleys, 1910](https://www.loc.gov/pictures/item/2018674610/)                                                                     |
-| `work-theatre-claqueur`    | [Encyclopedia Britannica — Claque](https://www.britannica.com/art/claque)                                                                                                                   |
-
-#### Art & music — 18 cards
-
-Eighteen cards covering extraordinary artworks, bizarre musical instruments, eccentric performances, and historical pigments. Every single card is verified against primary museum collections and authoritative arts journalism (Smithsonian Magazine, Atlas Obscura, Centre Pompidou, Tate Research, Science Museum Group, The Franklin Institute, Dia Art Foundation, Artangel, RIBA, and The Guardian).
-
-| Card                       | Consulted source                                                                                                                                                                             |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `art-mummy-brown`          | [Smithsonian Magazine — Ground Up Mummies Were Once an Ingredient in Paint](https://www.smithsonianmag.com/smart-news/ground-mummies-were-once-ingredient-paint-180950350/)                 |
-| `art-stalacpipe-organ`     | [Atlas Obscura — The Great Stalacpipe Organ in Luray](https://www.atlasobscura.com/places/the-great-stalacpipe-organ-luray-virginia)                                                       |
-| `art-zadar-sea-organ`      | [Atlas Obscura — Sea Organ in Zadar](https://www.atlasobscura.com/places/sea-organ)                                                                                                         |
-| `art-museum-bad-art`       | [Smithsonian Magazine — Why Is Some Art So Bad That It’s Good?](https://www.smithsonianmag.com/arts-culture/why-is-some-art-so-bad-its-good-180967878/)                                      |
-| `art-cattelan-banana`      | [Smithsonian Magazine — That Viral Banana Duct-Taped to a Wall? It Just Sold for $6.2 Million](https://www.smithsonianmag.com/smart-news/that-viral-banana-duct-taped-to-a-wall-it-just-sold-for-6-2-million-180985523/) |
-| `art-maillardet-automaton`  | [The Franklin Institute — Maillardet's Automaton](https://fi.edu/en/science-and-education/collection/maillardets-automaton)                                                                |
-| `art-yves-klein-void`      | [Centre Pompidou — Yves Klein, Chèque (1959)](https://www.centrepompidou.fr/en/ressources/oeuvre/cMedK9X)                                                                                  |
-| `art-russolo-intonarumori` | [Tate Research — A Transformative Exhibition: Historiography of the Processes of Production](https://www.tate.org.uk/research/in-focus/abstract-kinetic-collage-painting-sound/transformative-exhibition) |
-| `art-kastner-pyrophone`    | [Science Museum Group — Kastner's Pyrophone, 1873-1876](https://collection.sciencemuseumgroup.org.uk/objects/co5867/kastners-pyrophone-1873-1876)                                         |
-| `art-de-maria-lightning`   | [Dia Art Foundation — Walter De Maria, The Lightning Field](https://www.diaart.org/visit/visit-our-locations-sites/walter-de-maria-the-lightning-field)                                    |
-| `art-hugo-ball-costume`    | [Tate Research — Behold the Buffoon: Dada, Nietzsche's Ecce Homo and the Sublime](https://www.tate.org.uk/art/research-publications/the-sublime/christine-battersby-behold-the-buffoon-dada-nietzsches-ecce-homo-and-the-sublime-r1136833) |
-| `art-longplayer-millennium`| [Artangel — Longplayer](https://www.artangel.org.uk/project/longplayer/)                                                                                                                    |
-| `art-semple-pinkest-pink` | [BBC News — 'Whitest ever' paint reflects 98% of sunlight](https://www.bbc.co.uk/news/science-environment-56749105)                                                                         |
-| `art-octobass-frequency`   | [Atlas Obscura — Octobass in Phoenix](https://www.atlasobscura.com/places/octobass)                                                                                                          |
-| `art-le-petomane-pujol`    | [The Guardian — Fart history? Joseph Pujol trumps them all](https://www.theguardian.com/culture/2021/aug/20/fart-history-joseph-pujol-trumps-them-all)                                    |
-| `art-glass-harmonica`      | [Science Museum Group — Glass Harmonica](https://collection.sciencemuseumgroup.org.uk/objects/co5862/glass-harmonica)                                                                       |
-| `art-hurdy-gurdy-wheel`    | [Smithsonian Music — Hurdy-gurdy](https://music.si.edu/object-day/hurdy-gurdy)                                                                                                              |
-| `art-smalt-glass`          | [National Gallery — Smalt](https://www.nationalgallery.org.uk/paintings/glossary/smalt)                                                                                                     |
-
-#### The sea — 18 cards
-
-Eighteen cards covering maritime phenomena, navigational hazards, oceanographic anomalies, and naval traditions. Each card is verified against primary scientific and museum resources (NOAA, NASA Earth Observatory, European Space Agency, National Weather Service, National Park Service, Natural History Museum London, Royal Museums Greenwich, Scientific American, Smithsonian Magazine, and BBC News).
-
-| Card                       | Consulted source                                                                                                                                                                             |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `sea-whale-fall`          | [NOAA National Ocean Service — What is a whale fall?](https://oceanservice.noaa.gov/facts/whale-fall.html)                                                                                |
-| `sea-horse-latitudes`      | [NOAA National Ocean Service — What are the horse latitudes?](https://oceanservice.noaa.gov/facts/horse-latitudes.html)                                                                      |
-| `sea-titanic-rusticles`    | [NOAA Ocean Exploration — Rusticles](https://oceanexplorer.noaa.gov/multimedia/daily-image-media-20201014/)                                                                                 |
-| `sea-point-nemo`           | [NOAA National Ocean Service — Where is Point Nemo?](https://oceanservice.noaa.gov/facts/nemo.html)                                                                                          |
-| `sea-brinicle`             | [Scientific American — How Eerie Sea-Ice 'Brinicles' Form](https://www.scientificamerican.com/article/how-sea-ice-brinicles-form/)                                                          |
-| `sea-line-crossing`        | [Royal Museums Greenwich — Crossing the line](https://www.rmg.co.uk/stories/ocean/curatorial/crossing-line)                                                                                 |
-| `sea-milky-seas`           | [NASA Science — Hunting Milky Seas by Satellite](https://science.nasa.gov/earth/earth-observatory/hunting-milky-seas-by-satellite-149017/)                                                   |
-| `sea-the-bloop`            | [NOAA National Ocean Service — What is the bloop?](https://oceanservice.noaa.gov/facts/bloop.html)                                                                                          |
-| `sea-denmark-strait-fall`  | [NOAA National Ocean Service — Where is Earth's Largest Waterfall?](https://oceanservice.noaa.gov/facts/largest-waterfall.html)                                                              |
-| `sea-brine-pool`           | [NOAA Ocean Exploration — Brine Pool](https://oceanexplorer.noaa.gov/multimedia/daily-image-media-20200720/)                                                                                |
-| `sea-cross-sea`            | [European Space Agency — Cross seas](https://www.esa.int/ESA_Multimedia/Images/2011/06/Cross_seas)                                                                                           |
-| `sea-sargasso-eels`        | [BBC News — Ancient eel migration mystery unravelled](https://www.bbc.com/news/science-environment-63259738)                                                                                |
-| `sea-ambergris`            | [Natural History Museum London — What is ambergris?](https://www.nhm.ac.uk/discover/what-is-ambergris.html)                                                                                 |
-| `sea-mary-celeste`         | [Smithsonian Magazine — Abandoned Ship: The Mary Celeste](https://www.smithsonianmag.com/history/abandoned-ship-the-mary-celeste-174488104/)                                                 |
-| `sea-st-elmos-fire`        | [National Weather Service — Marine Definitions: St. Elmo's Fire](https://www.weather.gov/okx/marinedef)                                                                                     |
-| `sea-right-whale-name`     | [NOAA National Ocean Service — What makes the right whale "right"?](https://oceanservice.noaa.gov/facts/rtwhale.html)                                                                        |
-| `sea-old-man-of-the-lake`  | [National Park Service — The Old Man - Crater Lake National Park](https://www.nps.gov/crla/learn/nature/theoldman.htm)                                                                      |
-| `sea-corryvreckan-orwell`  | [BBC News — The Scottish island where George Orwell created 1984](https://www.bbc.co.uk/news/uk-scotland-43821334)                                                                         |
-
-#### Lost gear — 18 cards
-
-Eighteen cards covering historical equipment, specialized martial gear, obsolete attire, and material culture artifacts. Verified against museum collections (Victoria and Albert Museum, Science Museum Group, Royal Museums Greenwich, National Museums Scotland) and unabridged public-domain reference works (Webster's 1913).
-
-| Card                       | Source                                                                                                                                                       |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `gear-cresset`             | [Webster's 1913 — Cresset](https://www.websters1913.com/words/Cresset)                                                                                       |
-| `gear-quintain`            | [Webster's 1913 — Quintain](https://www.websters1913.com/words/Quintain)                                                                                     |
-| `gear-distaff`             | [Webster's 1913 — Distaff](https://www.websters1913.com/words/Distaff)                                                                                       |
-| `gear-tumbril`             | [Webster's 1913 — Tumbril](https://www.websters1913.com/words/Tumbril)                                                                                       |
-| `gear-claude-glass`        | [Victoria and Albert Museum — Claude Glass](https://collections.vam.ac.uk/item/O78676/claude-glass-unknown/)                                                |
-| `gear-dark-lantern`        | [Science Museum Group Collection — Dark lantern (iron and brass), 1910](https://collection.sciencemuseumgroup.org.uk/objects/co43102/dark-lantern-iron-and-brass-from-italy-1910) |
-| `gear-inkhorn`             | [Webster's 1913 — Inkhorn](https://www.websters1913.com/words/Inkhorn)                                                                                       |
-| `gear-scolds-bridle`       | [Science Museum Group Collection — Scold's bridle mask](https://collection.sciencemuseumgroup.org.uk/objects/co155218/scolds-bridle-mask-which-partially-covers-face)      |
-| `gear-caltrop`             | [Webster's 1913 — Caltrop](https://www.websters1913.com/words/Caltrop)                                                                                       |
-| `gear-sounding-lead-tallow`| [Royal Museums Greenwich — Sounding lead and line](https://www.rmg.co.uk/collections/objects/rmgc-object-42893)                                             |
-| `gear-man-catcher`         | [Science Museum Group Collection — Man Catcher, Germany, 1601-1800](https://collection.sciencemuseumgroup.org.uk/objects/co155263/man-catcher-germany-1601-1800)          |
-| `gear-farthingale`         | [Webster's 1913 — Farthingale](https://www.websters1913.com/words/Farthingale)                                                                               |
-| `gear-pomander`            | [Webster's 1913 — Pomander](https://www.websters1913.com/words/Pomander)                                                                                   |
-| `gear-chopine`             | [Webster's 1913 — Chopine](https://www.websters1913.com/words/Chopine)                                                                                       |
-| `gear-tappit-hen`          | [National Museums Scotland — The 'tappit hen'](https://www.nms.ac.uk/discover-catalogue/a-tappit-hen-a-type-of-drinking-vessel-used-during-the-lifetime-of-robert-burns)  |
-| `gear-betty`               | [Webster's 1913 — Betty](https://www.websters1913.com/words/Betty)                                                                                           |
-| `gear-misericord`          | [Victoria and Albert Museum — Misericord](https://collections.vam.ac.uk/item/O131751/)                                                                      |
-| `gear-breeches-buoy`       | [Royal Museums Greenwich — Shipwreck Objects: Breeches Buoy](https://www.rmg.co.uk/sites/default/files/import/pages/files/shipwreck_objects26_breechesbuoy.pdf) |
-
-#### Rarer words — 18 cards
-
-Eighteen deep-cut vocabulary cards drawn from public-domain entries in [Webster's 1913](https://www.websters1913.com/) and [Project Gutenberg catalog ebook 29765](https://www.gutenberg.org/ebooks/29765). Every card represents an authentic historical English or cant term whose meaning provides fertile ground for deceptive, plausible party bluffs.
-
-| Card                       | Consulted source                                                                                                                                                                             |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `rare-boustrophedon`       | [Webster's 1913 — Boustrophedon](https://www.websters1913.com/words/Boustrophedon)                                                                           |
-| `rare-quidnunc`            | [Webster's 1913 — Quidnunc](https://www.websters1913.com/words/Quidnunc)                                                                                     |
-| `rare-welkin`              | [Webster's 1913 — Welkin](https://www.websters1913.com/words/Welkin)                                                                                         |
-| `rare-yare`                | [Webster's 1913 — Yare](https://www.websters1913.com/words/Yare)                                                                                             |
-| `rare-tittle`              | [Webster's 1913 — Tittle](https://www.websters1913.com/words/Tittle)                                                                                         |
-| `rare-limn`                | [Webster's 1913 — Limn](https://www.websters1913.com/words/Limn)                                                                                             |
-| `rare-mountebank`          | [Webster's 1913 — Mountebank](https://www.websters1913.com/words/Mountebank)                                                                                 |
-| `rare-recusant`            | [Webster's 1913 — Recusant](https://www.websters1913.com/words/Recusant)                                                                                     |
-| `rare-antephialtic`        | [Webster's 1913 — Antephialtic](https://www.websters1913.com/words/Antephialtic)                                                                             |
-| `rare-belly-god`           | [Webster's 1913 — Belly-god](https://www.websters1913.com/words/Belly-god)                                                                                   |
-| `rare-vaticinate`          | [Webster's 1913 — Vaticinate](https://www.websters1913.com/words/Vaticinate)                                                                                 |
-| `rare-mulligrubs`          | [Webster's 1913 — Mulligrubs](https://www.websters1913.com/words/Mulligrubs)                                                                                 |
-| `rare-slubberdegullion`    | [Webster's 1913 — Slubberdegullion](https://www.websters1913.com/words/Slubberdegullion)                                                                     |
-| `rare-flibbertigibbet`     | [Webster's 1913 — Flibbertigibbet](https://www.websters1913.com/words/Flibbertigibbet)                                                                       |
-| `rare-deipnosophist`       | [Webster's 1913 — Deipnosophist](https://www.websters1913.com/words/Deipnosophist)                                                                           |
-| `rare-galligaskins`        | [Webster's 1913 — Galligaskins](https://www.websters1913.com/words/Galligaskins)                                                                             |
-| `rare-pilgarlic`           | [Webster's 1913 — Pilgarlic](https://www.websters1913.com/words/Pilgarlic)                                                                                   |
-| `rare-dudgeon`             | [Webster's 1913 — Dudgeon](https://www.websters1913.com/words/Dudgeon)                                                                                       |
-
-#### Uncanny laws — 18 cards
-
-Eighteen cards covering extraordinary historical legislation, royal proclamations, ancient voting rituals, and sumptuary codes. Every card is verified against official primary legislation and parliamentary records (The National Archives, UK Legislation, UK Parliament Hansard), national museums (British Museum, Victoria and Albert Museum, Science Museum Group), and peer-reviewed scholarly references (Encyclopedia Britannica, BBC News):
-
-| Card                                  | Consulted source                                                                                                                                              |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `law-peter-beard-token`               | [British Museum — Beard token, Russia, 1705](https://www.britishmuseum.org/collection/object/C_C-3701)                                                       |
-| `law-armour-in-parliament`            | [The National Archives (UK Legislation) — A Statute forbidding Bearing of Armour (1313)](https://www.legislation.gov.uk/aep/Edw2/7/0)                         |
-| `law-salmon-suspicious-circumstances` | [The National Archives (UK Legislation) — Salmon Act 1986, Section 32](https://www.legislation.gov.uk/ukpga/1986/62/section/32)                              |
-| `law-deodand-forfeiture`              | [UK Parliament (Hansard) — Deodands Abolition Bill (1846)](https://api.parliament.uk/historic-hansard/commons/1846/aug/11/deodands-abolition-no-2-bill)       |
-| `law-window-tax-brick`                | [UK Parliament — Window Tax](https://www.parliament.uk/about/living-heritage/transformingsociety/towncountry/towns/tyne-and-wear-case-study/about-the-group/housing/window-tax/) |
-| `law-act-of-parliament-clock`         | [Science Museum Group Collection — Tavern clock by Vulliamy](https://collection.sciencemuseumgroup.org.uk/objects/co8558147/tavern-clock-by-vulliamy)        |
-| `law-venetian-black-gondolas`         | [Encyclopedia Britannica — Gondola](https://kids.britannica.com/scholars/article/gondola/37343)                                                              |
-| `law-hywel-dda-cat-guarantee`         | [BBC News — The Story of Wales: Dr Sara Elin Roberts on Hywel Dda's laws](https://www.bbc.com/news/uk-wales-17186291)                                        |
-| `law-dog-shogun-tsunayoshi`           | [Encyclopedia Britannica — Tokugawa Tsunayoshi](https://www.britannica.com/biography/Tokugawa-Tsunayoshi)                                                   |
-| `law-athenian-ostracism-shards`       | [Encyclopedia Britannica — Ostracism](https://www.britannica.com/topic/ostracism)                                                                             |
-| `law-hair-powder-certificate`         | [The National Archives (UK Legislation) — Hair Powder Certificate Act 1795 (1795 c. 49)](https://www.legislation.gov.uk/primary+secondary/1795?sort=title)    |
-| `law-tudor-bowling-tennis-ban`        | [UK Parliament (Hansard) — Unlawful Games Act 1541](https://api.parliament.uk/historic-hansard/acts/unlawful-games-act-1541)                                  |
-| `law-licensing-act-steam-engine`      | [The National Archives (UK Legislation) — Licensing Act 1872, Section 12](https://www.legislation.gov.uk/ukpga/Vict/35-36/94/section/12)                     |
-| `law-puritan-christmas-ban`           | [UK Parliament (Hansard) — Business of the House (Christmas Prohibitions)](https://hansard.parliament.uk/commons/2024-12-19/debates/4E534BAA-0759-42BE-BF39-71029ADC443E/BusinessOfTheHouse) |
-| `law-roman-lex-claudia-ships`         | [Encyclopedia Britannica — Lex Claudia](https://www.britannica.com/topic/Lex-Claudia)                                                                        |
-| `law-edward-iii-sumptuary-fur`        | [Encyclopedia Britannica — Government regulation of dress (Sumptuary Laws)](https://www.britannica.com/topic/dress-clothing/Government-regulation-of-dress)  |
-| `law-roman-lex-oppia-gold`            | [Encyclopedia Britannica — Lex Oppia](https://www.britannica.com/topic/Lex-Oppia)                                                                            |
-| `law-medieval-pig-trial-1266`         | [BBC News — Should animals have the same rights as humans?](https://www.bbc.com/news/world-32854504)                                                         |
-
-#### Folk beliefs — 18 cards
-
-Eighteen cards covering apotropaic charms, ritual protections, historical superstitions, and folk-healing customs. Every card is verified against national and regional museum collections (National Museums Scotland, Science Museum Group, Natural History Museum London, British Museum, Amgueddfa Cymru / Museum Wales, Whitby Museum, Historic England, and Project Gutenberg folklore archives):
-
-| Card                                  | Consulted source                                                                                                                                                              |
-| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `folk-daisy-wheel-witch-mark`         | [Historic England — What Are Witches’ Marks?](https://historicengland.org.uk/whats-new/features/discovering-witches-marks/what-are-witches-marks/)                          |
-| `folk-concealed-shoe-chimney`         | [BBC News — The shoes hidden in homes to ward off evil](https://www.bbc.com/news/uk-england-northamptonshire-41507752)                                                       |
-| `folk-telling-the-bees`               | [Project Gutenberg — Rustic Speech and Folk-lore (by Elizabeth Mary Wright)](https://www.gutenberg.org/files/47364/47364-h/47364-h.htm)                                      |
-| `folk-kings-evil-touch-piece`         | [Science Museum Group Collection — Gold touchpiece issued by James II](https://collection.sciencemuseumgroup.org.uk/objects/co105125/gold-touchpiece-issued-by-james-ii)     |
-| `folk-cramp-ring-monarch`             | [Science Museum Group Collection — Metal cramp ring, English, 1308-1558](https://collection.sciencemuseumgroup.org.uk/objects/co106807/metal-cramp-ring-english-1308-1558) |
-| `folk-whitby-snakestones`             | [Natural History Museum London — Snakestones: The myth, magic and science of ammonites](https://www.nhm.ac.uk/discover/snakestones-ammonites-myth-magic-science.html)      |
-| `folk-timber-burn-marks`              | [Historic England — The Difference Between Apotropaic Marks and Carpenters’ Marks](https://historicengland.org.uk/whats-new/features/discovering-witches-marks/types-of-marks/) |
-| `folk-druid-mistletoe-harvest`        | [Tufts Perseus Digital Library — Pliny the Elder, Natural History 16.95](https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0137%3Abook%3D16%3Achapter%3D95) |
-| `folk-welsh-mari-lwyd`                | [Amgueddfa Cymru (Museum Wales) — Mari Lwyd](https://museum.wales/collections/online/object/23aa02a8-fcef-3cab-aca3-590b7427236d/Mari-Lwyd/)                                 |
-| `folk-17th-century-witch-bottle`      | [BBC News — 17th-century witch bottle identified as anti-witchcraft device](https://www.bbc.com/news/uk-england-kent-59052737)                                               |
-| `folk-prehistoric-axe-thunderstone`   | [British Museum — The World of Stonehenge (Thunderstone Folklore)](https://www.britishmuseum.org/sites/default/files/2022-02/The_world_of_Stonehenge_The_British_Musuem_large_print_guide.pdf) |
-| `folk-hand-of-glory-burglary`         | [Whitby Museum — The Hand of Glory](https://whitbymuseum.org.uk/the-hand-of-glory/)                                                                                           |
-| `folk-hag-stone-stable-charm`         | [Science Museum Group Collection — Gritstone pebble or witch stone, Yorkshire](https://collection.sciencemuseumgroup.org.uk/objects/co102812/gritstone-pebble-or-witch-stone-perforated-with-white-cloth-sling) |
-| `folk-moles-foot-amulet`              | [Science Museum Group Collection — Mole's foot amulet, Norfolk, 1890-1910](https://collection.sciencemuseumgroup.org.uk/objects/co103787/moles-foot-amulet-norfolk-england-1890-1910-mole-footamulets) |
-| `folk-amber-beads-eyelids`            | [National Museums Scotland — From amulets to elf bolts: 11 Scottish Charms](https://www.nms.ac.uk/discover-catalogue/from-amulets-to-elf-bolts-10-scottish-charms)          |
-| `folk-scottish-elf-bolts`             | [National Museums Scotland — From amulets to elf bolts: 11 Scottish Charms](https://www.nms.ac.uk/discover-catalogue/from-amulets-to-elf-bolts-10-scottish-charms)          |
-| `folk-goose-thrapple-charm`           | [National Museums Scotland — From amulets to elf bolts: 11 Scottish Charms](https://www.nms.ac.uk/discover-catalogue/from-amulets-to-elf-bolts-10-scottish-charms)          |
-| `folk-marys-nut-drift-seed`           | [National Museums Scotland — From amulets to elf bolts: 11 Scottish Charms](https://www.nms.ac.uk/discover-catalogue/from-amulets-to-elf-bolts-10-scottish-charms)          |
+Some citations prove that a thing exists without granting any right to the thing itself. The UNESCO film catalogue is evidence, not permission to reuse an audiovisual work; the John Cage Trust page is evidence about a technique, not permission to reuse a composition or sound recording.
 
 ## Precision choices worth preserving
 
@@ -424,10 +57,12 @@ Eighteen cards covering apotropaic charms, ritual protections, historical supers
 - A green turtle's name refers to its fat. The proposed link between diet and fat color is not presented as settled by this card.
 - The adult platypus feeding card specifies **adult** because a blanket assertion about teeth at every life stage would be misleading.
 - The sea-cucumber prompt describes one genuine defense, not an exclusive list of all possible defenses. Player answers may independently describe other real facts; a bluff game does not perform semantic truth adjudication.
-- All previous stable keys, wording and source corrections remain intact, including Mercury's location-dependent sunrise, Zoozve, the Moon Tree orbital distinction and the Apollo hammer-feather summary source.
 - Vanilla pollination, salep, caper buds versus caperberries, wheat gluten and traditional mayonnaise are contextualized rather than treated as universal food rules. The chocolate card avoids repeating a questionable source count of cocoa-butter crystal forms.
 - Knuckle-bone shooting distinguishes the flicked tablets from the target bones. Q'eswachaka materials are identified as the straw woven into ropes; communal bridge rebuilding is not generalized to all Quechua practices.
 - Taos kivas are identified only by their public architectural function; no restricted practices are described. Vega down collection is from nests after birds leave, not plucking living birds. Constructed Nan Madol islets are explained without an invented transport theory.
 - The paired light-and-ink mechanisms in mezzotint and lithography are distinct; the metalpoint card concerns metal particles on prepared paper. Museum artwork, musical scores and copyrighted example images remain excluded.
+- Contested science is labelled as contested. Namib fairy-circle causation is presented as a hypothesis, and ball-lightning formation as unresolved.
+- Eccentric historical patents are described as proposals. The deck does not assert commercial failure that the patent record cannot support.
+- All previous stable keys, wording and source corrections remain intact, including Mercury's location-dependent sunrise, Zoozve, the Moon Tree orbital distinction and the Apollo hammer-feather summary source.
 
-This document and the per-card notes record source consultation and editorial provenance. They are not a claim that builds, type checks, seed execution, gameplay, automated card validation, or playtesting were run during content curation; those were deliberately left to integration.
+This document and the per-card notes record source consultation and editorial provenance. They are not a claim that builds, type checks, seed execution, gameplay, automated card validation, or playtesting were run during content curation; those are verified separately at integration.

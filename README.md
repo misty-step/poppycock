@@ -2,7 +2,7 @@
 
 A phone-first bluffing party game for **3–12 people**. One peculiar question, a table of convincing lies, and exactly one truth. Six rounds; no accounts, payments, or AI service required.
 
-Hosted play: **https://poppycock.mistystep.io** — no account. The party interface, untimed 216-card game, and 48-character avatar picker were deployed and checked on **2026-09-08**. See the [revision-specific verification history](docs/verification.md#verification-history); these docs are not a live deployment-status service.
+Hosted play: **https://poppycock.mistystep.io** — no account. The party interface, untimed game, and 48-character avatar picker were deployed and checked on **2026-09-08**, against the catalog of that revision; the hosted deployment has not been re-seeded since the catalog grew to 1,386 cards. See the [revision-specific verification history](docs/verification.md#verification-history); these docs are not a live deployment-status service.
 
 ## Play
 
@@ -90,9 +90,11 @@ The room code is an invitation, not a password. People with it may join as spect
 
 ## Content and documentation ownership
 
-The **270-card catalog** is organized as **13 packs**. Ten house packs keep the original 216 cards (27 each in Odd words, Curious objects, Wild nature, and Space oddities; 18 each in Kitchen secrets, Bright ideas, Living traditions, Remarkable places, Working lives, and Art & music). Three expansion packs add 18 cards each: **The sea**, **Lost gear**, and **Rarer words**. A six-round game prefers a different category each round. The longest house answer is 90 characters, comfortably below the 180-character bluff limit. The original 216 keys and cards are preserved. Cards use original wording grounded in retained source references, not commercial Balderdash cards. Sources are shown at reveal. See [`docs/content-provenance.md`](docs/content-provenance.md).
+The **1,386-card catalog** is organized as **51 packs** — enough distinct content for well over two hundred six-round games. Four house packs hold 27 cards each (Odd words, Curious objects, Wild nature, Space oddities), eleven hold 18, and the rest hold 30. A six-round game prefers a category no earlier round used, so a table works through a different slice of the catalog each match. Every answer fits the 180-character bluff limit. Cards use original wording grounded in retained source references, not commercial Balderdash cards. Sources are shown at reveal.
 
-Gameplay has no runtime LLM or external content-fetch dependency: the seeded database is the deck. Packs live as separate Convex modules so the catalog can grow without loading every card into a draw. Local reset is repeatable and seeding is idempotent by stable card key.
+Every card and its source is listed in [`docs/content-index.md`](docs/content-index.md), generated from the deck by `pnpm catalog`; [`docs/content-provenance.md`](docs/content-provenance.md) records the editorial method and reuse basis. `pnpm sources` re-checks that every cited URL still resolves.
+
+Gameplay has no runtime LLM or external content-fetch dependency: the seeded database is the deck. Packs live as separate Convex modules, so a round loads one pack rather than the whole catalog and the collection can keep growing. Adding a pack means writing one module and running `pnpm catalog`; the test suite fails if the generated registry or index is stale. Local reset is repeatable and seeding is idempotent by stable card key.
 
 This README owns the current rules and contributor orientation;
 `docs/content-provenance.md` owns collection-level editorial policy, alongside
