@@ -114,12 +114,18 @@ async function loadCatalog() {
   }
 }
 
-const entries = await readPackModules();
-await writeFile(path.join(deckDir, "catalog.ts"), renderCatalog(entries));
+export async function generateCatalog() {
+  const entries = await readPackModules();
+  await writeFile(path.join(deckDir, "catalog.ts"), renderCatalog(entries));
 
-const { seedPacks, seedCards } = await loadCatalog();
-await writeFile(path.join(root, "docs", "content-index.md"), renderIndex(seedPacks, seedCards));
+  const { seedPacks, seedCards } = await loadCatalog();
+  await writeFile(path.join(root, "docs", "content-index.md"), renderIndex(seedPacks, seedCards));
 
-console.log(
-  `Wrote convex/deck/catalog.ts (${entries.length} packs) and docs/content-index.md (${seedCards.length} cards).`,
-);
+  console.log(
+    `Wrote convex/deck/catalog.ts (${entries.length} packs) and docs/content-index.md (${seedCards.length} cards).`,
+  );
+}
+
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  await generateCatalog();
+}
