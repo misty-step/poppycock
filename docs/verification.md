@@ -112,6 +112,12 @@ six round records, and Ada/Bea/Cy final scores **18/8/0**. Check `origin`,
 receipt is written only after assertions pass; absent output, partial screenshots,
 an exception, or an earlier receipt is not a pass.
 
+Gameplay actions and screenshots wait for the expected rendered phase, not just
+the server projection. Capture also waits up to 15 seconds each for visible image
+assets and finite animations to finish, without fast-forwarding the application.
+Broken image paths fail the run instead of producing a passing receipt with missing
+portraits. These still frames do not verify animation timing or appearance.
+
 The smoke exercises real rendered create/join/start/submit/vote/leave/rejoin/
 rematch controls. Its authenticated queries independently assert:
 

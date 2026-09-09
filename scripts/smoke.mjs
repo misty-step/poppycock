@@ -5,7 +5,11 @@ import { parseEnv } from "node:util";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { api } from "../convex/_generated/api.js";
-import { createSmokeEvidence } from "./smoke-evidence.mjs";
+import {
+  captureSmokeScreenshot,
+  createSmokeEvidence,
+  waitForRenderedPhase,
+} from "./smoke-evidence.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const local = parseEnv(await readFile(join(root, ".env.local"), "utf8"));
@@ -33,12 +37,13 @@ const report = {
   screenshots: [],
 };
 
-async function capture(name, filename) {
+async function capture(name, filename, expectedPhase) {
   const page = players[name].page;
+  if (expectedPhase) await waitForRenderedPhase(page, expectedPhase);
   if (await page.locator(".action-dock").count()) {
     await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
   }
-  await page.screenshot({ path: join(evidence, filename), fullPage: true });
+  await captureSmokeScreenshot(page, join(evidence, filename));
   report.screenshots.push(filename);
 }
 async function credentials(name) {
@@ -63,6 +68,7 @@ async function joinTable(name, code) {
 }
 async function phase(name, expected) {
   await expect.poll(async () => (await view(name))?.phase, { timeout: 15000 }).toBe(expected);
+  await waitForRenderedPhase(players[name].page, expected);
 }
 const optionText = (text) =>
   text
@@ -142,7 +148,7 @@ try {
       await expect(
         players.Bea.page.getByRole("textbox", { name: "Your answer", exact: true }),
       ).toBeVisible();
-      await capture("Bea", "writing-phone.png");
+      await capture("Bea", "writing-phone.png", "writing");
       await expect(
         client.query(api.game.view, { roomId: (await credentials("Ada")).roomId }),
       ).rejects.toThrow();
@@ -172,7 +178,7 @@ try {
       await expect(
         players.Cy.page.getByText("Reconnecting. Keep this page open", { exact: false }),
       ).toBeVisible({ timeout: 15000 });
-      await capture("Cy", "offline-phone.png");
+      await capture("Cy", "offline-phone.png", "writing");
       await players.Cy.context.setOffline(false);
       await players.Cy.page.reload();
       await expect(
@@ -228,7 +234,7 @@ try {
       text: bluffs.Ada,
     });
     expect((await view("Ada")).submissionCount).toBe(beforeRetry);
-    if (round === 1) await capture("Bea", "voting-phone.png");
+    if (round === 1) await capture("Bea", "voting-phone.png", "voting");
     await voteFor("Ada", truth.text);
     await voteFor("Bea", round === 2 ? truth.text : bluffs.Ada);
     await voteFor("Cy", bluffs.Bea);
@@ -251,8 +257,8 @@ try {
       scores: reveal.players.map((p) => ({ name: p.name, score: p.score, gained: p.roundPoints })),
     });
     if (round === 1) {
-      await capture("Ada", "reveal-desktop.png");
-      await capture("Bea", "reveal-phone.png");
+      await capture("Ada", "reveal-desktop.png", "reveal");
+      await capture("Bea", "reveal-phone.png", "reveal");
     }
     if (round === 3) {
       await players.Ada.page.getByRole("button", { name: "Table options", exact: true }).click();
@@ -267,7 +273,7 @@ try {
       expect((await room("Ada")).viewerPlayerId).toBe(initialIds.Ada);
       expect((await view("Ada")).participant).toBe(true);
       host = "Bea";
-      await capture("Bea", "host-change-phone.png");
+      await capture("Bea", "host-change-phone.png", "reveal");
       report.checks.push(
         "Explicit host departure transfers host to Bea; rejoining Ada keeps identity, scores, and match eligibility.",
       );
@@ -287,8 +293,8 @@ try {
     { name: "Cy", score: 0 },
   ]);
   expect((await room("Bea")).activeMatch).toBeNull();
-  await capture("Ada", "final-standings-desktop.png");
-  await capture("Bea", "final-standings-phone.png");
+  await capture("Ada", "final-standings-desktop.png", "finished");
+  await capture("Bea", "final-standings-phone.png", "finished");
   report.finalScores = final.players.map((p) => ({ name: p.name, score: p.score }));
   report.checks.push(
     "Six rounds have authoritative expected scores18/8/0, private shuffled choices, duplicate-bluff attribution, rejected self-votes, and idempotent submission retries.",
@@ -301,7 +307,7 @@ try {
   expect(rematch.playerCount).toBe(4);
   expect(rematch.players.every((p) => p.score === 0)).toBe(true);
   expect(questions.has(rematch.prompt.question)).toBe(false);
-  await capture("Dax", "rematch-phone.png");
+  await capture("Dax", "rematch-phone.png", "writing");
   for (const name of ["Bea", "Cy", "Dax"]) {
     expect(
       await players[name].page.evaluate(

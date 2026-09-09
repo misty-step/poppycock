@@ -4,7 +4,11 @@ import { readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { api } from "../convex/_generated/api.js";
-import { createSmokeEvidence } from "./smoke-evidence.mjs";
+import {
+  captureSmokeScreenshot,
+  createSmokeEvidence,
+  waitForRenderedPhase,
+} from "./smoke-evidence.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const origin = process.env.POPPYCOCK_PUBLIC_ORIGIN ?? "https://poppycock.mistystep.io";
@@ -34,12 +38,13 @@ const report = {
   screenshots: [],
 };
 
-async function capture(name, filename) {
+async function capture(name, filename, expectedPhase) {
   const page = players[name].page;
+  if (expectedPhase) await waitForRenderedPhase(page, expectedPhase);
   if (await page.locator(".action-dock").count()) {
     await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
   }
-  await page.screenshot({ path: join(evidence, filename), fullPage: true });
+  await captureSmokeScreenshot(page, join(evidence, filename));
   report.screenshots.push(filename);
 }
 
@@ -65,6 +70,7 @@ async function joinTable(name, code) {
 
 async function phase(name, expected) {
   await expect.poll(async () => (await view(name))?.phase, { timeout: 30000 }).toBe(expected);
+  await waitForRenderedPhase(players[name].page, expected);
 }
 
 try {
@@ -118,7 +124,7 @@ try {
   expect(writing.options).toEqual([]);
   expect(writing.truth).toBeUndefined();
   expect(writing.source).toBeUndefined();
-  await capture("Bea", "public-https-writing-phone.png");
+  await capture("Bea", "public-https-writing-phone.png", "writing");
   report.checks.push("Host started a match; writing hid truth, source, and options.");
 
   const bluffs = {
@@ -150,7 +156,7 @@ try {
   const knownBluffs = Object.values(bluffs).map(optionText);
   const truth = voting.options.find((option) => !knownBluffs.includes(option.text));
   expect(truth).toBeDefined();
-  await capture("Bea", "public-https-voting-phone.png");
+  await capture("Bea", "public-https-voting-phone.png", "voting");
   report.checks.push("All three locked bluffs; voting hid truth labels, authors, and voters.");
 
   async function voteFor(name, text) {
@@ -174,8 +180,8 @@ try {
   expect(optionText(reveal.truth)).toBe(truth.text);
   expect(reveal.source.url).toMatch(/^https:\/\//);
   expect(reveal.players.map((p) => p.roundPoints)).toEqual([3, 1, 0]);
-  await capture("Ada", "public-https-reveal-desktop.png");
-  await capture("Bea", "public-https-reveal-phone.png");
+  await capture("Ada", "public-https-reveal-desktop.png", "reveal");
+  await capture("Bea", "public-https-reveal-phone.png", "reveal");
   report.rounds.push({
     round: reveal.round,
     question: reveal.prompt.question,

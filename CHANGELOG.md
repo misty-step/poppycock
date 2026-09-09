@@ -4,6 +4,7 @@
 
 - Added the repository-owned `poppycock-verify` skill, linking focused game, identity, avatar, and timing journeys to the existing local Convex/Playwright checks and documenting source identity, readiness, evidence inspection, and owned cleanup.
 - Smoke runs now allocate fresh ignored evidence directories by default. Explicit `POPPYCOCK_EVIDENCE_DIR` destinations must be new, so local and hosted producers cannot overwrite or reuse a previous run's evidence.
+- Stabilized smoke screenshots after CI artifact inspection exposed partially rendered results and fading dialogs: wait for rendered phases, visible image assets, and finite animations before capture without changing application animation state.
 
 - Split the sourced deck into packs. A match prefers a fresh category each round, loads that pack, and picks uniformly among cards that are not this game's or recently seen. A full recent-history list cannot repeat a card already used in the current game.
 - Added five expansion packs — The sea, Lost gear, Rarer words, Uncanny laws, and Folk beliefs — bringing the catalog to 306 sourced cards across 15 distinct packs. Still a fixed, sourced, AI-assisted editorial deck; no runtime generation.
