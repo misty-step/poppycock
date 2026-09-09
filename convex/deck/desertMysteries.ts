@@ -23,8 +23,8 @@ export const desertMysteries = definePack(
     {
       key: "desert-kelso-booming-sand",
       question:
-        "What can produce a deep, tuba-like noise beneath someone descending the Kelso Dunes?",
-      answer: "An avalanche of sand grains can make the dune itself boom or hum.",
+        "What unexpected accompaniment can hikers create simply by sliding down California's Kelso Dunes?",
+      answer: "A deep boom or hum from the sand itself, sometimes compared to a badly played tuba.",
       source: {
         title: "National Geographic — Seeking silence on a California road trip",
         url: "https://www.nationalgeographic.com/travel/article/road-trip-in-search-of-natures-quiet",
@@ -70,7 +70,7 @@ export const desertMysteries = definePack(
     {
       key: "desert-atacama-microbial-sunscreen",
       question:
-        "What protective substance can some Atacama cyanobacteria manufacture for themselves?",
+        "What do some Atacama cyanobacteria make that also belongs in a tourist's beach bag?",
       answer: "A natural sunscreen pigment called scytonemin that screens ultraviolet radiation.",
       source: {
         title:
@@ -82,9 +82,9 @@ export const desertMysteries = definePack(
     {
       key: "desert-quartz-hidden-communities",
       question:
-        "Where can microbial communities hide in a stony landscape whose exposed ground looks almost lifeless?",
+        "In a nearly lifeless stony desert, why would a biologist turn over a piece of translucent quartz?",
       answer:
-        "On the undersides of translucent quartz rocks, which provide a refuge from the exposed surface.",
+        "Microbial communities can live beneath it, sheltered from the harsh surface by a roof that still lets light through.",
       source: {
         title:
           "Scientific Reports — Adaptations of endolithic communities to abrupt environmental changes in a hyper-arid desert",
@@ -95,7 +95,7 @@ export const desertMysteries = definePack(
     {
       key: "desert-halite-water-from-air",
       question:
-        "How can some rock-dwelling Atacama microbes obtain liquid water even when no rain falls?",
+        "Where can microbes sealed inside Atacama rocks get water without rain reaching them?",
       answer:
         "Their salt-rock shelter absorbs moisture from the air and turns it into liquid brine.",
       source: {
@@ -119,24 +119,26 @@ export const desertMysteries = definePack(
       },
     },
     {
-      key: "desert-biocrust-nitrogen",
+      key: "desert-pothole-sugar-survival",
       question:
-        "How can a thin, seemingly unremarkable crust help fertilize otherwise impoverished dryland soil?",
-      answer: "Its living community fixes atmospheric nitrogen and traps nutrient-bearing dust.",
+        "What unlikely substitute for water helps some tiny desert-pool organisms survive being dried out?",
+      answer:
+        "Sugar molecules replace much of the water, preserving cells until the pool fills again.",
       source: {
-        title: "USGS — Patterns and controls on nitrogen cycling of biological soil crusts",
-        url: "https://www.usgs.gov/publications/patterns-and-controls-nitrogen-cycling-biological-soil-crusts",
-        note: "The USGS abstract identifies biological nitrogen fixation and dust capture as major nitrogen inputs supplied by biocrusts in arid and semi-arid ecosystems.",
+        title: "National Park Service — Ephemeral Pools (Potholes)",
+        url: "https://www.nps.gov/nabr/learn/nature/pools.htm",
+        note: "The NPS describes cryptobiosis in drought-tolerant pothole organisms, with sugar molecules substituting for water to maintain cell structure and elasticity.",
       },
     },
     {
-      key: "desert-namib-fog-water",
-      question: "What supplies the main water source for life in the Namib Sand Sea?",
-      answer: "Coastal fog, rather than regular rainfall.",
+      key: "desert-thorny-devil-drink",
+      question:
+        "How can an Australian thorny devil drink while standing in a puddle with its head held clear of the water?",
+      answer: "Tiny channels in its skin draw water up from its legs and carry it to its mouth.",
       source: {
-        title: "NASA Earth Observatory — Namib Sand Sea",
-        url: "https://science.nasa.gov/earth/earth-observatory/namib-sand-sea-149130/",
-        note: "NASA explicitly identifies fog as the sand sea's primary water source and notes the vegetation supported by this moisture, especially on rocky hills.",
+        title: "Smithsonian Magazine — This Spike-Crested Lizard Drinks From Sand With Its Skin",
+        url: "https://www.smithsonianmag.com/science-nature/spiky-lizard-drinks-sand-its-skin-180961002/",
+        note: "The article describes capillary channels under the scales and reports that experimental lizards actively drank while standing in a puddle. Drinking from wet sand remains debated.",
       },
     },
     {
@@ -151,27 +153,27 @@ export const desertMysteries = definePack(
       },
     },
     {
-      key: "desert-star-dune-winds",
+      key: "desert-ant-stilts",
       question:
-        "Why do some enormous dunes grow several arms instead of a single crescent-shaped ridge?",
+        "What did researchers fit to desert ants in a 2006 experiment that made the insects march past their destination?",
       answer:
-        "Winds arriving from different directions build star dunes with multiple radiating arms.",
+        "Tiny stilts on their legs, upsetting a distance estimate based on their normal stride.",
       source: {
-        title: "NASA Earth Observatory — Tsauchab River and Sossus Vlei Lakebed, Namibia",
-        url: "https://science.nasa.gov/earth/earth-observatory/tsauchab-river-and-sossus-vlei-lakebed-namibia-42396/",
-        note: "NASA contrasts barchan dunes associated with a dominant wind direction and star dunes generated where wind directions vary, describing several components around the Tsauchab valley.",
+        title: "Scientific American — Ants on Stilts",
+        url: "https://www.scientificamerican.com/article/ants-on-stilts/",
+        note: "The report describes lengthening ants' legs with stilts; they overshot their goal, supporting an internal distance-measuring system based on stride length.",
       },
     },
     {
-      key: "desert-salt-polygon-convection",
-      question:
-        "What hidden motion has research linked to the striking polygon patterns on salt flats?",
+      key: "desert-silver-ant-shaving",
+      question: "Why did scientists shave Saharan ants before putting them under a simulated sun?",
       answer:
-        "Convection of salty groundwater beneath the crust, driven by evaporation and differences in salinity.",
+        "To test their natural sun shields: triangular hairs reflect light and help keep the ants cool.",
       source: {
-        title: "Nature Physics — Salty polygons",
-        url: "https://www.nature.com/articles/s41567-023-02037-z",
-        note: "This research summary describes a model in which salinity differences and evaporation govern convective fluid flow in porous ground, controlling polygon formation.",
+        title:
+          "PLOS ONE — Total Internal Reflection Accounts for the Bright Color of the Saharan Silver Ant",
+        url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0152325",
+        note: "The study compared hairy and shaved silver ants under a solar simulator, finding much greater light reflection and lower internal heating with the triangular hairs intact.",
       },
     },
     {
@@ -198,7 +200,7 @@ export const desertMysteries = definePack(
     {
       key: "desert-bodele-diatom-dust",
       question:
-        "What remains of vanished aquatic life help make up the dust blowing out of Chad's Bodele Depression?",
+        "What unusual ingredient makes up much of the dust blowing out of Chad's Bodele Depression?",
       answer:
         "The remains of microscopic diatoms that lived in the enormous ancient Lake Mega Chad.",
       source: {
@@ -209,9 +211,8 @@ export const desertMysteries = definePack(
     },
     {
       key: "desert-sahara-feeds-amazon",
-      question: "How can the Sahara help nourish a rainforest on the other side of an ocean?",
-      answer:
-        "Winds carry mineral-rich dust across the Atlantic, replenishing nutrients in Amazon soils.",
+      question: "What service does Saharan dust provide after crossing the Atlantic to the Amazon?",
+      answer: "It fertilizes the rainforest, replacing soil nutrients washed away by heavy rain.",
       source: {
         title: "NASA Earth Observatory — Saharan Dust Crosses the Atlantic",
         url: "https://science.nasa.gov/earth/earth-observatory/saharan-dust-crosses-the-atlantic-44169/",
@@ -219,20 +220,21 @@ export const desertMysteries = definePack(
       },
     },
     {
-      key: "desert-richat-eroded-dome",
+      key: "desert-sandfish-folded-legs",
       question:
-        "What produced the enormous bull's-eye pattern of the Richat Structure in Mauritania?",
+        "What did X-ray filming reveal about how a small Saharan lizard uses its legs once it buries itself?",
       answer:
-        "Uneven erosion exposed concentric layers of an uplifted geological dome, not a meteorite crater.",
+        "It folds them against its body and swims through the sand with a snake-like wriggle.",
       source: {
-        title: "NASA Earth Observatory — Eyeing the Richat Structure",
-        url: "https://science.nasa.gov/earth/earth-observatory/eyeing-the-richat-structure/",
-        note: "NASA explains that uplift over an igneous intrusion formed a dome; different rock erosion rates created circular ridges. Earlier impact-crater interpretations were rejected.",
+        title: "Live Science — Lizard Swims Like Snake Through Sand",
+        url: "https://www.livescience.com/5577-lizard-swims-snake-sand.html",
+        note: "High-speed X-ray imaging showed sandfish lizards holding their limbs at their sides underground and propelling themselves by waves along their bodies rather than their legs.",
       },
     },
     {
       key: "desert-namakier-flowing-salt",
-      question: "What is a namakier?",
+      question:
+        "What flows like a glacier across parts of China's arid Xinjiang region, despite not being ice?",
       answer:
         "A slow-moving glacier of salt, squeezed up from buried deposits and spreading across the ground.",
       source: {
@@ -268,9 +270,9 @@ export const desertMysteries = definePack(
     {
       key: "desert-soda-lake-white-froth",
       question:
-        "What creates the frothy-looking white coating that returns to parts of California's Soda Lake as they dry?",
+        "What familiar baking ingredient is a major component of a frothy white crust on a Mojave Desert lakebed?",
       answer:
-        "Alkali salts, chiefly sodium carbonate and sodium bicarbonate, left by evaporating groundwater.",
+        "Baking soda: sodium bicarbonate, mixed with sodium carbonate and other salts left by evaporating groundwater.",
       source: {
         title: "USGS — Our Dynamic Desert: Playas",
         url: "https://pubs.usgs.gov/of/2004/1007/playas.html",
@@ -278,42 +280,44 @@ export const desertMysteries = definePack(
       },
     },
     {
-      key: "desert-rock-varnish",
-      question: "What gives some long-exposed desert stones a dark, glossy coating?",
-      answer:
-        "A thin mineral coating called desert varnish, containing manganese and iron compounds mixed with clay.",
+      key: "desert-gecko-neon",
+      question:
+        "What hidden decoration appeared when researchers shone ultraviolet light on a Namib desert gecko?",
+      answer: "Bright neon-green rings around its eyes and glowing stripes along its flanks.",
       source: {
-        title: "USGS — Eolian Processes",
-        url: "https://pubs.usgs.gov/gip/deserts/eolian/",
-        note: "USGS identifies desert varnish as a dark, shiny stain on exposed rocks, composed largely of manganese, iron oxides, hydroxides, and clay minerals.",
+        title:
+          "Scientific Reports — Neon-green fluorescence in the desert gecko Pachydactylus rangei caused by iridophores",
+        url: "https://www.nature.com/articles/s41598-020-79706-z",
+        note: "The results report strong neon-green fluorescence around the eyes and along a ventrolateral stripe under ultraviolet light in adults of both sexes and hatchlings.",
       },
     },
     {
-      key: "desert-ventifact-sculpture",
-      question: "What is a ventifact?",
-      answer: "A stone cut or polished by windblown sand, rather than by a human tool.",
+      key: "desert-toad-licking-warning",
+      question:
+        "What unusual instruction did the National Park Service issue about Sonoran Desert toads in 2022?",
+      answer: "Please do not lick them; their skin glands produce a powerful toxin.",
       source: {
-        title: "USGS — Eolian Processes",
-        url: "https://pubs.usgs.gov/gip/deserts/eolian/",
-        note: "The USGS guide defines ventifacts as rocks cut, and sometimes polished, by abrasive wind action and describes sandblasting by windborne particles.",
+        title: "Smithsonian Magazine — Don't Lick This Toad, National Park Service Says",
+        url: "https://www.smithsonianmag.com/smart-news/dont-lick-this-toad-national-park-service-says-180981092/",
+        note: "The report quotes the NPS request to refrain from licking Sonoran Desert toads and its warning that their gland secretions can make people sick.",
       },
     },
     {
-      key: "desert-saltation-hopping-grains",
-      question: "What happens during saltation?",
-      answer:
-        "Wind-driven sand grains move in little hops, knocking other grains into motion as they land.",
+      key: "desert-rogers-lake-arrivals",
+      question:
+        "What unlikely visitors used the dry bed of Rogers Lake in California as a place to end their journeys?",
+      answer: "Space shuttles, which landed on the desert lakebed at Edwards Air Force Base.",
       source: {
-        title: "USGS — Eolian Processes",
-        url: "https://pubs.usgs.gov/gip/deserts/eolian/",
-        note: "USGS defines saltation as downwind particle movement through jumps or skips and explains how collisions set other grains hopping or creeping forward.",
+        title: "USGS — Desert Features",
+        url: "https://pubs.usgs.gov/gip/deserts/features/",
+        note: "The USGS guide identifies flat playas as natural runways and explicitly says space shuttles land on Rogers Lake Playa at Edwards Air Force Base.",
       },
     },
     {
       key: "desert-small-dunes-overtake",
-      question: "Why can small dunes overtake much larger ones in Namibia's Sperrgebiet?",
-      answer:
-        "They have less sand to move, so wind can shift them faster than their larger neighbors.",
+      question:
+        "What slow-motion overtaking has satellite photography revealed in Namibia's Sperrgebiet?",
+      answer: "Small sand dunes repeatedly catch up with and pass much larger dunes.",
       source: {
         title: "NASA Earth Observatory — Racing Dunes in Namibia",
         url: "https://science.nasa.gov/earth/earth-observatory/racing-dunes-in-namibia-150808/",
@@ -323,9 +327,9 @@ export const desertMysteries = definePack(
     {
       key: "desert-turpan-covered-waterways",
       question:
-        "How did people carry mountain water across China's hot Turpan Depression while limiting losses along the way?",
+        "What hidden engineering links China's Turpan Depression to water in the nearby mountains?",
       answer:
-        "They routed it through covered underground channels that greatly reduced evaporation.",
+        "Covered underground channels carry mountain water across the desert while limiting evaporation.",
       source: {
         title: "USGS — Desert Features",
         url: "https://pubs.usgs.gov/gip/deserts/features/",
@@ -333,26 +337,26 @@ export const desertMysteries = definePack(
       },
     },
     {
-      key: "desert-yardang-wind-ridges",
-      question: "What are yardangs?",
+      key: "desert-sphinx-natural-start",
+      question:
+        "What natural head start may the sculptors of Egypt's Great Sphinx have enjoyed, according to a geological hypothesis?",
       answer:
-        "Long, streamlined ridges carved by wind erosion, sometimes tens of meters high and kilometers long.",
+        "A rock ridge already sculpted by desert winds, which they modified into the monument.",
       source: {
         title: "USGS — Eolian Processes",
         url: "https://pubs.usgs.gov/gip/deserts/eolian/",
-        note: "USGS describes yardangs as sculpted, streamlined landforms created by desert winds and illustrates exceptionally large examples in Iran's Lut Desert.",
+        note: "After describing streamlined wind-eroded ridges called yardangs, the USGS states that the Sphinx at Giza may be a modified yardang; the card preserves that uncertainty.",
       },
     },
     {
-      key: "desert-tsauchab-inland-ending",
+      key: "desert-gum-tree-gold",
       question:
-        "Where does Namibia's Tsauchab River finish its journey instead of reaching the Atlantic?",
-      answer:
-        "In the salt-and-clay pans of Sossusvlei, surrounded by the towering dunes of the Namib Sand Sea.",
+        "What did X-ray imaging reveal inside ordinary eucalyptus leaves near Kalgoorlie in Western Australia?",
+      answer: "Tiny particles of gold, drawn up from deep underground by the trees' roots.",
       source: {
-        title: "NASA Earth Observatory — Namib Sand Sea",
-        url: "https://science.nasa.gov/earth/earth-observatory/namib-sand-sea-149130/",
-        note: "NASA traces the ephemeral Tsauchab from the Naukluft Mountains across the sand sea to its endpoint at Sossusvlei, a salt and clay pan flooded after rare heavy rain.",
+        title: "CSIRO — Gilding the gum tree: scientists strike gold in leaves",
+        url: "https://www.csiro.au/en/news/all/news/2013/october/gilding-the-gum-tree--scientists-strike-gold-in-leaves",
+        note: "CSIRO's 2013 report describes synchrotron imaging of gold inside eucalyptus leaves, rather than dust on their surfaces; roots had brought it up with water from buried deposits.",
       },
     },
   ],

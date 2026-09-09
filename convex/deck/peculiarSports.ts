@@ -35,8 +35,9 @@ export const peculiarSports = definePack(
     {
       key: "sport-waveney-cheating",
       question:
-        "What would normally get a player disqualified but was positively encouraged at Waveney Valley’s 2023 tournament?",
-      answer: "Cheating: competitors could harden their conkers beforehand.",
+        "What did organisers let players do to their equipment before Waveney Valley’s 2023 tournament?",
+      answer:
+        "Bake their conkers or soak them in vinegar to harden them; cheating was openly encouraged.",
       source: {
         title: "BBC News — Norfolk-Suffolk border conkers tournament encourages cheating",
         url: "https://www.bbc.co.uk/news/uk-england-norfolk-67056611",
@@ -57,8 +58,8 @@ export const peculiarSports = definePack(
     {
       key: "sport-estonian-carry",
       question:
-        "What position does the carried partner take in the technique known as the Estonian carry?",
-      answer: "Upside down on the carrier’s back, with her thighs gripping the sides of his face.",
+        "How does the Estonian technique position a runner’s partner at the Sonkajärvi championship?",
+      answer: "Upside down on his back, with her thighs gripping the sides of his face.",
       source: {
         title: "BBC News — Estonian carries wife to glory",
         url: "https://news.bbc.co.uk/1/hi/world/europe/3865227.stm",
@@ -67,9 +68,8 @@ export const peculiarSports = definePack(
     },
     {
       key: "sport-derbyshire-locked-digits",
-      question:
-        "At a Derbyshire championship, which body parts do rivals lock together before trying to push one another against a little wall?",
-      answer: "Their toes, in toe wrestling.",
+      question: "What do rivals do on a little two-walled podium at a Derbyshire championship?",
+      answer: "Lock their toes together and wrestle to push the other’s foot against a wall.",
       source: {
         title: "BBC News — Toe wrestling competition returns for 50th year",
         url: "https://www.bbc.co.uk/news/articles/cp8n5qqm456o",
@@ -132,8 +132,9 @@ export const peculiarSports = definePack(
     },
     {
       key: "sport-nurdling",
-      question: "What do players try to do in the Rutland pub game called nurdling?",
-      answer: "Throw old pennies into a hole in a bench.",
+      question:
+        "Why does a bench at a Stretton pub have a hole that attracts competitive attention?",
+      answer: "Players try to throw old pennies into it in the local game of nurdling.",
       source: {
         title: "BBC News — The centuries-old pub game created by bored children",
         url: "https://www.bbc.co.uk/news/articles/c0regwygy28o",
@@ -163,8 +164,8 @@ export const peculiarSports = definePack(
     {
       key: "sport-lightfoot-rivals",
       question:
-        "What non-human rivals did runner Ricky Lightfoot beat over 22.5 miles in Wales in 2022?",
-      answer: "Horses ridden by humans, in the Man v Horse race.",
+        "What made Ricky Lightfoot’s victory in a Welsh long-distance race in 2022 especially unusual?",
+      answer: "He outran horses and their riders, not just other human runners.",
       source: {
         title: "BBC News — Man v horse: Powys race won by runner Ricky Lightfoot",
         url: "https://www.bbc.com/news/uk-wales-61773202",
@@ -184,7 +185,7 @@ export const peculiarSports = definePack(
     },
     {
       key: "sport-buzkashi-object",
-      question: "What do riders traditionally fight to carry away in buzkashi?",
+      question: "What do riders struggle to carry away in the traditional Afghan game of buzkashi?",
       answer: "The carcass of a goat or calf.",
       source: {
         title: "Encyclopaedia Britannica — Buzkashi summary",
@@ -193,24 +194,26 @@ export const peculiarSports = definePack(
       },
     },
     {
-      key: "sport-tennis-bell",
-      question: "In real tennis, why might a successful shot make a bell ring?",
-      answer: "The ball has entered the court’s winning gallery, scoring a point.",
+      key: "sport-octopush-breath",
+      question:
+        "Why do players of a game devised in Portsmouth in 1954 have to leave the action to breathe?",
+      answer:
+        "They play hockey along the bottom of a swimming pool, pushing a puck with short sticks.",
       source: {
-        title: "BBC News — Oxfordshire real tennis champion: Sport not cloak and dagger",
-        url: "https://www.bbc.co.uk/news/articles/cr4z62y9zrgo",
-        note: "The BBC identifies the winning gallery as a scoring target that rings a bell when hit.",
+        title: "BBC News — Snorkels, splashing and strategy: the world of Octopush",
+        url: "https://www.bbc.co.uk/news/articles/c87jnzq90p9o",
+        note: "The report traces Octopush to Alan Blake’s Portsmouth diving club in 1954 and describes players holding their breath while moving a puck along the pool floor with small sticks.",
       },
     },
     {
-      key: "sport-running-target",
+      key: "sport-winans-second-gold",
       question:
-        "What moving target crossed a 23-metre opening in four seconds in one 1924 Olympic shooting event?",
-      answer: "A deer-shaped silhouette, not a living deer.",
+        "What earned champion marksman Walter Winans another Olympic gold in 1912 without his firing a shot?",
+      answer: "A sculpture of a trotting horse, entered in the Olympic art competition.",
       source: {
-        title: "Olympedia — Running Target, Single Shot, Men, 1924",
-        url: "https://www.olympedia.org/results/51625",
-        note: "The historical result page describes a deer silhouette with five scoring zones moving across a twenty-three-metre opening in four seconds.",
+        title: "Olympedia — Walter Winans",
+        url: "https://www.olympedia.org/athletes/44792",
+        note: "The biography and results record Winans’s shooting gold in 1908 and sculpture gold in 1912 for the statuette An American Trotter.",
       },
     },
     {
@@ -272,8 +275,8 @@ export const peculiarSports = definePack(
     {
       key: "sport-1912-combined-throws",
       question:
-        "How could Armas Taipale record an 82.86-metre result in a 1912 discus event without throwing that far?",
-      answer: "The event added his best right-handed throw to his best left-handed throw.",
+        "How could Armas Taipale be credited with more than eighty metres in a 1912 discus event without throwing that far?",
+      answer: "His best right-handed throw was added to his best left-handed throw.",
       source: {
         title: "Olympedia — Discus Throw, Both Hands, Men, 1912",
         url: "https://www.olympedia.org/results/56902",
@@ -292,31 +295,32 @@ export const peculiarSports = definePack(
       },
     },
     {
-      key: "sport-elliot-one-hand",
+      key: "sport-levy-switches-roles",
       question:
-        "What was unusual about the lift that earned Launceston Elliot gold at Athens in 1896?",
-      answer: "He raised a dumbbell using only one hand.",
+        "What role did Lawrence Levy take at Athens in 1896 after withdrawing from weightlifting over the rules?",
+      answer: "He became a judge of the competition, while also assisting a British lifter.",
       source: {
         title: "Olympedia — Weightlifting at the 1896 Summer Olympics",
         url: "https://www.olympedia.org/editions/1/sports/WLF",
-        note: "The archive describes dumbbells used in the one-handed lift and records Elliot as its winner; the two-handed event used a barbell.",
+        note: "The account says Levy withdrew when the requested dumbbell event was refused, then joined Prince Georgios as a judge and served as assistant to British lifter Launceston Elliot.",
       },
     },
     {
-      key: "sport-athens-rope-ranking",
-      question: "What mattered first when ranking rope climbers at the 1896 Athens Games?",
-      answer: "How high they climbed; time and style broke ties.",
+      key: "sport-wax-bullet-duels",
+      question:
+        "How did early twentieth-century sportsmen adapt pistol duelling so they could shoot at one another competitively?",
+      answer: "They fired wax bullets and wore heavy protective clothing and face shields.",
       source: {
-        title: "Olympedia — Rope Climbing, Men, 1896",
-        url: "https://www.olympedia.org/results/70007",
-        note: "The historical result page states that height climbed determined the winner, with time and style used to break ties; reaching the top was not required for a valid result.",
+        title: "Wikipedia — Pistol dueling",
+        url: "https://en.wikipedia.org/wiki/Pistol_dueling",
+        note: "The history and rules describe a sporting version developed around 1900 with wax bullets, protective clothing and plate-glass face visors. Wax rounds could still injure exposed flesh.",
       },
     },
     {
       key: "sport-rubingh-hybrid",
       question:
-        "In the hybrid contest developed by Iepe Rubingh, what activity alternates with rounds of boxing?",
-      answer: "Playing chess.",
+        "How could a competitor in Iepe Rubingh’s hybrid sport win without ever landing a punch?",
+      answer: "Deliver checkmate: rounds of chess alternate with rounds of boxing.",
       source: {
         title: "BBC News — Chess boxing catching on in India",
         url: "https://www.bbc.co.uk/news/world-asia-india-25099024",

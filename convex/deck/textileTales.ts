@@ -46,8 +46,8 @@ export const textileTales = definePack(
     {
       key: "textile-turkey-red",
       question:
-        "What unsavoury ingredients helped nineteenth-century Scottish dyers produce their celebrated Turkey red?",
-      answer: "Sheep dung, bullocks' blood, and urine were used alongside madder, oil, and alum.",
+        "What did nineteenth-century Scottish dyers add to their Turkey-red recipes that would alarm a modern laundry customer?",
+      answer: "Sheep dung, bullocks' blood and urine, alongside the madder, oil and alum.",
       source: {
         title: "National Museums Scotland — Colouring the Nation",
         url: "https://www.nms.ac.uk/collections/departments/global-arts-cultures-design/projects/colouring-the-nation",
@@ -57,8 +57,8 @@ export const textileTales = definePack(
     {
       key: "textile-shoulder-puffs",
       question:
-        "What was hidden inside fashionable women's enormous puffed sleeves in the 1820s and 1830s?",
-      answer: "Separate down-filled pads that held the sleeves out.",
+        "Why might an 1830s woman tie a pair of small feather-filled pillows to her upper arms?",
+      answer: "To prop up the enormous puffed sleeves of her dress.",
       source: {
         title: "Victoria and Albert Museum — Corsets, crinolines and bustles",
         url: "https://www.vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear",
@@ -67,9 +67,8 @@ export const textileTales = definePack(
     },
     {
       key: "textile-izod-torsos",
-      question:
-        "Why did Edwin Izod's late-Victorian manufacturing process need steam-heated copper torsos?",
-      answer: "Starched corsets dried on them to acquire a stiff, rounded shape.",
+      question: "What did Edwin Izod's factory shape by drying it on a steam-heated copper torso?",
+      answer: "A starched corset, moulded into the fashionable stiff, rounded silhouette.",
       source: {
         title: "Victoria and Albert Museum — Corsets, crinolines and bustles",
         url: "https://www.vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear",
@@ -78,9 +77,9 @@ export const textileTales = definePack(
     },
     {
       key: "textile-new-phantom",
-      question:
-        "What useful trick did the 'New Phantom', patented in 1884, perform when its owner sat down?",
-      answer: "Its bustle collapsed on a pivot, then opened up again when she stood.",
+      question: "What did the patented 'New Phantom' of 1884 do for its wearer?",
+      answer:
+        "It held out the back of her skirt, collapsed when she sat, and opened up again when she stood.",
       source: {
         title: "Victoria and Albert Museum — Corsets, crinolines and bustles",
         url: "https://www.vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear",
@@ -89,9 +88,8 @@ export const textileTales = definePack(
     },
     {
       key: "textile-corset-stiffener",
-      question:
-        "What part of a whale supplied the flexible strips used to stiffen many nineteenth-century corsets?",
-      answer: "Baleen: the keratin plates in its upper jaw, not its bones.",
+      question: "What was the corset material sold as 'whalebone' actually made from?",
+      answer: "Baleen from a whale's upper jaw: flexible keratin plates, not bones.",
       source: {
         title: "Victoria and Albert Museum — Corsets, crinolines and bustles",
         url: "https://www.vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear",
@@ -99,21 +97,21 @@ export const textileTales = definePack(
       },
     },
     {
-      key: "textile-mica-glitter",
+      key: "textile-ferretti-fibre",
       question:
-        "Besides metal and shells, what naturally glittering material has been used to decorate Indian textiles?",
-      answer: "Mica, a shimmering mineral.",
+        "What was Italian inventor Antonio Ferretti turning into clothing fibres in the 1930s?",
+      answer: "Protein from skimmed milk, spun into a wool substitute called Lanital.",
       source: {
-        title: "Victoria and Albert Museum — Indian textiles",
-        url: "https://www.vam.ac.uk/articles/indian-textiles",
-        note: "The raw-materials section lists insect wings, cowrie shells and shimmering minerals such as mica among natural products applied to finished Indian textiles.",
+        title: "Museum of Design in Plastics — Casein fibre",
+        url: "https://www.modip.ac.uk/projects/curators-guide-synthetic-garments/featured-fibres-and-materials/casein-fibre",
+        note: "The museum identifies Antonio Ferretti as inventor, dates the patent to 1935, lists Lanital among the trade names and specifies casein from skimmed milk as the starting material.",
       },
     },
     {
       key: "textile-backstrap-anchor",
       question:
-        "What provides a crucial living part of the support for a traditional back-strap loom?",
-      answer: "The weaver's own waist, around which a supporting strap is fastened.",
+        "What supplies part of the support in a traditional loom made from little more than sticks, rope and a strap?",
+      answer: "The weaver's own body: the strap fastens around the waist to anchor the loom.",
       source: {
         title: "Victoria and Albert Museum — Indian textiles",
         url: "https://www.vam.ac.uk/articles/indian-textiles",
@@ -134,8 +132,8 @@ export const textileTales = definePack(
     {
       key: "textile-libbey-dress",
       question:
-        "What unexpected material went into the dress exhibited by the Libbey company at Chicago's 1893 world's fair?",
-      answer: "Glass fibre.",
+        "What unexpected material was woven into a dress exhibited at Chicago's 1893 world's fair?",
+      answer: "Glass fibre, made into a wearable dress by the Libbey Glass Company.",
       source: {
         title:
           "Victoria and Albert Museum — 10 things we didn't know before reading Fashioned from Nature",
@@ -144,23 +142,22 @@ export const textileTales = definePack(
       },
     },
     {
-      key: "textile-cocoon-length",
-      question:
-        "Roughly how much silk thread can be unwound from a single cocoon, according to the V&A?",
-      answer: "About 700 to 1,000 metres: potentially close to a kilometre from one cocoon.",
+      key: "textile-delphos-storage",
+      question: "What surprising storage instructions came with Fortuny's luxurious Delphos gowns?",
+      answer:
+        "Roll the dress lengthwise, twist it into a ball and put it in a tiny hat box to preserve its pleats.",
       source: {
-        title:
-          "Victoria and Albert Museum — 10 things we didn't know before reading Fashioned from Nature",
-        url: "https://www.vam.ac.uk/blog/shop/10-things-we-didnt-know-before-reading-fashioned-from-nature",
-        note: "Item two states that the silk thread from one cocoon measures between 700 and 1,000 metres; the question preserves the source's approximate range.",
+        title: "Smithsonian National Museum of American History — Woman's Dress, 1936",
+        url: "https://www.americanhistory.si.edu/collections/object/nmah_368825",
+        note: "The collection record says Delphos dresses were meant to be rolled lengthwise, twisted into a ball and stored in an oval miniature hat box. The museum retains the box supplied with this example.",
       },
     },
     {
       key: "textile-beaten-bark",
       question:
-        "How can makers turn strips of inner tree bark into a continuous sheet of cloth without a loom?",
+        "What can be made into a sheet of cloth by soaking and pounding, without spinning or weaving any thread?",
       answer:
-        "They soak and repeatedly beat the bark until its fibres soften, stretch, and fuse together.",
+        "Inner tree bark: its fibres soften, stretch and fuse together under repeated beating.",
       source: {
         title: "National Museums Scotland — The ancient craft of barkcloth across the world",
         url: "https://www.nms.ac.uk/discover-catalogue/the-ancient-craft-of-barkcloth-across-the-world",
@@ -182,8 +179,9 @@ export const textileTales = definePack(
     {
       key: "textile-perkin-accident",
       question:
-        "What marketable surprise emerged from William Henry Perkin's unsuccessful attempt to make quinine in 1856?",
-      answer: "Mauveine, a purple dye that helped launch the synthetic-dye industry.",
+        "What did a British teenager discover while trying to make a malaria medicine in 1856?",
+      answer:
+        "A brilliant purple dye: William Henry Perkin's failed quinine experiment yielded mauveine.",
       source: {
         title: "Science Museum — The colourful chemistry of artificial dyes",
         url: "https://www.sciencemuseum.org.uk/objects-and-stories/chemistry/colourful-chemistry-artificial-dyes",
@@ -191,15 +189,14 @@ export const textileTales = definePack(
       },
     },
     {
-      key: "textile-morton-testcards",
-      question:
-        "Why did James Morton send cards of coloured fabric to his brother-in-law in India around 1904?",
+      key: "textile-silk-metal-weight",
+      question: "Why might a buyer find metal salts in an expensive length of Victorian silk?",
       answer:
-        "To leave them in direct sunlight for weeks or months and see which dyes resisted fading.",
+        "Silk was sold by weight, so makers could add metal salts to make it heavier and more valuable.",
       source: {
-        title: "Science Museum — The colourful chemistry of artificial dyes",
-        url: "https://www.sciencemuseum.org.uk/objects-and-stories/chemistry/colourful-chemistry-artificial-dyes",
-        note: "After seeing his textiles fade in Liberty's window, Morton sent testcards to Patrick Fagan in India for prolonged sunlight exposure; this research informed his Sundour dyes.",
+        title: "Rijksmuseum — Shattered silk",
+        url: "https://www.rijksmuseum.nl/en/research/our-research/conservation-science/textile/shattered-silk",
+        note: "The museum states that late-19th- and early-20th-century silk was weighted with metal salts to increase its value because it was sold by weight. Weighting also aided processes such as dyeing.",
       },
     },
     {
@@ -216,9 +213,8 @@ export const textileTales = definePack(
     {
       key: "textile-crackle-quilt",
       question:
-        "What destructive step helped NUNO produce the worn-looking surface of its 1992 'Crackle Quilt' fabric?",
-      answer:
-        "Acid dissolved selected rayon fibres, then tumble-drying frayed the surviving pattern.",
+        "How did NUNO make brand-new 'Crackle Quilt' fabric look as if it had endured years of wear?",
+      answer: "Acid ate away selected rayon fibres, then tumble-drying frayed what remained.",
       source: {
         title: "Victoria and Albert Museum — Crackle Quilt",
         url: "https://collections.vam.ac.uk/item/O39102/crackle-quilt-woven-textile-sudo-reiko/",
@@ -238,8 +234,10 @@ export const textileTales = definePack(
     },
     {
       key: "textile-beetling-mallets",
-      question: "Why did linen finishers repeatedly pound damp cloth with heavy wooden mallets?",
-      answer: "To flatten and compact it, producing a hard, glossy surface.",
+      question:
+        "How did traditional linen finishers make cloth glossy without adding dye or varnish?",
+      answer:
+        "By pounding the damp cloth with heavy wooden mallets until its surface was flat and shiny.",
       source: {
         title: "Encyclopedia Britannica — Textile: Finishes enhancing appearance",
         url: "https://www.britannica.com/topic/textile/Finishes-enhancing-appearance",
@@ -248,8 +246,9 @@ export const textileTales = definePack(
     },
     {
       key: "textile-fluorescent-whites",
-      question: "How can an apparently colourless dye make a white fabric look even whiter?",
-      answer: "It fluoresces, increasing the blue light coming from the cloth.",
+      question: "How can adding a colourless substance make white cloth seem brighter?",
+      answer:
+        "It makes the cloth fluoresce, giving off extra blue light that makes it look whiter.",
       source: {
         title: "Encyclopedia Britannica — Textile: Finishes enhancing appearance",
         url: "https://www.britannica.com/topic/textile/Finishes-enhancing-appearance",
@@ -259,9 +258,9 @@ export const textileTales = definePack(
     {
       key: "textile-watered-pattern",
       question:
-        "How can a finisher put a wavy, water-like pattern into cloth without drawing or printing it in ink?",
+        "How did textile finishers give silk a rippling, water-like pattern without applying coloured ink?",
       answer:
-        "By pressing it with rollers: the moiré effect is created through pressure on the fabric.",
+        "They pressed the pattern into the fabric with rollers, creating a moiré or 'watered' effect.",
       source: {
         title: "Encyclopedia Britannica — Textile: Finishes enhancing appearance",
         url: "https://www.britannica.com/topic/textile/Finishes-enhancing-appearance",
@@ -271,9 +270,9 @@ export const textileTales = definePack(
     {
       key: "textile-detachable-pockets",
       question:
-        "How could an eighteenth-century woman take off her pockets without removing her dress?",
+        "What could an eighteenth-century woman tie on beneath her skirts to carry her possessions?",
       answer:
-        "They were separate pouches tied around her waist, reached through openings in her skirts.",
+        "Separate pockets, worn on their own waistband and reached through openings in the dress.",
       source: {
         title: "Victoria and Albert Museum — Women's tie-on pockets",
         url: "https://www.vam.ac.uk/articles/womens-tie-pockets/",
@@ -283,9 +282,8 @@ export const textileTales = definePack(
     {
       key: "textile-schiaparelli-padding",
       question:
-        "What illusion did raised cotton padding create on Schiaparelli and Dalí's black evening dress of 1938?",
-      answer:
-        "The wearer's skeleton seemed to sit on the outside, with padded ribs, spine, and other bones.",
+        "What did Schiaparelli and Dalí make appear on the outside of a black evening dress in 1938?",
+      answer: "The wearer's skeleton, with ribs, spine and other bones raised in padded relief.",
       source: {
         title: "Victoria and Albert Museum — The Skeleton Dress",
         url: "https://collections.vam.ac.uk/item/O65687/the-skeleton-dress-evening-dress-elsa-schiaparelli/",
@@ -295,9 +293,9 @@ export const textileTales = definePack(
     {
       key: "textile-miyake-oversizing",
       question:
-        "Why were garments in Issey Miyake's 1993 line first sewn at two or three times their intended size?",
+        "What happened to the deliberately oversized garments in Issey Miyake's 1993 line after they had been sewn?",
       answer:
-        "The completed clothes were then heat-pressed into permanent pleats, reducing them to their final size.",
+        "They were heat-pressed into permanent pleats, reducing clothes two or three times too large to their intended size.",
       source: {
         title: "Metropolitan Museum of Art — Issey Miyake, Dress, ca. 1993",
         url: "https://www.metmuseum.org/art/collection/search/678868",
@@ -305,22 +303,21 @@ export const textileTales = definePack(
       },
     },
     {
-      key: "textile-teasel-combs",
+      key: "textile-cloth-cropping-shears",
       question:
-        "What prickly natural tool helped cloth dressers raise a soft nap before trimming woollen fabric?",
-      answer: "Teasel heads, used to comb the cloth's surface.",
+        "A Georgian cloth dresser laid damp woollen cloth on a board and piled heart-shaped iron weights across it. What did he do next?",
+      answer:
+        "Gave the cloth a haircut, cropping its fuzzy surface flat with a pair of enormous hand shears.",
       source: {
         title: "Science Museum Group — Cloth Dresser",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co67425/cloth-dresser",
-        note: "The museum's description of George Walker's 1813 print explains that woollen cloth was combed with teasels to raise its nap before the worker cropped it with shears.",
+        note: "The museum's description of George Walker's 1813 print records the worker cropping woollen cloth with shears, with damp cloth laid on a shear board and pressure increased by heart-shaped weights.",
       },
     },
     {
       key: "textile-taranto-gloves",
-      question:
-        "What unusual animal product was knitted into a pair of Taranto gloves made around 1890–1900?",
-      answer:
-        "Byssus, the silky anchoring threads of a mollusc, made into the textile called sea silk.",
+      question: "What supplied the thread for a pair of fine Taranto gloves made around 1890–1900?",
+      answer: "A mollusc's silky anchoring threads, spun into the textile known as sea silk.",
       source: {
         title: "Victoria and Albert Museum — Pair of gloves, Taranto",
         url: "https://collections.vam.ac.uk/item/O360663/pair-of-gloves/",
@@ -340,9 +337,9 @@ export const textileTales = definePack(
     {
       key: "textile-crinoline-fire",
       question:
-        "Why could the new, lighter skirt supports of the 1850s make an open fireplace unexpectedly dangerous?",
+        "What danger became easier to overlook when skirt supports grew much lighter in the 1850s?",
       answer:
-        "They held flammable skirts far from the body, making it harder to judge when the fabric was nearing a flame.",
+        "The huge skirt could reach a fireplace before its wearer realised how close the fabric was to the flames.",
       source: {
         title: "Victoria and Albert Museum — Corsets, crinolines and bustles",
         url: "https://www.vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear",

@@ -42,22 +42,21 @@ export const curiousArchitecture = definePack(
       },
     },
     {
-      key: "architecture-wreay-pinecone-motif",
-      question:
-        "At Wreay, what recurring natural object did Sarah Losh work into her decorative scheme?",
-      answer: "Pine cones, carved into the stone ornament around her church’s entrance.",
+      key: "architecture-shaw-revolving-hut",
+      question: "How did George Bernard Shaw adjust his garden writing hut as the day went on?",
+      answer: "He rotated the entire hut on a circular track to follow the sunlight.",
       source: {
-        title: "Historic England — Church of St Mary, Wreay, 1087758",
-        url: "https://historicengland.org.uk/listing/the-list/list-entry/1087758",
-        note: "The listing credits Sarah Losh with the 1840–42 church and describes pine-cone and formalised water-lily motifs around its west entrance.",
+        title: "Shaw’s Corner — Writing hut",
+        url: "https://en.wikipedia.org/wiki/Shaw%27s_Corner",
+        note: "The account describes the hut’s central steel-pole frame and circular track, which allowed it to turn on its axis to follow the sun during the day.",
       },
     },
     {
       key: "architecture-invisible-livestock-barrier",
       question:
-        "How could an estate owner keep grazing animals off the lawn without a fence spoiling the view?",
+        "How did landscape gardeners hide an estate’s livestock barrier from guests admiring the view?",
       answer:
-        "Use a ha-ha: a sunken ditch with a vertical retaining wall, concealed below the sightline.",
+        "They used a ha-ha: a sunken ditch with a vertical retaining wall, hidden below the sightline.",
       source: {
         title: "Historic England — Do You Know Your Gloriette From Your Grotto?",
         url: "https://heritagecalling.com/2023/07/06/do-you-know-your-gloriette-from-your-grotto/",
@@ -90,9 +89,9 @@ export const curiousArchitecture = definePack(
     {
       key: "architecture-packwood-manufactured-tudor",
       question:
-        "What is misleading about the Tudor-looking rooms created by Baron Ash at Packwood House?",
+        "What did Baron Ash spend decades creating inside Packwood House in the twentieth century?",
       answer:
-        "They were assembled in the 20th century from antiques and salvaged architectural pieces.",
+        "An apparently Tudor interior, assembled from antiques and pieces salvaged from other buildings.",
       source: {
         title: "National Trust — Unique houses",
         url: "https://www.nationaltrust.org.uk/visit/houses-buildings/top-10-unique-houses-to-visit",
@@ -145,8 +144,7 @@ export const curiousArchitecture = definePack(
     },
     {
       key: "architecture-leeds-miniature-fortress",
-      question:
-        "What were the turrets of the little fortress on Cardigan Road in Leeds designed to let visitors watch?",
+      question: "What was the little fortress on Cardigan Road in Leeds actually built to contain?",
       answer: "Bears in a pit below: the apparent fort was a zoo enclosure.",
       source: {
         title: "Historic England — Fashionable Fakery: 8 Fantastical Follies",
@@ -166,9 +164,9 @@ export const curiousArchitecture = definePack(
     },
     {
       key: "architecture-lyveden-false-ruin",
-      question: "What is deceptive about the ruined appearance of the garden lodge at Lyveden?",
+      question: "Why has the garden lodge at Lyveden lacked a roof for more than four centuries?",
       answer:
-        "It was never finished, rather than completed and then ruined; work stopped after its owner’s death in 1605.",
+        "It was never finished: construction stopped when its owner died in 1605, leaving what looks like a ruin.",
       source: {
         title: "National Trust — History of Lyveden",
         url: "https://www.nationaltrust.org.uk/visit/leicestershire-northamptonshire/lyveden/history-of-lyveden",
@@ -177,8 +175,8 @@ export const curiousArchitecture = definePack(
     },
     {
       key: "architecture-blickling-pyramid-purpose",
-      question: "What lies inside the large stone pyramid in the woods at Blickling?",
-      answer: "Burial chambers for members of the Hobart family.",
+      question: "What unusual building did the Hobart family put in the woods at Blickling?",
+      answer: "A stone pyramid containing the family’s burial chambers.",
       source: {
         title: "National Trust Heritage Records — The Mausoleum, Blickling, MNA165195",
         url: "https://heritagerecords.nationaltrust.org.uk/HBSMR/MonRecord.aspx?uid=MNA165195",
@@ -198,8 +196,8 @@ export const curiousArchitecture = definePack(
     {
       key: "architecture-allen-one-wall-castle",
       question:
-        "What is missing behind the entrance towers that Ralph Allen erected above Bath in 1762?",
-      answer: "The castle itself: the whole structure is an ornamental screen wall.",
+        "What would a visitor discover after walking through Ralph Allen’s castle gateway above Bath?",
+      answer: "There is no castle behind it: the grand frontage is just an ornamental screen wall.",
       source: {
         title: "Historic England — Sham Castle, 1312449",
         url: "https://historicengland.org.uk/listing/the-list/list-entry/1312449",
@@ -230,7 +228,7 @@ export const curiousArchitecture = definePack(
     {
       key: "architecture-ightham-little-resident",
       question:
-        "For what sort of resident did Sir Thomas Colyer-Fergusson add a grand little home to Ightham Mote in 1890?",
+        "Who was meant to enjoy the elaborate new accommodation built in Ightham Mote’s courtyard in 1890?",
       answer: "A dog; the courtyard contains a richly built Victorian kennel.",
       source: {
         title: "National Trust — The house at Ightham Mote",
@@ -251,8 +249,7 @@ export const curiousArchitecture = definePack(
     },
     {
       key: "architecture-fonthill-falling-tower",
-      question:
-        "What repeatedly went wrong with William Beckford’s spectacular centrepiece at Fonthill Abbey?",
+      question: "What repeatedly disrupted William Beckford’s grand plans for Fonthill Abbey?",
       answer: "Its enormous central tower kept collapsing.",
       source: {
         title: "Encyclopaedia Britannica — William Beckford summary",
@@ -273,7 +270,7 @@ export const curiousArchitecture = definePack(
     },
     {
       key: "architecture-zillah-service-station",
-      question: "What shape is the celebrated novelty service station at Zillah, Washington?",
+      question: "What household object inspired a roadside service station at Zillah, Washington?",
       answer: "A giant teapot, complete with a handle and spout.",
       source: {
         title: "Library of Congress — Teapot Dome gas station, Zillah, Washington",
@@ -293,21 +290,21 @@ export const curiousArchitecture = definePack(
       },
     },
     {
-      key: "architecture-roundhay-party-castle",
+      key: "architecture-catalogue-churches",
       question:
-        "What was the apparently defensive castle at Roundhay Park actually built for in 1811?",
-      answer: "A summerhouse and small social gatherings, not warfare.",
+        "How could a nineteenth-century congregation in a remote settlement get a new church built quickly?",
+      answer:
+        "Order a kit church: prefabricated timber sections clad in corrugated iron, delivered to be assembled on site.",
       source: {
-        title: "Historic England — A Brief Introduction to Garden and Park Structures",
-        url: "https://heritagecalling.com/2016/05/04/a-brief-introduction-to-garden-and-park-structures/",
-        note: "The Roundhay section states that Thomas Nicholson commissioned the castle in 1811 as a summerhouse and venue for small social gatherings.",
+        title: "Building Conservation Directory — Tin Tabernacles",
+        url: "https://www.buildingconservation.com/articles/tin-tabernacles/tin-tabernacles.html",
+        note: "Liz Induni describes nineteenth-century churches sold in kit form through catalogues, usually timber-framed and clad in galvanised corrugated iron for rapid erection.",
       },
     },
     {
       key: "architecture-clavell-retreating-tower",
-      question:
-        "What unusual rescue operation saved Clavell Tower from the eroding coast at Kimmeridge?",
-      answer: "The entire tower was moved 25 metres inland.",
+      question: "Why do old records place Clavell Tower closer to the sea than it stands today?",
+      answer: "The whole tower was relocated 25 metres inland to save it from coastal erosion.",
       source: {
         title: "Dorset Historic Environment Record — Clavell Tower, via Heritage Gateway",
         url: "https://www.heritagegateway.org.uk/Gateway/Results_Single.aspx?uid=MDO7719&resourceID=1012",

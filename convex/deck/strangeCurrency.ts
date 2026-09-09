@@ -26,8 +26,8 @@ export const strangeCurrency = definePack(
     {
       key: "currency-tea-brick",
       question:
-        "What were some eighteenth- and nineteenth-century Siberian payment bricks made from?",
-      answer: "Compressed tea leaves, which could serve as money as well as a source of a drink.",
+        "What could a Siberian trader in the 1800s spend intact or break up to brew at home?",
+      answer: "A brick of compressed tea leaves, accepted as money as well as used for making tea.",
       source: {
         title: "Smithsonian National Numismatic Collection — Forms of Money",
         url: "https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money",
@@ -47,8 +47,7 @@ export const strangeCurrency = definePack(
     },
     {
       key: "currency-chinese-spade",
-      question:
-        "What everyday object did some early Chinese bronze coins imitate, complete with a hollow handle?",
+      question: "What shape did Chinese metalworkers give some of their earliest bronze money?",
       answer: "A spade: the coins were miniature versions of farming tools.",
       source: {
         title: "Smithsonian National Numismatic Collection — Forms of Money",
@@ -57,30 +56,31 @@ export const strangeCurrency = definePack(
       },
     },
     {
-      key: "currency-manilla-shape",
-      question: "What distinctive shape did a nineteenth-century West African manilla have?",
-      answer: "An open, horseshoe-shaped metal bracelet, used as a form of money.",
+      key: "currency-canadian-hairdo",
+      question:
+        "Why did the Bank of Canada have the Queen's hair retouched on its 1954 banknote series?",
+      answer: "People thought they could see the Devil's face in her curls.",
       source: {
-        title: "Smithsonian National Numismatic Collection — Forms of Money",
-        url: "https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money",
-        note: "The Metallic Money section illustrates a nineteenth-century West African manilla as a horseshoe-shaped copper ring among forms of metallic currency.",
+        title: "Bank of Canada Museum — The Devil is in the Hairdo",
+        url: "https://www.bankofcanadamuseum.ca/2018/10/devil-hairdo/",
+        note: "Reports of a devil-like face in the Queen's hair prompted engraver Yves Baril to darken highlights. The museum rejects deliberate sabotage and traces the shapes to the original photograph.",
       },
     },
     {
       key: "currency-kissi-rod",
-      question: "What did a Kissi penny look like, rather than a small round disc?",
-      answer: "A long, thin iron rod with worked ends, sometimes twisted along its length.",
+      question: "Why might someone take a damaged Kissi penny to a blacksmith rather than a bank?",
+      answer:
+        "It was an iron rod; a broken one could not circulate as money until a blacksmith repaired it.",
       source: {
-        title: "Smithsonian National Numismatic Collection — Forms of Money",
-        url: "https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money",
-        note: "The Iron Money section identifies the long twisted iron object as a Kissi penny and describes hammered, sharpened and pointed shapes demonstrating the iron’s quality.",
+        title: "Allen Memorial Art Museum, Oberlin College — Kissi Penny",
+        url: "https://allenartcollection.oberlin.edu/objects/12401/kissi-penny",
+        note: "The museum describes long iron wires used as currency in Sierra Leone, Liberia and Guinea, and states: 'If a penny was broken, it could not circulate until repaired by a blacksmith.'",
       },
     },
     {
       key: "currency-tin-hat",
-      question:
-        "What everyday shape did a distinctive tin coin from the Malay Peninsula take in 1864?",
-      answer: "A hat, cast in tin.",
+      question: "What might an 1864 tin payment from the Malay Peninsula resemble in miniature?",
+      answer: "A broad-brimmed hat, with a projecting crown.",
       source: {
         title: "Smithsonian National Numismatic Collection — Forms of Money",
         url: "https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money",
@@ -88,13 +88,15 @@ export const strangeCurrency = definePack(
       },
     },
     {
-      key: "currency-tiger-tongue",
-      question: "What was a nineteenth-century Laotian ‘tiger tongue’ in a trader’s payment?",
-      answer: "An oblong silver bar used as money.",
+      key: "currency-franklin-leaves",
+      question:
+        "What did Benjamin Franklin's printing firm borrow from nature to frustrate banknote counterfeiters?",
+      answer:
+        "The intricate veins of real leaves, cast into printing plates to make hard-to-copy patterns.",
       source: {
-        title: "Smithsonian National Numismatic Collection — Forms of Money",
-        url: "https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money",
-        note: "The exhibit identifies a Silver ‘Tiger Tongue’ Bar, Laos, nineteenth century, in its Metallic Money section.",
+        title: "Bureau of Engraving and Printing — History",
+        url: "https://www.bep.gov/currency/history",
+        note: "The 1739 entry describes Franklin's colonial notes bearing 'unique raised impressions of patterns cast from actual leaves' as a counterfeit deterrent.",
       },
     },
     {
@@ -110,7 +112,7 @@ export const strangeCurrency = definePack(
     {
       key: "currency-tenino-return",
       question:
-        "What material did Tenino, Washington, revive for its local relief payments in 2020?",
+        "What Depression-era solution did Tenino, Washington, bring back for relief payments in 2020?",
       answer:
         "Thin slices of wood, printed on the same press used for the town’s Depression-era emergency currency.",
       source: {
@@ -120,25 +122,27 @@ export const strangeCurrency = definePack(
       },
     },
     {
-      key: "currency-possneck-leather",
-      question: "What was unusual about the material of Pößneck’s five-million-mark note of 1923?",
-      answer: "It was printed on leather rather than paper.",
+      key: "currency-clark-portrait",
+      question:
+        "What was so provocative about the man on an American five-cent banknote in the 1860s?",
+      answer:
+        "He was Spencer Clark, the living official in charge of making the currency, rather than a national hero.",
       source: {
-        title:
-          "Smithsonian National Numismatic Collection — 5,000,000 Marks, Possneck, Germany, 1923",
-        url: "https://americanhistory.si.edu/collections/object/nmah_1835114",
-        note: "The object record calls this a piece of leather Notgeld and lists its overall material as leather; its denomination is 5,000,000 marks.",
+        title: "Bureau of Engraving and Printing — History",
+        url: "https://www.bep.gov/currency/history",
+        note: "The history records public uproar over Clark's portrait on a five-cent note and Congress's subsequent 1866 ban on living people's likenesses on currency. It says how his portrait got there is unclear.",
       },
     },
     {
       key: "currency-bernhard-aging",
       question:
-        "Why did prisoners forced to work on Operation Bernhard repeatedly rub and fold freshly printed sheets with dirty hands?",
-      answer: "To make counterfeit British banknotes look worn and convincingly used.",
+        "What betrayed a nearly perfect Operation Bernhard forgery when a Bank of England clerk checked it in 1943?",
+      answer:
+        "Its serial number belonged to a genuine banknote that had already been withdrawn and paid.",
       source: {
         title: "Bank of England Museum — Operation Bernhard",
         url: "https://www.bankofengland.co.uk/museum/online-collections/blog/operation-bernhard",
-        note: "After describing counterfeit production at Sachsenhausen, the museum explains that prisoners with dirty hands rubbed and folded the notes to create wear and tear.",
+        note: "The museum says a counterfeit arriving through a British bank in Morocco reused the serial number of a note already recorded as paid in the Bank's ledgers. This revealed the forgery.",
       },
     },
     {
@@ -155,9 +159,9 @@ export const strangeCurrency = definePack(
     {
       key: "currency-cruikshank-signature",
       question:
-        "Whose name replaced the cashier’s signature on George Cruikshank’s 1819 imitation banknote?",
+        "What kind of official supposedly signed George Cruikshank's satirical banknote of 1819?",
       answer:
-        "Jack Ketch, the notorious executioner, in a protest against hanging people for forgery.",
+        "An executioner: Jack Ketch's name replaced the cashier's in a protest against hanging for forgery.",
       source: {
         title: "Bank of England Museum — Counterfeit and imitation notes",
         url: "https://www.bankofengland.co.uk/museum/online-collections/banknotes/counterfeit-and-imitation-notes",
@@ -166,10 +170,8 @@ export const strangeCurrency = definePack(
     },
     {
       key: "currency-hard-times-insult",
-      question:
-        "What political message could Americans carry in their small change during the financial crises of the 1830s?",
-      answer:
-        "Mockery of President Andrew Jackson, stamped onto privately issued ‘hard times’ tokens.",
+      question: "How did some Americans turn making change into a protest against Andrew Jackson?",
+      answer: "They used privately issued coins stamped with mockery of his economic policies.",
       source: {
         title: "Smithsonian National Museum of American History — Money and Debt",
         url: "https://americanhistory.si.edu/explore/exhibitions/american-enterprise/online/merchant-era/money-and-debt",
@@ -179,9 +181,8 @@ export const strangeCurrency = definePack(
     {
       key: "currency-red-coil",
       question:
-        "What gave a newly made tevau from the Santa Cruz Islands its brilliant red surface?",
-      answer:
-        "Tens of thousands of tiny honeyeater feathers, attached to a coiled belt used for major payments.",
+        "What could a Santa Cruz Islands family roll up and use to pay for a canoe or meet marriage obligations?",
+      answer: "A long coiled belt covered in tens of thousands of red honeyeater feathers.",
       source: {
         title: "British Museum — Feather money (tevau), Google Arts & Culture",
         url: "https://artsandculture.google.com/asset/feather-money-tevau/VgGlcG0Ke5_w0w",
@@ -190,14 +191,14 @@ export const strangeCurrency = definePack(
     },
     {
       key: "currency-porcelain-small-change",
-      question:
-        "What fragile-looking substitute for metal did German manufacturers use to make some emergency coins?",
-      answer: "Porcelain and stoneware, including issues produced by the Meissen manufactory.",
+      question: "How did some German makers evade a 1922 ban on producing emergency money?",
+      answer:
+        "They replaced the coins' value markings with symbols such as oak leaves or rosettes.",
       source: {
         title:
           "Deutsches Historisches Museum — Making money out of natural materials: Porcelain emergency money",
         url: "https://www.dhm.de/journal/en/post/making-money-out-of-natural-materials-porcelain-emergency-money",
-        note: "The museum documents ceramic Notgeld from 1917 onward and distinguishes porcelain, bisque porcelain and Böttger stoneware issues; these were coins, not paper banknotes.",
+        note: "The museum states that the 17 July 1922 ban on all emergency-money production was not always obeyed: value notations were simply replaced with symbols such as oak leaves or rosettes.",
       },
     },
     {
@@ -213,8 +214,9 @@ export const strangeCurrency = definePack(
     },
     {
       key: "currency-finnish-raha",
-      question: "What animal product lies behind the Finnish word ‘raha,’ now meaning money?",
-      answer: "Fur skins, especially squirrel pelts, which were used as a means of exchange.",
+      question: "Before it meant money, what did the Finnish word 'raha' mean?",
+      answer:
+        "A fur skin, especially a squirrel pelt: something that could itself be used in exchange.",
       source: {
         title: "Bank of Finland Museum — The history of money",
         url: "https://www.rahamuseo.fi/en/museum/history-of-money-and-payments/history-of-money/",
@@ -222,21 +224,22 @@ export const strangeCurrency = definePack(
       },
     },
     {
-      key: "currency-pengo-sixteen-zeros",
+      key: "currency-bent-rejection",
       question:
-        "What astonishing face value appears on a Hungarian National Bank note dated 3 June 1946 in the American Numismatic Society collection?",
-      answer: "Ten quadrillion pengő: 10,000,000,000,000,000 units on one paper note.",
+        "Why might an English suitor deliberately bend a perfectly good coin before giving it to a woman?",
+      answer:
+        "To turn it into an unspendable love token; if she sent it back, she was rejecting his advances.",
       source: {
-        title: "American Numismatic Society — Hungarian National Bank note, 1992.117.7104",
-        url: "https://numismatics.org/collection/1992.117.7104",
-        note: "The catalogue identifies paper money dated 3 June 1946 with denomination 10000000000000000 pengo, an artifact of the hyperinflation period.",
+        title: "Bank of Canada Museum — Love tokens: Change of heart",
+        url: "https://www.bankofcanadamuseum.ca/2026/02/love-tokens-change-of-heart/",
+        note: "The museum describes wave-shaped bent coins given as romantic tokens from medieval England onward. Its 1813 example's caption says returning the bent coin rejected the giver as a prospective mate.",
       },
     },
     {
       key: "currency-sweden-plate",
-      question: "Why did a Swedish eight-daler payment from 1663 weigh about 31 pounds?",
-      answer:
-        "It was a huge stamped copper plate, made when Sweden had plentiful copper but little silver.",
+      question:
+        "What made a Swedish eight-daler coin of 1663 more like a piece of furniture than pocket change?",
+      answer: "It was a huge stamped copper plate weighing about 31 pounds.",
       source: {
         title: "Smithsonian National Numismatic Collection — 8 Dalers, Sweden, 1663",
         url: "https://americanhistory.si.edu/collections/object/nmah_911467",
@@ -285,24 +288,23 @@ export const strangeCurrency = definePack(
       question:
         "Why did the United States replace ordinary notes in Hawaii with specially labelled ones during World War II?",
       answer:
-        "So money captured if the islands were invaded could be distinguished from the rest of the nation’s currency.",
+        "The specially marked money could be declared worthless if an invading army captured it.",
       source: {
-        title: "Smithsonian National Numismatic Collection — Messages of Circumstance",
-        url: "https://americanhistory.si.edu/explore/exhibitions/value-money/online/messages-money/messages-circumstance",
-        note: "The wartime section links withdrawal of regular notes and issuance of Hawaii-overprinted notes to protecting national currency if the islands fell to Japanese invasion.",
+        title: "Bureau of Engraving and Printing — History",
+        url: "https://www.bep.gov/currency/history",
+        note: "The 1942 Hawaii Overprints entry says specially marked notes replaced ordinary currency and could be declared worthless in the event of enemy occupation.",
       },
     },
     {
-      key: "currency-zimbabwe-reused-design",
+      key: "currency-weekly-stamp",
       question:
-        "What modest earlier denomination shared the design of Zimbabwe’s hundred-trillion-dollar note?",
+        "Why could keeping certain American local banknotes until the end of the week cost the holder money in the 1930s?",
       answer:
-        "A two-dollar note from 1983; hyperinflation later put the same design on a vastly larger face value.",
+        "The holder had to buy and attach a new dated stamp before the note could be spent again.",
       source: {
-        title:
-          "Smithsonian National Numismatic Collection — 100,000,000,000,000 Dollars, Zimbabwe, 2008",
-        url: "https://americanhistory.si.edu/collections/object/nmah_1694052",
-        note: "The record states that the hundred-trillion-dollar note’s design appeared on the two-dollar note in 1983. The prompt does not equate the printed date with the circulation date.",
+        title: "Federal Reserve Bank of Cleveland — Stamp Scrip: Money People Paid to Use",
+        url: "https://www.clevelandfed.org/-/media/project/clevelandfedtenant/clevelandfedsite/publications/economic-commentary/2008/ec-20080401-stamp-scrip-money-people-paid-to-use-pdf.pdf",
+        note: "Page 2 distinguishes dated from transaction scrip. Dated notes typically needed a paid stamp each week; whoever held one at week's end had to attach the next stamp before spending it.",
       },
     },
     {
@@ -318,14 +320,15 @@ export const strangeCurrency = definePack(
       },
     },
     {
-      key: "currency-wampum-source",
+      key: "currency-holey-dollar",
       question:
-        "What supplied the raw material for the purple and white beads in traditional wampum?",
-      answer: "Seashells, cut into beads and strung together for use in exchange.",
+        "How did Governor Macquarie turn each imported Spanish dollar into two usable coins?",
+      answer:
+        "He had the centre punched out, then issued both the ring and the removed disc as separate coins.",
       source: {
-        title: "Smithsonian National Numismatic Collection — Forms of Money",
-        url: "https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money",
-        note: "The exhibit identifies clam-shell wampum and explains that shells were raw material for Native American monetary objects.",
+        title: "Reserve Bank of Australia Museum — Crisis in the Colony of New South Wales",
+        url: "https://museum.rba.gov.au/exhibitions/pocket-guides/currency-crises/crisis-in-the-colony-of-new-south-wales.html",
+        note: "The museum describes removing the Spanish dollar's centre and reminting both parts: the ring became a holey dollar and the core a dump, each with its own denomination.",
       },
     },
     {

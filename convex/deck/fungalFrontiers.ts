@@ -13,9 +13,9 @@ export const fungalFrontiers = definePack(
     {
       key: "fungal-malheur-individual",
       question:
-        "What surprising connection links widely separated patches of honey mushrooms in Oregon’s Malheur National Forest?",
+        "What was unexpected about the honey fungus studied in Oregon’s Malheur National Forest?",
       answer:
-        "They can belong to one enormous fungal individual spreading underground across more than 2,000 acres.",
+        "Much of it was one enormous individual, spreading underground across more than 2,000 acres.",
       source: {
         title: "USDA Forest Service — A Fungus Among Us",
         url: "https://www.usda.gov/about-usda/news/blog/fungus-among-us-author-names-oregons-humongous-fungus-one-grossest-places-earth",
@@ -26,7 +26,7 @@ export const fungalFrontiers = definePack(
       key: "fungal-maze-route",
       question: "What did a yellow blob accomplish in Toshiyuki Nakagaki’s laboratory in 2000?",
       answer:
-        "It found the shortest route through a maze between two food supplies, despite having no brain.",
+        "The brainless slime mould found the shortest route through a maze between two food supplies.",
       source: {
         title: "Nature — Maze-solving by an amoeboid organism",
         url: "https://www.nature.com/articles/35035159",
@@ -59,9 +59,10 @@ export const fungalFrontiers = definePack(
     },
     {
       key: "fungal-pilobolus-launch",
-      question: "Why must Pilobolus send its next generation on a violent journey away from home?",
+      question:
+        "How does the dung fungus Pilobolus get its spores onto fresh grass to be swallowed by grazing animals?",
       answer:
-        "It grows on dung and fires spore packets onto fresh grass, where grazing animals swallow them and restart the cycle.",
+        "It fires spore packets away from the dung like a tiny cannon, landing them on vegetation.",
       source: {
         title: "Nature Education — Spore Ballistics",
         url: "https://www.nature.com/scitable/blog/student-voices/spore_ballistics/",
@@ -70,9 +71,10 @@ export const fungalFrontiers = definePack(
     },
     {
       key: "fungal-foxfire-wood",
-      question: "Why can a fallen log produce a faint greenish glow on a completely dark night?",
+      question:
+        "What can living fungi do to a fallen log that a night-time walker might find eerie?",
       answer:
-        "Living fungi digesting the wood can emit their own light, a phenomenon called foxfire.",
+        "Make it glow greenish in the dark: the wood-decaying fungi emit their own light, called foxfire.",
       source: {
         title: "University of Georgia — Foxfire: Bioluminescence in the Forest",
         url: "https://www.walterreeves.com/uploads/pdf/foxfire.pdf",
@@ -93,8 +95,7 @@ export const fungalFrontiers = definePack(
     },
     {
       key: "fungal-worm-nets",
-      question:
-        "What does Arthrobotrys oligospora build when it detects the right chemical signals nearby?",
+      question: "What do some hungry soil fungi build after detecting the chemical scent of worms?",
       answer: "Sticky microscopic nets that trap worms, which the fungus then digests.",
       source: {
         title: "National Geographic — Worm-Eating Fungi Eavesdrop on the Chemicals of Their Prey",
@@ -104,8 +105,9 @@ export const fungalFrontiers = definePack(
     },
     {
       key: "fungal-many-mating-types",
-      question: "What is startling about how Schizophyllum commune sorts out potential mates?",
-      answer: "It has more than 23,000 genetically determined mating types, rather than just two.",
+      question: "What is startling about courtship in the split-gill mushroom?",
+      answer:
+        "Its mating system has more than 23,000 genetically determined compatibility types, rather than a simple male–female division.",
       source: {
         title: "Quanta Magazine — Why Nature Prefers Couples, Even for Yeast",
         url: "https://www.quantamagazine.org/why-nature-prefers-couples-even-for-yeast-20180717/",
@@ -115,7 +117,7 @@ export const fungalFrontiers = definePack(
     {
       key: "fungal-plastic-degrader",
       question:
-        "What surprising meal helped make Aspergillus tubingensis a subject of waste-reduction research?",
+        "What unexpected material can the mould Aspergillus tubingensis break down in laboratory experiments?",
       answer:
         "Polyester polyurethane plastic, which it can break down under experimental conditions.",
       source: {
@@ -148,10 +150,9 @@ export const fungalFrontiers = definePack(
     },
     {
       key: "fungal-ceylon-crop-switch",
-      question:
-        "How did Hemileia vastatrix help change the drink associated with nineteenth-century Ceylon?",
+      question: "How did a fungal outbreak help transform nineteenth-century Ceylon’s economy?",
       answer:
-        "Its destruction of coffee plantations helped tea replace coffee as the island’s major plantation crop.",
+        "It devastated the coffee plantations, helping turn the island into a major tea producer instead.",
       source: {
         title: "Royal Botanic Gardens, Kew — The top 10 fungi in Kew’s incredible Fungarium",
         url: "https://www.kew.org/about-us/press-media/top-10-fungi-fungarium",
@@ -161,9 +162,9 @@ export const fungalFrontiers = definePack(
     {
       key: "fungal-space-survivors",
       question:
-        "What happened to two kinds of lichen after researchers left them exposed outside an orbiting spacecraft in 2005?",
+        "What ordeal did researchers put two kinds of lichen through on the Foton-M2 mission in 2005?",
       answer:
-        "They survived roughly two weeks in open space and retained their ability to photosynthesise after returning.",
+        "They exposed them outside an orbiting spacecraft for roughly two weeks; the lichens survived and could still photosynthesise.",
       source: {
         title: "European Space Agency — Lichen survives in space",
         url: "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Lichen_survives_in_space",
@@ -184,7 +185,7 @@ export const fungalFrontiers = definePack(
     },
     {
       key: "fungal-splash-launch",
-      question: "How do the tiny cups made by Cyathus send their apparent eggs out into the world?",
+      question: "What launches the spore packets of bird’s-nest fungi towards nearby vegetation?",
       answer: "Raindrops splash the spore-filled packets from the cups onto nearby vegetation.",
       source: {
         title:
@@ -196,8 +197,8 @@ export const fungalFrontiers = definePack(
     {
       key: "fungal-cicada-stimulant",
       question:
-        "What unexpected stimulant did researchers find in cicadas infected by Massospora cicadina?",
-      answer: "Cathinone, an amphetamine-type compound previously known from plants.",
+        "What unexpected chemical did researchers discover in cicadas infected by one species of Massospora fungus?",
+      answer: "Cathinone, an amphetamine-type stimulant previously known from plants.",
       source: {
         title:
           "Smithsonian Magazine — A Fungus Causes Cicadas to Mate Like Crazy, Even After Their Butts Fall Off",
@@ -208,8 +209,8 @@ export const fungalFrontiers = definePack(
     {
       key: "fungal-submerged-mushrooms",
       question:
-        "What made small, gilled mushrooms discovered in Oregon’s Rogue River especially unusual?",
-      answer: "They developed and matured entirely underwater in the flowing river.",
+        "What was peculiar about the life cycle of a small, gilled mushroom discovered in southern Oregon?",
+      answer: "It grew and matured entirely underwater in a flowing river.",
       source: {
         title:
           "Mycologia — Aquatic gilled mushrooms: Psathyrella fruiting in the Rogue River in southern Oregon",
@@ -219,8 +220,8 @@ export const fungalFrontiers = definePack(
     },
     {
       key: "fungal-inkcap-liquid",
-      question: "What unusual substance oozes from the gills of a mature Coprinus comatus?",
-      answer: "A black, ink-like liquid containing its spores.",
+      question: "What happens to the gills of the mushroom Coprinus comatus as it matures?",
+      answer: "They exude a black, ink-like liquid containing its spores.",
       source: {
         title: "Royal Botanic Gardens, Kew — In pictures: Fungi spotting season at Kew",
         url: "https://www.kew.org/read-and-watch/in-pictures-fungi-spotting-season-at-kew",
@@ -230,7 +231,7 @@ export const fungalFrontiers = definePack(
     {
       key: "fungal-amoeba-farming",
       question:
-        "Why do some Dictyostelium colonies stop eating before their food supply is exhausted?",
+        "Why do some colonies of social amoebas stop eating before their bacterial food supply is exhausted?",
       answer:
         "They carry living bacteria with their spores, seeding a fresh crop of food at their next destination.",
       source: {
@@ -252,9 +253,10 @@ export const fungalFrontiers = definePack(
     },
     {
       key: "fungal-anatomical-memory",
-      question: "How can Physarum retain a record of where it found food without having a brain?",
+      question:
+        "Where does the brainless slime mould Physarum store a lasting record of where it found food?",
       answer:
-        "It changes the thickness of its branching tubes, leaving a physical imprint of the food’s location.",
+        "In its own anatomy: changes in the thickness of its branching tubes preserve the food’s location.",
       source: {
         title: "Smithsonian Magazine — How the Brainless Slime Mold Stores Memories",
         url: "https://www.smithsonianmag.com/smart-news/how-brainless-slime-mold-stores-memories-180977097/",
@@ -264,8 +266,9 @@ export const fungalFrontiers = definePack(
     {
       key: "fungal-alfreds-tinder",
       question:
-        "What practical use can the dry black lumps of Daldinia concentrica serve on a camping trip?",
-      answer: "They catch a spark and smoulder, providing tinder for starting a fire.",
+        "What useful trick can the fungus nicknamed ‘King Alfred’s cakes’ perform when dried?",
+      answer:
+        "Its dried fruiting bodies catch a spark and smoulder, providing tinder for starting a fire.",
       source: {
         title: "Royal Botanic Gardens, Kew — Meet the firestarting fungus",
         url: "https://www.kew.org/read-and-watch/king-alfreds-cakes-fungus",
@@ -286,9 +289,9 @@ export const fungalFrontiers = definePack(
     {
       key: "fungal-grown-insulation",
       question:
-        "What holds the rice hulls or cotton husks together in the experimental insulation called Greensulate?",
+        "What job were Ecovative’s fungus-bound blocks of farm waste designed to do in a house?",
       answer:
-        "A grown network of fungal mycelium, used as a natural binder instead of synthetic resin.",
+        "Insulate it: the blocks used fungal growth to bind rice hulls or cotton husks into an alternative to synthetic insulation.",
       source: {
         title: "Smithsonian Magazine — Insulation Made Out of ... Mushrooms?",
         url: "https://www.smithsonianmag.com/arts-culture/insulation-made-out-of-mushrooms-56920324/",
@@ -297,10 +300,9 @@ export const fungalFrontiers = definePack(
     },
     {
       key: "fungal-robot-controller",
-      question:
-        "What living component helped Cornell researchers control both a walking robot and a wheeled robot in 2024?",
+      question: "What did Cornell researchers make living mushroom tissue do in a 2024 experiment?",
       answer:
-        "King oyster mushroom mycelium, whose electrical impulses were translated into movement commands.",
+        "Control robots: electrical impulses from king oyster mycelium were translated into commands for walking and wheeled machines.",
       source: {
         title: "National Geographic — Watch this fungus control a robot",
         url: "https://www.nationalgeographic.com/science/article/fungi-oyster-mushroom-robot-technology",
@@ -322,8 +324,9 @@ export const fungalFrontiers = definePack(
     {
       key: "fungal-moa-evidence",
       question:
-        "What did traces of colourful fungi in ancient New Zealand droppings reveal about extinct upland moa?",
-      answer: "The birds ate those fungi, helping disperse their spores through dung.",
+        "What unlikely evidence showed that extinct upland moa helped spread New Zealand’s colourful fungi?",
+      answer:
+        "Fungal spores and DNA in fossilised moa droppings, showing that the birds ate the fungi.",
       source: {
         title:
           "Smithsonian Magazine — Fossilized Poop Reveals How Extinct, Flightless Birds Helped Spread New Zealand’s Colorful Fungi",
@@ -333,10 +336,9 @@ export const fungalFrontiers = definePack(
     },
     {
       key: "fungal-transplant-protection",
-      question:
-        "How can a chemical originally obtained from a fungus help a donated organ stay in its new owner?",
+      question: "What crucial medical job does the fungus-derived chemical cyclosporine perform?",
       answer:
-        "Cyclosporine suppresses the immune response that would otherwise reject the transplant.",
+        "It suppresses the patient’s immune response so a transplanted organ is not rejected.",
       source: {
         title: "Royal Botanic Gardens, Kew — 11 fun-gi facts",
         url: "https://www.kew.org/read-and-watch/fun-gi-facts",
@@ -344,15 +346,14 @@ export const fungalFrontiers = definePack(
       },
     },
     {
-      key: "fungal-pollution-sentinel",
+      key: "fungal-laundry-enzymes",
       question:
-        "Why might conservationists pay attention when Lobaria pulmonaria disappears from otherwise standing trees?",
-      answer:
-        "This lichen is highly sensitive to air pollution and acid rain, so its loss can signal worsening conditions.",
+        "What household chore quietly relies on fungal enzymes in some commercial products?",
+      answer: "Laundry: fungus-derived enzymes in washing powder break down stains.",
       source: {
-        title: "Royal Botanic Gardens, Kew — The top 10 fungi in Kew’s incredible Fungarium",
-        url: "https://www.kew.org/about-us/press-media/top-10-fungi-fungarium",
-        note: "The Lobaria pulmonaria section identifies air pollution, acid rain and habitat clearing as threats. Its disappearance is not claimed to identify a single cause with certainty.",
+        title: "Royal Botanic Gardens, Kew — 11 fun-gi facts",
+        url: "https://www.kew.org/read-and-watch/fun-gi-facts",
+        note: "Kew explicitly identifies an enzyme derived from fungi in washing powder that helps break down stains.",
       },
     },
   ],

@@ -47,9 +47,9 @@ export const secretSocieties = definePack(
     {
       key: "secret-hellfire-excavation",
       question:
-        "What practical purpose, besides hosting clandestine meetings, did digging the West Wycombe caves serve?",
+        "What public-works project gave West Wycombe villagers jobs after three failed harvests?",
       answer:
-        "It employed local people after failed harvests and supplied material for a new road.",
+        "Digging the caves associated with the Hellfire Club; the excavated material also went into a new road.",
       source: {
         title: "National Trust — West Wycombe Trail",
         url: "https://www.nationaltrust.org.uk/visit/oxfordshire-buckinghamshire-berkshire/west-wycombe-park-village-and-hill/west-wycombe-trail",
@@ -59,7 +59,7 @@ export const secretSocieties = definePack(
     {
       key: "secret-globe-tavern",
       question:
-        "What unusual room at West Wycombe did John Wilkes praise as 'the best globe tavern I was ever in'?",
+        "What kind of drinking room high above West Wycombe village earned John Wilkes's enthusiastic praise?",
       answer: "A hollow golden ball atop the church tower, large enough to seat ten people.",
       source: {
         title: "National Trust — West Wycombe Trail",
@@ -81,8 +81,9 @@ export const secretSocieties = definePack(
     {
       key: "secret-cape-knighthood",
       question:
-        "What did titles such as 'Sir Silence' and 'Sir Heavyhours' signify in eighteenth-century Edinburgh?",
-      answer: "Playful aliases adopted by members of the secretive, tavern-based Cape Club.",
+        "What were men calling themselves 'Sir Silence' and 'Sir Heavyhours' actually members of in eighteenth-century Edinburgh?",
+      answer:
+        "The Cape Club, a secretive tavern society whose members adopted mock-knightly aliases.",
       source: {
         title: "National Library of Scotland — List of members of the Cape Club",
         url: "https://digital.nls.uk/learning/scottish-enlightenment/source/list-of-members-of-the-cape-club/",
@@ -92,7 +93,7 @@ export const secretSocieties = definePack(
     {
       key: "secret-apostles-whales",
       question:
-        "What were the 'Whales' served at early Saturday meetings of the Cambridge Conversazione Society?",
+        "What would you actually be eating if the Cambridge Conversazione Society offered you 'Whales'?",
       answer: "Sardines on toast.",
       source: {
         title: "King’s College Cambridge — A Cambridge Secret Revealed: the Apostles",
@@ -103,8 +104,9 @@ export const secretSocieties = definePack(
     {
       key: "secret-apostles-angels",
       question:
-        "Who were the 'Angels' invited to occasional private dinners by the Cambridge Apostles?",
-      answer: "Former active members, including graduates and fellows.",
+        "What happened to a Cambridge Apostle when he ceased to be an active member of the society?",
+      answer:
+        "He became an Angel: a former member who could still be invited back to private dinners.",
       source: {
         title: "King’s College Cambridge — A Cambridge Secret Revealed: the Apostles",
         url: "https://www.kings.cam.ac.uk/cambridge-secret-revealed-apostles",
@@ -114,8 +116,9 @@ export const secretSocieties = definePack(
     {
       key: "secret-apostles-vote",
       question:
-        "What deliberate oddity governed the question put to a vote after early Cambridge Apostles debates?",
-      answer: "It was supposed to have only a tangential connection to what they had just debated.",
+        "Why might listening carefully to an early Cambridge Apostles debate leave you unprepared for its closing vote?",
+      answer:
+        "The question put to the vote was supposed to be only tangentially related to the debate.",
       source: {
         title: "King’s College Cambridge — A Cambridge Secret Revealed: the Apostles",
         url: "https://www.kings.cam.ac.uk/cambridge-secret-revealed-apostles",
@@ -137,7 +140,7 @@ export const secretSocieties = definePack(
       key: "secret-darwin-dining",
       question:
         "What unusual weekly project did Charles Darwin and seven fellow Cambridge students organize together?",
-      answer: "A dining club devoted to trying rare delicacies, followed by card games.",
+      answer: "Eating rare delicacies together in the Glutton Club, then playing cards.",
       source: {
         title: "Christ’s College Cambridge — Darwin’s friends in Cambridge",
         url: "https://www.christs.cam.ac.uk/darwins-friends-cambridge-most-popular-and-most-welcome",
@@ -155,14 +158,15 @@ export const secretSocieties = definePack(
       },
     },
     {
-      key: "secret-kneller-format",
+      key: "secret-thirteen-dinner-signal",
       question:
-        "What specialized artistic term arose from Godfrey Kneller's portraits of a London club's members?",
-      answer: "The “kit-cat”: a portrait canvas measuring 36 by 28 inches.",
+        "How did William Harnett Blanch's London dining club announce that dinner was ready?",
+      answer:
+        "By smashing two mirrors on the floor; the club was devoted to defying bad-luck superstitions.",
       source: {
-        title: "Encyclopaedia Britannica — Kit-Cat Club",
-        url: "https://www.britannica.com/topic/Kit-Cat-Club",
-        note: "Britannica records 42 member portraits and identifies their 36-by-28-inch canvas format as a kit-cat.",
+        title: "BBC News - The dining club dedicated to disproving bad luck",
+        url: "https://www.bbc.com/news/articles/c5yd7npe1zno",
+        note: "The account of London's Thirteen Club, organized in 1890, says dinner was announced by smashing two mirrors on the floor before guests followed an undertaker under a ladder.",
       },
     },
     {
@@ -191,9 +195,8 @@ export const secretSocieties = definePack(
     {
       key: "secret-spartacus-correspondence",
       question:
-        "Why could a letter to 'Spartacus' in eighteenth-century Bavaria be intended for a university professor?",
-      answer:
-        "It was the secret correspondence name of Adam Weishaupt, founder of the Bavarian Illuminati.",
+        "What identity did the Bavarian Illuminati give their founder when corresponding in secret?",
+      answer: "Spartacus: the classical alias used by university professor Adam Weishaupt.",
       source: {
         title: "Encyclopaedia Britannica — Illuminati",
         url: "https://www.britannica.com/topic/illuminati-group-designation",
@@ -201,14 +204,15 @@ export const secretSocieties = definePack(
       },
     },
     {
-      key: "secret-imaginary-geography",
+      key: "secret-carbonari-police-rival",
       question:
-        "How did the Bavarian Illuminati make the place names in their internal correspondence misleading?",
-      answer: "They gave towns and provinces arbitrary new names.",
+        "How did Naples's police minister try to destroy the Carbonari after the Bourbon restoration?",
+      answer:
+        "He founded a rival secret society and recruited brigands to attack suspected revolutionaries.",
       source: {
-        title: "Encyclopaedia Britannica — Illuminati",
-        url: "https://www.britannica.com/topic/illuminati-group-designation",
-        note: "Britannica explains that ciphered correspondence also disguised geography by assigning new, arbitrary designations to towns and provinces.",
+        title: "Encyclopaedia Britannica, 1911 - Carbonari",
+        url: "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Carbonari",
+        note: "The entry describes the prince of Canosa creating the Calderai del Contrappeso to suppress the Carbonari, recruiting brigands who attacked supposed Liberals. The effort failed to eliminate the movement.",
       },
     },
     {
@@ -234,21 +238,21 @@ export const secretSocieties = definePack(
       },
     },
     {
-      key: "secret-phi-beta-kappa-origins",
+      key: "secret-wilde-club-refusal",
       question:
-        "Before becoming an academic honour society, what sort of organization was Phi Beta Kappa?",
-      answer: "A secret literary and philosophical society founded at William and Mary in 1776.",
+        "Why did Oscar Wilde refuse an invitation to William Harnett Blanch's new London dining club?",
+      answer:
+        "It wanted to stamp out superstition, which Wilde loved; he called common sense the enemy of romance.",
       source: {
-        title: "Encyclopaedia Britannica — Phi Beta Kappa",
-        url: "https://www.britannica.com/topic/Phi-Beta-Kappa",
-        note: "The article distinguishes the society’s secret literary origins from its nineteenth-century development as an honour society.",
+        title: "BBC News - The dining club dedicated to disproving bad luck",
+        url: "https://www.bbc.com/news/articles/c5yd7npe1zno",
+        note: "The article quotes Wilde's reply declining the Thirteen Club: 'I love superstitions' and 'Common sense is the enemy of romance.' He asked the club to leave some unreality.",
       },
     },
     {
       key: "secret-carbonari-greeting",
-      question:
-        "What family relationship did members of the Carbonari use when greeting one another?",
-      answer: "They addressed one another as “good cousins.”",
+      question: "How would a nineteenth-century Carbonaro greet an unrelated fellow conspirator?",
+      answer: "As a 'good cousin,' the society's customary form of address.",
       source: {
         title: "Encyclopaedia Britannica, 1911 — Carbonari",
         url: "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Carbonari",
@@ -290,8 +294,8 @@ export const secretSocieties = definePack(
     },
     {
       key: "secret-odd-fellows-skeletons",
-      question: "Why have real human skeletons been kept in some Odd Fellows lodges?",
-      answer: "They are used in initiation ceremonies to remind members of their mortality.",
+      question: "What startling object might a new Odd Fellow encounter during initiation?",
+      answer: "A real human skeleton, used to remind the initiate of mortality.",
       source: {
         title: "Smithsonian — Eight Secret Societies You Probably Haven’t Heard Of",
         url: "https://www.smithsonianmag.com/history/eight-secret-societies-you-probably-havent-heard-of-180958294/",
@@ -299,25 +303,27 @@ export const secretSocieties = definePack(
       },
     },
     {
-      key: "secret-foresters-examination",
+      key: "secret-oculist-eyebrow-initiation",
       question:
-        "What kind of examination did aspiring Independent Order of Foresters members have to pass, according to an 1879 report?",
-      answer: "A medical examination by a physician connected with the order.",
+        "Why did candidates in one eighteenth-century German initiation have hairs plucked from their eyebrows?",
+      answer:
+        "It stood in for eye surgery: after failing to read a blank page, they were handed writing and declared able to see.",
       source: {
-        title: "Smithsonian — Eight Secret Societies You Probably Haven’t Heard Of",
-        url: "https://www.smithsonianmag.com/history/eight-secret-societies-you-probably-havent-heard-of-180958294/",
-        note: "The Foresters section quotes the Boston Weekly Globe’s 1879 account of the physician’s examination, in the context of mutual financial benefits.",
+        title: "WIRED - They Cracked This 250-Year-Old Code, and Found a Secret Society Inside",
+        url: "https://www.wired.com/2012/11/ff-the-manuscript/",
+        note: "The opening reconstructs the Oculists' ritual from the deciphered Copiale manuscript: a blank page, spectacles, symbolic eyebrow plucking and a replacement written page. No flesh was cut.",
       },
     },
     {
-      key: "secret-workmen-dollar",
+      key: "secret-water-rats-pony",
       question:
-        "When an early Ancient Order of United Workmen member died, what was each surviving brother expected to do?",
-      answer: "Contribute one dollar to the dead member’s family.",
+        "According to its own history, what animal inspired the entertainers' brotherhood called the Grand Order of Water Rats?",
+      answer:
+        "A rain-soaked racing pony named Magpie, which a bus driver said looked like a water rat.",
       source: {
-        title: "Smithsonian — Eight Secret Societies You Probably Haven’t Heard Of",
-        url: "https://www.smithsonianmag.com/history/eight-secret-societies-you-probably-havent-heard-of-180958294/",
-        note: "The article describes a one-dollar contribution from each member at a death and the later cap of $2,000 on the group donation.",
+        title: "Grand Order of Water Rats - Our history",
+        url: "https://gowr.co.uk/our-history/",
+        note: "Curator Andre Vincent recounts a bus driver likening the pony Magpie to a water rat in the rain. Its racing syndicate then formed the fellowship Pals of the Water Rat.",
       },
     },
     {
@@ -335,9 +341,8 @@ export const secretSocieties = definePack(
     {
       key: "secret-dukduk-mask",
       question:
-        "What is notably missing from the taller of the two cone-shaped masks used by the Dukduk society of New Britain?",
-      answer:
-        "A face: the male dukduk mask is faceless, unlike the eye-and-mouth design of the tubuan.",
+        "What sort of mask identifies the male dukduk figure in the secret society of New Britain?",
+      answer: "A tall cone with no face, unlike the tubuan mask with its painted eyes and mouth.",
       source: {
         title: "Encyclopaedia Britannica — Dukduk",
         url: "https://www.britannica.com/topic/Dukduk-Oceanic-secret-society",

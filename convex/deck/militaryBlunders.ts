@@ -23,7 +23,7 @@ export const militaryBlunders = definePack(
     {
       key: "military-concrete-listeners",
       question:
-        "What job did Britain's large concave coastal concrete structures perform before radar?",
+        "Why were air-defence crews stationed beside enormous concrete bowls on Britain's coast?",
       answer:
         "They concentrated the sound of approaching aircraft so listeners could detect a raid before seeing it.",
       source: {
@@ -46,9 +46,9 @@ export const militaryBlunders = definePack(
     {
       key: "military-soviet-dogs",
       question:
-        "What task did Soviet troops train specially equipped dogs to perform against enemy vehicles?",
+        "What were Soviet troops training to carry explosives beneath enemy tanks in the early 1940s?",
       answer:
-        "Run beneath tanks carrying explosives that detonated when a projecting lever struck the hull.",
+        "Dogs wearing explosive harnesses; a projecting lever was meant to strike the tank's underside and detonate the charge.",
       source: {
         title: "Imperial War Museums — Second World War Weapons That Failed",
         url: "https://www.iwm.org.uk/history/second-world-war/north-west-europe/weird-weapons",
@@ -58,7 +58,7 @@ export const militaryBlunders = definePack(
     {
       key: "military-mincemeat-wallet",
       question:
-        "Why did British intelligence put ticket stubs and keepsakes from a fictional fiancée into a dead man's pockets in 1943?",
+        "Why did British intelligence invent a fiancée for an officer who never existed in 1943?",
       answer:
         "To make a corpse posing as an officer seem genuine, so the enemy would trust the false invasion plans he carried.",
       source: {
@@ -70,7 +70,7 @@ export const militaryBlunders = definePack(
     {
       key: "military-emu-ambush",
       question:
-        "In Western Australia in 1932, what opponents were soldiers supposed to herd toward two Lewis machine guns?",
+        "What were three Australian soldiers sent to fight with two Lewis machine guns in 1932?",
       answer:
         "Crop-raiding emus, which scattered into small, fast-moving groups instead of presenting an easy mass target.",
       source: {
@@ -114,7 +114,7 @@ export const militaryBlunders = definePack(
     },
     {
       key: "military-white-rabbit",
-      question: "What was the 130-ton British machine nicknamed 'White Rabbit' designed to do?",
+      question: "What was Britain's 130-ton wartime machine nicknamed 'Nellie' designed to do?",
       answer:
         "Dig a trench toward the enemy while troops advanced in the freshly excavated channel behind it.",
       source: {
@@ -136,7 +136,7 @@ export const militaryBlunders = definePack(
     },
     {
       key: "military-goliath",
-      question: "Despite its name, what was the German wartime device called 'Goliath'?",
+      question: "What did German forces send toward targets under the name 'Goliath'?",
       answer:
         "A miniature remote-controlled tracked vehicle that carried explosives to a target and blew itself up.",
       source: {
@@ -148,9 +148,9 @@ export const militaryBlunders = definePack(
     {
       key: "military-chainmail-faces",
       question:
-        "Why did some British tank crews wear leather-and-chain-mail face masks during the First World War?",
+        "What decidedly medieval equipment did some British tank crews wear into battle in the First World War?",
       answer:
-        "To shield their eyes and faces from hot metal fragments thrown around inside a tank when bullets struck its armour.",
+        "Leather-and-chain-mail face masks, shielding them from hot metal fragments thrown inside the tank when bullets hit its armour.",
       source: {
         title:
           "Imperial War Museums — Weird Weapons and Other Surprising Objects from the First World War",
@@ -172,8 +172,7 @@ export const militaryBlunders = definePack(
     },
     {
       key: "military-aerial-darts",
-      question:
-        "What simple, non-explosive weapons did aircraft drop onto troops and cavalry between 1914 and early 1916?",
+      question: "What did pilots scatter over enemy troops early in the First World War?",
       answer:
         "Flechettes: metal darts that relied on the force of their fall rather than an explosive charge.",
       source: {
@@ -186,9 +185,9 @@ export const militaryBlunders = definePack(
     {
       key: "military-false-tree",
       question:
-        "Why would a First World War camouflage team cut down a tree at night and replace it with an exact replica?",
+        "How did First World War camouflage teams add a lookout post without adding a new landmark to the battlefield?",
       answer:
-        "The replacement concealed an observation post from which a soldier could watch enemy movements.",
+        "They secretly replaced a real tree with a matching hollow replica that concealed an observer.",
       source: {
         title: "Imperial War Museums — 5 Facts About Camouflage in the First World War",
         url: "https://www.iwm.org.uk/history/first-world-war/western-front/facts-about-camouflage-in-the-first-world-war",
@@ -220,22 +219,21 @@ export const militaryBlunders = definePack(
       },
     },
     {
-      key: "military-false-footprints",
-      question:
-        "What were the rubber overshoes developed for SOE agents in South East Asia designed to achieve?",
+      key: "military-gibraltar-reinforcements",
+      question: "What unusual reinforcements did Churchill arrange to send to Gibraltar in 1942?",
       answer:
-        "Leave apparently barefoot tracks, disguising a boot-wearing agent's footprints as those of a local person.",
+        "Barbary macaques: a legend said Britain would lose Gibraltar if its apes disappeared, and their numbers had dwindled.",
       source: {
         title: "Imperial War Museums — Unbelievable Images from Weird War Two",
         url: "https://www.iwm.org.uk/history/second-world-war/weird-war-two",
-        note: "The Soft shoe shuffle section describes rubber overshoes cast as bare feet, intended to mislead Japanese forces about who had left the tracks.",
+        note: "The Ape escape section says Churchill replenished Gibraltar's dwindling macaques with animals from Morocco and Algiers in 1942, rather than tempt the territorial legend.",
       },
     },
     {
       key: "military-pink-spitfires",
       question:
-        "Why were some RAF reconnaissance Spitfires painted an apparently conspicuous pink?",
-      answer: "The colour helped camouflage them when flying at dawn or dusk.",
+        "What made certain RAF reconnaissance Spitfires look less conspicuous in the sky than on the ground?",
+      answer: "They were painted pink, a camouflage colour for flights at dawn or dusk.",
       source: {
         title: "Imperial War Museums — Unbelievable Images from Weird War Two",
         url: "https://www.iwm.org.uk/history/second-world-war/weird-war-two",
@@ -257,9 +255,9 @@ export const militaryBlunders = definePack(
     {
       key: "military-inflatable-shermans",
       question:
-        "What was unusual about the imitation Sherman tanks used in the Allies' D-Day deception scheme?",
+        "How did Allied planners keep assembly areas looking full after real tanks moved away before D-Day?",
       answer:
-        "They were inflatable; the dummies could replace real tanks moved out of holding areas and conceal invasion preparations.",
+        "They substituted inflatable Sherman tanks, concealing the departure of the real vehicles.",
       source: {
         title: "Imperial War Museums — D-Day's Parachuting Dummies and Inflatable Tanks",
         url: "https://www.iwm.org.uk/history/second-world-war/d-day/parachuting-dummies-and-inflatable-tanks",
@@ -269,7 +267,7 @@ export const militaryBlunders = definePack(
     {
       key: "military-window-strips",
       question:
-        "What did the RAF scatter during Operations Taxable and Glimmer to mislead German radar?",
+        "What did RAF aircraft shower along the French coast in the D-Day deceptions called Taxable and Glimmer?",
       answer: "Strips of metal foil, codenamed 'Window', which produced confusing radar returns.",
       source: {
         title: "Imperial War Museums — D-Day's Parachuting Dummies and Inflatable Tanks",
@@ -280,7 +278,7 @@ export const militaryBlunders = definePack(
     {
       key: "military-bobbin",
       question:
-        "What did the British armoured vehicle nicknamed 'Bobbin' do during the Normandy campaign?",
+        "How did an unusual British armoured vehicle prepare soft beaches for following tanks in Normandy?",
       answer:
         "Unrolled reinforced matting over soft beach ground so heavy vehicles could drive across it.",
       source: {
@@ -312,9 +310,9 @@ export const militaryBlunders = definePack(
     },
     {
       key: "military-rommels-asparagus",
-      question: "What was 'Rommel's Asparagus' in occupied Normandy?",
+      question: "Why did German forces plant 'Rommel's Asparagus' across Normandy fields?",
       answer:
-        "A network of tall posts planted in open ground to prevent Allied gliders from landing.",
+        "The 'asparagus' was a network of tall posts intended to wreck Allied gliders attempting to land.",
       source: {
         title: "Imperial War Museums — Clever Innovations Used on D-Day",
         url: "https://www.iwm.org.uk/history/second-world-war/d-day/clever-innovations-used-on-d-day",

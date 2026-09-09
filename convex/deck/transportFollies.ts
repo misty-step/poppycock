@@ -25,8 +25,9 @@ export const transportFollies = definePack(
     {
       key: "transport-bennie-above-trains",
       question:
-        "Where did George Bennie's proposed passenger system fit in relation to existing goods trains?",
-      answer: "Above them, on overhead tracks erected over an ordinary railway line.",
+        "How did George Bennie propose to add fast passenger traffic to corridors already used by goods trains?",
+      answer:
+        "Suspend the passenger vehicles from overhead tracks built above the ordinary railway.",
       source: {
         title: "Science Museum Group — The George Bennie Railplane System of Transport",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co230328/the-george-bennie-railplane-system-of-transport",
@@ -36,7 +37,7 @@ export const transportFollies = definePack(
     {
       key: "transport-lartigue-straddle",
       question:
-        "What unusual relationship did trains on the Listowel–Ballybunion line have with their main rail?",
+        "What unconventional arrangement supported trains on Ireland’s Listowel–Ballybunion line?",
       answer:
         "They straddled a single raised central rail, with the vehicle extending down on either side.",
       source: {
@@ -47,8 +48,7 @@ export const transportFollies = definePack(
     },
     {
       key: "transport-corinth-cradles",
-      question:
-        "How could small boats cross the Isthmus of Corinth long before a canal cut through it?",
+      question: "How did ancient Greeks move small ships across the Isthmus of Corinth?",
       answer: "They were carried over land on wheeled cradles running in grooves.",
       source: {
         title: "Encyclopaedia Britannica — Corinth Canal",
@@ -59,9 +59,9 @@ export const transportFollies = definePack(
     {
       key: "transport-parsey-reservoirs",
       question:
-        "What was Arthur Parsey's proposed 1845 locomotive meant to collect at pumping stations along its route?",
+        "How was Arthur Parsey’s proposed 1845 locomotive supposed to take on its motive power?",
       answer:
-        "Compressed air, stored in two large copper reservoirs and released through the engine's cylinders.",
+        "Recharge two large copper tanks with compressed air, which would then drive the engine’s cylinders.",
       source: {
         title: "Science Museum Group — Model of Arthur Parsey's compressed air locomotive, 1845",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co520254/model-of-arthur-parseys-compressed-air-locomotive-1845",
@@ -118,7 +118,7 @@ export const transportFollies = definePack(
     {
       key: "transport-underground-mail-capsules",
       question:
-        "How did some American cities send letters beneath the streets without using trains or human couriers?",
+        "What under-street delivery system let some American cities move mail clear of the traffic above?",
       answer:
         "They put the mail in canisters pushed or sucked through underground tubes by air pressure.",
       source: {
@@ -167,9 +167,9 @@ export const transportFollies = definePack(
     {
       key: "transport-mail-before-passengers",
       question:
-        "How did New York's postal service exploit the time ocean liners spent awaiting health inspections from 1897?",
+        "Why could letters reach New York before anyone on the liner carrying them was allowed ashore?",
       answer:
-        "Special boats collected their mail and rushed it ashore while passengers and crews were still being examined.",
+        "Special mail boats collected the letters while the liner’s passengers and crew were still undergoing quarantine inspections.",
       source: {
         title: "Smithsonian National Postal Museum — Harbor Mail Boat Service",
         url: "https://postalmuseum.si.edu/exhibition/customers-and-communities-serving-the-cities-overcoming-congestion/harbor-mail-boat",
@@ -190,9 +190,10 @@ export const transportFollies = definePack(
     },
     {
       key: "transport-penydarren-track",
-      question: "What failed to cope with Trevithick's successful 1804 haul at Penydarren?",
+      question:
+        "Why was Trevithick’s successful locomotive of 1804 still unsuitable for regular service at Penydarren?",
       answer:
-        "The track: his locomotive was too heavy for regular use on the tramroad's brittle cast-iron rails.",
+        "It was too heavy for the route’s brittle cast-iron rails: the engine worked, but the track could not cope.",
       source: {
         title:
           "National Railway Museum — Stephenson's Rocket, Rainhill and the rise of the locomotive",
@@ -250,8 +251,8 @@ export const transportFollies = definePack(
     {
       key: "transport-walking-warning",
       question:
-        "What human escort did Britain's 1865 law require for early self-propelled road vehicles?",
-      answer: "A person walking ahead with a red flag to warn other road users.",
+        "Why did operators of early British road locomotives need more than a driver to comply with an 1865 law?",
+      answer: "A person had to walk ahead carrying a red flag to warn other road users.",
       source: {
         title: "The National Archives — Living in the 19th century",
         url: "https://www.nationalarchives.gov.uk/currency-converter/living-in-the-19th-century/",
@@ -261,9 +262,9 @@ export const transportFollies = definePack(
     {
       key: "transport-speers-pavement",
       question:
-        "How did Alfred Speer propose to let New Yorkers travel faster merely by stepping sideways?",
+        "How did Alfred Speer’s 1871 scheme propose to move New Yorkers without carriages or trains?",
       answer:
-        "By moving between parallel traveling pavements, each running faster than the one beside it.",
+        "Parallel moving pavements ran at increasing speeds; passengers accelerated by stepping sideways from one belt to the next.",
       source: {
         title: "Smithsonian Magazine — Moving Sidewalks Before The Jetsons",
         url: "https://www.smithsonianmag.com/history/moving-sidewalks-before-the-jetsons-17484942/",
@@ -273,8 +274,8 @@ export const transportFollies = definePack(
     {
       key: "transport-parachuting-bicycles",
       question:
-        "What unusual first journey were BSA's special wartime bicycles designed to make before anyone rode them?",
-      answer: "A parachute descent: they folded up for airborne troops to use after landing.",
+        "Why did BSA develop a folding bicycle for the British War Office during the Second World War?",
+      answer: "So it could be dropped by parachute and ridden by airborne troops after landing.",
       source: {
         title: "Science Museum Group — B.S.A. folding bicycle, c. 1942",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co25649/b-s-a-folding-bicycle-c-1942",
@@ -295,8 +296,8 @@ export const transportFollies = definePack(
     {
       key: "transport-rivas-hand-timing",
       question:
-        "What extra chore faced the operator of Isaac de Rivas's 1807 vehicle, beyond steering it?",
-      answer: "Working the engine's valves and ignition by hand.",
+        "What did Isaac de Rivas’s driver have to do for every engine cycle while operating his 1807 vehicle?",
+      answer: "Open and close the valves and trigger the ignition by hand.",
       source: {
         title: "Encyclopaedia Britannica — Automobile: History of the automobile",
         url: "https://www.britannica.com/technology/automobile/History-of-the-automobile",
@@ -305,9 +306,9 @@ export const transportFollies = definePack(
     },
     {
       key: "transport-cugnot-counterweight",
-      question: "Why could unloading Cugnot's early road vehicle make it more likely to tip over?",
+      question: "What helped keep Cugnot’s early steam vehicle from tipping over?",
       answer:
-        "It was designed to haul cannons, whose weight helped balance the heavy steam chamber at the front.",
+        "The cannon it was carrying: that load helped counterbalance the heavy steam chamber at the front.",
       source: {
         title: "Encyclopaedia Britannica — Automobile: History of the automobile",
         url: "https://www.britannica.com/technology/automobile/History-of-the-automobile",
@@ -317,9 +318,9 @@ export const transportFollies = definePack(
     {
       key: "transport-punitive-tollgate",
       question:
-        "What startling tollgate price difference helped obstruct early British steam-coach services?",
+        "Why could replacing a horse coach with a steam coach turn an ordinary British tollgate into a financial disaster?",
       answer:
-        "A steam coach could be charged five pounds to pass where a horse-drawn coach paid only three pence.",
+        "Tolls penalised steam power: one example charged the steam coach five pounds where its horse-drawn rival paid three pence.",
       source: {
         title: "Encyclopaedia Britannica — Automobile: History of the automobile",
         url: "https://www.britannica.com/technology/automobile/History-of-the-automobile",
@@ -328,9 +329,8 @@ export const transportFollies = definePack(
     },
     {
       key: "transport-drais-feet",
-      question: "How did riders make Karl von Drais's early two-wheeled machine go and stop?",
-      answer:
-        "With their feet on the ground, pushing it along and using their feet to brake rather than pedaling.",
+      question: "How did riders propel and stop Karl von Drais’s early two-wheeled machine?",
+      answer: "Their feet, pushing against the ground to move and dragging on it to stop.",
       source: {
         title:
           "Smithsonian Magazine — This Wooden Running Machine Was Your Fixie's Great-Great Grandpa",
@@ -341,8 +341,8 @@ export const transportFollies = definePack(
     {
       key: "transport-bessemer-classroom",
       question:
-        "What former travelers' accommodation became a lecture room at Swanley Horticultural College?",
-      answer: "The saloon of the S. S. Bessemer, a former cross-Channel steamer.",
+        "What was unusual about the lecture room photographed at Swanley Horticultural College in 1937?",
+      answer: "It had been the saloon of a cross-Channel steamer, the S. S. Bessemer.",
       source: {
         title: "Science Museum Group — Daily Herald Photograph: Swanley Horticultural College",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co8804967/daily-herald-photograph-swanley-horticultural-college",

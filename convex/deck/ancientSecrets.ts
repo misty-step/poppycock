@@ -12,9 +12,9 @@ export const ancientSecrets = definePack(
   [
     {
       key: "ancient-hot-mixed-lime",
-      question: "What useful role can the conspicuous white lumps in ancient Roman mortar play?",
-      answer:
-        "They can supply reactive calcium that helps fill cracks, rather than simply being sloppy mixing.",
+      question:
+        "Why might the white lumps in Roman mortar have been an advantage rather than a mixing mistake?",
+      answer: "They held reactive calcium that could help seal cracks as they formed.",
       source: {
         title:
           "Science Advances — Hot mixing: Mechanistic insights into the durability of ancient Roman concrete",
@@ -58,8 +58,8 @@ export const ancientSecrets = definePack(
     {
       key: "ancient-greek-fire-tubes",
       question:
-        "How could a Byzantine crew deliver its closely guarded incendiary mixture without throwing a pot?",
-      answer: "Project it through tubes mounted on the ship’s prow.",
+        "How could a Byzantine warship use its prow as a weapon without ramming another vessel?",
+      answer: "Project an incendiary mixture through tubes mounted at the front of the ship.",
       source: {
         title: "Encyclopedia Britannica — Greek fire",
         url: "https://www.britannica.com/technology/Greek-fire",
@@ -69,12 +69,12 @@ export const ancientSecrets = definePack(
     {
       key: "ancient-antikythera-purpose",
       question:
-        "What was the bronze device recovered from the Antikythera shipwreck designed to work out?",
-      answer: "Astronomical phenomena, using an intricate mechanical system of gears and dials.",
+        "What could a geared bronze device recovered from a Greek shipwreck predict centuries before clockwork became common?",
+      answer: "The positions of heavenly bodies and the timing of eclipses.",
       source: {
-        title: "Encyclopedia Britannica — Antikythera mechanism",
-        url: "https://www.britannica.com/topic/Antikythera-mechanism",
-        note: "Britannica identifies an ancient Greek bronze mechanical device for calculating and displaying astronomical information, with scientific dials and scales.",
+        title: "Wikipedia — Antikythera mechanism",
+        url: "https://en.wikipedia.org/wiki/Antikythera_mechanism",
+        note: "The article describes the ancient hand-powered mechanism recovered from the Antikythera wreck and its ability to predict astronomical positions and eclipses decades ahead.",
       },
     },
     {
@@ -92,8 +92,9 @@ export const ancientSecrets = definePack(
     },
     {
       key: "ancient-maya-pigment",
-      question: "What pairing lies behind the unusually durable pigment known as Maya blue?",
-      answer: "Indigo dye incorporated into a porous clay, commonly palygorskite.",
+      question:
+        "How did Maya artisans turn a plant-derived blue dye into an unusually durable pigment?",
+      answer: "By incorporating indigo into porous clay, producing the pigment known as Maya blue.",
       source: {
         title:
           "Heritage Science — Shades of blue: non-invasive spectroscopic investigations of Maya blue pigments",
@@ -114,7 +115,8 @@ export const ancientSecrets = definePack(
     },
     {
       key: "ancient-tut-dagger",
-      question: "Where did the iron in one of Tutankhamun’s daggers originally come from?",
+      question:
+        "What surprising origin did scientists establish for the iron in an Egyptian royal dagger?",
       answer: "A meteorite, rather than iron ore smelted from the ground.",
       source: {
         title:
@@ -147,19 +149,20 @@ export const ancientSecrets = definePack(
       },
     },
     {
-      key: "ancient-hypocaust",
-      question: "What would a Roman householder get from a hypocaust?",
-      answer: "Rooms warmed by hot gases passing through a space beneath the floor.",
+      key: "ancient-ctesibius-water-music",
+      question: "Why did Ctesibius’s musical invention need a tank of water?",
+      answer:
+        "To keep the air pressure steady in an early pipe organ, so its notes sounded evenly.",
       source: {
-        title: "Encyclopedia Britannica — Hypocaust",
-        url: "https://www.britannica.com/technology/hypocaust",
-        note: "A furnace supplied hot gases beneath a raised floor; wall flues could extend the heating and carried gases outside.",
+        title: "Encyclopedia Britannica — Hydraulis",
+        url: "https://www.britannica.com/art/hydraulis",
+        note: "Britannica describes Ctesibius’s third-century-BCE organ: a reservoir open below sat in water, which rose or fell to regulate air pressure feeding the pipes.",
       },
     },
     {
       key: "ancient-aeolipile",
-      question: "What made the hollow sphere in Heron’s aeolipile move?",
-      answer: "Jets of steam escaping from the sphere made it rotate.",
+      question: "How did Heron make a hollow metal sphere spin without anyone pushing it?",
+      answer: "Jets of steam escaping from the sphere drove it around.",
       source: {
         title: "Encyclopedia Britannica — Aeolipile",
         url: "https://www.britannica.com/technology/aeolipile",
@@ -168,8 +171,9 @@ export const ancientSecrets = definePack(
     },
     {
       key: "ancient-archimedean-helix",
-      question: "What practical job did an ancient rotating helix inside an inclined tube perform?",
-      answer: "Lift water from a lower level to a higher one.",
+      question:
+        "How could an ancient engineer raise water with a device that turned but had no buckets?",
+      answer: "Rotate a helical screw inside an inclined tube, carrying water uphill.",
       source: {
         title: "Encyclopedia Britannica — Archimedes screw",
         url: "https://www.britannica.com/technology/Archimedes-screw",
@@ -191,8 +195,8 @@ export const ancientSecrets = definePack(
     {
       key: "ancient-uluburun-biscuits",
       question:
-        "What were the “metal biscuits with ears” reported by the diver who found the Uluburun wreck?",
-      answer: "Copper ingots, part of a Bronze Age cargo containing about ten tons of copper.",
+        "What was the cargo a diver described as “metal biscuits with ears” when he found the Uluburun wreck?",
+      answer: "Copper ingots, part of a Bronze Age shipment containing about ten tons of copper.",
       source: {
         title: "Archaeological Institute of America, Archaeology — In the Time of the Copper Kings",
         url: "https://archaeology.org/issues/january-february-2024/features/in-the-time-of-the-copper-kings/",
@@ -202,9 +206,9 @@ export const ancientSecrets = definePack(
     {
       key: "ancient-egyptian-faience",
       question:
-        "What made up the body of ancient Egyptian faience, despite its pottery-like appearance?",
+        "How could ancient Egyptian craftspeople make glossy, pottery-like objects without a clay body?",
       answer:
-        "A quartz-rich mixture that developed a shiny glaze when fired, rather than ordinary clay pottery.",
+        "Fire a quartz-rich paste that formed its own glaze, producing the material called faience.",
       source: {
         title: "British Museum — Glorious glass: worth more than gold?",
         url: "https://www.britishmuseum.org/blog/glorious-glass-worth-more-gold",
@@ -214,9 +218,9 @@ export const ancientSecrets = definePack(
     {
       key: "ancient-roman-cameo-glass",
       question:
-        "How did Roman craftspeople produce white figures against the dark background of vessels such as the Portland Vase?",
+        "How did Roman glassmakers put raised white figures onto a dark vessel without sticking them on?",
       answer:
-        "Cut away an outer layer of white glass, leaving the figures raised above darker glass underneath.",
+        "They carved away most of an outer layer of white glass, exposing darker glass beneath it.",
       source: {
         title: "Encyclopedia Britannica — Cameo glass",
         url: "https://www.britannica.com/art/cameo-glass",
@@ -226,9 +230,8 @@ export const ancientSecrets = definePack(
     {
       key: "ancient-hadrian-underworld",
       question:
-        "What lay beneath Hadrian’s luxurious villa to keep its everyday operations out of sight?",
-      answer:
-        "An extensive network of service tunnels for moving workers and supplies around the estate.",
+        "How did workers move supplies around Hadrian’s luxurious villa while staying out of sight?",
+      answer: "Through an extensive network of underground service tunnels.",
       source: {
         title: "Archaeological Institute of America, Archaeology — An Imperial Underworld",
         url: "https://archaeology.org/issues/november-december-2013/digs-discoveries/tunnels-discovered-beneath-hadrians-villa/",
@@ -238,8 +241,8 @@ export const ancientSecrets = definePack(
     {
       key: "ancient-cire-perdue",
       question:
-        "In the ancient casting method called cire perdue, what happens to the original model?",
-      answer: "The wax model is melted out, leaving a cavity for molten metal.",
+        "Why would an ancient metalworker destroy a carefully sculpted model before casting the finished object?",
+      answer: "It was a wax model; melting it left a hollow mould ready to receive molten metal.",
       source: {
         title: "Encyclopedia Britannica — Lost-wax process",
         url: "https://www.britannica.com/technology/lost-wax-process",
@@ -257,21 +260,21 @@ export const ancientSecrets = definePack(
       },
     },
     {
-      key: "ancient-lapis-route",
-      question:
-        "Where did the lapis lazuli traded by ancient Assyrian merchants have to travel from?",
-      answer: "Mines in what is now Afghanistan.",
+      key: "ancient-ur-customer-complaint",
+      question: "What very familiar grievance did a man in Ur put into cuneiform around 1750 BCE?",
+      answer: "A merchant had offered inferior copper and treated his messenger rudely.",
       source: {
-        title: "British Museum — Trade and contraband in ancient Assyria",
-        url: "https://www.britishmuseum.org/blog/trade-and-contraband-ancient-assyria",
-        note: "The museum identifies distant Afghanistan as the source of lapis lazuli, a valuable commodity subject to state control.",
+        title: "Wikipedia — Complaint tablet to Ea-nāṣir",
+        url: "https://en.wikipedia.org/wiki/Complaint_tablet_to_Ea-n%C4%81%E1%B9%A3ir",
+        note: "The article describes Nanni’s surviving letter to Ea-nasir, dated about 1750 BCE, complaining about substandard copper and disrespectful treatment of his servant.",
       },
     },
     {
       key: "ancient-rolling-signature",
       question:
-        "How could a Mesopotamian merchant authenticate a document with a carved stone cylinder?",
-      answer: "Roll it across wet clay to leave its distinctive engraved design.",
+        "How could a Mesopotamian merchant make a legally binding personal mark on a document without writing?",
+      answer:
+        "Roll an engraved stone cylinder across wet clay, leaving a distinctive seal impression.",
       source: {
         title: "Encyclopedia Britannica — Cylinder seal",
         url: "https://www.britannica.com/art/cylinder-seal",
@@ -291,7 +294,7 @@ export const ancientSecrets = definePack(
     {
       key: "ancient-mummy-hairstyles",
       question:
-        "What did chemical analysis find holding some ancient Egyptian mummies’ hairstyles in place?",
+        "What surprisingly familiar grooming aid did chemical analysis identify on ancient Egyptian mummies?",
       answer: "A fat-based styling product, effectively an ancient hair gel.",
       source: {
         title: "Nature — Ancient Egyptians used hair gel",
@@ -335,8 +338,8 @@ export const ancientSecrets = definePack(
     },
     {
       key: "ancient-cosa-chain",
-      question: "What did the wooden chain discovered at the Roman port of Cosa carry?",
-      answer: "Buckets that raised water from a spring to an aqueduct.",
+      question: "What job did a chain made of wood perform at the Roman port of Cosa?",
+      answer: "Lift buckets of spring water up to supply an aqueduct.",
       source: {
         title: "Archaeological Institute of America, Archaeology — Portus Cosanus",
         url: "https://archive.archaeology.org/online/features/cosa/",

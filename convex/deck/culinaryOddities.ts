@@ -13,7 +13,7 @@ export const culinaryOddities = definePack(
     {
       key: "culinary-tudor-subtleties",
       question:
-        "What were the 'subtleties' presented between courses at Henry VIII's grand feasts?",
+        "How did Tudor hosts turn the wait between courses into an edible display of wealth?",
       answer: "Elaborate sculptures made of sugar, displayed for guests to admire or eat.",
       source: {
         title: "Historic Royal Palaces — Tudor food and eating",
@@ -23,9 +23,8 @@ export const culinaryOddities = definePack(
     },
     {
       key: "culinary-stag-fountain",
-      question:
-        "What happened when diners stabbed a showpiece stag at certain early modern feasts?",
-      answer: "Wine flowed out as its 'blood', and guests filled their cups from it.",
+      question: "What were guests invited to do with a showpiece stag at some early modern feasts?",
+      answer: "Stab it, then fill their cups with the wine that flowed out as its 'blood'.",
       source: {
         title: "Folger Shakespeare Library — The Food of Shakespeare's World",
         url: "https://www.folger.edu/podcasts/shakespeare-unlimited/shakespeare-unlimited-episode-53/",
@@ -45,8 +44,7 @@ export const culinaryOddities = definePack(
     },
     {
       key: "culinary-living-pie",
-      question:
-        "What could emerge when a guest opened a seventeenth-century pie described as a 'conceit'?",
+      question: "What made one seventeenth-century 'conceit' pie more entertainment than dinner?",
       answer:
         "Live birds, placed inside an already-baked empty crust so they could fly out at the table.",
       source: {
@@ -58,7 +56,7 @@ export const culinaryOddities = definePack(
     {
       key: "culinary-courage-tart",
       question:
-        "What unexpected ingredient joined sweet potatoes, dates, and wine in an early modern 'courage tart'?",
+        "What startling ingredient went into an early modern sweet pie called a 'courage tart'?",
       answer:
         "Sparrow brains, included because the dish's ingredients were believed to be aphrodisiacs.",
       source: {
@@ -69,9 +67,8 @@ export const culinaryOddities = definePack(
     },
     {
       key: "culinary-eryngoes",
-      question:
-        "What were the 'eryngoes' coveted by sweet-toothed diners in Shakespeare's England?",
-      answer: "Candied roots of sea holly, prized as a supposed aphrodisiac.",
+      question: "Why would a confectioner in Shakespeare's England want roots of sea holly?",
+      answer: "To candy them as eryngoes, sweets prized as a supposed aphrodisiac.",
       source: {
         title: "Folger Shakespeare Library — Possets, drugs, and milky effects",
         url: "https://www.folger.edu/blogs/shakespeare-and-beyond/posset-shakespeare-recipes/",
@@ -81,8 +78,9 @@ export const culinaryOddities = definePack(
     {
       key: "culinary-perfumed-posset",
       question:
-        "What unusual pair of luxury flavorings topped the Earl of Carlisle's sack-posset recipe published in 1669?",
-      answer: "Ambergris and musk, sprinkled on the creamy alcoholic drink with sugar.",
+        "What did the Earl of Carlisle's 1669 recipe sprinkle on a creamy alcoholic drink as a luxury finishing touch?",
+      answer:
+        "Ambergris and musk, the animal-derived substances better known from perfumery, mixed with sugar.",
       source: {
         title: "Folger Shakespeare Library — Possets, drugs, and milky effects",
         url: "https://www.folger.edu/blogs/shakespeare-and-beyond/posset-shakespeare-recipes/",
@@ -104,8 +102,8 @@ export const culinaryOddities = definePack(
     {
       key: "culinary-chocolate-breadcrumbs",
       question:
-        "What humble leftover appears among the ways William Hughes recorded thickening hot chocolate in 1672?",
-      answer: "Grated bread, making the drink more substantial.",
+        "What did William Hughes record adding to hot chocolate to make it more substantial in 1672?",
+      answer: "Grated bread, turning the drink into something closer to a meal.",
       source: {
         title: "Folger Shakespeare Library — The American Nectar: William Hughes's hot chocolate",
         url: "https://www.folger.edu/blogs/shakespeare-and-beyond/the-american-nectar-william-hughess-hot-chocolate/",
@@ -124,14 +122,15 @@ export const culinaryOddities = definePack(
       },
     },
     {
-      key: "culinary-garbage-dish",
+      key: "culinary-fish-court-cooling",
       question:
-        "What did a cook mean by serving 'garbage' in an English recipe manuscript from around 1440?",
-      answer: "A dish of animal entrails, not household rubbish.",
+        "Why was a courtyard beside Henry VIII's kitchens kept narrow and aligned north to south?",
+      answer:
+        "It kept direct sun off the surrounding food stores, making the courtyard a giant passive fridge.",
       source: {
-        title: "British Library — Boke of Kokery: Garbage (archived)",
-        url: "https://web.archive.org/web/20070610171921/http://www.bl.uk/learning/langlit/booksforcooks/med/garbagehome/bokegarbage.html",
-        note: "The British Library's Books for Cooks entry dates the manuscript to around 1440 and explains that garbage was the medieval word for animal entrails.",
+        title: "Historic Royal Palaces — Tudor food and eating",
+        url: "https://www.hrp.org.uk/hampton-court-palace/history-and-stories/tudor-food-and-eating/",
+        note: "The Fish Court section calls the narrow north-south courtyard a fridge system: direct sunlight is excluded and the open air helps keep its stone stores cool.",
       },
     },
     {
@@ -146,19 +145,19 @@ export const culinaryOddities = definePack(
       },
     },
     {
-      key: "culinary-coffins",
-      question:
-        "Why might a cook preparing a royal English feast around 1390 need to make 'coffins'?",
-      answer: "They were pastry cases, prepared in advance to hold the filling.",
+      key: "culinary-royal-sticky-fork",
+      question: "What food did Henry VIII reserve his unusual dining fork for?",
+      answer: "Sweet, sticky preserves; most of his court ate with knives, spoons and fingers.",
       source: {
-        title: "British Library — The Forme of Cury: Coffins and chastletes (archived)",
-        url: "https://web.archive.org/web/20070610172015/http://www.bl.uk/learning/langlit/booksforcooks/med/coffinhome/chastletes.html",
-        note: "The entry explains that coffin referred to a premade pastry case in this recipe from the royal cookery collection The Forme of Cury.",
+        title: "Historic Royal Palaces — Tudor food and eating",
+        url: "https://www.hrp.org.uk/hampton-court-palace/history-and-stories/tudor-food-and-eating/",
+        note: "The cutlery section says the king was the only person at court given a fork, used for sweet, sticky preserves, while Tudor diners generally used knives, spoons and fingers.",
       },
     },
     {
       key: "culinary-chastletes",
-      question: "What form could an elaborate pork-filled pastry take at Richard II's table?",
+      question:
+        "What ambitious shape did Richard II's cooks give a pastry filled with pork or almonds?",
       answer:
         "Miniature pastry castles, filled with pork or almonds and colored with saffron or sandalwood.",
       source: {
@@ -170,8 +169,8 @@ export const culinaryOddities = definePack(
     {
       key: "culinary-royal-porpoise",
       question:
-        "Which marine mammal could appear among the unusual dishes at Henry VIII's banquets?",
-      answer: "Porpoise.",
+        "What unusually large sea creature appears among the banquet dishes served to Henry VIII?",
+      answer: "Porpoise, served as a luxury dish rather than a daily staple.",
       source: {
         title: "Historic Royal Palaces — Tudor food and eating",
         url: "https://www.hrp.org.uk/hampton-court-palace/history-and-stories/tudor-food-and-eating/",
@@ -180,8 +179,8 @@ export const culinaryOddities = definePack(
     },
     {
       key: "culinary-sandalwood-coloring",
-      question: "What material could medieval cooks use to make jellies and custards vivid red?",
-      answer: "Sandalwood.",
+      question: "What would a medieval cook do with sandalwood in the kitchen?",
+      answer: "Use it as a red food colouring for jellies and custards.",
       source: {
         title: "British Library — Medieval food (archived)",
         url: "https://web.archive.org/web/20070420130057/http://www.bl.uk/learning/langlit/booksforcooks/med/medievalfood.html",
@@ -190,8 +189,8 @@ export const culinaryOddities = definePack(
     },
     {
       key: "culinary-roman-rose-dish",
-      question: "What fragrant ingredient could end a lavish Roman banquet as a fricassee?",
-      answer: "Roses.",
+      question: "What unusually fragrant dish could finish a lavish ancient Roman banquet?",
+      answer: "A fricassee of roses.",
       source: {
         title: "National Geographic — Eat, Drink, and Be Merry",
         url: "https://www.nationalgeographic.com/culture/article/eat-drink-and-be-merry-2",
@@ -200,9 +199,8 @@ export const culinaryOddities = definePack(
     },
     {
       key: "culinary-roman-udder",
-      question:
-        "What part of a sow could be stuffed and served at the beginning of an extravagant Roman dinner?",
-      answer: "Her udders.",
+      question: "What unusual stuffed dish could open an extravagant ancient Roman dinner?",
+      answer: "Stuffed sow's udders.",
       source: {
         title: "National Geographic — Eat, Drink, and Be Merry",
         url: "https://www.nationalgeographic.com/culture/article/eat-drink-and-be-merry-2",
@@ -211,8 +209,8 @@ export const culinaryOddities = definePack(
     },
     {
       key: "culinary-glirarium",
-      question: "What was a 'glirarium' used for in a wealthy Roman household?",
-      answer: "Fattening live dormice for the table inside a ventilated pottery jar.",
+      question: "Why would a wealthy Roman keep a ventilated pottery jar supplied with nuts?",
+      answer: "To fatten live dormice inside it for the dinner table.",
       source: {
         title:
           "National Geographic — Is that an ancient pizza? Here's what people really ate in Pompeii",
@@ -222,9 +220,8 @@ export const culinaryOddities = definePack(
     },
     {
       key: "culinary-flamingo-tongues",
-      question:
-        "What small part of a flamingo was prized in descriptions of luxurious ancient Roman dining?",
-      answer: "Its tongue.",
+      question: "What delicacy did wealthy Roman diners prize from flamingos?",
+      answer: "Their tongues.",
       source: {
         title:
           "National Geographic — Buried by Vesuvius, this ancient villa is an overlooked alternative to Pompeii",
@@ -234,9 +231,8 @@ export const culinaryOddities = definePack(
     },
     {
       key: "culinary-lost-silphium",
-      question: "What was silphium, whose image appeared on ancient Cyrene's coins?",
-      answer:
-        "A prized culinary and medicinal plant, described as a fennel relative, that apparently disappeared in antiquity.",
+      question: "Why is recreating a Roman dish seasoned with silphium a particular challenge?",
+      answer: "The prized plant, a relative of fennel, apparently disappeared in antiquity.",
       source: {
         title: "National Geographic — Fennel: Multitasking Vegetable, Ancient Birth Control",
         url: "https://www.nationalgeographic.com/culture/article/fennel--multitasking-vegetable--ancient-birth-control",
@@ -246,9 +242,8 @@ export const culinaryOddities = definePack(
     {
       key: "culinary-jiahu-brew",
       question:
-        "What ingredients were combined in the roughly 9,000-year-old fermented drink identified at Jiahu in China?",
-      answer:
-        "Rice, honey, and fruit: a mixture crossing the modern boundaries between beer, mead, and wine.",
+        "Why does the ancient drink found in pottery at Jiahu resist being called just beer, wine or mead?",
+      answer: "It combined rice, fruit and honey, crossing all three modern drinks categories.",
       source: {
         title: "National Geographic — Our 9,000-Year Love Affair With Booze",
         url: "https://www.nationalgeographic.com/magazine/article/alcohol-discovery-addiction-booze-human-culture",
@@ -257,8 +252,8 @@ export const culinaryOddities = definePack(
     },
     {
       key: "culinary-koumiss",
-      question: "What is fermented to make the traditional Central Asian drink koumiss?",
-      answer: "Horse milk, producing a tangy, mildly alcoholic drink.",
+      question: "What gives the traditional Central Asian drink koumiss its unusual base?",
+      answer: "Horse milk, fermented into a tangy, mildly alcoholic drink.",
       source: {
         title: "National Geographic — Our 9,000-Year Love Affair With Booze",
         url: "https://www.nationalgeographic.com/magazine/article/alcohol-discovery-addiction-booze-human-culture",
@@ -267,9 +262,8 @@ export const culinaryOddities = definePack(
     },
     {
       key: "culinary-afterlife-breweries",
-      question:
-        "What miniature facilities were placed in ancient Egyptian royal tombs to provide refreshment after death?",
-      answer: "Model breweries, intended to supply beer in the afterlife.",
+      question: "How did ancient Egyptian royals arrange for a supply of beer after death?",
+      answer: "They were buried with model breweries, intended to keep producing in the afterlife.",
       source: {
         title: "National Geographic — Our 9,000-Year Love Affair With Booze",
         url: "https://www.nationalgeographic.com/magazine/article/alcohol-discovery-addiction-booze-human-culture",
@@ -290,8 +284,8 @@ export const culinaryOddities = definePack(
     {
       key: "culinary-beeton-guinea-pig",
       question:
-        "Which small animal, now more familiar in pet cages, appears in the British Library's account of Mrs Beeton's roasting advice?",
-      answer: "A guinea pig.",
+        "What unexpected roast appears in the British Library's account of Mrs Beeton's household advice?",
+      answer: "Roast guinea pig.",
       source: {
         title: "British Library — Beeton's Book of Household Management: Desserts (archived)",
         url: "https://web.archive.org/web/20070202174317/http://www.bl.uk/learning/langlit/booksforcooks/1800s/dessertsf/desserts.html",
@@ -301,7 +295,7 @@ export const culinaryOddities = definePack(
     {
       key: "culinary-bottled-feet-jelly",
       question:
-        "What animal-derived product did Crosse and Blackwell advertise in orange, lemon, punch, and Madeira flavors in 1855?",
+        "What did Crosse and Blackwell offer in bottles flavoured with orange, lemon, punch or Madeira in 1855?",
       answer: "Ready-made calves' feet jellies, sold in bottles.",
       source: {
         title:
@@ -313,8 +307,8 @@ export const culinaryOddities = definePack(
     {
       key: "culinary-gendered-sauces",
       question:
-        "How did an 1855 advertisement distinguish Soyer's new sauce for ladies from the version for gentlemen?",
-      answer: "The ladies' sauce was mild; the gentlemen's had the same flavor but more heat.",
+        "What unusual choice did buyers of Soyer's new sauces face in an 1855 advertisement?",
+      answer: "A mild sauce 'for ladies' or the same flavour with more heat 'for gentlemen'.",
       source: {
         title:
           "British Library — Soyer's Shilling Cookery: Crosse and Blackwell advertisement (archived)",

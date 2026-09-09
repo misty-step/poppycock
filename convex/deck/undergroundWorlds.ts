@@ -11,22 +11,22 @@ export const undergroundWorlds = definePack(
   },
   [
     {
-      key: "underground-derinkuyu-air",
+      key: "underground-wind-cave-hat",
       question:
-        "How did settlements such as Derinkuyu keep their buried refuges supplied while residents hid from attackers?",
-      answer: "Networks of air shafts and water channels served the rooms cut deep into the rock.",
+        "According to Wind Cave's early history, why did the Bingham brothers' hat demonstration go wrong on their return visit?",
+      answer:
+        "The cave sucked the hat inside instead of blowing it away: the airflow had reversed.",
       source: {
-        title:
-          "National Geographic — Massive Underground City Found in Cappadocia Region of Turkey",
-        url: "https://www.nationalgeographic.com/history/article/150325-underground-city-cappadocia-turkey-archaeology",
-        note: "The article compares the Nevsehir complex with Derinkuyu, describing self-sustaining underground settlements with air shafts and water channels used as refuges.",
+        title: "National Park Service — Birth of a National Park",
+        url: "https://www.nps.gov/wica/learn/historyculture/birth-of-a-national-park-a-national-park-is-created.htm",
+        note: "The NPS recounts the legend that the cave blew off Tom Bingham's hat in 1881; when the brothers returned with friends, reversed airflow sucked a hat inside.",
       },
     },
     {
       key: "underground-cappadocian-doors",
       question:
-        "How could people in Cappadocia shut off a passage to their hidden settlement when danger arrived?",
-      answer: "They blocked it with a large round stone door.",
+        "How could residents of Cappadocia close their underground refuges without hanging doors on hinges?",
+      answer: "They rolled large, round stone doors across the access tunnels.",
       source: {
         title:
           "National Geographic — Massive Underground City Found in Cappadocia Region of Turkey",
@@ -36,9 +36,8 @@ export const undergroundWorlds = definePack(
     },
     {
       key: "underground-nevsehir-linseed",
-      question:
-        "What were the installations called 'bezirhane' doing in the settlement beneath Nevsehir Castle?",
-      answer: "Pressing linseed to make lamp oil for lighting the underground rooms.",
+      question: "Why did the buried settlement beneath Nevsehir Castle need presses for linseed?",
+      answer: "To squeeze out oil for the lamps that lit its underground rooms.",
       source: {
         title:
           "National Geographic — Massive Underground City Found in Cappadocia Region of Turkey",
@@ -49,8 +48,8 @@ export const undergroundWorlds = definePack(
     {
       key: "underground-wieliczka-sculptures",
       question:
-        "What are many of the chapels and statues inside Poland's Wieliczka and Bochnia mines carved from?",
-      answer: "The rock salt being mined there.",
+        "What did generations of miners leave behind at Wieliczka and Bochnia besides empty tunnels?",
+      answer: "Underground chapels and statues, carved out of the rock salt they were mining.",
       source: {
         title: "UNESCO World Heritage Centre — Wieliczka and Bochnia Royal Salt Mines",
         url: "https://whc.unesco.org/en/list/32/",
@@ -59,10 +58,8 @@ export const undergroundWorlds = definePack(
     },
     {
       key: "underground-naica-material",
-      question:
-        "What mineral forms the enormous translucent beams discovered beneath Naica, Mexico, in 2000?",
-      answer:
-        "Gypsum, in its transparent selenite form; some crystals reach roughly eleven meters long.",
+      question: "What filled a cavern that miners broke into beneath Naica, Mexico, in 2000?",
+      answer: "Transparent gypsum crystals like enormous beams, some roughly eleven meters long.",
       source: {
         title: "National Geographic — Giant Crystal Cave's Mystery Solved",
         url: "https://www.nationalgeographic.com/science/article/giant-crystal-cave-mexico-mystery-solved",
@@ -70,23 +67,21 @@ export const undergroundWorlds = definePack(
       },
     },
     {
-      key: "underground-naica-growth",
+      key: "underground-mineral-balloons",
       question:
-        "What conditions allowed Naica's giant crystals to grow instead of producing a mass of much smaller ones?",
-      answer:
-        "They remained submerged in mineral-rich water held near 58°C for an immense span of time.",
+        "What surprisingly delicate shape can minerals take as they grow out of a cave wall?",
+      answer: "Tiny gas-filled balloons, with thin mineral walls instead of rubber.",
       source: {
-        title: "National Geographic — Giant Crystal Cave's Mystery Solved",
-        url: "https://www.nationalgeographic.com/science/article/giant-crystal-cave-mexico-mystery-solved",
-        note: "The reported research attributes the crystals to stable temperatures just below the anhydrite-gypsum transition around 58°C, sustained for hundreds of thousands of years.",
+        title: "National Speleological Society — Balloons",
+        url: "https://caves.org/virtualcave/ballons/",
+        note: "The Virtual Cave describes rare small gas-filled pouches, usually of hydromagnesite. Their exact origin is uncertain; expansion of soft mineral material is a proposed mechanism.",
       },
     },
     {
       key: "underground-movile-food-web",
-      question:
-        "What supports the food web in Romania's Movile Cave without sunlight or a regular supply of surface food?",
+      question: "Where does the food chain begin in Romania's sealed-off Movile Cave?",
       answer:
-        "Microbes turn chemicals such as hydrogen sulfide and methane into organic matter through chemosynthesis.",
+        "With microbes that turn gases such as methane and poisonous hydrogen sulfide into food, without sunlight.",
       source: {
         title: "UNESCO World Heritage Centre — Movile Cave tentative-list submission",
         url: "https://whc.unesco.org/en/tentativelists/6761/",
@@ -96,8 +91,8 @@ export const undergroundWorlds = definePack(
     {
       key: "underground-movile-floating-mats",
       question:
-        "What holds thick microbial films afloat in some of Movile Cave's enclosed water chambers?",
-      answer: "Bubbles of methane beneath the films.",
+        "How do Movile Cave's microbes manage to create floating feeding grounds on the water?",
+      answer: "Their thick films ride on bubbles of methane trapped underneath.",
       source: {
         title: "UNESCO World Heritage Centre — Movile Cave tentative-list submission",
         url: "https://whc.unesco.org/en/tentativelists/6761/",
@@ -107,7 +102,7 @@ export const undergroundWorlds = definePack(
     {
       key: "underground-son-doong-jungle",
       question:
-        "What grows in the area explorers nicknamed the 'Garden of Edam' inside Vietnam's Son Doong?",
+        "What did explorers find thriving beneath a break in the roof of Vietnam's Son Doong cave?",
       answer:
         "A jungle with tall trees and vines, fed by sunlight entering through a collapsed roof.",
       source: {
@@ -118,9 +113,9 @@ export const undergroundWorlds = definePack(
     },
     {
       key: "underground-reka-canyon",
-      question: "What happens to Slovenia's Reka River when it reaches the Skocjan system?",
-      answer:
-        "It disappears underground and runs through an enormous canyon with rapids and waterfalls.",
+      question:
+        "What landscape does Slovenia's Reka River run through after it vanishes below ground?",
+      answer: "An enormous underground canyon, complete with rapids and waterfalls.",
       source: {
         title: "UNESCO World Heritage Centre — Skocjan Caves",
         url: "https://whc.unesco.org/en/list/390/",
@@ -130,9 +125,9 @@ export const undergroundWorlds = definePack(
     {
       key: "underground-drained-lava",
       question:
-        "How can a stream of molten rock leave behind a tunnel large enough for people to walk through?",
+        "What once filled the walkable cave passages around northern California's Medicine Lake?",
       answer:
-        "Its surface hardens into a roof while the still-liquid lava underneath drains downhill.",
+        "Rivers of molten lava, which drained away after their surfaces hardened into tunnel roofs.",
       source: {
         title: "USGS — Lava tubes at Lava Beds National Monument",
         url: "https://www.usgs.gov/volcanoes/medicine-lake/science/lava-tubes-lava-beds-national-monument",
@@ -142,9 +137,9 @@ export const undergroundWorlds = definePack(
     {
       key: "underground-reversed-rock-ages",
       question:
-        "Why can older lava lie above younger lava inside a tube at California's Medicine Lake volcano?",
+        "What unusual ordering of rocks can geologists find inside a Medicine Lake lava tube?",
       answer:
-        "The roof cooled first; later pulses of lava flowed beneath it and formed the younger floor.",
+        "Older rock lies above younger rock, reversing the usual order: the tunnel roof hardened before the last lava formed its floor.",
       source: {
         title: "USGS — Exploring lava tubes at Medicine Lake volcano",
         url: "https://www.usgs.gov/observatories/calvo/news/exploring-lava-tubes-medicine-lake-volcano",
@@ -153,10 +148,8 @@ export const undergroundWorlds = definePack(
     },
     {
       key: "underground-helictites",
-      question:
-        "What makes cave formations called helictites look as if they are ignoring gravity?",
-      answer:
-        "They twist and branch in different directions as mineral-rich water moves through tiny internal channels.",
+      question: "What can the tiny water channels inside some cave formations allow them to do?",
+      answer: "Grow sideways or even upward, forming twisting branches called helictites.",
       source: {
         title: "National Speleological Society — Helictites",
         url: "https://caves.org/virtualcave/helictites/",
@@ -166,8 +159,9 @@ export const undergroundWorlds = definePack(
     {
       key: "underground-snottites",
       question:
-        "What are the dangling formations explorers call 'snottites' in Mexico's Cueva de Villa Luz?",
-      answer: "Living microbial colonies that resemble mucus and drip extremely acidic liquid.",
+        "What is startling about the apparently dripping stalactites in Mexico's Cueva de Villa Luz?",
+      answer:
+        "Some are living colonies of microbes, dangling like mucus and dripping highly acidic liquid.",
       source: {
         title:
           "National Speleological Society — Cueva de Villa Luz: Reconnaissance Study of an Active Sulfur Spring Cave and Ecosystem",
@@ -177,8 +171,9 @@ export const undergroundWorlds = definePack(
     },
     {
       key: "underground-pearl-without-oyster",
-      question: "How can a shallow cave pool produce 'pearls' without any shellfish?",
-      answer: "Calcite builds up in layers around a small core such as sand or a fragment of bone.",
+      question: "What can a grain of sand or scrap of bone become in a shallow cave pool?",
+      answer:
+        "A cave pearl: layers of calcite grow around it like the layers of a pearl, without any oyster.",
       source: {
         title: "National Speleological Society — Cave Pearls",
         url: "https://caves.org/virtualcave/cave-pearls/",
@@ -188,7 +183,7 @@ export const undergroundWorlds = definePack(
     {
       key: "underground-floating-minerals",
       question: "What unexpected material can form a floating skin on a still cave pool?",
-      answer: "A thin sheet of calcite, known as a cave raft.",
+      answer: "Stone: a wafer-thin sheet of calcite floats on the water until it grows too heavy.",
       source: {
         title: "National Speleological Society — Rafts",
         url: "https://caves.org/virtualcave/rafts/",
@@ -198,8 +193,8 @@ export const undergroundWorlds = definePack(
     {
       key: "underground-carlsbad-acid",
       question:
-        "What helped hollow out Carlsbad Caverns from below rather than simply seeping down from the surface?",
-      answer: "Sulfuric acid formed from hydrogen sulfide rising out of nearby oil reservoirs.",
+        "What unlikely connection helped create Carlsbad Caverns above New Mexico's oil country?",
+      answer: "Gas rising from oil reservoirs formed sulfuric acid, which ate away the limestone.",
       source: {
         title: "USGS — Geology of Carlsbad Caverns National Park",
         url: "https://www.usgs.gov/geology-and-ecology-of-national-parks/geology-carlsbad-caverns-national-park",
@@ -207,14 +202,14 @@ export const undergroundWorlds = definePack(
       },
     },
     {
-      key: "underground-puerto-princesa-tides",
+      key: "underground-turda-ferris-wheel",
       question:
-        "What ocean phenomenon affects the lower reaches of Palawan's Puerto-Princesa river, even inside its cavern?",
-      answer: "The tides: the underground river flows directly into the sea.",
+        "What ride offers visitors a panoramic view inside Romania's former Turda salt mine?",
+      answer: "A Ferris wheel, twenty meters high and operating entirely underground.",
       source: {
-        title: "UNESCO World Heritage Centre — Puerto-Princesa Subterranean River National Park",
-        url: "https://whc.unesco.org/en/list/652/",
-        note: "UNESCO identifies the river's direct emergence into the sea and the tidal influence on its brackish lower portion as distinguishing features.",
+        title: "Salina Turda — Salt Mine: Amusement Park",
+        url: "https://www.salinaturda.eu/en/locatie/salina-amusement-park/",
+        note: "The mine operator lists a 20-meter panoramic wheel operating underground among its attractions. The card does not repeat the site's worldwide uniqueness claim.",
       },
     },
     {
@@ -243,9 +238,9 @@ export const undergroundWorlds = definePack(
     {
       key: "underground-naours-graffiti",
       question:
-        "What personal traces of the First World War cover the walls of the hidden city at Naours, France?",
+        "What unexpected wartime collection survives on the walls of the hidden city at Naours, France?",
       answer:
-        "Thousands of graffiti marks left by visiting soldiers from several Allied countries.",
+        "Thousands of graffiti marks left by visiting First World War soldiers from Allied countries.",
       source: {
         title: "National Geographic — 9 of Europe's underground marvels",
         url: "https://www.nationalgeographic.com/travel/article/underground-sites",
@@ -278,8 +273,8 @@ export const undergroundWorlds = definePack(
     {
       key: "underground-basilica-head",
       question:
-        "What recognizable figure appears upside down in carved stone inside Istanbul's Basilica Cistern?",
-      answer: "An enormous carved head of Medusa positioned upside down.",
+        "What strange bit of reused sculpture appears among the columns of Istanbul's Basilica Cistern?",
+      answer: "An enormous head of Medusa, turned upside down.",
       source: {
         title: "National Geographic — 9 of Europe's underground marvels",
         url: "https://www.nationalgeographic.com/travel/article/underground-sites",
@@ -289,7 +284,7 @@ export const undergroundWorlds = definePack(
     {
       key: "underground-santa-tecla-lasers",
       question:
-        "What modern tool revealed ancient painted apostles beneath mineral deposits in Rome's Santa Tecla catacombs?",
+        "How did conservators uncover ancient painted apostles in Rome's Santa Tecla catacombs without scraping them?",
       answer: "Lasers, which removed the calcium-carbonate crust covering the paintings.",
       source: {
         title: "National Geographic — Pictures: Oldest Apostle Images Revealed by Laser",
@@ -343,8 +338,8 @@ export const undergroundWorlds = definePack(
     },
     {
       key: "underground-mammoth-sanatorium",
-      question: "What medical institution once operated inside Kentucky's Mammoth Cave?",
-      answer: "A tuberculosis sanatorium.",
+      question: "What unlikely medical establishment once occupied Kentucky's Mammoth Cave?",
+      answer: "An underground tuberculosis sanatorium.",
       source: {
         title: "National Geographic — Everything you should know about Mammoth Cave National Park",
         url: "https://www.nationalgeographic.com/travel/national-parks/article/mammoth-cave-national-park",

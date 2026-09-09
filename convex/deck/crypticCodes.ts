@@ -11,9 +11,9 @@ export const crypticCodes = definePack(
   [
     {
       key: "codes-scytale",
-      question: "What did someone need to do with a message written for a scytale?",
+      question: "How could a Spartan commander read a secret message carried on a courier's belt?",
       answer:
-        "Wind its lettered strip around a matching rod to put the hidden message back in order.",
+        "Wrap the lettered strip around a rod of the right thickness, bringing its letters back into order.",
       source: {
         title: "National Cryptologic Museum — Secrets of the Ancients",
         url: "https://virmuze.com/m/crypto-museum/x/secrets-of-the-ancients/",
@@ -22,9 +22,10 @@ export const crypticCodes = definePack(
     },
     {
       key: "codes-cardano-grille",
-      question: "What was the purpose of a Cardano grille?",
+      question:
+        "How did Girolamo Cardano propose hiding a secret message inside an innocent-looking letter?",
       answer:
-        "Its cut-out holes revealed selected parts of an innocent-looking letter, exposing a second, secret message.",
+        "Write through holes in a sheet of paper, then fill the gaps with innocent prose; a matching sheet would pick out the secret.",
       source: {
         title: "National Cryptologic Museum — Secrets of the Ancients",
         url: "https://virmuze.com/m/crypto-museum/x/secrets-of-the-ancients/",
@@ -44,7 +45,7 @@ export const crypticCodes = definePack(
     },
     {
       key: "codes-polybius-torches",
-      question: "How could a distant observer read a letter using the Polybius square?",
+      question: "How did Polybius propose spelling out a message to someone too far away to hear?",
       answer:
         "Two groups of raised torches indicated the letter's row and column in an alphabet grid.",
       source: {
@@ -56,9 +57,9 @@ export const crypticCodes = definePack(
     {
       key: "codes-jefferson-row",
       question:
-        "After spelling a message on Jefferson's proposed cypher wheel, what did the sender copy?",
+        "What would a recipient do with the apparently meaningless rows on Jefferson's proposed cipher device?",
       answer:
-        "A different row of apparently jumbled letters; the recipient's matching disks would reveal the readable row.",
+        "Turn its alphabet discs to match the received letters, then look around the cylinder for a row that made sense.",
       source: {
         title: "National Cryptologic Museum — Early Cryptography Cipher Devices",
         url: "https://virmuze.com/m/crypto-museum/x/cipher-devices/",
@@ -66,14 +67,14 @@ export const crypticCodes = definePack(
       },
     },
     {
-      key: "codes-hitt-applewood",
-      question:
-        "What material did Parker Hitt use for the disks of an early portable cipher prototype?",
-      answer: "Apple wood, with strips of scrambled alphabets wrapped around the disks.",
+      key: "codes-swallowable-silver-bullet",
+      question: "Why were some Revolutionary War couriers equipped with hollow silver bullets?",
+      answer:
+        "They held secret messages and could be swallowed in an emergency without the lead poisoning caused by earlier containers.",
       source: {
-        title: "National Cryptologic Museum — Early Cryptography Cipher Devices",
-        url: "https://virmuze.com/m/crypto-museum/x/cipher-devices/",
-        note: "The M-94 section describes Hitt's paper alphabet strips wrapped around disks cut from apple wood before Mauborgne improved the design.",
+        title: "CIA — The Spymaster's Toolkit",
+        url: "https://www.cia.gov/stories/story/the-spymasters-toolkit/",
+        note: "The Concealment Devices section describes silver bullet-shaped message containers replacing lead ones that caused poisoning if a courier swallowed them.",
       },
     },
     {
@@ -114,8 +115,8 @@ export const crypticCodes = definePack(
     {
       key: "codes-arnold-dictionary",
       question:
-        "What did the numbers in Benedict Arnold's secret dictionary messages tell the recipient?",
-      answer: "Which page, column and word to look up in the agreed dictionary.",
+        "What ordinary reference book could turn Benedict Arnold's strings of numbers back into words?",
+      answer: "An agreed dictionary: the numbers identified the page, column and word to read.",
       source: {
         title: "National Cryptologic Museum — Revolutionary War",
         url: "https://virmuze.com/m/crypto-museum/x/revolutionary-secrets/",
@@ -135,30 +136,32 @@ export const crypticCodes = definePack(
     },
     {
       key: "codes-sympathetic-stain",
-      question: "What was the Culper spy network's 'sympathetic stain'?",
-      answer: "An invisible ink that a recipient revealed with a separate chemical reagent.",
+      question:
+        "Why might a letter praising the British cause carry useful news for George Washington?",
+      answer:
+        "His spies could write the real report between the lines in invisible ink, revealed with a second chemical.",
       source: {
-        title: "National Cryptologic Museum — Revolutionary War",
-        url: "https://virmuze.com/m/crypto-museum/x/revolutionary-secrets/",
-        note: "The exhibit describes Dr James Jay's invisible ink, used by Culper Jr beneath a cover note, and the reactivation agent held by Washington's officers.",
+        title: "CIA — Intelligence in the War of Independence",
+        url: "https://www.cia.gov/resources/publications/intelligence-in-the-war-of-independence/",
+        note: "The Secret Writing section quotes Washington recommending letters 'in the Tory stile' with intelligence hidden between the lines in James Jay's two-chemical sympathetic stain.",
       },
     },
     {
-      key: "codes-confederate-reel",
-      question: "What was the wooden 'cipher reel' captured at Mobile in 1865 designed to do?",
-      answer:
-        "Use a cipher table wrapped around a cylinder and two adjustable pointers to match plain letters with encrypted ones.",
+      key: "codes-demaratus-blank-tablet",
+      question:
+        "In Herodotus' account, how did Queen Gorgo find a warning on an apparently blank writing tablet?",
+      answer: "She had the wax scraped off: the warning was written on the wood underneath.",
       source: {
-        title: "National Cryptologic Museum — Civil War",
-        url: "https://virmuze.com/m/crypto-museum/x/civil-war/",
-        note: "The museum caption identifies a Confederate reel using the Vigenere or court cipher around a wooden cylinder, with pointers for plain and cipher letters.",
+        title: "Herodotus — Histories 7.239, translated by A. D. Godley",
+        url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Herodotus/7D*.html#239",
+        note: "Herodotus recounts Demaratus writing Xerxes' plans on a wooden tablet beneath renewed wax; Gorgo told the Spartans to remove the wax and uncover the writing.",
       },
     },
     {
       key: "codes-door-key-cache",
       question:
-        "What was hidden inside the specially altered door key described in SOE file HS 7/49?",
-      answer: "Tiny photographic text, concealed in a drilled shaft closed by a screw-in stud.",
+        "What everyday object did Britain's SOE hollow out to carry tiny photographic messages?",
+      answer: "A door key: the message fitted into its drilled shaft, sealed with a screw-in stud.",
       source: {
         title: "The National Archives — HS 7/49 Special devices",
         url: "https://www.nationalarchives.gov.uk/education/resources/who-was-noor-khan/part-three-what-was-the-soe/hs-7-49-special-devices/",
@@ -178,9 +181,10 @@ export const crypticCodes = definePack(
     },
     {
       key: "codes-enigma-output",
-      question: "How did an Enigma operator see each newly encrypted letter?",
+      question:
+        "Why could a working Enigma machine produce neither a printed message nor a radio signal?",
       answer:
-        "A letter lit up on a lamp panel; the operator had to record it before sending the message separately.",
+        "It only lit up encrypted letters; someone had to copy them down and transmit them separately.",
       source: {
         title: "Bletchley Park — Self-guided Key Stage 4 teacher notes",
         url: "https://www.bletchleypark.org.uk/wp-content/uploads/2021/10/teachers-notes-ks4-2019.pdf",
@@ -199,36 +203,38 @@ export const crypticCodes = definePack(
       },
     },
     {
-      key: "codes-crib",
-      question: "What did a Bletchley Park codebreaker mean by a 'crib'?",
+      key: "codes-tobacco-packet-leaflets",
+      question:
+        "How did Benjamin Franklin arrange for anti-British messages to reach ordinary Hessian soldiers?",
       answer:
-        "A guessed piece of the original message that could be matched against its encrypted version.",
+        "He disguised leaflets as tobacco packets, offering land to soldiers who deserted the British side.",
       source: {
-        title: "Bletchley Park — Self-guided Key Stage 4 teacher notes",
-        url: "https://www.bletchleypark.org.uk/wp-content/uploads/2021/10/teachers-notes-ks4-2019.pdf",
-        note: "Page 4 defines cribs as clues and common phrases used to guess message content and help test Enigma settings.",
+        title: "CIA — Intelligence in the War of Independence",
+        url: "https://www.cia.gov/resources/publications/intelligence-in-the-war-of-independence/",
+        note: "The Propaganda section says Franklin arranged for German-language land-grant offers to be disguised as tobacco packets so they would reach ordinary Hessian soldiers.",
       },
     },
     {
-      key: "codes-menu",
-      question: "What was a 'menu' prepared for a wartime Bombe?",
-      answer:
-        "A diagram of linked letters telling operators how to connect the machine for a search through cipher settings.",
+      key: "codes-ivory-letter-kit",
+      question:
+        "What delicate job did CIA officers learn with rolls of small ivory tools in the 1960s?",
+      answer: "Opening, reading and resealing other people's mail without the recipients knowing.",
       source: {
-        title: "Bletchley Park — Self-guided Key Stage 4 teacher notes",
-        url: "https://www.bletchleypark.org.uk/wp-content/uploads/2021/10/teachers-notes-ks4-2019.pdf",
-        note: "Page 4 describes the pencilled diagram linking ciphertext and crib letters and says it instructed Bombe operators how to plug up the machine.",
+        title: "CIA — The Spymaster's Toolkit",
+        url: "https://www.cia.gov/stories/story/the-spymasters-toolkit/",
+        note: "The Intercepted Communications section describes beginners' and advanced flaps-and-seals kits; many tools were handmade of ivory and housed in a travel roll.",
       },
     },
     {
-      key: "codes-pinch",
-      question: "What did Bletchley Park staff call a 'pinch'?",
+      key: "codes-strong-laundry-signals",
+      question:
+        "In the story of Culper spy Anna Strong, how did she tell couriers where to meet without sending a letter?",
       answer:
-        "The capture of enemy cipher material, such as documents revealing the settings needed to read messages.",
+        "She hung out laundry: a black petticoat announced a message, and the number of handkerchiefs identified the cove.",
       source: {
-        title: "Bletchley Park — Self-guided Key Stage 4 teacher notes",
-        url: "https://www.bletchleypark.org.uk/wp-content/uploads/2021/10/teachers-notes-ks4-2019.pdf",
-        note: "Page 3 identifies a pinch as acquisition of cipher-settings information and gives the Petard Pinch as an example.",
+        title: "CIA — Intelligence in the War of Independence",
+        url: "https://www.cia.gov/resources/publications/intelligence-in-the-war-of-independence/",
+        note: "The Codes and Ciphers section recounts Anna Strong signalling with a black petticoat and handkerchiefs on a laundry line. The card frames this as the reported story.",
       },
     },
     {
@@ -244,8 +250,9 @@ export const crypticCodes = definePack(
     },
     {
       key: "codes-broom-chute",
-      question: "What household object helped move decoded messages from Hut 6 to Hut 3?",
-      answer: "A broom, used to push the papers through a wooden chute.",
+      question:
+        "How did Bletchley Park get decoded messages from Hut 6 to Hut 3 using a household tool?",
+      answer: "Staff pushed the papers through a wooden chute with a broom.",
       source: {
         title: "Bletchley Park — Self-guided Key Stage 4 teacher notes",
         url: "https://www.bletchleypark.org.uk/wp-content/uploads/2021/10/teachers-notes-ks4-2019.pdf",
@@ -254,8 +261,8 @@ export const crypticCodes = definePack(
     },
     {
       key: "codes-wspu-fox",
-      question: "In the WSPU's private message code, what question did 'Fox' ask?",
-      answer: "Are you prepared for arrest?",
+      question: "What did a suffragette organiser want to know when she sent the code word 'Fox'?",
+      answer: "Whether the recipient was prepared to be arrested.",
       source: {
         title: "The National Archives — Message codes",
         url: "https://www.nationalarchives.gov.uk/education/resources/suffragettes-on-file/message-codes/",
@@ -264,8 +271,9 @@ export const crypticCodes = definePack(
     },
     {
       key: "codes-wspu-woollen-mixture",
-      question: "What did 'Woollen-mixture' mean in a secret WSPU message?",
-      answer: "I am telegraphing; a letter will follow, so do nothing until you hear again.",
+      question:
+        "What instructions did a suffragette receive under the innocent-looking code 'Woollen-mixture'?",
+      answer: "A telegram and a letter were on the way; do nothing until further word arrived.",
       source: {
         title: "The National Archives — Message codes",
         url: "https://www.nationalarchives.gov.uk/education/resources/suffragettes-on-file/message-codes/",
@@ -275,7 +283,7 @@ export const crypticCodes = definePack(
     {
       key: "codes-pow-photo",
       question:
-        "How did Peter Gardner hide intelligence in photographs mailed out of Stalag Luft III?",
+        "How did Peter Gardner get intelligence past censors inside photographs sent from a prisoner-of-war camp?",
       answer:
         "He sandwiched tiny writing on tracing paper between a photograph and its paper backing.",
       source: {
@@ -328,13 +336,15 @@ export const crypticCodes = definePack(
       },
     },
     {
-      key: "codes-delilah",
-      question: "What was 'Delilah' in Alan Turing's wartime work?",
-      answer: "A device for scrambling speech so that spoken messages could be kept secret.",
+      key: "codes-histiaeus-hair",
+      question:
+        "According to Herodotus, why did Histiaeus delay sending a messenger even after his secret instructions were written?",
+      answer:
+        "He was waiting for the messenger's hair to grow back and hide the message tattooed on his shaved head.",
       source: {
-        title: "Imperial War Museums — How Alan Turing Cracked The Enigma Code",
-        url: "https://www.iwm.org.uk/history/second-world-war/intelligence/how-alan-turing-cracked-the-enigma-code",
-        note: "The Turingery and Delilah section identifies Delilah as a speech-scrambling device Turing developed later in the war.",
+        title: "Herodotus — Histories 5.35, translated by A. D. Godley",
+        url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Herodotus/5B*.html#35",
+        note: "Herodotus says Histiaeus marked a message on an enslaved messenger's shaved head, waited for the hair to regrow, then sent him with instructions to have his head shaved again.",
       },
     },
   ],

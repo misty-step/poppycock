@@ -1,15 +1,15 @@
 {
-  "sourceRevision": "4646116-wt",
+  "sourceRevision": "67930bf-wt",
   "parlorRevision": "56342bd910a58f255483afdf5a92d3fc4fcc0ae2",
-  "startedAt": "2026-09-09T01:48:39.388Z",
+  "startedAt": "2026-09-09T03:08:25.138Z",
   "origin": "http://localhost:3210",
   "rounds": [
     {
       "round": 1,
-      "question": "What did Jacques de Meulles improvise to pay troops in New France when coins ran short in 1685?",
-      "category": "Strange currency",
-      "truth": "Playing cards, cut to different shapes and signed with their monetary values on the backs.",
-      "source": "https://www.bankofcanadamuseum.ca/2018/12/a-good-deal/",
+      "question": "What can a grey squirrel do when it notices a rival watching it store food?",
+      "category": "Beastly cheats",
+      "truth": "Go through the motions of burying a nut while leaving the hiding place empty.",
+      "source": "https://www.sciencedirect.com/science/article/abs/pii/S0003347207004988",
       "scores": [
         {
           "name": "Ada",
@@ -30,10 +30,10 @@
     },
     {
       "round": 2,
-      "question": "Why could two copies of the same early Bible edition disagree even though neither reader had altered a word?",
-      "category": "Printing oddities",
-      "truth": "Corrections were made while the press kept working, so uncorrected sheets could be mixed with corrected ones in finished copies.",
-      "source": "https://folgerpedia.folger.edu/Manifold_Greatness_exhibition_material",
+      "question": "What ride offers visitors a panoramic view inside Romania's former Turda salt mine?",
+      "category": "Underground worlds",
+      "truth": "A Ferris wheel, twenty meters high and operating entirely underground.",
+      "source": "https://www.salinaturda.eu/en/locatie/salina-amusement-park/",
       "scores": [
         {
           "name": "Ada",
@@ -54,10 +54,10 @@
     },
     {
       "round": 3,
-      "question": "How can traces of Egyptian blue reveal themselves even when their colour is hard to see?",
+      "question": "What protected the messages sent by ancient Assyrian merchants on clay tablets?",
       "category": "Ancient secrets",
-      "truth": "They emit near-infrared light when illuminated, allowing specialised imaging to map the pigment.",
-      "source": "https://www.nature.com/articles/s40494-021-00639-5",
+      "truth": "An outer envelope of clay, labelled with the sender and recipient.",
+      "source": "https://www.britishmuseum.org/blog/trade-and-contraband-ancient-assyria",
       "scores": [
         {
           "name": "Ada",
@@ -78,10 +78,10 @@
     },
     {
       "round": 4,
-      "question": "What did Shackleton’s men call “the thief” during their 1916 voyage in the James Caird?",
-      "category": "Polar oddities",
-      "truth": "A narrow metal dipper used to measure out their drinking water.",
-      "source": "https://www.spri.cam.ac.uk/museum/resources/teacherpackshackletonobjectsfromantarctica(1).pdf",
+      "question": "How does Low's pitcher plant turn a visiting tree shrew into a source of nutrition without eating it?",
+      "category": "Botanical wonders",
+      "truth": "Droppings: its pitchers fit beneath feeding tree shrews like miniature toilets and absorb nutrients from their poo.",
+      "source": "https://www.kew.org/read-and-watch/extraordinary-plants-at-kew",
       "scores": [
         {
           "name": "Ada",
@@ -102,10 +102,10 @@
     },
     {
       "round": 5,
-      "question": "What did Special Operations Executive agents tie over their boots before wading ashore in the Pacific theatre?",
-      "category": "Military blunders",
-      "truth": "Rubber overshoes cast as bare human feet, so their tracks would read as a local's rather than a soldier's.",
-      "source": "https://www.iwm.org.uk/collections/item/object/30103004",
+      "question": "Who was the Thomas Rowley credited with poems that fascinated eighteenth-century readers?",
+      "category": "Hoaxes and frauds",
+      "truth": "The supposed medieval author of poems actually written by teenager Thomas Chatterton.",
+      "source": "https://www.britannica.com/art/forgery-art/Literary-forgery",
       "scores": [
         {
           "name": "Ada",
@@ -126,10 +126,10 @@
     },
     {
       "round": 6,
-      "question": "Why can Actaea pachypoda use birds as delivery agents even though its berries are dangerously toxic to people?",
-      "category": "Botanical wonders",
-      "truth": "Many birds are immune to the berries' toxic effects and spread the seeds after eating them.",
-      "source": "https://www.kew.org/read-and-watch/13-creepy-plants-fungi",
+      "question": "Why might a superstitious prop master refuse an otherwise suitable peacock fan?",
+      "category": "Theatrical lore",
+      "truth": "The feathers' eye-like markings were associated with the evil eye and bad luck on stage.",
+      "source": "https://collections.vam.ac.uk/item/O106181/",
       "scores": [
         {
           "name": "Ada",
@@ -191,6 +191,6 @@
       "score": 0
     }
   ],
-  "completedAt": "2026-09-09T01:48:50.871Z",
+  "completedAt": "2026-09-09T03:08:36.263Z",
   "result": "passed"
 }

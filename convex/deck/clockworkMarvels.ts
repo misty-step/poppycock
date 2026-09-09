@@ -36,7 +36,7 @@ export const clockworkMarvels = definePack(
     {
       key: "clock-carpenter-palace",
       question:
-        "What entertainment unfolds inside the tiny palace beneath William Carpenter's clock dial?",
+        "What miniature social event could William Carpenter's eighteenth-century clock stage for its owner?",
       answer: "A masked ball: rows of costumed figures move across a ballroom while music plays.",
       source: {
         title: "Victoria and Albert Museum — Automaton clock by William Carpenter",
@@ -59,8 +59,8 @@ export const clockworkMarvels = definePack(
     {
       key: "clock-vitascope-sky",
       question:
-        "How did a Vitascope mantel clock make its little ship seem to pass from day into night?",
-      answer: "A rotating drum with a lamp and a sheet of dyed gelatine changed the scene's light.",
+        "What kitchen ingredient helped Vitascope clocks change the sky behind their miniature ships?",
+      answer: "Dyed gelatine, carried around a lamp on a rotating drum to turn day into night.",
       source: {
         title: "Victoria and Albert Museum — Vitascope electronic clock",
         url: "https://collections.vam.ac.uk/item/O322018/electronic-clock-vitascope-industries/",
@@ -70,7 +70,7 @@ export const clockworkMarvels = definePack(
     {
       key: "clock-watson-thames",
       question:
-        "Besides celestial information, what practical London event could be read from Samuel Watson's clock of about 1695?",
+        "What could Samuel Watson's clock of about 1695 tell a Londoner besides the hour and the movements of the heavens?",
       answer: "The time of high tide at London Bridge.",
       source: {
         title: "Science Museum Group — Astronomical clock by Samuel Watson",
@@ -79,15 +79,14 @@ export const clockworkMarvels = definePack(
       },
     },
     {
-      key: "clock-dondi-universe",
+      key: "clock-incense-smell",
       question:
-        "What was Dondi's elaborate machine, reconstructed for the Science Museum in 1974, intended to model?",
-      answer:
-        "The universe, with moving dials and a calendar kept in motion by a weight-driven clock.",
+        "How could someone keep track of time with a Chinese timekeeper without seeing or hearing it?",
+      answer: "By smelling it: different perfumes in burning incense marked the passage of time.",
       source: {
-        title: "Science Museum Group — Reconstruction of Dondi's Astronomical Clock",
-        url: "https://collection.sciencemuseumgroup.org.uk/objects/co8648377/reconstruction-of-dondis-astronomical-clock-1974",
-        note: "The catalogue identifies the reconstruction as a working model of the universe whose movements, dials and calendar are driven by a weight-powered clock.",
+        title: "Science Museum Group — Chinese incense clock",
+        url: "https://collection.sciencemuseumgroup.org.uk/objects/co729/chinese-incense-clock",
+        note: "The catalogue explains measured incense paths and states that perfumes incorporated into standardised incense sticks enabled users to keep time with their sense of smell.",
       },
     },
     {
@@ -103,7 +102,7 @@ export const clockworkMarvels = definePack(
     },
     {
       key: "clock-bontems-timing",
-      question: "What timing trick helped Bontems' mechanical songbirds seem less like machines?",
+      question: "What made Bontems' mechanical songbirds seem less mechanical to an observer?",
       answer:
         "They could be set to perform at irregular intervals rather than always on a fixed schedule.",
       source: {
@@ -115,9 +114,9 @@ export const clockworkMarvels = definePack(
     {
       key: "clock-monkey-control",
       question:
-        "How could the owner vary the performance of a Parisian mechanical monkey made around 1850?",
+        "What part could an owner play in the performance of a Parisian mechanical monkey made around 1850?",
       answer:
-        "Four keys controlled separate movements, which could be combined instead of following one fixed routine.",
+        "Choreograph its movements with four separate keys, combining actions rather than watching a fixed routine.",
       source: {
         title: "Science Museum Group — Automaton monkey",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co8607032/automaton-monkey",
@@ -126,9 +125,8 @@ export const clockworkMarvels = definePack(
     },
     {
       key: "clock-morrison-doll",
-      question:
-        "What made Enoch Rice Morrison's 1862 doll remarkable when it was placed on a flat surface?",
-      answer: "It took steps forward under spring power, rather than simply rolling along.",
+      question: "What did Enoch Rice Morrison conceal beneath the skirts of his 1862 doll?",
+      answer: "A spring mechanism that let it take actual steps, rather than roll along on wheels.",
       source: {
         title: "Science Museum Group — Autoperipatetikos walking doll",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co8607030/autoperipatetikos-walking-doll",
@@ -151,7 +149,7 @@ export const clockworkMarvels = definePack(
       key: "clock-prisoner-material",
       question:
         "What did a Napoleonic prisoner of war use to make the elaborate moving figures in a miniature spinning scene?",
-      answer: "Carved bone, painted in several colours, formed a scene with nine moving figures.",
+      answer: "Carved bone, painted in several colours; even the nine little figures could move.",
       source: {
         title: "Science Museum Group — Spinning Jenny Automaton",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co8612486/spinning-jenny-automaton",
@@ -174,7 +172,7 @@ export const clockworkMarvels = definePack(
       key: "clock-tinder-alarm",
       question:
         "What extra service did an eighteenth-century Viennese alarm clock perform when its alarm went off?",
-      answer: "It released a tinder-pistol mechanism and lit a candle.",
+      answer: "It fired a tinder pistol to light a candle.",
       source: {
         title: "Science Museum Group — Tinder-pistol combined with alarm clock",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co8076803/tinder-pistol-combined-with-alarm-clock-austria",
@@ -196,9 +194,9 @@ export const clockworkMarvels = definePack(
     {
       key: "clock-monk-devotion",
       question:
-        "What devotional gesture could a sixteenth-century clockwork monk perform as it moved around?",
+        "What human behaviour was a sixteenth-century clockwork monk built to imitate as it walked?",
       answer:
-        "It beat its breast in contrition, while also moving its lips and raising a crucifix and rosary.",
+        "Praying in contrition: it moved its lips, raised a crucifix and rosary, and beat its breast.",
       source: {
         title: "Science Museum — Robot uprising in the Science Museum",
         url: "https://blog.sciencemuseum.org.uk/robot-uprising-in-the-science-museum/",
@@ -219,19 +217,20 @@ export const clockworkMarvels = definePack(
     {
       key: "clock-vaucanson-musician",
       question:
-        "What musical task did Jacques de Vaucanson build a machine to perform in the 1730s?",
-      answer: "Play the flute without a human musician.",
+        "What did Jacques de Vaucanson have to add to his mechanical flute player's hands to make them work?",
+      answer: "Skin: its bare metal hands could not properly grip and finger the flute.",
       source: {
-        title: "Science Museum — Future Technologies in Music",
-        url: "https://blog.sciencemuseum.org.uk/future-technologies-in-music/",
-        note: "The museum's history of autonomous music identifies Vaucanson's eighteenth-century Flute Player as an early example of a machine making music.",
+        title:
+          "Smithsonian Magazine — This Eighteenth-Century Robot Actually Used Breathing to Play the Flute",
+        url: "https://www.smithsonianmag.com/smart-news/eighteenth-century-robot-actually-used-breathing-play-flute-180962214/",
+        note: "The article says Vaucanson's metal hands could not grip or finger the flute, so he gave them skin; the instrument was genuinely played using bellows and a movable tongue.",
       },
     },
     {
       key: "clock-baghdad-organ",
       question:
-        "What powered an automatic musical instrument described by the Banu Musa brothers in ninth-century Baghdad?",
-      answer: "Water powered their mechanical organ.",
+        "What could flowing water do in one of the Banu Musa brothers' ninth-century Baghdad inventions?",
+      answer: "Play music automatically by powering a mechanical organ.",
       source: {
         title: "Science Museum — Future Technologies in Music",
         url: "https://blog.sciencemuseum.org.uk/future-technologies-in-music/",
@@ -239,13 +238,14 @@ export const clockworkMarvels = definePack(
       },
     },
     {
-      key: "clock-lion-hour",
-      question: "What did Karl Schmidt's small gilded lion do when the hour struck?",
-      answer: "Its eyes and mouth moved.",
+      key: "clock-sundial-cannon",
+      question:
+        "How could a sundial made by Victor Chevalier announce noon to someone who wasn't looking?",
+      answer: "A lens focused sunlight onto a fuse and fired a miniature cannon.",
       source: {
-        title: "Metropolitan Museum of Art — Automaton clock in the form of a lion",
-        url: "https://www.metmuseum.org/art/collection/search/196404",
-        note: "The Met dates the Augsburg clock to about 1620–1635 and states that the lion's eyes and mouth are set in motion when the clock strikes the hour.",
+        title: "Royal Museums Greenwich — Cannon dial",
+        url: "https://www.rmg.co.uk/collections/objects/rmgc-object-10341",
+        note: "The museum describes the Chevalier dial of 1834–1843 and explains that a burning glass focused noon sunlight onto a fuse to fire the miniature cannon.",
       },
     },
     {
@@ -271,14 +271,15 @@ export const clockworkMarvels = definePack(
       },
     },
     {
-      key: "clock-eagle-sceptre",
+      key: "clock-jaquet-custom-writing",
       question:
-        "What did the crowned eagle on an Augsburg clock of about 1630 do as the hours sounded?",
-      answer: "It moved its sceptre up and down.",
+        "What could an owner customise in Pierre Jaquet-Droz's mechanical little boy of the 1770s?",
+      answer:
+        "The words it wrote: its clockwork could be set to write a short chosen text with a quill and real ink.",
       source: {
-        title: "Metropolitan Museum of Art — Automaton clock in the form of an eagle",
-        url: "https://www.metmuseum.org/art/collection/search/196403",
-        note: "The Met distinguishes hourly movement of the eagle's sceptre from its original quarter-hour beak movement; eye movement is described as uncertain.",
+        title: "Atlas Obscura — Jaquet-Droz Automata",
+        url: "https://www.atlasobscura.com/places/jaquet-droz-automata",
+        note: "The account describes the Writer as a crank-wound programmable machine whose 40-letter text could be customised, with a quill dipping into an inkwell. No current working-order claim is made.",
       },
     },
     {
@@ -306,8 +307,8 @@ export const clockworkMarvels = definePack(
     {
       key: "clock-eden-snake",
       question:
-        "What moved through the Adam-and-Eve scene on a watch attributed to Charles Clay around 1720?",
-      answer: "A silver snake moved around the edge of the enamel picture as the watch ticked.",
+        "What tiny moving creature accompanied the ticking of a Charles Clay watch from around 1720?",
+      answer: "A silver snake circled an enamel scene of Adam and Eve.",
       source: {
         title: "Metropolitan Museum of Art — Watch with automaton",
         url: "https://www.metmuseum.org/art/collection/search/187200",
@@ -317,8 +318,8 @@ export const clockworkMarvels = definePack(
     {
       key: "clock-leonardo-greeting",
       question:
-        "What did Leonardo's mechanical lion reportedly release from its chest to greet a French king in 1509?",
-      answer: "A shower of golden lilies.",
+        "What courtly flourish did Leonardo's mechanical lion reportedly perform for a French king in 1509?",
+      answer: "It opened its chest and released a shower of golden lilies.",
       source: {
         title: "Metropolitan Museum of Art — Automaton clock in the form of an eagle",
         url: "https://www.metmuseum.org/art/collection/search/196403",
@@ -328,9 +329,9 @@ export const clockworkMarvels = definePack(
     {
       key: "clock-tabletop-warship",
       question:
-        "How did Augsburg's elaborate mechanical warships announce themselves while crossing a banquet table?",
+        "What disruption could an Augsburg mechanical ship cause as it crossed a banquet table?",
       answer:
-        "They fired miniature cannons while tiny trumpeters and kettledrummers played a fanfare.",
+        "It fired miniature cannons while tiny trumpeters and kettledrummers played a fanfare.",
       source: {
         title: "Metropolitan Museum of Art — Automaton clock in the form of an eagle",
         url: "https://www.metmuseum.org/art/collection/search/196403",
@@ -340,8 +341,8 @@ export const clockworkMarvels = definePack(
     {
       key: "clock-door-winding",
       question:
-        "What ordinary action was advertised as winding a regulator in John Joseph Merlin's mechanical museum?",
-      answer: "Opening its door wound it up.",
+        "How were visitors to John Joseph Merlin's mechanical museum supposed to wind one unusual clock?",
+      answer: "Simply open its door: that action wound the mechanism.",
       source: {
         title: "Victoria and Albert Museum — Longcase clock by James Cox",
         url: "https://collections.vam.ac.uk/item/O297335/longcase-clock-cox-james/",

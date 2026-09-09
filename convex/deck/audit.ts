@@ -4,11 +4,16 @@ import type { SeedCard } from "./types";
  * Editorial guard for the sourced catalog.
  *
  * `validate.ts` enforces the structural contract the game reads cards through:
- * keys, categories, lengths, sources. This guards the one editorial defect that
+ * keys, categories, lengths, sources. This guards the editorial defect that
  * keeps recurring as the catalog grows across independently authored packs: two
  * cards covering the same subject. A match draws a fresh category each round, so
  * a restated subject spoils its twin the moment both land in the same game, and
  * `whale-fall` shipped in two packs before a manual read caught it.
+ *
+ * Two signals catch it. Shared wording finds cards that describe the same thing
+ * in the same terms. A shared source URL finds the ones that do not: an antimony
+ * cup written up twice from one museum record overlapped by only 15% of its
+ * vocabulary, but both cards cited the same page.
  *
  * Question phrasing and bluffability stay editorial judgment. Attempts to score
  * them mechanically flagged healthy cards — a question naming its subject
@@ -16,6 +21,7 @@ import type { SeedCard } from "./types";
  */
 
 export type CatalogFinding = {
+  kind: "restated-subject" | "shared-source";
   pack: string;
   card: string;
   detail: string;
@@ -155,7 +161,7 @@ const overlapRatio = (a: ReadonlySet<string>, b: ReadonlySet<string>): number =>
 export const SAME_PACK_THRESHOLD = 0.4;
 export const CROSS_PACK_THRESHOLD = 0.26;
 
-export function findRestatedCards(cards: readonly SeedCard[]): CatalogFinding[] {
+export function findEditorialDefects(cards: readonly SeedCard[]): CatalogFinding[] {
   const profiles = cards.map((card) => ({ card, subject: subjectTokens(card) }));
   const findings: CatalogFinding[] = [];
 
@@ -166,11 +172,33 @@ export function findRestatedCards(cards: readonly SeedCard[]): CatalogFinding[] 
       const overlap = overlapRatio(profiles[i].subject, profiles[j].subject);
       if (overlap < threshold) continue;
       findings.push({
+        kind: "restated-subject",
         pack: profiles[i].card.packKey,
         card: profiles[i].card.key,
         detail: `${Math.round(overlap * 100)}% subject overlap with ${profiles[j].card.packKey}/${profiles[j].card.key}`,
       });
     }
+  }
+
+  // One pack mining a single glossary is how a themed pack is built; the slang
+  // pack draws twenty cards from one Gutenberg text. The same page cited from
+  // two different packs means either one subject written up twice or a source
+  // pasted onto the wrong card, and the catalog has produced both.
+  const byUrl = new Map<string, SeedCard[]>();
+  for (const card of cards) {
+    const shared = byUrl.get(card.source.url);
+    if (shared) shared.push(card);
+    else byUrl.set(card.source.url, [card]);
+  }
+  for (const shared of byUrl.values()) {
+    if (new Set(shared.map((card) => card.packKey)).size < 2) continue;
+    const [first, ...rest] = shared;
+    findings.push({
+      kind: "shared-source",
+      pack: first.packKey,
+      card: first.key,
+      detail: `cites the same source as ${rest.map((card) => `${card.packKey}/${card.key}`).join(", ")}`,
+    });
   }
 
   return findings;

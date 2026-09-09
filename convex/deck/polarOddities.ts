@@ -24,8 +24,8 @@ export const polarOddities = definePack(
     {
       key: "polar-james-caird-thief",
       question:
-        "What did Shackleton’s men call “the thief” during their 1916 voyage in the James Caird?",
-      answer: "A narrow metal dipper used to measure out their drinking water.",
+        "What was the job of 'the thief' aboard the James Caird during its desperate 1916 voyage?",
+      answer: "Measuring out drinking water: 'the thief' was a narrow metal dipper.",
       source: {
         title: "Scott Polar Research Institute — Focus on Shackleton",
         url: "https://www.spri.cam.ac.uk/museum/resources/teacherpackshackletonobjectsfromantarctica(1).pdf",
@@ -47,7 +47,7 @@ export const polarOddities = definePack(
       key: "polar-geologist-audition",
       question:
         "Besides recognising gold, what ability did Shackleton ask geologist Raymond Priestley about at his 1907 interview?",
-      answer: "Whether he could sing.",
+      answer: "Singing, which could help morale through a long polar winter.",
       source: {
         title: "Scott Polar Research Institute — Focus on Shackleton",
         url: "https://www.spri.cam.ac.uk/museum/resources/teacherpackshackletonobjectsfromantarctica(1).pdf",
@@ -88,20 +88,22 @@ export const polarOddities = definePack(
       },
     },
     {
-      key: "polar-sennegrass-purpose",
-      question: "What did Sami travellers use sennegrass for?",
-      answer: "Packing it inside footwear to absorb perspiration from their feet.",
+      key: "polar-mcmurdo-ice-pier",
+      question:
+        "Beginning in the 1970s, what unusual structure did cargo ships unload against at McMurdo Station?",
+      answer: "A purpose-built pier made of ice, in Winter Quarters Bay.",
       source: {
-        title: "Scott Polar Research Institute — Sennegrass, N95",
-        url: "https://www.spri.cam.ac.uk/museum/catalogue/article/n95/",
-        note: "The catalogue identifies the material as Carex vesicaria and explains that Sami people placed sennegrass in finnesko footwear to absorb perspiration.",
+        title: "National Science Foundation — Science on the Ice, fifth edition",
+        url: "https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh",
+        note: "The ship-operations section says vessels used an ice pier in Winter Quarters Bay for cargo and fuel operations from the early 1970s. The card refers to that historical arrangement, not a permanent current facility.",
       },
     },
     {
       key: "polar-pratt-backpack",
       question:
-        "What was the IMP that Geoff Pratt endured wearing for a week on a 1950s Antarctic expedition?",
-      answer: "A mask-and-backpack device that collected his breath to measure energy expenditure.",
+        "Why did Antarctic explorer Geoff Pratt spend a week attached to a mask and backpack, even while sleeping?",
+      answer:
+        "The apparatus collected his breath so researchers could measure how much energy he was using.",
       source: {
         title: "Scott Polar Research Institute — What on earth is an IMP?",
         url: "https://www.spri.cam.ac.uk/museum/news/antarctic-cataloguing-project/2017/11/02/what-on-earth-is-an-imp/",
@@ -133,7 +135,7 @@ export const polarOddities = definePack(
     {
       key: "polar-penguin-satellite-clue",
       question:
-        "What brown clue helps scientists locate Antarctic penguin colonies in satellite images?",
+        "What evidence of penguin colonies can show up in satellite images even when individual birds cannot be seen?",
       answer: "Stains left by accumulated penguin droppings.",
       source: {
         title: "NASA Earth Observatory — A Small Green Iceberg?",
@@ -155,7 +157,7 @@ export const polarOddities = definePack(
     {
       key: "polar-ancient-hanging-roots",
       question:
-        "What delicate remains hang from the ceiling of the Army’s Permafrost Tunnel near Fairbanks?",
+        "What hangs from the ceiling of the Army's Permafrost Tunnel near Fairbanks even though nobody put it there?",
       answer: "Grass and tree roots preserved for roughly 20,000 to 30,000 years.",
       source: {
         title: "NASA Earth Observatory — A Frozen Fieldtrip from Fairbanks",
@@ -164,34 +166,35 @@ export const polarOddities = definePack(
       },
     },
     {
-      key: "polar-refrigerated-permafrost",
+      key: "polar-shackleton-replica-whisky",
       question:
-        "Why does Alaska’s Permafrost Tunnel need a refrigeration system, despite its name?",
+        "What unexpected commercial product resulted from excavating beneath Shackleton's Antarctic hut?",
       answer:
-        "Repeated door-opening and warmer outside air would otherwise thaw the ancient frozen ground.",
+        "Replica whisky: samples from the surviving bottles let a distiller recreate the expedition's drink for sale.",
       source: {
-        title: "NASA Earth Observatory — A Frozen Fieldtrip from Fairbanks",
-        url: "https://science.nasa.gov/blogs/notes-from-the-field/2014/07/21/a-frozen-fieldtrip-from-fairbanks/",
-        note: "The Army’s tunnel is maintained at about -3°C with a chiller in summer; decades of door opening and warming outside air would otherwise thaw the exposed permafrost.",
+        title: "National Science Foundation — Science on the Ice, fifth edition",
+        url: "https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh",
+        note: "The Nimrod Hut section records whisky crates discovered in 2006, samples sent to Whyte and Mackay, and the distiller successfully duplicating Shackleton's whisky in versions sold to the public.",
       },
     },
     {
-      key: "polar-polygon-ground",
+      key: "polar-dry-valley-apex",
       question:
-        "What repeated process draws large polygon-like patterns across some permanently frozen ground?",
+        "In the nearly barren soils of Antarctica's McMurdo Dry Valleys, what creatures sit at the top of the food chain?",
       answer:
-        "Winter cracks fill with spring meltwater, which freezes into expanding wedges of ice.",
+        "Microscopic nematode worms; the valleys' land ecosystems are dominated by tiny, mostly hidden life.",
       source: {
-        title: "NASA Earth Observatory — A Frozen Fieldtrip from Fairbanks",
-        url: "https://science.nasa.gov/blogs/notes-from-the-field/2014/07/21/a-frozen-fieldtrip-from-fairbanks/",
-        note: "The article explains thermal-contraction cracks, spring meltwater freezing in those cracks, and repetition along the same weak areas, gradually creating a lattice of ice wedges and polygonal patterns.",
+        title: "National Science Foundation — Science on the Ice, fifth edition",
+        url: "https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh",
+        note: "Dry Valleys Ecology describes the largely microscopic invertebrate communities and says soil nematodes generally represent the apex of two food chains, based on algal and moss productivity and decomposition.",
       },
     },
     {
       key: "polar-pearly-cloud-ingredient",
       question:
-        "What corrosive substance can join water in the pearly clouds high above polar regions?",
-      answer: "Nitric acid.",
+        "What unexpected ingredient can form the shimmering pearly clouds high above the winter poles?",
+      answer:
+        "Nitric acid, condensing with traces of water in the exceptionally cold stratosphere.",
       source: {
         title: "NASA Earth Observatory — CALIPSO Spies Polar Stratospheric Clouds",
         url: "https://science.nasa.gov/earth/earth-observatory/calipso-spies-polar-stratospheric-clouds-49187/",
@@ -200,23 +203,24 @@ export const polarOddities = definePack(
     },
     {
       key: "polar-polynya-opening",
-      question: "What is a polynya?",
-      answer:
-        "An area of open water within sea ice, sometimes persisting through the polar winter.",
+      question:
+        "What made the Maud Rise region stand out in Antarctic satellite images during the winter of 2017?",
+      answer: "An enormous patch of open water had appeared in the middle of the sea ice.",
       source: {
         title: "NASA Earth Observatory — Deciphering the Maud Rise Polynya",
         url: "https://science.nasa.gov/earth/earth-observatory/deciphering-the-maud-rise-polynya-145069/",
-        note: "The Maud Rise polynya opened amid Antarctic winter sea ice. NASA describes winds separating the ice and ocean circulation bringing up warmer water that can keep such openings from freezing over.",
+        note: "NASA shows the Maud Rise polynya in September 2017 and describes its growth through the winter. Cyclonic winds separated the ice, while ocean circulation could bring up warmer water to sustain the opening.",
       },
     },
     {
-      key: "polar-don-juan-liquid",
-      question: "What keeps Antarctica’s Don Juan Pond liquid despite the bitter cold?",
-      answer: "An exceptionally high concentration of dissolved salts.",
+      key: "polar-south-pole-lifting-station",
+      question:
+        "How was the present South Pole station designed to escape the fate of earlier buildings buried by snow?",
+      answer: "The building itself can be raised above the accumulating drifts.",
       source: {
         title: "National Science Foundation — Science on the Ice, fifth edition",
         url: "https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh",
-        note: "The Dry Valleys hydrology section contrasts Don Juan Pond with the ice-covered lakes nearby and attributes its resistance to freezing to its high level of dissolved salts.",
+        note: "The South Pole Today section says the elevated station completed in 2008 has a modular design that can be raised to prevent burial in drifting snow. The original 1957 station was buried beneath 45 feet of snow.",
       },
     },
     {
@@ -252,9 +256,8 @@ export const polarOddities = definePack(
     },
     {
       key: "polar-rodwell-purpose",
-      question: "What is a Rodwell at the South Pole?",
-      answer:
-        "A reservoir melted into the ice and compacted snow to supply the station with water.",
+      question: "Where does the South Pole station keep the reservoir supplying its taps?",
+      answer: "In an underground hollow deliberately melted into the ice and compacted snow.",
       source: {
         title: "National Science Foundation — Science on the Ice, fifth edition",
         url: "https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh",
@@ -273,8 +276,8 @@ export const polarOddities = definePack(
     },
     {
       key: "polar-onyx-destination",
-      question: "What is unusual about the direction taken by Antarctica’s Onyx River?",
-      answer: "It flows away from the ocean because a glacier blocks the coastal route.",
+      question: "Why doesn't the Onyx River carry its water to Antarctica's coast?",
+      answer: "A glacier blocks the coastal route, so the river flows inland instead.",
       source: {
         title: "National Science Foundation — Science on the Ice, fifth edition",
         url: "https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh",
@@ -292,15 +295,15 @@ export const polarOddities = definePack(
       },
     },
     {
-      key: "polar-sea-ice-blossoms",
+      key: "polar-sledge-dog-removal",
       question:
-        "What are the short-lived, blossom-shaped structures that appear on newly formed polar sea ice?",
-      answer: "Clusters of very salty ice crystals that draw up brine from the surface.",
+        "What veteran member of Antarctic expeditions had to leave the continent under a rule taking effect in 1994?",
+      answer:
+        "The sledge dogs, banned over risks of spreading disease to seals and disturbing native wildlife.",
       source: {
-        title:
-          "Journal of Geophysical Research: Atmospheres / NOAA — Frost flower aerosol effects on Arctic wintertime longwave cloud radiative forcing",
-        url: "https://www.pmel.noaa.gov/acg/sites/default/files/atoms/files/xu4062.pdf",
-        note: "The 2013 paper defines sea-ice frost flowers as clusters of highly saline ice crystals growing on newly formed sea ice or frozen lakes, wicking up brine and generally lasting only a few days. These differ from plant-stem frost flowers.",
+        title: "British Antarctic Survey — Removal of the sledge dogs from Antarctica",
+        url: "https://legacy.bas.ac.uk/about_antarctica/environment/wildlife/removal_of_sledge_dogs.php",
+        note: "BAS explains that Annex II of the Environmental Protocol required dogs to be removed by April 1994, citing possible disease transmission to seals, wildlife disturbance and non-native species controls.",
       },
     },
     {

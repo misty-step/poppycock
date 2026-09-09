@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
-import { findRestatedCards } from "../convex/deck/audit";
+import { findEditorialDefects } from "../convex/deck/audit";
 import { seedCards, seedPacks } from "../convex/deck/catalog";
 import { validateSeedCatalog } from "../convex/deck/validate";
 import { MAX_BLUFF_LENGTH, SEEN_RECENT, TOTAL_ROUNDS } from "../convex/rules";
@@ -27,7 +27,7 @@ describe("sourced pack catalog", () => {
   });
 
   it("never ships two cards that restate the same subject", () => {
-    expect(findRestatedCards(seedCards)).toEqual([]);
+    expect(findEditorialDefects(seedCards)).toEqual([]);
   });
 
   // A pack module nobody registered ships zero cards, and a provenance index

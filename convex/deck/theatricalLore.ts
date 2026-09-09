@@ -33,22 +33,22 @@ export const theatricalLore = definePack(
       },
     },
     {
-      key: "theatre-wheatley-black-cat",
+      key: "theatre-ben-hur-human-waves",
       question:
-        "What creature did actor Alan Wheatley keep in toy form in his dressing room for good luck?",
+        "What happened to the galley slaves when the ship sank in the Broadway stage version of Ben-Hur?",
       answer:
-        "A black cat, giving him the lucky mascot without a real animal wandering across the stage.",
+        "They lay under a huge canvas and moved their oars, arms and legs to become the waves.",
       source: {
-        title: "Victoria and Albert Museum - Alan Wheatley's lucky mascot",
-        url: "https://collections.vam.ac.uk/item/O1663296/",
-        note: "The V&A holds Wheatley's toy black cat. Its gallery label contrasts a lucky theatre cat with the bad luck of a cat crossing the stage during a show.",
+        title: "General Lew Wallace Study and Museum - Ben-Hur on Broadway",
+        url: "https://www.ben-hur.com/ben-hur-on-broadway/",
+        note: "The Engineering the Wreck section describes actors playing galley slaves lying on the floor under a canvas and using their oars, arms and legs to simulate the sea.",
       },
     },
     {
       key: "theatre-peacock-feather-taboo",
-      question:
-        "Which extravagant bird's feathers have traditionally been considered unlucky on stage?",
-      answer: "Peacock feathers, whose eye-like markings have been associated with the evil eye.",
+      question: "Why might a superstitious prop master refuse an otherwise suitable peacock fan?",
+      answer:
+        "The feathers' eye-like markings were associated with the evil eye and bad luck on stage.",
       source: {
         title: "Victoria and Albert Museum - Marie Taglioni as the Sylph",
         url: "https://collections.vam.ac.uk/item/O106181/",
@@ -69,15 +69,15 @@ export const theatricalLore = definePack(
       },
     },
     {
-      key: "theatre-tisdale-superhero-pose",
+      key: "theatre-ghost-glide-dumbwaiter",
       question:
-        "Which comic-book figure supplied a pre-performance pose for Folger actor Sara Dabney Tisdale?",
-      answer: "Wonder Woman: she struck the superhero's pose as part of her preparation.",
+        "Victorian stages hid a contraption built like a dumbwaiter beneath the boards. What did audiences see it do?",
+      answer:
+        "Made an actor seem to rise out of the earth and then glide through the air across the stage.",
       source: {
-        title:
-          "Folger Shakespeare Library - Very Superstitious: Sense and Sensibility's Cast on Theater Rituals",
-        url: "https://www.folger.edu/blogs/folger-spotlight/very-superstitious/",
-        note: "Folger identifies Tisdale's Wonder Woman pose as an individual warm-up ritual, not a universal theatre custom.",
+        title: "Encyclopedia Britannica — Ghost glide",
+        url: "https://www.britannica.com/art/ghost-glide",
+        note: "Britannica's theatre coverage describes the 19th-century British 'ghost glide' as a sort of dumbwaiter that made actors appear to rise from the earth and glide through space.",
       },
     },
     {
@@ -95,8 +95,9 @@ export const theatricalLore = definePack(
     },
     {
       key: "theatre-limelight-calcium",
-      question: "What actually glowed inside a nineteenth-century limelight spotlight?",
-      answer: "A block of calcium oxide, heated to incandescence by an oxygen-and-hydrogen flame.",
+      question:
+        "What did nineteenth-century stage technicians heat with a hydrogen-and-oxygen flame to light a performer?",
+      answer: "A block of quicklime, heated until it glowed: the source of the word limelight.",
       source: {
         title: "Encyclopedia Britannica - Limelight",
         url: "https://www.britannica.com/art/limelight-theater-lighting",
@@ -105,9 +106,10 @@ export const theatricalLore = definePack(
     },
     {
       key: "theatre-periaktoi-three-scenes",
-      question: "How did a periaktos let a theatre change its scenery with a turn?",
+      question:
+        "How could an ancient stagehand change a street scene to a different setting without replacing the scenery?",
       answer:
-        "It was a rotating triangular prism with a different scene painted on each of its three sides.",
+        "By rotating a triangular prism with a different scene painted on each of its three sides.",
       source: {
         title: "Encyclopedia Britannica - Periaktoi",
         url: "https://www.britannica.com/art/periaktoi",
@@ -126,21 +128,22 @@ export const theatricalLore = definePack(
       },
     },
     {
-      key: "theatre-inigo-tinted-candles",
-      question: "How did Inigo Jones produce coloured stage lighting before electric lamps?",
-      answer: "He put candles behind tinted glass.",
+      key: "theatre-behn-royal-spy",
+      question:
+        "What work had Aphra Behn done for Charles II before becoming a celebrated playwright?",
+      answer: "She had worked as a spy for the king.",
       source: {
         title: "Victoria and Albert Museum - The story of theatre",
         url: "https://www.vam.ac.uk/articles/the-story-of-theatre",
-        note: "The V&A credits Jones with introducing coloured lighting by placing candles behind tinted glass, alongside his perspective scenery.",
+        note: "The Restoration Theatre section states that Behn had previously been employed as a spy for Charles II before her career as a playwright.",
       },
     },
     {
       key: "theatre-peter-pan-hidden-corset",
       question:
-        "What did performers in the original 1904 Peter Pan wear beneath their costumes to leave the ground?",
+        "Why did the original 1904 Peter Pan production need special corsets for its performers?",
       answer:
-        "Corset-shaped harnesses with leather straps, attached to flying wires by a hidden catch.",
+        "They were flying harnesses, with leather straps and a hidden attachment for the wires.",
       source: {
         title: "Victoria and Albert Museum - Peter Pan flying harness",
         url: "https://collections.vam.ac.uk/item/O103031/",
@@ -149,7 +152,8 @@ export const theatricalLore = definePack(
     },
     {
       key: "theatre-eidophusikon-miniature",
-      question: "What was the Eidophusikon that fascinated London audiences in the 1780s?",
+      question:
+        "What kind of spectacle could you buy a ticket to see at London's Eidophusikon in 1781?",
       answer:
         "A miniature theatre using painted gauzes, lights and mirrors to stage changing landscapes and spectacular effects.",
       source: {
@@ -159,21 +163,22 @@ export const theatricalLore = definePack(
       },
     },
     {
-      key: "theatre-jackknife-pivot",
-      question: "What makes a jackknife stage different from an ordinary movable platform?",
-      answer:
-        "It pivots on and offstage around one fixed corner instead of simply rolling straight in.",
+      key: "theatre-globe-recycled-building",
+      question:
+        "What did Shakespeare's company do with their playhouse when the lease on its site expired?",
+      answer: "Dismantled the timber building and rebuilt it across the Thames as the Globe.",
       source: {
-        title: "Encyclopedia Britannica - Stagecraft: Stage machinery",
-        url: "https://www.britannica.com/art/stagecraft/Stage-machinery",
-        note: "Britannica describes a wagon-like platform anchored at one corner, from which it pivots onstage and offstage.",
+        title: "Victoria and Albert Museum - The story of theatre",
+        url: "https://www.vam.ac.uk/articles/the-story-of-theatre",
+        note: "The Shakespeare section says the company dismantled The Theatre after the land lease expired and rebuilt its timber frame on the south bank, renaming it the Globe.",
       },
     },
     {
       key: "theatre-ragged-trap-proposal",
       question:
-        "Why did an 1825 letter to Drury Lane's manager recommend abandoning neatly shaped stage openings?",
-      answer: "Irregular edges would make trapdoors look like natural chasms opening in the earth.",
+        "What visual failing did an 1825 letter to Drury Lane blame on stage openings being too neat?",
+      answer:
+        "The trapdoors looked like carpentry rather than natural chasms opening in the earth.",
       source: {
         title: "Folger Shakespeare Library - Trappings of the stage",
         url: "https://www.folger.edu/blogs/collation/trappings-of-the-stage/",
@@ -194,7 +199,7 @@ export const theatricalLore = definePack(
     {
       key: "theatre-tate-lears-survival",
       question:
-        "What major change made Nahum Tate's version of King Lear more comforting to audiences?",
+        "What would audiences see at the end of Nahum Tate's King Lear that Shakespeare never wrote?",
       answer: "Lear and Cordelia survive instead of dying.",
       source: {
         title: "Victoria and Albert Museum - The story of theatre",
@@ -228,7 +233,7 @@ export const theatricalLore = definePack(
     {
       key: "theatre-pageant-moving-stage",
       question:
-        "How did medieval English mystery plays take their performances from one street audience to the next?",
+        "Why might medieval spectators stay put while the next play in a cycle came to them?",
       answer:
         "They used pageant wagons that moved through town and stopped at agreed performance sites.",
       source: {
@@ -252,7 +257,7 @@ export const theatricalLore = definePack(
     {
       key: "theatre-farinelli-four-songs",
       question:
-        "What remarkably repetitive assignment did Farinelli perform for Spain's Philip V for ten years?",
+        "What treatment did Spain's Philip V receive from the singer Farinelli every night for a decade?",
       answer: "He sang the same four songs to the king every night.",
       source: {
         title: "Encyclopedia Britannica - Farinelli",
@@ -261,24 +266,26 @@ export const theatricalLore = definePack(
       },
     },
     {
-      key: "theatre-da-capo-invention",
+      key: "theatre-garrick-fright-wig",
       question:
-        "What was a singer expected to change when the opening section returned in a da capo aria?",
-      answer: "Add improvised vocal embellishments rather than repeat it exactly as before.",
+        "What trick equipment was David Garrick reputed to use when Hamlet saw his father's ghost?",
+      answer: "A mechanical wig whose hair stood on end to make him look terrified.",
       source: {
-        title: "Encyclopedia Britannica - Opera seria",
-        url: "https://www.britannica.com/art/opera-seria",
-        note: "Britannica describes the ABA form and explicitly says the returning first section had improvised embellishments.",
+        title: "Folger Shakespeare Library - Acting, Emotion, and Science on Shakespeare's Stage",
+        url: "https://www.folger.edu/podcasts/shakespeare-unlimited/joseph-roach-acting/",
+        note: "Joseph Roach describes two sources for Garrick's mechanical fright wig in the ghost scene. He explicitly allows that the story may be a contemporary belief, so the prompt says reputed.",
       },
     },
     {
-      key: "theatre-beggars-borrowed-tunes",
-      question: "What shortcut supplied the familiar music for John Gay's The Beggar's Opera?",
-      answer: "Existing popular songs were recycled with new, humorous and satirical lyrics.",
+      key: "theatre-ben-hur-treadmills",
+      question:
+        "How did the Broadway stage version of Ben-Hur make eight live horses appear to race at full speed?",
+      answer:
+        "They galloped on treadmills, with moving ground effects and powder blown up around their hooves as dust.",
       source: {
-        title: "Victoria and Albert Museum - The story of theatre",
-        url: "https://www.vam.ac.uk/articles/the-story-of-theatre",
-        note: "The V&A describes Gay taking popular songs of the day and writing new satirical lyrics for his ballad opera.",
+        title: "General Lew Wallace Study and Museum - Ben-Hur on Broadway",
+        url: "https://www.ben-hur.com/ben-hur-on-broadway/",
+        note: "The Chariot Race section describes eight horses galloping on a treadmill, adjacent moving belts and blowers under the floor forcing powder through the treadmill to resemble dust.",
       },
     },
     {
@@ -292,20 +299,19 @@ export const theatricalLore = definePack(
       },
     },
     {
-      key: "theatre-pantomime-principal-boy",
-      question: "Who traditionally played the romantic young male lead in British pantomime?",
-      answer: "A woman, in the role known as the principal boy.",
+      key: "theatre-terry-beetle-wings",
+      question: "What gave Ellen Terry's Lady Macbeth dress its shimmering decoration in 1888?",
+      answer: "Real beetle wings, attached to give the dress the appearance of a serpent's scales.",
       source: {
-        title: "Victoria and Albert Museum - Aladdin, 1962 poster",
-        url: "https://collections.vam.ac.uk/item/O1170831/",
-        note: "The V&A poster record states that female principal boys are traditional, while noting that Adam Faith took the role in the specific 1962 production.",
+        title: "National Trust - Costume conservation at Smallhythe Place",
+        url: "https://www.nationaltrust.org.uk/visit/kent/smallhythe-place/costume-conservation",
+        note: "The Conserving the Beetlewing Dress section identifies Terry's 1888 Lady Macbeth costume and says the addition of beetlewings created the effect of a serpent's scales.",
       },
     },
     {
       key: "theatre-bunraku-missing-legs",
-      question: "What body parts do traditional female Bunraku puppets lack?",
-      answer:
-        "Legs and feet; the long kimono hides that area, so a puppeteer moves the garment instead.",
+      question: "How does a puppeteer make a traditional female Bunraku puppet appear to walk?",
+      answer: "By moving its long kimono: the puppet has no legs or feet beneath it.",
       source: {
         title: "Encyclopedia Britannica - Bunraku",
         url: "https://www.britannica.com/art/Bunraku",
@@ -313,22 +319,22 @@ export const theatricalLore = definePack(
       },
     },
     {
-      key: "theatre-baroque-preserved-voices",
+      key: "theatre-frankenstein-blue-monster",
       question:
-        "What drastic childhood intervention preserved the high voices of many male Baroque opera stars?",
-      answer: "Castration before puberty, producing the singers known as castrati.",
+        "What did Frankenstein's monster look like on the early stage, before Boris Karloff established the familiar image?",
+      answer: "Pale blue skin, flowing black hair and a toga.",
       source: {
-        title: "Encyclopedia Britannica - Castrato",
-        url: "https://www.britannica.com/art/castrato",
-        note: "Britannica defines the castrato voice as resulting from castration before puberty and places its prominence in the Baroque era.",
+        title:
+          "Victoria and Albert Museum - Five Spooky Tricks and Treats from the Theatre and Performance Collections",
+        url: "https://www.vam.ac.uk/blog/news/five-spooky-tricks-and-treats-from-the-va-theatre-and-performance-collections",
+        note: "The Frankenstein section contrasts early stage portrayals in a toga, with flowing black hair and pale blue skin, with the angular-headed film monster made famous by Karloff.",
       },
     },
     {
       key: "theatre-cooper-turning-inner-box",
       question:
-        "What was concealed inside the box Tommy Cooper used for his head-twisting illusion?",
-      answer:
-        "A rotating inner box that helped make his head appear to turn through a full circle.",
+        "What impossible feat did Tommy Cooper appear to perform with his head inside a special box?",
+      answer: "Turning his head through a full circle, thanks to a rotating inner box.",
       source: {
         title:
           "Victoria and Albert Museum - Five Spooky Tricks and Treats from the Theatre and Performance Collections",
@@ -338,8 +344,8 @@ export const theatricalLore = definePack(
     },
     {
       key: "theatre-swazzle-punch-voice",
-      question: "What job does a swazzle do in a traditional puppet performance?",
-      answer: "It produces Mr Punch's distinctive squeaky, reedy voice.",
+      question: "Why does a traditional Punch puppeteer need a swazzle?",
+      answer: "To give Mr Punch his distinctive squeaky, reedy voice.",
       source: {
         title: "Victoria and Albert Museum - Happy Birthday Mr Punch!",
         url: "https://www.vam.ac.uk/blog/news/happy-birthday-mr-punch",

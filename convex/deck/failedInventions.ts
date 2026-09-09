@@ -98,13 +98,15 @@ export const failedInventions = definePack(
       },
     },
     {
-      key: "failed-c5-factory",
-      question: "Which familiar appliance manufacturer built the Sinclair C5 in 1985?",
-      answer: "Hoover, at its factory in Merthyr Tydfil, Wales.",
+      key: "failed-pet-display-vest",
+      question:
+        "Why did Brice Belisle’s patented waistcoat have transparent tunnels winding across the wearer’s body?",
+      answer:
+        "So pet hamsters or mice could crawl around inside the clothing in full view of spectators.",
       source: {
-        title: "Science Museum Group — Sinclair C5 Electric Vehicle",
-        url: "https://collection.sciencemuseumgroup.org.uk/objects/co8413609/sinclair-c5-electric-vehicle",
-        note: "Hoover made the C5 for Sinclair Vehicles. The museum records 14,000 produced, about 4,500 sold, and production ending in under a year.",
+        title: "US Patent 5901666 — Pet display clothing",
+        url: "https://patents.google.com/patent/US5901666A/en",
+        note: "The abstract and detailed description specify a clear vest with enclosed passageways over the chest, back and shoulders so observers can watch pets such as hamsters or mice moving inside.",
       },
     },
     {
@@ -143,8 +145,8 @@ export const failedInventions = definePack(
     {
       key: "failed-bunny-syringe",
       question:
-        "What did Robert Smeton's 1967 design disguise as a rabbit to make children less apprehensive?",
-      answer: "A hypodermic syringe.",
+        "What was Robert Smeton’s rabbit-shaped device intended to do in a doctor’s office?",
+      answer: "Give injections: it was a syringe disguised to make children less apprehensive.",
       source: {
         title:
           "US Patent 3299891 — Hypodermic syringes and attachments thereto pleasing to children",
@@ -187,7 +189,7 @@ export const failedInventions = definePack(
     {
       key: "failed-pedal-mower",
       question:
-        "What useful task would a rider perform while pedaling the tricycle in US Patent 4,455,816?",
+        "What extra chore would a rider accomplish while pedalling a tricycle patented in 1984?",
       answer: "Mow the lawn: the pedals drove both the vehicle and its cutting blades.",
       source: {
         title: "US Patent 4455816 — Tricycle lawn mower",
@@ -197,8 +199,7 @@ export const failedInventions = definePack(
     },
     {
       key: "failed-retainer-alarm",
-      question:
-        "What lapse was the mouth-mounted apparatus in a 1988 patent designed to call attention to?",
+      question: "What lapse was a wearable alarm patented in 1988 designed to call attention to?",
       answer: "Leaving an orthodontic retainer out for too long.",
       source: {
         title: "US Patent 4764111 — Apparatus for reminding a user of a desired activity",
@@ -209,7 +210,7 @@ export const failedInventions = definePack(
     {
       key: "failed-flaming-trumpet",
       question:
-        "What could a musician send out of an instrument under US Patent 4,247,283, besides music?",
+        "What extra effect could a trumpet player control with an attachment patented in 1981?",
       answer: "A controllable flame from the bell of a trumpet.",
       source: {
         title: "US Patent 4247283 — Flaming trumpet",
@@ -241,7 +242,7 @@ export const failedInventions = definePack(
     },
     {
       key: "failed-balloon-fishing",
-      question: "What unusual helper did US Patent 3,698,121 recruit to bring in a catch?",
+      question: "What unusual helper did a 1972 fishing patent recruit to bring in a catch?",
       answer:
         "A lighter-than-air balloon that could lift a hooked fish toward the water’s surface.",
       source: {
@@ -274,8 +275,8 @@ export const failedInventions = definePack(
     {
       key: "failed-campground-barges",
       question:
-        "How would holidaymakers travel in the arrangement proposed by US Patent 3,964,418?",
-      answer: "Their camper vans would ride on linked barges while they lived inside them.",
+        "What unusual way of travelling did a 1976 patent propose for owners of camper vans?",
+      answer: "Ride inside their vans on linked barges towed along inland waterways.",
       source: {
         title: "US Patent 3964418 — Floating campgrounds",
         url: "https://patents.google.com/patent/US3964418A/en",
@@ -284,8 +285,9 @@ export const failedInventions = definePack(
     },
     {
       key: "failed-rain-cylinder",
-      question: "What unusual shape did US Patent 5,101,513 give its protective outerwear?",
-      answer: "A hoop-supported cylinder hanging from the shoulders, with a hood on top.",
+      question: "How did a 1992 patent hold its rainwear away from the wearer’s body?",
+      answer:
+        "Flexible hoops formed a shoulder-supported cylinder, like a personal tent with a hood.",
       source: {
         title: "US Patent 5101513 — Foul weather apparel",
         url: "https://patents.google.com/patent/US5101513A/en",
@@ -295,8 +297,9 @@ export const failedInventions = definePack(
     {
       key: "failed-cereal-chute",
       question:
-        "What breakfast problem did a 1991 invention tackle with two bowls joined by a sloping chute?",
-      answer: "Soggy cereal: dry portions slid down into milk only when the eater wanted them.",
+        "Why did a 1991 tableware patent place one bowl above another and connect them with a chute?",
+      answer:
+        "To prevent soggy cereal: dry portions slid into the milk only when the eater wanted them.",
       source: {
         title: "US Patent 4986433 — Cereal serving piece",
         url: "https://patents.google.com/patent/US4986433A/en",
@@ -304,21 +307,21 @@ export const failedInventions = definePack(
       },
     },
     {
-      key: "failed-car-coffee",
+      key: "failed-dog-ear-tubes",
       question:
-        "What would US Patent 5,233,914 let a motorist prepare without leaving the driving seat?",
-      answer: "A freshly brewed cup of coffee, using a brewer mounted inside the car.",
+        "Why did James Williams’s 1980 invention hold a dog’s ears sideways inside a pair of tubes?",
+      answer: "To keep long ears from dipping into food or drink while the dog ate.",
       source: {
-        title: "US Patent 5233914 — In-car coffee maker",
-        url: "https://patents.google.com/patent/US5233914A/en",
-        note: "The 1993 patent abstract describes an anchored, adjustable in-car brewer for a single portion of coffee or another brewed beverage.",
+        title: "US Patent 4233942 — Animal ear protectors",
+        url: "https://patents.google.com/patent/US4233942A/en",
+        note: "The abstract and claims describe tubular ear protectors held horizontally away from the animal’s head, preventing long ears from contacting food or drink during eating.",
       },
     },
     {
       key: "failed-computer-candy",
       question:
-        "What reward would a computer peripheral patented in 1998 give students for a correct answer?",
-      answer: "It dispensed a single piece of candy.",
+        "What physical response could a 1998 computer accessory produce when a pupil solved a problem?",
+      answer: "Dispense a piece of candy as an immediate reward.",
       source: {
         title: "US Patent 5823386 — Reward candy dispenser",
         url: "https://patents.google.com/patent/US5823386A/en",

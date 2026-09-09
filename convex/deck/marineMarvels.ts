@@ -11,7 +11,7 @@ export const marineMarvels = definePack(
   [
     {
       key: "marine-barreleye-forehead",
-      question: "How does Macropinna microstoma keep watch on what passes directly overhead?",
+      question: "How does a barreleye fish keep watch on what passes directly overhead?",
       answer:
         "It looks through its own transparent forehead; its tubular eyes can also rotate forward.",
       source: {
@@ -22,7 +22,7 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-strawberry-eyes",
-      question: "What makes the two eyes of Histioteuthis heteropsis such an odd couple?",
+      question: "What makes a strawberry squid's two eyes such an odd couple?",
       answer:
         "One is large and looks upward for silhouettes; the other is small and looks down for flashes of light.",
       source: {
@@ -33,9 +33,8 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-harp-hooks",
-      question: "How does Chondrocladia lyra catch dinner?",
-      answer:
-        "This carnivorous sponge snares small crustaceans on tiny hooks along its branches, then digests them.",
+      question: "How does a harp sponge catch dinner instead of filtering it out of the water?",
+      answer: "It snags small crustaceans on tiny hooks along its branches, then digests them.",
       source: {
         title: "MBARI — Harp sponge",
         url: "https://www.mbari.org/animal/harp-sponge/",
@@ -44,7 +43,7 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-swima-decoys",
-      question: "What does Swima leave behind when it makes an emergency getaway?",
+      question: "What can a deep-sea worm called Swima leave behind during an emergency getaway?",
       answer:
         "Detachable sacs that glow green like tiny decoy bombs; the worm grows replacements afterward.",
       source: {
@@ -55,8 +54,9 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-phronima-nursery",
-      question: "What unusual portable nursery does a female Phronima prepare for her young?",
-      answer: "A salp she has hollowed out, reshaped and toughened into a barrel-shaped shelter.",
+      question: "What does a female barrel amphipod turn into a portable nursery?",
+      answer:
+        "The hollowed-out body of a gelatinous animal called a salp, reshaped and toughened into a shelter.",
       source: {
         title: "MBARI — Barrel amphipod",
         url: "https://www.mbari.org/animal/barrel-amphipod/",
@@ -65,7 +65,8 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-larvacean-house",
-      question: "What disposable structure does Mesochordaeus build around itself to get a meal?",
+      question:
+        "What disposable structure does a redhead larvacean build around itself to get a meal?",
       answer:
         "A house of mucus with outer and inner filters that funnel edible particles toward its mouth.",
       source: {
@@ -76,8 +77,10 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-graneledone-vigil",
-      question: "What was one female Graneledone observed doing for roughly four and a half years?",
-      answer: "Guarding and tending a single clutch of eggs until they hatched.",
+      question:
+        "What did researchers find when they repeatedly revisited the same scarred octopus in Monterey Bay?",
+      answer:
+        "For four and a half years, she stayed in one place guarding the same clutch of eggs until they hatched.",
       source: {
         title: "MBARI — Warty deep-sea octopus",
         url: "https://www.mbari.org/animal/warty-deep-sea-octopus/",
@@ -86,10 +89,9 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-cystisoma-coating",
-      question:
-        "What helps keep the transparent Cystisoma from giving itself away with reflections?",
+      question: "What can a crystal amphipod gain by letting bacteria coat its shell?",
       answer:
-        "Microscopic surface structures or a bacterial coating, working like anti-reflective coatings on glasses.",
+        "An anti-reflective coating: tiny spherical bacteria cut the reflections that could betray its transparent body.",
       source: {
         title: "MBARI — Crystal amphipod",
         url: "https://www.mbari.org/animal/crystal-amphipod/",
@@ -110,8 +112,8 @@ export const marineMarvels = definePack(
     {
       key: "marine-bathyteuthis-cargo",
       question:
-        "What was a female Bathyteuthis carrying during an unusual 2005 encounter in Monterey Bay?",
-      answer: "A sheet of eggs held in her arms as she swam through open water.",
+        "What did a deep-sea squid use as a mobile nursery during a 2005 encounter in Monterey Bay?",
+      answer: "Its own arms, holding a sheet of eggs as it swam through open water.",
       source: {
         title: "MBARI — Deep-sea squid",
         url: "https://www.mbari.org/animal/deep-sea-squid/",
@@ -120,7 +122,8 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-haliphron-hidden-arm",
-      question: "Where does a male Haliphron keep one of its arms when it is not using it?",
+      question:
+        "Where does a male seven-arm octopus conceal the arm that would bring its total to eight?",
       answer:
         "Tucked into a sac beneath its right eye; the specialized arm transfers sperm during mating.",
       source: {
@@ -142,7 +145,7 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-liponema-tumble",
-      question: "How can Liponema brevicorne move to a different part of the seafloor?",
+      question: "How can a pom-pom anemone move to a different part of the seafloor?",
       answer:
         "It curls into a barrel-like shape and rolls in the current like an underwater tumbleweed.",
       source: {
@@ -153,8 +156,9 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-scotoplanes-passengers",
-      question: "What unexpected passengers have researchers found riding on Scotoplanes?",
-      answer: "Juvenile king crabs hitchhiking on the sea cucumbers known as sea pigs.",
+      question:
+        "What unexpected passengers have researchers found riding on deep-sea cucumbers called sea pigs?",
+      answer: "Young king crabs, hitchhiking through the deep sea.",
       source: {
         title: "MBARI — Sea pig",
         url: "https://www.mbari.org/animal/sea-pig/",
@@ -163,8 +167,8 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-shark-eye-tenant",
-      question: "Where does the parasite Ommatokoita elongata take up permanent residence?",
-      answer: "Attached to the cornea of a Greenland shark or sleeper shark.",
+      question: "Where on a sleeper shark does a parasitic crustacean take up permanent residence?",
+      answer: "On the surface of its eyeball, attached to the cornea.",
       source: {
         title: "Smithsonian Ocean — An Eye Sore",
         url: "https://ocean.si.edu/ocean-life/sharks-rays/eye-sore",
@@ -184,7 +188,7 @@ export const marineMarvels = definePack(
     {
       key: "marine-scallop-mirrors",
       question: "What optical device does a king scallop carry inside each of its many eyes?",
-      answer: "A microscopic mirror made of guanine crystals that focuses light onto two retinas.",
+      answer: "A tiny mirror made of crystals, reflecting light onto two retinas.",
       source: {
         title: "National Geographic — As Far as the Eyes Can See",
         url: "https://www.nationalgeographic.com/photo-of-the-day/media-spotlight/king-scallop-eyes-close-up",
@@ -193,7 +197,7 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-cone-insulin",
-      question: "What familiar hormone does Conus geographus use to help subdue its dinner?",
+      question: "What familiar hormone does a geography cone snail use to help subdue its dinner?",
       answer: "Insulin, released in venom that makes a fish’s blood sugar plummet.",
       source: {
         title: "National Geographic — Toxic Snail Puts Fish in a Sugar Coma, Then Eats Them",
@@ -203,9 +207,9 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-swallower-bag",
-      question: "How can Chiasmodon carry a meal much larger than its own body?",
+      question: "What makes the aftermath of a black swallower's meal so remarkable to look at?",
       answer:
-        "Its stomach stretches into a distended bag hanging beneath it while it digests the oversized prey.",
+        "An enormous stomach dangles beneath it like a shopping bag, holding prey larger than its own body.",
       source: {
         title: "National Geographic — This deep-sea fish’s expandable stomach can hold huge meals",
         url: "https://www.nationalgeographic.com/animals/article/animals-carry-own-food-deep-sea-fish",
@@ -213,21 +217,23 @@ export const marineMarvels = definePack(
       },
     },
     {
-      key: "marine-mantis-second-force",
-      question: "What adds an extra burst of destructive force to a peacock mantis shrimp’s punch?",
-      answer: "Cavitation bubbles formed by the strike collapse against its target.",
+      key: "marine-dragonfish-diet-vision",
+      question:
+        "What do some deep-sea dragonfish borrow from their food to improve their eyesight?",
+      answer:
+        "A pigment derived from chlorophyll, passed along through their prey, that helps their eyes see red light.",
       source: {
-        title: "National Geographic — The Mantis Shrimp Has the World’s Fastest Punch",
-        url: "https://www.nationalgeographic.com/science/article/the-mantis-shrimp-has-the-worlds-fastest-punch",
-        note: "The article describes low pressure from the fast strike creating bubbles that collapse and release destructive energy in addition to the blow itself.",
+        title: "Woods Hole Oceanographic Institution — Creature feature: Stoplight Loosejaw",
+        url: "https://www.whoi.edu/ocean-learning-hub/ocean-facts/stoplight-loosejaw/",
+        note: "WHOI says the fish derives its ability to see red light from eaten copepods, which feed on bacteria containing chlorophyll-derived pigments. This is dietary vision enhancement, not the catalog's red camouflage fact.",
       },
     },
     {
       key: "marine-aeolid-weapons",
       question:
-        "How do certain aeolid sea slugs obtain defensive weapons they do not manufacture themselves?",
+        "What becomes of some of the weapons swallowed by an aeolid sea slug along with its prey?",
       answer:
-        "They steal unfired stinging structures from their prey and store them for later use.",
+        "The slug stores the prey's unfired stinging structures and uses them as weapons of its own.",
       source: {
         title: "Smithsonian Ocean — How Sea Slugs Steal the Defenses of Their Prey",
         url: "https://ocean.si.edu/ocean-life/invertebrates/how-sea-slugs-steal-defenses-their-prey",
@@ -236,9 +242,8 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-elysia-regrowth",
-      question: "What can the detached head of an Elysia sea slug do over the following few weeks?",
-      answer:
-        "Grow a whole new body; researchers observed complete regeneration in about three weeks.",
+      question: "What remarkable rebuilding feat has been observed in an Elysia sea slug?",
+      answer: "A detached head grew an entire replacement body in about three weeks.",
       source: {
         title: "Nature — A sea slug’s severed noggin sprouts a new body",
         url: "https://www.nature.com/articles/d41586-021-00614-x",
@@ -268,7 +273,7 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-pearlfish-hideout",
-      question: "Where does a star pearlfish find an especially intimate hiding place?",
+      question: "Where can a star pearlfish retreat when it wants somewhere safe to hide?",
       answer: "Inside a sea cucumber, entering through the host’s anus.",
       source: {
         title: "National Geographic — How This Fish Survives in a Sea Cucumber’s Bum",
@@ -278,7 +283,7 @@ export const marineMarvels = definePack(
     },
     {
       key: "marine-cymothoa-replacement",
-      question: "What missing body part can a Cymothoa parasite end up replacing in its host?",
+      question: "What part of a fish can a parasitic isopod end up replacing?",
       answer: "A fish’s tongue; the parasite takes up residence in the tongue’s place.",
       source: {
         title: "National Geographic — Isopod Got Your Tongue? Naturally Tongueless Animals",
@@ -324,7 +329,7 @@ export const marineMarvels = definePack(
       key: "marine-comb-rainbow",
       question: "What causes the rippling rainbow bands along a comb jelly’s sides?",
       answer:
-        "Light diffracting from rows of beating cilia, rather than the animal producing those rainbow colors as light.",
+        "Rows of beating hairs split incoming light into colours; the animal is not making the rainbow light itself.",
       source: {
         title: "MBARI — Biodiversity and Biooptics 2020 Expedition, Log 1",
         url: "https://www.mbari.org/news/biodiversity-and-biooptics-2020-expedition-log-1/",

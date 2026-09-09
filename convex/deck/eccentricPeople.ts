@@ -23,9 +23,9 @@ export const eccentricPeople = definePack(
     {
       key: "eccentric-lay-hidden-book",
       question:
-        "What had Benjamin Lay hidden inside the book he stabbed with a sword at a Quaker meeting in 1738?",
+        "At a Quaker meeting in 1738, Benjamin Lay produced a book and a sword. What did he do with them?",
       answer:
-        "An animal bladder of red pokeberry juice, which splashed like blood during his protest against slavery.",
+        "Stabbed the hollow book, bursting a hidden bladder of red juice to spatter the meeting in a protest against slavery.",
       source: {
         title:
           "Smithsonian Magazine — The 'Quaker Comet' Was the Greatest Abolitionist You've Never Heard Of",
@@ -71,7 +71,7 @@ export const eccentricPeople = definePack(
     {
       key: "eccentric-steinmetz-adoption",
       question:
-        "How did electrical engineer Charles Steinmetz turn a close working relationship into a legally recognized family?",
+        "What unusual provision did electrical engineer Charles Steinmetz make for his grown-up laboratory assistant?",
       answer: "He adopted his already-grown laboratory assistant, Joseph LeRoy Hayden, as his son.",
       source: {
         title: "Smithsonian Magazine — Charles Proteus Steinmetz, the Wizard of Schenectady",
@@ -82,8 +82,8 @@ export const eccentricPeople = definePack(
     {
       key: "eccentric-steinmetz-menagerie",
       question:
-        "What sort of living collection did Charles Steinmetz assemble alongside his greenhouse of orchids and cacti?",
-      answer: "Dangerous animals, including alligators, rattlesnakes and black widow spiders.",
+        "What did Charles Steinmetz keep at home that might have alarmed visitors more than his electrical experiments?",
+      answer: "A menagerie including alligators, rattlesnakes and black widow spiders.",
       source: {
         title: "Smithsonian Magazine — Charles Proteus Steinmetz, the Wizard of Schenectady",
         url: "https://www.smithsonianmag.com/history/charles-proteus-steinmetz-the-wizard-of-schenectady-51912022/",
@@ -126,7 +126,7 @@ export const eccentricPeople = definePack(
     {
       key: "eccentric-booth-book-kingdom",
       question:
-        "What political idea did bookseller Richard Booth attach to his project of filling Hay-on-Wye with secondhand books?",
+        "What did bookseller Richard Booth declare about Hay-on-Wye, the Welsh town he helped fill with bookshops?",
       answer:
         "He proclaimed himself its king and presented the book trade as his kingdom's economic foundation.",
       source: {
@@ -138,8 +138,7 @@ export const eccentricPeople = definePack(
     },
     {
       key: "eccentric-ludwig-rising-table",
-      question:
-        "How did King Ludwig II arrange to receive dinner at Linderhof without servants setting the table in front of him?",
+      question: "What happened to King Ludwig II's dining table at Linderhof before each meal?",
       answer: "The entire table was laid in the kitchen below and winched up through the floor.",
       source: {
         title: "Smithsonian Magazine — Why Winter Is the Perfect Time to Visit Bavaria",
@@ -150,7 +149,7 @@ export const eccentricPeople = definePack(
     {
       key: "eccentric-ludwig-grotto-boat",
       question:
-        "What theatrical retreat did Ludwig II have built for his private boating outings at Linderhof?",
+        "What did Ludwig II commission at Linderhof so he could enjoy a boat ride without leaving his fantasy world?",
       answer:
         "An artificial cave lake, where he rode in a gilded seashell boat under changing electric lights.",
       source: {
@@ -162,8 +161,8 @@ export const eccentricPeople = definePack(
     {
       key: "eccentric-tesla-dinner-napkins",
       question:
-        "What unusually abundant table setting became part of Nikola Tesla's dining routine?",
-      answer: "Eighteen napkins for a meal.",
+        "What excessive table-setting requirement did Nikola Tesla reportedly have before a meal?",
+      answer: "Eighteen napkins at his place setting.",
       source: {
         title:
           "Smithsonian Magazine — Nikola Tesla and the Tower That Became His 'Million Dollar Folly'",
@@ -174,7 +173,7 @@ export const eccentricPeople = definePack(
     {
       key: "eccentric-tesla-white-companion",
       question:
-        "What companion did Nikola Tesla say he loved almost as a person might love a romantic partner?",
+        "Who was the companion Nikola Tesla said he loved almost as a person might love a romantic partner?",
       answer: "A particular white female pigeon that visited his hotel window.",
       source: {
         title:
@@ -199,9 +198,9 @@ export const eccentricPeople = definePack(
     {
       key: "eccentric-hampton-garage-project",
       question:
-        "What was janitor James Hampton preparing for during fourteen years of secret work in a rented Washington garage?",
+        "What was janitor James Hampton secretly building during fourteen years in a rented Washington garage?",
       answer:
-        "The Second Coming: he built an elaborate throne for Jesus from discarded furniture, foil and other salvaged materials.",
+        "A throne for the Second Coming of Jesus, made from discarded furniture, foil and other salvaged materials.",
       source: {
         title:
           "Smithsonian Magazine — In His Garage, an Untrained Artist Created a Work of Sublime Divinity",
@@ -248,8 +247,8 @@ export const eccentricPeople = definePack(
     {
       key: "eccentric-millar-ministers-bequest",
       question:
-        "What awkward gift did prankster Charles Vance Millar leave to seven ministers who supported Prohibition?",
-      answer: "Shares in a brewery.",
+        "What awkward gift did prankster Charles Vance Millar leave to seven Protestant ministers in his will?",
+      answer: "Brewery shares, even though the ministers supported Prohibition.",
       source: {
         title:
           "Smithsonian Magazine — An Eccentric Tycoon Left a Fortune to the Winner of a Baby-Making Contest",
@@ -294,8 +293,9 @@ export const eccentricPeople = definePack(
     {
       key: "eccentric-franklin-air-bath",
       question:
-        "What did Benjamin Franklin mean when he described taking an 'air bath' before beginning his work?",
-      answer: "Sitting completely naked at an open window for half an hour or an hour.",
+        "What unusual morning routine did Benjamin Franklin describe doing at an open window before starting work?",
+      answer:
+        "Sitting there completely naked for up to an hour, taking what he called an 'air bath.'",
       source: {
         title: "Smithsonian Magazine — Ben Franklin Slept Here",
         url: "https://www.smithsonianmag.com/travel/ben-franklin-slept-here-112338695/",
@@ -304,9 +304,8 @@ export const eccentricPeople = definePack(
     },
     {
       key: "eccentric-dickens-grip",
-      question:
-        "What was Charles Dickens's unusual pet Grip, later preserved and displayed in a Philadelphia library?",
-      answer: "A raven, which Dickens also wrote into Barnaby Rudge.",
+      question: "What became of Grip after his years in Charles Dickens's household?",
+      answer: "The pet raven was stuffed and eventually went on display in a Philadelphia library.",
       source: {
         title: "Smithsonian Magazine — How Edgar Allan Poe Became Our Era's Premier Storyteller",
         url: "https://www.smithsonianmag.com/arts-culture/edgar-allan-poe-became-era-premier-storyteller-180971001/",
@@ -316,8 +315,8 @@ export const eccentricPeople = definePack(
     {
       key: "eccentric-winchester-lifting-floor",
       question:
-        "Why did Sarah Winchester have liftable wooden floorboards in her north conservatory?",
-      answer: "So she could water plants resting below them.",
+        "What was hidden beneath the liftable floorboards in one room of Sarah Winchester's mansion?",
+      answer: "Plants: lifting the wooden floor let her water them in her north conservatory.",
       source: {
         title: "Smithsonian Magazine — Take a Free Virtual Tour of the Winchester Mystery House",
         url: "https://www.smithsonianmag.com/smart-news/take-virtual-tour-winchester-mystery-house-180974510/",
@@ -351,9 +350,9 @@ export const eccentricPeople = definePack(
     {
       key: "eccentric-train-fictional-identity",
       question:
-        "Which fictional adventurer did transportation magnate George Francis Train insist was really him?",
+        "What accusation did transportation magnate George Francis Train make against Jules Verne?",
       answer:
-        "Phileas Fogg; Train said Jules Verne had stolen his story for Around the World in Eighty Days.",
+        "That Verne had stolen his life story for Phileas Fogg in Around the World in Eighty Days.",
       source: {
         title:
           "Smithsonian Magazine — This Eccentric 19th-Century Transportation Magnate May Have Inspired Jules Verne",

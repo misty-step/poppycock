@@ -12,7 +12,8 @@ export const linguisticGems = definePack(
   [
     {
       key: "linguistic-abel-wackets",
-      question: "What were 'abel-wackets' in Grose's 1811 dictionary?",
+      question:
+        "In an 1811 account of sailors' card games, what did a loser receive when playing for 'abel-wackets'?",
       answer:
         "Blows on the palm with a twisted handkerchief, used by sailors as a forfeit for losing at cards.",
       source: {
@@ -23,8 +24,8 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-active-citizen",
-      question: "In Grose's 1811 slang dictionary, what was an 'active citizen'?",
-      answer: "A louse.",
+      question: "In the slang of 1811, why might you want to get rid of an 'active citizen'?",
+      answer: "It was a louse, not an energetic neighbour.",
       source: {
         title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Active citizen",
         url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
@@ -45,7 +46,7 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-all-nations",
-      question: "What did 'all nations' mean in Grose's 1811 slang dictionary?",
+      question: "A drinker in 1811 asks for 'all nations'. What goes into the order?",
       answer:
         "A mixture of the leftover spirits drained from bottles and drinking measures in a dram-shop.",
       source: {
@@ -56,8 +57,9 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-alderman",
-      question: "Besides a civic official, what could an 'alderman' be in Grose's slang?",
-      answer: "A roast turkey garnished with sausages, which represented an alderman's gold chain.",
+      question: "How could an 'alderman' end up on the dinner table in the slang of 1811?",
+      answer:
+        "The 'alderman' was a roast turkey, with a chain of sausages standing in for the official's gold chain.",
       source: {
         title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Alderman",
         url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
@@ -66,8 +68,10 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-bear-leader",
-      question: "What was a 'bear leader' in Grose's historical slang?",
-      answer: "A travelling tutor.",
+      question:
+        "A young gentleman sets off on his travels with a 'bear leader', in 1811 slang. Who is accompanying him?",
+      answer:
+        "A travelling tutor: the pupil, not a wild animal, was the creature being supervised.",
       source: {
         title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Bear leader",
         url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
@@ -76,7 +80,7 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-cat-lap",
-      question: "What did 'cat lap' mean in Grose's 1811 dictionary?",
+      question: "A guest is offered 'cat lap' in the slang of 1811. What is actually being served?",
       answer: "Tea, also nicknamed 'scandal broth'.",
       source: {
         title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Cat lap",
@@ -85,28 +89,32 @@ export const linguisticGems = definePack(
       },
     },
     {
-      key: "linguistic-dub-the-jigger",
-      question: "What instruction did 'dub the jigger' convey in Grose's cant dictionary?",
-      answer: "Open the door.",
+      key: "linguistic-watch-christening",
+      question: "What sort of 'christening' might conceal a thief's crime, in the slang of 1811?",
+      answer:
+        "Erasing the real maker's name from a stolen watch and engraving an invented one in its place.",
       source: {
-        title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Dub the jigger",
+        title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Christening",
         url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
-        note: "The complete entry is 'Open the door. CANT.' The adjoining entries distinguish a dub, or picklock, from this whole phrase.",
+        note: "The Christening entry defines erasing the true maker's name from a stolen watch and engraving a fictitious replacement.",
       },
     },
     {
-      key: "linguistic-dimber-damber",
-      question: "What was a 'dimber damber' in Grose's thieves' cant?",
-      answer: "The leading rogue or chief of a gang; an exceptionally accomplished cheat.",
+      key: "linguistic-shipboard-ambassador",
+      question:
+        "In an 1811 account of shipboard pranks, what awaited a man chosen to play 'ambassador'?",
+      answer:
+        "A mock royal reception where his throne collapsed, dropping him into a hidden tub of water.",
       source: {
-        title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Dimber damber",
+        title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Ambassador",
         url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
-        note: "The entry calls the figure a 'top man, or prince' among the canting crew, the chief rogue, or the completest cheat.",
+        note: "The Ambassador entry describes a tarpaulin held over a tub by a seated 'king' and 'queen'. They rise when the victim sits between them, dropping him into the water.",
       },
     },
     {
       key: "linguistic-knight-rainbow",
-      question: "Who was a 'knight of the rainbow' in Grose's slang?",
+      question:
+        "In 1811 slang, what job would put someone in the service of a household as a 'knight of the rainbow'?",
       answer: "A footman, nicknamed for the many colours in servants' liveries and trimmings.",
       source: {
         title:
@@ -117,7 +125,7 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-blue-pigeon",
-      question: "What did it mean to 'fly a blue pigeon' in Grose's thieves' cant?",
+      question: "A thief in 1811 says he is off to 'fly a blue pigeon'. What is he planning?",
       answer: "Steal lead from the roofs of houses or churches.",
       source: {
         title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Blue pigeons",
@@ -128,7 +136,7 @@ export const linguisticGems = definePack(
     {
       key: "linguistic-doctors",
       question:
-        "In Grose's slang, what had happened to someone if gamblers 'put the doctors upon him'?",
+        "An 1811 gambler complains that the others 'put the doctors upon him'. How was he cheated?",
       answer: "They had cheated him with loaded dice.",
       source: {
         title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Doctors",
@@ -137,18 +145,20 @@ export const linguisticGems = definePack(
       },
     },
     {
-      key: "linguistic-dutch-reckoning",
-      question: "What was a 'Dutch reckoning' in Grose's 1811 dictionary?",
-      answer: "A bill given as one lump sum, without an itemised breakdown.",
+      key: "linguistic-saint-monday",
+      question:
+        "Why could a shoemaker be fined for offending 'Saint Monday', according to an 1811 slang dictionary?",
+      answer: "For working on Monday: fellow craftsmen treated it as a weekly holiday.",
       source: {
-        title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Dutch reckoning",
+        title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Saint Monday",
         url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
-        note: "The entry, also headed Alle-mal, defines a verbal or lump account 'without particulars'. The national label is historical slang, not a claim about Dutch people.",
+        note: "The Saint Monday entry calls it a holiday observed by journeymen shoemakers and says profaning the day by working was punishable by a fine.",
       },
     },
     {
       key: "linguistic-salt-eel",
-      question: "What was a 'salt eel' in the seafaring slang recorded by Grose?",
+      question:
+        "An 1811 sailor is threatened with a 'salt eel for supper'. What is he actually being promised?",
       answer: "A rope's end used for flogging, rather than anything served for dinner.",
       source: {
         title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Salt",
@@ -158,9 +168,9 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-spoil-pudding",
-      question: "Who was a 'spoil pudding' in Grose's 1811 slang dictionary?",
-      answer:
-        "A parson whose sermons lasted so long that the congregation's puddings overcooked at home.",
+      question:
+        "A neighbour calls someone a 'spoil pudding' in 1811 slang. What has the culprit done?",
+      answer: "Preached such a long sermon that the congregation's puddings overcooked at home.",
       source: {
         title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Spoil pudding",
         url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
@@ -168,18 +178,21 @@ export const linguisticGems = definePack(
       },
     },
     {
-      key: "linguistic-upper-benjamin",
-      question: "What was an 'upper Benjamin' in Grose's cant dictionary?",
-      answer: "A greatcoat: a heavy outer coat.",
+      key: "linguistic-married-prisoners",
+      question:
+        "What had happened to two men described as 'married together' in the cant recorded in 1811?",
+      answer:
+        "They had been chained or handcuffed together for a journey to prison or transportation.",
       source: {
-        title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Upper Benjamin",
+        title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Married",
         url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
-        note: "The entry gives 'A great coat. CANT.' The preface also refers to 'sporting an Upper Benjamin'.",
+        note: "The Married entry describes people chained or handcuffed together for conveyance to jail or transportation as 'married together'.",
       },
     },
     {
       key: "linguistic-banyan-day",
-      question: "What distinguished a 'banyan day' in the naval usage recorded by Grose?",
+      question:
+        "Why might a sailor complain that it was a 'banyan day', in the usage recorded in 1811?",
       answer: "Sailors received no meat that day.",
       source: {
         title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Banyan day",
@@ -189,9 +202,10 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-amusers",
-      question: "What did 'amusers' do in the criminal vocabulary recorded by Grose?",
+      question:
+        "In an 1811 warning about street crime, how did 'amusers' turn an offer of help into a robbery?",
       answer:
-        "Throw dust or snuff into a victim's eyes, while accomplices pretending to help robbed the blinded person.",
+        "They threw dust or snuff into a victim's eyes; accomplices then pretended to help while robbing the blinded person.",
       source: {
         title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Amusers",
         url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
@@ -200,8 +214,9 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-nimgimmer",
-      question: "What was a 'nimgimmer' in Grose's 1811 dictionary?",
-      answer: "A physician or surgeon, especially one treating venereal disease.",
+      question: "What sort of trouble might send someone in 1811 to a 'nimgimmer'?",
+      answer:
+        "An illness, especially a sexually transmitted infection: a 'nimgimmer' was a physician or surgeon.",
       source: {
         title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Nimgimmer",
         url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
@@ -210,8 +225,9 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-adam-tiler",
-      question: "Who was an 'Adam Tiler' in Grose's thieves' cant?",
-      answer: "A pickpocket's accomplice who took the stolen goods and ran off with them.",
+      question:
+        "A pickpocket in an 1811 account works with an 'Adam Tiler'. What does his partner do?",
+      answer: "Receives the stolen goods and runs off, leaving the actual pickpocket empty-handed.",
       source: {
         title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Adam Tiler",
         url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
@@ -219,18 +235,19 @@ export const linguisticGems = definePack(
       },
     },
     {
-      key: "linguistic-fogle",
-      question: "What was a 'fogle' in Hotten's slang dictionary?",
-      answer: "A silk handkerchief.",
+      key: "linguistic-knight-post",
+      question: "What service could an 1811 court-goer buy from a 'knight of the post'?",
+      answer: "False testimony: these hired witnesses were ready to swear to anything for a fee.",
       source: {
-        title: "Project Gutenberg — Hotten's The Slang Dictionary: Fogle",
-        url: "https://www.gutenberg.org/files/42108/42108-h/42108-h.htm",
-        note: "The entry explicitly distinguishes a silk fogle from a cotton clout. The card does not adopt the entry's speculative etymologies.",
+        title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Affidavit men",
+        url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
+        note: "The Affidavit men entry equates them with 'Knights of the post' and describes false witnesses attending Westminster Hall and other courts, ready to swear anything for hire.",
       },
     },
     {
       key: "linguistic-flesh-and-blood",
-      question: "What did 'flesh and blood' mean in Hotten's slang dictionary?",
+      question:
+        "A Victorian orders 'flesh and blood' to drink. What mixture does Hotten's dictionary say to pour?",
       answer: "A drink mixed from equal quantities of brandy and port.",
       source: {
         title: "Project Gutenberg — Hotten's The Slang Dictionary: Flesh and blood",
@@ -240,8 +257,9 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-gammy-vial",
-      question: "What was a 'gammy-vial' in Hotten's slang dictionary?",
-      answer: "A town where the police would not allow people to hawk goods.",
+      question:
+        "A Victorian hawker warns another trader to avoid a 'gammy-vial'. What is wrong with the place?",
+      answer: "It is a town where the police will not let people hawk goods.",
       source: {
         title: "Project Gutenberg — Hotten's The Slang Dictionary: Gammy-vial",
         url: "https://www.gutenberg.org/files/42108/42108-h/42108-h.htm",
@@ -250,7 +268,7 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-glasgow-magistrate",
-      question: "What could a 'Glasgow magistrate' mean in the slang recorded by Hotten?",
+      question: "In Victorian slang, what could you buy by asking for a 'Glasgow magistrate'?",
       answer: "A salt herring.",
       source: {
         title: "Project Gutenberg — Hotten's The Slang Dictionary: Glasgow magistrate",
@@ -259,19 +277,21 @@ export const linguisticGems = definePack(
       },
     },
     {
-      key: "linguistic-garden-gate",
-      question: "What did 'garden gate' stand for in Hotten's slang glossary?",
-      answer: "A magistrate, through rhyming slang.",
+      key: "linguistic-apple-pye-bed",
+      question:
+        "An 1811 host prepares an 'apple-pye bed' for a guest. What practical joke is waiting?",
+      answer: "The sheets are doubled back so the guest cannot stretch out between them.",
       source: {
-        title: "Project Gutenberg — Hotten's The Slang Dictionary: Glossary of the Rhyming Slang",
-        url: "https://www.gutenberg.org/files/42108/42108-h/42108-h.htm#Page_366",
-        note: "The glossary on page 366 gives 'Garden gate, a magistrate.' The prompt does not announce the rhyming mechanism.",
+        title: "Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Apple-pye bed",
+        url: "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
+        note: "The Apple-pye bed entry describes doubling the sheets to prevent a sleeper from lying at full length, calling it a trick played on sweethearts, relations or visitors.",
       },
     },
     {
       key: "linguistic-fillet-veal",
-      question: "What did 'fillet of veal' mean in Hotten's slang glossary?",
-      answer: "The treadwheel in a house of correction: a prison punishment machine.",
+      question:
+        "In nineteenth-century slang, what would a prisoner be doing if put on the 'fillet of veal'?",
+      answer: "Working the prison treadwheel, a punishment machine rather than a meal.",
       source: {
         title: "Project Gutenberg — Hotten's The Slang Dictionary: Glossary of the Rhyming Slang",
         url: "https://www.gutenberg.org/files/42108/42108-h/42108-h.htm#Page_366",
@@ -281,7 +301,7 @@ export const linguisticGems = definePack(
     {
       key: "linguistic-battle-nile",
       question:
-        "What everyday object could be called a 'Battle of the Nile' in Hotten's slang glossary?",
+        "A Victorian complains that someone has knocked off his 'Battle of the Nile'. What has he lost?",
       answer: "A hat: the phrase rhymed with 'tile', which was itself slang for a hat.",
       source: {
         title: "Project Gutenberg — Hotten's The Slang Dictionary: Glossary of the Rhyming Slang",
@@ -291,9 +311,8 @@ export const linguisticGems = definePack(
     },
     {
       key: "linguistic-bullocks-horn",
-      question:
-        "If an item was described as 'bullock's horn' in Hotten's slang, what had happened to it?",
-      answer: "It had been pawned; 'bullock's horn' rhymed with 'in pawn'.",
+      question: "A Victorian says his belongings are 'bullock's horn'. Where have they gone?",
+      answer: "To the pawnbroker; 'bullock's horn' rhymed with 'in pawn'.",
       source: {
         title: "Project Gutenberg — Hotten's The Slang Dictionary: Glossary of the Rhyming Slang",
         url: "https://www.gutenberg.org/files/42108/42108-h/42108-h.htm#Page_365",
@@ -301,13 +320,14 @@ export const linguisticGems = definePack(
       },
     },
     {
-      key: "linguistic-shivering-jemmy",
-      question: "Who was a 'shivering Jemmy' in Hotten's slang dictionary?",
-      answer: "A beggar who exposed himself half-naked on a cold day to attract alms.",
+      key: "linguistic-half-mourning",
+      question:
+        "A Victorian slang speaker says he is in 'half-mourning', though nobody has died. What does he mean?",
+      answer: "He has one black eye; two black eyes would be 'whole-mourning'.",
       source: {
-        title: "Project Gutenberg — Hotten's The Slang Dictionary: Shivering Jemmy",
+        title: "Project Gutenberg — Hotten's The Slang Dictionary: Half-mourning",
         url: "https://www.gutenberg.org/files/42108/42108-h/42108-h.htm",
-        note: "Hotten records the street nickname for a cadger exposing himself half-naked in cold weather to obtain alms; it does not mean anyone merely feeling chilly.",
+        note: "Hotten defines half-mourning as one black eye from a blow, explicitly contrasting it with whole-mourning, or two black eyes.",
       },
     },
     {

@@ -10,23 +10,23 @@ export const forgottenProfessions = definePack(
   },
   [
     {
-      key: "forgotten-human-computers",
+      key: "forgotten-garden-hermit",
       question:
-        "What was unusual about the computers that NACA recruited to analyse wartime flight research in the 1940s?",
+        "What unlikely live-in employee might an eighteenth-century landowner install as a feature of his garden?",
       answer:
-        "They were people, including teams of women paid to perform mathematical calculations.",
+        "Being the estate’s hired hermit: staying in the grounds, living simply and praying for the family in silence.",
       source: {
-        title: "Smithsonian Magazine — The True Story of Hidden Figures",
-        url: "https://www.smithsonianmag.com/history/forgotten-black-women-mathematicians-who-helped-win-wars-and-sent-astronauts-space-180960393/",
-        note: "The article describes NACA’s human computers at Langley, including the Black women of the West Area Computing unit who analysed flight-research data.",
+        title: "Painshill — The Hermitage",
+        url: "https://www.painshill.co.uk/attractions/the-hermitage/",
+        note: "Painshill explains that landowners hired hermits to live simply in their gardens and pray for the family in silence. The card omits the separately labelled pub-going legend.",
       },
     },
     {
       key: "forgotten-log-earmarks",
       question:
-        "Why did Maine river drivers inspect the axe marks on floating timber before sending it to a sawmill?",
+        "How could Maine river drivers sort thousands of floating logs that belonged to different owners?",
       answer:
-        "The marks identified the owners, allowing mixed logs to be sorted into the correct batches.",
+        "They read distinctive axe-cut marks in the timber, like cattle brands, and sorted the logs into separate booms.",
       source: {
         title: "Library of Congress — Interviews with William “Billy Bell”",
         url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Interviews-with-William-Billy-Bell_Macdougall.pdf",
@@ -36,12 +36,13 @@ export const forgottenProfessions = definePack(
     {
       key: "forgotten-lamplighter-verses",
       question:
-        "Why did some London lamplighters deliver printed poems to households just before Christmas?",
-      answer: "They hoped residents would reward their year’s service with a tip.",
+        "How did London lamplighters make a seasonal appeal for tips sound like a personal literary effort?",
+      answer:
+        "They delivered printed poems written in the first person, as though the lamplighter had composed them himself.",
       source: {
         title: "London Museum — Gas Lamp-Lighters’ Poems",
         url: "https://www.londonmuseum.org.uk/collections/v/object-101283/gas-lamp-lighters-poems/",
-        note: "The museum describes a tradition of lamplighters distributing first-person verses before Christmas in hopes of a financial tip from householders.",
+        note: "The museum says the printed Christmas verses spoke in the first person as if written by the lamplighter; he distributed them to householders in hope of a tip.",
       },
     },
     {
@@ -58,9 +59,9 @@ export const forgottenProfessions = definePack(
     {
       key: "forgotten-herb-strewer",
       question:
-        "What ceremonial task did Anne Fellowes and her companions perform at George IV’s 1821 coronation?",
+        "How were Anne Fellowes and her companions supposed to protect George IV’s coronation procession from disease?",
       answer:
-        "Leading women who scattered flowers along the procession’s route, traditionally to ward off disease.",
+        "By scattering flowers and herbs along the route between Westminster Hall and the Abbey.",
       source: {
         title:
           "Wellcome Collection — Seven women appointed to strew herbs at the coronation of King George IV",
@@ -82,8 +83,9 @@ export const forgottenProfessions = definePack(
     {
       key: "forgotten-potato-handwarmers",
       question:
-        "Why could a Victorian London vendor make a sale even when the customer did not want to eat the hot potato?",
-      answer: "Customers also bought baked potatoes to warm their hands in winter.",
+        "What did some Victorian street vendors sell as a cheap way to keep a customer’s hands warm?",
+      answer:
+        "Baked potatoes, kept hot in coal-heated trays and bought as hand warmers as well as food.",
       source: {
         title: "London Museum — Henry Mayhew brings Victorian London to life",
         url: "https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/",
@@ -93,8 +95,8 @@ export const forgottenProfessions = definePack(
     {
       key: "forgotten-crossing-sweeper",
       question:
-        "How did an elderly worker with a broom turn a passing London pedestrian into a potential customer?",
-      answer: "By sweeping a clean path ahead of them, then hoping for a tip.",
+        "How could a poor Londoner earn money by briefly making a pedestrian’s route more pleasant?",
+      answer: "Sweep a clean path across the dirty street in front of them and hope for a tip.",
       source: {
         title: "London Museum — Henry Mayhew brings Victorian London to life",
         url: "https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/",
@@ -104,8 +106,8 @@ export const forgottenProfessions = definePack(
     {
       key: "forgotten-dustman-fertiliser",
       question:
-        "What did nineteenth-century London dustmen collect from households to sell to gardeners and farmers?",
-      answer: "Ashes from household fireplaces, sold as fertiliser.",
+        "How did nineteenth-century London dustmen turn the contents of household fireplaces into another source of income?",
+      answer: "They sold the ashes as fertiliser to gardeners and farmers.",
       source: {
         title: "London Museum — Henry Mayhew brings Victorian London to life",
         url: "https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/",
@@ -137,8 +139,9 @@ export const forgottenProfessions = definePack(
     {
       key: "forgotten-optical-operators",
       question:
-        "What did operators on the Admiralty’s 1820s communication chain rearrange to send a message to the next station?",
-      answer: "Two large movable arms on a mast, whose positions encoded the signals.",
+        "How did Admiralty messages travel between staffed stations in the 1820s without wires or messengers?",
+      answer:
+        "Operators repositioned two large arms on a mast; the next station read and relayed the signals.",
       source: {
         title:
           "Science Museum Group — Documents relating to the Portsmouth-to-Admiralty semaphore line",
@@ -147,14 +150,15 @@ export const forgottenProfessions = definePack(
       },
     },
     {
-      key: "forgotten-cats-meat-man",
+      key: "forgotten-cigar-end-finders",
       question:
-        "Who were the intended customers for the cheap meat and offal sold by London’s “cat’s meat men”?",
-      answer: "Pet cats and dogs; the meat was for them, not made from them.",
+        "How did Victorian London’s ‘hardups’ turn other people’s smoking habits into a meagre living?",
+      answer:
+        "They gathered discarded cigar ends from gutters, dried them and resold the tobacco to poor smokers.",
       source: {
-        title: "London Museum — A cat and dog’s meat shop on Bishops Bridge Road, Paddington",
-        url: "https://www.londonmuseum.org.uk/collections/v/object-742735/a-cat-and-dogs-meat-shop-on-bishops-bridge-road-paddington/",
-        note: "The museum explains that before tinned pet food, owners bought cheap meat and offal from shops or street sellers called cat’s meat men.",
+        title: "Tufts Digital Library — Mayhew, Of the London Street-Folk",
+        url: "https://dl.tufts.edu/teiviewer/parent/73666f96f/chapter/c3",
+        note: "The Street-Finders passage calls cigar-end finders ‘hardups’ and describes collecting smoked cigar remnants from gutters, drying them and selling the tobacco to the very poor.",
       },
     },
     {
@@ -183,9 +187,8 @@ export const forgottenProfessions = definePack(
     },
     {
       key: "forgotten-breaker-boys",
-      question:
-        "What were the children at a Pennsylvania coal breaker manually picking out, as photographed around 1913?",
-      answer: "Pieces of slate mixed in with the coal.",
+      question: "What task kept boys sitting in rows above chutes in Pennsylvania around 1913?",
+      answer: "Picking pieces of slate out of the passing coal by hand.",
       source: {
         title:
           "Library of Congress — Boys picking slate in a great coal breaker, anthracite mines, Pa.",
@@ -207,9 +210,9 @@ export const forgottenProfessions = definePack(
     {
       key: "forgotten-hello-girls",
       question:
-        "What essential service did the U.S. Army’s “Hello Girls” provide in France during the First World War?",
+        "What did the U.S. Army send bilingual American women to operate in France during the First World War?",
       answer:
-        "They manually connected telephone calls, often translating between French and English.",
+        "Telephone switchboards, connecting military calls and translating between French and English.",
       source: {
         title:
           "Smithsonian Magazine — The Women on the Frontlines of WWI Came to Operate Telephones",
@@ -220,9 +223,9 @@ export const forgottenProfessions = definePack(
     {
       key: "forgotten-bottom-knocker",
       question:
-        "What did a Staffordshire factory’s “bottom knocker” repeatedly flatten with a long-handled mallet?",
+        "Why did a Staffordshire pottery factory need someone to hammer clay inside an iron ring all day?",
       answer:
-        "Fireclay for the bases of protective containers used to hold pottery during kiln firing.",
+        "To make the bottoms of saggars: protective fireclay containers in which pottery was fired.",
       source: {
         title: "Potteries Museum & Art Gallery — Saggar Making",
         url: "https://potteries.staffspasttrack.org.uk/Details.aspx?ResourceID=15258",
@@ -243,9 +246,8 @@ export const forgottenProfessions = definePack(
     {
       key: "forgotten-gandy-caller",
       question:
-        "Why did some railway maintenance gangs need a lead singer during their working day?",
-      answer:
-        "His calls synchronised the workers’ movements so they could shift heavy track together.",
+        "How could a railway maintenance gang move heavy track without everyone pulling at different moments?",
+      answer: "A caller led work songs whose rhythm synchronised the gang’s movements.",
       source: {
         title: "Encyclopedia of Alabama — Gandy Dancer Work Song Tradition",
         url: "https://encyclopediaofalabama.org/article/gandy-dancer-work-song-tradition/",
@@ -255,8 +257,8 @@ export const forgottenProfessions = definePack(
     {
       key: "forgotten-powder-monkey",
       question:
-        "What did the young crew member photographed beside a gun on USS Pawnee carry during a battle?",
-      answer: "Cartridges from the ship’s magazine to its guns, as a “powder monkey”.",
+        "What was the young crew member photographed aboard USS Pawnee expected to do during battle?",
+      answer: "Run cartridges from the magazine to the guns, working as a ‘powder monkey’.",
       source: {
         title: "Library of Congress — A powder monkey on the Pawnee",
         url: "https://www.loc.gov/item/2016646733/",
@@ -266,8 +268,8 @@ export const forgottenProfessions = definePack(
     {
       key: "forgotten-loblolly-boy",
       question:
-        "Why might an old naval surgeon’s assistant scatter sand around the place where he worked?",
-      answer: "To keep the surgeon from slipping on a blood-soaked deck.",
+        "How did a naval surgeon’s helper keep an operating area safe underfoot during battle?",
+      answer: "Spread sand over the blood-soaked deck to keep the surgeon from slipping.",
       source: {
         title: "USS Midway Museum — The Odyssey of the Navy’s Enlisted Medical Titles",
         url: "https://www.midway.org/blog/the-odyssey-of-the-navys-enlisted-medical-titles",
@@ -276,8 +278,10 @@ export const forgottenProfessions = definePack(
     },
     {
       key: "forgotten-scribe-sand",
-      question: "Why might a manuscript scribe push a feather into hot sand before beginning work?",
-      answer: "To cure and harden it so it could be cut into a quill pen.",
+      question:
+        "What unexpected preparation might a manuscript scribe put a feather through before making it into a pen?",
+      answer:
+        "Push it into hot sand to cure and harden it, instead of waiting years for it to dry naturally.",
       source: {
         title:
           "University of Illinois Rare Book and Manuscript Library — Making Quills Part 1: Curing",
@@ -288,8 +292,9 @@ export const forgottenProfessions = definePack(
     {
       key: "forgotten-sandwich-advertiser",
       question:
-        "What did the worker in William Nicholson’s 1898 “Sandwich Man” print wear to earn his living?",
-      answer: "Advertising boards on his front and back, promoting an exhibition of a painting.",
+        "How did the man in William Nicholson’s 1898 print turn his daily walk into an advertisement?",
+      answer:
+        "He wore advertising boards on his front and back, promoting an exhibition of a painting.",
       source: {
         title: "Cleveland Museum of Art — London Types: Sandwich Man",
         url: "https://www.clevelandart.org/art/2010.620",
@@ -297,14 +302,14 @@ export const forgottenProfessions = definePack(
       },
     },
     {
-      key: "forgotten-climbing-boy",
+      key: "forgotten-sweep-wedding-guest",
       question:
-        "Where did a nineteenth-century master employ a small apprentice known as a “climbing boy”?",
-      answer: "Inside narrow chimneys, scraping out the soot.",
+        "Why might a couple invite a chimney sweep to their wedding even though no chimney needed cleaning?",
+      answer: "The sweep was thought to bring the newlyweds good luck.",
       source: {
         title: "London Museum — Chimney sweeps: a soot-stained past",
         url: "https://www.londonmuseum.org.uk/collections/london-stories/chimney-sweeps-soot-stained-past/",
-        note: "The museum states that master sweeps employed children small enough to climb inside narrow chimneys, where they scraped away soot beyond the reach of brushes.",
+        note: "The museum’s section on sweeps in London culture states that chimney sweeps became lucky charms, invited to weddings to bring the couple good fortune.",
       },
     },
     {
@@ -320,8 +325,8 @@ export const forgottenProfessions = definePack(
     },
     {
       key: "forgotten-link-boy",
-      question: "What service could a Londoner buy from a “link-boy” outside a theatre after dark?",
-      answer: "A torch-lit escort through the streets to their destination.",
+      question: "Why did customers hail boys outside London theatres much as we hail taxis?",
+      answer: "To hire a torch-bearer who would walk them home through the unlit streets.",
       source: {
         title: "JSTOR Daily — Walking Streetlamps for Hire in Seventeenth-Century London",
         url: "https://daily.jstor.org/walking-streetlamps-for-hire-in-seventeenth-century-london/",
@@ -329,25 +334,26 @@ export const forgottenProfessions = definePack(
       },
     },
     {
-      key: "forgotten-itinerant-grinder",
+      key: "forgotten-costers-boiled-oranges",
       question:
-        "What could a customer have done for a penny by one of Whitehall’s itinerant grinders in 1804?",
-      answer: "Have a penknife sharpened.",
+        "Why did some Victorian London fruit sellers boil oranges before putting them on sale?",
+      answer: "To make the oranges look larger and more impressive to customers.",
       source: {
-        title: "London Museum — Knives to Grind (Whitehall)",
-        url: "https://www.londonmuseum.org.uk/collections/v/object-94740/knives-to-grind-whitehall/",
-        note: "The museum quotes the 1804 Itinerant Traders of London description: knife grinders charged a penny to sharpen a penknife, with other prices for scissors and table knives.",
+        title: "London Museum — Henry Mayhew brings Victorian London to life",
+        url: "https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/",
+        note: "The costermongers section explicitly says oranges were boiled to make them appear larger and finer.",
       },
     },
     {
-      key: "forgotten-parish-bellman",
+      key: "forgotten-rented-false-measures",
       question:
-        "What information service did a London parish employ its bellman to provide before broadcasting existed?",
-      answer: "Making public announcements aloud in the streets.",
+        "What could a Victorian London street trader hire for a daily fee plus an extra charge ‘for the risk’?",
+      answer:
+        "A dishonest measuring pot that looked normal but held less than the quantity the customer was paying for.",
       source: {
-        title: "London Museum — A Copy of Verses for the Year 1835",
-        url: "https://www.londonmuseum.org.uk/collections/v/object-101284/a-copy-of-verses-for-the-year-1835-humbly-presented-to-all-the-worthy-inhabitants-of-the-parish-of-st-pancras-middlesex/",
-        note: "The catalogue identifies W.D. Stanley as a beadle and bellman, depicts him as town crier, and states that bellmen were parish officers responsible for public announcements in the streets.",
+        title: "Tufts Digital Library — Mayhew, Of the ‘Slang’ Weights and Measures",
+        url: "https://dl.tufts.edu/teiviewer/parent/73666f96f/chapter/c4s25",
+        note: "Mayhew describes counterfeit ‘slang’ measures rented by the day; the undersized quart attracted an extra charge ‘for the risk’, and some pint measures had false bottoms.",
       },
     },
   ],

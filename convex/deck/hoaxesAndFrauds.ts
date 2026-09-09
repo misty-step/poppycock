@@ -23,7 +23,8 @@ export const hoaxesAndFrauds = definePack(
     },
     {
       key: "hoax-piltdown-parts",
-      question: "What unlikely combination lay behind the celebrated 1912 discovery at Piltdown?",
+      question:
+        "What unlikely pairing made up a supposed human ancestor unveiled in England in 1912?",
       answer: "Human skull fragments paired with an orangutan’s jaw and altered teeth.",
       source: {
         title: "Natural History Museum — Piltdown Man Hoax Findings",
@@ -34,7 +35,7 @@ export const hoaxesAndFrauds = definePack(
     {
       key: "hoax-cottingley-companions",
       question:
-        "What supposedly appeared beside two Yorkshire girls in photographs that Arthur Conan Doyle defended?",
+        "What companions appeared beside two Yorkshire girls in a much-debated series of photographs begun in 1917?",
       answer: "Tiny dancing fairies; the celebrated photographs were staged.",
       source: {
         title: "Smithsonian Magazine — What the History of Spirit Photography Portends",
@@ -108,20 +109,22 @@ export const hoaxesAndFrauds = definePack(
       },
     },
     {
-      key: "hoax-ossian-claim",
-      question: "What did James Macpherson claim his celebrated poems of the 1760s represented?",
-      answer: "Translations of ancient Gaelic epics attributed to the bard Ossian.",
+      key: "hoax-lustig-landmark",
+      question: "What did a supposed French official persuade a scrap-metal dealer to buy in 1925?",
+      answer:
+        "The Eiffel Tower; the “official” was con artist Victor Lustig and had no authority to sell it.",
       source: {
-        title: "Encyclopaedia Britannica — Literary Forgery",
-        url: "https://www.britannica.com/art/forgery-art/Literary-forgery",
-        note: "Britannica treats Macpherson’s Ossianic poems as a disputed case: probably drawing on oral tradition, but extensively edited and interpolated. The card asks about his claim.",
+        title: "Wikipedia — Victor Lustig",
+        url: "https://en.wikipedia.org/wiki/Victor_Lustig",
+        note: "The Eiffel Tower scam section describes Lustig posing as a government official and taking André Poisson’s payment for the monument’s supposed sale as scrap in 1925.",
       },
     },
     {
       key: "hoax-ern-malley",
       question:
-        "Who was the recently deceased author whose poems caused an Australian sensation in 1944?",
-      answer: "Ern Malley, a poet invented by two soldiers who wrote the poems as a joke.",
+        "What was unusual about the author behind poems that caused an Australian sensation in 1944?",
+      answer:
+        "He did not exist: two soldiers wrote the poems and invented the deceased poet Ern Malley.",
       source: {
         title: "Encyclopaedia Britannica — Literary Forgery",
         url: "https://www.britannica.com/art/forgery-art/Literary-forgery",
@@ -131,13 +134,12 @@ export const hoaxesAndFrauds = definePack(
     {
       key: "hoax-psalmanazar-home",
       question:
-        "What supposedly qualified George Psalmanazar to describe Formosa to eighteenth-century British readers?",
-      answer:
-        "He claimed to be a native of the island, though he was a Frenchman who had never been there.",
+        "How did George Psalmanazar explain his pale skin while claiming to come from Formosa?",
+      answer: "He said the island’s upper classes lived underground, away from the sun.",
       source: {
-        title: "Encyclopaedia Britannica — Literary Forgery",
-        url: "https://www.britannica.com/art/forgery-art/Literary-forgery",
-        note: "Britannica identifies Psalmanazar as a French impostor who successfully posed as a native of Formosa, now Taiwan, and published an invented account.",
+        title: "Wikipedia — George Psalmanazar",
+        url: "https://en.wikipedia.org/wiki/George_Psalmanazar",
+        note: "The account states that Psalmanazar deflected questions about his pale skin by claiming upper-class Formosans lived underground. His supposed island culture was fabricated.",
       },
     },
     {
@@ -153,12 +155,13 @@ export const hoaxesAndFrauds = definePack(
     },
     {
       key: "hoax-crystal-skull-tools",
-      question: "What betrayed the supposed antiquity of the Smithsonian's large crystal skull?",
-      answer: "Microscopic marks left by modern tools and abrasives.",
+      question:
+        "Why did a Smithsonian researcher call one supposedly ancient crystal skull a “fake fake”?",
+      answer: "It imitated a forged ancient relic, but was not even crystal: it was made of glass.",
       source: {
         title: "Smithsonian Magazine — Why the Smithsonian Has a Fake Crystal Skull",
         url: "https://www.smithsonianmag.com/history/the-smithsonians-crystal-skull-51638609/",
-        note: "Jane MacLaren Walsh took the skull to the British Museum, where scanning electron microscopy identified modern tool and abrasive marks.",
+        note: "At the end of the article, Walsh describes a further skull sent for testing: the supposed quartz was glass, making it a “fake fake.” This is distinct from the museum’s larger quartz specimen.",
       },
     },
     {
@@ -175,12 +178,12 @@ export const hoaxesAndFrauds = definePack(
     {
       key: "hoax-hitler-diaries",
       question:
-        "What mundane physical evidence helped expose the diaries bought by Stern magazine in 1983?",
-      answer: "The paper and inks dated from after World War II.",
+        "What supposed cargo from a crashed wartime plane persuaded Stern magazine to pay millions in 1983?",
+      answer: "Sixty volumes of Hitler’s diaries, all modern forgeries.",
       source: {
         title: "Smithsonian Magazine — Five Fake Memoirs That Fooled the Literary World",
         url: "https://www.smithsonianmag.com/arts-culture/five-fake-memoirs-that-fooled-the-literary-world-77092955/",
-        note: "The purported Hitler diaries covered 1932–1945, but comprehensive testing found postwar inks and paper as well as historical errors.",
+        note: "The article says Stern bought about sixty volumes purportedly recovered from a transport plane carrying Hitler’s effects that crashed near Dresden; testing exposed postwar paper and inks.",
       },
     },
     {
@@ -197,8 +200,9 @@ export const hoaxesAndFrauds = definePack(
     {
       key: "hoax-meegeren-defense",
       question:
-        "How did Han van Meegeren demonstrate his explanation for a painting sold to the Nazis?",
-      answer: "He painted another “Vermeer” under official supervision to prove he had forged it.",
+        "What extraordinary demonstration did Han van Meegeren give to escape an accusation of collaborating with the Nazis?",
+      answer:
+        "He painted a new “Vermeer” under supervision to prove the painting he sold the Nazis was his own forgery.",
       source: {
         title: "Encyclopaedia Britannica — Forgery in the Visual Arts",
         url: "https://www.britannica.com/art/forgery-art/Forgery-in-the-visual-arts",
@@ -239,14 +243,15 @@ export const hoaxesAndFrauds = definePack(
       },
     },
     {
-      key: "hoax-frey-jail",
+      key: "hoax-rose-bowl-cards",
       question:
-        "What did investigators discover about the 87-day jail stay described in James Frey's memoir?",
-      answer: "His actual imprisonment had lasted only a few hours.",
+        "What did Washington fans unwittingly advertise with their coloured cards at the 1961 Rose Bowl?",
+      answer:
+        "Caltech, a college not playing in the game; pranksters had altered the card display.",
       source: {
-        title: "Smithsonian Magazine — Five Fake Memoirs That Fooled the Literary World",
-        url: "https://www.smithsonianmag.com/arts-culture/five-fake-memoirs-that-fooled-the-literary-world-77092955/",
-        note: "The article contrasts the 87-day claim in A Million Little Pieces with the brief real incarceration, one of the book’s exposed fabrications.",
+        title: "Caltech — Looking Back at the Great Rose Bowl Hoax",
+        url: "https://www.caltech.edu/about/news/looking-back-great-rose-bowl-hoax-1843",
+        note: "Caltech’s retrospective identifies the teams as Washington and Minnesota and describes Washington fans’ flip-cards unexpectedly spelling CALTECH instead of the intended designs.",
       },
     },
     {
@@ -263,14 +268,12 @@ export const hoaxesAndFrauds = definePack(
     },
     {
       key: "hoax-wise-pamphlets",
-      question:
-        "What embarrassing discovery did a 1934 investigation make about collector Thomas James Wise?",
-      answer:
-        "The famous exposer of literary fakes was himself linked to dozens of forged early editions.",
+      question: "How did eminent collector Thomas James Wise fill gaps in some of his rare books?",
+      answer: "With pages stolen from the British Museum’s copies.",
       source: {
         title: "Encyclopaedia Britannica — Literary Forgery",
         url: "https://www.britannica.com/art/forgery-art/Literary-forgery",
-        note: "Carter and Pollard’s 1934 inquiry established that roughly 40–50 costly nineteenth-century pamphlets were forged and traceable to Wise.",
+        note: "Britannica describes Wise’s forged pamphlets and subsequent findings that he had completed copies of early printed books using leaves stolen from British Museum copies.",
       },
     },
     {
@@ -287,12 +290,12 @@ export const hoaxesAndFrauds = definePack(
     {
       key: "hoax-bertram-monk",
       question:
-        "Who supplied the ancient authority behind Charles Bertram's influential account of Roman Britain?",
-      answer: "An imaginary monk called Richard of Westminster, whose work Bertram had invented.",
+        "How did Charles Bertram give his forged account of Roman Britain a respectable setting in print?",
+      answer: "He published it in a volume alongside two genuine ancient histories.",
       source: {
         title: "Encyclopaedia Britannica — Literary Forgery",
         url: "https://www.britannica.com/art/forgery-art/Literary-forgery",
-        note: "Bertram attributed his fabricated account to Richard of Westminster. Stukeley misidentified this supposed author as the real Richard of Cirencester.",
+        note: "Britannica says Bertram’s invented account, attributed to Richard of Westminster, was cunningly published with genuine works by Gildas and Nennius.",
       },
     },
     {
@@ -320,8 +323,8 @@ export const hoaxesAndFrauds = definePack(
     {
       key: "hoax-dossena-centuries",
       question:
-        "Why did Alceo Dossena's sculptures appear to represent artists separated by many centuries?",
-      answer: "His modern work was sold as ancient Greek, medieval and Renaissance sculpture.",
+        "What linked supposed Greek, medieval and Renaissance sculptures acquired by museums in the 1920s?",
+      answer: "They had all been made by one living Italian sculptor, Alceo Dossena.",
       source: {
         title: "Encyclopaedia Britannica — Forgery in the Visual Arts",
         url: "https://www.britannica.com/art/forgery-art/Forgery-in-the-visual-arts",

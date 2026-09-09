@@ -45,29 +45,31 @@ export const aviationCuriosities = definePack(
       },
     },
     {
-      key: "aviation-christmas-bullet",
-      question: "What structural failure doomed the first Christmas Bullet during testing?",
-      answer: "A wing came off in flight, killing its pilot.",
+      key: "aviation-beaver-airdrops",
+      question:
+        "What unusual cargo did Idaho wildlife officials pack into self-opening boxes and parachute into the wilderness in 1948?",
+      answer:
+        "Live beavers, being relocated to remote habitat that was difficult to reach overland.",
       source: {
-        title: "Smithsonian National Air and Space Museum — William W. Christmas biographical file",
-        url: "https://transcription.si.edu/view/23644/NASM-NASM.XXXX.0450-M0000073-00070",
-        note: "The museum’s transcribed biographical file records Cuthbert Mills being killed when a wing came off the Bullet. It was a biplane, not a wingless aircraft.",
+        title: "Smithsonian Air & Space Magazine — Beavers On Parachutes",
+        url: "https://www.smithsonianmag.com/air-space-magazine/beavers-on-parachutes-144129480/",
+        note: "The article quotes Elmo Heter's wildlife-management report: beavers were placed in tension-banded boxes that opened on landing, then parachuted into Idaho's backcountry in 1948.",
       },
     },
     {
       key: "aviation-hercules-flight",
-      question:
-        "How far did Howard Hughes’s enormous H-4 flying boat fly in its famous 1947 outing?",
-      answer: "About one mile, roughly 70 feet above the water.",
+      question: "What ordinary material formed most of the enormous eight-engine HK-1 flying boat?",
+      answer:
+        "Wood: layers of veneer glued together, mostly birch rather than the spruce of its famous nickname.",
       source: {
         title: "Smithsonian Air & Space Magazine — Howard Hughes’ Top Ten",
         url: "https://www.smithsonianmag.com/air-space-magazine/howard-hughes-top-ten-5206422/",
-        note: "The H-4 section describes Hughes flying the eight-engine aircraft about a mile at an altitude of 70 feet in Long Beach Harbor.",
+        note: "The article describes the HK-1/H-4's wood-and-glue Duramold construction and explains that most of its wood was birch, despite the nickname Spruce Goose.",
       },
     },
     {
       key: "aviation-xh17-rotors",
-      question: "What made the Hughes XH-17’s enormous rotor look like a fiery pinwheel?",
+      question: "How did Hughes's XH-17 helicopter drive its enormous rotor blades?",
       answer: "Fuel burned in jets at the rotor tips to drive the blades around.",
       source: {
         title: "Smithsonian Air & Space Magazine — Howard Hughes’ Top Ten",
@@ -118,7 +120,8 @@ export const aviationCuriosities = definePack(
     },
     {
       key: "aviation-x29-wings",
-      question: "What gave the X-29 its apparently back-to-front silhouette?",
+      question:
+        "What deliberate departure from conventional design distinguished the X-29's main wings?",
       answer: "Its main wings swept forward rather than backward.",
       source: {
         title:
@@ -129,9 +132,10 @@ export const aviationCuriosities = definePack(
     },
     {
       key: "aviation-x36-cockpit",
-      question: "Where was the pilot sitting during the X-36’s research flights?",
+      question:
+        "How did the X-36's pilot follow what was happening around the aircraft without being aboard?",
       answer:
-        "On the ground, flying through a virtual cockpit fed by the aircraft’s camera and microphone.",
+        "A nose camera and microphone fed a virtual cockpit on the ground, where the pilot flew it remotely.",
       source: {
         title:
           "NASA Armstrong Flight Research Center — X-36 Tailless Fighter Agility Research Aircraft",
@@ -142,7 +146,7 @@ export const aviationCuriosities = definePack(
     {
       key: "aviation-f15-nose",
       question: "What unusual change could NASA’s F-15B number 836 make to its nose in flight?",
-      answer: "Extend a telescoping boom from 14 feet to 24 feet long.",
+      answer: "Grow a much longer nose by extending a telescoping boom in midair.",
       source: {
         title:
           "NASA Armstrong Flight Research Center — F-15B in Flight with Quiet Spike Boom Extended",
@@ -152,9 +156,8 @@ export const aviationCuriosities = definePack(
     },
     {
       key: "aviation-f8-computer",
-      question:
-        "What piece of space-program equipment took over the controls of NASA’s experimental F-8?",
-      answer: "An Apollo Guidance Computer.",
+      question: "What unlikely hand-me-down ran the flight controls of NASA's experimental F-8?",
+      answer: "An Apollo Guidance Computer, the kind developed for journeys to the Moon.",
       source: {
         title: "NASA Armstrong Flight Research Center — F-8 Flies with Apollo Guidance Computer",
         url: "https://www.nasa.gov/image-article/f-8-flies-with-apollo-guidance-computer-2/",
@@ -184,8 +187,10 @@ export const aviationCuriosities = definePack(
     },
     {
       key: "aviation-fa330",
-      question: "What was a Focke-Achgelis Fa 330 Bachstelze used for?",
-      answer: "Lifting a submarine’s lookout into the air on an unpowered rotor kite.",
+      question:
+        "How did some German submarines use the Fa 330 to give their lookout a better view?",
+      answer:
+        "They towed him aloft on an unpowered rotor kite while the submarine stayed at the surface.",
       source: {
         title: "Royal Air Force Museum — Focke Achgelis Fa330 A-1 Bachstelze 8469M",
         url: "https://www.rafmuseum.org.uk/documents/collections/75-AF-805-FA330-Cosford.pdf",
@@ -227,8 +232,8 @@ export const aviationCuriosities = definePack(
     {
       key: "aviation-gossamer-channel",
       question:
-        "What supplied the power for the Gossamer Albatross’s 1979 English Channel crossing?",
-      answer: "The pilot’s muscles: it was a completely human-powered flight.",
+        "What did Bryan Allen have to keep doing throughout his 1979 flight across the English Channel?",
+      answer: "Pedalling: his muscles alone powered the Gossamer Albatross.",
       source: {
         title: "NASA Armstrong Flight Research Center — Gossamer Albatross",
         url: "https://www.nasa.gov/image-article/gossamer-albatross-5/",
@@ -261,7 +266,8 @@ export const aviationCuriosities = definePack(
     },
     {
       key: "aviation-balloon-menagerie",
-      question: "Which three passengers occupied the Montgolfiers’ famous animal flight of 1783?",
+      question:
+        "Who occupied the basket of the Montgolfiers' demonstration flight at Versailles in 1783?",
       answer: "A sheep, a duck, and a rooster.",
       source: {
         title: "Smithsonian National Air and Space Museum — The Ascent of the Aeiral Balloon",
@@ -281,19 +287,21 @@ export const aviationCuriosities = definePack(
     },
     {
       key: "aviation-hiller-platform",
-      question: "What did Hiller’s Model 1031-A-1 allow its operator to do while standing upright?",
-      answer: "Fly on a small platform above two rotors enclosed in a circular duct.",
+      question:
+        "How was an operator meant to steer Hiller's Model 1031-A-1 while hovering above the ground?",
+      answer:
+        "By leaning in the desired direction, while standing on a flying platform above ducted rotors.",
       source: {
-        title: "Smithsonian National Air and Space Museum — Hiller Model 1031-A-1 Flying Platform",
-        url: "https://airandspace.si.edu/collection-objects/hiller-model-1031-a-1-flying-platform/nasm_A19610070000",
-        note: "The museum identifies a one-man twin-engine platform with counter-rotating ducted rotors; its photographs show the standing operator and platform railing.",
+        title: "Smithsonian National Air and Space Museum — Flying Platforms",
+        url: "https://howthingsfly.si.edu/media/flying-platforms",
+        note: "The museum explains that the pilot leaned in the desired direction and the platform followed, with lift provided by twin counter-rotating propellers in a round duct.",
       },
     },
     {
       key: "aviation-pilgrim-passenger",
       question:
-        "Which unusual passenger did Goodyear’s Pilgrim carry on a toy-delivery outing in 1925?",
-      answer: "Santa Claus, played by a Goodyear employee.",
+        "What new career did the Goodyear Pilgrim take up on a 1925 outing with employee Jack Yolton aboard?",
+      answer: "A flying Santa sleigh: Yolton played Father Christmas on a toy-delivery flight.",
       source: {
         title: "Smithsonian National Air and Space Museum — The Santa Claus Express, Then and Now",
         url: "https://airandspace.si.edu/stories/editorial/santa-claus-express-then-and-now",

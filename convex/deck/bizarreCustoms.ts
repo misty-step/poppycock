@@ -12,7 +12,7 @@ export const bizarreCustoms = definePack(
   [
     {
       key: "custom-salutatio",
-      question: "What would a Roman client do at a salutatio?",
+      question: "What daily social duty did a Roman client owe his patron?",
       answer: "Call on a patron at dawn in formal dress to offer greetings and display loyalty.",
       source: {
         title: "Oxford Classical Dictionary — Salutatio",
@@ -31,14 +31,15 @@ export const bizarreCustoms = definePack(
       },
     },
     {
-      key: "custom-symposium-posture",
+      key: "custom-oga-new-year-visitors",
       question:
-        "What posture did the male guests adopt at an aristocratic ancient Greek symposium?",
-      answer: "They reclined on couches, leaning on their left elbows.",
+        "How do young men in Oga, Japan, traditionally discourage laziness on New Year’s Eve?",
+      answer:
+        "Dress as fierce visiting gods and go door to door asking whether any children are misbehaving.",
       source: {
-        title: "Encyclopedia Britannica — Symposium",
-        url: "https://www.britannica.com/topic/symposium-ancient-Greek-banquet",
-        note: "The article describes garlanded male aristocrats reclining on couches supported by their left elbows.",
+        title: "Oga City — Important Intangible Cultural Asset: Oga’s Namahage",
+        url: "https://www.namahage-oga.akita.jp/english/index.html",
+        note: "The city’s account describes young men dressed as Namahage visiting homes on December 31, asking about crybabies and disobedient children and warning against laziness.",
       },
     },
     {
@@ -64,8 +65,9 @@ export const bizarreCustoms = definePack(
     {
       key: "custom-potlatch-prestige",
       question:
-        "How could a Northwest Coast host publicly strengthen a claim to social rank at a potlatch?",
-      answer: "By ceremonially distributing property and gifts before assembled witnesses.",
+        "What could a Northwest Coast host do with valuable possessions to establish rank before witnesses?",
+      answer:
+        "Give them away: ceremonial gift distribution at a potlatch helped affirm the host’s status.",
       source: {
         title: "Encyclopedia Britannica — Potlatch",
         url: "https://www.britannica.com/topic/potlatch",
@@ -84,14 +86,14 @@ export const bizarreCustoms = definePack(
       },
     },
     {
-      key: "custom-kowtow",
+      key: "custom-jyvaskyla-doctoral-sword",
       question:
-        "What did a visitor physically do when making a kowtow at the imperial Chinese court?",
-      answer: "Kneel and touch the head to the floor in formal submission.",
+        "What hands-on ritual precedes the doctoral degree ceremony at Finland’s University of Jyväskylä?",
+      answer: "Sharpening a doctoral sword with a grindstone; the weapon symbolises intellect.",
       source: {
-        title: "Encyclopedia Britannica — Kowtow",
-        url: "https://www.britannica.com/topic/kowtow",
-        note: "The entry defines kowtow as kneeling and knocking the head to the floor; elaborate Ming ceremonial versions involved three kneelings and nine prostrations.",
+        title: "University of Jyväskylä — What happens in the Conferment of Degrees Ceremony?",
+        url: "https://www.jyu.fi/en/about-us/academic-events/conferment-of-degrees-ceremony/what-happens-in-the-conferment-of-degrees-ceremony",
+        note: "The Sword sharpening section describes doctoral graduates, helped by companions or marshals, sharpening their swords with a grindstone before the conferment.",
       },
     },
     {
@@ -105,13 +107,13 @@ export const bizarreCustoms = definePack(
       },
     },
     {
-      key: "custom-loutrophoros",
-      question: "What was a loutrophoros brought to an ancient Athenian wedding to carry?",
-      answer: "Water for the ritual bath taken before marriage.",
+      key: "custom-fijian-apology-gift",
+      question: "What treasured object traditionally gave weight to a formal apology in Fiji?",
+      answer: "A polished sperm whale’s tooth attached to a braided cord, known as a tabua.",
       source: {
-        title: "Oxford Classical Dictionary — Marriage ceremonies, Greek",
-        url: "https://oxfordre.com/classics/display/10.1093/acrefore/9780199381135.001.0001/acrefore-9780199381135-e-3980",
-        note: "The entry describes a preparatory ritual bath using water carried in loutrophoroi from a spring or river, including Callirrhoe in Athens.",
+        title: "Te Papa — Whale tooth tales: Fijian language week 2013",
+        url: "https://blog.tepapa.govt.nz/2013/10/07/wearable-whales-teeth-fiji-language-week-2013/",
+        note: "The museum identifies tabua as polished sperm-whale teeth on braided cords and states that presenting them was an especially effective way to give weight to an apology or atonement.",
       },
     },
     {
@@ -150,7 +152,7 @@ export const bizarreCustoms = definePack(
     {
       key: "custom-lever",
       question:
-        "What everyday event became an elaborate court ceremony called the lever at Versailles?",
+        "What ordinary daily activity became an elaborate public ceremony for Louis XIV at Versailles?",
       answer: "The king getting out of bed in the morning.",
       source: {
         title: "Victoria and Albert Museum — Inside the Baroque palace",
@@ -181,8 +183,8 @@ export const bizarreCustoms = definePack(
     },
     {
       key: "custom-hongi",
-      question: "What physical gesture lies at the heart of a Māori hongi?",
-      answer: "Pressing noses together as a greeting.",
+      question: "What physical greeting may accompany a traditional Māori welcome?",
+      answer: "The hongi: host and visitor press their noses together.",
       source: {
         title: "Encyclopedia Britannica — Hongi",
         url: "https://www.britannica.com/topic/hongi",
@@ -202,9 +204,9 @@ export const bizarreCustoms = definePack(
     },
     {
       key: "custom-gimmel-union",
-      question:
-        "What unusual construction helped a gimmel wedding ring represent a couple’s union?",
-      answer: "Interlocking hoops that could open apart and fit together as one ring.",
+      question: "How could a sixteenth-century couple’s gimmel ring be both separate and joined?",
+      answer:
+        "It had interlocking hoops that opened apart but fitted together as a single wedding ring.",
       source: {
         title: "Victoria and Albert Museum — Gimmel ring",
         url: "https://collections.vam.ac.uk/item/O77755/gimmel-ring-unknown/",
@@ -224,9 +226,9 @@ export const bizarreCustoms = definePack(
     },
     {
       key: "custom-somersault-cup",
-      question: "What challenge did a drinking vessel called a stürzbecher impose on its user?",
+      question: "What drinking challenge could a wager cup from around 1600 set its user?",
       answer:
-        "Finish the drink before setting the cup down: it could not stand upright while full.",
+        "Finish the drink before putting it down: the cup could not stand upright while full.",
       source: {
         title: "Victoria and Albert Museum — Wager cup",
         url: "https://collections.vam.ac.uk/item/O156666/wager-cup-unknown/",
@@ -236,8 +238,8 @@ export const bizarreCustoms = definePack(
     {
       key: "custom-pax-tablet",
       question:
-        "What did worshippers do with the small object called a pax when it was passed around during Mass?",
-      answer: "Kiss it in turn to convey the kiss of peace.",
+        "Why was a small silver-gilt tablet passed between worshippers during some medieval Masses?",
+      answer: "Each worshipper kissed it in turn, sharing the kiss of peace through the object.",
       source: {
         title: "Victoria and Albert Museum — Pax",
         url: "https://collections.vam.ac.uk/item/O107615/pax-unknown/",
@@ -246,7 +248,7 @@ export const bizarreCustoms = definePack(
     },
     {
       key: "custom-homage-hands",
-      question: "What gesture with the hands formalised a medieval vassal’s homage to a lord?",
+      question: "How did a medieval vassal physically place himself under a lord’s protection?",
       answer: "The kneeling vassal placed joined hands inside the lord’s hands.",
       source: {
         title: "Encyclopedia Britannica — Homage and fealty",
@@ -257,8 +259,8 @@ export const bizarreCustoms = definePack(
     {
       key: "custom-dunmow-prize",
       question:
-        "What edible reward could a couple win by convincing a Dunmow jury that their marriage was harmonious?",
-      answer: "A flitch, or side, of bacon.",
+        "What reward could a couple win by convincing a Dunmow jury that their marriage was harmonious?",
+      answer: "A side of bacon.",
       source: {
         title: "Encyclopedia Britannica, 1911 — Dunmow",
         url: "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Dunmow",
@@ -299,8 +301,9 @@ export const bizarreCustoms = definePack(
     },
     {
       key: "custom-feast-fools-rank",
-      question: "What high-ranking figure might participants elect at the medieval Feast of Fools?",
-      answer: "A mock bishop or pope, as ordinary hierarchies were turned upside down.",
+      question: "What happened to church hierarchies at the medieval Feast of Fools?",
+      answer:
+        "High and low officials exchanged roles, and participants might elect a mock bishop or pope.",
       source: {
         title: "Encyclopedia Britannica — Feast of Fools",
         url: "https://www.britannica.com/topic/Feast-of-Fools",
@@ -308,25 +311,26 @@ export const bizarreCustoms = definePack(
       },
     },
     {
-      key: "custom-tessera-entitlement",
+      key: "custom-polterabend-cleanup",
       question:
-        "What could a Roman traveller establish by presenting a special tessera to another household?",
-      answer: "A recognised right to hospitality.",
+        "What mess do guests deliberately leave for a couple to clear up at a German pre-wedding celebration?",
+      answer: "Smashed crockery, broken for good luck and swept up together by the couple.",
       source: {
-        title: "Oxford Classical Dictionary — Tessera",
-        url: "https://oxfordre.com/classics/display/10.1093/acrefore/9780199381135.001.0001/acrefore-9780199381135-e-6302",
-        note: "The entry describes tesserae hospitales as tokens that established hospitality entitlements; tesserae had several other functions, so the prompt specifies a travelling visitor.",
+        title: "Wikipedia — Polterabend",
+        url: "https://en.wikipedia.org/wiki/Polterabend",
+        note: "The article describes guests breaking porcelain at a Polterabend and the couple jointly cleaning up the shards, symbolising their ability to face difficulties together.",
       },
     },
     {
-      key: "custom-lord-drinks-first",
+      key: "custom-danish-cinnamon-birthday",
       question:
-        "What should a child do if their lord began drinking, according to an English courtesy book from about 1480?",
-      answer: "Wait rather than drink at the same time as the lord.",
+        "What might unmarried Danes have to endure from their friends on their twenty-fifth birthday?",
+      answer: "Being showered in cinnamon.",
       source: {
-        title: "British Library — The Lytille Childrenes Lytil Boke, archived collection page",
-        url: "https://web.archive.org/web/20200228032828/https://www.bl.uk/collection-items/the-lytille-childrenes-lytil-boke",
-        note: "The manuscript directs: “And yf thy lorde drynke at that tyde, / Dry[n]ke thou not, but hym abyde,” translated by the Library as waiting until the lord has finished.",
+        title:
+          "The Local Denmark — Why do Danes cover each other in cinnamon on their 25th birthdays?",
+        url: "https://www.thelocal.dk/20220218/why-do-danes-cover-each-other-in-cinnamon-on-their-25th-birthdays",
+        note: "The article’s title identifies the twenty-fifth-birthday custom; its opening describes a young person smothered in cinnamon and explains that they are single, not being punished.",
       },
     },
   ],

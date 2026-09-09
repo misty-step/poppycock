@@ -23,8 +23,9 @@ export const beastlyCheats = definePack(
     {
       key: "cheats-photuris-flashes",
       question:
-        "What can make a male firefly's apparently promising date with a Photuris female fatal?",
-      answer: "She imitates another species' mating flashes to lure its males close enough to eat.",
+        "What does a Photuris female gain by copying another firefly species' courtship signals?",
+      answer:
+        "A meal: males following the imitation mating flashes are lured close enough to be eaten.",
       source: {
         title: "National Geographic — Inside the Wild World of Bug Courtship",
         url: "https://www.nationalgeographic.com/animals/article/bug-mating-behavior-courtship",
@@ -44,8 +45,9 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-hognose-performance",
-      question: "What makes a hognose snake's last-resort performance more than a visual trick?",
-      answer: "While playing dead, it releases foul-smelling fluid from its anal glands.",
+      question: "What is a hognose snake's last-resort response to a threat?",
+      answer:
+        "It plays dead and releases foul-smelling fluid to make the performance more convincing.",
       source: {
         title: "National Geographic — The Living Dead: Animals That Pretend to Go Belly-Up",
         url: "https://www.nationalgeographic.com/animals/article/151019-playing-dead-frog-possum-toad-animals-behavior-science",
@@ -65,7 +67,7 @@ export const beastlyCheats = definePack(
     {
       key: "cheats-cuttlefish-two-sides",
       question:
-        "How can a male mourning cuttlefish court a female while concealing his intentions from a rival?",
+        "What double role can a mourning cuttlefish play when a female and a rival are watching?",
       answer:
         "He displays male courtship patterns toward her and female-like patterns on the side facing the rival.",
       source: {
@@ -90,9 +92,9 @@ export const beastlyCheats = definePack(
     {
       key: "cheats-nursery-web-ride",
       question:
-        "What can a male nursery-web spider do when a female tries to take his courtship gift without mating?",
+        "How does a nursery-web spider stay with a female who tries to carry off his courtship gift?",
       answer:
-        "Play dead while clinging to the gift, get dragged along, then revive and try to mate as she eats.",
+        "He plays dead while clinging to the gift, gets dragged along, then revives and tries to mate as she eats.",
       source: {
         title: "National Geographic — The Living Dead: Animals That Pretend to Go Belly-Up",
         url: "https://www.nationalgeographic.com/animals/article/151019-playing-dead-frog-possum-toad-animals-behavior-science",
@@ -101,8 +103,7 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-portia-web",
-      question:
-        "How can a Portia spider persuade another spider to leave the safety of its retreat?",
+      question: "What invitation does a hunting Portia spider send through another spider's web?",
       answer: "It plucks the victim's web to imitate the vibrations of trapped prey.",
       source: {
         title: "National Geographic — How Snakes, Spiders, and Other Predators Fool Their Prey",
@@ -112,8 +113,8 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-bolas-perfume",
-      question: "What does a female bolas spider produce to bring male moths within reach?",
-      answer: "A chemical imitation of female moths' sex pheromones.",
+      question: "Why can a moth's search for a mate lead it straight to a bolas spider?",
+      answer: "The spider releases a chemical imitation of a female moth's sex pheromones.",
       source: {
         title: "National Geographic — For These Trickster Animals, Every Day Is April Fools",
         url: "https://www.nationalgeographic.com/animals/article/160401-animals-april-fools-day-spiders-tricks",
@@ -135,7 +136,7 @@ export const beastlyCheats = definePack(
     {
       key: "cheats-spider-bundle",
       question:
-        "What extra detail completes the disguise of certain male jumping spiders with oversized jaws?",
+        "What do certain large-jawed jumping spiders impersonate to make their disguise convincing?",
       answer:
         "They resemble ants carrying bundles, with the enlarged jaws helping create the apparent load.",
       source: {
@@ -157,8 +158,8 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-moth-warning",
-      question: "What sound can an edible tiger moth use to bluff a hungry bat?",
-      answer: "The ultrasonic warning clicks of a toxic moth.",
+      question: "How can an edible tiger moth put a bat off eating it?",
+      answer: "It imitates the ultrasonic warning clicks of a toxic moth.",
       source: {
         title: "National Geographic — The Art of Deception",
         url: "https://www.nationalgeographic.com/magazine/article/mimicry",
@@ -180,7 +181,7 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-bluehead-sneaker",
-      question: "How can a small 'sneaker' male bluehead wrasse compete with a dominant male?",
+      question: "What mating tactic lets a small bluehead wrasse compete with a dominant male?",
       answer:
         "Rush into the dominant male's spawning event and release a disproportionately large dose of sperm.",
       source: {
@@ -191,7 +192,7 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-water-strider-threat",
-      question: "How can a male water strider pressure a reluctant female into mating?",
+      question: "Why might a male water strider tap the surface while sitting on a female?",
       answer:
         "He taps the water to attract predators while riding on her back, stopping the risky signals when she accepts.",
       source: {
@@ -202,9 +203,9 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-droppings-spider",
-      question:
-        "What unappealing disguise can help a Phrynarachne spider attract a meal rather than merely hide?",
-      answer: "Bird droppings, which lure flies seeking food or a place to lay eggs.",
+      question: "How does a Phrynarachne spider make itself attractive to flies?",
+      answer:
+        "It resembles bird droppings, attracting flies seeking food or somewhere to lay eggs.",
       source: {
         title: "National Geographic — These Spiders Lure in Their Prey in Some Very Crafty Ways",
         url: "https://www.nationalgeographic.com/animals/article/spiders-prey-webs-trap-camouflage-mimicry",
@@ -224,8 +225,8 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-puff-adder-tongue",
-      question: "What unusual hunting use can a South African puff adder make of its tongue?",
-      answer: "Wag it slowly like an insect to lure amphibians within reach.",
+      question: "What trick can a South African puff adder use to bring an amphibian closer?",
+      answer: "It slowly wags its tongue like an insect, turning part of its mouth into bait.",
       source: {
         title: "National Geographic — How Snakes, Spiders, and Other Predators Fool Their Prey",
         url: "https://www.nationalgeographic.com/animals/article/mimics-deception-snakes-spiders-predators",
@@ -234,7 +235,8 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-topi-false-danger",
-      question: "How can a male topi discourage a potential mate from leaving his territory?",
+      question:
+        "What trick can a male topi use when a potential mate starts leaving his territory?",
       answer: "Give a false alarm snort, making her behave as if a predator lies ahead.",
       source: {
         title:
@@ -245,7 +247,7 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-epomis-reversal",
-      question: "What happens when a frog takes the bait offered by a waving Epomis beetle larva?",
+      question: "Why can a frog's encounter with an Epomis beetle larva end unexpectedly?",
       answer:
         "The larva dodges the tongue, grips the frog with hooked jaws, and turns the would-be predator into its meal.",
       source: {
@@ -268,7 +270,7 @@ export const beastlyCheats = definePack(
     {
       key: "cheats-mantis-flower",
       question:
-        "How does the Malaysian insect Hymenopus coronatus attract prey while sitting out in the open?",
+        "What disguise brings prey within reach of the Malaysian mantis Hymenopus coronatus?",
       answer: "It resembles a flower, drawing insects directly onto its grasping legs.",
       source: {
         title: "National Geographic — Watch: Bird Mimics Caterpillar",
@@ -278,9 +280,9 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-snail-eyestalks",
-      question: "How does Leucochloridium make a snail more likely to be picked out by a bird?",
+      question: "How does a parasitic flatworm turn a snail into bait for its next host?",
       answer:
-        "Its pulsating broodsacs swell the snail's eyestalks until they resemble tempting insect larvae.",
+        "Pulsating sacs of parasites swell the snail's eyestalks until they look like tempting insect larvae.",
       source: {
         title: "National Geographic — Watch: Bird Mimics Caterpillar",
         url: "https://www.nationalgeographic.com/animals/article/150122-birds-mimics-animals-science-parasites-caterpillars",
@@ -310,8 +312,10 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-damselfly-disguise",
-      question: "How can some female Ischnura damselflies avoid persistent male attention?",
-      answer: "By looking like males themselves, using male-like body coloration.",
+      question:
+        "Why can some female damselflies look so different from other females of their species?",
+      answer:
+        "They wear male-like colours, reducing the persistent courtship they receive from males.",
       source: {
         title: "National Geographic — Inside the Wild World of Bug Courtship",
         url: "https://www.nationalgeographic.com/animals/article/bug-mating-behavior-courtship",
@@ -320,8 +324,7 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-otter-ransom",
-      question:
-        "What extreme bargaining tactic have sea otters used to obtain another otter's food?",
+      question: "How have some sea otters persuaded another otter to surrender its food?",
       answer: "Seizing its pup and holding it for a food ransom.",
       source: {
         title: "BBC — World's Sneakiest Animals: The Hunger Game",
@@ -331,7 +334,7 @@ export const beastlyCheats = definePack(
     },
     {
       key: "cheats-squirrel-empty-cache",
-      question: "What can a grey squirrel do at a hiding place to mislead a watching food thief?",
+      question: "What can a grey squirrel do when it notices a rival watching it store food?",
       answer: "Go through the motions of burying a nut while leaving the hiding place empty.",
       source: {
         title: "Animal Behaviour — Cache Protection Strategies of a Scatter-Hoarding Rodent",

@@ -13,7 +13,7 @@ export const royalWhims = definePack(
     {
       key: "royal-intimate-route-to-influence",
       question:
-        "What surprisingly intimate duty could make an English courtier a powerful royal confidant?",
+        "What personal service could give a Tudor courtier unusually close access to the king?",
       answer:
         "Attending the king’s toilet: the Groom of the Stool emptied his chamber pot, washed him and heard his confidences.",
       source: {
@@ -36,7 +36,8 @@ export const royalWhims = definePack(
     },
     {
       key: "royal-dymoke-banquet-challenge",
-      question: "What challenge did Henry Dymoke issue at George IV’s coronation banquet in 1821?",
+      question:
+        "What did Henry Dymoke do on horseback inside George IV’s coronation banquet in 1821?",
       answer:
         "He threw down a gauntlet, offering to fight anyone who disputed the king’s right to rule.",
       source: {
@@ -60,9 +61,9 @@ export const royalWhims = definePack(
     {
       key: "royal-mock-lords-seasonal-duty",
       question:
-        "Why might a Tudor household appoint someone to hold a mock court and accept comic homage?",
+        "What temporary authority might an ordinary Tudor reveller acquire for the Christmas season?",
       answer:
-        "He was the Lord of Misrule, organising Christmas entertainments, processions, plays and feasts.",
+        "As Lord of Misrule, he could hold a mock court, receive comic homage and organise the household’s festivities.",
       source: {
         title: "Encyclopaedia Britannica — Lord of Misrule",
         url: "https://www.britannica.com/art/Lord-of-Misrule-English-medieval-official",
@@ -82,14 +83,13 @@ export const royalWhims = definePack(
       },
     },
     {
-      key: "royal-guard-cellar-search",
-      question:
-        "Before the monarch arrives to open Parliament, what do royal bodyguards ceremonially hunt for?",
-      answer: "Explosives in the cellars, in remembrance of the Gunpowder Plot.",
+      key: "royal-william-public-bedchamber",
+      question: "What was William III’s Great Bedchamber chiefly intended for, if not sleeping?",
+      answer: "Having the king shaved and dressed in front of an audience.",
       source: {
-        title: "UK Parliament — State Opening: Elements unseen by the public",
-        url: "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentwork/offices-and-ceremonies/overview/state-opening/elements-unseen-by-the-public/",
-        note: "The account states that the Yeomen of the Guard ceremonially search the Palace of Westminster’s cellars for explosives before the sovereign arrives.",
+        title: "Historic Royal Palaces — William III’s apartments",
+        url: "https://www.hrp.org.uk/hampton-court-palace/whats-on/william-iiis-apartments/",
+        note: "The Great Bedchamber section says William rarely slept there; the room was intended for shaving and dressing him in public.",
       },
     },
     {
@@ -106,8 +106,8 @@ export const royalWhims = definePack(
     {
       key: "royal-bowing-to-absence",
       question:
-        "What were visitors to William III’s Presence Chamber expected to acknowledge even when nobody occupied it?",
-      answer: "The empty throne: they still had to bow as they passed.",
+        "What gesture was still required of someone crossing William III’s Presence Chamber when the king was absent?",
+      answer: "Bowing to the empty throne.",
       source: {
         title: "Historic Royal Palaces — William III’s apartments",
         url: "https://www.hrp.org.uk/hampton-court-palace/whats-on/william-iiis-apartments/",
@@ -117,8 +117,8 @@ export const royalWhims = definePack(
     {
       key: "royal-seasonal-keeper-supplies",
       question:
-        "What did a palace “keeper” harvest outdoors in winter for use at Georgian royal meals in warmer months?",
-      answer: "Ice, cut from nearby water sources and stored to keep palace food and drinks cold.",
+        "What did a specialist Georgian palace keeper collect from nearby ponds and rivers for later use at royal meals?",
+      answer: "Winter ice, stored until warmer months to keep palace food and drinks cold.",
       source: {
         title: "Historic Royal Palaces — Untold Lives: A Palace at Work resource guide",
         url: "https://www.hrp.org.uk/media/tqte100y/untold-lives-cas-resource.pdf",
@@ -126,14 +126,14 @@ export const royalWhims = definePack(
       },
     },
     {
-      key: "royal-embroidered-pest-uniform",
+      key: "royal-giraffe-wet-nurses",
       question:
-        "Which creatures appeared on a Georgian palace servant’s embroidered uniform as a badge of the job?",
-      answer: "Rats: the wearer was the royal ratcatcher.",
+        "What unexpected arrangement kept one of George IV’s exotic pets fed at Windsor in 1827?",
+      answer: "Two Egyptian cows, serving as the giraffe calf’s wet-nurses.",
       source: {
-        title: "Historic Royal Palaces — Untold Lives: A Palace at Work resource guide",
-        url: "https://www.hrp.org.uk/media/tqte100y/untold-lives-cas-resource.pdf",
-        note: "The status section describes the ratcatcher’s distinctive uniform embroidered with rats and explains the importance of protecting palace food supplies.",
+        title: "Royal Collection Trust — The Nubian Giraffe, RCIN 404394",
+        url: "https://col.rct.uk/collection/404394/the-nubian-giraffe",
+        note: "The catalogue identifies the giraffe sent to George IV in 1827 and describes two Egyptian cows in its entourage as wet-nurses.",
       },
     },
     {
@@ -148,8 +148,9 @@ export const royalWhims = definePack(
     },
     {
       key: "royal-caroline-clothed-bathing",
-      question: "What did Queen Caroline keep on while being washed in her tub at Hampton Court?",
-      answer: "A bathing dress and a cap.",
+      question:
+        "What would have surprised a modern observer watching Queen Caroline take a bath at Hampton Court?",
+      answer: "She was washed while still wearing a bathing dress and cap.",
       source: {
         title: "Historic Royal Palaces — Glorious Georgian Bathing: Queen Caroline’s bath tub",
         url: "https://www.hrp.org.uk/blog/glorious-georgian-bathing-queen-carolines-bath-tub/",
@@ -182,8 +183,8 @@ export const royalWhims = definePack(
     {
       key: "royal-diplomatic-fountain-refreshment",
       question:
-        "What flowed from English fountains at Henry VIII’s grand meeting with Francis I in 1520?",
-      answer: "Wine and beer instead of water.",
+        "How did Henry VIII keep refreshments flowing at his grand meeting with Francis I in 1520?",
+      answer: "He had fountains built that ran with wine and beer.",
       source: {
         title: "Historic Royal Palaces — The Field of Cloth of Gold",
         url: "https://www.hrp.org.uk/hampton-court-palace/history-and-stories/the-field-of-cloth-of-gold/",
@@ -215,8 +216,8 @@ export const royalWhims = definePack(
     {
       key: "royal-victoria-staircase-rule",
       question:
-        "What special precaution was imposed whenever the young Princess Victoria walked downstairs?",
-      answer: "She had to hold someone’s hand, as part of the restrictive Kensington System.",
+        "What ordinary movement around the palace was the teenage Princess Victoria forbidden to make unassisted?",
+      answer: "Walking downstairs: the Kensington System required her to hold someone’s hand.",
       source: {
         title: "Historic Royal Palaces — Queen Victoria",
         url: "https://www.hrp.org.uk/kensington-palace/history-and-stories/queen-victoria/",
@@ -269,8 +270,8 @@ export const royalWhims = definePack(
     {
       key: "royal-coronation-excluded-consort",
       question:
-        "Which very close royal relation was refused entry to George IV’s coronation in 1821?",
-      answer: "His own wife, Queen Caroline.",
+        "What extraordinary obstacle confronted Queen Caroline when she arrived for her husband’s coronation in 1821?",
+      answer: "She was refused entry to Westminster Abbey, despite being the king’s wife.",
       source: {
         title: "Encyclopaedia Britannica — Caroline of Brunswick-Lüneburg",
         url: "https://www.britannica.com/biography/Caroline-of-Brunswick-Luneburg",
@@ -280,7 +281,7 @@ export const royalWhims = definePack(
     {
       key: "royal-watermen-on-coaches",
       question:
-        "What job do the Sovereign’s Bargemaster and Royal Watermen perform at the State Opening when no boat is involved?",
+        "Why are the Royal Watermen needed at the State Opening of Parliament even when no boats are used?",
       answer:
         "They ride on the coaches as ceremonial guards for the monarch and the royal regalia.",
       source: {
@@ -292,8 +293,8 @@ export const royalWhims = definePack(
     {
       key: "royal-chamberlain-broken-wand",
       question:
-        "What did the Lord Chamberlain deliberately break and place on Elizabeth II’s coffin in 2022?",
-      answer: "His Wand of Office.",
+        "How did the Lord Chamberlain mark the end of his service to Elizabeth II at her committal?",
+      answer: "He broke his Wand of Office and laid it on her coffin.",
       source: {
         title: "The Royal Household — The State Funeral for Her Majesty The Queen",
         url: "https://www.royal.uk/news-and-activity/2022-09-19/the-state-funeral-for-her-majesty-the-queen",
@@ -303,7 +304,7 @@ export const royalWhims = definePack(
     {
       key: "royal-nursery-rocking-specialists",
       question:
-        "What repetitive task had its own three appointed workers in Queen Charlotte’s nursery household?",
+        "What job, separate from nursing, kept three appointed workers occupied in Queen Charlotte’s nursery?",
       answer: "Rocking the royal babies’ cradles.",
       source: {
         title: "Historic Royal Palaces — Untold Lives: A Palace at Work resource guide",
@@ -323,20 +324,21 @@ export const royalWhims = definePack(
       },
     },
     {
-      key: "royal-william-movable-pictures",
-      question: "Why were pictures in William III’s private apartments suspended on ropes?",
-      answer: "So the king could rearrange them whenever he pleased.",
+      key: "royal-diplomatic-flying-dragon",
+      question: "What was the dragon seen flying above Henry VIII and Francis I’s meeting in 1520?",
+      answer: "A kite packed with fireworks, towed on a long rope behind a wagon.",
       source: {
-        title: "Historic Royal Palaces — William III’s apartments",
-        url: "https://www.hrp.org.uk/hampton-court-palace/whats-on/william-iiis-apartments/",
-        note: "The private-apartments section explicitly says the paintings were hung on ropes so William could re-hang them whenever the fancy took him.",
+        title: "Historic Royal Palaces — The Field of Cloth of Gold",
+        url: "https://www.hrp.org.uk/hampton-court-palace/history-and-stories/the-field-of-cloth-of-gold/",
+        note: "The Dragon section identifies it as a kite filled with fireworks, attached by a long rope to a wagon driven between Ardres and Guînes.",
       },
     },
     {
       key: "royal-sandringham-advance",
       question:
-        "How did Edward VII alter daily timekeeping at Sandringham to suit his outdoor pursuits?",
-      answer: "He had the clocks set half an hour fast, creating “Sandringham time”.",
+        "What local rule could make a punctual visitor late for a shooting appointment at Edward VII’s Sandringham?",
+      answer:
+        "The estate’s clocks ran half an hour fast, giving the king more usable daylight for hunting.",
       source: {
         title: "Antiquarian Horological Society — Two-timing",
         url: "https://www.ahsoc.org/blog/two-timing/",

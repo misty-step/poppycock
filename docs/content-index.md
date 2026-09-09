@@ -489,7 +489,7 @@ Strange treatments, ingenious instruments, and discarded ideas about the human b
 | `medical-charles-royal-treatment` | [Wellcome Collection — When monarchs healed the sick](https://wellcomecollection.org/stories/when-monarchs-healed-the-sick) |
 | `medical-key-without-lock` | [Science Museum Group — Dental key](https://collection.sciencemuseumgroup.org.uk/objects/co101979/dental-key) |
 | `medical-laennec-paper` | [Science Museum — Understanding bodily functions](https://www.sciencemuseum.org.uk/objects-and-stories/medicine/understanding-bodily-functions) |
-| `medical-susruta-ants` | [Science Museum — Understanding bodily functions](https://www.sciencemuseum.org.uk/objects-and-stories/medicine/understanding-bodily-functions) |
+| `medical-kussmaul-performer` | [BMJ — Sword swallowing uncertainties](https://pmc.ncbi.nlm.nih.gov/articles/PMC1283200/) |
 | `medical-frog-test` | [Wellcome Collection — Primodos, paternalism and the fight to be heard](https://wellcomecollection.org/stories/primodos--paternalism-and-the-fight-to-be-heard) |
 | `medical-apothecary-unicorn` | [Science Museum Group — Pharmacy sign in the shape of a unicorn’s head](https://collection.sciencemuseumgroup.org.uk/objects/co131775/pharmacy-sign-in-the-shape-of-a-unicorns-head) |
 | `medical-variolation-powder` | [Science Museum — Smallpox and the story of vaccination](https://www.sciencemuseum.org.uk/objects-and-stories/medicine/smallpox-and-story-vaccination) |
@@ -504,9 +504,9 @@ Strange treatments, ingenious instruments, and discarded ideas about the human b
 | `medical-medicated-sponge` | [PubMed Central — An Arabic surgeon, Ibn al Quff’s account of surgical pain relief](https://pmc.ncbi.nlm.nih.gov/articles/PMC4173333/) |
 | `medical-smoked-paper` | [Science Museum Group — Robert Dudgeon’s sphygmograph](https://collection.sciencemuseumgroup.org.uk/objects/co93675/robert-dudgeons-sphygmograph) |
 | `medical-auzoux-model` | [National Museums Scotland — Anatomy: A Matter of Death and Life](https://www.nms.ac.uk/past-exhibitions/anatomy-a-matter-of-death-and-life) |
-| `medical-antimony-cup` | [Science Museum Group — Antimony cup, Europe, 1501–1700](https://collection.sciencemuseumgroup.org.uk/objects/co142080/antimony-cup-europe-1501-1700) |
-| `medical-ketham-wheel` | [Science Museum — Understanding bodily functions](https://www.sciencemuseum.org.uk/objects-and-stories/medicine/understanding-bodily-functions) |
-| `medical-artificial-issue` | [Webster’s 1913 — Issue](https://www.websters1913.com/words/Issue) |
+| `medical-santorio-dining-chair` | [NTM — The Weighing Chair of Sanctorius Sanctorius: A Replica](https://pmc.ncbi.nlm.nih.gov/articles/PMC5993855/) |
+| `medical-auenbrugger-casks` | [Christie’s — Auenbrugger, Inventum novum, 1761](https://www.christies.com/en/lot/lot-933354) |
+| `medical-cox-chair` | [Frontiers in Psychiatry — Cox’s Chair Revisited: Can Spinning Alter Mood States?](https://pmc.ncbi.nlm.nih.gov/articles/PMC3796758/) |
 | `medical-trephining` | [Science Museum Group — Excavated neolithic skull](https://collection.sciencemuseumgroup.org.uk/objects/co106403/excavated-neolithic-skull) |
 
 ## Peculiar sports
@@ -532,8 +532,8 @@ Forgotten Olympic contests, unruly folk games, and competitions with improbable 
 | `sport-lightfoot-rivals` | [BBC News — Man v horse: Powys race won by runner Ricky Lightfoot](https://www.bbc.com/news/uk-wales-61773202) |
 | `sport-kabaddi-breath` | [Encyclopaedia Britannica — Kabaddi](https://www.britannica.com/sports/kabaddi) |
 | `sport-buzkashi-object` | [Encyclopaedia Britannica — Buzkashi summary](https://www.britannica.com/summary/buzkashi) |
-| `sport-tennis-bell` | [BBC News — Oxfordshire real tennis champion: Sport not cloak and dagger](https://www.bbc.co.uk/news/articles/cr4z62y9zrgo) |
-| `sport-running-target` | [Olympedia — Running Target, Single Shot, Men, 1924](https://www.olympedia.org/results/51625) |
+| `sport-octopush-breath` | [BBC News — Snorkels, splashing and strategy: the world of Octopush](https://www.bbc.co.uk/news/articles/c87jnzq90p9o) |
+| `sport-winans-second-gold` | [Olympedia — Walter Winans](https://www.olympedia.org/athletes/44792) |
 | `sport-lykkeberg-circle` | [Olympedia — Underwater Swimming, Men, 1900](https://www.olympedia.org/results/4432) |
 | `sport-seine-obstacles` | [Olympedia — 200 metres Obstacle Course, Men, 1900](https://www.olympedia.org/results/4433) |
 | `sport-motionless-glide` | [Olympedia — Plunge for Distance, Men, 1904](https://www.olympedia.org/results/4469) |
@@ -541,8 +541,8 @@ Forgotten Olympic contests, unruly folk games, and competitions with improbable 
 | `sport-centenaire-targets` | [Olympedia — Live Pigeon Shooting, Grand Prix du Centenaire, 1900](https://www.olympedia.org/results/925491) |
 | `sport-1912-combined-throws` | [Olympedia — Discus Throw, Both Hands, Men, 1912](https://www.olympedia.org/results/56902) |
 | `sport-athens-exclusive-race` | [Olympedia — 100 metres Freestyle for Sailors, Men, 1896](https://www.olympedia.org/results/4403) |
-| `sport-elliot-one-hand` | [Olympedia — Weightlifting at the 1896 Summer Olympics](https://www.olympedia.org/editions/1/sports/WLF) |
-| `sport-athens-rope-ranking` | [Olympedia — Rope Climbing, Men, 1896](https://www.olympedia.org/results/70007) |
+| `sport-levy-switches-roles` | [Olympedia — Weightlifting at the 1896 Summer Olympics](https://www.olympedia.org/editions/1/sports/WLF) |
+| `sport-wax-bullet-duels` | [Wikipedia — Pistol dueling](https://en.wikipedia.org/wiki/Pistol_dueling) |
 | `sport-rubingh-hybrid` | [BBC News — Chess boxing catching on in India](https://www.bbc.co.uk/news/world-asia-india-25099024) |
 | `sport-wenlock-tea-prize` | [BBC News — The lure of eccentric sports](https://www.bbc.co.uk/news/magazine-13143122) |
 
@@ -560,7 +560,7 @@ Ambitious dead ends and eccentric patents for doing ordinary things in extraordi
 | `failed-cinema-vents` | [Smithsonian Magazine — Smell-O-Vision and Other Film Industry Flops](https://www.smithsonianmag.com/innovation/smell-o-vision-astrocolor-other-film-industry-inventions-that-proved-to-be-flops-180968295/) |
 | `failed-interfilm-voting` | [Smithsonian Magazine — Interfilm’s Interactive-Cinema Experiment](https://www.smithsonianmag.com/innovation/smell-o-vision-astrocolor-other-film-industry-inventions-that-proved-to-be-flops-180968295/) |
 | `failed-astrocolor-film` | [Smithsonian Magazine — Astrocolor’s Flying Film Projector](https://www.smithsonianmag.com/innovation/smell-o-vision-astrocolor-other-film-industry-inventions-that-proved-to-be-flops-180968295/) |
-| `failed-c5-factory` | [Science Museum Group — Sinclair C5 Electric Vehicle](https://collection.sciencemuseumgroup.org.uk/objects/co8413609/sinclair-c5-electric-vehicle) |
+| `failed-pet-display-vest` | [US Patent 5901666 — Pet display clothing](https://patents.google.com/patent/US5901666A/en) |
 | `failed-beach-tube` | [Smithsonian Magazine — 12 Secrets of the New York Subway](https://www.smithsonianmag.com/travel/secrets-new-york-city-subway-180958683/) |
 | `failed-inside-wheel` | [US Patent 91535 — Improvement in velocipede](https://patents.google.com/patent/US91535A/en) |
 | `failed-falling-corks` | [US Patent 256265 — Device for waking persons from sleep](https://patents.google.com/patent/US256265A/en) |
@@ -579,7 +579,7 @@ Ambitious dead ends and eccentric patents for doing ordinary things in extraordi
 | `failed-campground-barges` | [US Patent 3964418 — Floating campgrounds](https://patents.google.com/patent/US3964418A/en) |
 | `failed-rain-cylinder` | [US Patent 5101513 — Foul weather apparel](https://patents.google.com/patent/US5101513A/en) |
 | `failed-cereal-chute` | [US Patent 4986433 — Cereal serving piece](https://patents.google.com/patent/US4986433A/en) |
-| `failed-car-coffee` | [US Patent 5233914 — In-car coffee maker](https://patents.google.com/patent/US5233914A/en) |
+| `failed-dog-ear-tubes` | [US Patent 4233942 — Animal ear protectors](https://patents.google.com/patent/US4233942A/en) |
 | `failed-computer-candy` | [US Patent 5823386 — Reward candy dispenser](https://patents.google.com/patent/US5823386A/en) |
 | `failed-soup-shield` | [US Patent 176175 — Improvement in moustache-guards](https://patents.google.com/patent/US176175A/en) |
 
@@ -598,9 +598,9 @@ Invented discoveries, counterfeit masterpieces and deceptions that briefly becam
 | `hoax-mumler-sitters` | [Smithsonian Magazine — What the History of Spirit Photography Portends](https://www.smithsonianmag.com/innovation/history-spirit-photography-future-deepfake-videos-180979010/) |
 | `hoax-ireland-play` | [Smithsonian Magazine — To Be...Or Not: The Greatest Shakespeare Forgery](https://www.smithsonianmag.com/history/to-beor-not-the-greatest-shakespeare-forgery-136201/) |
 | `hoax-rowley-poems` | [Encyclopaedia Britannica — Literary Forgery](https://www.britannica.com/art/forgery-art/Literary-forgery) |
-| `hoax-ossian-claim` | [Encyclopaedia Britannica — Literary Forgery](https://www.britannica.com/art/forgery-art/Literary-forgery) |
+| `hoax-lustig-landmark` | [Wikipedia — Victor Lustig](https://en.wikipedia.org/wiki/Victor_Lustig) |
 | `hoax-ern-malley` | [Encyclopaedia Britannica — Literary Forgery](https://www.britannica.com/art/forgery-art/Literary-forgery) |
-| `hoax-psalmanazar-home` | [Encyclopaedia Britannica — Literary Forgery](https://www.britannica.com/art/forgery-art/Literary-forgery) |
+| `hoax-psalmanazar-home` | [Wikipedia — George Psalmanazar](https://en.wikipedia.org/wiki/George_Psalmanazar) |
 | `hoax-salted-diamonds` | [Smithsonian Magazine — The Great Diamond Hoax of 1872](https://www.smithsonianmag.com/history/the-great-diamond-hoax-of-1872-2630188/) |
 | `hoax-crystal-skull-tools` | [Smithsonian Magazine — Why the Smithsonian Has a Fake Crystal Skull](https://www.smithsonianmag.com/history/the-smithsonians-crystal-skull-51638609/) |
 | `hoax-drake-marker` | [Smithsonian Magazine — Did Francis Drake Really Land in California?](https://www.smithsonianmag.com/history/did-francis-drake-really-land-california-180973219/) |
@@ -610,7 +610,7 @@ Invented discoveries, counterfeit masterpieces and deceptions that briefly becam
 | `hoax-etruscan-model` | [Encyclopaedia Britannica — Forgery in the Visual Arts](https://www.britannica.com/art/forgery-art/Forgery-in-the-visual-arts) |
 | `hoax-hughes-gamble` | [Smithsonian Magazine — Five Fake Memoirs That Fooled the Literary World](https://www.smithsonianmag.com/arts-culture/five-fake-memoirs-that-fooled-the-literary-world-77092955/) |
 | `hoax-misha-wolves` | [Smithsonian Magazine — Five Fake Memoirs That Fooled the Literary World](https://www.smithsonianmag.com/arts-culture/five-fake-memoirs-that-fooled-the-literary-world-77092955/) |
-| `hoax-frey-jail` | [Smithsonian Magazine — Five Fake Memoirs That Fooled the Literary World](https://www.smithsonianmag.com/arts-culture/five-fake-memoirs-that-fooled-the-literary-world-77092955/) |
+| `hoax-rose-bowl-cards` | [Caltech — Looking Back at the Great Rose Bowl Hoax](https://www.caltech.edu/about/news/looking-back-great-rose-bowl-hoax-1843) |
 | `hoax-seltzer-sister` | [Smithsonian Magazine — Five Fake Memoirs That Fooled the Literary World](https://www.smithsonianmag.com/arts-culture/five-fake-memoirs-that-fooled-the-literary-world-77092955/) |
 | `hoax-wise-pamphlets` | [Encyclopaedia Britannica — Literary Forgery](https://www.britannica.com/art/forgery-art/Literary-forgery) |
 | `hoax-lauder-milton` | [Encyclopaedia Britannica — Literary Forgery](https://www.britannica.com/art/forgery-art/Literary-forgery) |
@@ -631,14 +631,14 @@ Lost techniques, ingenious machines, long-distance trade, and clues hidden insid
 | `ancient-damascus-nanotubes` | [Nature — Carbon nanotubes in an ancient Damascus sabre](https://www.nature.com/articles/444286a) |
 | `ancient-lycurgus-light` | [British Museum — The Lycurgus Cup, collection record](https://www.britishmuseum.org/collection/object/H_1958-1202-1) |
 | `ancient-greek-fire-tubes` | [Encyclopedia Britannica — Greek fire](https://www.britannica.com/technology/Greek-fire) |
-| `ancient-antikythera-purpose` | [Encyclopedia Britannica — Antikythera mechanism](https://www.britannica.com/topic/Antikythera-mechanism) |
+| `ancient-antikythera-purpose` | [Wikipedia — Antikythera mechanism](https://en.wikipedia.org/wiki/Antikythera_mechanism) |
 | `ancient-egyptian-blue-glow` | [Heritage Science — Identification and mapping of ancient pigments in a Roman Egyptian funerary portrait](https://www.nature.com/articles/s40494-021-00639-5) |
 | `ancient-maya-pigment` | [Heritage Science — Shades of blue: non-invasive spectroscopic investigations of Maya blue pigments](https://www.nature.com/articles/s40494-019-0345-z) |
 | `ancient-qin-chromium` | [Scientific Reports — Surface chromium on Terracotta Army bronze weapons](https://www.nature.com/articles/s41598-019-40613-7) |
 | `ancient-tut-dagger` | [Archaeological Institute of America, Archaeology — Blade of Ancient Egyptian Dagger Analyzed](https://archaeology.org/uncategorized/2016/06/01/160601-dagger-iron-blade/) |
 | `ancient-barbegal-crusts` | [Scientific Reports — Reconstructing the hydraulics of the Barbegal watermills](https://www.nature.com/articles/s41598-020-74900-5) |
 | `ancient-ishtar-magnetism` | [Archaeological Institute of America, Archaeology — Archaeomagnetism Dates Construction of Babylon’s Ishtar Gate](https://archaeology.org/news/2024/01/22/240123-ishtar-gate-archaeomagnetism/) |
-| `ancient-hypocaust` | [Encyclopedia Britannica — Hypocaust](https://www.britannica.com/technology/hypocaust) |
+| `ancient-ctesibius-water-music` | [Encyclopedia Britannica — Hydraulis](https://www.britannica.com/art/hydraulis) |
 | `ancient-aeolipile` | [Encyclopedia Britannica — Aeolipile](https://www.britannica.com/technology/aeolipile) |
 | `ancient-archimedean-helix` | [Encyclopedia Britannica — Archimedes screw](https://www.britannica.com/technology/Archimedes-screw) |
 | `ancient-zhang-heng-seismoscope` | [Encyclopedia Britannica — Zhang Heng](https://www.britannica.com/biography/Zhang-Heng) |
@@ -648,7 +648,7 @@ Lost techniques, ingenious machines, long-distance trade, and clues hidden insid
 | `ancient-hadrian-underworld` | [Archaeological Institute of America, Archaeology — An Imperial Underworld](https://archaeology.org/issues/november-december-2013/digs-discoveries/tunnels-discovered-beneath-hadrians-villa/) |
 | `ancient-cire-perdue` | [Encyclopedia Britannica — Lost-wax process](https://www.britannica.com/technology/lost-wax-process) |
 | `ancient-tyrian-purple` | [Encyclopedia Britannica — Murex](https://www.britannica.com/animal/murex-mollusk-family) |
-| `ancient-lapis-route` | [British Museum — Trade and contraband in ancient Assyria](https://www.britishmuseum.org/blog/trade-and-contraband-ancient-assyria) |
+| `ancient-ur-customer-complaint` | [Wikipedia — Complaint tablet to Ea-nāṣir](https://en.wikipedia.org/wiki/Complaint_tablet_to_Ea-n%C4%81%E1%B9%A3ir) |
 | `ancient-rolling-signature` | [Encyclopedia Britannica — Cylinder seal](https://www.britannica.com/art/cylinder-seal) |
 | `ancient-clay-mail` | [British Museum — Trade and contraband in ancient Assyria](https://www.britishmuseum.org/blog/trade-and-contraband-ancient-assyria) |
 | `ancient-mummy-hairstyles` | [Nature — Ancient Egyptians used hair gel](https://www.nature.com/articles/news.2011.487) |
@@ -665,14 +665,14 @@ Unexpected courtesies, ceremonial greetings, social rituals, and rules for gathe
 | ---- | ------ |
 | `custom-salutatio` | [Oxford Classical Dictionary — Salutatio](https://oxfordre.com/classics/display/10.1093/acrefore/9780199381135.001.0001/acrefore-9780199381135-e-5682) |
 | `custom-kottabos` | [Encyclopedia Britannica — Kottabos](https://www.britannica.com/topic/kottabos) |
-| `custom-symposium-posture` | [Encyclopedia Britannica — Symposium](https://www.britannica.com/topic/symposium-ancient-Greek-banquet) |
+| `custom-oga-new-year-visitors` | [Oga City — Important Intangible Cultural Asset: Oga’s Namahage](https://www.namahage-oga.akita.jp/english/index.html) |
 | `custom-sigillaria` | [Encyclopedia Britannica — Saturnalia](https://www.britannica.com/topic/Saturnalia-Roman-festival) |
 | `custom-saturn-unbound` | [Encyclopedia Britannica — Saturnalia](https://www.britannica.com/topic/Saturnalia-Roman-festival) |
 | `custom-potlatch-prestige` | [Encyclopedia Britannica — Potlatch](https://www.britannica.com/topic/potlatch) |
 | `custom-kula-circulation` | [Encyclopedia Britannica — Kula trade](https://www.britannica.com/topic/kula-trade) |
-| `custom-kowtow` | [Encyclopedia Britannica — Kowtow](https://www.britannica.com/topic/kowtow) |
+| `custom-jyvaskyla-doctoral-sword` | [University of Jyväskylä — What happens in the Conferment of Degrees Ceremony?](https://www.jyu.fi/en/about-us/academic-events/conferment-of-degrees-ceremony/what-happens-in-the-conferment-of-degrees-ceremony) |
 | `custom-spartan-wedding` | [Oxford Classical Dictionary — Marriage ceremonies, Greek](https://oxfordre.com/classics/display/10.1093/acrefore/9780199381135.001.0001/acrefore-9780199381135-e-3980) |
-| `custom-loutrophoros` | [Oxford Classical Dictionary — Marriage ceremonies, Greek](https://oxfordre.com/classics/display/10.1093/acrefore/9780199381135.001.0001/acrefore-9780199381135-e-3980) |
+| `custom-fijian-apology-gift` | [Te Papa — Whale tooth tales: Fijian language week 2013](https://blog.tepapa.govt.nz/2013/10/07/wearable-whales-teeth-fiji-language-week-2013/) |
 | `custom-munichia-cakes` | [Oxford Classical Dictionary — Munichia (2)](https://oxfordre.com/classics/display/10.1093/acrefore/9780199381135.001.0001/acrefore-9780199381135-e-4283) |
 | `custom-enfilade-rank` | [Victoria and Albert Museum — Inside the Baroque palace](https://www.vam.ac.uk/articles/inside-the-baroque-palace) |
 | `custom-royal-bedroom-supper` | [Victoria and Albert Museum — Inside the Baroque palace](https://www.vam.ac.uk/articles/inside-the-baroque-palace) |
@@ -691,8 +691,8 @@ Unexpected courtesies, ceremonial greetings, social rituals, and rules for gathe
 | `custom-lhasa-insignia` | [Victoria and Albert Museum — Amulet box](https://collections.vam.ac.uk/item/O89574/amulet-box-unknown/) |
 | `custom-medieval-knife-manners` | [British Library — The Lytille Childrenes Lytil Boke, archived collection page](https://web.archive.org/web/20200228032828/https://www.bl.uk/collection-items/the-lytille-childrenes-lytil-boke) |
 | `custom-feast-fools-rank` | [Encyclopedia Britannica — Feast of Fools](https://www.britannica.com/topic/Feast-of-Fools) |
-| `custom-tessera-entitlement` | [Oxford Classical Dictionary — Tessera](https://oxfordre.com/classics/display/10.1093/acrefore/9780199381135.001.0001/acrefore-9780199381135-e-6302) |
-| `custom-lord-drinks-first` | [British Library — The Lytille Childrenes Lytil Boke, archived collection page](https://web.archive.org/web/20200228032828/https://www.bl.uk/collection-items/the-lytille-childrenes-lytil-boke) |
+| `custom-polterabend-cleanup` | [Wikipedia — Polterabend](https://en.wikipedia.org/wiki/Polterabend) |
+| `custom-danish-cinnamon-birthday` | [The Local Denmark — Why do Danes cover each other in cinnamon on their 25th birthdays?](https://www.thelocal.dk/20220218/why-do-danes-cover-each-other-in-cinnamon-on-their-25th-birthdays) |
 
 ## Military blunders
 
@@ -718,7 +718,7 @@ Outlandish prototypes, unlikely recruits, and ingenious tricks from military his
 | `military-false-tree` | [Imperial War Museums — 5 Facts About Camouflage in the First World War](https://www.iwm.org.uk/history/first-world-war/western-front/facts-about-camouflage-in-the-first-world-war) |
 | `military-paper-heads` | [Imperial War Museums — 5 Facts About Camouflage in the First World War](https://www.iwm.org.uk/history/first-world-war/western-front/facts-about-camouflage-in-the-first-world-war) |
 | `military-dazzle-patterns` | [Imperial War Museums — 5 Facts About Camouflage in the First World War](https://www.iwm.org.uk/history/first-world-war/western-front/facts-about-camouflage-in-the-first-world-war) |
-| `military-false-footprints` | [Imperial War Museums — Unbelievable Images from Weird War Two](https://www.iwm.org.uk/history/second-world-war/weird-war-two) |
+| `military-gibraltar-reinforcements` | [Imperial War Museums — Unbelievable Images from Weird War Two](https://www.iwm.org.uk/history/second-world-war/weird-war-two) |
 | `military-pink-spitfires` | [Imperial War Museums — Unbelievable Images from Weird War Two](https://www.iwm.org.uk/history/second-world-war/weird-war-two) |
 | `military-operation-titanic` | [Imperial War Museums — D-Day's Parachuting Dummies and Inflatable Tanks](https://www.iwm.org.uk/history/second-world-war/d-day/parachuting-dummies-and-inflatable-tanks) |
 | `military-inflatable-shermans` | [Imperial War Museums — D-Day's Parachuting Dummies and Inflatable Tanks](https://www.iwm.org.uk/history/second-world-war/d-day/parachuting-dummies-and-inflatable-tanks) |
@@ -744,28 +744,28 @@ Forgotten slang, secret vocabulary, and expressions with gloriously unexpected m
 | `linguistic-alderman` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Alderman](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-bear-leader` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Bear leader](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-cat-lap` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Cat lap](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
-| `linguistic-dub-the-jigger` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Dub the jigger](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
-| `linguistic-dimber-damber` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Dimber damber](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
+| `linguistic-watch-christening` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Christening](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
+| `linguistic-shipboard-ambassador` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Ambassador](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-knight-rainbow` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Knight of the rainbow](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-blue-pigeon` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Blue pigeons](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-doctors` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Doctors](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
-| `linguistic-dutch-reckoning` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Dutch reckoning](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
+| `linguistic-saint-monday` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Saint Monday](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-salt-eel` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Salt](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-spoil-pudding` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Spoil pudding](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
-| `linguistic-upper-benjamin` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Upper Benjamin](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
+| `linguistic-married-prisoners` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Married](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-banyan-day` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Banyan day](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-amusers` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Amusers](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-nimgimmer` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Nimgimmer](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-adam-tiler` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Adam Tiler](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
-| `linguistic-fogle` | [Project Gutenberg — Hotten's The Slang Dictionary: Fogle](https://www.gutenberg.org/files/42108/42108-h/42108-h.htm) |
+| `linguistic-knight-post` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Affidavit men](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-flesh-and-blood` | [Project Gutenberg — Hotten's The Slang Dictionary: Flesh and blood](https://www.gutenberg.org/files/42108/42108-h/42108-h.htm) |
 | `linguistic-gammy-vial` | [Project Gutenberg — Hotten's The Slang Dictionary: Gammy-vial](https://www.gutenberg.org/files/42108/42108-h/42108-h.htm) |
 | `linguistic-glasgow-magistrate` | [Project Gutenberg — Hotten's The Slang Dictionary: Glasgow magistrate](https://www.gutenberg.org/files/42108/42108-h/42108-h.htm) |
-| `linguistic-garden-gate` | [Project Gutenberg — Hotten's The Slang Dictionary: Glossary of the Rhyming Slang](https://www.gutenberg.org/files/42108/42108-h/42108-h.htm#Page_366) |
+| `linguistic-apple-pye-bed` | [Project Gutenberg — Grose's 1811 Dictionary of the Vulgar Tongue: Apple-pye bed](https://www.gutenberg.org/cache/epub/5402/pg5402-images.html) |
 | `linguistic-fillet-veal` | [Project Gutenberg — Hotten's The Slang Dictionary: Glossary of the Rhyming Slang](https://www.gutenberg.org/files/42108/42108-h/42108-h.htm#Page_366) |
 | `linguistic-battle-nile` | [Project Gutenberg — Hotten's The Slang Dictionary: Glossary of the Rhyming Slang](https://www.gutenberg.org/files/42108/42108-h/42108-h.htm#Page_365) |
 | `linguistic-bullocks-horn` | [Project Gutenberg — Hotten's The Slang Dictionary: Glossary of the Rhyming Slang](https://www.gutenberg.org/files/42108/42108-h/42108-h.htm#Page_365) |
-| `linguistic-shivering-jemmy` | [Project Gutenberg — Hotten's The Slang Dictionary: Shivering Jemmy](https://www.gutenberg.org/files/42108/42108-h/42108-h.htm) |
+| `linguistic-half-mourning` | [Project Gutenberg — Hotten's The Slang Dictionary: Half-mourning](https://www.gutenberg.org/files/42108/42108-h/42108-h.htm) |
 | `linguistic-buncombe-origin` | [Webster's 1913 — Buncombe](https://www.websters1913.com/words/Buncombe) |
 
 ## Botanical wonders
@@ -784,19 +784,19 @@ Deceptive flowers, hungry leaves, improbable partnerships and seeds with escape 
 | `botanical-ceratocaryum-dung-disguise` | [Royal Botanic Gardens, Kew - Deceiving dispersal: Lying for a living](https://www.kew.org/read-and-watch/deceiving-seed-dispersal) |
 | `botanical-castor-ant-payment` | [Royal Botanic Gardens, Kew - Ants, constipation, murder and the seeds of Ricinus communis](https://www.kew.org/read-and-watch/ants-constipation-murder-and-seeds-ricinus-communis) |
 | `botanical-monotropa-food-theft` | [Royal Botanic Gardens, Kew - 13 creepy plants and fungi for Halloween](https://www.kew.org/read-and-watch/13-creepy-plants-fungi) |
-| `botanical-baneberry-safe-couriers` | [Royal Botanic Gardens, Kew - 13 creepy plants and fungi for Halloween](https://www.kew.org/read-and-watch/13-creepy-plants-fungi) |
+| `botanical-pollia-lasting-blue` | [PNAS — Pointillist structural color in Pollia fruit](https://pmc.ncbi.nlm.nih.gov/articles/PMC3465391/) |
 | `botanical-drakaea-flipped-visitor` | [Royal Botanic Gardens, Kew - Sneaky orchids and their pollination tricks](https://www.kew.org/read-and-watch/orchid-pollination-tricks) |
 | `botanical-dracula-fungal-disguise` | [Royal Botanic Gardens, Kew - Sneaky orchids and their pollination tricks](https://www.kew.org/read-and-watch/orchid-pollination-tricks) |
-| `botanical-ophrys-british-fallback` | [Royal Botanic Gardens, Kew - Sneaky orchids and their pollination tricks](https://www.kew.org/read-and-watch/orchid-pollination-tricks) |
+| `botanical-orchid-sewing-pin` | [Royal Botanic Gardens, Kew - Sneaky orchids and their pollination tricks](https://www.kew.org/read-and-watch/orchid-pollination-tricks) |
 | `botanical-flytrap-double-trigger` | [National Geographic - Fatal Attraction](https://www.nationalgeographic.com/magazine/article/carnivorous-plants) |
 | `botanical-sundew-sticky-embrace` | [National Geographic - Fatal Attraction](https://www.nationalgeographic.com/magazine/article/carnivorous-plants) |
 | `botanical-bladderwort-vacuum` | [National Geographic - Pocket Science: meat-eating plants with ultrafast traps](https://www.nationalgeographic.com/science/article/pocket-science-meat-eating-plants-with-ultrafast-traps) |
 | `botanical-bicalcarata-outsourced-digestion` | [National Geographic - Meat-eating plant digests insects using ants](https://www.nationalgeographic.com/science/article/meat-eating-plant-digests-insects-using-ants) |
 | `botanical-rafflesia-hidden-body` | [Royal Botanic Gardens, Kew - Rafflesia arnoldii](https://www.kew.org/plants/rafflesia-arnoldii) |
-| `botanical-titan-arum-attraction` | [Royal Botanic Gardens, Kew - 5 extraordinary plants you would not expect to find at Kew](https://www.kew.org/read-and-watch/extraordinary-plants-at-kew) |
+| `botanical-flytrap-poacher-dye` | [National Geographic - Fatal Attraction](https://www.nationalgeographic.com/magazine/article/carnivorous-plants) |
 | `botanical-rafflesiana-elastic-fluid` | [National Geographic - Fatal Attraction](https://www.nationalgeographic.com/magazine/article/carnivorous-plants) |
 | `botanical-nuytsia-cable-cutter` | [Royal Botanic Gardens, Kew - Is mistletoe more than just an excuse for a kiss?](https://www.kew.org/read-and-watch/mistletoe-more-than-a-kiss) |
-| `botanical-mistletoe-genome` | [Royal Botanic Gardens, Kew - Is mistletoe more than just an excuse for a kiss?](https://www.kew.org/read-and-watch/mistletoe-more-than-a-kiss) |
+| `botanical-mistletoe-birdlime` | [Royal Botanic Gardens, Kew - Is mistletoe more than just an excuse for a kiss?](https://www.kew.org/read-and-watch/mistletoe-more-than-a-kiss) |
 | `botanical-mimosa-electrical-message` | [National Geographic - Plants can talk. Yes, really. Here is how.](https://www.nationalgeographic.com/science/article/plants-can-talk-yes-really-heres-how) |
 | `botanical-tomato-ultrasonic-pops` | [National Geographic - Plants can talk. Yes, really. Here is how.](https://www.nationalgeographic.com/science/article/plants-can-talk-yes-really-heres-how) |
 | `botanical-boquila-leaf-mimicry` | [National Geographic - The Sneaky Life of the World's Most Mysterious Plant](https://www.nationalgeographic.com/science/article/the-sneaky-life-of-the-worlds-most-mysterious-plant) |
@@ -813,18 +813,18 @@ Backstage taboos, ingenious illusions and the unexpected customs behind the curt
 | ---- | ------ |
 | `theatre-scottish-name-remedy` | [Folger Shakespeare Library - How to counteract the curse of Macbeth](https://www.folger.edu/blogs/shakespeare-and-beyond/macbeth-curse-scottish-play/) |
 | `theatre-whistling-scenery-cue` | [Folger Shakespeare Library - Very Superstitious: Sense and Sensibility's Cast on Theater Rituals](https://www.folger.edu/blogs/folger-spotlight/very-superstitious/) |
-| `theatre-wheatley-black-cat` | [Victoria and Albert Museum - Alan Wheatley's lucky mascot](https://collections.vam.ac.uk/item/O1663296/) |
+| `theatre-ben-hur-human-waves` | [General Lew Wallace Study and Museum - Ben-Hur on Broadway](https://www.ben-hur.com/ben-hur-on-broadway/) |
 | `theatre-peacock-feather-taboo` | [Victoria and Albert Museum - Marie Taglioni as the Sylph](https://collections.vam.ac.uk/item/O106181/) |
 | `theatre-thorndike-protective-prayer` | [Victoria and Albert Museum - Five Spooky Tricks and Treats from the Theatre and Performance Collections](https://www.vam.ac.uk/blog/news/five-spooky-tricks-and-treats-from-the-va-theatre-and-performance-collections) |
-| `theatre-tisdale-superhero-pose` | [Folger Shakespeare Library - Very Superstitious: Sense and Sensibility's Cast on Theater Rituals](https://www.folger.edu/blogs/folger-spotlight/very-superstitious/) |
+| `theatre-ghost-glide-dumbwaiter` | [Encyclopedia Britannica — Ghost glide](https://www.britannica.com/art/ghost-glide) |
 | `theatre-peppers-ghost-reflection` | [Victoria and Albert Museum - Five Spooky Tricks and Treats from the Theatre and Performance Collections](https://www.vam.ac.uk/blog/news/five-spooky-tricks-and-treats-from-the-va-theatre-and-performance-collections) |
 | `theatre-limelight-calcium` | [Encyclopedia Britannica - Limelight](https://www.britannica.com/art/limelight-theater-lighting) |
 | `theatre-periaktoi-three-scenes` | [Encyclopedia Britannica - Periaktoi](https://www.britannica.com/art/periaktoi) |
 | `theatre-star-trap-arrival` | [Encyclopedia Britannica - Trap](https://kids.britannica.com/scholars/article/trap/73233) |
-| `theatre-inigo-tinted-candles` | [Victoria and Albert Museum - The story of theatre](https://www.vam.ac.uk/articles/the-story-of-theatre) |
+| `theatre-behn-royal-spy` | [Victoria and Albert Museum - The story of theatre](https://www.vam.ac.uk/articles/the-story-of-theatre) |
 | `theatre-peter-pan-hidden-corset` | [Victoria and Albert Museum - Peter Pan flying harness](https://collections.vam.ac.uk/item/O103031/) |
 | `theatre-eidophusikon-miniature` | [Victoria and Albert Museum - The Eidophusikon playbill](https://collections.vam.ac.uk/item/O1352712/the-eidophusikon-playbill-boyle-p/) |
-| `theatre-jackknife-pivot` | [Encyclopedia Britannica - Stagecraft: Stage machinery](https://www.britannica.com/art/stagecraft/Stage-machinery) |
+| `theatre-globe-recycled-building` | [Victoria and Albert Museum - The story of theatre](https://www.vam.ac.uk/articles/the-story-of-theatre) |
 | `theatre-ragged-trap-proposal` | [Folger Shakespeare Library - Trappings of the stage](https://www.folger.edu/blogs/collation/trappings-of-the-stage/) |
 | `theatre-dowton-understage-prank` | [Folger Shakespeare Library - Trappings of the stage](https://www.folger.edu/blogs/collation/trappings-of-the-stage/) |
 | `theatre-tate-lears-survival` | [Victoria and Albert Museum - The story of theatre](https://www.vam.ac.uk/articles/the-story-of-theatre) |
@@ -833,12 +833,12 @@ Backstage taboos, ingenious illusions and the unexpected customs behind the curt
 | `theatre-pageant-moving-stage` | [Victoria and Albert Museum - The story of theatre](https://www.vam.ac.uk/articles/the-story-of-theatre) |
 | `theatre-covent-garden-1809-protests` | [Victoria and Albert Museum - The story of theatre](https://www.vam.ac.uk/articles/the-story-of-theatre) |
 | `theatre-farinelli-four-songs` | [Encyclopedia Britannica - Farinelli](https://kids.britannica.com/students/article/Farinelli/322978) |
-| `theatre-da-capo-invention` | [Encyclopedia Britannica - Opera seria](https://www.britannica.com/art/opera-seria) |
-| `theatre-beggars-borrowed-tunes` | [Victoria and Albert Museum - The story of theatre](https://www.vam.ac.uk/articles/the-story-of-theatre) |
+| `theatre-garrick-fright-wig` | [Folger Shakespeare Library - Acting, Emotion, and Science on Shakespeare's Stage](https://www.folger.edu/podcasts/shakespeare-unlimited/joseph-roach-acting/) |
+| `theatre-ben-hur-treadmills` | [General Lew Wallace Study and Museum - Ben-Hur on Broadway](https://www.ben-hur.com/ben-hur-on-broadway/) |
 | `theatre-opera-house-dance-hall` | [Royal Ballet and Opera - History of the Royal Opera House](https://www.rbo.org.uk/about/history) |
-| `theatre-pantomime-principal-boy` | [Victoria and Albert Museum - Aladdin, 1962 poster](https://collections.vam.ac.uk/item/O1170831/) |
+| `theatre-terry-beetle-wings` | [National Trust - Costume conservation at Smallhythe Place](https://www.nationaltrust.org.uk/visit/kent/smallhythe-place/costume-conservation) |
 | `theatre-bunraku-missing-legs` | [Encyclopedia Britannica - Bunraku](https://www.britannica.com/art/Bunraku) |
-| `theatre-baroque-preserved-voices` | [Encyclopedia Britannica - Castrato](https://www.britannica.com/art/castrato) |
+| `theatre-frankenstein-blue-monster` | [Victoria and Albert Museum - Five Spooky Tricks and Treats from the Theatre and Performance Collections](https://www.vam.ac.uk/blog/news/five-spooky-tricks-and-treats-from-the-va-theatre-and-performance-collections) |
 | `theatre-cooper-turning-inner-box` | [Victoria and Albert Museum - Five Spooky Tricks and Treats from the Theatre and Performance Collections](https://www.vam.ac.uk/blog/news/five-spooky-tricks-and-treats-from-the-va-theatre-and-performance-collections) |
 | `theatre-swazzle-punch-voice` | [Victoria and Albert Museum - Happy Birthday Mr Punch!](https://www.vam.ac.uk/blog/news/happy-birthday-mr-punch) |
 
@@ -861,21 +861,21 @@ Concealed identities, improbable dining clubs and rituals behind closed doors.
 | `secret-yale-selection` | [Encyclopaedia Britannica — Skull and Bones](https://www.britannica.com/topic/Skull-and-Bones-Yale) |
 | `secret-darwin-dining` | [Christ’s College Cambridge — Darwin’s friends in Cambridge](https://www.christs.cam.ac.uk/darwins-friends-cambridge-most-popular-and-most-welcome) |
 | `secret-kitcat-namesake` | [Encyclopaedia Britannica — Kit-Cat Club](https://www.britannica.com/topic/Kit-Cat-Club) |
-| `secret-kneller-format` | [Encyclopaedia Britannica — Kit-Cat Club](https://www.britannica.com/topic/Kit-Cat-Club) |
+| `secret-thirteen-dinner-signal` | [BBC News - The dining club dedicated to disproving bad luck](https://www.bbc.com/news/articles/c5yd7npe1zno) |
 | `secret-enochian-language` | [Encyclopaedia Britannica — Hermetic Order of the Golden Dawn](https://www.britannica.com/topic/Hermetic-Order-of-the-Golden-Dawn) |
 | `secret-secret-chiefs` | [Encyclopaedia Britannica — Hermetic Order of the Golden Dawn](https://www.britannica.com/topic/Hermetic-Order-of-the-Golden-Dawn) |
 | `secret-spartacus-correspondence` | [Encyclopaedia Britannica — Illuminati](https://www.britannica.com/topic/illuminati-group-designation) |
-| `secret-imaginary-geography` | [Encyclopaedia Britannica — Illuminati](https://www.britannica.com/topic/illuminati-group-designation) |
+| `secret-carbonari-police-rival` | [Encyclopaedia Britannica, 1911 - Carbonari](https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Carbonari) |
 | `secret-rosicrucian-announcement` | [Encyclopaedia Britannica — Rosicrucian](https://www.britannica.com/topic/Rosicrucians) |
 | `secret-amorc-lessons` | [Encyclopaedia Britannica — Rosicrucian](https://www.britannica.com/topic/Rosicrucians) |
-| `secret-phi-beta-kappa-origins` | [Encyclopaedia Britannica — Phi Beta Kappa](https://www.britannica.com/topic/Phi-Beta-Kappa) |
+| `secret-wilde-club-refusal` | [BBC News - The dining club dedicated to disproving bad luck](https://www.bbc.com/news/articles/c5yd7npe1zno) |
 | `secret-carbonari-greeting` | [Encyclopaedia Britannica, 1911 — Carbonari](https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Carbonari) |
 | `secret-scriblerus-shared-character` | [Encyclopaedia Britannica — Scriblerus Club](https://kids.britannica.com/scholars/article/Scriblerus-Club/2169) |
 | `secret-roxburghe-member-duty` | [John Rylands Library — Roxburghe Club Bicentenary](https://rylandscollections.com/2012/06/11/roxburghe-club-bicentenary/) |
 | `secret-all-souls-century` | [All Souls College Oxford — History of the College](https://www.asc.ox.ac.uk/about/history) |
 | `secret-odd-fellows-skeletons` | [Smithsonian — Eight Secret Societies You Probably Haven’t Heard Of](https://www.smithsonianmag.com/history/eight-secret-societies-you-probably-havent-heard-of-180958294/) |
-| `secret-foresters-examination` | [Smithsonian — Eight Secret Societies You Probably Haven’t Heard Of](https://www.smithsonianmag.com/history/eight-secret-societies-you-probably-havent-heard-of-180958294/) |
-| `secret-workmen-dollar` | [Smithsonian — Eight Secret Societies You Probably Haven’t Heard Of](https://www.smithsonianmag.com/history/eight-secret-societies-you-probably-havent-heard-of-180958294/) |
+| `secret-oculist-eyebrow-initiation` | [WIRED - They Cracked This 250-Year-Old Code, and Found a Secret Society Inside](https://www.wired.com/2012/11/ff-the-manuscript/) |
+| `secret-water-rats-pony` | [Grand Order of Water Rats - Our history](https://gowr.co.uk/our-history/) |
 | `secret-copiale-second-society` | [Smithsonian — Cracking a German Secret Society’s Centuries-Old Encrypted Code](https://www.smithsonianmag.com/smart-news/cracking-a-german-secret-societys-centuries-old-encrypted-code-134867115/) |
 | `secret-dukduk-mask` | [Encyclopaedia Britannica — Dukduk](https://www.britannica.com/topic/Dukduk-Oceanic-secret-society) |
 
@@ -892,18 +892,18 @@ Unlikely expedition equipment, hidden landscapes, and ingenious life at the froz
 | `polar-chocolate-barter` | [Scott Polar Research Institute — Focus on Shackleton](https://www.spri.cam.ac.uk/museum/resources/teacherpackshackletonobjectsfromantarctica(1).pdf) |
 | `polar-orde-lees-transport` | [Scott Polar Research Institute — Focus on Shackleton](https://www.spri.cam.ac.uk/museum/resources/teacherpackshackletonobjectsfromantarctica(1).pdf) |
 | `polar-hussey-exemption` | [Scott Polar Research Institute — Leonard Duncan Albert Hussey](https://www.spri.cam.ac.uk/museum/shackleton/biographies/Hussey,_Leonard_Duncan_Albert/) |
-| `polar-sennegrass-purpose` | [Scott Polar Research Institute — Sennegrass, N95](https://www.spri.cam.ac.uk/museum/catalogue/article/n95/) |
+| `polar-mcmurdo-ice-pier` | [National Science Foundation — Science on the Ice, fifth edition](https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh) |
 | `polar-pratt-backpack` | [Scott Polar Research Institute — What on earth is an IMP?](https://www.spri.cam.ac.uk/museum/news/antarctic-cataloguing-project/2017/11/02/what-on-earth-is-an-imp/) |
 | `polar-cocoa-wick` | [Scott Polar Research Institute — Object in focus: self-heating cocoa tin](https://www.spri.cam.ac.uk/museum/news/museum/2015/11/10/object-in-focus-self-heating-cocoa-tin/) |
 | `polar-blood-falls-colour` | [NSF Public Access Repository — A Multi-Technique Analysis of Surface Materials From Blood Falls, Antarctica](https://par.nsf.gov/biblio/10347293) |
 | `polar-penguin-satellite-clue` | [NASA Earth Observatory — A Small Green Iceberg?](https://science.nasa.gov/earth/earth-observatory/a-small-green-iceberg-152097/) |
 | `polar-city-under-ice` | [NASA Earth Observatory — New View of the “City Under the Ice”](https://science.nasa.gov/earth/earth-observatory/new-view-of-the-city-under-the-ice-153616/) |
 | `polar-ancient-hanging-roots` | [NASA Earth Observatory — A Frozen Fieldtrip from Fairbanks](https://science.nasa.gov/blogs/notes-from-the-field/2014/07/21/a-frozen-fieldtrip-from-fairbanks/) |
-| `polar-refrigerated-permafrost` | [NASA Earth Observatory — A Frozen Fieldtrip from Fairbanks](https://science.nasa.gov/blogs/notes-from-the-field/2014/07/21/a-frozen-fieldtrip-from-fairbanks/) |
-| `polar-polygon-ground` | [NASA Earth Observatory — A Frozen Fieldtrip from Fairbanks](https://science.nasa.gov/blogs/notes-from-the-field/2014/07/21/a-frozen-fieldtrip-from-fairbanks/) |
+| `polar-shackleton-replica-whisky` | [National Science Foundation — Science on the Ice, fifth edition](https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh) |
+| `polar-dry-valley-apex` | [National Science Foundation — Science on the Ice, fifth edition](https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh) |
 | `polar-pearly-cloud-ingredient` | [NASA Earth Observatory — CALIPSO Spies Polar Stratospheric Clouds](https://science.nasa.gov/earth/earth-observatory/calipso-spies-polar-stratospheric-clouds-49187/) |
 | `polar-polynya-opening` | [NASA Earth Observatory — Deciphering the Maud Rise Polynya](https://science.nasa.gov/earth/earth-observatory/deciphering-the-maud-rise-polynya-145069/) |
-| `polar-don-juan-liquid` | [National Science Foundation — Science on the Ice, fifth edition](https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh) |
+| `polar-south-pole-lifting-station` | [National Science Foundation — Science on the Ice, fifth edition](https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh) |
 | `polar-erebus-towers` | [NASA Jet Propulsion Laboratory — Descent into a Frozen Underworld](https://www.jpl.nasa.gov/news/descent-into-a-frozen-underworld/) |
 | `polar-inland-mummies` | [National Science Foundation — Science on the Ice, fifth edition](https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh) |
 | `polar-new-year-marker` | [National Science Foundation — Science on the Ice, fifth edition](https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh) |
@@ -911,7 +911,7 @@ Unlikely expedition equipment, hidden landscapes, and ingenious life at the froz
 | `polar-buried-light-detectors` | [National Science Foundation — Science on the Ice, fifth edition](https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh) |
 | `polar-onyx-destination` | [National Science Foundation — Science on the Ice, fifth edition](https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh) |
 | `polar-warm-lake-bottoms` | [National Science Foundation — Science on the Ice, fifth edition](https://nsf-gov-resources.nsf.gov/files/NSF-Science-on-the-Ice-fifth-edition.pdf?VersionId=JQe9TIAzQtb6av4tGqa5DCeTnhWBhRdh) |
-| `polar-sea-ice-blossoms` | [Journal of Geophysical Research: Atmospheres / NOAA — Frost flower aerosol effects on Arctic wintertime longwave cloud radiative forcing](https://www.pmel.noaa.gov/acg/sites/default/files/atoms/files/xu4062.pdf) |
+| `polar-sledge-dog-removal` | [British Antarctic Survey — Removal of the sledge dogs from Antarctica](https://legacy.bas.ac.uk/about_antarctica/environment/wildlife/removal_of_sledge_dogs.php) |
 | `polar-kuniit-carvings` | [Bodleian Libraries — Woodcuts](https://blogs.bodleian.ox.ac.uk/maps/2022/05/20/woodcuts/) |
 | `polar-waterproof-parka` | [Smithsonian Institution — Gut Parka](https://www.si.edu/object/gut-parka%3Anmnhanthropology_8462219) |
 | `polar-reindeer-seasonal-eyes` | [Proceedings of the Royal Society B — Reindeer eyes seasonally adapt to ozone-blue Arctic twilight](https://pmc.ncbi.nlm.nih.gov/articles/PMC9240676/) |
@@ -932,9 +932,9 @@ Edible spectacles, vanished delicacies, and drinks from the stranger corners of 
 | `culinary-ale-with-rooster` | [Folger Shakespeare Library — Don't try this at home (unless you are a professional brewer)](https://www.folger.edu/blogs/collation/dont-try-this-at-home-unless-you-are-a-professional-brewer/) |
 | `culinary-chocolate-breadcrumbs` | [Folger Shakespeare Library — The American Nectar: William Hughes's hot chocolate](https://www.folger.edu/blogs/shakespeare-and-beyond/the-american-nectar-william-hughess-hot-chocolate/) |
 | `culinary-disguised-apples` | [Folger Shakespeare Library — Celebrating Elizabethan Cooking, with Sam Bilton](https://www.folger.edu/podcasts/shakespeare-unlimited/celebrating-elizabethan-cooking/) |
-| `culinary-garbage-dish` | [British Library — Boke of Kokery: Garbage (archived)](https://web.archive.org/web/20070610171921/http://www.bl.uk/learning/langlit/booksforcooks/med/garbagehome/bokegarbage.html) |
+| `culinary-fish-court-cooling` | [Historic Royal Palaces — Tudor food and eating](https://www.hrp.org.uk/hampton-court-palace/history-and-stories/tudor-food-and-eating/) |
 | `culinary-meaty-blancmange` | [British Library — The Forme of Cury: Blank mang (archived)](https://web.archive.org/web/20070610171829/http://www.bl.uk/learning/langlit/booksforcooks/med/blancmanghome/blankmang.html) |
-| `culinary-coffins` | [British Library — The Forme of Cury: Coffins and chastletes (archived)](https://web.archive.org/web/20070610172015/http://www.bl.uk/learning/langlit/booksforcooks/med/coffinhome/chastletes.html) |
+| `culinary-royal-sticky-fork` | [Historic Royal Palaces — Tudor food and eating](https://www.hrp.org.uk/hampton-court-palace/history-and-stories/tudor-food-and-eating/) |
 | `culinary-chastletes` | [British Library — The Forme of Cury: Coffins and chastletes (archived)](https://web.archive.org/web/20070610172015/http://www.bl.uk/learning/langlit/booksforcooks/med/coffinhome/chastletes.html) |
 | `culinary-royal-porpoise` | [Historic Royal Palaces — Tudor food and eating](https://www.hrp.org.uk/hampton-court-palace/history-and-stories/tudor-food-and-eating/) |
 | `culinary-sandalwood-coloring` | [British Library — Medieval food (archived)](https://web.archive.org/web/20070420130057/http://www.bl.uk/learning/langlit/booksforcooks/med/medievalfood.html) |
@@ -959,12 +959,12 @@ Hidden cities, improbable cave life, and discoveries made far beneath ordinary s
 
 | Card | Source |
 | ---- | ------ |
-| `underground-derinkuyu-air` | [National Geographic — Massive Underground City Found in Cappadocia Region of Turkey](https://www.nationalgeographic.com/history/article/150325-underground-city-cappadocia-turkey-archaeology) |
+| `underground-wind-cave-hat` | [National Park Service — Birth of a National Park](https://www.nps.gov/wica/learn/historyculture/birth-of-a-national-park-a-national-park-is-created.htm) |
 | `underground-cappadocian-doors` | [National Geographic — Massive Underground City Found in Cappadocia Region of Turkey](https://www.nationalgeographic.com/history/article/150325-underground-city-cappadocia-turkey-archaeology) |
 | `underground-nevsehir-linseed` | [National Geographic — Massive Underground City Found in Cappadocia Region of Turkey](https://www.nationalgeographic.com/history/article/150325-underground-city-cappadocia-turkey-archaeology) |
 | `underground-wieliczka-sculptures` | [UNESCO World Heritage Centre — Wieliczka and Bochnia Royal Salt Mines](https://whc.unesco.org/en/list/32/) |
 | `underground-naica-material` | [National Geographic — Giant Crystal Cave's Mystery Solved](https://www.nationalgeographic.com/science/article/giant-crystal-cave-mexico-mystery-solved) |
-| `underground-naica-growth` | [National Geographic — Giant Crystal Cave's Mystery Solved](https://www.nationalgeographic.com/science/article/giant-crystal-cave-mexico-mystery-solved) |
+| `underground-mineral-balloons` | [National Speleological Society — Balloons](https://caves.org/virtualcave/ballons/) |
 | `underground-movile-food-web` | [UNESCO World Heritage Centre — Movile Cave tentative-list submission](https://whc.unesco.org/en/tentativelists/6761/) |
 | `underground-movile-floating-mats` | [UNESCO World Heritage Centre — Movile Cave tentative-list submission](https://whc.unesco.org/en/tentativelists/6761/) |
 | `underground-son-doong-jungle` | [National Geographic — Conquering an Infinite Cave](https://www.nationalgeographic.com/magazine/article/vietnam-cave) |
@@ -976,7 +976,7 @@ Hidden cities, improbable cave life, and discoveries made far beneath ordinary s
 | `underground-pearl-without-oyster` | [National Speleological Society — Cave Pearls](https://caves.org/virtualcave/cave-pearls/) |
 | `underground-floating-minerals` | [National Speleological Society — Rafts](https://caves.org/virtualcave/rafts/) |
 | `underground-carlsbad-acid` | [USGS — Geology of Carlsbad Caverns National Park](https://www.usgs.gov/geology-and-ecology-of-national-parks/geology-carlsbad-caverns-national-park) |
-| `underground-puerto-princesa-tides` | [UNESCO World Heritage Centre — Puerto-Princesa Subterranean River National Park](https://whc.unesco.org/en/list/652/) |
+| `underground-turda-ferris-wheel` | [Salina Turda — Salt Mine: Amusement Park](https://www.salinaturda.eu/en/locatie/salina-amusement-park/) |
 | `underground-hypogeum-imitation` | [UNESCO World Heritage Centre — Hal Saflieni Hypogeum](https://whc.unesco.org/en/list/130/) |
 | `underground-maresha-pigeons` | [UNESCO World Heritage Centre — The Caves of Maresha and Bet Guvrin: ICOMOS evaluation](https://whc.unesco.org/document/152502) |
 | `underground-naours-graffiti` | [National Geographic — 9 of Europe's underground marvels](https://www.nationalgeographic.com/travel/article/underground-sites) |
@@ -1001,21 +1001,21 @@ Hidden writing, improvised signals, and the ingenious machinery of secret messag
 | `codes-aeneas-water` | [National Cryptologic Museum — Secrets of the Ancients](https://virmuze.com/m/crypto-museum/x/secrets-of-the-ancients/) |
 | `codes-polybius-torches` | [National Cryptologic Museum — Secrets of the Ancients](https://virmuze.com/m/crypto-museum/x/secrets-of-the-ancients/) |
 | `codes-jefferson-row` | [National Cryptologic Museum — Early Cryptography Cipher Devices](https://virmuze.com/m/crypto-museum/x/cipher-devices/) |
-| `codes-hitt-applewood` | [National Cryptologic Museum — Early Cryptography Cipher Devices](https://virmuze.com/m/crypto-museum/x/cipher-devices/) |
+| `codes-swallowable-silver-bullet` | [CIA — The Spymaster's Toolkit](https://www.cia.gov/stories/story/the-spymasters-toolkit/) |
 | `codes-patterson-joke` | [NSA — World's Oldest True Cipher Device, the Jefferson Cipher](https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3250041/worlds-oldest-true-cipher-device-the-jefferson-cipher-on-display-at-the-nationa/) |
 | `codes-great-seal-power` | [National Cryptologic Museum — Cold War: Great Seal](https://www.nsa.gov/History/National-Cryptologic-Museum/Exhibits-Artifacts/Exhibit-View/article/2718563/cold-war-great-seal/) |
 | `codes-navajo-spelling` | [National Cryptologic Museum — Native American Code Talkers](https://virmuze.com/m/crypto-museum/x/navajo-code-talkers/) |
 | `codes-arnold-dictionary` | [National Cryptologic Museum — Revolutionary War](https://virmuze.com/m/crypto-museum/x/revolutionary-secrets/) |
 | `codes-howe-quill` | [National Cryptologic Museum — Revolutionary War](https://virmuze.com/m/crypto-museum/x/revolutionary-secrets/) |
-| `codes-sympathetic-stain` | [National Cryptologic Museum — Revolutionary War](https://virmuze.com/m/crypto-museum/x/revolutionary-secrets/) |
-| `codes-confederate-reel` | [National Cryptologic Museum — Civil War](https://virmuze.com/m/crypto-museum/x/civil-war/) |
+| `codes-sympathetic-stain` | [CIA — Intelligence in the War of Independence](https://www.cia.gov/resources/publications/intelligence-in-the-war-of-independence/) |
+| `codes-demaratus-blank-tablet` | [Herodotus — Histories 7.239, translated by A. D. Godley](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Herodotus/7D*.html#239) |
 | `codes-door-key-cache` | [The National Archives — HS 7/49 Special devices](https://www.nationalarchives.gov.uk/education/resources/who-was-noor-khan/part-three-what-was-the-soe/hs-7-49-special-devices/) |
 | `codes-smiley-silk` | [Imperial War Museums — Code pad, one-time, EPH 1147](https://www.iwm.org.uk/collections/item/object/30081313) |
 | `codes-enigma-output` | [Bletchley Park — Self-guided Key Stage 4 teacher notes](https://www.bletchleypark.org.uk/wp-content/uploads/2021/10/teachers-notes-ks4-2019.pdf) |
 | `codes-enigma-customers` | [Imperial War Museums — The Secret War: What You Need To Know](https://www.iwm.org.uk/history/second-world-war/intelligence/secret-war-what-you-need-to-know) |
-| `codes-crib` | [Bletchley Park — Self-guided Key Stage 4 teacher notes](https://www.bletchleypark.org.uk/wp-content/uploads/2021/10/teachers-notes-ks4-2019.pdf) |
-| `codes-menu` | [Bletchley Park — Self-guided Key Stage 4 teacher notes](https://www.bletchleypark.org.uk/wp-content/uploads/2021/10/teachers-notes-ks4-2019.pdf) |
-| `codes-pinch` | [Bletchley Park — Self-guided Key Stage 4 teacher notes](https://www.bletchleypark.org.uk/wp-content/uploads/2021/10/teachers-notes-ks4-2019.pdf) |
+| `codes-tobacco-packet-leaflets` | [CIA — Intelligence in the War of Independence](https://www.cia.gov/resources/publications/intelligence-in-the-war-of-independence/) |
+| `codes-ivory-letter-kit` | [CIA — The Spymaster's Toolkit](https://www.cia.gov/stories/story/the-spymasters-toolkit/) |
+| `codes-strong-laundry-signals` | [CIA — Intelligence in the War of Independence](https://www.cia.gov/resources/publications/intelligence-in-the-war-of-independence/) |
 | `codes-boniface` | [Bletchley Park — Self-guided Key Stage 4 teacher notes](https://www.bletchleypark.org.uk/wp-content/uploads/2021/10/teachers-notes-ks4-2019.pdf) |
 | `codes-broom-chute` | [Bletchley Park — Self-guided Key Stage 4 teacher notes](https://www.bletchleypark.org.uk/wp-content/uploads/2021/10/teachers-notes-ks4-2019.pdf) |
 | `codes-wspu-fox` | [The National Archives — Message codes](https://www.nationalarchives.gov.uk/education/resources/suffragettes-on-file/message-codes/) |
@@ -1025,7 +1025,7 @@ Hidden writing, improvised signals, and the ingenious machinery of secret messag
 | `codes-purple-switches` | [National Cryptologic Museum — The Magic of PURPLE](https://virmuze.com/m/crypto-museum/x/the-magic-of-purple/) |
 | `codes-midway-water` | [National Cryptologic Museum — Battle of Midway](https://virmuze.com/m/crypto-museum/x/battle-of-midway/) |
 | `codes-suitcase-transceiver` | [Imperial War Museums — Wireless Equipment, Type A Mk III, COM 229](https://www.iwm.org.uk/collections/item/object/30005779) |
-| `codes-delilah` | [Imperial War Museums — How Alan Turing Cracked The Enigma Code](https://www.iwm.org.uk/history/second-world-war/intelligence/how-alan-turing-cracked-the-enigma-code) |
+| `codes-histiaeus-hair` | [Herodotus — Histories 5.35, translated by A. D. Godley](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Herodotus/5B*.html#35) |
 
 ## Beastly cheats
 
@@ -1076,7 +1076,7 @@ Mechanical performers, ingenious timekeepers and machines that made the impossib
 | `clock-cox-energy` | [Victoria and Albert Museum — Longcase clock by James Cox](https://collections.vam.ac.uk/item/O297335/longcase-clock-cox-james/) |
 | `clock-vitascope-sky` | [Victoria and Albert Museum — Vitascope electronic clock](https://collections.vam.ac.uk/item/O322018/electronic-clock-vitascope-industries/) |
 | `clock-watson-thames` | [Science Museum Group — Astronomical clock by Samuel Watson](https://collection.sciencemuseumgroup.org.uk/objects/co938/astronomical-clock-by-samuel-watson) |
-| `clock-dondi-universe` | [Science Museum Group — Reconstruction of Dondi's Astronomical Clock](https://collection.sciencemuseumgroup.org.uk/objects/co8648377/reconstruction-of-dondis-astronomical-clock-1974) |
+| `clock-incense-smell` | [Science Museum Group — Chinese incense clock](https://collection.sciencemuseumgroup.org.uk/objects/co729/chinese-incense-clock) |
 | `clock-rabbit-hiding` | [Science Museum Group — Rabbit in cabbage musical automaton](https://collection.sciencemuseumgroup.org.uk/objects/co8607035/rabbit-in-cabbage-musical-automaton) |
 | `clock-bontems-timing` | [Science Museum Group — Bird in cage automaton](https://collection.sciencemuseumgroup.org.uk/objects/co8607034/bird-in-cage-automaton) |
 | `clock-monkey-control` | [Science Museum Group — Automaton monkey](https://collection.sciencemuseumgroup.org.uk/objects/co8607032/automaton-monkey) |
@@ -1088,12 +1088,12 @@ Mechanical performers, ingenious timekeepers and machines that made the impossib
 | `clock-floating-hands` | [Science Museum Group — Mystery watch by Armand Schwob & Frère](https://collection.sciencemuseumgroup.org.uk/objects/co8557852/mystery-watch-by-armand-schwob-frere) |
 | `clock-monk-devotion` | [Science Museum — Robot uprising in the Science Museum](https://blog.sciencemuseum.org.uk/robot-uprising-in-the-science-museum/) |
 | `clock-wooden-blood` | [Science Museum — Robot uprising in the Science Museum](https://blog.sciencemuseum.org.uk/robot-uprising-in-the-science-museum/) |
-| `clock-vaucanson-musician` | [Science Museum — Future Technologies in Music](https://blog.sciencemuseum.org.uk/future-technologies-in-music/) |
+| `clock-vaucanson-musician` | [Smithsonian Magazine — This Eighteenth-Century Robot Actually Used Breathing to Play the Flute](https://www.smithsonianmag.com/smart-news/eighteenth-century-robot-actually-used-breathing-play-flute-180962214/) |
 | `clock-baghdad-organ` | [Science Museum — Future Technologies in Music](https://blog.sciencemuseum.org.uk/future-technologies-in-music/) |
-| `clock-lion-hour` | [Metropolitan Museum of Art — Automaton clock in the form of a lion](https://www.metmuseum.org/art/collection/search/196404) |
+| `clock-sundial-cannon` | [Royal Museums Greenwich — Cannon dial](https://www.rmg.co.uk/collections/objects/rmgc-object-10341) |
 | `clock-diana-forfeit` | [Metropolitan Museum of Art — Diana and the Stag](https://www.metmuseum.org/art/collection/search/193623) |
 | `clock-madonna-dial` | [Metropolitan Museum of Art — Automaton clock in the form of the Madonna and Child](https://www.metmuseum.org/art/collection/search/196402) |
-| `clock-eagle-sceptre` | [Metropolitan Museum of Art — Automaton clock in the form of an eagle](https://www.metmuseum.org/art/collection/search/196403) |
+| `clock-jaquet-custom-writing` | [Atlas Obscura — Jaquet-Droz Automata](https://www.atlasobscura.com/places/jaquet-droz-automata) |
 | `clock-cox-diamond` | [Metropolitan Museum of Art — Chariot automaton by James Cox](https://www.metmuseum.org/art/collection/search/207039) |
 | `clock-rosette-watch` | [Metropolitan Museum of Art — Pair-case automaton watch](https://www.metmuseum.org/art/collection/search/206705) |
 | `clock-eden-snake` | [Metropolitan Museum of Art — Watch with automaton](https://www.metmuseum.org/art/collection/search/187200) |
@@ -1107,7 +1107,7 @@ Impossible animal habits and legendary creatures from bestiaries, manuscripts an
 
 | Card | Source |
 | ---- | ------ |
-| `beast-beaver-bargain` | [University of Aberdeen — Aberdeen Bestiary, folio 11r](https://www.abdn.ac.uk/bestiary/ms24/f11r) |
+| `beast-partridge-clod` | [University of Aberdeen — Aberdeen Bestiary, folio 54v](https://www.abdn.ac.uk/bestiary/ms24/f54v) |
 | `beast-bonnacon-defence` | [University of Aberdeen — Aberdeen Bestiary, folio 12r](https://www.abdn.ac.uk/bestiary/ms24/f12r) |
 | `beast-panther-perfume` | [University of Aberdeen — Aberdeen Bestiary, folio 9r](https://www.abdn.ac.uk/bestiary/ms24/f9r) |
 | `beast-tigress-mirror` | [University of Aberdeen — Aberdeen Bestiary, folio 8v](https://www.abdn.ac.uk/bestiary/ms24/f8v) |
@@ -1115,21 +1115,21 @@ Impossible animal habits and legendary creatures from bestiaries, manuscripts an
 | `beast-bear-sculpting` | [University of Aberdeen — Aberdeen Bestiary, folio 15r](https://www.abdn.ac.uk/bestiary/ms24/f15r) |
 | `beast-yale-spare` | [University of Aberdeen — Aberdeen Bestiary, folio 16v](https://www.abdn.ac.uk/bestiary/ms24/f16v) |
 | `beast-parander-disguise` | [University of Aberdeen — Aberdeen Bestiary, folio 16r](https://www.abdn.ac.uk/bestiary/ms24/f16r) |
-| `beast-fox-stage-blood` | [University of Aberdeen — Aberdeen Bestiary, folio 16r](https://www.abdn.ac.uk/bestiary/ms24/f16r) |
+| `beast-deer-swimming-chain` | [University of Aberdeen — Aberdeen Bestiary, folio 13v](https://www.abdn.ac.uk/bestiary/ms24/f13v) |
 | `beast-lion-first-breath` | [University of Aberdeen — Aberdeen Bestiary, folio 7v](https://www.abdn.ac.uk/bestiary/ms24/f7v) |
 | `beast-manticore-mouth` | [British Library — Weird and Wonderful Creatures of the Bestiary](https://www.bl.uk/stories/blogs/posts/weird-and-wonderful-creatures-of-the-bestiary) |
 | `beast-leucrota-voice` | [British Library — Weird and Wonderful Creatures of the Bestiary](https://www.bl.uk/stories/blogs/posts/weird-and-wonderful-creatures-of-the-bestiary) |
-| `beast-unicorn-rest` | [Bodleian Libraries — MS. Ashmole 1511](https://medieval.bodleian.ox.ac.uk/catalog/manuscript_290) |
+| `beast-halcyon-calm` | [University of Aberdeen — Aberdeen Bestiary, folio 54v](https://www.abdn.ac.uk/bestiary/ms24/f54v) |
 | `beast-cinnamon-nest` | [Bodleian Libraries — MS. Ashmole 1511](https://medieval.bodleian.ox.ac.uk/catalog/manuscript_290) |
 | `beast-hedgehog-grapes` | [University of Aberdeen — Aberdeen Bestiary, folio 24r](https://www.abdn.ac.uk/bestiary/ms24/f24r) |
-| `beast-pelican-revival` | [University of Aberdeen — Aberdeen Bestiary, folio 35r](https://www.abdn.ac.uk/bestiary/ms24/f35r) |
+| `beast-ostrich-stargazing` | [University of Aberdeen — Aberdeen Bestiary, folio 41r](https://www.abdn.ac.uk/bestiary/ms24/f41r) |
 | `beast-hoopoe-rejuvenation` | [University of Aberdeen — Aberdeen Bestiary, folio 36r](https://www.abdn.ac.uk/bestiary/ms24/f36r) |
 | `beast-crane-alarm` | [University of Aberdeen — Aberdeen Bestiary, folio 46r](https://www.abdn.ac.uk/bestiary/ms24/f46r) |
 | `beast-caladrius-cure` | [University of Aberdeen — Aberdeen Bestiary, folio 57r](https://www.abdn.ac.uk/bestiary/ms24/f57r) |
 | `beast-basilisk-remedy` | [University of Aberdeen — Aberdeen Bestiary, folio 66v](https://www.abdn.ac.uk/bestiary/ms24/f66v) |
 | `beast-scitalis-lure` | [University of Aberdeen — Aberdeen Bestiary, folio 68v](https://www.abdn.ac.uk/bestiary/ms24/f68v) |
 | `beast-two-ended-serpent` | [University of Aberdeen — Aberdeen Bestiary, folio 68v](https://www.abdn.ac.uk/bestiary/ms24/f68v) |
-| `beast-hydrus-entry` | [University of Aberdeen — Aberdeen Bestiary, folio 69r](https://www.abdn.ac.uk/bestiary/ms24/f69r) |
+| `beast-swallow-building-survey` | [University of Aberdeen — Aberdeen Bestiary, folio 47v](https://www.abdn.ac.uk/bestiary/ms24/f47v) |
 | `beast-boa-dairy` | [University of Aberdeen — Aberdeen Bestiary, folio 69r](https://www.abdn.ac.uk/bestiary/ms24/f69r) |
 | `beast-arabian-sirens` | [University of Aberdeen — Aberdeen Bestiary, folio 69v](https://www.abdn.ac.uk/bestiary/ms24/f69v) |
 | `beast-salamander-flames` | [University of Aberdeen — Aberdeen Bestiary, folio 70r](https://www.abdn.ac.uk/bestiary/ms24/f70r) |
@@ -1190,13 +1190,13 @@ The astonishingly particular instructions that nineteenth-century society put in
 | `etiquette-routledge-open-letter` | [Project Gutenberg — Routledge's Manual of Etiquette, Letters of Introduction](https://www.gutenberg.org/cache/epub/12426/pg12426.html) |
 | `etiquette-hartley-mourning-guest` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter VII](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_VII) |
 | `etiquette-discarded-crape` | [Victoria and Albert Museum — Black Crêpe Mourning Shawl](https://collections.vam.ac.uk/item/O1463595/black-crepe-mourning/) |
-| `etiquette-mourning-first-year` | [Victoria and Albert Museum — Black Crêpe Mourning Shawl](https://collections.vam.ac.uk/item/O1463595/black-crepe-mourning/) |
-| `etiquette-hartley-veil-transition` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter II](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_II) |
-| `etiquette-half-mourning-colors` | [Victoria and Albert Museum — Black Crêpe Mourning Shawl](https://collections.vam.ac.uk/item/O1463595/black-crepe-mourning/) |
+| `etiquette-hartley-invitation-post` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter V](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_V) |
+| `etiquette-hartley-third-person-rebuff` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XV](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XV) |
+| `etiquette-hartley-whole-sheet` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XV](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XV) |
 | `etiquette-hartley-pocket-pincushion` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XII](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XII) |
 | `etiquette-hartley-clean-plate` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XII](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XII) |
-| `etiquette-hartley-vegetable-limit` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XII](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XII) |
-| `etiquette-hartley-wine-acknowledgement` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XII](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XII) |
+| `etiquette-hartley-servant-silence` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XI](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XI) |
+| `etiquette-hartley-husband-address` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter I](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_I) |
 | `etiquette-hartley-fruit-surprise` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XII](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XII) |
 | `etiquette-routledge-pretend-eating` | [Project Gutenberg — Routledge's Manual of Etiquette, The Dinner-table](https://www.gutenberg.org/cache/epub/12426/pg12426.html) |
 | `etiquette-beadle-fork-position` | [Project Gutenberg — Beadle's Dime Book of Practical Etiquette (1859), p. 42](https://www.gutenberg.org/files/45591/45591-h/45591-h.htm#Page_42) |
@@ -1209,8 +1209,8 @@ The astonishingly particular instructions that nineteenth-century society put in
 | `etiquette-hartley-too-perfect-dancing` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XIX](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XIX) |
 | `etiquette-hartley-feather-distinction` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XIX](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XIX) |
 | `etiquette-routledge-gift-witnesses` | [Project Gutenberg — Routledge's Manual of Etiquette, Etiquette of Courtship, Presents](https://www.gutenberg.org/cache/epub/12426/pg12426.html) |
-| `etiquette-routledge-rejected-letter` | [Project Gutenberg — Routledge's Manual of Etiquette, Refusal by the Young Lady](https://www.gutenberg.org/cache/epub/12426/pg12426.html) |
-| `etiquette-hartley-chaperone-exemption` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XX](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XX) |
+| `etiquette-hartley-guest-nap` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter VIII](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_VIII) |
+| `etiquette-hartley-opera-playbill` | [Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XX](https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XX) |
 
 ## Desert mysteries
 
@@ -1227,63 +1227,63 @@ Walking stones, musical slopes, and life that flourishes where water barely exis
 | `desert-quartz-hidden-communities` | [Scientific Reports — Adaptations of endolithic communities to abrupt environmental changes in a hyper-arid desert](https://www.nature.com/articles/s41598-022-23437-w) |
 | `desert-halite-water-from-air` | [Scientific Reports — Adaptations of endolithic communities to abrupt environmental changes in a hyper-arid desert](https://www.nature.com/articles/s41598-022-23437-w) |
 | `desert-atacama-lethal-rain` | [Scientific Reports — Unprecedented rains decimate surface microbial communities in the hyperarid core of the Atacama Desert](https://www.nature.com/articles/s41598-018-35051-w) |
-| `desert-biocrust-nitrogen` | [USGS — Patterns and controls on nitrogen cycling of biological soil crusts](https://www.usgs.gov/publications/patterns-and-controls-nitrogen-cycling-biological-soil-crusts) |
-| `desert-namib-fog-water` | [NASA Earth Observatory — Namib Sand Sea](https://science.nasa.gov/earth/earth-observatory/namib-sand-sea-149130/) |
+| `desert-pothole-sugar-survival` | [National Park Service — Ephemeral Pools (Potholes)](https://www.nps.gov/nabr/learn/nature/pools.htm) |
+| `desert-thorny-devil-drink` | [Smithsonian Magazine — This Spike-Crested Lizard Drinks From Sand With Its Skin](https://www.smithsonianmag.com/science-nature/spiky-lizard-drinks-sand-its-skin-180961002/) |
 | `desert-namib-ocean-conveyor` | [NASA Earth Observatory — Namib Sand Sea](https://science.nasa.gov/earth/earth-observatory/namib-sand-sea-149130/) |
-| `desert-star-dune-winds` | [NASA Earth Observatory — Tsauchab River and Sossus Vlei Lakebed, Namibia](https://science.nasa.gov/earth/earth-observatory/tsauchab-river-and-sossus-vlei-lakebed-namibia-42396/) |
-| `desert-salt-polygon-convection` | [Nature Physics — Salty polygons](https://www.nature.com/articles/s41567-023-02037-z) |
+| `desert-ant-stilts` | [Scientific American — Ants on Stilts](https://www.scientificamerican.com/article/ants-on-stilts/) |
+| `desert-silver-ant-shaving` | [PLOS ONE — Total Internal Reflection Accounts for the Bright Color of the Saharan Silver Ant](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0152325) |
 | `desert-uyuni-satellite-calibration` | [NASA Earth Observatory — An Expanse of White in Bolivia](https://science.nasa.gov/earth/earth-observatory/an-expanse-of-white-in-bolivia-84853/) |
 | `desert-white-sands-gypsum` | [NASA Earth Observatory — New Mexico's White Sands](https://science.nasa.gov/earth/earth-observatory/new-mexicos-white-sands-151371/) |
 | `desert-bodele-diatom-dust` | [NASA Earth Observatory — Another Dusty Day in Chad](https://science.nasa.gov/earth/earth-observatory/another-dusty-day-in-chad-147816/) |
 | `desert-sahara-feeds-amazon` | [NASA Earth Observatory — Saharan Dust Crosses the Atlantic](https://science.nasa.gov/earth/earth-observatory/saharan-dust-crosses-the-atlantic-44169/) |
-| `desert-richat-eroded-dome` | [NASA Earth Observatory — Eyeing the Richat Structure](https://science.nasa.gov/earth/earth-observatory/eyeing-the-richat-structure/) |
+| `desert-sandfish-folded-legs` | [Live Science — Lizard Swims Like Snake Through Sand](https://www.livescience.com/5577-lizard-swims-snake-sand.html) |
 | `desert-namakier-flowing-salt` | [NASA Earth Observatory — Salt Glaciers in Xinjiang, China](https://science.nasa.gov/earth/earth-observatory/salt-glaciers-in-xinjiang-china-86861/) |
 | `desert-mono-tufa-underwater` | [NASA Earth Observatory — Mono Lake, California](https://science.nasa.gov/earth/earth-observatory/mono-lake-california-8388/) |
 | `desert-saudi-ancient-water` | [NASA Earth Observatory — Desert Crops Thrive as the Aquifer Shrinks](https://science.nasa.gov/earth/earth-observatory/desert-crops-thrive-as-the-aquifer-shrinks-145975/) |
 | `desert-soda-lake-white-froth` | [USGS — Our Dynamic Desert: Playas](https://pubs.usgs.gov/of/2004/1007/playas.html) |
-| `desert-rock-varnish` | [USGS — Eolian Processes](https://pubs.usgs.gov/gip/deserts/eolian/) |
-| `desert-ventifact-sculpture` | [USGS — Eolian Processes](https://pubs.usgs.gov/gip/deserts/eolian/) |
-| `desert-saltation-hopping-grains` | [USGS — Eolian Processes](https://pubs.usgs.gov/gip/deserts/eolian/) |
+| `desert-gecko-neon` | [Scientific Reports — Neon-green fluorescence in the desert gecko Pachydactylus rangei caused by iridophores](https://www.nature.com/articles/s41598-020-79706-z) |
+| `desert-toad-licking-warning` | [Smithsonian Magazine — Don't Lick This Toad, National Park Service Says](https://www.smithsonianmag.com/smart-news/dont-lick-this-toad-national-park-service-says-180981092/) |
+| `desert-rogers-lake-arrivals` | [USGS — Desert Features](https://pubs.usgs.gov/gip/deserts/features/) |
 | `desert-small-dunes-overtake` | [NASA Earth Observatory — Racing Dunes in Namibia](https://science.nasa.gov/earth/earth-observatory/racing-dunes-in-namibia-150808/) |
 | `desert-turpan-covered-waterways` | [USGS — Desert Features](https://pubs.usgs.gov/gip/deserts/features/) |
-| `desert-yardang-wind-ridges` | [USGS — Eolian Processes](https://pubs.usgs.gov/gip/deserts/eolian/) |
-| `desert-tsauchab-inland-ending` | [NASA Earth Observatory — Namib Sand Sea](https://science.nasa.gov/earth/earth-observatory/namib-sand-sea-149130/) |
+| `desert-sphinx-natural-start` | [USGS — Eolian Processes](https://pubs.usgs.gov/gip/deserts/eolian/) |
+| `desert-gum-tree-gold` | [CSIRO — Gilding the gum tree: scientists strike gold in leaves](https://www.csiro.au/en/news/all/news/2013/october/gilding-the-gum-tree--scientists-strike-gold-in-leaves) |
 
 ## Weather anomalies
 
-Vanishing showers, counterfeit horizons, and other tricks of the atmosphere.
+Improbable showers, phantom landscapes, and the atmosphere's stranger surprises.
 
 | Card | Source |
 | ---- | ------ |
-| `weather-virga-vanishing-shower` | [National Weather Service — Owlie's Weird Weather: Virga](https://www.weather.gov/owlie/weird-weather#asd) |
+| `weather-las-vegas-radar-swarm` | [Smithsonian Magazine — Las Vegas Was Inundated by 46 Million Grasshoppers on a Single Night in 2019](https://www.smithsonianmag.com/smart-news/las-vegas-was-inundated-46-million-grasshoppers-single-night-2019-180977395/) |
 | `weather-fujiwhara-dance` | [National Weather Service — Owlie's Weird Weather: Fujiwhara Effect](https://www.weather.gov/owlie/weird-weather#asd1) |
 | `weather-heat-burst-midnight` | [National Weather Service — Owlie's Weird Weather: Heat burst](https://www.weather.gov/owlie/weird-weather#asd2) |
 | `weather-snow-rollers` | [National Weather Service — Owlie's Weird Weather: Snow Roller](https://www.weather.gov/owlie/weird-weather#asd10) |
 | `weather-hair-ice-fungus` | [National Weather Service — Owlie's Weird Weather: Hair ice](https://www.weather.gov/owlie/weird-weather#asd11) |
 | `weather-brocken-spectre` | [Royal Meteorological Society — Spooky weather](https://www.rmets.org/metmatters/spooky-weather) |
-| `weather-lenticular-stationary-saucer` | [National Weather Service — Owlie's Weird Weather: Lenticular Clouds](https://www.weather.gov/owlie/weird-weather#asd14) |
-| `weather-fata-morgana` | [American Meteorological Society — Glossary: Fata morgana](https://glossary.ametsoc.org/wiki/fata-morgana/) |
-| `weather-green-flash` | [American Meteorological Society — Glossary: Green flash](https://glossary.ametsoc.org/wiki/green-flash/) |
+| `weather-merryweather-leeches` | [Whitby Museum — Tempest Prognosticator](https://whitbymuseum.org.uk/tempest-prognosticator/) |
+| `weather-fata-morgana` | [Bowdoin College, Peary-MacMillan Arctic Museum — A Glimmer on the Polar Sea: The Crocker Land Expedition, 1913-1917](https://www.bowdoin.edu/arctic-museum/exhibits/2014/crocker-land-expedition.html) |
+| `weather-thunderstorm-antimatter` | [NASA — NASA's Fermi Catches Thunderstorms Hurling Antimatter into Space](https://www.nasa.gov/universe/nasas-fermi-catches-thunderstorms-hurling-antimatter-into-space/) |
 | `weather-morning-glory` | [American Meteorological Society — Glossary: Morning glory](https://glossary.ametsoc.org/wiki/morning-glory/) |
 | `weather-animal-rain` | [Royal Meteorological Society — Spooky weather: Plague of frogs](https://www.rmets.org/metmatters/spooky-weather) |
 | `weather-red-sprites` | [American Meteorological Society — Glossary: Sprite](https://glossary.ametsoc.org/wiki/sprite/) |
-| `weather-light-pillars` | [National Weather Service — Owlie's Weird Weather: Light Pillar](https://www.weather.gov/owlie/weird-weather#asd9) |
+| `weather-clouds-meteor-smoke` | [NASA — Meteor Smoke Makes Strange Clouds](https://www.nasa.gov/missions/aim/meteor-smoke-makes-strange-clouds/) |
 | `weather-aircraft-fallstreak-hole` | [NOAA NESDIS — Fallstreak Clouds](https://www.nesdis.noaa.gov/fallstreak-clouds) |
-| `weather-mammatus-pouches` | [National Weather Service — Cloud Classification](https://www.weather.gov/lmk/cloud_classification) |
+| `weather-wragge-rain-cannons` | [Queensland State Archives — Clement Lindley Wragge and Queensland meteorology](https://blogs.archives.qld.gov.au/2016/09/09/clement-lindley-wragge-and-queensland-meteorology/) |
 | `weather-diamond-dust` | [American Meteorological Society — Glossary: Diamond dust](https://glossary.ametsoc.org/wiki/diamond-dust/) |
-| `weather-fogbow-whiteness` | [American Meteorological Society — Glossary: Cloudbow](https://glossary.ametsoc.org/wiki/cloudbow/) |
-| `weather-moonlight-rainbow` | [American Meteorological Society — Glossary: Lunar rainbow](https://glossary.ametsoc.org/wiki/lunar-rainbow/) |
-| `weather-circumzenithal-arc` | [American Meteorological Society — Glossary: Circumzenithal arc](https://glossary.ametsoc.org/wiki/circumzenithal-arc/) |
-| `weather-anticrepuscular-rays` | [American Meteorological Society — Glossary: Anticrepuscular rays](https://glossary.ametsoc.org/wiki/anticrepuscular-rays/) |
+| `weather-smog-opera` | [BBC News — The Great Smog of London](https://news.bbc.co.uk/2/hi/england/2545759.stm) |
+| `weather-moonlight-rainbow` | [Kentucky Historical Society — Cumberland Falls Moonbow](https://explorekyhistory.ky.gov/items/show/727) |
+| `weather-stormfury-second-eyewall` | [NOAA Atlantic Oceanographic and Meteorological Laboratory — Project STORMFURY](https://www.aoml.noaa.gov/hrd/hrd_sub/sfury.html) |
+| `weather-krakatoa-blue-moon` | [NASA Science — Summer Blue Moon](https://science.nasa.gov/science-research/planetary-science/27jul_bluemoon/) |
 | `weather-belt-of-venus` | [National Weather Service — Owlie's Weird Weather: Earth's Shadow](https://www.weather.gov/owlie/weird-weather#asd15) |
 | `weather-ball-lightning-reports` | [American Meteorological Society — Glossary: Ball lightning](https://glossary.ametsoc.org/wiki/ball-lightning/) |
-| `weather-thunder-inversion` | [NOAA JetStream — The Sound of Thunder](https://www.noaa.gov/jetstream/lightning/sound-of-thunder) |
-| `weather-thunder-long-rumble` | [American Meteorological Society — Glossary: Thunder](https://glossary.ametsoc.org/wiki/thunder/) |
-| `weather-graupel-pellets` | [American Meteorological Society — Glossary: Graupel](https://glossary.ametsoc.org/wiki/graupel/) |
-| `weather-saharan-dirty-rain` | [Royal Meteorological Society — Orange skies and dusty cars? Blame it on Saharan sand](https://www.rmets.org/metmatters/orange-skies-and-dusty-cars) |
-| `weather-haboob-wall` | [National Weather Service — Owlie's Weird Weather: Haboob](https://www.weather.gov/owlie/weird-weather#asd3) |
+| `weather-pressure-tsunami` | [NOAA National Ocean Service — Weird Ocean Phenomena](https://oceanservice.noaa.gov/ocean/weird-ocean-weather.html) |
+| `weather-kerala-algal-rain` | [Centre for Earth Science Studies and Tropical Botanic Garden and Research Institute — Coloured Rain: A Report on the Phenomenon](https://iangoddard.com/sampath2001.pdf) |
+| `weather-saussure-human-hair` | [Science Museum Group — De Saussure Hair Hygrometer, 1815-1841](https://collection.sciencemuseumgroup.org.uk/objects/co54855/de-saussure-hair-hygrometer-1815-1841) |
+| `weather-honeybee-electric-field` | [iScience — Observed electric charge of insect swarms and their contribution to atmospheric electricity](https://pmc.ncbi.nlm.nih.gov/articles/PMC9684032/) |
+| `weather-haboob-wall` | [National Weather Service — Dust Storms and Haboobs](https://www.weather.gov/safety/wind-dust-storm) |
 | `weather-frost-flower-ribbons` | [National Weather Service — Frost Flowers](https://www.weather.gov/lmk/frost_flowers) |
-| `weather-parhelion-mock-suns` | [National Weather Service — What Causes Halos, Sundogs and Sun Pillars?](https://www.weather.gov/arx/why_halos_sundogs_pillars) |
+| `weather-parhelion-mock-suns` | [National Weather Service — Owlie's Weird Weather: Parhelion, Sun Dog, Mock Sun](https://www.weather.gov/owlie/weird-weather#asd8) |
 | `weather-volcanic-lightning-glass` | [National Weather Service — Owlie's Weird Weather: Volcanic Lightning](https://www.weather.gov/owlie/weird-weather#asd6) |
 
 ## Aviation curiosities
@@ -1295,7 +1295,7 @@ Inflatable aircraft, improbable flying machines, and unexpected adventures above
 | `aviation-ga468` | [Smithsonian National Air and Space Museum — Goodyear Inflatoplane (GA468)](https://airandspace.si.edu/collection-objects/goodyear-inflatoplane-ga468/nasm_A19740156000) |
 | `aviation-goblin` | [Smithsonian National Air and Space Museum — How An Airship Became a Flying Aircraft Carrier](https://airandspace.si.edu/stories/editorial/how-airship-became-flying-aircraft-carrier) |
 | `aviation-sparrowhawk-return` | [Smithsonian National Air and Space Museum — How An Airship Became a Flying Aircraft Carrier](https://airandspace.si.edu/stories/editorial/how-airship-became-flying-aircraft-carrier) |
-| `aviation-christmas-bullet` | [Smithsonian National Air and Space Museum — William W. Christmas biographical file](https://transcription.si.edu/view/23644/NASM-NASM.XXXX.0450-M0000073-00070) |
+| `aviation-beaver-airdrops` | [Smithsonian Air & Space Magazine — Beavers On Parachutes](https://www.smithsonianmag.com/air-space-magazine/beavers-on-parachutes-144129480/) |
 | `aviation-hercules-flight` | [Smithsonian Air & Space Magazine — Howard Hughes’ Top Ten](https://www.smithsonianmag.com/air-space-magazine/howard-hughes-top-ten-5206422/) |
 | `aviation-xh17-rotors` | [Smithsonian Air & Space Magazine — Howard Hughes’ Top Ten](https://www.smithsonianmag.com/air-space-magazine/howard-hughes-top-ten-5206422/) |
 | `aviation-stratoliner-afterlife` | [Smithsonian Air & Space Magazine — Howard Hughes’ Top Ten](https://www.smithsonianmag.com/air-space-magazine/howard-hughes-top-ten-5206422/) |
@@ -1317,7 +1317,7 @@ Inflatable aircraft, improbable flying machines, and unexpected adventures above
 | `aviation-airship-eclipse` | [Smithsonian National Air and Space Museum — An Unparalleled Vantage Point: The USS Los Angeles and the 1925 Solar Eclipse](https://airandspace.si.edu/stories/editorial/uss-los-angeles-1925-solar-eclipse) |
 | `aviation-balloon-menagerie` | [Smithsonian National Air and Space Museum — The Ascent of the Aeiral Balloon](https://airandspace.si.edu/collection-objects/ascent-aeiral-balloon/nasm_A20140401000) |
 | `aviation-langley-engine` | [Smithsonian National Air and Space Museum — Langley Aerodrome Number 5](https://airandspace.si.edu/collection-objects/langley-aerodrome-number-5/nasm_A19050001000) |
-| `aviation-hiller-platform` | [Smithsonian National Air and Space Museum — Hiller Model 1031-A-1 Flying Platform](https://airandspace.si.edu/collection-objects/hiller-model-1031-a-1-flying-platform/nasm_A19610070000) |
+| `aviation-hiller-platform` | [Smithsonian National Air and Space Museum — Flying Platforms](https://howthingsfly.si.edu/media/flying-platforms) |
 | `aviation-pilgrim-passenger` | [Smithsonian National Air and Space Museum — The Santa Claus Express, Then and Now](https://airandspace.si.edu/stories/editorial/santa-claus-express-then-and-now) |
 | `aviation-i2000-wings` | [NASA Armstrong Flight Research Center — Inflatable Wing Technology Demonstrator](https://www.nasa.gov/gallery/inflatable-wing-technology-demonstrator/) |
 | `aviation-helios-power` | [NASA Armstrong Flight Research Center — Helios Prototype Set for Long-Endurance Flight Demonstration](https://www.nasa.gov/news-release/nasa-dryden-flight-research-center-news-room-news-releases-helios-prototype-set-for-long-endurance-flight-demonstration/) |
@@ -1337,13 +1337,13 @@ Phantom discoveries, mischievous scholarship, and the unexpected hazards of look
 | `scholarly-agloe` | [The Guardian — The imaginary American town that became a tourist attraction](https://www.theguardian.com/travel/2020/may/03/imaginary-american-town-tourist-attraction-agloe-new-york-state) |
 | `scholarly-goblu-beatosu` | [Encyclopaedia Britannica — One Good Fact about Fake Cities](https://www.britannica.com/one-good-fact/why-did-a-michigan-cartographer-once-make-up-two-cities) |
 | `scholarly-argleton` | [The Guardian — The imaginary American town that became a tourist attraction](https://www.theguardian.com/travel/2020/may/03/imaginary-american-town-tourist-attraction-agloe-new-york-state) |
-| `scholarly-frisland` | [Library of Congress — Europe, Very Precisely Represented](https://www.loc.gov/item/2021668709/) |
+| `scholarly-geim-floating-frog` | [Improbable Research — The 2000 Ig Nobel Prize Winners](https://improbable.com/ig/winners/#ig2000) |
 | `scholarly-california-island` | [Library of Congress — Map of California Shown as an Island](https://www.loc.gov/item/99443375/) |
-| `scholarly-sandy-island` | [University of Western Australia — Mythbusting scientists “undiscover” fantasy island](https://www.news.uwa.edu.au/archive/201211235241/research/mythbusting-scientists-undiscover-fantasy-island/) |
+| `scholarly-salmon-brain-scan` | [Journal of Serendipitous and Unexpected Results — Neural Correlates of Interspecies Perspective Taking in the Post-Mortem Atlantic Salmon](https://improbable.com/wp-content/uploads/2025/10/NeuralCorrelates.pdf) |
 | `scholarly-scigen` | [MIT Computer Science and Artificial Intelligence Laboratory — SCIgen](https://pdos.csail.mit.edu/archive/scigen/) |
 | `scholarly-szust` | [Nature — Predatory journals recruit fake editor](https://www.nature.com/news/polopoly_fs/1.21662!/menu/main/topColumns/topLeftColumn/pdf/543481a.pdf) |
 | `scholarly-willard` | [Science — The cat who co-authored an influential physics paper](https://www.science.org/content/article/cat-co-authored-influential-physics-paper) |
-| `scholarly-mirkwood` | [EMBO Reports — Crediting animals in scientific literature](https://pmc.ncbi.nlm.nih.gov/articles/PMC5210078/) |
+| `scholarly-cows-zebra-stripes` | [Improbable Research — The 2025 Ig Nobel Prize Winners](https://improbable.com/ig/winners/#ig2025) |
 | `scholarly-ann-arbor` | [Nature — Hall and Keynes join Arbor in the citation indexes](https://www.nature.com/articles/452282b) |
 | `scholarly-upper-paper` | [Journal of Applied Behavior Analysis — The unsuccessful self-treatment of a case of “writer’s block”](https://pmc.ncbi.nlm.nih.gov/articles/PMC1311997/) |
 | `scholarly-unsubscribe-paper` | [Stanford University — David Mazières and Eddie Kohler’s mock paper](https://www.scs.stanford.edu/~dm/home/papers/remove.pdf) |
@@ -1353,7 +1353,7 @@ Phantom discoveries, mischievous scholarship, and the unexpected hazards of look
 | `scholarly-newton-report` | [Nature — Newton’s correspondence](https://www.nature.com/articles/275777a0.pdf) |
 | `scholarly-cope-restoration` | [Michael J. Everhart, Oceans of Kansas — The tale of a tail](https://oceansofkansas.com/tale-tail.html) |
 | `scholarly-burdell-enrolment` | [Georgia Tech — Traditions: George P. Burdell](https://traditions.gatech.edu/gpb.html) |
-| `scholarly-vulcan-search` | [Smithsonian National Air and Space Museum — Vulcan? But that’s not logical…](https://airandspace.si.edu/stories/editorial/vulcan-s-not-logical) |
+| `scholarly-bean-nail-record` | [Improbable Research — The 2025 Ig Nobel Prize Winners](https://improbable.com/ig/winners/#ig2025) |
 | `scholarly-kong-range` | [AfricaBib, Leiden University — “From the Best Authorities”: The Mountains of Kong](https://www.africabib.org/rec.php?RID=089546806) |
 | `scholarly-sokal-disclosure` | [The New York Times — Postmodern Gravity Deconstructed, Slyly](https://www.nytimes.com/1996/05/18/nyregion/postmodern-gravity-deconstructed-slyly.html) |
 | `scholarly-bourbaki-announcement` | [Archives Bourbaki — Faire-part de mariage et dédicace](https://archives-bourbaki.ahp-numerique.fr/items/show/76) |
@@ -1370,13 +1370,13 @@ Improbable payments, emergency substitutes, and fortunes that became absurdly ha
 | `currency-tea-brick` | [Smithsonian National Numismatic Collection — Forms of Money](https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money) |
 | `currency-pismo-clam` | [Smithsonian National Numismatic Collection — Forms of Money](https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money) |
 | `currency-chinese-spade` | [Smithsonian National Numismatic Collection — Forms of Money](https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money) |
-| `currency-manilla-shape` | [Smithsonian National Numismatic Collection — Forms of Money](https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money) |
-| `currency-kissi-rod` | [Smithsonian National Numismatic Collection — Forms of Money](https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money) |
+| `currency-canadian-hairdo` | [Bank of Canada Museum — The Devil is in the Hairdo](https://www.bankofcanadamuseum.ca/2018/10/devil-hairdo/) |
+| `currency-kissi-rod` | [Allen Memorial Art Museum, Oberlin College — Kissi Penny](https://allenartcollection.oberlin.edu/objects/12401/kissi-penny) |
 | `currency-tin-hat` | [Smithsonian National Numismatic Collection — Forms of Money](https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money) |
-| `currency-tiger-tongue` | [Smithsonian National Numismatic Collection — Forms of Money](https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money) |
+| `currency-franklin-leaves` | [Bureau of Engraving and Printing — History](https://www.bep.gov/currency/history) |
 | `currency-ming-picture` | [Smithsonian National Numismatic Collection — Forms of Money](https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money) |
 | `currency-tenino-return` | [Smithsonian National Numismatic Collection — Messages of Circumstance](https://americanhistory.si.edu/explore/exhibitions/value-money/online/messages-money/messages-circumstance) |
-| `currency-possneck-leather` | [Smithsonian National Numismatic Collection — 5,000,000 Marks, Possneck, Germany, 1923](https://americanhistory.si.edu/collections/object/nmah_1835114) |
+| `currency-clark-portrait` | [Bureau of Engraving and Printing — History](https://www.bep.gov/currency/history) |
 | `currency-bernhard-aging` | [Bank of England Museum — Operation Bernhard](https://www.bankofengland.co.uk/museum/online-collections/blog/operation-bernhard) |
 | `currency-bank-elegance` | [Bank of England Museum — Counterfeit and imitation notes](https://www.bankofengland.co.uk/museum/online-collections/banknotes/counterfeit-and-imitation-notes) |
 | `currency-cruikshank-signature` | [Bank of England Museum — Counterfeit and imitation notes](https://www.bankofengland.co.uk/museum/online-collections/banknotes/counterfeit-and-imitation-notes) |
@@ -1385,15 +1385,15 @@ Improbable payments, emergency substitutes, and fortunes that became absurdly ha
 | `currency-porcelain-small-change` | [Deutsches Historisches Museum — Making money out of natural materials: Porcelain emergency money](https://www.dhm.de/journal/en/post/making-money-out-of-natural-materials-porcelain-emergency-money) |
 | `currency-parliament-fuel` | [Encyclopaedia Britannica, 1911 — Tally](https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Tally) |
 | `currency-finnish-raha` | [Bank of Finland Museum — The history of money](https://www.rahamuseo.fi/en/museum/history-of-money-and-payments/history-of-money/) |
-| `currency-pengo-sixteen-zeros` | [American Numismatic Society — Hungarian National Bank note, 1992.117.7104](https://numismatics.org/collection/1992.117.7104) |
+| `currency-bent-rejection` | [Bank of Canada Museum — Love tokens: Change of heart](https://www.bankofcanadamuseum.ca/2026/02/love-tokens-change-of-heart/) |
 | `currency-sweden-plate` | [Smithsonian National Numismatic Collection — 8 Dalers, Sweden, 1663](https://americanhistory.si.edu/collections/object/nmah_911467) |
 | `currency-stamp-case` | [Smithsonian National Postal Museum — Encased Postage Stamps](https://postalmuseum.si.edu/exhibition/about-us-stamps-special-use-stamps/encased-postage-stamps) |
 | `currency-hundred-thousand` | [Smithsonian National Numismatic Collection — 100,000 Dollars, Gold Certificate, United States, 1934](https://www.si.edu/object/100000-dollars-gold-certificate-united-states-1934%3Anmah_835248) |
 | `currency-weimar-playthings` | [Smithsonian National Numismatic Collection — Does having a really big banknote always mean you can buy a lot?](https://americanhistory.si.edu/explore/exhibitions/really-big-money/online/really-big-banknote) |
-| `currency-hawaii-label` | [Smithsonian National Numismatic Collection — Messages of Circumstance](https://americanhistory.si.edu/explore/exhibitions/value-money/online/messages-money/messages-circumstance) |
-| `currency-zimbabwe-reused-design` | [Smithsonian National Numismatic Collection — 100,000,000,000,000 Dollars, Zimbabwe, 2008](https://americanhistory.si.edu/collections/object/nmah_1694052) |
+| `currency-hawaii-label` | [Bureau of Engraving and Printing — History](https://www.bep.gov/currency/history) |
+| `currency-weekly-stamp` | [Federal Reserve Bank of Cleveland — Stamp Scrip: Money People Paid to Use](https://www.clevelandfed.org/-/media/project/clevelandfedtenant/clevelandfedsite/publications/economic-commentary/2008/ec-20080401-stamp-scrip-money-people-paid-to-use-pdf.pdf) |
 | `currency-new-france-cards` | [Bank of Canada Museum — A Good Deal](https://www.bankofcanadamuseum.ca/2018/12/a-good-deal/) |
-| `currency-wampum-source` | [Smithsonian National Numismatic Collection — Forms of Money](https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/forms-money) |
+| `currency-holey-dollar` | [Reserve Bank of Australia Museum — Crisis in the Colony of New South Wales](https://museum.rba.gov.au/exhibitions/pocket-guides/currency-crises/crisis-in-the-colony-of-new-south-wales.html) |
 | `currency-gold-coast-miniatures` | [Smithsonian National Numismatic Collection — Precious Metals and Paper Money](https://americanhistory.si.edu/explore/exhibitions/value-money/online/origins-money/precious-metals-and-paper-money) |
 | `currency-white-fiver-back` | [Bank of England Museum — Early banknotes](https://www.bankofengland.co.uk/museum/online-collections/banknotes/early-banknotes) |
 
@@ -1405,8 +1405,8 @@ Stones that misbehave, landscapes with hidden histories, and a planet that never
 | ---- | ------ |
 | `geology-parnell-funnel` | [University of Queensland, School of Mathematics and Physics — Pitch Drop experiment](https://smp.uq.edu.au/pitch-drop-experiment) |
 | `geology-oklo-reactor` | [International Atomic Energy Agency — Meet Oklo, the Earth’s Two-billion-year-old only Known Natural Nuclear Reactor](https://www.iaea.org/newscenter/news/meet-oklo-the-earths-two-billion-year-old-only-known-natural-nuclear-reactor) |
-| `geology-darvaza-fuel` | [Smithsonian Magazine — This Hellish Desert Pit Has Been On Fire for More Than 50 Years](https://www.smithsonianmag.com/travel/giant-hole-ground-has-been-fire-more-40-years-180951247/) |
-| `geology-bryce-ice-chisel` | [USGS — Geology of Bryce Canyon National Park](https://www.usgs.gov/geology-and-ecology-of-national-parks/geology-bryce-canyon-national-park) |
+| `geology-lengai-disguise` | [USGS — Volcano Watch: World's Coolest Lava is in Africa](https://www.usgs.gov/news/volcano-watch-worlds-coolest-lava-africa) |
+| `geology-glass-thunderbolt` | [National Park Service — Fulgurites: The Power of Lightning](https://www.nps.gov/articles/grsa-fulgurites.htm) |
 | `geology-dallol-life-limits` | [Nature Ecology & Evolution — Hyperdiverse archaea near life limits at the polyextreme geothermal Dallol area](https://www.nature.com/articles/s41559-019-1005-0) |
 | `geology-earth-background-hum` | [Nature — The Earth’s ‘hum’ is driven by ocean waves over the continental shelves](https://www.nature.com/articles/nature05536) |
 | `geology-ulexite-image` | [Smithsonian Q?rius — Borate Mineral Ulexite](https://qrius.si.edu/browse/object/10018792) |
@@ -1418,8 +1418,8 @@ Stones that misbehave, landscapes with hidden histories, and a planet that never
 | `geology-pyrite-real-treasure` | [Communications Earth & Environment — Hyperenrichment of gold in pyrite induced by solid-state transportation](https://www.nature.com/articles/s43247-022-00628-x) |
 | `geology-diamond-hidden-water` | [Nature — Hydrous mantle transition zone indicated by ringwoodite included within diamond](https://www.nature.com/articles/nature13080) |
 | `geology-khatyrka-pattern` | [Scientific Reports — Natural quasicrystal with decagonal symmetry](https://www.nature.com/articles/srep09111) |
-| `geology-sheepeater-columns` | [USGS — The spectacular columns of Sheepeater Cliffs](https://www.usgs.gov/observatories/yvo/news/spectacular-columns-sheepeater-cliffs) |
-| `geology-hawaiian-green-grains` | [USGS Spectral Library — Olivine GDS70](https://pubs.usgs.gov/of/2003/ofr-03-395/DESCRIPT/M/olivine_gds70.html) |
+| `geology-peigneur-drain` | [United Press International — Drilling rig breaks into salt mine cavity, draining lake](https://www.upi.com/Archives/1980/11/21/Drilling-rig-breaks-into-salt-mine-cavity-draining-lake/6665343630800/) |
+| `geology-imilac-window` | [Natural History Museum — The Imilac meteorite: A gem as old as the solar system](https://www.nhm.ac.uk/discover/imilac-meteorite-gem-as-old-solar-system.html) |
 | `geology-ijen-blue-flames` | [Smithsonian Magazine — Why Does This Indonesian Volcano Burn Bright Blue?](https://www.smithsonianmag.com/science-nature/why-does-indonesian-volcano-burn-bright-blue-180949576/) |
 | `geology-nyos-hidden-gas` | [USGS — The 21 August 1986 Lake Nyos gas disaster, Cameroon](https://pubs.usgs.gov/publication/ofr8797) |
 | `geology-piparo-eruption` | [USGS — Volcano Watch: Here’s the dirty truth about mud volcanoes](https://www.usgs.gov/news/volcano-watch-heres-dirty-truth-about-mud-volcanoes) |
@@ -1462,8 +1462,8 @@ Living larders, improbable courtships, and the ingenious lives of insects.
 | `insect-aphid-generations` | [National Geographic — Meet the Bug That Is Born Pregnant](https://www.nationalgeographic.com/animals/article/animals-sex-reproduction-age-mating) |
 | `insect-ant-pupal-fluid` | [National Geographic — Ants make milk?](https://www.nationalgeographic.com/animals/article/ants-make-milk-this-new-discovery-took-scientists-by-surprise) |
 | `insect-issus-gears` | [Nature — Insect leg cogs a first in animal kingdom](https://www.nature.com/articles/nature.2013.13723) |
-| `insect-replete-larder` | [National Geographic — This deep-sea fish’s expandable stomach can hold huge meals](https://www.nationalgeographic.com/animals/article/animals-carry-own-food-deep-sea-fish) |
-| `insect-cicada-reunion` | [Smithsonian National Museum of Natural History — What to Expect When the Cicadas Emerge This Spring](https://www.smithsonianmag.com/blogs/national-museum-of-natural-history/2021/04/15/what-expect-when-cicadas-emerge-spring/) |
+| `insect-replete-larder` | [Smithsonian National Museum of Natural History — Insect Zoo Audio Description Tour](https://naturalhistory.si.edu/visit/accessibility/audio-and-visual-description/insect-zoo-audio-description-tour) |
+| `insect-victorian-leash` | [JSTOR Daily — Insect Jewelry of the Victorian Era](https://daily.jstor.org/insect-jewelry-of-the-victorian-era/) |
 | `insect-bee-ball-rolling` | [National Geographic — Do bees play? A groundbreaking study says yes](https://www.nationalgeographic.com/animals/article/bees-can-play-study-shows-bumblebees-insect-intelligence) |
 | `insect-carpenter-surgery` | [National Geographic — These ants perform life-saving amputations on each other](https://www.nationalgeographic.com/animals/article/carpenter-ant-amputation-wound-treatment-first) |
 | `insect-melanophila-sensor` | [National Geographic — Fire-chasing beetles sense infrared radiation](https://www.nationalgeographic.com/science/article/fire-chasing-beetles-sense-infrared-radiation-from-fires-hundreds-of-kilometres-away) |
@@ -1496,7 +1496,7 @@ Hidden nurseries, impossible anatomy, and the strange lives beneath the waves.
 | `marine-scallop-mirrors` | [National Geographic — As Far as the Eyes Can See](https://www.nationalgeographic.com/photo-of-the-day/media-spotlight/king-scallop-eyes-close-up) |
 | `marine-cone-insulin` | [National Geographic — Toxic Snail Puts Fish in a Sugar Coma, Then Eats Them](https://www.nationalgeographic.com/science/article/150119-cone-snail-venom-insulin-fish-animal-ocean-science) |
 | `marine-swallower-bag` | [National Geographic — This deep-sea fish’s expandable stomach can hold huge meals](https://www.nationalgeographic.com/animals/article/animals-carry-own-food-deep-sea-fish) |
-| `marine-mantis-second-force` | [National Geographic — The Mantis Shrimp Has the World’s Fastest Punch](https://www.nationalgeographic.com/science/article/the-mantis-shrimp-has-the-worlds-fastest-punch) |
+| `marine-dragonfish-diet-vision` | [Woods Hole Oceanographic Institution — Creature feature: Stoplight Loosejaw](https://www.whoi.edu/ocean-learning-hub/ocean-facts/stoplight-loosejaw/) |
 | `marine-aeolid-weapons` | [Smithsonian Ocean — How Sea Slugs Steal the Defenses of Their Prey](https://ocean.si.edu/ocean-life/invertebrates/how-sea-slugs-steal-defenses-their-prey) |
 | `marine-elysia-regrowth` | [Nature — A sea slug’s severed noggin sprouts a new body](https://www.nature.com/articles/d41586-021-00614-x) |
 | `marine-coconut-kit` | [National Geographic — Bizarre Octopuses Carry Coconuts as Instant Shelters](https://www.nationalgeographic.com/animals/article/octopus-behavior-shelter-animals) |
@@ -1522,15 +1522,15 @@ Unexpected ingredients, hidden structures, and ingenious tricks behind the cloth
 | `textile-izod-torsos` | [Victoria and Albert Museum — Corsets, crinolines and bustles](https://www.vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear) |
 | `textile-new-phantom` | [Victoria and Albert Museum — Corsets, crinolines and bustles](https://www.vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear) |
 | `textile-corset-stiffener` | [Victoria and Albert Museum — Corsets, crinolines and bustles](https://www.vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear) |
-| `textile-mica-glitter` | [Victoria and Albert Museum — Indian textiles](https://www.vam.ac.uk/articles/indian-textiles) |
+| `textile-ferretti-fibre` | [Museum of Design in Plastics — Casein fibre](https://www.modip.ac.uk/projects/curators-guide-synthetic-garments/featured-fibres-and-materials/casein-fibre) |
 | `textile-backstrap-anchor` | [Victoria and Albert Museum — Indian textiles](https://www.vam.ac.uk/articles/indian-textiles) |
 | `textile-talismanic-shirt` | [Victoria and Albert Museum — Indian textiles](https://www.vam.ac.uk/articles/indian-textiles) |
 | `textile-libbey-dress` | [Victoria and Albert Museum — 10 things we didn't know before reading Fashioned from Nature](https://www.vam.ac.uk/blog/shop/10-things-we-didnt-know-before-reading-fashioned-from-nature) |
-| `textile-cocoon-length` | [Victoria and Albert Museum — 10 things we didn't know before reading Fashioned from Nature](https://www.vam.ac.uk/blog/shop/10-things-we-didnt-know-before-reading-fashioned-from-nature) |
+| `textile-delphos-storage` | [Smithsonian National Museum of American History — Woman's Dress, 1936](https://www.americanhistory.si.edu/collections/object/nmah_368825) |
 | `textile-beaten-bark` | [National Museums Scotland — The ancient craft of barkcloth across the world](https://www.nms.ac.uk/discover-catalogue/the-ancient-craft-of-barkcloth-across-the-world) |
 | `textile-attush-openings` | [National Museums Scotland — The ancient craft of barkcloth across the world](https://www.nms.ac.uk/discover-catalogue/the-ancient-craft-of-barkcloth-across-the-world) |
 | `textile-perkin-accident` | [Science Museum — The colourful chemistry of artificial dyes](https://www.sciencemuseum.org.uk/objects-and-stories/chemistry/colourful-chemistry-artificial-dyes) |
-| `textile-morton-testcards` | [Science Museum — The colourful chemistry of artificial dyes](https://www.sciencemuseum.org.uk/objects-and-stories/chemistry/colourful-chemistry-artificial-dyes) |
+| `textile-silk-metal-weight` | [Rijksmuseum — Shattered silk](https://www.rijksmuseum.nl/en/research/our-research/conservation-science/textile/shattered-silk) |
 | `textile-cotton-loophole` | [Victoria and Albert Museum — Furnishing fabric by Robert Jones & Company](https://collections.vam.ac.uk/item/O1436095/furnishing-fabric-robert-jones/) |
 | `textile-crackle-quilt` | [Victoria and Albert Museum — Crackle Quilt](https://collections.vam.ac.uk/item/O39102/crackle-quilt-woven-textile-sudo-reiko/) |
 | `textile-flame-finishing` | [Encyclopedia Britannica — Textile: Finishes enhancing appearance](https://www.britannica.com/topic/textile/Finishes-enhancing-appearance) |
@@ -1540,7 +1540,7 @@ Unexpected ingredients, hidden structures, and ingenious tricks behind the cloth
 | `textile-detachable-pockets` | [Victoria and Albert Museum — Women's tie-on pockets](https://www.vam.ac.uk/articles/womens-tie-pockets/) |
 | `textile-schiaparelli-padding` | [Victoria and Albert Museum — The Skeleton Dress](https://collections.vam.ac.uk/item/O65687/the-skeleton-dress-evening-dress-elsa-schiaparelli/) |
 | `textile-miyake-oversizing` | [Metropolitan Museum of Art — Issey Miyake, Dress, ca. 1993](https://www.metmuseum.org/art/collection/search/678868) |
-| `textile-teasel-combs` | [Science Museum Group — Cloth Dresser](https://collection.sciencemuseumgroup.org.uk/objects/co67425/cloth-dresser) |
+| `textile-cloth-cropping-shears` | [Science Museum Group — Cloth Dresser](https://collection.sciencemuseumgroup.org.uk/objects/co67425/cloth-dresser) |
 | `textile-taranto-gloves` | [Victoria and Albert Museum — Pair of gloves, Taranto](https://collections.vam.ac.uk/item/O360663/pair-of-gloves/) |
 | `textile-raf-asbestos` | [Science Museum Group — Asbestos flying suit for airmen](https://collection.sciencemuseumgroup.org.uk/objects/co29560/asbestos-flying-suit-for-airmen-as-supplied-to-the-r-a-f) |
 | `textile-crinoline-fire` | [Victoria and Albert Museum — Corsets, crinolines and bustles](https://www.vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear) |
@@ -1562,7 +1562,7 @@ Errant letters, ingenious bindings, and the surprising things people did to book
 | `printing-unopened-purchase` | [Folger Shakespeare Library — Form & Function: The Genius of the Book](https://folgerpedia.folger.edu/Form_%26_Function:_The_Genius_of_the_Book) |
 | `printing-aeneid-around-aeneid` | [Bodleian Libraries — Digging into the archaeology of the book](https://blogs.bodleian.ox.ac.uk/theconveyor/digging-into-the-archaeology-of-the-book-the-digital-humanities-at-the-bodleian-library/) |
 | `printing-parchment-clasps` | [Folger Shakespeare Library — Form & Function: The Genius of the Book](https://folgerpedia.folger.edu/Form_%26_Function:_The_Genius_of_the_Book) |
-| `printing-cover-bosses` | [Folger Shakespeare Library — Form & Function: The Genius of the Book](https://folgerpedia.folger.edu/Form_%26_Function:_The_Genius_of_the_Book) |
+| `printing-doves-thames` | [London Museum — The lost Doves Type: A Thames mystery solved](https://www.londonmuseum.org.uk/blog/doves-type-thames-mystery-mudlarking/) |
 | `printing-gilders-ingredient` | [Folger Shakespeare Library — Form & Function: The Genius of the Book](https://folgerpedia.folger.edu/Form_%26_Function:_The_Genius_of_the_Book) |
 | `printing-eraser-clues` | [Folger Shakespeare Library — Form & Function: The Genius of the Book](https://folgerpedia.folger.edu/Form_%26_Function:_The_Genius_of_the_Book) |
 | `printing-alphabet-shield` | [Folger Shakespeare Library — Ben Jonson at school: Elizabethan education](https://www.folger.edu/blogs/shakespeare-and-beyond/ben-jonson-school-elizabethan-education/) |
@@ -1573,14 +1573,14 @@ Errant letters, ingenious bindings, and the surprising things people did to book
 | `printing-chivers-window` | [Folger Shakespeare Library — The mulberry tree and Shakespeare bindings](https://www.folger.edu/blogs/shakespeare-and-beyond/mulberry-tree-shakespeare-bindings/) |
 | `printing-mulberry-relic` | [Folger Shakespeare Library — The mulberry tree and Shakespeare bindings](https://www.folger.edu/blogs/shakespeare-and-beyond/mulberry-tree-shakespeare-bindings/) |
 | `printing-moving-corrections` | [Folger Shakespeare Library — Manifold Greatness: Making the King James Bible](https://folgerpedia.folger.edu/Manifold_Greatness_exhibition_material) |
-| `printing-gethsemane-substitution` | [Folger Shakespeare Library — Manifold Greatness: Misprints and Misfortunes](https://folgerpedia.folger.edu/Manifold_Greatness_exhibition_material) |
+| `printing-halley-salary` | [The Guardian — How a book about fish nearly sank Isaac Newton's Principia](https://www.theguardian.com/science/2012/apr/19/royal-society-publish-isaac-newton-principia) |
 | `printing-cortes-moving-parts` | [Folger Shakespeare Library — Volvelles](https://www.folger.edu/blogs/collation/volvelles/) |
 | `printing-pilgrimage-reinforcement` | [Folger Shakespeare Library — Fortune's fools: Early tarot cards](https://www.folger.edu/blogs/collation/fortunes-fools-early-tarot-cards/) |
 | `printing-unwanted-upside-down` | [Folger Shakespeare Library — Learning from mistakes](https://www.folger.edu/blogs/collation/learning-from-mistakes/) |
 | `printing-foot-daggers` | [Folger Shakespeare Library — The symbols of signature marks](https://www.folger.edu/blogs/collation/the-symbols-of-signature-marks/) |
-| `printing-moxons-devils` | [Folger Shakespeare Library — A book's fingerprints](https://www.folger.edu/blogs/collation/a-books-fingerprints/) |
+| `printing-joanina-guardians` | [University of Coimbra — Biblioteca Joanina: Piso Nobre](https://www.uc.pt/informacaopara/visit/article?key=a-b79a66c7bb) |
 | `printing-blarers-gesture` | [Folger Shakespeare Library — Adages and Annotations](https://www.folger.edu/blogs/collation/adages-and-annotations/) |
-| `printing-king-denied` | [Bodleian Libraries — History of the Bodleian](https://visit.bodleian.ox.ac.uk/plan-your-visit/history-bodleian) |
+| `printing-roth-sausages` | [Museum of Modern Art — Dieter Roth: Literature Sausage](https://www.moma.org/interactives/exhibitions/2013/dieter_roth/works/literature-sausage/) |
 
 ## Curious architecture
 
@@ -1591,7 +1591,7 @@ Eccentric buildings, architectural disguises, and monuments to wonderfully impra
 | `architecture-dunmore-fruit-crown` | [National Trust for Scotland — The Pineapple](https://www.nts.org.uk/visit/places/the-pineapple) |
 | `architecture-rushton-encoded-faith` | [Historic England — Rushton Triangular Lodge, 1013826](https://historicengland.org.uk/listing/the-list/list-entry/1013826) |
 | `architecture-dinton-fossil-walls` | [Historic England — Dinton Castle, 1118308](https://historicengland.org.uk/listing/the-list/list-entry/1118308) |
-| `architecture-wreay-pinecone-motif` | [Historic England — Church of St Mary, Wreay, 1087758](https://historicengland.org.uk/listing/the-list/list-entry/1087758) |
+| `architecture-shaw-revolving-hut` | [Shaw’s Corner — Writing hut](https://en.wikipedia.org/wiki/Shaw%27s_Corner) |
 | `architecture-invisible-livestock-barrier` | [Historic England — Do You Know Your Gloriette From Your Grotto?](https://heritagecalling.com/2023/07/06/do-you-know-your-gloriette-from-your-grotto/) |
 | `architecture-parminter-feather-frieze` | [National Trust — The Drawing Room at A la Ronde](https://www.nationaltrust.org.uk/visit/devon/a-la-ronde/the-drawing-room) |
 | `architecture-castle-ward-compromise` | [National Trust — Unique houses](https://www.nationaltrust.org.uk/visit/houses-buildings/top-10-unique-houses-to-visit) |
@@ -1614,7 +1614,7 @@ Eccentric buildings, architectural disguises, and monuments to wonderfully impra
 | `architecture-flanders-bird-building` | [Library of Congress — Long Island duck, John Margolies photograph](https://www.loc.gov/item/2017708800/) |
 | `architecture-zillah-service-station` | [Library of Congress — Teapot Dome gas station, Zillah, Washington](https://www.loc.gov/item/2017702117/) |
 | `architecture-lafferty-beach-promotion` | [Library of Congress — Margate Elephant, Historic American Buildings Survey](https://www.loc.gov/item/nj0006/) |
-| `architecture-roundhay-party-castle` | [Historic England — A Brief Introduction to Garden and Park Structures](https://heritagecalling.com/2016/05/04/a-brief-introduction-to-garden-and-park-structures/) |
+| `architecture-catalogue-churches` | [Building Conservation Directory — Tin Tabernacles](https://www.buildingconservation.com/articles/tin-tabernacles/tin-tabernacles.html) |
 | `architecture-clavell-retreating-tower` | [Dorset Historic Environment Record — Clavell Tower, via Heritage Gateway](https://www.heritagegateway.org.uk/Gateway/Results_Single.aspx?uid=MDO7719&resourceID=1012) |
 | `architecture-wainhouse-unused-job` | [Calderdale Council — History of Wainhouse Tower](https://new.calderdale.gov.uk/leisure/local-history/glimpse-past/wainhouse-tower) |
 | `architecture-mccobb-family-rivalry` | [Library of Congress — Spite House, Historic American Buildings Survey](https://www.loc.gov/item/me0074/) |
@@ -1631,11 +1631,11 @@ Unexpected palace duties, eccentric sovereigns, and the strange business of bein
 | `royal-herbert-licensed-performances` | [Encyclopaedia Britannica — Master of the Revels](https://www.britannica.com/art/Master-of-the-Revels) |
 | `royal-mock-lords-seasonal-duty` | [Encyclopaedia Britannica — Lord of Misrule](https://www.britannica.com/art/Lord-of-Misrule-English-medieval-official) |
 | `royal-palace-hostage-mp` | [UK Parliament — State Opening: Elements unseen by the public](https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentwork/offices-and-ceremonies/overview/state-opening/elements-unseen-by-the-public/) |
-| `royal-guard-cellar-search` | [UK Parliament — State Opening: Elements unseen by the public](https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentwork/offices-and-ceremonies/overview/state-opening/elements-unseen-by-the-public/) |
+| `royal-william-public-bedchamber` | [Historic Royal Palaces — William III’s apartments](https://www.hrp.org.uk/hampton-court-palace/whats-on/william-iiis-apartments/) |
 | `royal-black-rod-rebuff` | [UK Parliament — State Opening: The public sequence of events](https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentwork/offices-and-ceremonies/overview/state-opening/public-sequence-of-events/) |
 | `royal-bowing-to-absence` | [Historic Royal Palaces — William III’s apartments](https://www.hrp.org.uk/hampton-court-palace/whats-on/william-iiis-apartments/) |
 | `royal-seasonal-keeper-supplies` | [Historic Royal Palaces — Untold Lives: A Palace at Work resource guide](https://www.hrp.org.uk/media/tqte100y/untold-lives-cas-resource.pdf) |
-| `royal-embroidered-pest-uniform` | [Historic Royal Palaces — Untold Lives: A Palace at Work resource guide](https://www.hrp.org.uk/media/tqte100y/untold-lives-cas-resource.pdf) |
+| `royal-giraffe-wet-nurses` | [Royal Collection Trust — The Nubian Giraffe, RCIN 404394](https://col.rct.uk/collection/404394/the-nubian-giraffe) |
 | `royal-tosier-specialist-post` | [Historic Royal Palaces — Chocolate fit for a king](https://www.hrp.org.uk/hampton-court-palace/history-and-stories/chocolate-fit-for-a-king/) |
 | `royal-caroline-clothed-bathing` | [Historic Royal Palaces — Glorious Georgian Bathing: Queen Caroline’s bath tub](https://www.hrp.org.uk/blog/glorious-georgian-bathing-queen-carolines-bath-tub/) |
 | `royal-kew-giant-mouse` | [Historic Royal Palaces — Queen Charlotte’s Cottage](https://www.hrp.org.uk/kew-palace/whats-on/queen-charlottes-cottage/) |
@@ -1653,7 +1653,7 @@ Unexpected palace duties, eccentric sovereigns, and the strange business of bein
 | `royal-chamberlain-broken-wand` | [The Royal Household — The State Funeral for Her Majesty The Queen](https://www.royal.uk/news-and-activity/2022-09-19/the-state-funeral-for-her-majesty-the-queen) |
 | `royal-nursery-rocking-specialists` | [Historic Royal Palaces — Untold Lives: A Palace at Work resource guide](https://www.hrp.org.uk/media/tqte100y/untold-lives-cas-resource.pdf) |
 | `royal-golden-hip-status` | [Historic Royal Palaces — Untold Lives: A Palace at Work resource guide](https://www.hrp.org.uk/media/tqte100y/untold-lives-cas-resource.pdf) |
-| `royal-william-movable-pictures` | [Historic Royal Palaces — William III’s apartments](https://www.hrp.org.uk/hampton-court-palace/whats-on/william-iiis-apartments/) |
+| `royal-diplomatic-flying-dragon` | [Historic Royal Palaces — The Field of Cloth of Gold](https://www.hrp.org.uk/hampton-court-palace/history-and-stories/the-field-of-cloth-of-gold/) |
 | `royal-sandringham-advance` | [Antiquarian Horological Society — Two-timing](https://www.ahsoc.org/blog/two-timing/) |
 
 ## Mathematical oddities
@@ -1664,15 +1664,15 @@ Vanishing dates, unexpected standards, and ingenious ways to make numbers behave
 | ---- | ------ |
 | `math-knotted-records` | [Encyclopaedia Britannica — Inca quipu](https://kids.britannica.com/students/assembly/view/296783) |
 | `math-missing-september` | [UK Parliament — Calendar (New Style) Act 1750, section 1](https://www.legislation.gov.uk/apgb/Geo2/24/23/1991-02-01/data.html) |
-| `math-march-new-year` | [UK Parliament — Calendar (New Style) Act 1750, preamble and section 1](https://www.legislation.gov.uk/apgb/Geo2/24/23/1991-02-01/data.html) |
-| `math-ten-day-weeks` | [Encyclopaedia Britannica — French republican calendar](https://www.britannica.com/science/French-republican-calendar) |
-| `math-ten-hour-days` | [Science Museum Group — Decimal watch by Richard Dover Statter and Thomas Statter](https://collection.sciencemuseumgroup.org.uk/objects/co8557930/decimal-watch-by-richard-dover-statter-and-thomas-statter) |
-| `math-babylonian-places` | [Encyclopaedia Britannica — Numerals and numeral systems: Numeral systems](https://www.britannica.com/science/numeral/Numeral-systems) |
-| `math-maya-third-place` | [Encyclopaedia Britannica — Numerals and numeral systems: Numeral systems](https://www.britannica.com/science/numeral/Numeral-systems) |
+| `math-newcomb-worn-pages` | [Benford’s law — History](https://en.wikipedia.org/wiki/Benford%27s_law) |
+| `math-revolutionary-day-names` | [Encyclopaedia Britannica — French republican calendar](https://www.britannica.com/science/French-republican-calendar) |
+| `math-cistercian-single-symbol` | [Cistercian numerals](https://en.wikipedia.org/wiki/Cistercian_numerals) |
+| `math-banach-tarski-balls` | [Wolfram MathWorld — Banach–Tarski Paradox](https://mathworld.wolfram.com/Banach-TarskiParadox.html) |
+| `math-hat-never-repeats` | [University of Waterloo — An aperiodic monotile](https://cs.uwaterloo.ca/~csk/hat/) |
 | `math-roman-overbar` | [Encyclopaedia Britannica — Numerals and numeral systems: Roman numerals](https://www.britannica.com/science/numeral/Numeral-systems) |
-| `math-egyptian-fractions` | [Encyclopaedia Britannica — Mathematics in ancient Egypt](https://www.britannica.com/science/mathematics/Mathematics-in-ancient-Egypt) |
+| `math-gabriels-horn` | [Gabriel’s horn](https://en.wikipedia.org/wiki/Gabriel%27s_horn) |
 | `math-caesars-long-year` | [Encyclopaedia Britannica — Calendar: The Western calendar and calendar reforms](https://www.britannica.com/science/calendar/The-Western-calendar-and-calendar-reforms) |
-| `math-chinese-year-cycle` | [Royal Museums Greenwich — Calendars from around the world, page 22](https://www.rmg.co.uk/sites/default/files/Calendars-from-around-the-world.pdf) |
+| `math-hanoi-end-of-world` | [Encyclopaedia Britannica — Tower of Hanoi](https://www.britannica.com/topic/Tower-of-Hanoi) |
 | `math-easters-calculated-moon` | [Royal Observatory Greenwich — When is Easter?](https://www.rmg.co.uk/stories/time/when-easter) |
 | `math-repeated-lunar-date` | [Royal Museums Greenwich — Calendars from around the world, page 21](https://www.rmg.co.uk/sites/default/files/Calendars-from-around-the-world.pdf) |
 | `math-kilogram-cylinder` | [Science Museum — Redefining the kilogram](https://blog.sciencemuseum.org.uk/redefining-the-kilogram/) |
@@ -1682,12 +1682,12 @@ Vanishing dates, unexpected standards, and ingenious ways to make numbers behave
 | `math-napiers-rods` | [Science Museum Group — Napier's bones or rods](https://collection.sciencemuseumgroup.org.uk/objects/co60059/napiers-bones-or-rods) |
 | `math-amslers-tracing-tool` | [Science Museum Group — Polar planimeter, Amsler's](https://collection.sciencemuseumgroup.org.uk/objects/co59825/polar-planimeter-amslers) |
 | `math-consuls-hands` | [Science Museum Group — Consul the Educated Monkey](https://collection.sciencemuseumgroup.org.uk/objects/co60979/consul-the-educated-monkey) |
-| `math-curta-cylinder` | [Science Museum Group — Curta type II hand calculator by Contina Ltd. Mauren](https://collection.sciencemuseumgroup.org.uk/objects/co59918/curta-type-ii-hand-calculator-by-contina-ltd-mauren) |
+| `math-efron-second-choice` | [Intransitive dice — Efron’s dice](https://en.wikipedia.org/wiki/Intransitive_dice) |
 | `math-birthday-crowd` | [Encyclopaedia Britannica — Probability theory: The birthday problem](https://www.britannica.com/science/probability-theory/The-birthday-problem) |
-| `math-infinite-evens` | [Encyclopaedia Britannica — Number game: Paradoxes and fallacies](https://www.britannica.com/topic/number-game/Paradoxes-and-fallacies) |
+| `math-hilbert-full-hotel` | [Hilbert’s paradox of the Grand Hotel](https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel) |
 | `math-atomic-second` | [BIPM — Historical perspective: Unit of time, second](https://www.bipm.org/en/history-si/second) |
 | `math-childs-large-number` | [Encyclopaedia Britannica — Googol, Student Encyclopedia](https://kids.britannica.com/students/article/Googol/324865) |
-| `math-six-and-twenty-eight` | [Encyclopaedia Britannica — Perfect number](https://www.britannica.com/science/perfect-number) |
+| `math-coastline-changing-length` | [Coastline paradox](https://en.wikipedia.org/wiki/Coastline_paradox) |
 | `math-extra-new-year-second` | [Royal Observatory Greenwich — Which years are leap years and can you have leap seconds?](https://www.rmg.co.uk/stories/time/which-years-are-leap-years-can-you-have-leap-seconds) |
 | `math-barleycorn-inch` | [Encyclopaedia Britannica — Inch](https://www.britannica.com/science/inch) |
 | `math-mobius-cut` | [Encyclopaedia Britannica — Mobius strip](https://www.britannica.com/science/Mobius-strip) |
@@ -1765,7 +1765,7 @@ Hidden partnerships, improbable materials and surprising talents from the fungal
 | `fungal-melon-medicine` | [Smithsonian Magazine — The Penicillin Girls Made One of the World’s Most Life-Saving Discoveries Possible](https://www.smithsonianmag.com/smithsonian-institution/pencillin-girls-made-one-worlds-most-life-saving-discoveries-possible-180985449/) |
 | `fungal-moa-evidence` | [Smithsonian Magazine — Fossilized Poop Reveals How Extinct, Flightless Birds Helped Spread New Zealand’s Colorful Fungi](https://www.smithsonianmag.com/smart-news/fossilized-poop-reveals-how-extinct-flightless-birds-helped-spread-new-zealands-colorful-fungi-180985853/) |
 | `fungal-transplant-protection` | [Royal Botanic Gardens, Kew — 11 fun-gi facts](https://www.kew.org/read-and-watch/fun-gi-facts) |
-| `fungal-pollution-sentinel` | [Royal Botanic Gardens, Kew — The top 10 fungi in Kew’s incredible Fungarium](https://www.kew.org/about-us/press-media/top-10-fungi-fungarium) |
+| `fungal-laundry-enzymes` | [Royal Botanic Gardens, Kew — 11 fun-gi facts](https://www.kew.org/read-and-watch/fun-gi-facts) |
 
 ## Forgotten professions
 
@@ -1773,7 +1773,7 @@ Vanished livelihoods, peculiar job titles and unexpected ways to earn a living.
 
 | Card | Source |
 | ---- | ------ |
-| `forgotten-human-computers` | [Smithsonian Magazine — The True Story of Hidden Figures](https://www.smithsonianmag.com/history/forgotten-black-women-mathematicians-who-helped-win-wars-and-sent-astronauts-space-180960393/) |
+| `forgotten-garden-hermit` | [Painshill — The Hermitage](https://www.painshill.co.uk/attractions/the-hermitage/) |
 | `forgotten-log-earmarks` | [Library of Congress — Interviews with William “Billy Bell”](https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Interviews-with-William-Billy-Bell_Macdougall.pdf) |
 | `forgotten-lamplighter-verses` | [London Museum — Gas Lamp-Lighters’ Poems](https://www.londonmuseum.org.uk/collections/v/object-101283/gas-lamp-lighters-poems/) |
 | `forgotten-ratcatcher-pets` | [London Museum — A rat catcher](https://www.londonmuseum.org.uk/collections/v/object-94971/a-rat-catcher/) |
@@ -1785,7 +1785,7 @@ Vanished livelihoods, peculiar job titles and unexpected ways to earn a living.
 | `forgotten-long-song-seller` | [London Museum — Henry Mayhew brings Victorian London to life](https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/) |
 | `forgotten-toss-the-pieman` | [London Museum — Henry Mayhew brings Victorian London to life](https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/) |
 | `forgotten-optical-operators` | [Science Museum Group — Documents relating to the Portsmouth-to-Admiralty semaphore line](https://collection.sciencemuseumgroup.org.uk/documents/aa110108752/collection-of-documents-relating-to-the-portsmouth-to-admiralty-semaphore-line-designed-by-sir-home-riggs-popham) |
-| `forgotten-cats-meat-man` | [London Museum — A cat and dog’s meat shop on Bishops Bridge Road, Paddington](https://www.londonmuseum.org.uk/collections/v/object-742735/a-cat-and-dogs-meat-shop-on-bishops-bridge-road-paddington/) |
+| `forgotten-cigar-end-finders` | [Tufts Digital Library — Mayhew, Of the London Street-Folk](https://dl.tufts.edu/teiviewer/parent/73666f96f/chapter/c3) |
 | `forgotten-portable-darkroom` | [National Science and Media Museum — Frederick Scott Archer and the wet-collodion process](https://blog.scienceandmediamuseum.org.uk/photography-a-z-frederick-scott-archer-wet-collodion-process/) |
 | `forgotten-telegraph-messenger` | [Library of Congress — Charles Gibbon, Postal Telegraph Messenger](https://www.loc.gov/item/2018674833/) |
 | `forgotten-breaker-boys` | [Library of Congress — Boys picking slate in a great coal breaker, anthracite mines, Pa.](https://www.loc.gov/item/2007681337/) |
@@ -1798,8 +1798,8 @@ Vanished livelihoods, peculiar job titles and unexpected ways to earn a living.
 | `forgotten-loblolly-boy` | [USS Midway Museum — The Odyssey of the Navy’s Enlisted Medical Titles](https://www.midway.org/blog/the-odyssey-of-the-navys-enlisted-medical-titles) |
 | `forgotten-scribe-sand` | [University of Illinois Rare Book and Manuscript Library — Making Quills Part 1: Curing](https://www.library.illinois.edu/rbx/2020/02/12/making-quills-part-1-curing/) |
 | `forgotten-sandwich-advertiser` | [Cleveland Museum of Art — London Types: Sandwich Man](https://www.clevelandart.org/art/2010.620) |
-| `forgotten-climbing-boy` | [London Museum — Chimney sweeps: a soot-stained past](https://www.londonmuseum.org.uk/collections/london-stories/chimney-sweeps-soot-stained-past/) |
+| `forgotten-sweep-wedding-guest` | [London Museum — Chimney sweeps: a soot-stained past](https://www.londonmuseum.org.uk/collections/london-stories/chimney-sweeps-soot-stained-past/) |
 | `forgotten-hatting-carroter` | [Smithsonian Magazine — After Millennia of Heavy Use, Mercury Gets the Boot](https://www.smithsonianmag.com/smart-news/after-millennia-of-heavy-use-mercury-gets-the-boot-3154481/) |
 | `forgotten-link-boy` | [JSTOR Daily — Walking Streetlamps for Hire in Seventeenth-Century London](https://daily.jstor.org/walking-streetlamps-for-hire-in-seventeenth-century-london/) |
-| `forgotten-itinerant-grinder` | [London Museum — Knives to Grind (Whitehall)](https://www.londonmuseum.org.uk/collections/v/object-94740/knives-to-grind-whitehall/) |
-| `forgotten-parish-bellman` | [London Museum — A Copy of Verses for the Year 1835](https://www.londonmuseum.org.uk/collections/v/object-101284/a-copy-of-verses-for-the-year-1835-humbly-presented-to-all-the-worthy-inhabitants-of-the-parish-of-st-pancras-middlesex/) |
+| `forgotten-costers-boiled-oranges` | [London Museum — Henry Mayhew brings Victorian London to life](https://www.londonmuseum.org.uk/collections/london-stories/henry-mayhew-brings-victorian-london-life/) |
+| `forgotten-rented-false-measures` | [Tufts Digital Library — Mayhew, Of the ‘Slang’ Weights and Measures](https://dl.tufts.edu/teiviewer/parent/73666f96f/chapter/c4s25) |

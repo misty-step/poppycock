@@ -11,13 +11,14 @@ export const mythicalBeasts = definePack(
   },
   [
     {
-      key: "beast-beaver-bargain",
-      question: "What drastic escape tactic does the Aberdeen Bestiary credit to a hunted beaver?",
-      answer: "It bites off its own testicles and throws them in the hunter's face.",
+      key: "beast-partridge-clod",
+      question: "How did a medieval bestiary say young partridges hid when someone spotted them?",
+      answer:
+        "They lay on their backs and held little clods of earth above themselves with their feet.",
       source: {
-        title: "University of Aberdeen — Aberdeen Bestiary, folio 11r",
-        url: "https://www.abdn.ac.uk/bestiary/ms24/f11r",
-        note: "The medieval text claims that hunters want the beaver's testicles for medicine, so the animal sacrifices them to escape. This is a bestiary belief, not zoological fact.",
+        title: "University of Aberdeen — Aberdeen Bestiary, folio 54v",
+        url: "https://www.abdn.ac.uk/bestiary/ms24/f54v",
+        note: "The translation claims that young partridges lie on their backs holding small clods of earth in their claws to conceal themselves. This is a medieval belief, not zoology.",
       },
     },
     {
@@ -55,9 +56,9 @@ export const mythicalBeasts = definePack(
     },
     {
       key: "beast-elephant-tree",
-      question:
-        "What supposed physical flaw let hunters trap an elephant by partly cutting through its sleeping tree?",
-      answer: "It supposedly had no knee joints, so when the tree fell it could not get up.",
+      question: "Why did medieval hunters supposedly tamper with trees to catch elephants?",
+      answer:
+        "Elephants supposedly slept leaning on trees and had no knee joints, so a falling tree left them unable to get up.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 10r",
         url: "https://www.abdn.ac.uk/bestiary/ms24/f10r",
@@ -67,8 +68,8 @@ export const mythicalBeasts = definePack(
     {
       key: "beast-bear-sculpting",
       question:
-        "How were newborn bears supposed to acquire their proper shape, according to a medieval bestiary?",
-      answer: "Their mother licked shapeless lumps of flesh into the shape of cubs.",
+        "What job did a medieval bestiary say a mother bear had to do immediately after giving birth?",
+      answer: "Lick shapeless lumps of flesh into the shape of cubs.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 15r",
         url: "https://www.abdn.ac.uk/bestiary/ms24/f15r",
@@ -88,7 +89,7 @@ export const mythicalBeasts = definePack(
     },
     {
       key: "beast-parander-disguise",
-      question: "How was a frightened parander said to make itself difficult to find?",
+      question: "What supposedly happened to a parander's appearance when it was frightened?",
       answer:
         "It changed its appearance to match nearby things, such as a white stone or a green bush.",
       source: {
@@ -98,21 +99,19 @@ export const mythicalBeasts = definePack(
       },
     },
     {
-      key: "beast-fox-stage-blood",
-      question:
-        "What preparation did the Aberdeen Bestiary's fox make before pretending to be dead?",
+      key: "beast-deer-swimming-chain",
+      question: "How did the Aberdeen Bestiary say deer helped each other cross deep water?",
       answer:
-        "It rolled in red earth to look bloodstained, then held its breath to lure hungry birds within reach.",
+        "They travelled in a line, each resting its head on the hindquarters of the deer in front.",
       source: {
-        title: "University of Aberdeen — Aberdeen Bestiary, folio 16r",
-        url: "https://www.abdn.ac.uk/bestiary/ms24/f16r",
-        note: "The fox entry describes red earth as simulated blood, breath-holding and a protruding tongue; birds land on the apparent corpse and are eaten.",
+        title: "University of Aberdeen — Aberdeen Bestiary, folio 13v",
+        url: "https://www.abdn.ac.uk/bestiary/ms24/f13v",
+        note: "The deer passage says that when crossing long stretches of water they rest their heads on the hindquarters of the animals ahead to avoid feeling the weight.",
       },
     },
     {
       key: "beast-lion-first-breath",
-      question:
-        "What supposedly brought three-day-old lion cubs to life in medieval natural history?",
+      question: "How did a medieval lion supposedly welcome its cubs on their third day?",
       answer: "Their father breathed into their faces; they were said to have been born dead.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 7v",
@@ -122,8 +121,8 @@ export const mythicalBeasts = definePack(
     },
     {
       key: "beast-manticore-mouth",
-      question: "What did medieval bestiary writers put inside a manticore's human-looking mouth?",
-      answer: "Three rows of teeth.",
+      question: "What made a manticore's human-looking grin unusual in medieval bestiaries?",
+      answer: "Its mouth was packed with three complete rows of teeth.",
       source: {
         title: "British Library — Weird and Wonderful Creatures of the Bestiary",
         url: "https://www.bl.uk/stories/blogs/posts/weird-and-wonderful-creatures-of-the-bestiary",
@@ -141,14 +140,14 @@ export const mythicalBeasts = definePack(
       },
     },
     {
-      key: "beast-unicorn-rest",
-      question:
-        "In the Ashmole Bestiary, what unlikely resting place leaves a unicorn exposed to hunters?",
-      answer: "A maiden's lap.",
+      key: "beast-halcyon-calm",
+      question: "What protection did a bestiary promise a seabird laying eggs on a winter beach?",
+      answer:
+        "Once the halcyon laid its eggs, the raging sea supposedly fell calm until they hatched.",
       source: {
-        title: "Bodleian Libraries — MS. Ashmole 1511",
-        url: "https://medieval.bodleian.ox.ac.uk/catalog/manuscript_290",
-        note: "The catalogue describes folio 14v as showing a unicorn in a maiden's lap, speared by a hunter while another attacker approaches with an axe.",
+        title: "University of Aberdeen — Aberdeen Bestiary, folio 54v",
+        url: "https://www.abdn.ac.uk/bestiary/ms24/f54v",
+        note: "The halcyon entry says it lays on the shore at midwinter and that stormy winds cease and the sea lies calm after its eggs are laid, until they hatch.",
       },
     },
     {
@@ -164,8 +163,8 @@ export const mythicalBeasts = definePack(
     },
     {
       key: "beast-hedgehog-grapes",
-      question: "How did a medieval bestiary say hedgehogs carried grapes home to their young?",
-      answer: "They rolled onto the grapes and carried them on their spines.",
+      question: "What unusual harvesting technique did medieval writers credit to hedgehogs?",
+      answer: "Rolling onto fallen grapes and carrying them home to their young on their spines.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 24r",
         url: "https://www.abdn.ac.uk/bestiary/ms24/f24r",
@@ -173,13 +172,13 @@ export const mythicalBeasts = definePack(
       },
     },
     {
-      key: "beast-pelican-revival",
-      question: "What substance was a mother pelican said to use to revive her dead chicks?",
-      answer: "Her own blood, poured over them after she pierced her side.",
+      key: "beast-ostrich-stargazing",
+      question: "What did the Aberdeen Bestiary say an ostrich checked before laying its eggs?",
+      answer: "The sky: it supposedly waited for the Pleiades to appear before laying.",
       source: {
-        title: "University of Aberdeen — Aberdeen Bestiary, folio 35r",
-        url: "https://www.abdn.ac.uk/bestiary/ms24/f35r",
-        note: "The continuation states that the mother pours her blood over her dead young and raises them; the accompanying allegory explicitly refers to revival with her blood.",
+        title: "University of Aberdeen — Aberdeen Bestiary, folio 41r",
+        url: "https://www.abdn.ac.uk/bestiary/ms24/f41r",
+        note: "The ostrich entry says the bird raises its eyes to the sky and will not lay until Vergiliae, identified in the translation as the Pleiades, has risen.",
       },
     },
     {
@@ -196,8 +195,9 @@ export const mythicalBeasts = definePack(
     {
       key: "beast-crane-alarm",
       question:
-        "What did a bestiary crane supposedly hold while standing guard against falling asleep?",
-      answer: "A little stone in one raised claw, so dropping it would wake the bird.",
+        "What safeguard against nodding off did medieval writers recommend learning from a crane?",
+      answer:
+        "Stand on one leg holding a stone in the other claw; if you doze off, the falling stone wakes you.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 46r",
         url: "https://www.abdn.ac.uk/bestiary/ms24/f46r",
@@ -206,9 +206,9 @@ export const mythicalBeasts = definePack(
     },
     {
       key: "beast-caladrius-cure",
-      question:
-        "How did the legendary caladrius dispose of an illness it had taken from a sick person?",
-      answer: "It flew towards the sun and burned the sickness away.",
+      question: "What was the caladrius bird's supposed treatment for a patient it could save?",
+      answer:
+        "It took the illness into itself, then flew towards the sun to burn the sickness away.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 57r",
         url: "https://www.abdn.ac.uk/bestiary/ms24/f57r",
@@ -217,9 +217,9 @@ export const mythicalBeasts = definePack(
     },
     {
       key: "beast-basilisk-remedy",
-      question:
-        "What did the Aberdeen Bestiary say people should send into a basilisk's hiding place?",
-      answer: "A weasel, which would pursue and kill the basilisk.",
+      question: "What unlikely ally did medieval writers recommend against a basilisk?",
+      answer:
+        "A weasel: it would chase the supposedly terrifying monster into its cave and kill it.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 66v",
         url: "https://www.abdn.ac.uk/bestiary/ms24/f66v",
@@ -238,8 +238,7 @@ export const mythicalBeasts = definePack(
     },
     {
       key: "beast-two-ended-serpent",
-      question:
-        "What was anatomically unusual about the creature called an anphivena in medieval bestiaries?",
+      question: "What was unusual about the way a medieval anphivena could make a quick getaway?",
       answer: "It had a head at each end of its body and could move in either direction.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 68v",
@@ -248,19 +247,19 @@ export const mythicalBeasts = definePack(
       },
     },
     {
-      key: "beast-hydrus-entry",
-      question: "Why did the bestiary's hydrus deliberately get swallowed by a sleeping crocodile?",
-      answer: "To tear through the crocodile's innards and emerge unharmed on the other side.",
+      key: "beast-swallow-building-survey",
+      question: "Why might a medieval householder worry if swallows refused to nest on the roof?",
+      answer: "Swallows were said to foresee a building's collapse and avoid nesting on it.",
       source: {
-        title: "University of Aberdeen — Aberdeen Bestiary, folio 69r",
-        url: "https://www.abdn.ac.uk/bestiary/ms24/f69r",
-        note: "The idrus coats itself in mud, slides into the crocodile's mouth, is swallowed alive, then tears open its intestines and comes out whole.",
+        title: "University of Aberdeen — Aberdeen Bestiary, folio 47v",
+        url: "https://www.abdn.ac.uk/bestiary/ms24/f47v",
+        note: "Quoting Isidore, the swallow entry claims that the bird knows when buildings are about to fall and refuses to nest on their tops.",
       },
     },
     {
       key: "beast-boa-dairy",
       question: "What did the Aberdeen Bestiary claim a boas was stealing from cattle?",
-      answer: "Milk: it supposedly fastened onto their udders and sucked until the animals died.",
+      answer: "Milk: the huge snake supposedly fastened onto their udders and sucked.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 69r",
         url: "https://www.abdn.ac.uk/bestiary/ms24/f69r",
@@ -270,8 +269,9 @@ export const mythicalBeasts = definePack(
     {
       key: "beast-arabian-sirens",
       question:
-        'One Aberdeen Bestiary entry calls certain Arabian creatures "sirens". What did it mean?',
-      answer: "White, winged snakes said to move faster than horses and also to fly.",
+        "How did the Arabian 'sirens' in one medieval bestiary differ from the singers sailors feared?",
+      answer:
+        "They were white, winged snakes, supposedly faster than horses on the ground and able to fly.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 69v",
         url: "https://www.abdn.ac.uk/bestiary/ms24/f69v",
@@ -280,8 +280,8 @@ export const mythicalBeasts = definePack(
     },
     {
       key: "beast-salamander-flames",
-      question: "What was supposed to happen when a salamander crawled into flames?",
-      answer: "It put the fire out without being burned.",
+      question: "What did medieval writers say would happen if a salamander crawled into a fire?",
+      answer: "It would put the flames out without being burned.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 70r",
         url: "https://www.abdn.ac.uk/bestiary/ms24/f70r",
@@ -290,8 +290,9 @@ export const mythicalBeasts = definePack(
     },
     {
       key: "beast-dragon-weapon",
-      question: "In the Aberdeen Bestiary, what is a dragon's chief weapon rather than its teeth?",
-      answer: "Its tail, which it coils around victims to crush or suffocate them.",
+      question:
+        "Which part of a dragon did the Aberdeen Bestiary describe as its most dangerous weapon?",
+      answer: "Its tail, used as a huge constricting coil rather than for stinging.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 66r",
         url: "https://www.abdn.ac.uk/bestiary/ms24/f66r",
@@ -311,8 +312,9 @@ export const mythicalBeasts = definePack(
     {
       key: "beast-cromarty-token",
       question:
-        "What token was offered as proof of Lauchland Mackintosh's alleged encounter near Cromarty?",
-      answer: "A ring said to have been left by a mermaid.",
+        "What was Lauchland Mackintosh said to have brought away from an encounter with a mermaid?",
+      answer:
+        "A ring she had left him as a token of affection, later offered as proof of the encounter.",
       source: {
         title: "National Library of Scotland — The Wonder of Wonders Being",
         url: "https://digital.nls.uk/broadsides/view/?id=16755",
@@ -321,7 +323,7 @@ export const mythicalBeasts = definePack(
     },
     {
       key: "beast-ibex-landing",
-      question: "What was supposed to protect an ibex when it fell all the way down a mountain?",
+      question: "How did medieval writers claim an ibex could survive a plunge down a mountain?",
       answer: "Its extraordinarily strong horns would support its body on landing.",
       source: {
         title: "University of Aberdeen — Aberdeen Bestiary, folio 11r",

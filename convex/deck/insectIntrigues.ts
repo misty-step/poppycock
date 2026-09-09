@@ -12,8 +12,9 @@ export const insectIntrigues = definePack(
     {
       key: "insect-darwin-third-catch",
       question:
-        "With both hands occupied by beetles, where did Charles Darwin put one so he could catch a third?",
-      answer: "Between his teeth; the beetle squirted an irritating fluid down his throat.",
+        "What went wrong when a young Charles Darwin tried to collect three beetles at once?",
+      answer:
+        "He put one between his teeth to free a hand, and it squirted an irritating fluid down his throat.",
       source: {
         title: "Natural History Museum — Bombardier beetles and their caustic chemical cannon",
         url: "https://www.nhm.ac.uk/discover/bombardier-beetles-and-their-caustic-chemical-cannon.html",
@@ -32,7 +33,7 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-wallace-bee-tenancy",
-      question: "What already-occupied structure does Megachile pluto build its home inside?",
+      question: "What already-occupied structure does Wallace's giant bee build its home inside?",
       answer:
         "A tree-dwelling termite mound, with resin-lined chambers that keep the termites out.",
       source: {
@@ -43,7 +44,8 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-satyrus-navigation",
-      question: "What helps Scarabaeus satyrus keep a straight course on moonless nights?",
+      question:
+        "What helps some South African dung beetles keep a straight course on moonless nights?",
       answer: "The bright band of the Milky Way, used as a celestial navigation cue.",
       source: {
         title: "Natural History Museum — How do dung beetles’ diets keep the world clean?",
@@ -90,7 +92,7 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-boatman-song",
-      question: "How does a male Micronecta scholtzi produce its remarkably loud courtship call?",
+      question: "How does a male lesser water boatman produce its remarkably loud courtship call?",
       answer: "It rubs its penis-like reproductive organ against its abdomen.",
       source: {
         title: "Natural History Museum — The insect orchestra",
@@ -100,9 +102,9 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-hawkmoth-squeak",
-      question: "How does a disturbed death’s-head hawkmoth make its peculiar squeak?",
+      question: "What can a death's-head hawkmoth do when disturbed that most moths cannot?",
       answer:
-        "By drawing air in and forcing it out again through its mouthparts, rather like an accordion.",
+        "Squeak, by sucking air in and pushing it out through its mouthparts like a tiny accordion.",
       source: {
         title: "Natural History Museum — The insect orchestra",
         url: "https://www.nhm.ac.uk/discover/insect-sounds.html",
@@ -121,8 +123,9 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-bat-fly-nursery",
-      question: "Where does a bat fly’s larva spend the feeding and growing part of its childhood?",
-      answer: "Inside its mother, nourished by a milk gland until it is almost ready to pupate.",
+      question: "What is unusual about where a bat fly spends its larval life?",
+      answer:
+        "It grows inside its mother, nourished by a milk gland until it is almost ready to pupate.",
       source: {
         title: "Natural History Museum — The curious case of parasitic bat flies",
         url: "https://www.nhm.ac.uk/discover/wildlife-photographer-of-the-year-curious-case-of-parasitic-bat-flies.html",
@@ -131,8 +134,10 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-moon-moth-fast",
-      question: "Why must an adult Madagascan moon moth live entirely on reserves from its youth?",
-      answer: "Its mouth and gut no longer function, so it cannot eat during its brief adult life.",
+      question:
+        "What familiar daily activity disappears entirely from an adult Madagascan moon moth's life?",
+      answer:
+        "Eating: its mouth and gut no longer function, so it lives on reserves stored as a caterpillar.",
       source: {
         title: "Natural History Museum — Spotlight: the Madagascan moon moth",
         url: "https://www.nhm.ac.uk/discover/spotlight-madagascan-moon-moth.html",
@@ -141,8 +146,8 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-heterogynis-first-meal",
-      question: "What is the first meal of newly hatched Heterogynis penella?",
-      answer: "Their own mother, eaten inside her cocoon.",
+      question: "What do the young of one Heterogynis moth species eat immediately after hatching?",
+      answer: "Their own mother, inside the cocoon where she laid her eggs.",
       source: {
         title: "Natural History Museum — Seven of the world’s weirdest moths",
         url: "https://www.nhm.ac.uk/discover/seven-worlds-weirdest-moths.html",
@@ -151,7 +156,7 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-madagascar-night-drink",
-      question: "What does Hemiceratoides hieroglyphica take from sleeping birds in Madagascar?",
+      question: "What does a Madagascan moth steal from sleeping birds?",
       answer: "Their tears, sipped from beneath their eyelids with specialized mouthparts.",
       source: {
         title: "Natural History Museum — Seven of the world’s weirdest moths",
@@ -171,9 +176,9 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-nested-parasitoid",
-      question: "What makes Cheiloneurus paralia’s choice of nursery unusually complicated?",
+      question: "Where does a tiny wasp called Cheiloneurus paralia lay its eggs?",
       answer:
-        "It lays eggs inside another parasitic wasp larva that is already developing inside a host insect.",
+        "Inside another wasp larva that is already living inside a third insect: a parasite within a parasite.",
       source: {
         title: "Natural History Museum — Dangerous beauties: the world’s tiniest insects",
         url: "https://www.nhm.ac.uk/discover/dangerous-beauties-worlds-tiniest-insects.html",
@@ -182,9 +187,8 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-waxworm-saliva",
-      question:
-        "What unexpected task can enzymes called Demetra and Ceres, found in wax-worm saliva, perform?",
-      answer: "Break polyethylene plastic polymers into smaller fragments.",
+      question: "What unexpected use did researchers find for wax-moth caterpillar spit in 2022?",
+      answer: "Breaking down polyethylene plastic with enzymes in the saliva.",
       source: {
         title:
           "Natural History Museum — Wax moth caterpillar spit could be used to break down plastic waste",
@@ -204,7 +208,8 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-weaver-silk",
-      question: "What living tool do Oecophylla workers carry when joining leaves into a nest?",
+      question:
+        "What living tool do some Asian ants carry when stitching leaves together into a nest?",
       answer:
         "One of their own larvae, tapped to release silk and moved back and forth across the seam.",
       source: {
@@ -215,9 +220,9 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-aphid-generations",
-      question: "What reproductive head start can a newborn aphid already possess?",
-      answer:
-        "She can already be carrying the next generation inside her: aphids can effectively be born pregnant.",
+      question:
+        "What can be surprising about the family life of a female aphid on the day she is born?",
+      answer: "She may already be pregnant, with the next generation developing inside her.",
       source: {
         title: "National Geographic — Meet the Bug That Is Born Pregnant",
         url: "https://www.nationalgeographic.com/animals/article/animals-sex-reproduction-age-mating",
@@ -226,7 +231,7 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-ant-pupal-fluid",
-      question: "What unexpected contribution do ant pupae make to their colony’s food supply?",
+      question: "Why are apparently inactive ant pupae important at the colony's mealtimes?",
       answer:
         "They secrete a nutrient-rich, milk-like fluid that adults drink and feed to young larvae.",
       source: {
@@ -237,7 +242,7 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-issus-gears",
-      question: "What keeps a young Issus from sending itself into a spin when it jumps?",
+      question: "What keeps a young planthopper's two hind legs perfectly in step when it jumps?",
       answer:
         "Interlocking toothed gears at the bases of its hind legs synchronize their movement.",
       source: {
@@ -249,26 +254,24 @@ export const insectIntrigues = definePack(
     {
       key: "insect-replete-larder",
       question:
-        "What job makes a replete in a Myrmecocystus colony swell until it can barely move?",
+        "Why do certain desert ants hang from the ceilings of their nest with hugely swollen bellies?",
       answer:
-        "Storing liquid food in its abdomen, hanging from the nest ceiling as a living larder for the other ants.",
+        "They are living food jars: other ants store liquid meals inside them, then draw on the supply during dry spells.",
       source: {
-        title: "National Geographic — This deep-sea fish’s expandable stomach can hold huge meals",
-        url: "https://www.nationalgeographic.com/animals/article/animals-carry-own-food-deep-sea-fish",
-        note: "The honeypot-ant section describes repletes filling their gasters with nectar, sap and honeydew, hanging from ceilings and regurgitating food to nestmates.",
+        title: "Smithsonian National Museum of Natural History — Insect Zoo Audio Description Tour",
+        url: "https://naturalhistory.si.edu/visit/accessibility/audio-and-visual-description/insect-zoo-audio-description-tour",
+        note: "The Honeypot Ant panel states that workers regurgitate nectar or honeydew to repletes, which serve as living storage jars during dry periods. The enclosure description places swollen repletes on chamber ceilings.",
       },
     },
     {
-      key: "insect-cicada-reunion",
-      question:
-        "How do North America’s periodical cicada broods schedule their mass reunions above ground?",
+      key: "insect-victorian-leash",
+      question: "Why did some Victorian brooches need a tiny leash?",
       answer:
-        "They emerge together every 13 or 17 years after spending most of their lives underground feeding on tree roots.",
+        "They were living beetles, allowed to crawl over the wearer's clothes but tethered to a pin.",
       source: {
-        title:
-          "Smithsonian National Museum of Natural History — What to Expect When the Cicadas Emerge This Spring",
-        url: "https://www.smithsonianmag.com/blogs/national-museum-of-natural-history/2021/04/15/what-expect-when-cicadas-emerge-spring/",
-        note: "The museum describes seven periodical species with 13- or 17-year cycles, root-feeding nymphs, and synchronized brood emergence.",
+        title: "JSTOR Daily — Insect Jewelry of the Victorian Era",
+        url: "https://daily.jstor.org/insect-jewelry-of-the-victorian-era/",
+        note: "The article describes live beetles leashed to pins and roaming over bodices, citing historical fashion scholarship. The card does not repeat its explicitly doubtful flying-necklace anecdote.",
       },
     },
     {
@@ -295,7 +298,8 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-melanophila-sensor",
-      question: "What do the tiny pits beneath Melanophila’s middle legs help it locate?",
+      question:
+        "What do the tiny pits beneath a Melanophila beetle's middle legs help it seek out?",
       answer:
         "Fires: their sensors detect infrared radiation, guiding the beetle toward freshly burned breeding sites.",
       source: {
@@ -307,7 +311,7 @@ export const insectIntrigues = definePack(
     {
       key: "insect-termite-backpacks",
       question:
-        "What last-resort defense becomes more potent as Neocapritermes taracua workers grow old?",
+        "What last-resort defense do older workers of a French Guianan termite species have ready to deploy?",
       answer:
         "They rupture their bodies, mixing stored protein crystals with gland secretions to release a toxic droplet.",
       source: {
@@ -318,10 +322,9 @@ export const insectIntrigues = definePack(
     },
     {
       key: "insect-odontomachus-launch",
-      question:
-        "How can Odontomachus brunneus escape from an antlion’s sandy pit without climbing out?",
+      question: "How can some ants escape an antlion's sandy pit without climbing out?",
       answer:
-        "Snap its jaws against the ground hard enough to catapult its entire body into the air.",
+        "They snap their jaws against the ground hard enough to catapult their whole bodies into the air.",
       source: {
         title: "National Geographic — Ants Use Giant Jaws to Catapult Out of Death Trap",
         url: "https://www.nationalgeographic.com/animals/article/150513-ants-animals-science-insects-trap-jaw",

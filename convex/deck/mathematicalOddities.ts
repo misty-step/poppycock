@@ -22,9 +22,10 @@ export const mathematicalOddities = definePack(
     },
     {
       key: "math-missing-september",
-      question: "What happened to the date in Britain immediately after 2 September 1752?",
+      question:
+        "What did Parliament do to Britain’s calendar in September 1752 to bring it into step with Europe?",
       answer:
-        "It became 14 September: eleven calendar dates were skipped, although no actual time disappeared.",
+        "It jumped straight from 2 September to 14 September, deleting eleven date labels without losing any actual time.",
       source: {
         title: "UK Parliament — Calendar (New Style) Act 1750, section 1",
         url: "https://www.legislation.gov.uk/apgb/Geo2/24/23/1991-02-01/data.html",
@@ -32,64 +33,67 @@ export const mathematicalOddities = definePack(
       },
     },
     {
-      key: "math-march-new-year",
-      question:
-        "Before the reform that took effect in 1752, when did the English legal year begin?",
-      answer: "On 25 March, rather than 1 January.",
+      key: "math-newcomb-worn-pages",
+      question: "What mundane clue led Simon Newcomb towards a statistical discovery in 1881?",
+      answer:
+        "The early pages of logarithm tables were much more worn: people looked up numbers beginning with 1 unusually often.",
       source: {
-        title: "UK Parliament — Calendar (New Style) Act 1750, preamble and section 1",
-        url: "https://www.legislation.gov.uk/apgb/Geo2/24/23/1991-02-01/data.html",
-        note: "The preamble identifies 25 March as the English legal year's start and distinguishes Scotland's reckoning. Section 1 makes 1 January the first day of 1752.",
+        title: "Benford’s law — History",
+        url: "https://en.wikipedia.org/wiki/Benford%27s_law",
+        note: "The history section says Newcomb noticed in 1881 that the early logarithm-table pages, starting with 1, were much more worn than the others.",
       },
     },
     {
-      key: "math-ten-day-weeks",
-      question: "What unfamiliar weekly rhythm did France introduce in its 1793 calendar reform?",
-      answer: "Ten-day weeks: each 30-day month contained three periods called decades.",
+      key: "math-revolutionary-day-names",
+      question: "Who or what received its own named day in France’s revolutionary calendar?",
+      answer:
+        "Seeds, trees, flowers, fruits, animals and tools replaced the saints and Christian festivals.",
       source: {
         title: "Encyclopaedia Britannica — French republican calendar",
         url: "https://www.britannica.com/science/French-republican-calendar",
-        note: "The article gives twelve months divided into three ten-day decades each, plus five or six supplementary days outside those months to complete the year.",
+        note: "The article says each of the 360 regular days was named for a seed, tree, flower, fruit, animal or tool, replacing saints’ days and Christian festivals.",
       },
     },
     {
-      key: "math-ten-hour-days",
-      question: "How did France's revolutionary time reform divide an entire day?",
-      answer: "Into ten hours, each containing 100 minutes of 100 seconds apiece.",
+      key: "math-cistercian-single-symbol",
+      question: "What compact way of recording numbers did medieval Cistercian monks devise?",
+      answer:
+        "Strokes around one stem could combine units, tens, hundreds and thousands, squeezing a four-digit number into a single symbol.",
       source: {
-        title: "Science Museum Group — Decimal watch by Richard Dover Statter and Thomas Statter",
-        url: "https://collection.sciencemuseumgroup.org.uk/objects/co8557930/decimal-watch-by-richard-dover-statter-and-thomas-statter",
-        note: "The museum's historical explanation identifies the French system's 10-hour day, 100-minute hour, and 100-second minute. These are decimal units, not modern hours and seconds.",
+        title: "Cistercian numerals",
+        url: "https://en.wikipedia.org/wiki/Cistercian_numerals",
+        note: "The article describes numbers from 1 to 9,999 written as a single glyph, with positions around a stave identifying units, tens, hundreds and thousands.",
       },
     },
     {
-      key: "math-babylonian-places",
+      key: "math-banach-tarski-balls",
       question:
-        "How did moving one place to the left change a digit's value in Babylonian positional notation?",
-      answer: "It multiplied the value by sixty rather than ten.",
+        "What impossible-sounding feat can be performed on an imaginary solid ball in the Banach–Tarski paradox?",
+      answer:
+        "Its pieces can be rearranged into two complete balls, each as large as the original; this is mathematics, not a physical cutting trick.",
       source: {
-        title: "Encyclopaedia Britannica — Numerals and numeral systems: Numeral systems",
-        url: "https://www.britannica.com/science/numeral/Numeral-systems",
-        note: "The positional-systems section identifies Babylonian notation as base 60, while explaining that the individual values below 60 used a smaller base-ten grouping system.",
+        title: "Wolfram MathWorld — Banach–Tarski Paradox",
+        url: "https://mathworld.wolfram.com/Banach-TarskiParadox.html",
+        note: "MathWorld describes decomposing a ball into finitely many extremely complicated pieces and using rigid motions to form two balls of the original size.",
       },
     },
     {
-      key: "math-maya-third-place",
+      key: "math-hat-never-repeats",
       question:
-        "What unexpected value did the third position represent in Maya calendrical notation?",
-      answer: "360 days, not 400: that position used eighteen twenties instead of twenty twenties.",
+        "What unusual rule does the tile shape nicknamed ‘the hat’ impose on a floor made entirely from copies of it?",
+      answer:
+        "It can cover an endless flat floor without gaps, but the overall pattern can never repeat like ordinary wallpaper.",
       source: {
-        title: "Encyclopaedia Britannica — Numerals and numeral systems: Numeral systems",
-        url: "https://www.britannica.com/science/numeral/Numeral-systems",
-        note: "The Maya discussion specifically gives the third place as multiples of 18 times 20 rather than 20 squared. The card concerns calendrical notation, not every Maya use of numbers.",
+        title: "University of Waterloo — An aperiodic monotile",
+        url: "https://cs.uwaterloo.ca/~csk/hat/",
+        note: "The researchers’ project page explains that their hat-shaped tile can tile the plane but never periodically, forcing aperiodicity through geometry alone.",
       },
     },
     {
       key: "math-roman-overbar",
       question:
-        "How could a Roman scribe make a written number a thousand times larger without adding more numerals?",
-      answer:
-        "Draw a bar above it; under the vinculum convention, an overbar multiplied the number by 1,000.",
+        "How could a Roman scribe multiply a written amount by a thousand without changing any of its numerals?",
+      answer: "Draw a bar across the top, using the convention called the vinculum.",
       source: {
         title: "Encyclopaedia Britannica — Numerals and numeral systems: Roman numerals",
         url: "https://www.britannica.com/science/numeral/Numeral-systems",
@@ -97,14 +101,15 @@ export const mathematicalOddities = definePack(
       },
     },
     {
-      key: "math-egyptian-fractions",
-      question: "What roundabout form could an ancient Egyptian scribe use to write four-sevenths?",
+      key: "math-gabriels-horn",
+      question:
+        "What impossible-sounding mismatch appears in the mathematical object called Gabriel’s horn?",
       answer:
-        "One-half plus one-fourteenth, expressing the fraction as a sum of parts with a numerator of one.",
+        "It encloses a finite volume but has an infinite surface area; it is a mathematical shape, not a buildable instrument.",
       source: {
-        title: "Encyclopaedia Britannica — Mathematics in ancient Egypt",
-        url: "https://www.britannica.com/science/mathematics/Mathematics-in-ancient-Egypt",
-        note: "The arithmetic section explicitly gives 4/7 as 1/2 plus 1/14 and explains unit-fraction decompositions. It also recognizes exceptions such as 2/3; the card does not claim an absolute rule.",
+        title: "Gabriel’s horn",
+        url: "https://en.wikipedia.org/wiki/Gabriel%27s_horn",
+        note: "The article defines Gabriel’s horn as a geometric figure with infinite surface area but finite volume, first studied by Torricelli.",
       },
     },
     {
@@ -112,7 +117,7 @@ export const mathematicalOddities = definePack(
       question:
         "What drastic adjustment preceded the introduction of Julius Caesar's new calendar?",
       answer:
-        "The Roman year corresponding to 46 BCE was stretched to 445 days to bring dates back into step with the seasons.",
+        "Extra months were inserted, stretching one Roman year to 445 days to bring dates back into step with the seasons.",
       source: {
         title: "Encyclopaedia Britannica — Calendar: The Western calendar and calendar reforms",
         url: "https://www.britannica.com/science/calendar/The-Western-calendar-and-calendar-reforms",
@@ -120,19 +125,21 @@ export const mathematicalOddities = definePack(
       },
     },
     {
-      key: "math-chinese-year-cycle",
+      key: "math-hanoi-end-of-world",
       question:
-        "How long does it take the complete traditional Chinese cycle of year names to repeat?",
-      answer: "Sixty years: five rounds of the familiar twelve-animal cycle.",
+        "What was supposed to happen when the priests finished their task in the Tower of Hanoi legend?",
+      answer:
+        "The world would end when they finished moving a stack of golden disks between three pegs according to the puzzle’s rules.",
       source: {
-        title: "Royal Museums Greenwich — Calendars from around the world, page 22",
-        url: "https://www.rmg.co.uk/sites/default/files/Calendars-from-around-the-world.pdf",
-        note: "Alan Longstaff's Chinese-calendar section states that year names recur every sixty years, equivalent to five repetitions of the twelve-animal cycle.",
+        title: "Encyclopaedia Britannica — Tower of Hanoi",
+        url: "https://www.britannica.com/topic/Tower-of-Hanoi",
+        note: "Britannica recounts the legend of priests moving 64 golden disks between three pegs and says the world will end when they complete the task.",
       },
     },
     {
       key: "math-easters-calculated-moon",
-      question: "Why can simply observing the full Moon fail to give the date of Western Easter?",
+      question:
+        "Why might an astronomer and a church calendar disagree about which Sunday should be Easter?",
       answer:
         "The rule uses a calculated full Moon and an equinox fixed at 21 March, not just the actual astronomical events.",
       source: {
@@ -156,8 +163,9 @@ export const mathematicalOddities = definePack(
     {
       key: "math-kilogram-cylinder",
       question:
-        "What ordinary-looking object in France served as the world's final authority on the kilogram for over a century?",
-      answer: "A small cylinder made of 90 percent platinum and 10 percent iridium.",
+        "Why could damage to a small metal cylinder in a French vault once have threatened the world’s system of weights?",
+      answer:
+        "The cylinder itself defined the kilogram; it was the final standard against which other kilogram weights were compared.",
       source: {
         title: "Science Museum — Redefining the kilogram",
         url: "https://blog.sciencemuseum.org.uk/redefining-the-kilogram/",
@@ -200,8 +208,9 @@ export const mathematicalOddities = definePack(
     {
       key: "math-napiers-rods",
       question:
-        "What practical task did John Napier's 'bones' make easier in the seventeenth century?",
-      answer: "Multiplication: arranging the rods reduced it to a sequence of simple additions.",
+        "How did John Napier’s seventeenth-century method turn difficult multiplication into simple addition?",
+      answer:
+        "By arranging a set of numbered rods, nicknamed ‘bones’, whose markings reduced the calculation to additions.",
       source: {
         title: "Science Museum Group — Napier's bones or rods",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co60059/napiers-bones-or-rods",
@@ -221,9 +230,8 @@ export const mathematicalOddities = definePack(
     },
     {
       key: "math-consuls-hands",
-      question:
-        "What did the toy Consul's hands reveal when someone moved its feet to two marked positions?",
-      answer: "The product of the two numbers: the metal monkey was a multiplication device.",
+      question: "How did a child operate the arithmetic toy called Consul the Educated Monkey?",
+      answer: "Move its feet to two numbers; its hands would point to their product.",
       source: {
         title: "Science Museum Group — Consul the Educated Monkey",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co60979/consul-the-educated-monkey",
@@ -231,22 +239,23 @@ export const mathematicalOddities = definePack(
       },
     },
     {
-      key: "math-curta-cylinder",
-      question: "What useful job did the palm-sized cylindrical Curta perform?",
+      key: "math-efron-second-choice",
+      question:
+        "Why can choosing your die first be a disadvantage when playing with Efron’s specially numbered dice?",
       answer:
-        "It was a miniature mechanical calculating machine that could be carried in a pocket.",
+        "Whichever die you choose, your opponent can pick another that is more likely to beat it; there is no strongest die.",
       source: {
-        title: "Science Museum Group — Curta type II hand calculator by Contina Ltd. Mauren",
-        url: "https://collection.sciencemuseumgroup.org.uk/objects/co59918/curta-type-ii-hand-calculator-by-contina-ltd-mauren",
-        note: "The object is classified as both a Leibniz-type rotary calculating machine and a pocket calculating machine; its cylindrical body measures about 110 by 70 by 70 millimetres.",
+        title: "Intransitive dice — Efron’s dice",
+        url: "https://en.wikipedia.org/wiki/Intransitive_dice",
+        note: "The Efron section describes four dice in a cycle, each beaten by another with probability two-thirds, rather than a single best die.",
       },
     },
     {
       key: "math-birthday-crowd",
       question:
-        "In the usual equally likely, 365-day birthday model, how small a group makes a shared birthday more likely than not?",
+        "Why are shared birthdays common at surprisingly small parties, even if meeting your own birthday twin is rare?",
       answer:
-        "Just 23 people; the match can be between any pair, not necessarily with your own birthday.",
+        "Every guest can match every other guest, not just you; 23 people already create 253 possible pairs to compare.",
       source: {
         title: "Encyclopaedia Britannica — Probability theory: The birthday problem",
         url: "https://www.britannica.com/science/probability-theory/The-birthday-problem",
@@ -254,15 +263,15 @@ export const mathematicalOddities = definePack(
       },
     },
     {
-      key: "math-infinite-evens",
+      key: "math-hilbert-full-hotel",
       question:
-        "What counterintuitive comparison does set theory make between all positive whole numbers and just the even ones?",
+        "How can Hilbert’s infinitely large hotel give a new arrival a room when every room is already occupied?",
       answer:
-        "The two infinite sets have the same size: every positive whole number pairs with its double.",
+        "Move each guest to the room numbered one higher than their current room; this frees room one without evicting anyone.",
       source: {
-        title: "Encyclopaedia Britannica — Number game: Paradoxes and fallacies",
-        url: "https://www.britannica.com/topic/number-game/Paradoxes-and-fallacies",
-        note: "The article states that there are as many even natural numbers as even and odd natural numbers together. Pairing n with 2n makes the equal cardinality explicit.",
+        title: "Hilbert’s paradox of the Grand Hotel",
+        url: "https://en.wikipedia.org/wiki/Hilbert%27s_paradox_of_the_Grand_Hotel",
+        note: "The finite-extra-guests example moves the guest in room n to room n+1, freeing the first room even though the infinite hotel was full.",
       },
     },
     {
@@ -288,22 +297,22 @@ export const mathematicalOddities = definePack(
       },
     },
     {
-      key: "math-six-and-twenty-eight",
+      key: "math-coastline-changing-length",
       question:
-        "What shared property made 6 and 28 objects of special interest to ancient Greek thinkers?",
+        "How can two careful surveyors get very different lengths for the same coastline without either making a mistake?",
       answer:
-        "Each equals the sum of its positive divisors other than itself: for example, 6 equals 1 plus 2 plus 3.",
+        "A shorter measuring stick follows more of the little bends, so it produces a longer coastline; the chosen scale changes the answer.",
       source: {
-        title: "Encyclopaedia Britannica — Perfect number",
-        url: "https://www.britannica.com/science/perfect-number",
-        note: "The article defines perfect numbers through proper divisors, gives 6 and 28 as the smallest examples, and describes Pythagorean interest in their mystical properties.",
+        title: "Coastline paradox",
+        url: "https://en.wikipedia.org/wiki/Coastline_paradox",
+        note: "The article explains that measured coastline length depends on measurement scale: shorter ruler segments capture extra detail and increase the total.",
       },
     },
     {
       key: "math-extra-new-year-second",
-      question: "What tiny addition was made to civil time at the end of 31 December 2005?",
-      answer:
-        "An extra second, inserted to keep clock time aligned with the Earth's irregular rotation.",
+      question:
+        "How do timekeepers occasionally compensate when Earth’s rotation falls behind atomic clocks?",
+      answer: "They insert a leap second, making one clock minute last 61 seconds instead of 60.",
       source: {
         title:
           "Royal Observatory Greenwich — Which years are leap years and can you have leap seconds?",
@@ -336,10 +345,9 @@ export const mathematicalOddities = definePack(
     },
     {
       key: "math-buffons-needles",
-      question:
-        "What famous quantity can be estimated by repeatedly dropping needles onto a surface ruled with parallel lines?",
+      question: "How did Buffon propose to estimate pi using a handful of needles?",
       answer:
-        "Pi, by counting how often the needles cross a line and using the needle length and line spacing.",
+        "Drop them repeatedly onto parallel lines and count how often they cross a line, allowing for needle length and line spacing.",
       source: {
         title: "Encyclopaedia Britannica — Monte Carlo method",
         url: "https://www.britannica.com/science/Monte-Carlo-method",

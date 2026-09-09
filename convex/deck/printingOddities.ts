@@ -35,9 +35,9 @@ export const printingOddities = definePack(
     {
       key: "printing-two-front-covers",
       question:
-        "Why could a seventeenth-century volume have two front covers but only one shared back cover?",
+        "What unconventional layout did some seventeenth-century binders use when putting two works in one volume?",
       answer:
-        "Two books were bound back-to-back, each opening from its own side, with two spines and an S-shaped structure.",
+        "They bound them back-to-back, with two front covers and two spines sharing a single back cover.",
       source: {
         title: "Folger Shakespeare Library — Back-to-back reading",
         url: "https://www.folger.edu/blogs/collation/back-to-back-reading/",
@@ -47,9 +47,9 @@ export const printingOddities = definePack(
     {
       key: "printing-hidden-wilton",
       question:
-        "How does a view of Wilton House appear on a Folger Shakespeare volume whose closed edges look simply gold?",
+        "Where did an early-nineteenth-century binder hide a painting of Wilton House in a Shakespeare volume?",
       answer:
-        "Fanning the pages reveals a hidden painting beneath the gilded appearance of the closed page edges.",
+        "On the page edges: closed, they look gold, but fanning the leaves reveals the scene.",
       source: {
         title: "Folger Shakespeare Library — Fore-edge paintings",
         url: "https://www.folger.edu/blogs/collation/fore-edge-paintings/",
@@ -83,9 +83,9 @@ export const printingOddities = definePack(
     {
       key: "printing-titus-white-dots",
       question:
-        "Why do later versions of an old Titus Andronicus illustration have more white dots, even on undamaged paper?",
+        "Why did later printings of an old Titus Andronicus picture have white spots missing from earlier ones?",
       answer:
-        "Beetles ate holes in the wooden printing block; the holes then left blank spots in every image it printed.",
+        "Beetles bored holes in the wooden printing block, leaving blank dots in all the later impressions.",
       source: {
         title: "Folger Shakespeare Library — The ballad of the woodworm",
         url: "https://www.folger.edu/blogs/collation/the-ballad-of-the-woodworm/",
@@ -95,9 +95,9 @@ export const printingOddities = definePack(
     {
       key: "printing-decorative-censorship",
       question:
-        "Why does a 1689 pamphlet about the Prince of Wales suddenly contain a block of meaningless ornaments and letters?",
+        "Why does a 1689 pamphlet about the Prince of Wales suddenly break into meaningless ornaments and letters?",
       answer:
-        "A paragraph was censored by replacing its typeset words with decorative fleurs-de-lis and repeated letters.",
+        "A paragraph was censored: decorative flowers and repeated letters replaced the forbidden words.",
       source: {
         title: "Folger Shakespeare Library — Expurgation with decoration",
         url: "https://www.folger.edu/blogs/collation/expurgation-with-decoration/",
@@ -119,9 +119,8 @@ export const printingOddities = definePack(
     {
       key: "printing-aeneid-around-aeneid",
       question:
-        "What unusually appropriate material became the cover of Richard Stanyhurst's 1583 translation of the Aeneid?",
-      answer:
-        "Pages from a handwritten Aeneid made roughly 400 years earlier: the same work recycled around a new edition.",
+        "What became the cover of a 1583 English translation of Virgil's Aeneid now in the Bodleian?",
+      answer: "Pages from a handwritten copy of the same poem, made about 400 years earlier.",
       source: {
         title: "Bodleian Libraries — Digging into the archaeology of the book",
         url: "https://blogs.bodleian.ox.ac.uk/theconveyor/digging-into-the-archaeology-of-the-book-the-digital-humanities-at-the-bodleian-library/",
@@ -141,23 +140,22 @@ export const printingOddities = definePack(
       },
     },
     {
-      key: "printing-cover-bosses",
+      key: "printing-doves-thames",
       question:
-        "Why did bookbinders put conspicuous metal bumps on the covers of some large volumes?",
+        "How did a London printer ensure his business partner would not inherit their prized typeface?",
       answer:
-        "The raised metal fittings lifted the covers off the reading surface, protecting the leather from scratches and wear.",
+        "He secretly dumped its metal type into the Thames, making repeated night-time trips to Hammersmith Bridge.",
       source: {
-        title: "Folger Shakespeare Library — Form & Function: The Genius of the Book",
-        url: "https://folgerpedia.folger.edu/Form_%26_Function:_The_Genius_of_the_Book",
-        note: "The section on binding furniture describes metal bosses and corner fittings as protection for covers, keeping their surfaces from rubbing against desks and other supporting surfaces.",
+        title: "London Museum — The lost Doves Type: A Thames mystery solved",
+        url: "https://www.londonmuseum.org.uk/blog/doves-type-thames-mystery-mudlarking/",
+        note: "The museum describes Cobden-Sanderson's 1916–17 trips to throw the Doves Type into the Thames rather than allow it to pass to Emery Walker under their agreement.",
       },
     },
     {
       key: "printing-gilders-ingredient",
       question:
-        "Which kitchen ingredient helped bookbinders fasten real gold to the edges of pages?",
-      answer:
-        "Egg white, used as the adhesive beneath thin gold leaf before the edges were burnished.",
+        "Which kitchen ingredient held real gold leaf onto the page edges of finely bound books?",
+      answer: "Egg white, used as glue beneath the thin layer of gold.",
       source: {
         title: "Folger Shakespeare Library — Form & Function: The Genius of the Book",
         url: "https://folgerpedia.folger.edu/Form_%26_Function:_The_Genius_of_the_Book",
@@ -189,10 +187,9 @@ export const printingOddities = definePack(
     },
     {
       key: "printing-wearable-volume",
-      question:
-        "How could a medieval traveller keep a small book close without carrying it in a bag or a free hand?",
+      question: "How were some small books designed to travel with medieval monks and aristocrats?",
       answer:
-        "Wear it: a girdle book was designed to be carried attached to the reader's clothing.",
+        "They could be worn, attached to the reader's clothing instead of carried in a hand or bag.",
       source: {
         title: "Bodleian Libraries — Digging into the archaeology of the book",
         url: "https://blogs.bodleian.ox.ac.uk/theconveyor/digging-into-the-archaeology-of-the-book-the-digital-humanities-at-the-bodleian-library/",
@@ -202,8 +199,8 @@ export const printingOddities = definePack(
     {
       key: "printing-bartisch-head",
       question:
-        "What could readers physically do to the illustrated head in Georg Bartisch's 1583 treatise?",
-      answer: "Peel back successive paper flaps to explore the anatomical structures underneath.",
+        "What unusual reading instructions could accompany the illustrated head in Georg Bartisch's 1583 medical treatise?",
+      answer: "Peel it apart: layered paper flaps let the reader explore the anatomy underneath.",
       source: {
         title: "Bodleian Libraries — Digging into the archaeology of the book",
         url: "https://blogs.bodleian.ox.ac.uk/theconveyor/digging-into-the-archaeology-of-the-book-the-digital-humanities-at-the-bodleian-library/",
@@ -213,9 +210,8 @@ export const printingOddities = definePack(
     {
       key: "printing-devotional-wear",
       question:
-        "Why is a picture of the Virgin in a fifteenth-century Bodleian manuscript almost rubbed away, despite being cherished?",
-      answer:
-        "Devotional handling wore it away: readers repeatedly touched or rubbed the sacred image.",
+        "Why did the Virgin's face nearly vanish from a cherished fifteenth-century manuscript?",
+      answer: "Readers repeatedly rubbed the sacred picture in acts of devotion, wearing it away.",
       source: {
         title: "Bodleian Libraries — Digging into the archaeology of the book",
         url: "https://blogs.bodleian.ox.ac.uk/theconveyor/digging-into-the-archaeology-of-the-book-the-digital-humanities-at-the-bodleian-library/",
@@ -224,10 +220,9 @@ export const printingOddities = definePack(
     },
     {
       key: "printing-manuscript-mask",
-      question:
-        "Why would a printer place a cut-out sheet of an old manuscript between inked type and a fresh page?",
+      question: "What second career did a medieval manuscript leaf have in an early printing shop?",
       answer:
-        "It acted as a mask, shielding parts of the page so that only selected areas received the coloured ink.",
+        "It became a cut-out mask, keeping coloured ink off some parts of a fresh page while letting it reach others.",
       source: {
         title: "Bodleian Libraries — Digging into the archaeology of the book",
         url: "https://blogs.bodleian.ox.ac.uk/theconveyor/digging-into-the-archaeology-of-the-book-the-digital-humanities-at-the-bodleian-library/",
@@ -237,9 +232,9 @@ export const printingOddities = definePack(
     {
       key: "printing-chivers-window",
       question:
-        "How could a Cedric Chivers binding show a watercolour through the protective skin covering it?",
+        "What protected the watercolour decoration on Cedric Chivers's elaborate book covers?",
       answer:
-        "Chivers used transparent vellum over the painted decoration, sometimes adding mother-of-pearl beneath it.",
+        "Transparent vellum: a sheet of treated animal skin through which the painting remained visible.",
       source: {
         title: "Folger Shakespeare Library — The mulberry tree and Shakespeare bindings",
         url: "https://www.folger.edu/blogs/shakespeare-and-beyond/mulberry-tree-shakespeare-bindings/",
@@ -271,22 +266,23 @@ export const printingOddities = definePack(
       },
     },
     {
-      key: "printing-gethsemane-substitution",
+      key: "printing-halley-salary",
       question:
-        "What startling substitution appears in a 1613 London Bible's account of the arrival at Gethsemane?",
+        "What did the Royal Society offer Edmond Halley when it could no longer afford his salary?",
       answer:
-        "Judas arrives with the disciples instead of Jesus: Judas was mistakenly printed in Matthew 26:36.",
+        "Unsold copies of an expensive book about fish that had helped empty the Society's coffers.",
       source: {
-        title: "Folger Shakespeare Library — Manifold Greatness: Misprints and Misfortunes",
-        url: "https://folgerpedia.folger.edu/Manifold_Greatness_exhibition_material",
-        note: "The exhibition identifies the 1613 ‘Judas Bible,’ which prints Judas for Jesus in Matthew 26:36. The Folger copy has a pasted correction with part of the original J still visible.",
+        title: "The Guardian — How a book about fish nearly sank Isaac Newton's Principia",
+        url: "https://www.theguardian.com/science/2012/apr/19/royal-society-publish-isaac-newton-principia",
+        note: "The report, linked as the true story by the Royal Society's library manager, explicitly says Halley was offered unsold Historia Piscium copies instead of salary. The card preserves 'offered', not 'accepted'.",
       },
     },
     {
       key: "printing-cortes-moving-parts",
-      question: "What movable equipment was built directly into Martín Cortés's 1551 handbook?",
+      question:
+        "How could readers make Martín Cortés's 1551 handbook perform calculations without writing in it?",
       answer:
-        "Rotating paper discs that readers could turn to work out astronomical relationships involving the Sun and Moon.",
+        "They turned paper wheels built into the pages to work out relationships between the Sun and Moon.",
       source: {
         title: "Folger Shakespeare Library — Volvelles",
         url: "https://www.folger.edu/blogs/collation/volvelles/",
@@ -309,7 +305,7 @@ export const printingOddities = definePack(
       question:
         "Why did a 1585 religious illustration acquire upside-down text that readers were never meant to see?",
       answer:
-        "Support type in a blank area was accidentally inked; it was there to balance the press's pressure and protect the main type.",
+        "Scrap type put there just to support the press was accidentally inked, printing words that were never part of the page.",
       source: {
         title: "Folger Shakespeare Library — Learning from mistakes",
         url: "https://www.folger.edu/blogs/collation/learning-from-mistakes/",
@@ -321,7 +317,7 @@ export const printingOddities = definePack(
       question:
         "Why might tiny daggers and pointing hands appear at the foot of early printed pages, unrelated to anything the text says?",
       answer:
-        "They were assembly marks, helping printers and binders put the folded groups of pages in the right order.",
+        "They were assembly guides, telling the binder which folded groups of pages went where.",
       source: {
         title: "Folger Shakespeare Library — The symbols of signature marks",
         url: "https://www.folger.edu/blogs/collation/the-symbols-of-signature-marks/",
@@ -329,14 +325,13 @@ export const printingOddities = definePack(
       },
     },
     {
-      key: "printing-moxons-devils",
-      question:
-        "In Joseph Moxon's 1683 account, why did a workshop's boys earn the nickname ‘devils’?",
-      answer: "Taking freshly printed sheets off the press covered the boys in black ink.",
+      key: "printing-joanina-guardians",
+      question: "What unlikely residents help preserve the books in Coimbra's Joanina Library?",
+      answer: "Colonies of bats, which feed on insects that would otherwise damage the books.",
       source: {
-        title: "Folger Shakespeare Library — A book's fingerprints",
-        url: "https://www.folger.edu/blogs/collation/a-books-fingerprints/",
-        note: "The article quotes Moxon's Mechanick Exercises: the boys taking sheets off the tympan commonly daubed themselves black, leading workmen to call them ‘Devils.’",
+        title: "University of Coimbra — Biblioteca Joanina: Piso Nobre",
+        url: "https://www.uc.pt/informacaopara/visit/article?key=a-b79a66c7bb",
+        note: "The university's English visitor guide states that two bat colonies have lived in the library for roughly two and a half centuries to help with pest control.",
       },
     },
     {
@@ -352,15 +347,15 @@ export const printingOddities = definePack(
       },
     },
     {
-      key: "printing-king-denied",
+      key: "printing-roth-sausages",
       question:
-        "What ordinary request did Oxford's Bodleian Library refuse to King Charles I in 1645?",
+        "How did Dieter Roth transform books and magazines into a peculiar new kind of artist's book in the 1960s?",
       answer:
-        "He wanted to borrow a book. The library's rule against lending applied even to the king.",
+        "He ground them up, mixed them with fat and spices, and stuffed the mixture into sausage casings.",
       source: {
-        title: "Bodleian Libraries — History of the Bodleian",
-        url: "https://visit.bodleian.ox.ac.uk/plan-your-visit/history-bodleian",
-        note: "The library's history states that no books are lent and records the refusal of King Charles I's request to borrow one in 1645.",
+        title: "Museum of Modern Art — Dieter Roth: Literature Sausage",
+        url: "https://www.moma.org/interactives/exhibitions/2013/dieter_roth/works/literature-sausage/",
+        note: "MoMA describes Roth following sausage recipes but substituting ground-up books or magazines for meat, then adding fat, gelatin, water and spices before filling casings.",
       },
     },
   ],

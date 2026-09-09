@@ -4,26 +4,28 @@ export const weatherAnomalies = definePack(
   {
     key: "weather-anomalies",
     title: "Weather anomalies",
-    blurb: "Vanishing showers, counterfeit horizons, and other tricks of the atmosphere.",
+    blurb: "Improbable showers, phantom landscapes, and the atmosphere's stranger surprises.",
     category: "Weather anomalies",
     sort: 370,
   },
   [
     {
-      key: "weather-virga-vanishing-shower",
+      key: "weather-las-vegas-radar-swarm",
       question:
-        "Why can a radar show a shower overhead while the ground beneath it stays completely dry?",
+        "What were the huge clouds moving toward Las Vegas on weather radar after dark in July 2019?",
       answer:
-        "The precipitation evaporates before reaching the ground, leaving streaks called virga.",
+        "Millions of grasshoppers gathering around the city's bright lights, not rain clouds.",
       source: {
-        title: "National Weather Service — Owlie's Weird Weather: Virga",
-        url: "https://www.weather.gov/owlie/weird-weather#asd",
-        note: "The virga section explains that precipitation evaporates in dry air below a cloud; radar can register the shower even though none reaches the surface.",
+        title:
+          "Smithsonian Magazine — Las Vegas Was Inundated by 46 Million Grasshoppers on a Single Night in 2019",
+        url: "https://www.smithsonianmag.com/smart-news/las-vegas-was-inundated-46-million-grasshoppers-single-night-2019-180977395/",
+        note: "Researchers filtered moisture from archived NOAA radar data and identified the roving clouds as airborne grasshoppers converging on illuminated Las Vegas at night.",
       },
     },
     {
       key: "weather-fujiwhara-dance",
-      question: "What happens during the Fujiwhara effect?",
+      question:
+        "What can happen when two hurricanes spinning in the same direction get too close to one another?",
       answer: "Two nearby cyclones rotate around a common center; sometimes one absorbs the other.",
       source: {
         title: "National Weather Service — Owlie's Weird Weather: Fujiwhara Effect",
@@ -34,9 +36,9 @@ export const weatherAnomalies = definePack(
     {
       key: "weather-heat-burst-midnight",
       question:
-        "How can the temperature suddenly shoot upward after midnight as a thunderstorm dies?",
+        "What unwelcome parting gift can a dying thunderstorm deliver to a town in the middle of a summer night?",
       answer:
-        "A heat burst brings sinking air that warms by compression after its rain has completely evaporated.",
+        "A sudden blast of fiercely hot, dry air: a heat burst can send the temperature soaring after midnight.",
       source: {
         title: "National Weather Service — Owlie's Weird Weather: Heat burst",
         url: "https://www.weather.gov/owlie/weird-weather#asd2",
@@ -46,9 +48,9 @@ export const weatherAnomalies = definePack(
     {
       key: "weather-snow-rollers",
       question:
-        "What can leave a field covered in hollow, doughnut-shaped cylinders overnight without anyone visiting?",
+        "What delicate sculptures can form overnight in a snowy field without anyone entering it?",
       answer:
-        "Wind can roll a thin layer of sticky snow into hollow cylinders called snow rollers.",
+        "Hollow doughnuts of rolled-up snow, formed when wind curls a sticky layer over the ground.",
       source: {
         title: "National Weather Service — Owlie's Weird Weather: Snow Roller",
         url: "https://www.weather.gov/owlie/weird-weather#asd10",
@@ -57,10 +59,9 @@ export const weatherAnomalies = definePack(
     },
     {
       key: "weather-hair-ice-fungus",
-      question:
-        "What living accomplice helps rotting branches grow silky white strands on cold nights?",
+      question: "How can a fungus alter the ice that grows from a rotting branch on a cold night?",
       answer:
-        "A fungus helps preserve hair-thin ice strands by preventing them from growing into larger crystals.",
+        "It helps keep the ice in silky, hair-thin strands rather than letting it grow into chunky crystals.",
       source: {
         title: "National Weather Service — Owlie's Weird Weather: Hair ice",
         url: "https://www.weather.gov/owlie/weird-weather#asd11",
@@ -69,9 +70,10 @@ export const weatherAnomalies = definePack(
     },
     {
       key: "weather-brocken-spectre",
-      question: "What is the towering figure called a Brocken spectre?",
+      question:
+        "Who is the enormous figure that a lone climber may encounter in mist on Germany's Brocken mountain?",
       answer:
-        "The observer's own shadow projected onto fog or cloud, often surrounded by a colored ring.",
+        "The climber: it is their own shadow projected onto fog, sometimes wearing a colored halo.",
       source: {
         title: "Royal Meteorological Society — Spooky weather",
         url: "https://www.rmets.org/metmatters/spooky-weather",
@@ -79,45 +81,46 @@ export const weatherAnomalies = definePack(
       },
     },
     {
-      key: "weather-lenticular-stationary-saucer",
+      key: "weather-merryweather-leeches",
       question:
-        "Why can a saucer-shaped cloud remain parked beside a mountain despite a strong wind?",
+        "What living components were supposed to ring the bell in George Merryweather's Victorian storm-warning machine?",
       answer:
-        "Air continually forms cloud at a standing wave's crest and loses it again downstream, keeping the shape in place.",
+        "Leeches in bottles: climbing toward the necks, they dislodged triggers connected to the bell.",
       source: {
-        title: "National Weather Service — Owlie's Weird Weather: Lenticular Clouds",
-        url: "https://www.weather.gov/owlie/weird-weather#asd14",
-        note: "Lenticular clouds form in waves when stable air crosses a barrier. Rising air feeds the cloud while descending, warming air evaporates it, so the cloud moves little.",
+        title: "Whitby Museum — Tempest Prognosticator",
+        url: "https://whitbymuseum.org.uk/tempest-prognosticator/",
+        note: "The museum describes twelve live leeches in bottles, each connected by a whalebone trigger and wire to a bell hammer; their climbing was intended to announce an approaching storm.",
       },
     },
     {
       key: "weather-fata-morgana",
-      question: "What is a Fata Morgana?",
-      answer:
-        "A complex mirage that can turn distant scenery into apparently floating cities, cliffs, or islands.",
+      question:
+        "What unexpected obstacle prevented Donald MacMillan's Arctic expedition from reaching Crocker Land?",
+      answer: "The destination was a mirage, not a real landmass.",
       source: {
-        title: "American Meteorological Society — Glossary: Fata morgana",
-        url: "https://glossary.ametsoc.org/wiki/fata-morgana/",
-        note: "The glossary describes fanciful apparent cities, mountains, forests, and islands produced by mirages, most often multiple-image superior mirages with magnification.",
+        title:
+          "Bowdoin College, Peary-MacMillan Arctic Museum — A Glimmer on the Polar Sea: The Crocker Land Expedition, 1913-1917",
+        url: "https://www.bowdoin.edu/arctic-museum/exhibits/2014/crocker-land-expedition.html",
+        note: "The museum's exhibition account says the spring 1914 sledging expedition established that Crocker Land was a mirage.",
       },
     },
     {
-      key: "weather-green-flash",
-      question: "Why can the last visible sliver of the setting sun briefly look emerald-colored?",
-      answer:
-        "Atmospheric refraction separates colors, and a mirage can magnify the sun's thin green upper rim into a green flash.",
+      key: "weather-thunderstorm-antimatter",
+      question:
+        "What science-fiction-sounding material did NASA's Fermi telescope detect being hurled into space by thunderstorms?",
+      answer: "Antimatter: beams containing positrons, the electron's antimatter counterpart.",
       source: {
-        title: "American Meteorological Society — Glossary: Green flash",
-        url: "https://glossary.ametsoc.org/wiki/green-flash/",
-        note: "Refraction displaces shorter wavelengths more strongly. The glossary distinguishes the ordinary narrow green rim from striking flashes involving magnified mirage images.",
+        title: "NASA — NASA's Fermi Catches Thunderstorms Hurling Antimatter into Space",
+        url: "https://www.nasa.gov/universe/nasas-fermi-catches-thunderstorms-hurling-antimatter-into-space/",
+        note: "Fermi detected the gamma-ray signature of positrons annihilating against spacecraft electrons; NASA identifies the particle beams as products of terrestrial thunderstorms.",
       },
     },
     {
       key: "weather-morning-glory",
       question:
-        "What is the Morning Glory that sometimes sweeps past northern Australia's Gulf of Carpentaria?",
+        "What immense moving formation sometimes crosses the Gulf of Carpentaria early in the morning?",
       answer:
-        "A moving wind squall often marked by an immense, low, rolling cloud stretching from horizon to horizon.",
+        "A long, low roll of cloud stretching from horizon to horizon, accompanying the wind squall known as the Morning Glory.",
       source: {
         title: "American Meteorological Society — Glossary: Morning glory",
         url: "https://glossary.ametsoc.org/wiki/morning-glory/",
@@ -127,8 +130,8 @@ export const weatherAnomalies = definePack(
     {
       key: "weather-animal-rain",
       question:
-        "What natural mechanism is proposed for reports of fish suddenly falling onto land?",
-      answer: "A waterspout can lift small aquatic animals and later drop them elsewhere.",
+        "What extraordinary kind of shower has the Royal Meteorological Society attributed to waterspouts picking up unexpected cargo?",
+      answer: "Fish or frogs falling from the sky after being lifted out of a body of water.",
       source: {
         title: "Royal Meteorological Society — Spooky weather: Plague of frogs",
         url: "https://www.rmets.org/metmatters/spooky-weather",
@@ -137,9 +140,10 @@ export const weatherAnomalies = definePack(
     },
     {
       key: "weather-red-sprites",
-      question: "What are the fleeting red sprites sometimes caught by high-speed cameras?",
+      question:
+        "What can high-speed cameras catch above the tops of active thunderstorms that an ordinary glance usually misses?",
       answer:
-        "Brief luminous discharges high above thunderstorms, often with branching tendrils and lasting only milliseconds.",
+        "Red, jellyfish-like flashes with branching tendrils, called sprites, lasting only milliseconds.",
       source: {
         title: "American Meteorological Society — Glossary: Sprite",
         url: "https://glossary.ametsoc.org/wiki/sprite/",
@@ -147,23 +151,23 @@ export const weatherAnomalies = definePack(
       },
     },
     {
-      key: "weather-light-pillars",
+      key: "weather-clouds-meteor-smoke",
       question:
-        "What can make ordinary streetlights appear to fire tall colored beams into the night sky?",
+        "What unexpected ingredient did NASA find inside the ice crystals of high-altitude luminous clouds?",
       answer:
-        "Flat ice crystals suspended in the air reflect the lights into apparent vertical columns called light pillars.",
+        "Dust left by burning meteors; water freezes around the tiny particles to help build the clouds.",
       source: {
-        title: "National Weather Service — Owlie's Weird Weather: Light Pillar",
-        url: "https://www.weather.gov/owlie/weird-weather#asd9",
-        note: "The NWS explains that nearly horizontal, plate-shaped ice crystals reflect strong light sources, including streetlights, producing apparent columns.",
+        title: "NASA — Meteor Smoke Makes Strange Clouds",
+        url: "https://www.nasa.gov/missions/aim/meteor-smoke-makes-strange-clouds/",
+        note: "NASA's AIM mission detected meteoritic material embedded in noctilucent-cloud ice crystals, supporting meteor smoke as the particles around which the ice forms.",
       },
     },
     {
       key: "weather-aircraft-fallstreak-hole",
       question:
-        "How can an aircraft leave a widening circular gap in an otherwise unbroken cloud layer?",
+        "What lasting mark can an ordinary aircraft leave in an otherwise solid layer of cloud, apart from a contrail?",
       answer:
-        "It triggers ice formation in supercooled droplets; the growing crystals fall out and leave a hole behind.",
+        "A widening circular hole: it can trigger ice crystals that grow and fall out of the cloud.",
       source: {
         title: "NOAA NESDIS — Fallstreak Clouds",
         url: "https://www.nesdis.noaa.gov/fallstreak-clouds",
@@ -171,20 +175,21 @@ export const weatherAnomalies = definePack(
       },
     },
     {
-      key: "weather-mammatus-pouches",
-      question: "What does a display of mammatus look like?",
-      answer:
-        "Rows of rounded pouches hanging from a cloud's underside, often beneath a thunderstorm's anvil.",
+      key: "weather-wragge-rain-cannons",
+      question:
+        "What did Queensland meteorologist Clement Wragge buy in an attempt to end the drought of 1902?",
+      answer: "Vortex cannons, which were supposed to coax rain from the clouds by firing upward.",
       source: {
-        title: "National Weather Service — Cloud Classification",
-        url: "https://www.weather.gov/lmk/cloud_classification",
-        note: "Mammatus are described as a drooping, pouch-like cloud underside, most often beneath an anvil; their presence alone does not establish severe weather.",
+        title: "Queensland State Archives — Clement Lindley Wragge and Queensland meteorology",
+        url: "https://blogs.archives.qld.gov.au/2016/09/09/clement-lindley-wragge-and-queensland-meteorology/",
+        note: "The archive describes Wragge's purchase of Stiger vortex cannons to break the 1902 drought and preserves his report and illustrations; the claim was that the cannons could bring rain.",
       },
     },
     {
       key: "weather-diamond-dust",
-      question: "What is diamond dust?",
-      answer: "Tiny ice crystals falling from an apparently cloudless sky.",
+      question: "What can fall out of an apparently cloudless sky on a bitterly cold day?",
+      answer:
+        "Tiny sparkling ice crystals: a fall of diamond dust without an obvious cloud overhead.",
       source: {
         title: "American Meteorological Society — Glossary: Diamond dust",
         url: "https://glossary.ametsoc.org/wiki/diamond-dust/",
@@ -192,54 +197,56 @@ export const weatherAnomalies = definePack(
       },
     },
     {
-      key: "weather-fogbow-whiteness",
+      key: "weather-smog-opera",
       question:
-        "Why can an outdoor bow look like a broad white arc rather than a band of distinct colors?",
-      answer:
-        "Tiny fog droplets spread and overlap its colors, creating a pale fogbow instead of a vivid rain shower's rainbow.",
+        "Why did a performance of La Traviata at London's Sadler's Wells have to stop after its first act in 1952?",
+      answer: "The theatre had filled with smog, even though the performance was indoors.",
       source: {
-        title: "American Meteorological Society — Glossary: Cloudbow",
-        url: "https://glossary.ametsoc.org/wiki/cloudbow/",
-        note: "Also called a fogbow or white rainbow, a cloudbow forms in droplets smaller than raindrops and has a broad, whitish, faintly colored appearance.",
+        title: "BBC News — The Great Smog of London",
+        url: "https://news.bbc.co.uk/2/hi/england/2545759.stm",
+        note: "The BBC's anniversary account states that La Traviata was abandoned after the first act because Sadler's Wells was so full of smog.",
       },
     },
     {
       key: "weather-moonlight-rainbow",
-      question: "What can produce a rainbow outdoors long after the sun has set?",
-      answer:
-        "Moonlight can illuminate droplets to make a moonbow, often too dim for the eye to distinguish its colors.",
+      question:
+        "What unusual attraction brings visitors to Kentucky's Cumberland Falls after dark?",
+      answer: "A rainbow made by moonlight shining through the waterfall's mist.",
       source: {
-        title: "American Meteorological Society — Glossary: Lunar rainbow",
-        url: "https://glossary.ametsoc.org/wiki/lunar-rainbow/",
-        note: "A lunar rainbow uses the moon as its light source. Low luminance and reduced human color sensitivity can make it appear nearly colorless.",
+        title: "Kentucky Historical Society — Cumberland Falls Moonbow",
+        url: "https://explorekyhistory.ky.gov/items/show/727",
+        note: "The historical-marker account describes the falls' lunar rainbow, its appearance around full moons, and generations of visitors travelling there at night to see it.",
       },
     },
     {
-      key: "weather-circumzenithal-arc",
-      question: "What is a circumzenithal arc?",
+      key: "weather-stormfury-second-eyewall",
+      question:
+        "What counterintuitive change did Project Stormfury try to make to hurricanes to weaken their winds?",
       answer:
-        "A brightly colored, upside-down-looking arc high overhead, made by sunlight passing through horizontal ice crystals.",
+        "Build a second, wider wall of storm clouds around the eye; spreading the storm out was meant to weaken its winds.",
       source: {
-        title: "American Meteorological Society — Glossary: Circumzenithal arc",
-        url: "https://glossary.ametsoc.org/wiki/circumzenithal-arc/",
-        note: "Light enters the horizontal bases of oriented ice crystals and exits their vertical sides, forming an arc centered on the zenith when the sun is low.",
+        title: "NOAA Atlantic Oceanographic and Meteorological Laboratory — Project STORMFURY",
+        url: "https://www.aoml.noaa.gov/hrd/hrd_sub/sfury.html",
+        note: "Stormfury seeded convection outside hurricane eyewalls with silver iodide to promote a larger replacement eyewall. NOAA explains that natural eyewall changes confounded the apparent results.",
       },
     },
     {
-      key: "weather-anticrepuscular-rays",
-      question: "Why can shafts of sunlight seem to converge on the horizon opposite the sun?",
-      answer:
-        "Parallel light-and-shadow bands appear to converge in perspective; their far-side display is called anticrepuscular rays.",
+      key: "weather-krakatoa-blue-moon",
+      question:
+        "What unexpected change in the Moon's appearance was reported after Krakatoa erupted in 1883?",
+      answer: "It often looked blue: volcanic particles filtered out red light.",
       source: {
-        title: "American Meteorological Society — Glossary: Anticrepuscular rays",
-        url: "https://glossary.ametsoc.org/wiki/anticrepuscular-rays/",
-        note: "Anticrepuscular rays extend crepuscular rays across the sky toward the antisolar point. NWS Owlie's Weird Weather explains that the apparent convergence is perspective.",
+        title: "NASA Science — Summer Blue Moon",
+        url: "https://science.nasa.gov/science-research/planetary-science/27jul_bluemoon/",
+        note: "NASA describes blue-colored moons after Krakatoa's eruption and explains that particles around a micron across scattered red light while allowing blue light through.",
       },
     },
     {
       key: "weather-belt-of-venus",
-      question: "What is the Belt of Venus?",
-      answer: "A pinkish band above Earth's shadow, visible opposite the sun around twilight.",
+      question:
+        "What casts the vast blue-gray band that can rise along the horizon opposite a setting sun?",
+      answer:
+        "Earth itself: the planet's shadow is visible against the atmosphere, often with a pink band above it.",
       source: {
         title: "National Weather Service — Owlie's Weird Weather: Earth's Shadow",
         url: "https://www.weather.gov/owlie/weird-weather#asd15",
@@ -249,9 +256,9 @@ export const weatherAnomalies = definePack(
     {
       key: "weather-ball-lightning-reports",
       question:
-        "What has been reported drifting near recent strike sites before vanishing, sometimes with a bang?",
+        "What strange form has lightning reportedly taken when it lingers near a strike site?",
       answer:
-        "Ball lightning: short-lived glowing spheres whose natural formation mechanism remains unresolved.",
+        "A glowing ball drifting for several seconds before vanishing, sometimes with a bang; its natural mechanism remains unresolved.",
       source: {
         title: "American Meteorological Society — Glossary: Ball lightning",
         url: "https://glossary.ametsoc.org/wiki/ball-lightning/",
@@ -259,67 +266,70 @@ export const weatherAnomalies = definePack(
       },
     },
     {
-      key: "weather-thunder-inversion",
+      key: "weather-pressure-tsunami",
+      question: "What coastal hazard can fast-moving changes in atmospheric pressure create?",
+      answer:
+        "A tsunami-like wave, called a meteotsunami, driven across the water by the weather system overhead.",
+      source: {
+        title: "NOAA National Ocean Service — Weird Ocean Phenomena",
+        url: "https://oceanservice.noaa.gov/ocean/weird-ocean-weather.html",
+        note: "NOAA explains that air-pressure disturbances can generate meteotsunamis affecting the entire water column and that harbours, inlets and bays can intensify them.",
+      },
+    },
+    {
+      key: "weather-kerala-algal-rain",
       question:
-        "How can the arrangement of warm and cool air make the same thunderclap sound unusually loud at ground level?",
+        "What did investigators identify as the coloring matter in samples of Kerala's red rain in 2001?",
       answer:
-        "A warm layer above cooler air can bend sound back toward the ground, adding to the direct thunderclap.",
-      source: {
-        title: "NOAA JetStream — The Sound of Thunder",
-        url: "https://www.noaa.gov/jetstream/lightning/sound-of-thunder",
-        note: "NOAA explains that an inversion refracts sound toward Earth because sound travels faster in warmer air; the extra sound can amplify perceived thunder.",
-      },
-    },
-    {
-      key: "weather-thunder-long-rumble",
-      question:
-        "Why can a momentary flash be followed by a long rolling rumble even across a flat landscape?",
-      answer:
-        "Sound from different parts of the lightning channel reaches the listener at different times.",
-      source: {
-        title: "American Meteorological Society — Glossary: Thunder",
-        url: "https://glossary.ametsoc.org/wiki/thunder/",
-        note: "The glossary says thunder's rumble chiefly comes from differing arrival times along the sinuous lightning channel, with echoes and repeated strokes contributing secondarily.",
-      },
-    },
-    {
-      key: "weather-graupel-pellets",
-      question: "What is graupel?",
-      answer:
-        "Soft, crushable ice pellets formed when supercooled droplets freeze onto falling ice crystals or snowflakes.",
-      source: {
-        title: "American Meteorological Society — Glossary: Graupel",
-        url: "https://glossary.ametsoc.org/wiki/graupel/",
-        note: "The glossary defines white, opaque, easily crushed ice particles produced as supercooled droplets accrete and freeze onto falling ice crystals; operationally called snow pellets.",
-      },
-    },
-    {
-      key: "weather-saharan-dirty-rain",
-      question: "Why did rain leave reddish deposits on cars in southern England in March 2022?",
-      answer: "It washed airborne Saharan dust out of the sky and onto the cars.",
+        "Large numbers of spores from a lichen-forming alga, rather than desert dust or pollution.",
       source: {
         title:
-          "Royal Meteorological Society — Orange skies and dusty cars? Blame it on Saharan sand",
-        url: "https://www.rmets.org/metmatters/orange-skies-and-dusty-cars",
-        note: "The article documents the March 2022 dust plume reaching southeast England and explains that rainfall washed it onto surfaces, leaving reddish deposits.",
+          "Centre for Earth Science Studies and Tropical Botanic Garden and Research Institute — Coloured Rain: A Report on the Phenomenon",
+        url: "https://iangoddard.com/sampath2001.pdf",
+        note: "The November 2001 report identifies Trentepohlia spores in Changanacherry rain samples; cultures matched local lichens, while chemical analysis ruled out meteoric, volcanic and desert dust.",
+      },
+    },
+    {
+      key: "weather-saussure-human-hair",
+      question:
+        "What unlikely material did Horace Bénédict de Saussure use as the working element of his humidity-measuring instrument?",
+      answer: "A human hair, whose length changes as the air becomes wetter or drier.",
+      source: {
+        title: "Science Museum Group — De Saussure Hair Hygrometer, 1815-1841",
+        url: "https://collection.sciencemuseumgroup.org.uk/objects/co54855/de-saussure-hair-hygrometer-1815-1841",
+        note: "The museum explains that Saussure's mechanical hygrometer measured humidity through the expansion and contraction of a human hair, calibrated under saturated and dry conditions.",
+      },
+    },
+    {
+      key: "weather-honeybee-electric-field",
+      question:
+        "What passing visitors caused a sudden change in an atmospheric electric-field monitor at a Bristol research site?",
+      answer: "A swarm of electrically charged honeybees passing overhead.",
+      source: {
+        title:
+          "iScience — Observed electric charge of insect swarms and their contribution to atmospheric electricity",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9684032/",
+        note: "The study measured an increase in atmospheric potential gradient as a bee swarm passed over a field mill in Langford, while a control instrument 50 metres away did not show it.",
       },
     },
     {
       key: "weather-haboob-wall",
-      question: "What is a haboob?",
-      answer: "A moving wall of dust raised by strong outflow from a thunderstorm.",
+      question:
+        "Once a driver has parked completely off the road in a dust storm, what counterintuitive step does the National Weather Service recommend?",
+      answer:
+        "Turn every light off, including the brake lights, so other drivers do not follow them off the road and collide with the parked car.",
       source: {
-        title: "National Weather Service — Owlie's Weird Weather: Haboob",
-        url: "https://www.weather.gov/owlie/weird-weather#asd3",
-        note: "The NWS describes thunderstorm outflow or a microburst lifting dust and debris into a wall that may be thousands of feet high and miles wide.",
+        title: "National Weather Service — Dust Storms and Haboobs",
+        url: "https://www.weather.gov/safety/wind-dust-storm",
+        note: "The NWS instructs drivers who have pulled fully off the pavement to stop, turn lights off, set the emergency brake and release the brake pedal; approaching drivers have followed parked cars' lights and collided with them.",
       },
     },
     {
       key: "weather-frost-flower-ribbons",
       question:
-        "How can a dead-looking weed produce delicate white ribbons at its base on a freezing morning?",
+        "What delicate decoration can appear around the base of a dead-looking weed on a freezing morning?",
       answer:
-        "Groundwater drawn up its stem freezes, splits the stem, and extrudes curling sheets of ice called frost flowers.",
+        "Curling ribbons of ice, pushed out through splits in the stem as water drawn from the soil freezes.",
       source: {
         title: "National Weather Service — Frost Flowers",
         url: "https://www.weather.gov/lmk/frost_flowers",
@@ -328,13 +338,13 @@ export const weatherAnomalies = definePack(
     },
     {
       key: "weather-parhelion-mock-suns",
-      question: "What is a parhelion?",
+      question: "What sight in the sky did Jakob Hutter describe in 1533 as 'no small miracle'?",
       answer:
-        "A bright mock sun beside the real one, produced when sunlight is refracted through airborne ice crystals.",
+        "Three suns at once: the real sun flanked by two bright mock suns made by airborne ice crystals.",
       source: {
-        title: "National Weather Service — What Causes Halos, Sundogs and Sun Pillars?",
-        url: "https://www.weather.gov/arx/why_halos_sundogs_pillars",
-        note: "Sundogs, also called parhelia or mock suns, are colored spots about 22 degrees to either side of the sun produced by refraction through ice crystals.",
+        title: "National Weather Service — Owlie's Weird Weather: Parhelion, Sun Dog, Mock Sun",
+        url: "https://www.weather.gov/owlie/weird-weather#asd8",
+        note: "The NWS quotes Hutter's 1533 report of three suns visible for about an hour and identifies the two fainter ones as parhelia, or mock suns.",
       },
     },
     {

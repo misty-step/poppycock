@@ -23,8 +23,8 @@ export const medicalCuriosities = definePack(
     {
       key: "medical-perkins-tractors",
       question:
-        "What did Elisha Perkins claim his little metal rods could draw out of a sick person in 1795?",
-      answer: "Excess electricity, which he claimed was responsible for disease.",
+        "How were Elisha Perkins’s little metal rods supposed to cure illness in the 1790s?",
+      answer: "By drawing out excess electricity, which he claimed caused disease.",
       source: {
         title: "Science Museum Group — Two Perkins tractors",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co140928/two-perkins-tractors",
@@ -34,8 +34,8 @@ export const medicalCuriosities = definePack(
     {
       key: "medical-mechanical-leech",
       question:
-        "What living creature did Heurteloup replace with a small brass instrument in nineteenth-century treatment?",
-      answer: "A leech: the instrument was a mechanical substitute for bloodletting.",
+        "What was Heurteloup’s small brass contraption supposed to do for nineteenth-century patients?",
+      answer: "Draw blood like a leech, replacing the live animal with a mechanical instrument.",
       source: {
         title: "Science Museum Group — Brass artificial leech",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co141002/brass-artificial-leech",
@@ -55,8 +55,8 @@ export const medicalCuriosities = definePack(
     },
     {
       key: "medical-bezoar-antidote",
-      question: "What was a bezoar, prized by some historical healers as an antidote?",
-      answer: "A stony mass formed inside an animal’s stomach or intestines.",
+      question: "What unlikely object did historical healers obtain from goats to counter poison?",
+      answer: "A bezoar: a stony mass formed inside the animal’s digestive system.",
       source: {
         title: "Science Museum Group — Bezoar stone, from a goat",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co106471/bezoar-stone-from-a-goat-c-1801-1920",
@@ -66,8 +66,8 @@ export const medicalCuriosities = definePack(
     {
       key: "medical-earthworm-oil",
       question:
-        "What creatures were boiled with olive oil and wine to make an eighteenth-century preparation for aching joints?",
-      answer: "Earthworms.",
+        "What was boiled with olive oil and wine to make an eighteenth-century remedy for aching joints?",
+      answer: "Earthworms, in a preparation sold as a medicinal oil.",
       source: {
         title: "Science Museum Group — Syrup jar for Oil of Earthworms",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co78875/syrup-jar-for-oil-of-earthworms-italy-1731-1770",
@@ -76,8 +76,7 @@ export const medicalCuriosities = definePack(
     },
     {
       key: "medical-snail-chocolate",
-      question:
-        "What unexpected animal ingredient appeared in medicinal chocolate described by Figuier in 1840?",
+      question: "What unlikely ingredient did Figuier’s 1840 medicinal chocolate contain?",
       answer: "Snails, used in preparations for chest complaints and other ailments.",
       source: {
         title: "PubMed Central — Helix and Drugs",
@@ -98,9 +97,8 @@ export const medicalCuriosities = definePack(
     },
     {
       key: "medical-charles-royal-treatment",
-      question:
-        "What did Charles II personally do for thousands of people with swollen glands, supposedly to cure them?",
-      answer: "Touch them: the royal touch was believed to cure scrofula.",
+      question: "What treatment did thousands of sick people receive personally from Charles II?",
+      answer: "His touch, which was believed to cure the gland disease scrofula.",
       source: {
         title: "Wellcome Collection — When monarchs healed the sick",
         url: "https://wellcomecollection.org/stories/when-monarchs-healed-the-sick",
@@ -121,8 +119,8 @@ export const medicalCuriosities = definePack(
     {
       key: "medical-laennec-paper",
       question:
-        "What improvised object did René Laennec use to examine a patient in 1816 before developing his famous instrument?",
-      answer: "A sheet of paper rolled into a tube, used to listen to her heart.",
+        "What did a French physician improvise during an 1816 examination, inspiring a new medical instrument?",
+      answer: "A sheet of paper rolled into a tube, used to listen to a patient’s heart.",
       source: {
         title: "Science Museum — Understanding bodily functions",
         url: "https://www.sciencemuseum.org.uk/objects-and-stories/medicine/understanding-bodily-functions",
@@ -130,21 +128,21 @@ export const medicalCuriosities = definePack(
       },
     },
     {
-      key: "medical-susruta-ants",
+      key: "medical-kussmaul-performer",
       question:
-        "What tiny visitors helped Susruta recognize an unusual property of some patients’ urine?",
-      answer: "Black ants, attracted to its sugar in what is now recognized as diabetes.",
+        "What kind of performer helped Adolf Kussmaul develop a medical instrument in 1868?",
+      answer: "A sword swallower, who helped him develop a rigid tube for looking inside the body.",
       source: {
-        title: "Science Museum — Understanding bodily functions",
-        url: "https://www.sciencemuseum.org.uk/objects-and-stories/medicine/understanding-bodily-functions",
-        note: "The museum attributes to Susruta the observation that black ants were attracted to the sugar in some people’s urine, a characteristic of diabetes mellitus.",
+        title: "BMJ — Sword swallowing uncertainties",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC1283200/",
+        note: "The article states that a sword swallower helped Kussmaul develop a rigid endoscope in 1868 using a straight tube, mirrors and a gasoline lamp.",
       },
     },
     {
       key: "medical-frog-test",
       question:
-        "Why were some twentieth-century laboratories injecting women’s urine into live frogs?",
-      answer: "To test for pregnancy: a female frog laying eggs could indicate a positive result.",
+        "Before home testing kits, how could a laboratory frog help reveal that a woman was pregnant?",
+      answer: "Her urine was injected into a female frog; egg-laying could signal pregnancy.",
       source: {
         title: "Wellcome Collection — Primodos, paternalism and the fight to be heard",
         url: "https://wellcomecollection.org/stories/primodos--paternalism-and-the-fight-to-be-heard",
@@ -197,9 +195,8 @@ export const medicalCuriosities = definePack(
     },
     {
       key: "medical-bayer-remedy",
-      question:
-        "What drug did Bayer market from 1898 as a cough suppressant and supposedly non-addictive substitute for morphine?",
-      answer: "Heroin.",
+      question: "What surprising product did Bayer sell as a cough treatment beginning in 1898?",
+      answer: "Heroin, also advertised as a supposedly non-addictive substitute for morphine.",
       source: {
         title: "Science Museum Group — Reise-Apotheke drug pouch by Bayer",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co195776/reise-apotheke-drug-pouch-by-bayer",
@@ -220,9 +217,9 @@ export const medicalCuriosities = definePack(
     {
       key: "medical-rete-mirabile",
       question:
-        "What was the rete mirabile that Galen mistakenly placed at the base of the human brain?",
+        "What imaginary task did Galen assign to a network of vessels he thought lay beneath the human brain?",
       answer:
-        "A network of blood vessels supposedly converting “vital spirit” into “animal spirit.”",
+        "Turning “vital spirit” into “animal spirit”; the network he described does not exist in humans.",
       source: {
         title: "PubMed — The rete mirabile of the cranial base: a millenary legend",
         url: "https://pubmed.ncbi.nlm.nih.gov/16723900/",
@@ -254,7 +251,7 @@ export const medicalCuriosities = definePack(
     {
       key: "medical-proust-asthma",
       question:
-        "What surprising product did Marcel Proust repeatedly light during a severe asthma attack in 1901?",
+        "What did Marcel Proust use for asthma in 1901 that sounds as though it would make breathing worse?",
       answer: "Special anti-asthma cigarettes.",
       source: {
         title: "PubMed Central — “Divine Stramonium”: The Rise and Fall of Smoking for Asthma",
@@ -265,8 +262,9 @@ export const medicalCuriosities = definePack(
     {
       key: "medical-medicated-sponge",
       question:
-        "In medieval accounts of surgery, what was a physician trying to achieve with a medicated sponge held near the patient’s nose?",
-      answer: "Induce sleep or insensibility to reduce the pain of an operation.",
+        "In medieval surgical accounts, how could an ordinary sponge prepare a patient for an operation?",
+      answer:
+        "It was soaked in narcotic drugs and held near the nose to induce sleep or insensibility.",
       source: {
         title: "PubMed Central — An Arabic surgeon, Ibn al Quff’s account of surgical pain relief",
         url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4173333/",
@@ -275,9 +273,8 @@ export const medicalCuriosities = definePack(
     },
     {
       key: "medical-smoked-paper",
-      question:
-        "What did the moving lever of Robert Dudgeon’s wrist-mounted apparatus trace onto smoked paper?",
-      answer: "The patient’s pulse.",
+      question: "What did Robert Dudgeon’s 1876 apparatus let a doctor put on paper?",
+      answer: "A patient’s pulse, traced by a wrist-strapped lever onto smoke-blackened paper.",
       source: {
         title: "Science Museum Group — Robert Dudgeon’s sphygmograph",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co93675/robert-dudgeons-sphygmograph",
@@ -296,42 +293,45 @@ export const medicalCuriosities = definePack(
       },
     },
     {
-      key: "medical-antimony-cup",
+      key: "medical-santorio-dining-chair",
       question:
-        "What was the intended effect of drinking wine left standing in a seventeenth-century antimony cup?",
-      answer: "Sweating and vomiting, caused by toxic antimony dissolving into the wine.",
+        "How was Santorio’s seventeenth-century dining chair supposed to tell its occupant to stop eating?",
+      answer:
+        "It hung from a balance and sank when the diner had consumed a preset weight of food.",
       source: {
-        title: "Science Museum Group — Antimony cup, Europe, 1501–1700",
-        url: "https://collection.sciencemuseumgroup.org.uk/objects/co142080/antimony-cup-europe-1501-1700",
-        note: "Wine stood in antimony cups so a little metal dissolved; the resulting toxic preparation was used to purge illness through sweating and vomiting.",
+        title: "NTM — The Weighing Chair of Sanctorius Sanctorius: A Replica",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5993855/",
+        note: "The paper quotes Santorio’s 1625 description: the suspended chair descended when food brought the sitter to a preset weight, signalling the end of the meal.",
       },
     },
     {
-      key: "medical-ketham-wheel",
+      key: "medical-auenbrugger-casks",
       question:
-        "What was the colour wheel in Johannes de Ketham’s 1491 medical compilation intended to classify?",
-      answer: "Twenty different shades of urine.",
+        "According to the traditional story, what innkeeper’s trick inspired Auenbrugger’s way of examining the chest?",
+      answer: "Tapping wine casks to judge how full they were by the sound.",
       source: {
-        title: "Science Museum — Understanding bodily functions",
-        url: "https://www.sciencemuseum.org.uk/objects-and-stories/medicine/understanding-bodily-functions",
-        note: "The museum describes the 1491 Fasciculus Medicinae, attributed to de Ketham, and its twenty-shade urine colour wheel with diagnostic interpretations.",
+        title: "Christie’s — Auenbrugger, Inventum novum, 1761",
+        url: "https://www.christies.com/en/lot/lot-933354",
+        note: "The catalogue describes chest percussion and explicitly labels as legend the account that the innkeeper’s son drew inspiration from thumping wine casks to determine their fullness.",
       },
     },
     {
-      key: "medical-artificial-issue",
+      key: "medical-cox-chair",
       question:
-        "In older medicine, what did a practitioner deliberately create when they made an “issue”?",
-      answer: "An artificial ulcer intended to discharge pus and relieve another affected part.",
+        "How did Joseph Mason Cox propose to calm an agitated patient with a special chair in 1804?",
+      answer: "Spin the seated patient around, hoping to produce tranquillity and sleep.",
       source: {
-        title: "Webster’s 1913 — Issue",
-        url: "https://www.websters1913.com/words/Issue",
-        note: "Medical sense 7 defines an issue as an artificial ulcer, usually in the arm or leg, made to produce pus as a supposed treatment.",
+        title: "Frontiers in Psychiatry — Cox’s Chair Revisited: Can Spinning Alter Mood States?",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3796758/",
+        note: "The introduction quotes Cox’s 1804 description of a circulating chair and his claims that rotation calmed psychiatric patients and induced sleep; the historical practice was later abandoned.",
       },
     },
     {
       key: "medical-trephining",
-      question: "What did the ancient procedure called trephining involve?",
-      answer: "Making an opening in the skull.",
+      question:
+        "What operation had the owner of a healed Neolithic skull in the Science Museum survived?",
+      answer:
+        "Having an opening cut into the skull; healing around it shows the person lived afterwards.",
       source: {
         title: "Science Museum Group — Excavated neolithic skull",
         url: "https://collection.sciencemuseumgroup.org.uk/objects/co106403/excavated-neolithic-skull",

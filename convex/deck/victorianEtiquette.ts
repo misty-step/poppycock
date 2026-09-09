@@ -90,9 +90,9 @@ export const victorianEtiquette = definePack(
     {
       key: "etiquette-hartley-mourning-guest",
       question:
-        "What did Florence Hartley expect a hostess to give up while accommodating a guest in mourning?",
+        "A houseguest is in mourning, but her hostess is not. What sacrifice did Florence Hartley nevertheless expect of the hostess?",
       answer:
-        "Invitations to parties and public amusements, even though the hostess herself was not bereaved.",
+        "Declining invitations to parties and public amusements for as long as the mourning guest stayed.",
       source: {
         title:
           "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter VII",
@@ -112,45 +112,47 @@ export const victorianEtiquette = definePack(
       },
     },
     {
-      key: "etiquette-mourning-first-year",
+      key: "etiquette-hartley-invitation-post",
       question:
-        "Under the widow's first-year mourning convention described by the V&A, what had to disappear besides colorful clothes?",
+        "What convenient way of sending party invitations did Florence Hartley condemn as ill-bred in 1860?",
       answer:
-        "Jewellery and decorative trimmings: full mourning called for unembellished, matte-black garments.",
-      source: {
-        title: "Victoria and Albert Museum — Black Crêpe Mourning Shawl",
-        url: "https://collections.vam.ac.uk/item/O1463595/black-crepe-mourning/",
-        note: "The V&A describes a year of full mourning without embellishment or jewellery, after which a widow could introduce trimmings and simple jewellery. Other manuals varied.",
-      },
-    },
-    {
-      key: "etiquette-hartley-veil-transition",
-      question:
-        "What change to a woman's face covering marked the first easing of mourning in Hartley's 1860 guide?",
-      answer: "The heavy crape veil gave way to a veil of plain black net.",
+        "Posting them. A servant, or someone hired especially for the job, should deliver them.",
       source: {
         title:
-          "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter II",
-        url: "https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_II",
-        note: "Hartley prescribes a deep crape veil over face and bonnet in deep mourning, then plain black net in the next degree. She explicitly declines to prescribe universal durations.",
+          "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter V",
+        url: "https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_V",
+        note: "Hartley says invitations should be sent by one's own servant or a specially hired messenger, calling delivery through the post-office ill-bred and unreliable.",
       },
     },
     {
-      key: "etiquette-half-mourning-colors",
+      key: "etiquette-hartley-third-person-rebuff",
       question:
-        "What cautious return to color could signal that a Victorian widow had entered 'half-mourning'?",
-      answer: "Grey and subtle shades of purple could reappear in her clothes.",
+        "How could a woman put an overfamiliar correspondent in his place without actually scolding him, according to Hartley?",
+      answer: "Reply in the third person, using the most formal language possible.",
       source: {
-        title: "Victoria and Albert Museum — Black Crêpe Mourning Shawl",
-        url: "https://collections.vam.ac.uk/item/O1463595/black-crepe-mourning/",
-        note: "The V&A's account of Victorian mourning dress says that a widow in half-mourning could introduce grey and subtle purple shades.",
+        title:
+          "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XV",
+        url: "https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XV",
+        note: "Hartley explicitly recommends a formal third-person reply to repel undue familiarity or impertinence; replying that way to a friendly letter implies offence.",
+      },
+    },
+    {
+      key: "etiquette-hartley-whole-sheet",
+      question:
+        "What small economy in personal correspondence did Hartley condemn as mean and slovenly?",
+      answer: "Writing on half a sheet of paper; even a three-line note deserved a whole sheet.",
+      source: {
+        title:
+          "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XV",
+        url: "https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XV",
+        note: "The letter-writing chapter says: 'Never write on a half sheet of paper' and requires a whole sheet even when writing only three lines.",
       },
     },
     {
       key: "etiquette-hartley-pocket-pincushion",
       question:
-        "Why did Hartley's 1860 guide recommend bringing a tiny pincushion to a dinner party?",
-      answer: "To pin your napkin to your belt so it would not slide off a silk or satin dress.",
+        "Why might a well-prepared dinner guest in 1860 have a tiny pincushion in her pocket?",
+      answer: "To pin her napkin to her belt so it would not slide off a silk or satin dress.",
       source: {
         title:
           "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XII",
@@ -171,35 +173,36 @@ export const victorianEtiquette = definePack(
       },
     },
     {
-      key: "etiquette-hartley-vegetable-limit",
+      key: "etiquette-hartley-servant-silence",
       question:
-        "What peculiar ceiling did Hartley place on the variety a lady could accept at dinner?",
-      answer: "No more than two vegetables.",
+        "Once dinner began, what did Hartley's ideal hostess stop doing, even if things were going wrong?",
+      answer:
+        "Speaking to the servants. Orders belonged before the meal; her attention now belonged to her guests.",
       source: {
         title:
-          "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XII",
-        url: "https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XII",
-        note: "After calling it ill-bred to accept everything offered, Hartley writes: 'Never take more than two vegetables.' This refers to vegetable dishes, not two individual vegetables.",
+          "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XI",
+        url: "https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XI",
+        note: "Hartley instructs the hostess to give orders before dinner and 'through the meal never speak to the servants,' even when matters go wrong.",
       },
     },
     {
-      key: "etiquette-hartley-wine-acknowledgement",
+      key: "etiquette-hartley-husband-address",
       question:
-        "How could a lady acknowledge an invitation to take wine without actually drinking, according to Hartley?",
-      answer: "Bow, raise the glass to her lips, then set it down again.",
+        "What perfectly ordinary way of asking after a married acquaintance's family did Hartley reject?",
+      answer:
+        "Asking after 'your husband' or 'your wife'; she insisted on 'Mr. Smith' or 'Mrs. Smith' instead.",
       source: {
         title:
-          "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XII",
-        url: "https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XII",
-        note: "Hartley explicitly permits declining wine; alternatively, touching the glass to the lips acknowledges the courtesy while avoiding actual consumption.",
+          "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter I",
+        url: "https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_I",
+        note: "The conversation chapter says never to enquire for 'your husband' or 'your wife,' directing callers to use the absent spouse's surname and title.",
       },
     },
     {
       key: "etiquette-hartley-fruit-surprise",
       question:
-        "What was Hartley's prescribed response to discovering a worm in your fruit at someone else's dinner?",
-      answer:
-        "Quietly hand the plate to a servant and ask for a clean one, concealing the discovery from the other guests.",
+        "What dinner-table discovery did Hartley expect a guest to conceal while quietly requesting a clean plate?",
+      answer: "A worm in a nut or piece of fruit.",
       source: {
         title:
           "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XII",
@@ -265,7 +268,7 @@ export const victorianEtiquette = definePack(
     {
       key: "etiquette-hartley-double-booking",
       question:
-        "In Hartley's 1860 guide, how should a woman repair accidentally promising the same whole dance to two men?",
+        "A woman has accidentally promised the same dance to two men. What remedy did Hartley's ballroom rules prescribe?",
       answer: "Sit out that dance altogether rather than choose one and offend the other.",
       source: {
         title:
@@ -277,7 +280,7 @@ export const victorianEtiquette = definePack(
     {
       key: "etiquette-hartley-shared-waltz",
       question:
-        "What surprising arrangement could a woman openly make for a polka or waltz in Hartley's ballroom guide?",
+        "What unusual booking arrangement did Hartley permit for a waltz but not for a quadrille?",
       answer: "Book one man for the first half and a different man for the second half.",
       source: {
         title:
@@ -301,9 +304,9 @@ export const victorianEtiquette = definePack(
     {
       key: "etiquette-hartley-too-perfect-dancing",
       question:
-        "What display of painstaking skill did Hartley say would actually look absurd at a ball?",
+        "What sort of technical excellence did Hartley say could make a dancer look absurd at a ball?",
       answer:
-        "Performing every step with dancing-school accuracy instead of moving naturally like the other guests.",
+        "Performing every step with dancing-school precision, rather than moving naturally like the other guests.",
       source: {
         title:
           "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XIX",
@@ -314,7 +317,7 @@ export const victorianEtiquette = definePack(
     {
       key: "etiquette-hartley-feather-distinction",
       question:
-        "What ballroom hair decoration did Hartley allow a married woman but deny an unmarried one?",
+        "In Hartley's ballroom, what could a married woman wear in her hair that an unmarried woman could not?",
       answer:
         "Feathers; an unmarried woman's hair should be decorated with flowers or ribbons instead.",
       source: {
@@ -338,26 +341,28 @@ export const victorianEtiquette = definePack(
       },
     },
     {
-      key: "etiquette-routledge-rejected-letter",
+      key: "etiquette-hartley-guest-nap",
       question:
-        "What should ordinarily happen to a written marriage proposal that a woman wished to reject, according to Routledge?",
-      answer: "She should answer it, not return the original letter to the suitor.",
+        "What preparation did Hartley recommend after dinner for a houseguest facing another late evening of entertainment?",
+      answer:
+        "Take a nap, so she would not look tired and appear unappreciative of her hostess's hospitality.",
       source: {
-        title: "Project Gutenberg — Routledge's Manual of Etiquette, Refusal by the Young Lady",
-        url: "https://www.gutenberg.org/cache/epub/12426/pg12426.html",
-        note: "A proposal letter 'must be answered, and certainly not returned' upon refusal, except where a prior repulse or other circumstances make it presumptuous and intrusive.",
+        title:
+          "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter VIII",
+        url: "https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_VIII",
+        note: "Hartley recommends sleeping after dinner if the family's social life keeps a guest out late, calling evening signs of weariness excessively rude.",
       },
     },
     {
-      key: "etiquette-hartley-chaperone-exemption",
+      key: "etiquette-hartley-opera-playbill",
       question:
-        "Which non-relative could take a young woman to public amusements without a chaperone under Hartley's 1860 rules?",
-      answer: "Her fiancé.",
+        "Why did Hartley tell a woman at the opera to avoid handling the printed programme?",
+      answer: "Its ink would soil her gloves, which she was supposed to keep on all evening.",
       source: {
         title:
           "Project Gutenberg — Florence Hartley, The Ladies' Book of Etiquette (1860), Chapter XX",
         url: "https://www.gutenberg.org/files/35123/35123-h/35123-h.htm#CHPTR_XX",
-        note: "Hartley allows a young lady to go with a relative or her intended spouse without a chaperone, 'but not otherwise.' This exemption is specific to that manual.",
+        note: "The opera section requires gloves throughout the evening and warns that handling play bills will soil them with printing ink in a few minutes.",
       },
     },
   ],

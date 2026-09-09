@@ -12,7 +12,7 @@ export const botanicalWonders = definePack(
     {
       key: "botanical-welwitschia-original-leaves",
       question:
-        "What does Welwitschia mirabilis keep growing instead of replacing, sometimes for more than a thousand years?",
+        "What does the desert plant welwitschia keep from seedlinghood, sometimes for more than a thousand years?",
       answer:
         "The same two true leaves it grew as a seedling; they lengthen, split and fray throughout its life.",
       source: {
@@ -24,7 +24,8 @@ export const botanicalWonders = definePack(
     },
     {
       key: "botanical-lowii-shrew-toilet",
-      question: "What does Nepenthes lowii receive from tree shrews in exchange for nectar?",
+      question:
+        "How does Low's pitcher plant turn a visiting tree shrew into a source of nutrition without eating it?",
       answer:
         "Droppings: its pitchers fit beneath feeding tree shrews like miniature toilets and absorb nutrients from their poo.",
       source: {
@@ -36,7 +37,7 @@ export const botanicalWonders = definePack(
     },
     {
       key: "botanical-hemsleyana-sonar",
-      question: "How does Nepenthes hemsleyana advertise a place to stay to passing bats?",
+      question: "How does one pitcher plant help woolly bats find it among dense vegetation?",
       answer:
         "Its enlarged pitcher opening reflects the bats' ultrasound calls, helping them find the roost hidden in vegetation.",
       source: {
@@ -49,9 +50,9 @@ export const botanicalWonders = definePack(
     {
       key: "botanical-rothschild-false-aphids",
       question:
-        "What does Paphiopedilum rothschildianum appear to offer insects looking for a nursery?",
+        "Why do wasps mistake the flowers of Rothschild's slipper orchid for a good place to lay their eggs?",
       answer:
-        "Clusters of aphids; the apparent insects are only spots on the flower, which tricks visiting wasps into pollinating it.",
+        "Dark spots imitate clusters of aphids; the wasps are fooled into laying eggs on the flower and pollinating it.",
       source: {
         title:
           "Royal Botanic Gardens, Kew - 5 extraordinary plants you would not expect to find at Kew",
@@ -62,7 +63,7 @@ export const botanicalWonders = definePack(
     {
       key: "botanical-aristolochia-release",
       question:
-        "How do some Aristolochia flowers keep visitors long enough to do a job, then let them leave?",
+        "How does a Dutchman's pipe flower lock up visiting insects, then release them when they are carrying pollen?",
       answer:
         "Downward-pointing hairs imprison insects; the hairs later wither, releasing the visitors carrying pollen.",
       source: {
@@ -74,7 +75,7 @@ export const botanicalWonders = definePack(
     },
     {
       key: "botanical-orchid-seed-partner",
-      question: "What living helper must most wild orchid seeds meet before they can germinate?",
+      question: "Why is fertile soil alone not enough to get most wild orchid seeds started?",
       answer:
         "A compatible fungus that supplies food; their dust-sized seeds have almost no stored provisions of their own.",
       source: {
@@ -85,8 +86,9 @@ export const botanicalWonders = definePack(
     },
     {
       key: "botanical-lodoicea-seed-record",
-      question: "What weighty world record belongs to Lodoicea maldivica?",
-      answer: "It produces the world's largest seed, which can weigh about 18 kilograms.",
+      question:
+        "What can a Seychelles palm produce that weighs about as much as a packed suitcase?",
+      answer: "A single seed weighing up to about 18 kilograms, the largest seed in the world.",
       source: {
         title: "Royal Botanic Gardens, Kew - Orchid seeds: Nature's tiny treasures",
         url: "https://www.kew.org/read-and-watch/orchid-seeds-natures-tiny-treasures",
@@ -96,7 +98,7 @@ export const botanicalWonders = definePack(
     {
       key: "botanical-ceratocaryum-dung-disguise",
       question:
-        "How does Ceratocaryum argenteum persuade an animal to carry away and bury its seeds without rewarding it?",
+        "How does a South African restio trick beetles into burying its seeds with no food reward?",
       answer:
         "The seeds look and smell like antelope dung, fooling dung beetles into rolling them away and burying them.",
       source: {
@@ -107,9 +109,9 @@ export const botanicalWonders = definePack(
     },
     {
       key: "botanical-castor-ant-payment",
-      question:
-        "What small incentive attached to a castor seed gets it carried into an underground nest?",
-      answer: "A fatty food parcel that ants feed to their larvae, leaving the seed itself intact.",
+      question: "Why do ants carry castor seeds home but leave the seeds themselves uneaten?",
+      answer:
+        "Each seed carries a fatty food parcel for ant larvae; once it is eaten, the still-viable seed is discarded.",
       source: {
         title:
           "Royal Botanic Gardens, Kew - Ants, constipation, murder and the seeds of Ricinus communis",
@@ -119,7 +121,7 @@ export const botanicalWonders = definePack(
     },
     {
       key: "botanical-monotropa-food-theft",
-      question: "How does Monotropa uniflora obtain food while living in deep forest shade?",
+      question: "How does a ghost pipe get fed while standing in deep forest shade?",
       answer:
         "It takes nutrients from fungi associated with tree roots rather than making food by photosynthesis.",
       source: {
@@ -129,21 +131,20 @@ export const botanicalWonders = definePack(
       },
     },
     {
-      key: "botanical-baneberry-safe-couriers",
+      key: "botanical-pollia-lasting-blue",
       question:
-        "Why can Actaea pachypoda use birds as delivery agents even though its berries are dangerously toxic to people?",
+        "Why did an African fruit collected in 1974 still look brilliantly blue when researchers studied it decades later?",
       answer:
-        "Many birds are immune to the berries' toxic effects and spread the seeds after eating them.",
+        "Its blue comes from microscopic light-reflecting structures, not blue pigment that can fade.",
       source: {
-        title: "Royal Botanic Gardens, Kew - 13 creepy plants and fungi for Halloween",
-        url: "https://www.kew.org/read-and-watch/13-creepy-plants-fungi",
-        note: "Kew contrasts toxicity to humans with immunity in many bird species, which allows birds to feed on the berries and disperse seeds.",
+        title: "PNAS — Pointillist structural color in Pollia fruit",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC3465391/",
+        note: "The 2012 paper describes Pollia condensata fruit collected in Ghana in 1974 retaining its intense blue. Helically stacked cellulose in its cell walls produces the colour; no blue pigment was extractable.",
       },
     },
     {
       key: "botanical-drakaea-flipped-visitor",
-      question:
-        "What happens to a male wasp that is fooled by a Drakaea flower's apparent mating opportunity?",
+      question: "What happens to a male wasp fooled by one orchid's imitation female?",
       answer:
         "A hinged floral part swings over and flips the wasp upside down onto the flower's reproductive surface.",
       source: {
@@ -163,20 +164,20 @@ export const botanicalWonders = definePack(
       },
     },
     {
-      key: "botanical-ophrys-british-fallback",
+      key: "botanical-orchid-sewing-pin",
       question:
-        "How does Ophrys apifera reproduce in Britain without the bee its flower normally imitates?",
-      answer: "It pollinates itself: its own pollen falls onto its female reproductive organ.",
+        "Why do Kew horticulturists sometimes cut open a slipper orchid flower and reach inside with a sewing pin?",
+      answer:
+        "To collect its waxy pollen and transfer it by hand, doing the work of an absent insect pollinator.",
       source: {
         title: "Royal Botanic Gardens, Kew - Sneaky orchids and their pollination tricks",
         url: "https://www.kew.org/read-and-watch/orchid-pollination-tricks",
-        note: "Kew states that British bee orchids self-pollinate when pollen drops automatically onto the stigma.",
+        note: "The hand-pollination section says horticulturists cut the pouch-shaped petal to reach waxy pollen, collect it with a sewing pin and spread it onto the stigma when native pollinators are absent.",
       },
     },
     {
       key: "botanical-flytrap-double-trigger",
-      question:
-        "What safeguard usually prevents a Venus flytrap from closing after just one accidental brush?",
+      question: "How does a Venus flytrap avoid wasting a meal-sized effort on a passing raindrop?",
       answer: "It normally waits for a second trigger-hair stimulation before snapping shut.",
       source: {
         title: "National Geographic - Fatal Attraction",
@@ -186,7 +187,7 @@ export const botanicalWonders = definePack(
     },
     {
       key: "botanical-sundew-sticky-embrace",
-      question: "How does Drosera capture a meal without a jawlike trap?",
+      question: "What happens after an insect lands on the glistening droplets of a sundew?",
       answer:
         "Sticky tentacles catch the prey, and the leaf can curl around it to begin digestion.",
       source: {
@@ -197,8 +198,7 @@ export const botanicalWonders = definePack(
     },
     {
       key: "botanical-bladderwort-vacuum",
-      question:
-        "What makes a bladderwort's underwater ambush work when a tiny animal touches its trigger?",
+      question: "How does a bladderwort prepare its underwater trap before prey arrives?",
       answer:
         "A low-pressure trap sucks in water and the animal; the plant prepared it by pumping water out beforehand.",
       source: {
@@ -210,7 +210,7 @@ export const botanicalWonders = definePack(
     {
       key: "botanical-bicalcarata-outsourced-digestion",
       question:
-        "Why does Nepenthes bicalcarata tolerate a permanent colony of ants inside its structures?",
+        "Why does one Bornean pitcher plant give a permanent home to ants that eat its captured prey?",
       answer:
         "The ants digest captured insects and deposit nutrient-rich droppings that feed the plant.",
       source: {
@@ -221,8 +221,7 @@ export const botanicalWonders = definePack(
     },
     {
       key: "botanical-rafflesia-hidden-body",
-      question:
-        "Where is most of Rafflesia arnoldii hiding when it is not showing its enormous flower?",
+      question: "Where does the giant-flowered rafflesia spend its life between blooms?",
       answer: "Inside a host vine, living as a parasite without ordinary leaves, stems or roots.",
       source: {
         title: "Royal Botanic Gardens, Kew - Rafflesia arnoldii",
@@ -231,21 +230,21 @@ export const botanicalWonders = definePack(
       },
     },
     {
-      key: "botanical-titan-arum-attraction",
-      question: "What scent makes Amorphophallus titanum attractive to its usual pollinators?",
+      key: "botanical-flytrap-poacher-dye",
+      question:
+        "Why have North Carolina officials marked wild Venus flytraps with an invisible dye?",
       answer:
-        "Rotting meat: it imitates carrion to attract insects that normally visit dead animals.",
+        "To catch poachers: the dye glows under ultraviolet light, exposing wild plants passed off as nursery-grown.",
       source: {
-        title:
-          "Royal Botanic Gardens, Kew - 5 extraordinary plants you would not expect to find at Kew",
-        url: "https://www.kew.org/read-and-watch/extraordinary-plants-at-kew",
-        note: "Kew explains that titan arum mimics the smell of rotting flesh to attract insects that feed on dead animals.",
+        title: "National Geographic - Fatal Attraction",
+        url: "https://www.nationalgeographic.com/magazine/article/carnivorous-plants",
+        note: "The article describes the North Carolina Department of Agriculture dabbing wild flytraps with harmless UV-fluorescent dye so inspectors can distinguish poached plants from greenhouse-grown stock.",
       },
     },
     {
       key: "botanical-rafflesiana-elastic-fluid",
       question:
-        "What makes the liquid inside Nepenthes rafflesiana particularly difficult for a trapped fly to escape?",
+        "Why does a fly struggle to lift its legs from the liquid inside a Raffles' pitcher plant?",
       answer:
         "It clings elastically to the fly's legs like a rubber band rather than behaving like ordinary water.",
       source: {
@@ -256,7 +255,8 @@ export const botanicalWonders = definePack(
     },
     {
       key: "botanical-nuytsia-cable-cutter",
-      question: "How has Nuytsia floribunda managed to interrupt telephone service?",
+      question:
+        "How has the Western Australian Christmas tree managed to cut off a village's telephone service?",
       answer:
         "Its parasitic root structures have attacked buried cables, mistaking them for potential hosts.",
       source: {
@@ -266,19 +266,19 @@ export const botanicalWonders = definePack(
       },
     },
     {
-      key: "botanical-mistletoe-genome",
-      question: "What does a mistletoe cell contain far more of than a human cell?",
-      answer: "DNA: Kew reports more than 25 times as much in each cell.",
+      key: "botanical-mistletoe-birdlime",
+      question: "Why have people turned mistletoe berries into a sticky paste to put on branches?",
+      answer: "To trap songbirds: the fruit makes an adhesive known as birdlime.",
       source: {
         title: "Royal Botanic Gardens, Kew - Is mistletoe more than just an excuse for a kiss?",
         url: "https://www.kew.org/read-and-watch/mistletoe-more-than-a-kiss",
-        note: "Kew's discussion of Viscum genome size explicitly gives more than 25 times the DNA per cell compared with humans; this is not a claim about gene count.",
+        note: "Kew says the sticky fruits are used to make glue for catching songbirds, a practice still found around the Mediterranean despite being outlawed.",
       },
     },
     {
       key: "botanical-mimosa-electrical-message",
       question:
-        "What kind of internal message helps Mimosa pudica react so quickly to being touched?",
+        "What travels through a sensitive plant when a touch makes its leaves suddenly move?",
       answer:
         "An electrical signal passes through the plant, helping trigger its rapid leaf movement.",
       source: {
@@ -289,8 +289,7 @@ export const botanicalWonders = definePack(
     },
     {
       key: "botanical-tomato-ultrasonic-pops",
-      question:
-        "What did microphones designed to detect bat calls reveal about stressed tomato plants?",
+      question: "What unexpected sign of distress did researchers pick up from tomato plants?",
       answer: "They emit ultrasonic popping sounds, too high-pitched for humans to hear unaided.",
       source: {
         title: "National Geographic - Plants can talk. Yes, really. Here is how.",
@@ -301,7 +300,7 @@ export const botanicalWonders = definePack(
     {
       key: "botanical-boquila-leaf-mimicry",
       question:
-        "What unusual change has been observed when Boquila trifoliolata climbs different neighboring plants?",
+        "What can change about a single boquila vine as it climbs through different neighbouring plants?",
       answer:
         "Its leaves can grow to resemble the different leaves around it, changing their shape, size and other features.",
       source: {
@@ -323,7 +322,7 @@ export const botanicalWonders = definePack(
     {
       key: "botanical-lithops-rain-release",
       question:
-        "What delivers the cue and the transport for seed dispersal in Lithops, also called living stones?",
+        "How do the seed capsules of living-stone plants enlist the weather to send their seeds away?",
       answer: "Water opens the seed capsules, and splashes carry the seeds away.",
       source: {
         title: "National Geographic Kids - A Seed is the Start: Educator's Guide",
@@ -343,8 +342,7 @@ export const botanicalWonders = definePack(
     },
     {
       key: "botanical-russian-thistle-departure",
-      question:
-        "What unusual part of a mature Russian thistle breaks away to help distribute its seeds?",
+      question: "How does a mature Russian thistle leave its growing spot to spread its seeds?",
       answer: "The whole above-ground plant separates from its roots and tumbles away in the wind.",
       source: {
         title: "National Geographic Kids - A Seed is the Start: Educator's Guide",

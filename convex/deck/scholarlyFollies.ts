@@ -13,8 +13,9 @@ export const scholarlyFollies = definePack(
     {
       key: "scholarly-esquivalience",
       question:
-        "What activity did the deliberately invented dictionary word “esquivalience” describe?",
-      answer: "Willfully avoiding one’s official responsibilities.",
+        "Why did editors of the New Oxford American Dictionary deliberately include a word meaning 'avoiding one's duties'?",
+      answer:
+        "It was bait for plagiarists: anyone copying the invented word 'esquivalience' would give themselves away.",
       source: {
         title: "The New Yorker — Not a Word",
         url: "https://www.newyorker.com/magazine/2005/08/29/not-a-word",
@@ -33,8 +34,9 @@ export const scholarlyFollies = definePack(
     },
     {
       key: "scholarly-dord",
-      question: "What notation was misread to create the dictionary entry “dord”?",
-      answer: "“D or d,” meaning either letter could abbreviate density.",
+      question:
+        "What editorial misunderstanding created an entirely new word for density in Webster's dictionary?",
+      answer: "The notation 'D or d' was read as a single word: 'dord.'",
       source: {
         title: "Oxford University Press — Assess",
         url: "https://blog.oup.com/2008/05/assess/",
@@ -44,7 +46,7 @@ export const scholarlyFollies = definePack(
     {
       key: "scholarly-esrum-hellerup",
       question:
-        "What was the hidden problem with Dag Henrik Esrum-Hellerup’s entry in the 1980 New Grove?",
+        "Why did the New Grove music dictionary have to remove its biography of Dag Henrik Esrum-Hellerup?",
       answer: "The Danish composer never existed; a contributor had invented him.",
       source: {
         title: "Oxford University Press — A Grove Music Mountweazel",
@@ -55,8 +57,8 @@ export const scholarlyFollies = definePack(
     {
       key: "scholarly-circular-definitions",
       question:
-        "What happened if an early OED reader followed the cross-reference under “unpoetic”?",
-      answer: "It led to “unpoetical,” whose cross-reference sent the reader straight back.",
+        "What trap awaited an early OED reader trying to discover the difference between 'unpoetic' and 'unpoetical'?",
+      answer: "Each entry referred the reader to the other; neither supplied a definition.",
       source: {
         title: "Oxford University Press — Absurd entries in the OED: An introduction",
         url: "https://blog.oup.com/2008/03/ammon_shea/",
@@ -88,7 +90,7 @@ export const scholarlyFollies = definePack(
     {
       key: "scholarly-argleton",
       question:
-        "What would a visitor actually have found at Argleton, the Lancashire settlement shown on Google in 2008?",
+        "What lay at the real-world location of Argleton, for which Google supplied weather, jobs and property listings?",
       answer: "A damp field, not a village.",
       source: {
         title: "The Guardian — The imaginary American town that became a tourist attraction",
@@ -97,21 +99,21 @@ export const scholarlyFollies = definePack(
       },
     },
     {
-      key: "scholarly-frisland",
+      key: "scholarly-geim-floating-frog",
       question:
-        "What was the Frisland that appeared on many North Atlantic charts for roughly a century?",
-      answer: "A mythical island near Iceland that mapmakers repeatedly copied.",
+        "What did physicists Andre Geim and Michael Berry persuade a magnet to do in the work that won their 2000 Ig Nobel Prize?",
+      answer: "Levitate a frog, leaving the animal suspended in midair without strings.",
       source: {
-        title: "Library of Congress — Europe, Very Precisely Represented",
-        url: "https://www.loc.gov/item/2021668709/",
-        note: "The catalogue description identifies Frisland as mythical and says it appeared on most North Atlantic charts from the 1560s until the 1660s, including this Hondius map.",
+        title: "Improbable Research — The 2000 Ig Nobel Prize Winners",
+        url: "https://improbable.com/ig/winners/#ig2000",
+        note: "The physics citation honours Geim and Berry for using magnets to levitate a frog and links their 1997 paper, Of Flying Frogs and Levitrons.",
       },
     },
     {
       key: "scholarly-california-island",
       question:
-        "What fundamental mistake did Joan Vinckeboons’s circa-1650 map make about California?",
-      answer: "It drew California as an island, separated from the mainland by a strait.",
+        "What geographical surprise would a traveller have expected from Joan Vinckeboons's circa-1650 map of California?",
+      answer: "California was an island, separated from the mainland by a stretch of sea.",
       source: {
         title: "Library of Congress — Map of California Shown as an Island",
         url: "https://www.loc.gov/item/99443375/",
@@ -119,22 +121,24 @@ export const scholarlyFollies = definePack(
       },
     },
     {
-      key: "scholarly-sandy-island",
+      key: "scholarly-salmon-brain-scan",
       question:
-        "What did scientists aboard the Southern Surveyor find when they reached Sandy Island’s mapped position in 2012?",
-      answer: "Empty ocean about 1,400 metres deep.",
+        "What unlikely subject appeared to show meaningful brain activity in Craig Bennett's deliberately flawed analysis of a brain scan?",
+      answer:
+        "A dead salmon; the apparent activity vanished when the statistics were properly corrected.",
       source: {
         title:
-          "University of Western Australia — Mythbusting scientists “undiscover” fantasy island",
-        url: "https://www.news.uwa.edu.au/archive/201211235241/research/mythbusting-scientists-undiscover-fantasy-island/",
-        note: "The expedition investigated the island shown on scientific maps and Google Earth and confirmed the ship’s charts: 1,400-metre-deep ocean, with no island.",
+          "Journal of Serendipitous and Unexpected Results — Neural Correlates of Interspecies Perspective Taking in the Post-Mortem Atlantic Salmon",
+        url: "https://improbable.com/wp-content/uploads/2025/10/NeuralCorrelates.pdf",
+        note: "Bennett and colleagues scanned a dead salmon viewing social photographs. Uncorrected statistics found active clusters; correction for multiple comparisons eliminated them.",
       },
     },
     {
       key: "scholarly-scigen",
       question:
-        "What did Jeremy Stribling, Max Krohn and Dan Aguayo build at MIT to embarrass dubious conferences?",
-      answer: "Random, nonsensical computer-science papers that looked like genuine research.",
+        "What was strange about the authorship of the conference paper 'Rooter', accepted by WMSCI in 2005?",
+      answer:
+        "Software had randomly generated the entire nonsense paper, including its graphs, figures and citations.",
       source: {
         title: "MIT Computer Science and Artificial Intelligence Laboratory — SCIgen",
         url: "https://pdos.csail.mit.edu/archive/scigen/",
@@ -144,12 +148,13 @@ export const scholarlyFollies = definePack(
     {
       key: "scholarly-szust",
       question:
-        "What did the surname of Anna O. Szust, an applicant accepted by dozens of journals as an editor, mean in Polish?",
-      answer: "“Fraud”: she was a fictitious applicant created to test the journals.",
+        "What fatal flaw in Anna O. Szust's qualifications escaped dozens of journals that offered her an editor's job?",
+      answer:
+        "She did not exist; researchers had invented her, her degrees, her book chapters and even her publishers.",
       source: {
         title: "Nature — Predatory journals recruit fake editor",
         url: "https://www.nature.com/news/polopoly_fs/1.21662!/menu/main/topColumns/topLeftColumn/pdf/543481a.pdf",
-        note: "The researchers say oszust means fraud in Polish. Their invented researcher applied to 360 journals and was accepted by 48, despite having no genuine publication record.",
+        note: "The researchers created a fictitious applicant with fake degrees, nonexistent books and invented publishing houses; 48 of 360 journals accepted her as an editor.",
       },
     },
     {
@@ -164,22 +169,23 @@ export const scholarlyFollies = definePack(
       },
     },
     {
-      key: "scholarly-mirkwood",
+      key: "scholarly-cows-zebra-stripes",
       question:
-        "Who was Galadriel Mirkwood, Polly Matzinger’s co-author on a 1978 immunology paper?",
-      answer: "Matzinger’s dog.",
+        "What unusual makeover did Tomoki Kojima's research team give cattle in an experiment about biting flies?",
+      answer:
+        "They painted the cows with zebra-like stripes to test whether the pattern deterred flies.",
       source: {
-        title: "EMBO Reports — Crediting animals in scientific literature",
-        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5210078/",
-        note: "The peer-reviewed article identifies Galadriel Mirkwood as Matzinger’s dog and cites their 1978 Journal of Experimental Medicine paper.",
+        title: "Improbable Research — The 2025 Ig Nobel Prize Winners",
+        url: "https://improbable.com/ig/winners/#ig2025",
+        note: "The biology prize citation describes Kojima and colleagues' experiments with zebra-striped painted cows and cites their 2019 PLOS ONE paper.",
       },
     },
     {
       key: "scholarly-ann-arbor",
       question:
-        "What was unusual about “Ann Arbor,” whose name appeared as an author in scientific indexes?",
+        "What sort of information was mistaken for a woman's name and academic degree in scientific citation indexes?",
       answer:
-        "The Michigan city in an author’s address; “MI” was even mistaken for an academic degree.",
+        "An address was misread: Ann Arbor was the Michigan city, not a scientist, and MI meant Michigan.",
       source: {
         title: "Nature — Hall and Keynes join Arbor in the citation indexes",
         url: "https://www.nature.com/articles/452282b",
@@ -224,8 +230,8 @@ export const scholarlyFollies = definePack(
     {
       key: "scholarly-beringer-stones",
       question:
-        "What was the real origin of the extraordinary specimens Johann Beringer described in 1726?",
-      answer: "Fake fossils carved and planted by two resentful university colleagues.",
+        "How did two resentful colleagues supply Johann Beringer with the specimens for his 1726 book?",
+      answer: "They carved fake fossils and planted them for him to find.",
       source: {
         title: "Smithsonian Libraries — A Heavy Hoax: The “Lying Stones” of Johann Beringer",
         url: "https://blog.library.si.edu/blog/2019/07/25/a-heavy-hoax-the-lying-stones-of-johann-beringer/",
@@ -246,8 +252,8 @@ export const scholarlyFollies = definePack(
     {
       key: "scholarly-newton-report",
       question:
-        "Who secretly drafted the Royal Society report that found in Newton’s favour during the calculus priority dispute?",
-      answer: "Isaac Newton himself.",
+        "Who secretly wrote the Royal Society committee's supposedly independent report settling the calculus priority dispute?",
+      answer: "Isaac Newton, one of the disputants; the report found in his own favour.",
       source: {
         title: "Nature — Newton’s correspondence",
         url: "https://www.nature.com/articles/275777a0.pdf",
@@ -278,21 +284,21 @@ export const scholarlyFollies = definePack(
       },
     },
     {
-      key: "scholarly-vulcan-search",
-      question: "What was the Vulcan that appeared in some nineteenth-century science textbooks?",
-      answer: "A supposed planet between Mercury and the Sun; it never existed.",
+      key: "scholarly-bean-nail-record",
+      question:
+        "What did physician William B. Bean repeatedly measure and write about for thirty-five years?",
+      answer: "The growth of one of his own fingernails.",
       source: {
-        title: "Smithsonian National Air and Space Museum — Vulcan? But that’s not logical…",
-        url: "https://airandspace.si.edu/stories/editorial/vulcan-s-not-logical",
-        note: "The museum explains the search for an intra-Mercurial planet, its inclusion in 1860s–1870s textbooks, and Einstein’s explanation of Mercury’s orbit without it.",
+        title: "Improbable Research — The 2025 Ig Nobel Prize Winners",
+        url: "https://improbable.com/ig/winners/#ig2025",
+        note: "The literature prize honours Bean's 35-year record of one fingernail's growth and lists his published observations, including Nail Growth: Thirty-Five Years of Observation.",
       },
     },
     {
       key: "scholarly-kong-range",
       question:
-        "Why could travellers never cross the enormous Kong range depicted on nineteenth-century maps of West Africa?",
-      answer:
-        "The mountain range did not exist; generations of mapmakers had repeated an imaginary feature.",
+        "What enormous feature did generations of nineteenth-century maps mistakenly put across West Africa?",
+      answer: "An entire imaginary mountain range: the Mountains of Kong.",
       source: {
         title: "AfricaBib, Leiden University — “From the Best Authorities”: The Mountains of Kong",
         url: "https://www.africabib.org/rec.php?RID=089546806",
@@ -302,7 +308,7 @@ export const scholarlyFollies = definePack(
     {
       key: "scholarly-sokal-disclosure",
       question:
-        "In 1996 a New York University physicist got an article into the cultural-studies journal Social Text, then made an announcement about it the same month. What did he announce?",
+        "After getting an article into the journal Social Text in 1996, what did physicist Alan Sokal announce about his own work?",
       answer:
         "That he had written it as a parody stuffed with gibberish, to test whether the journal would publish it.",
       source: {
@@ -336,9 +342,10 @@ export const scholarlyFollies = definePack(
     },
     {
       key: "scholarly-wood-prism",
-      question: "What did Robert Wood secretly remove during René Blondlot’s 1904 demonstration?",
+      question:
+        "How did Robert Wood secretly sabotage René Blondlot's N-ray demonstration in 1904?",
       answer:
-        "The instrument’s aluminium prism—yet Blondlot continued to report the same readings.",
+        "He removed the instrument's aluminium prism, yet Blondlot continued to report the same readings.",
       source: {
         title: "WIRED — The Imaginary Radiation That Shocked Science",
         url: "https://www.wired.com/2014/09/fantastically-wrong-n-rays/",
