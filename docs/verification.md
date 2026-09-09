@@ -1,52 +1,265 @@
-# Smoke procedure and verification history
+# Verify Poppycock
 
-The procedure below is reusable. The dated records after it describe only their
-named revisions, environments, and exercised surfaces—not the current branch
-or whatever is presently hosted.
+Agent entry point: [poppycock-verify](../.agents/skills/poppycock-verify/SKILL.md).
+The procedures below are reusable. [Dated records](#verification-history) describe
+only their named revisions, environments, and exercised surfaces—not the current
+branch or whatever is presently hosted.
+
+## Choose the exercise
+
+Run from the repository root. [package.json](../package.json) owns commands;
+[README rules](../README.md#play) own gameplay. Do not replay six rounds for a
+copy-only or isolated presentation change.
+
+| Changed contract | Smallest useful check | What it does not establish |
+| --- | --- | --- |
+| Types or application integration | `pnpm build:parlor`, then `pnpm typecheck`; `pnpm build` for production bundling | Rendered behavior or a deployment |
+| Guest issuer, cookie continuity, same-origin rejection | `pnpm build:parlor`, then `pnpm test -- tests/session.test.ts`; exercise [identity recovery](#identity-and-recovery) for browser integration changes | Production cookies, CDN/proxy behavior, or real expiry from fake time alone |
+| Scoring, privacy, eligibility, untimed phases, rematch | `pnpm build:parlor`, then `pnpm test -- tests/game.test.ts`; full local smoke when the multiplayer path changed | Unit fixtures use Convex test identities, not the HTTP guest issuer |
+| Deck, pack selection, provenance registry | `pnpm test -- tests/content.test.ts`; game tests for draw-rule changes; `pnpm catalog` regenerates owned artifacts | Source accuracy or editorial quality; `pnpm sources` is an explicit network URL audit, not routine gameplay setup |
+| Avatar, dialog, responsive layout, keyboard behavior | The applicable [focused browser journey](#focused-browser-journeys) against real local services | A screenshot alone cannot prove saved state, cancellation, or authorization |
+| Parlor pin or integration boundary | Imported [Parlor guidance](../.agents/skills/parlor/SKILL.md), `pnpm test:parlor`, and affected game/issuer/browser checks | A framework test does not exercise this game's frontend |
+| Broad executable cutover | `pnpm check` plus the affected browser path; CI also builds production and verifies vendored packages | Hosted readiness or physical devices |
+
+The existing [CI workflow](../.github/workflows/ci.yml) already runs meaningful
+unit, type, build, and real multiplayer checks using synthetic local state. It
+does not deploy or need an agent/hosted credential. No second runner is needed.
 
 ## Reproduce
 
-For a fresh local run:
+### Target and prerequisites
+
+Use an owned checkout on a trusted development host. Requirements are
+[Node/pnpm versions and environment boundaries](../README.md#local-development),
+network access for locked dependencies and the first real Convex backend download,
+and Chromium dependencies. No Convex account, LLM, or hosted game access is needed.
+Gameplay reads the source-backed seeded catalog, not a fake backend.
+
+Ports **3210/3220/3221** must be free. The existing dev servers bind beyond
+loopback for LAN development; this procedure does not open firewalls, create a
+tunnel, or grant public access. Never stop an unrelated process to free a port.
+The scripts reject cloud selectors, mismatched anonymous backend state, and
+symlinked Convex state; do not bypass those guards or copy production secrets.
+
+For first-setup proof, use a disposable checkout of the exact candidate without
+`.env.local`, `.convex/`, `node_modules/`, or `.next/`. A worktree does not contain
+uncommitted edits: explicitly carry the reviewed candidate source, not local
+state or credentials. Ordinary repeat runs reuse only that checkout's database
+and signing secrets; every smoke creates fresh browser identities and a new room.
+
+### Self-contained local run
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm exec playwright install chromium
-POPPYCOCK_EVIDENCE_DIR=test-results/local-smoke-001 pnpm smoke:local
+POPPYCOCK_REVISION="$(git rev-parse HEAD)" pnpm smoke:local
 ```
 
-Choose a new repo-relative output directory for each run; replace `001` rather
-than reuse an earlier result. The producers still default to tracked `evidence/`
-when `POPPYCOCK_EVIDENCE_DIR` is unset and can overwrite same-named files. The
-override above keeps new output separate from retained historical receipts.
+On a minimal Linux host, Playwright may also need OS libraries; use its documented
+`install --with-deps chromium` only with authority to install system packages
+(CI already does). `CHROMIUM_PATH` can select an installed Chromium instead.
 
-The self-contained command needs ports 3210/3220/3221 free, downloads the real
-Convex backend if needed, seeds it, starts Next.js, plays six rounds and a
-rematch with four independent browser guests, records output, and stops both
-servers. For an already-running `pnpm dev`, use `pnpm smoke` with the same output
-override instead. The [README's LAN setup](../README.md#local-development)
-explains `POPPYCOCK_BASE_URL` and the non-loopback browser security boundary.
+[`smoke-local.mjs`](../scripts/smoke-local.mjs) creates/configures the anonymous
+backend, builds Parlor, deploys functions, seeds the catalog, starts Next.js,
+waits for HTTP readiness, runs [`smoke.mjs`](../scripts/smoke.mjs), and stops its
+servers. Browser setup is four independent contexts: Ada (1440×1100), Bea, Cy,
+and Dax (390×844). Ada/Bea/Cy play; Dax joins late. Local backend readiness is
+bounded at 180 seconds, function deployment at 120 seconds, web readiness at
+60 seconds, and page actions at 15 seconds. Failure output names the failed
+stage; CI bounds the entire job as well.
 
-`CHROMIUM_PATH` selects an existing Chromium installation.
-`POPPYCOCK_REVISION` labels the source revision; it does not check out that
-revision or prove a deployment. Name dirty-source changes and the actual target
-when recording a result.
+By default each smoke atomically creates a new `test-results/local-smoke-*`
+or `test-results/public-smoke-*` directory and prints its path on stderr.
+To choose a location, set `POPPYCOCK_EVIDENCE_DIR` to a **new** repo-relative or
+absolute directory. Existing directories (even empty ones) are rejected before
+browser launch; a failed run cannot overwrite or borrow a previous pass.
+CI's fresh `test-results/multiplayer/` override remains supported.
 
-### Hosted smoke is a separate authorized operation
+`POPPYCOCK_REVISION` is a label, not a checkout or deployment operation. If source
+is dirty, retain the reviewed diff/source snapshot in approved artifact storage
+and record its identity alongside the base commit. Keep
+[`vendor/parlor/UPSTREAM.json`](../vendor/parlor/UPSTREAM.json) with the candidate.
+Do not label an unknown working tree or mismatched deployed target as that commit.
+
+### Interactive or already-running local target
+
+```sh
+pnpm bootstrap
+pnpm dev
+```
+
+Run long-lived development through the harness's supervised process tool and
+wait for both Convex function readiness and a successful HTTP response at
+`http://localhost:3210`. `pnpm bootstrap` exits after seeding; `pnpm dev` owns
+the live backend/web pair. Do not start either alongside `pnpm smoke:local`.
+Against your running pair, `pnpm smoke` owns only its browser and evidence.
+
+Use the native browser tools or repository-pinned Playwright. Separate tabs in
+one context **share a guest**; create an isolated browser context/profile per
+player (the existing smoke shows `browser.newContext()`), not just extra tabs.
+Keep those contexts alive during a journey and close only the ones you created.
+For LAN changes follow the [README setup](../README.md#local-development) and
+set `POPPYCOCK_BASE_URL` to that same approved local/LAN app. Do not point the
+local smoke at a hosted app or an unrelated service. A loopback pass says nothing
+about reachability from a phone.
+
+## Inspect the result
+
+Open the newly printed `multiplayer-smoke.json`, plus relevant images from that
+same directory. A successful complete run has `result: "passed"`, `completedAt`,
+six round records, and Ada/Bea/Cy final scores **18/8/0**. Check `origin`,
+`sourceRevision`, `parlorRevision`, timestamps, and the source snapshot. The
+receipt is written only after assertions pass; absent output, partial screenshots,
+an exception, or an earlier receipt is not a pass.
+
+Gameplay actions and screenshots wait for the expected rendered phase, not just
+the server projection. Capture also waits up to 15 seconds each for visible image
+assets and finite animations to finish, without fast-forwarding the application.
+Broken image paths fail the run instead of producing a passing receipt with missing
+portraits. These still frames do not verify animation timing or appearance.
+
+The smoke exercises real rendered create/join/start/submit/vote/leave/rejoin/
+rematch controls. Its authenticated queries independently assert:
+
+- Writing exposes no options, truth, or source. An unauthenticated read fails.
+- Voting exposes no authors, voters, or truth flags; a forged self-vote fails.
+  Submission retries do not increase the accepted count.
+- Round two merges Ada/Bea's identical bluff, credits both authors, and scores
+  **3/3/0**. Other rounds score **3/1/0**. Reveal supplies an HTTPS source.
+- Ada leaves after round three; host transfers to Bea. Ada's rejoin preserves
+  player identity and participation. Dax joins round four as a spectator and
+  cannot submit through either the UI or a forged command.
+- Cy's offline/reload recovery preserves the same player and turn.
+- Finishing clears the active match; rematch includes Dax, resets all scores,
+  and draws an unseen question. The rematch fits the three 390px phone pages.
+
+These are the current assertions in [the producer](../scripts/smoke.mjs), not
+claims that every possible UI or timing state was covered. The smoke finds
+the truth as the choice not among its known synthetic bluffs; it does not add
+a truth-reading endpoint or seed a special game.
+
+For inspection during a focused exercise, the producer's `view` and `room`
+helpers show the supported `api.game.view` and `api.rooms.getRoomState` query
+shapes. Keep credentials in browser/process memory, never in tool output or a
+receipt. Use projections to confirm authority/state, not to replace the rendered
+actions whose behavior is under review. Inspect fresh accessibility state after
+navigation or a render; never persist generated accessibility references.
+
+## Focused browser journeys
+
+Use your real local pair and new synthetic identities. These are selective
+procedures, not additional mandatory full suites. Assert the relevant state
+change or rejection, then capture the rendered surface after it settles.
+
+### Identity and recovery
+
+1. Ada creates a table with **Your name → Create table**. Bea and Cy use **Join
+   table**, their own names, and the displayed four-character **Room code**.
+   Expect three roster entries and three distinct server viewer IDs. The room
+   code button opens the QR invite; Escape closes it without leaving the room.
+2. Start with three present guests. Enter an unsubmitted draft, reload the same
+   page, and confirm the same player, room, round, and draft. Submit through
+   **Submit answer**; after reload the accepted answer stays locked. In voting,
+   **Lock vote** and reload must preserve the accepted selection without revealing
+   other votes.
+3. Take one context offline. Expect **Reconnecting. Keep this page open**, not
+   a fresh anonymous table. Restore connectivity, reload, and confirm the same
+   viewer ID/round and accepted input. Restore online state even after failure.
+   Browser reload does not prove 15-minute access expiry: use the issuer tests
+   for signed expiry/tampering bounds and an actual expired session only when
+   that live path is the change under review.
+
+### Avatars and dialogs
+
+From a lobby roster choose **Change avatar** (during play: **Table options →
+Change avatar**). **Choose your avatar** has a **Your avatar** radio group and
+**Save avatar**. Select a different character and cancel: the saved portrait must
+not change. Reopen, select, save, then reload: the roster and picker retain the
+choice for that player, not their seat. A second independent guest must remain
+unchanged. `tests/game.test.ts` covers persistence across leave/rejoin and rooms.
+Exercise keyboard selection and Escape; focus must return to the invoking control.
+Offline saving is disabled with **Reconnect to save your avatar.**, not a false
+success. A screenshot of the picker alone is not persistence proof.
+
+### Untimed phases and deliberate skips
+
+Start three players; submit only one bluff. Host **Host controls → End writing**
+opens **End writing for everyone?**. **Keep writing**/Escape must leave writing
+and the roster unchanged. Confirm **End writing**: voting opens using the accepted
+bluff and truth, without inventing missing submissions. With an eligible vote
+missing, **Host controls → Reveal answers → Keep voting** must likewise preserve
+voting; confirmation reveals and scores only accepted votes. Non-hosts must not
+get host skip controls. A non-host participant can use **Next round** immediately
+after reveal. `tests/game.test.ts` uses controlled time to check 45-minute waits,
+stale retries, and the disabled match cap; a quick browser round does not prove
+those timing boundaries. Waiting alone never advances an unfinished phase.
+
+### Responsive and accessible surfaces
+
+Exercise only the changed surface at desktop, 390×844, narrow 320×844, and
+667×375 landscape when relevant. Use long names/answers within product limits.
+Inspect clipped text, horizontal overflow, visible focused/selected states,
+keyboard reachability, dialog return focus, enlarged text, and reduced motion.
+The automated smoke's 390px rematch width check is not a layout audit of every
+phase. Browser mobile/touch emulation does not establish physical keyboard,
+camera/QR scanning, wake-lock support, or phone/network behavior.
+
+## Ownership and cleanup
+
+- `smoke:local` closes its Chromium and stops only its child Convex/Next processes
+  on success or failure. Verify those owned processes exited and ports
+  3210/3220/3221 were released; do not kill a new/unrelated listener.
+- `smoke`/`smoke:public` close their own browser, not the target servers.
+  Stop your supervised `pnpm dev` with Ctrl+C/the process tool, then inspect
+  process exit and port release. Close owned interactive browser contexts.
+- Browser closure does **not** remove server data. The local smoke leaves a new
+  room and in-progress rematch; the hosted smoke leaves a room after one reveal.
+  Data and signing secrets persist in that checkout's `.convex/` and `.env.local`.
+  Parlor's everyone-away sweeper abandons inactive matches, not all stored history.
+- No reset is needed between smokes. `pnpm reset --yes-delete-local-data` deletes
+  **all** game/room/player data in the selected anonymous-local checkout, retaining
+  secrets and reseeding content. Use it only with authority over that entire
+  database; never as automatic cleanup of a shared developer checkout. Refresh
+  open tabs afterwards. A fresh disposable checkout avoids that destructive step.
+- After stopping an owned disposable runtime, retain sanitized evidence/source
+  identity as needed, then remove only that run's temporary checkout and generated
+  credentials. Keep unrelated work, historical evidence, and developer state.
+  Ignored local output is scratch storage, not a backup or shared retention service.
+
+For startup failures, inspect the named stage and server output. Repair missing
+dependencies, occupied ports, signing configuration, or a backend identity mismatch
+without bypassing the local guard. If browser actions time out, inspect the current
+page and issuer/backend errors before changing locators or extending waits.
+Repeat into a new evidence directory; never convert a failed run into a pass by
+reusing its output.
+
+
+## Hosted smoke is a separate authorized operation
 
 Only after the intended hosted backend and web build match the source being
 exercised, and the operation is authorized:
 
 ```sh
-POPPYCOCK_EVIDENCE_DIR=test-results/public-smoke-001 pnpm smoke:public
+POPPYCOCK_PUBLIC_ORIGIN=https://poppycock.mistystep.io \
+POPPYCOCK_PUBLIC_CONVEX_URL=https://fiery-spaniel-734.convex.cloud \
+POPPYCOCK_REVISION="$(git rev-parse HEAD)" pnpm smoke:public
 ```
 
-This creates real hosted rooms and gameplay writes. It needs network access to
-the configured HTTPS app and Convex deployment and exercises three isolated
-browser guests through one round. It does not prove six rounds, rematch,
-physical-phone behavior, or local/LAN operation. The older hosted receipt below
-does not verify the untimed local refinements.
+These are the producer's default targets, shown explicitly for review, not an
+assertion about the current deployed revisions. Confirm the authorized app,
+backend, source/build identity, and permission to leave synthetic rooms before
+running; substitute only the approved pair. This creates real hosted gameplay
+writes. It needs no deployment/admin credential and must not be used to seed,
+reset, or deploy. The command itself does not obtain that authorization.
 
-### Evidence ownership
+Inspect the fresh `public-https-smoke.json`: one round, `result: "passed"`,
+the intended `origin`/`convexUrl`, and authoritative scores **3/1/0**, plus the
+rendered images. Three isolated browser guests exercise one round, not six rounds,
+rematch, physical phones, or local/LAN operation. Closing the browser leaves the
+hosted records; backend-wide cleanup is not authorized by a smoke. Old hosted
+receipts do not establish current deployment readiness.
+
+## Evidence ownership
 
 - The repository owns the smoke producers, card-level provenance, reusable
   procedure, curated inputs, and deliberately selected public assets.
