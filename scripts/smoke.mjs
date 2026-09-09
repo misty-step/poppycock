@@ -140,6 +140,9 @@ try {
     expect(writing.truth).toBeUndefined();
     expect(writing.source).toBeUndefined();
     if (round === 1) {
+      await expect(
+        players.Bea.page.getByRole("textbox", { name: "Your answer", exact: true }),
+      ).toBeVisible();
       await capture("Bea", "writing-phone.png");
       await expect(
         client.query(api.game.view, { roomId: (await credentials("Ada")).roomId }),

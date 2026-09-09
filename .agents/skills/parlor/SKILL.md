@@ -9,7 +9,7 @@ Maintained by [Parlor](https://github.com/misty-step/parlor), imported only for 
 
 ## Source and scope
 
-**Installed source: `vendor/parlor` at `56342bd910a58f255483afdf5a92d3fc4fcc0ae2`.** The reference is copied from that exact commit. Inspect the installed exports and local modifications before using an example; source signatures take precedence over older prose. A copied vendor tree may omit examples or docs mentioned in the reference.
+**Installed source: `vendor/parlor` at `2b8c5c4114368e40905232a733c4193e22baee03`.** The reference is copied from that exact commit. Inspect the installed exports and local modifications before using an example; source signatures take precedence over older prose. A copied vendor tree may omit examples or docs mentioned in the reference.
 
 Read [SOURCE.json](SOURCE.json) for the source revision and content hashes, then [reference.md](reference.md) for integration guidance. Its code paths are relative to the Parlor source, not this game's root. A working-tree reference is explicitly recorded as such; its revision is a base commit, not a claim that uncommitted text was released. Website docs may describe a newer API.
 
