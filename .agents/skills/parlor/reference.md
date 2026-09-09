@@ -1,55 +1,95 @@
 ---
 name: parlor
-description: Build real-time phone/local multiplayer party games using the Parlor room, presence, and match framework on Convex and React. Also covers reporting bugs, papercuts, and feature requests to the Parlor repository.
+description: Build and review phone-first multiplayer games with Parlor on Convex and React. Use when integrating guest authentication, rooms, presence, frozen match participants, game commands, or mobile browser capabilities.
 ---
 
 # Parlor
 
-Parlor is an accountless, phone-first multiplayer game substrate built on Convex and React. It handles the shared plumbing of in-person party games (room codes, guest auth, participant freezing, host transfer, heartbeats, and abandonment sweeping) so individual games only implement game rules, prompts, and scoring.
+Parlor supplies shared room, identity, presence, and match infrastructure. The game owns its rules, phases, prompts, private state, scoring, and presentation. Work from the consuming game's requirements and the installed source, not remembered APIs.
 
----
+## Import only into a consuming repository
 
-## 1. Architecture & Packages
+Parlor maintains this skill in `skills/parlor/SKILL.md`. Import it only into a consuming game's `.agents/skills/parlor`; never deploy it to a home/global skill directory or unrelated repositories. From a reviewed Parlor checkout:
 
-| Package          | Purpose                                            | Key Exports                                                                                                                                                               |
-| ---------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `@parlor/core`   | Pure domain types and invariants                   | `Result<T, E>`, presence classification, room bounds                                                                                                                      |
-| `@parlor/auth`   | HMAC-SHA256 guest credentials                      | `issueGuestToken`, `verifyGuestToken` (under `@parlor/auth/server`)                                                                                                       |
-| `@parlor/convex` | Backend room, match, and presence tables & queries | `parlorTables`, `beginMatch`, `completeMatch`, `requireActiveMatch`, `resolvePlayer`, `sweepAbandonedMatches`                                                             |
-| `@parlor/react`  | Pre-styled game UI components & hooks              | `<RoomCodeInput />`, `<QRCodeDisplay />`, `<ConnectionStatus />`, `<AvatarBadge />`, `<AudioProvider />`, `useAudio`, `useHeartbeat`, `useGuestCredential`, `useWakeLock` |
-| `@parlor/web`    | Browser-side capabilities                          | `AudioController`, `WakeLockController`, `DEFAULT_PARLOR_SOUNDS`, audio cues, clipboard helper                                                                            |
+```sh
+node scripts/import-skill.mjs --target /path/to/game
+```
 
----
+The owner-provided importer reads the game's pinned `vendor/parlor` checkout or `vendor/parlor/UPSTREAM.json`, imports guidance from that exact commit, and writes a local `SKILL.md`, `reference.md`, and `SOURCE.json`. It never fetches a newer skill, changes dependencies, or updates a source pin. A copied vendor tree can omit the skill: the recorded commit must then be available in the importing Parlor checkout's local Git objects.
 
-## 2. Standard Implementation Recipe
+An explicitly uncommitted copied source may instead record `origin: "working-tree"` in `UPSTREAM.json`, with `commit` naming its base, `files` mapping every copied source path to its SHA-256, and `reference: { path: "skills/parlor/SKILL.md", sha256 }` naming the reviewed owner guidance. The importer verifies the copied file hashes and uses the owner's working-tree skill only when its hash matches that record. Both imported provenance and scope identify the snapshot as uncommitted; never invent a released commit or commit without authority to make an import work.
 
-### Step 1: Convex Schema (`convex/schema.ts`)
+For an app without Parlor source or dependencies, explicitly use `--guidance-only`. This imports the owner's working-tree guidance, records its base revision and content hash, and states that the framework is **not installed**. It neither selects nor authorizes a migration. Preserve and review an existing differing import before replacing it; an identical import is left untouched. Keep other repository skills intact.
 
-Spread `parlorTables` into your schema. Parlor provides `players`, `rooms`, `roomMembers`, `matches`, and `matchParticipants`. Game tables reference `roomId` and `matchId`:
+Read the imported `SOURCE.json` and inspect installed source signatures before coding. Maintain guidance upstream, not in derived consumer copies. A skill provides context; the user's request and the game's requirements remain authority.
+
+For a new integration, use [Run First Tap](https://parlor.mistystep.io/docs/first-game/) and the relevant parts of `examples/first-tap` at the selected revision. Existing integrations need only the contracts touched by the task, not a complete example read. First Tap's setup is isolated-development tooling, not a production secret configurator.
+
+## Align with installed source
+
+Parlor is a pre-1.0 source distribution. Its `@parlor/*` packages are private workspace packages, not npm releases. Do not suggest `npm install @parlor/*`.
+
+For an existing app, follow [source-workspace installation](https://parlor.mistystep.io/docs/installation/). First inspect its manifests and any existing Parlor checkout. If Parlor is not installed:
+
+```sh
+mkdir -p vendor
+git clone https://github.com/misty-step/parlor.git vendor/parlor
+git -C vendor/parlor rev-parse HEAD
+```
+
+Keep the complete checkout, including `tsconfig.base.json`. Record the commit with the consuming project; prefer a Git submodule pinned to a reviewed commit for maintained integrations. Do not silently pull a newer revision while implementing a game.
+
+Merge these entries into the existing root `pnpm-workspace.yaml` package list; preserve all existing entries and settings:
+
+```yaml
+packages:
+  # Keep your existing workspace entries here.
+  - vendor/parlor/packages/*
+  - vendor/parlor/integrations/*
+```
+
+Add the packages the game directly imports to its own `package.json` dependencies using `workspace:*`. For example:
+
+```json
+{
+  "dependencies": {
+    "@parlor/auth": "workspace:*",
+    "@parlor/convex": "workspace:*",
+    "@parlor/react": "workspace:*",
+    "@parlor/web": "workspace:*"
+  }
+}
+```
+
+This is a fragment to merge, not a replacement manifest. Add `@parlor/core` if importing it directly. Declare the game's normal dependencies too: `convex`, React/React DOM, and `effect` if executing auth Effects. Match the checkout's package manifests and React peer range (currently React 19). The consuming workspace needs the TypeScript build tool; inspect Parlor's root manifest for its version and Node/pnpm requirements rather than relying on global tools.
+
+`@parlor/convex` takes `convex` as a peer (`^1.42.3`), not a separately pinned runtime dependency. The consuming workspace owns one compatible Convex installation; declare it at the workspace root as well as in a nested game package, using the same version. Parlor's own root supplies its development version. Do not add a different Convex devDependency to a copied library or parse serialized errors to conceal duplicate SDK copies. Preserve the consumer's package-manager pin; pnpm settings and existing overrides belong in root `pnpm-workspace.yaml`.
+
+```sh
+pnpm install
+pnpm -r --filter './vendor/parlor/packages/**' --filter './vendor/parlor/integrations/**' --if-present build
+```
+
+Package exports point to built `dist` files. Rebuild after a deliberate source update. Import the aligned repository-local skill with the owner-provided command above; inspect `.agents/skills/parlor/SOURCE.json` and its pinned `reference.md`. The website skill may be newer than the installed packages.
+
+The vendored workspace entries include only the library directories, not Parlor's apps, examples, or root package. Preserve existing dependency build permissions and compiler exclusions; the installation guide records the current toolchain requirements.
+
+Inspect the installed export maps, signatures, and implementation relevant to the changed integration. Examples and current website docs explain intent but may not match an older pin. Read additional auth, match, or browser contracts when the change crosses those boundaries, not as a universal preflight.
+
+## Compose application-owned state
+
+Parlor uses ordinary application-local Convex tables, not an installed Convex Component. Merge the tables into the game's schema and add separate game tables referencing `roomId` and `matchId`:
 
 ```typescript
 import { parlorTables } from "@parlor/convex/schema";
-import { defineSchema, defineTable } from "convex/server";
-import { v } from "convex/values";
+import { defineSchema } from "convex/server";
 
 export default defineSchema({
   ...parlorTables,
-
-  // Your game-specific tables:
-  games: defineTable({
-    roomId: v.id("rooms"),
-    matchId: v.id("matches"),
-    cycle: v.number(),
-    phase: v.string(),
-    round: v.number(),
-    // ...
-  }).index("by_match", ["matchId"]),
 });
 ```
 
-### Step 2: Room Endpoints (`convex/rooms.ts`)
-
-Directly re-export Parlor's room operations so client hooks and standard forms talk directly to Parlor:
+In the consuming app's `convex/rooms.ts`, expose the registered room endpoints:
 
 ```typescript
 export {
@@ -62,152 +102,98 @@ export {
 } from "@parlor/convex/rooms";
 ```
 
-### Step 3: Game Match Lifecycle (`convex/game.ts`)
+Generate the consuming application's Convex API and use its `api.rooms.*` references. Do not import generated code from Parlor's reference application.
 
-Use Parlor's match primitives to manage player eligibility and match lifecycles:
+| Endpoint                 | Arguments and observable result                                                                                                                                                                  |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `createRoom`             | `{ displayName, guestToken? }` → `{ roomId, playerId, code, seatIndex, eligibleFromCycle }`. No `ok` discriminator.                                                                              |
+| `joinRoom`               | `{ code, displayName, guestToken? }` → `{ ok: true, roomId, playerId, code, seatIndex, eligibleFromCycle }` or `{ ok: false, code }`. Handle the failure union and thrown authentication errors. |
+| `getRoomState`           | `{ roomId, guestToken? }` → `{ viewerPlayerId, room, members, activeMatch }`. The projected room identifier is `room.id`; `activeMatch` may be `null`.                                           |
+| `heartbeat`              | `{ roomId, guestToken? }` → `{ roomId, playerId, hostPlayerId, isHost, lastSeenAt }`.                                                                                                            |
+| `leaveRoom`, `closeRoom` | `{ roomId, guestToken? }`; closing requires the host.                                                                                                                                            |
+
+## Keep identity and authority on the server
+
+- Import `issueGuestToken` and `verifyGuestToken` from `@parlor/auth/server`, never the package root or a client bundle. Both return Effects; execute them with `Effect.runPromise` from `effect`.
+- Issuance takes `{ keyId, secret, audience }` with optional lifetime/identity fields and returns `{ token, claims }`. `secret` is a cryptographically random `Uint8Array` of at least 32 bytes. Verification takes `(token, { keyRing: { keys }, audience })` and returns verified claims. Do not decode a bearer token and treat its payload as verified identity.
+- The browser issuer callback accepts optional `{ mode: "acquire" | "refresh", token? }` and must resolve `{ token: string, expiresAt: number }`; use `claims.expiresAt`, in milliseconds. Parlor does not supply the HTTP issuance endpoint or cookie lifecycle.
+- Configure the same server-only key material in the issuer and Convex. Convex reads `PARLOR_GUEST_TOKEN_KEYS` as JSON mapping key IDs to base64url secrets, and `PARLOR_GUEST_TOKEN_AUDIENCE` (default `parlor`). Never expose these secrets in public environment variables, client code, logs, or prompts.
+- Preserve a guest ID across refreshes only from server-verified continuity. A signed `HttpOnly`, `SameSite=Lax`, production-`Secure` cookie is one application-owned mechanism. Reject client-supplied guest IDs and unverified/expired token claims as renewal authority. Keep bearer-token and continuity-cookie lifetimes distinct; document how expired credentials recover without silently changing identity.
+- `resolvePlayer(ctx, guestToken?)` returns a server-resolved actor. Without a guest token it can use verified Convex auth identity; an invalid supplied guest token does not fall back to that identity. Existing players resolve by default; creation requires `{ create: true }` in a mutation. Room create/join already create players as needed.
+- A game with an existing credential authority should keep it. Verify credentials in game-owned server code, then call `resolvePlayerForIdentity(ctx, descriptor, { create? })` with a trusted `IdentityDescriptor` and pass its `PlayerActor` to transaction-local helpers such as `createRoomForPlayer`, `joinRoomForPlayer`, and `beginMatch`. Never accept the descriptor or actor from a client. Do not send an application-specific bearer token to Parlor's verifier or configure a second Parlor key ring merely to compose rooms. Return a failed join receipt from the enclosing mutation rather than throwing it away: rate-limit state must commit.
+
+The [authentication guide](https://parlor.mistystep.io/docs/authentication/) explains the example's application-owned [issuance and continuity route](https://github.com/misty-step/parlor/blob/master/examples/first-tap/app/api/guest/route.ts). Read `examples/first-tap/app/api/guest/route.ts` from the pinned checkout when adapting it to the game's HTTP runtime.
+
+## Protect every game transition
+
+The game server owns phase transitions, deadlines, randomized choices, and scores. Clients submit intentions, never authoritative score deltas, actor objects, phase timestamps, or participant lists.
+
+- Start inside a game mutation with `actor = await resolvePlayer(ctx, args.guestToken)`, then `await beginMatch(ctx, { roomId: args.roomId, actor, minPlayers, maxPlayers })` from `@parlor/convex`. It checks host authority, snapshots eligible present members into `matchParticipants`, and returns an envelope with `id` (not `matchId`). Create the game-specific state in the same transaction. Do not use the generic `startMatch` endpoint if it would leave the game uninitialized.
+- On commands, call `requireActiveMatch(ctx, matchId, roomId)` before game writes. It checks status, room association, and the match's hard deadline when enabled, **not actor authorization or game-phase eligibility**. Game round deadlines are separate server-owned state.
+- The default match cap is 30 minutes. To opt out, choose `hardDeadline: false` server-side in `beginMatch`'s input; omitted/`true` retains the cap. The envelope and room projection preserve the opt-out. This does not disable everyone-away abandonment, frozen participation, or game-phase deadlines. The generic `startMatch` endpoint does not expose this option.
+- Resolve the actor and explicitly enforce frozen participant membership. Inside a validated game mutation, the authorization fragment is:
 
 ```typescript
-import { beginMatch, completeMatch, requireActiveMatch, resolvePlayer } from "@parlor/convex";
+import { requireActiveMatch, resolvePlayer } from "@parlor/convex";
+import { ConvexError } from "convex/values";
 
-// 1. Resolve caller identity from the guest token:
-const actor = await resolvePlayer(ctx, guestToken);
-
-// 2. Starting a game (host only):
-// beginMatch requires the resolved actor and roomId.
-// It checks host authority, freezes eligible present members into
-// matchParticipants, and returns the active match envelope.
-const activeMatch = await beginMatch(ctx, {
-  roomId,
-  actor,
-  minPlayers: 3,
-  maxPlayers: 12,
-});
-const matchId = activeMatch.id;
-
-// 3. Guarding game commands (status & deadline):
-// requireActiveMatch verifies the match is active and not timed out.
-// Note: requireActiveMatch checks status/deadline only, NOT caller membership.
-await requireActiveMatch(ctx, matchId, roomId);
-
-// 4. Authorizing participant actions explicitly:
+const actor = await resolvePlayer(ctx, args.guestToken);
+await requireActiveMatch(ctx, args.matchId, args.roomId);
 const participant = await ctx.db
   .query("matchParticipants")
-  .withIndex("by_match_player", (q) => q.eq("matchId", matchId).eq("playerId", actor.playerId))
+  .withIndex("by_match_player", (q) => q.eq("matchId", args.matchId).eq("playerId", actor.playerId))
   .unique();
 if (!participant) {
-  throw new ConvexError("MATCH_PARTICIPANT_REQUIRED");
+  throw new ConvexError({ code: "MATCH_PARTICIPANT_REQUIRED" });
 }
-
-// 5. Finishing the game:
-await completeMatch(ctx, { matchId });
 ```
 
-### Step 4: Abandonment Sweeping (`convex/maintenance.ts`)
+Then enforce the game's phase, turn, submission uniqueness, and deadline rules. Queries need authorization too: explicitly project only the fields this viewer may see. Never send hidden answers, truth, authorship, or unrevealed options to a client and merely hide them in React.
 
-`sweepAbandonedMatches` abandons a **bounded page** of active match envelopes (hard deadline elapsed, or every participant away). It does **not** transfer hosts, mark members away, or close rooms. Presence is derived from `lastSeenAt` on read; host self-heal runs inside `heartbeat` / leave (`selfHealHost`).
+- New mid-match members are not added to the frozen roster. Spectator access is a game-owned safe projection; next-cycle eligibility still requires presence and player bounds. Never replace the current roster with all room members.
+- Finish with `completeMatch(ctx, { matchId, actor })` after server-validated completion, atomically with final scores. Providing `actor` checks participation, not permission to end the game's phase. Omitting it bypasses that check and belongs only in an already-authorized internal path.
+- `abandonMatch(ctx, { matchId, reason, actor? })` accepts `host-ended`, `everyone-away`, or `hard-deadline`. `host-ended` requires a resolved host actor; the other reasons are trusted maintenance decisions, not client-selectable shortcuts. These helpers update envelopes, not game-specific rows.
+- Presence is derived from timestamps. Host self-healing occurs during heartbeat/leave, not a background timer. It selects the non-host-stale candidate with the lowest seat index, breaking ties by player ID; active-match transfers restrict candidates to frozen participants still in the room. A later mutation can heal the host when no candidate was previously eligible, so do not promise immediate transfer while every client is disconnected.
 
-The caller owns pagination. Returning only the first page on a cron interval can starve later matches indefinitely. Continue from `continueCursor` until `hasMore` is false:
+## Continue every sweeper page
+
+`sweepAbandonedMatches(ctx, { limit?, cursor? })` returns `{ scanned, abandoned, hasMore, continueCursor }`. The game owns the internal mutation and cron registration. Schedule each continuation with the opaque cursor until `hasMore` is false; a page with zero abandoned matches can still have more pages. Restarting only the first page can starve later matches.
+
+The sweeper abandons hard-expired or everyone-away envelopes, not rooms or game data. `hardDeadline: false` skips only the fixed cap. It neither transfers hosts nor replaces command-time lifecycle and game-phase deadline guards. The [matches guide](https://parlor.mistystep.io/docs/matches/#sweep-every-page) shows the application-owned wrapper.
+
+## Compose the React client
+
+- Use the application's `ConvexProvider` from `convex/react`. Own one `useGuestCredential({ issuer, autoAcquire: true })` at the application boundary and share its result through application-owned state/context; Parlor does not export a guest provider. Handle renewal failure and memory-only storage explicitly. Retry initial acquisition with `acquire()` when no proof exists; use `refresh()` for retained proof. Keep selected-room state outside temporarily credential-gated rendering.
+- Do not query or mutate guest-only endpoints until `credential` exists; use Convex's `"skip"` query argument while waiting. Send the credential as `guestToken`, not as a player ID.
+- Import `@parlor/react/styles.css` when using Parlor's UI. Inspect exported component props rather than guessing them.
+- `useHeartbeat` requires a sender returning `void` or `PromiseLike<void>`, not the heartbeat mutation receipt. For a component with nullable `roomId`/`guestToken` and a `heartbeat` mutation hook:
 
 ```typescript
-import { sweepAbandonedMatches } from "@parlor/convex";
-import { v } from "convex/values";
-import { internal } from "./_generated/api";
-import { internalMutation } from "./_generated/server";
-
-export const sweepAbandoned = internalMutation({
-  args: { cursor: v.optional(v.string()) },
-  handler: async (ctx, args) => {
-    const result = await sweepAbandonedMatches(ctx, { limit: 50, ...args });
-    if (result.hasMore && result.continueCursor !== null) {
-      await ctx.scheduler.runAfter(0, internal.maintenance.sweepAbandoned, {
-        cursor: result.continueCursor,
-      });
-    }
-    return result;
+useHeartbeat({
+  enabled: roomId !== null && guestToken !== null,
+  send: async () => {
+    if (roomId === null || guestToken === null) return;
+    await heartbeat({ roomId, guestToken });
   },
 });
+useWakeLock({ enabled: matchActive });
 ```
 
-Kick the first page from a Convex cron (Poppycock uses every 1 minute with empty `{}` args).
+Wake lock and audio are progressive browser capabilities. Denial, unsupported browsers, suspended tabs, and muted audio must not block play.
 
-### Step 5: Guest Authentication & Continuity (`app/api/guest/route.ts`)
+## Verify the changed integration
 
-Party games should require no accounts:
+Exercise the path changed by the task against the consuming game's approved backend and HTTP guest issuer. A presentation-only change does not require replaying the full game lifecycle. For a new integration, verify create → join → start → submit → reveal → score → rematch with separate browser identities.
 
-- Issue HMAC-SHA256 guest tokens with audience `parlor` (or game-specific).
-- Set an `HttpOnly`, `SameSite=Lax`, `Secure` continuity cookie so mobile browser refreshes and tab reloads preserve the player's seat and score.
-- Reject client-supplied guest IDs; the cookie signature is the sole source of identity continuity.
+When a trust or lifecycle boundary changes, exercise its affected transitions and failure cases: same-player renewal, unauthorized commands and viewer-safe projections, frozen late-join/rematch eligibility, mutation-driven host departure, reconnects, or sweeper continuation as applicable. Browser capability changes need denied/unsupported behavior; distinguish physical-device evidence from viewport emulation and report unavailable environments.
 
-### Step 6: Frontend Shell (`app/page.tsx`)
+The playground's local simulation does not prove guest signing, Convex functions, cookies, scheduling, or deployed mobile behavior. Review changed credential, authorization, and data boundaries before shipping. Production access, secret changes, destructive schema/data work, and deployment require separate operator authorization, not repeated approval for ordinary requested local implementation. Report the pin, paths and scenarios exercised, and verification gaps without unsupported stability claims.
 
-- Wrap the app with your Convex and Parlor guest providers.
-- Use `<RoomCodeInput />` for entering 4-character room codes.
-- Use `<QRCodeDisplay />` in lobbies for instant phone camera joins.
-- Use `<ConnectionStatus />` to show live socket state and reconnect notices.
-- Use `useHeartbeat({ send: () => mutate(api.rooms.heartbeat, { roomId, guestToken }) })` for visibility-aware presence pings.
-- Use `useWakeLock()` during active gameplay to prevent phones from sleeping.
-- Use `useAudio()` (or `<AudioProvider />`) to play party-game sound cues (`play("join")`, `play("start")`, `play("win")`, etc.) or add `data-cuelume-press` / `data-cuelume-release` attributes to buttons for tactile interaction feedback. `<RoomCodeInput />` plays digit and completion sounds out of the box.
+For a bug or missing primitive, prepare a minimal reproduction with the pinned commit and expected/actual behavior. Linear owns current work, prioritization, and selected unresolved opportunities; create or update an item only when the user requests it. Historical GitHub reports may remain useful evidence, but are not an automatic intake queue. Exclude tokens, cookies, private data, and secrets. Keep durable contracts and portable procedures in the repository, concise work summaries in Linear, and raw or sensitive run output in approved retained artifact storage.
 
----
+## References
 
-## 3. Core Invariants
-
-1. **Server Authority**: The server owns phase transitions, timers, option randomization, and scores. Never accept client-reported score deltas.
-2. **Frozen Match Eligibility**: When a match begins, eligible players are snapshotted into `matchParticipants`. Spectators who join mid-game can watch the current match and are automatically included in the next rematch.
-3. **Automatic Host Transfer**: If a host leaves or drops, Parlor automatically reassigns host status to the earliest joined active room member.
-4. **Secret State Hiding**: Never project hidden state (the truth, other players' secret answers, or author identities) to the client until the reveal phase.
-
----
-
-## 4. Reporting Issues, Papercuts, and Feature Requests
-
-Every game built on Parlor is a test of its abstractions. When you encounter friction, bugs, or missing party-game primitives, file an issue directly in the Parlor repository.
-
-### Check Existing Issues First
-
-```sh
-gh issue list --repo misty-step/parlor --state all
-```
-
-### File an Issue
-
-Use `gh issue create`:
-
-````sh
-gh issue create --repo misty-step/parlor \
-  --title "<kind>: <concise description>" \
-  --body "$(cat <<'EOF'
-## Kind
-[bug | papercut | feature-request | dx]
-
-## Problem
-What broke, what was awkward, or what boilerplate had to be written in userland.
-
-## Context
-- Consuming game (e.g. Poppycock, Linejam)
-- Package(s): `@parlor/convex`, `@parlor/react`, `@parlor/auth`, etc.
-- Environment: Convex Cloud / local backend, Next.js / Vite, workerd / Node.js
-
-## Reproduction or Example Code
-```typescript
-// Minimal snippet showing the issue or friction
-````
-
-## Expected Behavior vs Actual Behavior
-
-What Parlor should do vs what it currently does.
-
-## Suggested Solution
-
-How Parlor could solve this internally so future games get it for free.
-EOF
-)"
-
-```
-
-### Examples of High-Value Reports:
-- **Papercut**: "Had to write 300 lines of cookie continuity logic in `lib/session.ts` because `@parlor/auth` only handles token signing, not cookie lifecycle."
-- **Bug**: "Bundler rewrote Symbol type IDs to string concatenation under workerd/OpenNext, throwing runtime TypeError."
-- **Feature Request**: "No standard countdown timer / deadline synchronization primitive in `@parlor/react`."
-- **DX**: "Missing `parlorTables` composite index helper for games that query participants by seat."
-```
+- [Start here](https://parlor.mistystep.io/docs/getting-started/), [Run First Tap](https://parlor.mistystep.io/docs/first-game/), [source installation](https://parlor.mistystep.io/docs/installation/), and [API reference](https://parlor.mistystep.io/docs/api/).
+- [Rooms and presence](https://parlor.mistystep.io/docs/rooms-and-presence/), [matches](https://parlor.mistystep.io/docs/matches/), and [React](https://parlor.mistystep.io/docs/react/).
+- [Agent onboarding](https://parlor.mistystep.io/docs/agents/), [documentation index](https://parlor.mistystep.io/llms.txt), and [full documentation](https://parlor.mistystep.io/llms-full.txt).
+- [Source repository](https://github.com/misty-step/parlor) and [canonical skill source](https://github.com/misty-step/parlor/blob/master/skills/parlor/SKILL.md). Use the installed commit instead of `master` when resolving a contract difference.
