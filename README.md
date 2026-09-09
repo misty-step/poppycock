@@ -53,11 +53,13 @@ pnpm reset --yes-delete-local-data  # reset only the isolated local game databas
 
 The local scripts reject production resets and missing configuration rather than switching to fake data. Keep `.env.local` and `.convex/` private and untracked. See `.env.example` for the server/browser environment boundary.
 
-For repeatable browser verification, use the [smoke procedure](docs/verification.md#reproduce).
-It separates the local six-round/rematch exercise from the separately authorized
-hosted one-round check. New runs should use `POPPYCOCK_EVIDENCE_DIR` with a fresh
-`test-results/` subdirectory rather than overwrite the retained `evidence/`
-collection. CI already retains fresh per-revision local output as an artifact
+Agents: load the repository-owned [poppycock-verify skill](.agents/skills/poppycock-verify/SKILL.md)
+(`skill://poppycock-verify` in Oh My Pi). The [verification guide](docs/verification.md#choose-the-exercise)
+selects focused checks and documents the existing six-round/rematch smoke,
+browser journeys, evidence inspection, and cleanup. Hosted one-round play
+requires separate authorization. Smoke commands default to a fresh ignored
+`test-results/` directory; `POPPYCOCK_EVIDENCE_DIR` can select a new directory
+but cannot overwrite an existing one. CI retains per-revision local output
 without deployment credentials.
 
 ## How Parlor is used

@@ -1,9 +1,10 @@
 import { chromium, expect } from "@playwright/test";
 import { ConvexHttpClient } from "convex/browser";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { api } from "../convex/_generated/api.js";
+import { createSmokeEvidence } from "./smoke-evidence.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const origin = process.env.POPPYCOCK_PUBLIC_ORIGIN ?? "https://poppycock.mistystep.io";
@@ -14,9 +15,7 @@ if (convexUrl.includes("127.0.0.1") || convexUrl.includes("localhost")) {
   throw new Error("Public smoke must not use a local Convex URL.");
 }
 const client = new ConvexHttpClient(convexUrl);
-const evidenceDirectory = process.env.POPPYCOCK_EVIDENCE_DIR ?? "evidence";
-const evidence = join(root, evidenceDirectory);
-await mkdir(evidence, { recursive: true });
+const evidence = await createSmokeEvidence(root, "public");
 
 const browser = await chromium.launch({
   headless: true,
@@ -202,7 +201,7 @@ try {
         rounds: report.rounds.length,
         finalScores: report.finalScores,
         screenshots: report.screenshots,
-        evidence: `${evidenceDirectory}/public-https-smoke.json`,
+        evidence: join(evidence, "public-https-smoke.json"),
       },
       null,
       2,

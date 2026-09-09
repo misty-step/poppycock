@@ -1,10 +1,11 @@
 import { chromium, expect } from "@playwright/test";
 import { ConvexHttpClient } from "convex/browser";
-import { readFile, mkdir, writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { parseEnv } from "node:util";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { api } from "../convex/_generated/api.js";
+import { createSmokeEvidence } from "./smoke-evidence.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const local = parseEnv(await readFile(join(root, ".env.local"), "utf8"));
@@ -15,9 +16,7 @@ if (local.POPPYCOCK_LOCAL !== "true" || !local.CONVEX_DEPLOYMENT?.startsWith("an
 }
 const base = process.env.POPPYCOCK_BASE_URL ?? "http://localhost:3210";
 const client = new ConvexHttpClient(local.NEXT_PUBLIC_CONVEX_URL);
-const evidenceDirectory = process.env.POPPYCOCK_EVIDENCE_DIR ?? "evidence";
-const evidence = join(root, evidenceDirectory);
-await mkdir(evidence, { recursive: true });
+const evidence = await createSmokeEvidence(root, "local");
 const browser = await chromium.launch({
   headless: true,
   ...(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {}),
@@ -323,7 +322,7 @@ try {
         rounds: report.rounds.length,
         finalScores: report.finalScores,
         checks: report.checks,
-        evidence: `${evidenceDirectory}/multiplayer-smoke.json`,
+        evidence: join(evidence, "multiplayer-smoke.json"),
       },
       null,
       2,
