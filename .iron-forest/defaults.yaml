@@ -1,0 +1,4 @@
+# Instance defaults sit below explicit declaration frontmatter.
+# Credentials belong in the protected service environment, never in this profile.
+model: openrouter/meta/muse-spark-1.3-contributor
+thinking: max
