@@ -1,6 +1,6 @@
 ---
 tools: read,grep,glob,bash,edit,write
-thinking: max
+thinking: high
 request: python3 .iron-forest/linear.py request builder
 extensions: [.iron-forest/extensions/models.ts]
 ---

@@ -1,5 +1,6 @@
 # Instance defaults sit below explicit declaration frontmatter.
 # Credentials belong in the protected service environment, never in this profile.
 # muse-spark-1.3-contributor rejects reasoning_effort=max without Muse Code.
+# Paid spark accepts max; use high (factory level) so Verifier enumerates Kernel evidence.
 model: openrouter/meta/muse-spark-1.3
-thinking: max
+thinking: high
