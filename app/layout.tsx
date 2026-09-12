@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Write a believable bluff. Find the truth. A free, untimed party game for 3–12 friends, powered by Parlor.",
 };
-export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#F5F7F5" };
+export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#F6F0FF" };
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
