@@ -292,6 +292,95 @@ def evidence_poll(role: str, root: Path) -> int:
     return result.returncode
 
 
+def pending_request_candidate(root: Path, *, rejected: bool = False) -> dict | None:
+    listed = subprocess.run(
+        ["git", "-C", str(root), "for-each-ref", "--format=%(refname)", "refs/forest/v1/request/"],
+        capture_output=True,
+        text=True,
+        timeout=30,
+        check=False,
+    )
+    if listed.returncode != 0:
+        return None
+    pending: list[dict] = []
+    for ref in listed.stdout.splitlines():
+        ref = ref.strip()
+        if not ref:
+            continue
+        sha = ref.rsplit("/", 1)[-1]
+        verdict = subprocess.run(
+            ["git", "-C", str(root), "show-ref", "--verify", "--quiet", f"refs/forest/v1/verdict/{sha}"],
+            timeout=10,
+            check=False,
+        )
+        has_verdict = verdict.returncode == 0
+        if rejected != has_verdict:
+            continue
+        if rejected:
+            shown_verdict = subprocess.run(
+                ["git", "-C", str(root), "show", f"refs/forest/v1/verdict/{sha}:verdict.json"],
+                capture_output=True,
+                text=True,
+                timeout=10,
+                check=False,
+            )
+            if shown_verdict.returncode != 0 or not shown_verdict.stdout.strip():
+                continue
+            try:
+                verdict_payload = json.loads(shown_verdict.stdout)
+            except json.JSONDecodeError:
+                continue
+            if str(verdict_payload.get("verdict") or "").strip() != "changes":
+                continue
+        shown = subprocess.run(
+            ["git", "-C", str(root), "show", f"{ref}:request.json"],
+            capture_output=True,
+            text=True,
+            timeout=10,
+            check=False,
+        )
+        if shown.returncode != 0 or not shown.stdout.strip():
+            continue
+        try:
+            payload = json.loads(shown.stdout)
+        except json.JSONDecodeError:
+            continue
+        work = payload.get("work")
+        if not isinstance(work, dict):
+            continue
+        system = str(work.get("system") or "").strip()
+        work_id = str(work.get("id") or "").strip()
+        if not system or not work_id:
+            continue
+        snapshot = {"system": system, "id": work_id}
+        key = str(work.get("key") or "").strip()
+        url = str(work.get("url") or "").strip()
+        if key:
+            snapshot["key"] = key
+        if url:
+            snapshot["url"] = url
+        subject = str(payload.get("subject") or key).strip()
+        branch = str(payload.get("branch") or "").strip()
+        revision = str(payload.get("revision") or sha).strip()
+        if not subject or not branch or not revision or revision != sha:
+            continue
+        if not branch.startswith("refs/"):
+            branch = f"refs/heads/{branch}"
+        pending.append(
+            {
+                "work": snapshot,
+                "subject": subject,
+                "branch": branch,
+                "revision": revision,
+            }
+        )
+    if len(pending) != 1:
+        return None
+    return pending[0]
+
+
+
+
 def run_identity() -> str:
     run_id = os.environ.get("FOREST_RUN_ID", "")
     if not re.fullmatch(r"[A-Za-z0-9._:-]{1,255}", run_id or ""):
@@ -330,19 +419,29 @@ def emit_request(issue: dict, role: str, run_id: str) -> None:
     sys.stdout.write("\n")
 
 
-def emit_evidence_request(role: str, run_id: str) -> None:
+def emit_evidence_request(role: str, run_id: str, candidate: dict | None = None) -> None:
     prompt = (
         f"Execute only this Forest {role} request. Select the eligible "
         "git-native candidate from Kernel evidence as declared in agent.md. "
         "Do not pull a Linear ticket; a poll is not a work identity."
     )
+    if candidate:
+        prompt = (
+            f"{prompt}\n"
+            f"Subject: {candidate['subject']}\n"
+            f"Branch: {candidate['branch']}\n"
+            f"SHA: {candidate['revision']}\n"
+        )
     payload = {
         "schema": "forest.request.v1",
         "id": f"{role}:{run_id}",
         "prompt": prompt,
     }
+    if candidate:
+        payload["work"] = candidate["work"]
     json.dump(payload, sys.stdout, indent=2)
     sys.stdout.write("\n")
+
 
 
 def poll(role: str, root: Path, fixture: str | None) -> int:
@@ -361,7 +460,10 @@ def request(role: str, root: Path, fixture: str | None) -> int:
     if role in {"verifier", "fixer"}:
         if evidence_poll(role, root) != 0 and fixture is None:
             return 1
-        emit_evidence_request(role, run_id)
+        candidate = pending_request_candidate(root, rejected=(role == "fixer"))
+        if candidate is None and fixture is None:
+            return 1
+        emit_evidence_request(role, run_id, candidate)
         return 0
     project = project_name(load_repo(root))
     issues = select_issues(project, fixture)
