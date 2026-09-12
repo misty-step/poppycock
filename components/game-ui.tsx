@@ -180,6 +180,10 @@ export function RulesDialog({
               <dt>Each player who votes for your bluff</dt>
               <dd className="font-bold tabular-nums">+1 point</dd>
             </div>
+            <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <dt>Write the exact truth (you don't vote that round)</dt>
+              <dd className="font-bold tabular-nums">+2 points</dd>
+            </div>
           </dl>
         </div>
         <details className="help-disclosure">
