@@ -168,6 +168,13 @@
     white-space: nowrap;
     color: var(--primary);
   }
+  .wordmark .brand-mark {
+    display: inline-block;
+    width: 1.12em;
+    height: 1.12em;
+    margin-right: 0.16em;
+    vertical-align: -0.22em;
+  }
   .room-code strong {
     font-size: 1rem;
     letter-spacing: 0.12em;
