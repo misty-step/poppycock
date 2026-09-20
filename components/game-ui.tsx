@@ -27,6 +27,28 @@ import {
 export function Brand() {
   return (
     <span className="wordmark" aria-label="Poppycock">
+      <svg className="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect x="5" y="6" width="56" height="56" rx="16" fill="#381B5E" />
+        <rect
+          x="3"
+          y="2"
+          width="56"
+          height="56"
+          rx="16"
+          fill="#FFF5D2"
+          stroke="#59268E"
+          strokeWidth="6"
+        />
+        <rect x="20.5" y="19" width="7" height="13" rx="3.5" fill="#3F2B66" />
+        <rect x="36.5" y="19" width="7" height="13" rx="3.5" fill="#3F2B66" />
+        <path
+          d="M 23 41 Q 32 51 41 41"
+          fill="none"
+          stroke="#3F2B66"
+          strokeWidth="5.5"
+          strokeLinecap="round"
+        />
+      </svg>
       poppycock<span aria-hidden="true">!</span>
     </span>
   );

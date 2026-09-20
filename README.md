@@ -1,5 +1,7 @@
 # Poppycock
 
+<p align="center"><img src="public/brand/logo.svg" width="180" alt="Poppycock logo: two bluffing tiles, one smiling, one in sunglasses"></p>
+
 A phone-first bluffing party game for **3–12 people**. One peculiar question, a table of convincing lies, and exactly one truth. Six rounds; no accounts, payments, or AI service required.
 
 Hosted play: **https://poppycock.mistystep.io** — no account. The party interface, untimed game, and 48-character avatar picker were deployed and checked on **2026-09-08**, against the catalog of that revision; the hosted deployment has not been re-seeded since the catalog grew to 1,386 cards. See the [revision-specific verification history](docs/verification.md#verification-history); these docs are not a live deployment-status service.
