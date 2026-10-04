@@ -17,11 +17,138 @@ import type { SeedCard } from "./types";
  */
 
 export type CatalogFinding = {
-  kind: "restated-subject" | "shared-source";
+  kind: "answer-restated" | "bare-answer" | "restated-subject" | "shared-source";
   pack: string;
   card: string;
   detail: string;
 };
+
+const VOCABULARY_PACK_KEYS = new Set(["linguistic-gems", "odd-words", "rarer-words"]);
+
+const NUMBER_WORDS = new Set([
+  "zero",
+  "one",
+  "two",
+  "three",
+  "four",
+  "five",
+  "six",
+  "seven",
+  "eight",
+  "nine",
+  "ten",
+  "eleven",
+  "twelve",
+  "thirteen",
+  "fourteen",
+  "fifteen",
+  "sixteen",
+  "seventeen",
+  "eighteen",
+  "nineteen",
+  "twenty",
+  "thirty",
+  "forty",
+  "fifty",
+  "sixty",
+  "seventy",
+  "eighty",
+  "ninety",
+  "hundred",
+  "thousand",
+  "million",
+  "billion",
+  "trillion",
+  "half",
+  "quarter",
+  "pi",
+]);
+
+const MONTHS =
+  "january|february|march|april|may|june|july|august|september|october|november|december";
+const ORDINAL_DAY = String.raw`(?:[1-9]|[12]\d|3[01])(?:st|nd|rd|th)?`;
+const YEAR = String.raw`\d{1,4}(?:\s*(?:bce?|ce|ad))?`;
+const DATE_PATTERNS = [
+  new RegExp(`^(?:${MONTHS})\\s+${ORDINAL_DAY}(?:,)?(?:\\s+${YEAR})?$`, "i"),
+  new RegExp(`^${ORDINAL_DAY}\\s+(?:of\\s+)?(?:${MONTHS})(?:,)?(?:\\s+${YEAR})?$`, "i"),
+  new RegExp(`^(?:${MONTHS})(?:,)?\\s+${YEAR}$`, "i"),
+  new RegExp(`^${YEAR}$`, "i"),
+  /^(?:\d{1,4})[-/.](?:\d{1,2})[-/.](?:\d{1,4})$/,
+];
+
+const normalizedWords = (text: string): string =>
+  text
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .replace(/\s+/g, " ");
+
+const isBareNumber = (answer: string): boolean => {
+  const trimmed = answer.trim().replace(/[.!?]+$/, "");
+  if (/^[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?(?:st|nd|rd|th)?$/.test(trimmed)) {
+    return true;
+  }
+
+  const words = normalizedWords(trimmed).split(" ");
+  return (
+    words.length > 0 &&
+    words.some((word) => NUMBER_WORDS.has(word)) &&
+    words.every(
+      (word) => NUMBER_WORDS.has(word) || word === "and" || word === "minus" || word === "negative",
+    )
+  );
+};
+
+const isBareDate = (answer: string): boolean => {
+  const trimmed = answer.trim().replace(/[.!?]+$/, "");
+  return DATE_PATTERNS.some((pattern) => pattern.test(trimmed));
+};
+
+/**
+ * Finds cards whose question contains their complete answer as a word-bounded
+ * phrase. Punctuation, accents, and casing do not conceal the leak.
+ */
+export function findAnswerRestatements(cards: readonly SeedCard[]): CatalogFinding[] {
+  const findings: CatalogFinding[] = [];
+
+  for (const card of cards) {
+    const answer = normalizedWords(card.answer).replace(/^(?:a|an|the)\s+/, "");
+    const question = ` ${normalizedWords(card.question)} `;
+    if (!answer || !question.includes(` ${answer} `)) continue;
+    findings.push({
+      kind: "answer-restated",
+      pack: card.packKey,
+      card: card.key,
+      detail: "question restates the answer",
+    });
+  }
+
+  return findings;
+}
+
+/**
+ * Finds non-vocabulary cards whose reveal is only a number or calendar date.
+ * Vocabulary packs are excluded because a numeric term can itself be the word
+ * being defined.
+ */
+export function findBareNumberOrDateAnswers(cards: readonly SeedCard[]): CatalogFinding[] {
+  const findings: CatalogFinding[] = [];
+
+  for (const card of cards) {
+    if (VOCABULARY_PACK_KEYS.has(card.packKey)) continue;
+    if (!isBareNumber(card.answer) && !isBareDate(card.answer)) continue;
+    findings.push({
+      kind: "bare-answer",
+      pack: card.packKey,
+      card: card.key,
+      detail: "answer is only a number or date",
+    });
+  }
+
+  return findings;
+}
 
 /** Words too generic in this corpus to indicate that two cards share a subject. */
 const STOP_WORDS = new Set([
