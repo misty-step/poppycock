@@ -410,6 +410,20 @@ def pending_request_candidate(root: Path, *, rejected: bool = False) -> dict | N
             continue
         if not branch.startswith("refs/"):
             branch = f"refs/heads/{branch}"
+        resolved = subprocess.run(
+            ["git", "-C", str(root), "ls-remote", "--exit-code", "origin", branch],
+            capture_output=True,
+            text=True,
+            timeout=30,
+            check=False,
+        )
+        tips = {
+            fields[0]
+            for line in resolved.stdout.splitlines()
+            if len(fields := line.split()) == 2 and fields[1] == branch
+        }
+        if resolved.returncode != 0 or tips != {revision}:
+            continue
         pending.append(
             {
                 "work": snapshot,
@@ -561,7 +575,9 @@ def review_receipt(root: Path, revision: str, pr: str) -> int:
             raise AdapterError(f"{kind} evidence names another revision")
     candidate, checks, verdict = (evidence[kind] for kind in ("request", "checks", "verdict"))
     work = candidate.get("work")
-    if not work or work != retained.get("work") or work != run.get("work"):
+    if not isinstance(work, dict) or not str(work.get("id") or "").strip():
+        raise AdapterError("candidate evidence carries no work identity")
+    if work != retained.get("work") or work != run.get("work"):
         raise AdapterError("candidate, retained request and live Run work identities differ")
     if (retained.get("id") != run.get("request_id")
             or retained.get("authority") != run.get("authority")
@@ -575,15 +591,20 @@ def review_receipt(root: Path, revision: str, pr: str) -> int:
         raise AdapterError("published evidence is not a complete approval with passing Checks")
     branch = candidate["branch"].removeprefix("refs/heads/")
     pull = json.loads(command("gh", "pr", "view", pr, "--repo", repo,
-                             "--json", "url,headRefName,headRefOid,state,comments"))
-    if pull["state"] != "OPEN" or pull["headRefName"] != branch or pull["headRefOid"] != revision:
+                             "--json", "url,baseRefName,headRefName,headRefOid,state,comments"))
+    if (pull["state"] != "OPEN" or pull["baseRefName"] != "master"
+            or pull["headRefName"] != branch or pull["headRefOid"] != revision):
         raise AdapterError("PR is not the open exact candidate revision")
     marker = "<!-- forest.review.v1 -->"
     for comment in pull["comments"]:
-        if comment["body"].startswith(marker):
+        if not comment.get("body", "").startswith(marker):
+            continue
+        try:
             previous = json.loads(comment["body"][len(marker):].strip())
-            if previous.get("revision") == revision:
-                raise AdapterError("candidate already has a receipt; reconcile rather than duplicate")
+        except json.JSONDecodeError:
+            continue
+        if isinstance(previous, dict) and previous.get("revision") == revision:
+            raise AdapterError("candidate already has a receipt; reconcile rather than duplicate")
     summary = verdict["summary"] + "\n\nPublished evidence (same live Verifier Run):\n"
     summary += f"Verdict: {verdict['verdict']} at {verdict['time']}.\n"
     summary += f"Checks at {checks['time']}: " + ", ".join(
@@ -598,8 +619,9 @@ def review_receipt(root: Path, revision: str, pr: str) -> int:
     if any(current.get(key) != run.get(key) for key in ("run_id", "request_id", "work", "authority")):
         raise AdapterError("live Run identity changed before posting")
     current = json.loads(command("gh", "pr", "view", pr, "--repo", repo,
-                                 "--json", "headRefOid,state"))
-    if current["state"] != "OPEN" or current["headRefOid"] != revision:
+                                 "--json", "baseRefName,headRefOid,state"))
+    if (current["state"] != "OPEN" or current["baseRefName"] != "master"
+            or current["headRefOid"] != revision):
         raise AdapterError("candidate moved before receipt publication")
     url = command("gh", "pr", "comment", pull["url"], "--repo", repo,
                   "--body", marker + "\n" + json.dumps(receipt, indent=2))
