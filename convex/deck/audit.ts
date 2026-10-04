@@ -70,8 +70,9 @@ const ORDINAL_DAY = String.raw`(?:[1-9]|[12]\d|3[01])(?:st|nd|rd|th)?`;
 const YEAR = String.raw`\d{1,4}(?:\s*(?:bce?|ce|ad))?`;
 const DATE_PATTERNS = [
   new RegExp(`^(?:${MONTHS})\\s+${ORDINAL_DAY}(?:,)?(?:\\s+${YEAR})?$`, "i"),
-  new RegExp(`^${ORDINAL_DAY}\\s+(?:of\\s+)?(?:${MONTHS})(?:\\s+${YEAR})?$`, "i"),
-  new RegExp(`^(?:${MONTHS})\\s+${YEAR}$`, "i"),
+  new RegExp(`^${ORDINAL_DAY}\\s+(?:of\\s+)?(?:${MONTHS})(?:,)?(?:\\s+${YEAR})?$`, "i"),
+  new RegExp(`^(?:${MONTHS})(?:,)?\\s+${YEAR}$`, "i"),
+  new RegExp(`^${YEAR}$`, "i"),
   /^(?:\d{1,4})[-/.](?:\d{1,2})[-/.](?:\d{1,4})$/,
 ];
 

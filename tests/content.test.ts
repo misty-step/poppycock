@@ -78,6 +78,7 @@ describe("editorial defect finders", () => {
     const cards = [
       syntheticCard("bare-number", "How many were recorded?", "Twenty-three."),
       syntheticCard("bare-date", "When did it happen?", "14 September 1752."),
+      syntheticCard("bare-era-date", "In which year did it happen?", "44 BCE."),
       syntheticCard("bluffable-answer", "What happened?", "The clock stopped for a full day."),
       syntheticCard("vocabulary-number", "What did the term mean?", "Twenty-three.", "odd-words"),
     ];
@@ -85,6 +86,7 @@ describe("editorial defect finders", () => {
     expect(findBareNumberOrDateAnswers(cards).map((finding) => finding.card)).toEqual([
       "bare-number",
       "bare-date",
+      "bare-era-date",
     ]);
   });
 });
