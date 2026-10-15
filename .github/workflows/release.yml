@@ -1,0 +1,58 @@
+name: Release
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.event == 'push' &&
+       github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Refuse stale or unverified source
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: |
+          BASELINE=$(node -p 'require("./release-please-config.json")["bootstrap-sha"] || ""')
+          test -n "$BASELINE"
+          git merge-base --is-ancestor "$BASELINE" "$SOURCE"
+          test "$(gh api repos/$GITHUB_REPOSITORY/git/ref/heads/master --jq .object.sha)" = "$SOURCE"
+          gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ci.yml/runs?head_sha=$SOURCE&event=push" --jq '.workflow_runs[0] | select(.conclusion == "success") | .id' | grep -q '[0-9]'
+      - uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
+        id: release
+        with:
+          target-branch: master
+      - name: Exercise real CI on the generated PR head
+        if: steps.release.outputs.prs_created == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PRS: ${{ steps.release.outputs.prs }}
+        run: |
+          node --input-type=module -e '
+            import {execFileSync} from "node:child_process";
+            const prs = JSON.parse(process.env.PRS);
+            for (const pr of prs) {
+              const data = JSON.parse(execFileSync("gh", ["api", `repos/${process.env.GITHUB_REPOSITORY}/pulls/${pr.number}`]));
+              if (data.head.repo.full_name !== process.env.GITHUB_REPOSITORY) throw new Error("Foreign release PR");
+              execFileSync("gh", ["workflow", "run", "ci.yml", "--ref", data.head.ref, "-f", `ref=${data.head.sha}`], {stdio: "inherit"});
+            }
+          '

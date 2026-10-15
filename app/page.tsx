@@ -178,7 +178,7 @@ export default function Home() {
           <a href="https://parlor.mistystep.io" target="_blank" rel="noopener noreferrer">
             Parlor<span className="sr-only"> (opens in a new tab)</span>
           </a>
-          .
+          . <a href="/changelog">Changelog</a>
         </p>
       </footer>
     </div>

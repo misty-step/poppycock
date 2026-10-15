@@ -68,7 +68,9 @@ try {
   await rm(join(root, ".open-next"), { recursive: true, force: true });
   await run("pnpm", ["exec", "opennextjs-cloudflare", "build"], env);
   await disableOpenNextDebug(join(root, ".open-next"));
-  await run("pnpm", ["exec", "opennextjs-cloudflare", "deploy"], env);
+  if (!process.argv.includes("--build-only")) {
+    throw new Error("Deploy through CI; use --build-only to prepare the tested artifact.");
+  }
 } finally {
   if (parkedLocal) await rename(parked, localEnv);
 }

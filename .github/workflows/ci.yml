@@ -3,6 +3,12 @@ name: CI
 on:
   push:
   pull_request:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Exact same-repository release PR commit to verify
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -24,6 +30,15 @@ jobs:
       POPPYCOCK_EVIDENCE_DIR: test-results/multiplayer
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+      - name: Refuse moved release PR head
+        env:
+          EXPECTED: ${{ inputs.ref || github.sha }}
+          EVENT_HEAD: ${{ github.sha }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED"
+          if test "$GITHUB_EVENT_NAME" = workflow_dispatch; then test "$EXPECTED" = "$EVENT_HEAD"; fi
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
@@ -45,18 +60,67 @@ jobs:
         run: pnpm typecheck
       - name: Exercise game and issuer contracts
         run: pnpm test
-      - name: Build production application
-        run: pnpm build
+      - name: Build the deployable Worker once
+        run: POPPYCOCK_REVISION=$(git rev-parse HEAD) node scripts/deploy-cloudflare.mjs --build-only
+      - name: Verify the Worker artifact in an isolated runtime
+        run: node scripts/verify-worker.mjs
+        env:
+          POPPYCOCK_REVISION: ${{ inputs.ref || github.sha }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: worker-${{ inputs.ref || github.sha }}
+          path: .open-next/
+          include-hidden-files: true
+          if-no-files-found: error
       - name: Install isolated browser runtime
         run: pnpm exec playwright install --with-deps chromium
       - name: Play a real multiplayer game against anonymous local Convex
         run: pnpm smoke:local
         env:
-          POPPYCOCK_REVISION: ${{ github.sha }}
+          POPPYCOCK_REVISION: ${{ inputs.ref || github.sha }}
       - name: Retain sanitized browser and scoring evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: multiplayer-evidence-${{ github.sha }}
           path: test-results/multiplayer/
+          if-no-files-found: ignore
+
+  deploy:
+    needs: check
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    concurrency:
+      group: production
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/download-artifact@v4
+        with:
+          name: worker-${{ github.sha }}
+          path: .open-next/
+      - name: Deploy compatible backend, promote tested Worker, read back or roll back
+        run: node scripts/promote.mjs
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_DEPLOY_KEY }}
+          POPPYCOCK_REVISION: ${{ github.sha }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: deployment-${{ github.sha }}
+          path: test-results/deployment.json
           if-no-files-found: ignore
