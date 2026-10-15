@@ -108,6 +108,8 @@ jobs:
           version: 11.25.0
           run_install: false
       - run: pnpm install --frozen-lockfile
+      - name: Build vendored Parlor for Convex deployment
+        run: pnpm build:parlor
       - uses: actions/download-artifact@v4
         with:
           name: worker-${{ github.sha }}

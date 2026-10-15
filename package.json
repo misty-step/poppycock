@@ -20,8 +20,7 @@
     "smoke:public": "node scripts/smoke-public.mjs",
     "format": "oxfmt app components lib convex tests scripts *.json *.ts *.mjs .github DESIGN.md",
     "format:check": "oxfmt --check app components lib convex tests scripts *.json *.ts *.mjs .github DESIGN.md",
-    "check": "pnpm build:parlor && pnpm typecheck && pnpm test",
-    "deploy:cf": "node scripts/deploy-cloudflare.mjs"
+    "check": "pnpm build:parlor && pnpm typecheck && pnpm test"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

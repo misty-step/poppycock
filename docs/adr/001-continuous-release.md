@@ -14,13 +14,17 @@ release tags or GitHub Releases. Bootstrap at full source
 Historical entries remain dated history, not newly asserted deployment proof.
 The private package.json version was previously stale at 1.0.0; the generator
 repairs it on the first release PR. New feat adoption should produce 1.3.0.
-Do not seed production to make the larger source catalog appear deployed.
+The previously undated notes are archived under the verified September 20
+Worker deployment, not assigned a retrospective semantic version. Read-only
+review verified production already serves 51 active packs and 1,386 active
+cards. Release automation never seeds production or changes pack/game data.
 
 CI plays the full real local multiplayer journey with synthetic local data.
 It builds one OpenNext Worker with production public URLs, then exercises that
 same artifact in local workerd before upload. Only a successful master push
 promotes it; PRs and explicit release-PR verification dispatches cannot deploy.
-The whole master CI/promotion run is serialized and never cancelled. Promotion
+Native concurrency preserves running master CI/promotions; newer queued runs
+can supersede older pending runs. Promotion
 refuses an obsolete master SHA, validates the exact backend key selector,
 deploys the tested backend source first, then promotes the downloaded Worker.
 Readback checks the exact source/version and home HTTP, retaining provider and
@@ -42,8 +46,10 @@ uses native Wrangler rollback and reads back the exact provider version and HTTP
 There are no required branch checks in this repo; Kaylee explicitly retained that
 setting. Normal squash PR merges use reviewed heads and exact-head CI evidence,
 not admin bypass. Repository merge settings use PR_TITLE/BLANK, squash only.
-GITHUB_TOKEN release PRs get real CI via explicit same-repository SHA dispatch;
-both the dispatch branch head and checked-out commit must equal the requested
+Unlike the shared convention's native-run approval path, GITHUB_TOKEN release
+PRs get real CI via explicit same-repository SHA dispatch (as in Linejam);
+native pull_request runs may remain action_required and are not used as proof.
+Both the dispatch branch head and checked-out commit must equal the requested
 SHA. It posts no synthetic required check. Release PRs contain
 only generator output and need merging-agent version/notes readback, no second
 code review. Failed, skipped, stale or incomplete CI is not release authorization.

@@ -62,7 +62,11 @@ try {
   assert.match(await home.text(), /Poppycock/);
   const notes = await fetch(`${origin}/changelog`, { signal: AbortSignal.timeout(10_000) });
   assert.equal(notes.status, 200);
-  assert.match(await notes.text(), /Changelog/);
+  const notesHtml = await notes.text();
+  assert.match(notesHtml, /Changelog/);
+  assert.match(notesHtml, /Previously shipped updates/);
+  assert.match(notesHtml, /1,386 sourced cards across 51 packs/);
+  assert.doesNotMatch(notesHtml, /Unreleased/);
   console.log("Built Worker: health identity, home, and canonical notes passed in workerd.");
 } catch (error) {
   console.error(output);

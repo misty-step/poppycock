@@ -1,6 +1,10 @@
 # Changelog
 
-## Unreleased
+## 2026-09-20 — Previously shipped updates
+
+These changes were already live before automated releases. This archive groups
+their original notes under the latest verified deployment date; it does not
+assign a new semantic version or a single ship date to every change.
 
 - Shipped the Poppycock brand identity: an original paired-tile logo (`public/brand/`), a simplified smiling-tile favicon (`app/favicon.ico` with 16/32/48 frames plus `app/icon.svg`), an opaque 180px apple-touch-icon, 192/512 manifest icons with maskable variants, and a web app manifest — with the header wordmark now carrying the tile mark. Routes, game behavior, auth, and service-worker semantics are unchanged; no new service worker was added.
 - Added the repository-owned `poppycock-verify` skill, linking focused game, identity, avatar, and timing journeys to the existing local Convex/Playwright checks and documenting source identity, readiness, evidence inspection, and owned cleanup.

@@ -1,4 +1,5 @@
 import Markdown from "react-markdown";
+import { Brand } from "@/components/game-ui";
 import versions from "../../.release-please-manifest.json";
 import styles from "./notes.module.css";
 
@@ -7,14 +8,12 @@ export const metadata = { title: "Changelog — Poppycock" };
 
 export default function Changelog() {
   const notes = process.env.POPPYCOCK_RELEASE_NOTES ?? "";
-  const entries = notes
-    .split(/(?=^## )/m)
-    .filter((entry) => /^## (?:\[)?\d+\.\d+\.\d+/.test(entry));
+  const entries = notes.split(/(?=^## )/m).filter((entry) => entry.startsWith("## "));
   return (
     <div className="app-shell">
       <header className="site-header">
-        <a className="wordmark" href="/">
-          Poppycock
+        <a href="/">
+          <Brand />
         </a>
         <a href="/">Back to the game</a>
       </header>
