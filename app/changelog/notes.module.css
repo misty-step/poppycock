@@ -1,3 +1,7 @@
+.notes {
+  overflow-wrap: anywhere;
+}
+
 .notes h2 {
   font-family: var(--font-heading);
   font-size: 1.75rem;
