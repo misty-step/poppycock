@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/misty-step/poppycock/compare/v1.2.0...v1.3.0) (2026-10-15)
+
+
+### Features
+
+* find release notes from the game and ship verified updates ([#12](https://github.com/misty-step/poppycock/issues/12)) ([7ce17ff](https://github.com/misty-step/poppycock/commit/7ce17ff26e66c1e09827d4d56512b66dbf53ce34))
+
 ## 2026-09-20 — Previously shipped updates
 
 These changes were already live before automated releases. This archive groups
