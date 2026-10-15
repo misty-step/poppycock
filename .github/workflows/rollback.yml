@@ -1,0 +1,53 @@
+name: Roll back compatible client
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Previous compatible Worker version from the deployment receipt (never backend/data)
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: production
+  cancel-in-progress: false
+jobs:
+  rollback:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - run: pnpm install --frozen-lockfile
+      - name: Validate compatible version, roll back client only, read back
+        env:
+          VERSION: ${{ inputs.version }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import {execFileSync} from 'node:child_process';
+          const version = process.env.VERSION;
+          assert.match(version, /^[a-f0-9-]{36}$/);
+          const base = 'https://api.cloudflare.com/client/v4/accounts/b069014f6a46558ea9146fb6c4ff8f6c/workers/scripts/poppycock';
+          async function get(path) {
+            const response = await fetch(`${base}/${path}`, {headers: {Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}`}});
+            assert.ok(response.ok);
+            const body = await response.json();
+            assert.ok(body.success);
+            return body.result;
+          }
+          const target = await get(`versions/${version}`);
+          assert.ok(target.metadata.created_on >= '2026-09-20T00:00:00Z', 'Pre-compatible client refused');
+          execFileSync('pnpm', ['exec', 'wrangler', 'rollback', version, '--yes', '--message', 'Restore compatible client; keep backend and data'], {stdio: 'inherit'});
+          const actual = (await get('deployments')).deployments[0];
+          assert.deepEqual(actual.versions, [{version_id: version, percentage: 100}]);
+          assert.equal((await fetch('https://poppycock.mistystep.io/')).status, 200);
+          console.log(JSON.stringify({restoredWorkerVersion: version, deployment: actual.id, backendAndData: 'unchanged'}));
+          JS

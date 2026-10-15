@@ -1,0 +1,15 @@
+name: PR title
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+permissions:
+  contents: read
+jobs:
+  title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Conventional title is the release input
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          node -e 'if (!/^(feat|fix|chore|docs|test|build|ci|refactor|style|perf|revert)(\([a-zA-Z0-9._/-]+\))?!?: .+$/u.test(process.env.TITLE) || /[\r\n]/u.test(process.env.TITLE)) process.exit(1)'
