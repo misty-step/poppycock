@@ -13,7 +13,7 @@
     "sources": "node scripts/check-sources.mjs",
     "dev:web": "next dev --hostname 0.0.0.0 --port 3210",
     "typecheck": "next typegen && tsc --noEmit",
-    "typecheck:worker": "wrangler types .wrangler/worker-env.d.ts && tsc --noEmit -p cloudflare/tsconfig.json",
+    "typecheck:worker": "mkdir -p .wrangler && wrangler types .wrangler/worker-env.d.ts && tsc --noEmit -p cloudflare/tsconfig.json",
     "test": "vitest run",
     "test:parlor": "vitest run --config scripts/vitest.vendor.mjs",
     "test:backend:cloudflare": "vitest run --config scripts/vitest.cloudflare.mjs",
