@@ -45,9 +45,13 @@ async function disableOpenNextDebug(directory) {
 }
 
 const preview = process.argv.includes("--backend-preview");
-const cloudflareBackend = preview || process.argv.includes("--cloudflare-backend");
-let backendUrl = "https://fiery-spaniel-734.convex.cloud";
-let backendSiteUrl = "https://fiery-spaniel-734.convex.site";
+const productionConfig = JSON.parse(await readFile(join(root, "wrangler.jsonc"), "utf8"));
+const cloudflareBackend =
+  preview ||
+  process.argv.includes("--cloudflare-backend") ||
+  productionConfig.vars.NEXT_PUBLIC_CONVEX_URL === BACKEND_BASE_PATH;
+let backendUrl = productionConfig.vars.NEXT_PUBLIC_CONVEX_URL;
+let backendSiteUrl = productionConfig.vars.NEXT_PUBLIC_CONVEX_SITE_URL;
 if (cloudflareBackend) {
   backendUrl = BACKEND_BASE_PATH;
   backendSiteUrl = `${BACKEND_BASE_PATH}/http`;
@@ -78,6 +82,33 @@ try {
   await rm(join(root, ".open-next"), { recursive: true, force: true });
   await run("pnpm", ["exec", "opennextjs-cloudflare", "build"], env);
   await disableOpenNextDebug(join(root, ".open-next"));
+  // Bundle the wrapper, SDK and unchanged adapter ONCE too. Both workerd and
+  // deployment use this output with no_bundle, not a second source compilation.
+  const sourceConfig = {
+    ...(preview
+      ? JSON.parse(await readFile(join(root, "wrangler.backend-preview.jsonc"), "utf8"))
+      : productionConfig),
+    main: join(root, "cloudflare/worker.ts"),
+    no_bundle: false,
+    assets: { directory: join(root, ".open-next/assets"), binding: "ASSETS" },
+  };
+  const sourceConfigPath = join(root, ".open-next/source-config.json");
+  await writeFile(sourceConfigPath, JSON.stringify(sourceConfig));
+  await run(
+    "pnpm",
+    [
+      "exec",
+      "wrangler",
+      "deploy",
+      "--dry-run",
+      "--config",
+      sourceConfigPath,
+      "--outdir",
+      join(root, ".open-next/backend-bundle"),
+    ],
+    env,
+  );
+  await rm(sourceConfigPath);
   if (!process.argv.includes("--build-only")) {
     throw new Error("Deploy through CI; use --build-only to prepare the tested artifact.");
   }

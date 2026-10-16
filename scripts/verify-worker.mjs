@@ -14,6 +14,8 @@ const port = await new Promise((resolve) => {
 });
 const origin = `http://127.0.0.1:${port}`;
 const preview = process.env.POPPYCOCK_BACKEND_PREVIEW === "true";
+const config = JSON.parse(await readFile("wrangler.jsonc", "utf8"));
+const cloudflareBackend = preview || config.vars.NEXT_PUBLIC_CONVEX_URL === "/backend";
 const child = spawn(
   "pnpm",
   [
@@ -48,12 +50,12 @@ try {
   for (let attempt = 0; ; attempt++) {
     try {
       const response = await fetch(`${origin}/health`, { signal: AbortSignal.timeout(2000) });
-      assert.equal(response.status, preview ? 503 : 200);
+      assert.equal(response.status, cloudflareBackend ? 503 : 200);
       const health = await response.json();
       assert.equal(health.version, version);
       if (revision) assert.equal(health.revision, revision);
-      assert.equal(health.backend, preview ? "cloudflare-do" : "fiery-spaniel-734");
-      if (preview) {
+      assert.equal(health.backend, cloudflareBackend ? "cloudflare-do" : "fiery-spaniel-734");
+      if (cloudflareBackend) {
         assert.equal(health.status, "unavailable");
         assert.equal(health.backendReady, false);
       }

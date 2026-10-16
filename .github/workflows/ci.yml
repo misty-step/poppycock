@@ -63,6 +63,8 @@ jobs:
         run: pnpm test:parlor
       - name: Typecheck Poppycock
         run: pnpm typecheck
+      - name: Typecheck the native Worker boundary
+        run: pnpm typecheck:worker
       - name: Exercise game and issuer contracts
         run: pnpm test
       - name: Exercise the same game contracts on the Cloudflare adapter
@@ -155,6 +157,7 @@ jobs:
           POPPYCOCK_PREVIEW_BACKEND_ADMIN_KEY: ${{ secrets.POPPYCOCK_PREVIEW_BACKEND_ADMIN_KEY }}
           POPPYCOCK_PREVIEW_PARLOR_GUEST_TOKEN_KEYS: ${{ secrets.POPPYCOCK_PREVIEW_PARLOR_GUEST_TOKEN_KEYS }}
           POPPYCOCK_PREVIEW_CONTINUITY_SECRET: ${{ secrets.POPPYCOCK_PREVIEW_CONTINUITY_SECRET }}
+          POPPYCOCK_SENTRY_DSN: ${{ secrets.POPPYCOCK_SENTRY_DSN }}
       - run: pnpm exec playwright install --with-deps chromium
       - name: Prove hosted gameplay, rejection, repeatable recovery and PITR undo
         run: node scripts/backend-preview.mjs
@@ -202,6 +205,10 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_DEPLOY_KEY }}
+          POPPYCOCK_PRODUCTION_BACKEND_ADMIN_KEY: ${{ secrets.POPPYCOCK_PRODUCTION_BACKEND_ADMIN_KEY }}
+          POPPYCOCK_PARLOR_GUEST_TOKEN_KEYS: ${{ secrets.POPPYCOCK_PARLOR_GUEST_TOKEN_KEYS }}
+          POPPYCOCK_CONTINUITY_SECRET: ${{ secrets.POPPYCOCK_CONTINUITY_SECRET }}
+          POPPYCOCK_SENTRY_DSN: ${{ secrets.POPPYCOCK_SENTRY_DSN }}
           POPPYCOCK_REVISION: ${{ github.sha }}
       - uses: actions/upload-artifact@v4
         if: always()

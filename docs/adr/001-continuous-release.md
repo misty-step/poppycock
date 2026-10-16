@@ -5,6 +5,9 @@ Accepted source proposal, 2026-10-15.
 Poppycock follows the [shared release convention](https://github.com/misty-step/harness/blob/master/docs/release-convention.md)
 and [Foundations](https://foundations.mistystep.io/). One release unit comprises
 its Worker client/issuer and dedicated Convex backend `fiery-spaniel-734`.
+The staged backend-host replacement in [ADR 002](002-cloudflare-backend.md)
+preserves this one release unit and generator; its namespace/writer-aware rollback
+supersedes the historical timestamp-only client rollback below.
 Release-please is the only version/notes generator. It updates the root manifest,
 package version, and CHANGELOG; the site renders that changelog at build time.
 

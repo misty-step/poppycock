@@ -1,6 +1,6 @@
 # ADR 002: Opt in to Parlor's Cloudflare backend
 
-Status: candidate; production remains Convex until cutover proof and custody.
+Status: candidate; production remains Convex until independent review and cutover.
 
 ## Boundary and compatibility
 
@@ -35,8 +35,9 @@ them. The maintenance cron is recreated by the adapter, not a turn timer.
 workers.dev and immutable preview URLs disabled. Its single custom host must
 be protected by Access before deployment. It can run locally with the
 same application build. It must never bind production
-resources, keys or records. The production Wrangler configuration and CD
-pipeline remain unchanged at this phase.
+resources, keys or records. The production configuration introduces the same class
+dormant: it retains both original Convex public URLs until the final data window.
+The existing CI/promoter remains the only deployment path.
 
 `pnpm build:parlor && pnpm test:backend:cloudflare` runs the existing game,
 content and issuer suites on the adapter's SQLite harness. This is conformance
@@ -123,6 +124,9 @@ paused and intact after acceptance; deletion is not authorized.
 The existing CI/promote/release-please path remains the only CD owner.
 Backend cutover will extend it only after independent review and exact-head
 preview/data proof, retaining the same tested artifact and compatible rollback.
+The wrapper/SDK/adapter is bundled once by native Wrangler into the retained
+`.open-next/backend-bundle/worker.js`; verification and promotion both use
+`no_bundle`, so neither recompiles a different wrapper during promotion.
 The original static `/health` still identifies the legacy production build.
 The opt-in Worker wrapper adds an actual bounded DO maintenance-state read:
 it answers 503 with `backendReady: false` while frozen, importing, missing its
@@ -132,3 +136,31 @@ The hosted preview checks both states; it does not prove Sentry coverage.
 Sentry error/uptime/cron and backup/restore operation must be proved before
 production acceptance, not inferred from Wrangler observability being enabled.
 No DNS change is required for a same-origin production backend.
+
+The native Sentry SDK instruments the backend and frontend without instrumenting
+the byte-exact protocol forwarding boundary. A real local browser exercise found
+automatic binding tracing turns WebSocket upgrades into 426; retaining raw
+forwarding and instrumenting the destination object restores multiplayer play.
+The app module observer preserves registered handlers/validators and reports only
+unexpected invocation failures. Native console-error capture covers adapter
+failures that it catches internally. Its error allowlist removes all request,
+exception text/stack, SQL, player and game content; no tracing/log/metric payloads
+are retained. The final sweep transaction schedules a no-op completion action,
+so a rolled-back sweep cannot emit a false successful cron heartbeat.
+
+The granted app-owned `poppycock` Sentry project uses existing team/intake custody,
+release/environment identity and the native one-minute cron monitor. Provider
+IP/geography scrubbing supplements the source allowlist. Exercise the actual
+received error, intake delivery, missed heartbeat/recovery and a sink outage, not
+just SDK initialization. An external Sentry uptime seat remains unprovisioned
+under the consolidated owner decision; this specific limitation does not block
+the migration or imply external coverage.
+
+The initial class deployment cannot natively roll back to a pre-class version.
+Deploy it dormant first and fix forward if that initial rollout fails. Record its
+DO-capable, still-Convex-bound version before cutover. Normal code rollback now
+checks provider metadata for equal namespace and equal writer, not merely a
+date: it cannot restore a Convex-bound client after the DO accepts game writes.
+The granted cross-writer recovery remains an explicit reconciled data operation.
+The executable sequence and step-specific recovery live in
+[the cutover runbook](../cloudflare-cutover.md).

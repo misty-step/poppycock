@@ -1,8 +1,6 @@
-import { createConvexBackend } from "@parlor/cloudflare";
 import crons from "../convex/crons";
 import schema from "../convex/schema";
 export { BACKEND_BASE_PATH } from "../lib/backend-url";
-import { BACKEND_BASE_PATH } from "../lib/backend-url";
 
 // Only registered-function modules belong here. Pure deck/rules modules remain
 // their normal imports; no game logic, schema or identity handler is copied.
@@ -14,10 +12,4 @@ export const modules = {
   seed: () => import("../convex/seed"),
 };
 
-export const PoppycockBackend = createConvexBackend({
-  app: { schema, modules, crons },
-  basePath: BACKEND_BASE_PATH,
-  adminKeyBinding: "POPPYCOCK_BACKEND_ADMIN_KEY",
-  redactErrors: () => true,
-  deploymentName: "poppycock",
-});
+export const backendApp = { schema, modules, crons };

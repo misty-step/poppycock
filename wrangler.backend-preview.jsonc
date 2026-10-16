@@ -2,7 +2,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "poppycock-backend-preview",
   "account_id": "b069014f6a46558ea9146fb6c4ff8f6c",
-  "main": "cloudflare/worker.ts",
+  "main": ".open-next/backend-bundle/worker.js",
+  "no_bundle": true,
   "compatibility_date": "2026-09-06",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "workers_dev": false,
@@ -15,5 +16,5 @@
     "bindings": [{ "name": "POPPYCOCK_BACKEND", "class_name": "PoppycockBackend" }]
   },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["PoppycockBackend"] }],
-  "vars": { "PARLOR_GUEST_TOKEN_AUDIENCE": "poppycock" }
+  "vars": { "PARLOR_GUEST_TOKEN_AUDIENCE": "poppycock", "SENTRY_ENVIRONMENT": "preview" }
 }
