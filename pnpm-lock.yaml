@@ -66,6 +66,9 @@ importers:
       '@opennextjs/cloudflare':
         specifier: ^1.20.6
         version: 1.20.6(next@16.3.4(@babel/core@7.29.7(supports-color@10.2.2))(@playwright/test@1.62.1)(@types/node@26.0.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(supports-color@10.2.2)(wrangler@4.129.0)
+      '@parlor/cloudflare':
+        specifier: workspace:*
+        version: link:vendor/parlor/integrations/cloudflare
       '@playwright/test':
         specifier: 1.62.1
         version: 1.62.1
@@ -108,6 +111,19 @@ importers:
       wrangler:
         specifier: ^4.129.0
         version: 4.129.0
+
+  vendor/parlor/integrations/cloudflare:
+    dependencies:
+      convex:
+        specifier: ^1.42.3
+        version: 1.45.0(react@19.2.8)
+      fflate:
+        specifier: 0.8.3
+        version: 0.8.3
+    devDependencies:
+      vitest:
+        specifier: 5.0.0
+        version: 5.0.0(@edge-runtime/vm@5.0.0)(@types/node@26.0.0)(happy-dom@20.10.6)(vite@8.2.2(@types/node@26.0.0)(esbuild@0.28.1)(jiti@2.7.0)(terser@5.16.9)(yaml@2.9.0))
 
   vendor/parlor/integrations/convex:
     dependencies:
@@ -2915,6 +2931,9 @@ packages:
     peerDependenciesMeta:
       picomatch:
         optional: true
+
+  fflate@0.8.3:
+    resolution: {integrity: sha512-tbZNuJrLwGUp3zshBtdy4W+ORxZuIh8a5ilyIEQDC5rY1f3U20JMry0Ll3WBzU58EZKsEuJFXhb5gwv8CsPvgA==}
 
   figures@6.1.0:
     resolution: {integrity: sha512-d+l3qxjSesT4V7v2fh+QnmFnUWv9lSpjarhShNTgBOfA0ttejbQUAlHLitbjkoRiDulW0OPoQPYIGhIC8ohejg==}
@@ -7141,6 +7160,8 @@ snapshots:
   fdir@6.5.0(picomatch@4.0.7):
     optionalDependencies:
       picomatch: 4.0.7
+
+  fflate@0.8.3: {}
 
   figures@6.1.0:
     dependencies:

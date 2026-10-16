@@ -43,10 +43,31 @@ async function disableOpenNextDebug(directory) {
   if (patched === 0) throw new Error("OpenNext debug flag was not present to disable.");
 }
 
+const preview = process.argv.includes("--backend-preview");
+let backendUrl = "https://fiery-spaniel-734.convex.cloud";
+let backendSiteUrl = "https://fiery-spaniel-734.convex.site";
+if (preview) {
+  const origin = new URL(process.env.POPPYCOCK_PREVIEW_ORIGIN);
+  if (
+    origin.pathname !== "/" ||
+    origin.search ||
+    origin.hash ||
+    origin.username ||
+    origin.password ||
+    !(
+      origin.protocol === "https:" ||
+      (origin.protocol === "http:" && ["localhost", "127.0.0.1", "[::1]"].includes(origin.hostname))
+    )
+  )
+    throw new Error("Use a bare HTTPS preview origin or HTTP loopback origin.");
+  backendUrl = `${origin.origin}/backend`;
+  backendSiteUrl = `${origin.origin}/backend/http`;
+}
+
 const env = {
   ...process.env,
-  NEXT_PUBLIC_CONVEX_URL: "https://fiery-spaniel-734.convex.cloud",
-  NEXT_PUBLIC_CONVEX_SITE_URL: "https://fiery-spaniel-734.convex.site",
+  NEXT_PUBLIC_CONVEX_URL: backendUrl,
+  NEXT_PUBLIC_CONVEX_SITE_URL: backendSiteUrl,
   PARLOR_GUEST_TOKEN_AUDIENCE: "poppycock",
   // Disables OpenNext esbuild minify; Effect TypeIds are Symbols.
   OPEN_NEXT_DEBUG: "1",

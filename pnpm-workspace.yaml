@@ -1,6 +1,7 @@
 packages:
   - vendor/parlor/packages/*
   - vendor/parlor/integrations/convex
+  - vendor/parlor/integrations/cloudflare
 allowBuilds:
   esbuild: true
   sharp: true

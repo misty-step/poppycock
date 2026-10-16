@@ -5,6 +5,7 @@ import { parseEnv } from "node:util";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { api } from "../convex/_generated/api.js";
+import { cloudflareLocalTarget, cloudflarePreviewTarget } from "./smoke-target.mjs";
 import {
   captureSmokeScreenshot,
   createSmokeEvidence,
@@ -12,15 +13,54 @@ import {
 } from "./smoke-evidence.mjs";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
-const local = parseEnv(await readFile(join(root, ".env.local"), "utf8"));
-if (local.POPPYCOCK_LOCAL !== "true" || !local.CONVEX_DEPLOYMENT?.startsWith("anonymous:")) {
-  throw new Error(
-    "Smoke play is restricted to this checkout's anonymous local deployment. Run pnpm bootstrap and pnpm dev first.",
-  );
+let target;
+const accessHeaders = {};
+if (process.env.POPPYCOCK_CLOUDFLARE_PREVIEW_ORIGIN !== undefined) {
+  if (process.env.POPPYCOCK_CLOUDFLARE_LOCAL_ORIGIN || process.env.POPPYCOCK_BASE_URL) {
+    throw new Error("Preview smoke cannot override its isolated frontend/backend.");
+  }
+  target = cloudflarePreviewTarget(process.env.POPPYCOCK_CLOUDFLARE_PREVIEW_ORIGIN);
+  const id = process.env.POPPYCOCK_PREVIEW_ACCESS_CLIENT_ID;
+  const secret = process.env.POPPYCOCK_PREVIEW_ACCESS_CLIENT_SECRET;
+  if (!id || !secret) throw new Error("The named preview Access verifier credential is required.");
+  accessHeaders["CF-Access-Client-ID"] = id;
+  accessHeaders["CF-Access-Client-Secret"] = secret;
+} else if (process.env.POPPYCOCK_CLOUDFLARE_LOCAL_ORIGIN !== undefined) {
+  target = cloudflareLocalTarget(process.env.POPPYCOCK_CLOUDFLARE_LOCAL_ORIGIN);
+  if (process.env.POPPYCOCK_BASE_URL && process.env.POPPYCOCK_BASE_URL !== target.base) {
+    throw new Error("Cloudflare local smoke cannot override the loopback frontend.");
+  }
+} else {
+  const local = parseEnv(await readFile(join(root, ".env.local"), "utf8"));
+  if (local.POPPYCOCK_LOCAL !== "true" || !local.CONVEX_DEPLOYMENT?.startsWith("anonymous:")) {
+    throw new Error(
+      "Smoke play is restricted to this checkout's anonymous local deployment. Run pnpm bootstrap and pnpm dev first.",
+    );
+  }
+  target = {
+    base: process.env.POPPYCOCK_BASE_URL ?? "http://localhost:3210",
+    backend: local.NEXT_PUBLIC_CONVEX_URL,
+  };
 }
-const base = process.env.POPPYCOCK_BASE_URL ?? "http://localhost:3210";
-const client = new ConvexHttpClient(local.NEXT_PUBLIC_CONVEX_URL);
-const evidence = await createSmokeEvidence(root, "local");
+const base = target.base;
+const client = new ConvexHttpClient(
+  target.backend,
+  process.env.POPPYCOCK_CLOUDFLARE_PREVIEW_ORIGIN
+    ? {
+        fetch: (url, init) => {
+          if (new URL(url).origin !== base)
+            throw new Error("Smoke transport left the selected origin.");
+          const headers = new Headers(init?.headers);
+          for (const [key, value] of Object.entries(accessHeaders)) headers.set(key, value);
+          return fetch(url, { ...init, headers });
+        },
+      }
+    : {},
+);
+const evidence = await createSmokeEvidence(
+  root,
+  process.env.POPPYCOCK_CLOUDFLARE_LOCAL_ORIGIN ? "cloudflare-local" : "local",
+);
 const browser = await chromium.launch({
   headless: true,
   ...(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {}),
@@ -94,9 +134,15 @@ async function voteFor(name, text) {
 try {
   for (const name of ["Ada", "Bea", "Cy", "Dax"]) {
     const context = await browser.newContext({
+      extraHTTPHeaders: accessHeaders,
       viewport: name === "Ada" ? { width: 1440, height: 1100 } : { width: 390, height: 844 },
       deviceScaleFactor: 1,
     });
+    if (process.env.POPPYCOCK_CLOUDFLARE_PREVIEW_ORIGIN) {
+      await context.route("**/*", (route) =>
+        new URL(route.request().url()).origin === base ? route.continue() : route.abort(),
+      );
+    }
     const page = await context.newPage();
     page.setDefaultTimeout(15000);
     players[name] = { context, page };

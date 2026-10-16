@@ -55,7 +55,7 @@ only generator output and need merging-agent version/notes readback, no second
 code review. Failed, skipped, stale or incomplete CI is not release authorization.
 Existing fleet CI/HTTP alarm custody consumes failure; no second alert router.
 
-SPEC gap: this repository currently has USER_STORIES.md (71 lines), not SPEC.md.
+The existing three user stories now live in SPEC.md (renamed without changing their criteria).
 US-001/002/003 are exercised by existing game tests and six-round/rematch smoke;
-this release change does not silently rename or rewrite their specification.
+The release change did not rewrite their specification.
 The original app is light-only; a whole-app dark theme is not part of release adoption.

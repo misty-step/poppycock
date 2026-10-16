@@ -15,11 +15,12 @@
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run",
     "test:parlor": "vitest run --config scripts/vitest.vendor.mjs",
+    "test:backend:cloudflare": "vitest run --config scripts/vitest.cloudflare.mjs",
     "smoke": "node scripts/smoke.mjs",
     "smoke:local": "node scripts/smoke-local.mjs",
     "smoke:public": "node scripts/smoke-public.mjs",
-    "format": "oxfmt app components lib convex tests scripts *.json *.ts *.mjs .github DESIGN.md",
-    "format:check": "oxfmt --check app components lib convex tests scripts *.json *.ts *.mjs .github DESIGN.md",
+    "format": "oxfmt app components lib convex cloudflare tests scripts *.json *.ts *.mjs .github DESIGN.md",
+    "format:check": "oxfmt --check app components lib convex cloudflare tests scripts *.json *.ts *.mjs .github DESIGN.md",
     "check": "pnpm build:parlor && pnpm typecheck && pnpm test"
   },
   "dependencies": {
@@ -44,6 +45,7 @@
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "^1.20.6",
+    "@parlor/cloudflare": "workspace:*",
     "@playwright/test": "1.62.1",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "26.0.0",
