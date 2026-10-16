@@ -1,10 +1,12 @@
 # ADR 002: Opt in to Parlor's Cloudflare backend
 
-Status: candidate; production remains Convex until independent review and cutover.
+Status: implemented in production on 2026-10-16, after independent review,
+identity-preservation proof and reconciled private restore/rollback drills.
+The cutover source is `195ec7f`; Convex remains paused and intact for recovery.
 
 ## Boundary and compatibility
 
-The live `/health` at source 1021961c reports v1.3.0 and
+The pre-migration `/health` at source 1021961c reported v1.3.0 and
 `fiery-spaniel-734`. That is the application database and realtime service,
 not a separately deployed Parlor service. The current frontend is the
 `poppycock` Cloudflare Worker. Merely vendoring Parlor proves neither boundary.
