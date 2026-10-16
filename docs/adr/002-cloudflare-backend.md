@@ -63,17 +63,29 @@ browser journey accepts `POPPYCOCK_CLOUDFLARE_LOCAL_ORIGIN` only for an HTTP
 loopback frontend/backend; it refuses hosted origins and cannot override the
 frontend to a public host. Never point that fixture at a production resource.
 
-One local drill recovered all accepted synthetic game writes with
-`BackendOperator({ ..., maxPageDocuments: 100 })`. The pinned local
-Wrangler/Miniflare stack returned `500 Network connection lost` twice while
-restoring with the default 500-document pages immediately after restart.
-The same default restored before restart; 100-document pages initially
-restored both before and after, but a subsequent 100-document run failed
-before restart too. Page size is therefore NOT an established fix. The
-cause is unknown and repeatable recovery remains unverified. Retain all
-failed evidence; do not count the one smaller-page pass as production
-recovery proof. Native local `bookmark` answered, but `restore` returned 400;
-deployed PITR is still unverified.
+The old Wrangler 4.129.0 / Miniflare 5.20260903.0-alpha stack intermittently
+returns `500 Network connection lost` during repeated restore, with both
+500- and 100-document pages. The failure also reproduces without OpenNext,
+WebSockets or a browser, using only the same backend and authored catalog.
+Smaller pages are not a fix. Keep those failed receipts.
+
+Pin Wrangler 4.151.0. With the adapter, schema and catalog unchanged, its
+real backend-only runtime passes three default-500-page restores before
+restart and three after restart. The full built OpenNext runtime also passes
+the six-round/rematch browser journey followed by the same six canonical
+restore checks. This isolates the observed failure to the old toolchain,
+not a local adapter patch; it does not establish the upstream internal defect.
+Native local PITR remains unsupported. Hosted restore/PITR and real-data
+reconciliation are separate required proofs.
+
+The existing CI's optional `backend_preview` dispatch builds the preview
+artifact once, retains it, deploys only the separate preview config, and
+binds only preview secrets. `scripts/backend-preview.mjs` cannot select a
+production host or arbitrary snapshot. It checks Access denial, independent
+backend-admin denial, runs the same browser journey, repeats canonical
+restore three times, and exercises native PITR plus undo back to every
+accepted synthetic game write. No CI preview job pauses, exports, imports,
+deploys to or changes bindings on production.
 
 ## Custody and production handover
 
@@ -82,8 +94,9 @@ Kaylee's approved Linejam template grants generation of backend admin keys
 straight into Mirrodin pass, with Phaedrus escrow, pipe-only preservation of
 the existing Convex environment bindings, pause at the freeze, one final
 encrypted export, and replace-all only on rollback. The preview verifier is
-one named Access service token created by Phaedrus, not by an agent using
-the GET-only account token. Existing guest signing and continuity keys must
+the one named `poppycock-preview-verifier-t_16b068bc` token adopted by Kaylee
+after her operator-side grant was corrected to GET-only. No additional token
+creation or account-token writes are authorized. Existing guest signing and continuity keys must
 carry over unchanged. No further custody ruling is required for those grants.
 Never print keys, guest tokens, cookies or private records in evidence.
 
