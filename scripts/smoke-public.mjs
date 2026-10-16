@@ -12,8 +12,10 @@ import {
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const origin = process.env.POPPYCOCK_PUBLIC_ORIGIN ?? "https://poppycock.mistystep.io";
+const config = JSON.parse(await readFile(join(root, "wrangler.jsonc"), "utf8"));
 const convexUrl =
-  process.env.POPPYCOCK_PUBLIC_CONVEX_URL ?? "https://fiery-spaniel-734.convex.cloud";
+  process.env.POPPYCOCK_PUBLIC_CONVEX_URL ??
+  new URL(config.vars.NEXT_PUBLIC_CONVEX_URL, origin).href;
 if (new URL(origin).protocol !== "https:") throw new Error("Public smoke requires HTTPS.");
 if (convexUrl.includes("127.0.0.1") || convexUrl.includes("localhost")) {
   throw new Error("Public smoke must not use a local Convex URL.");
@@ -36,6 +38,7 @@ const report = {
   rounds: [],
   checks: [],
   screenshots: [],
+  backendTraffic: { convexCloudRequests: 0, websockets: [] },
 };
 
 async function capture(name, filename, expectedPhase) {
@@ -80,6 +83,14 @@ try {
       deviceScaleFactor: 1,
     });
     const page = await context.newPage();
+    page.on("request", (request) => {
+      if (new URL(request.url()).hostname.endsWith(".convex.cloud"))
+        report.backendTraffic.convexCloudRequests++;
+    });
+    page.on("websocket", (socket) => {
+      const url = new URL(socket.url());
+      report.backendTraffic.websockets.push(`${url.origin}${url.pathname}`);
+    });
     page.setDefaultTimeout(30000);
     players[name] = { context, page };
     await page.goto(origin);
@@ -192,6 +203,20 @@ try {
   });
   report.finalScores = reveal.players.map((p) => ({ name: p.name, score: p.score }));
   report.checks.push("Reveal showed sourced truth and authoritative 3 / 1 / 0 first-round scores.");
+  if (new URL(convexUrl).origin === new URL(origin).origin) {
+    expect(report.backendTraffic.convexCloudRequests).toBe(0);
+    expect(report.backendTraffic.websockets.length).toBeGreaterThanOrEqual(3);
+    expect(
+      report.backendTraffic.websockets.every(
+        (value) =>
+          new URL(value).hostname === new URL(origin).hostname &&
+          new URL(value).pathname.startsWith("/backend/"),
+      ),
+    ).toBe(true);
+    report.checks.push(
+      "Every player used same-origin backend WebSockets; no Convex Cloud request occurred.",
+    );
+  }
   report.completedAt = new Date().toISOString();
   report.result = "passed";
   await writeFile(

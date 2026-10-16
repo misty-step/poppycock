@@ -9,6 +9,7 @@ export default defineConfig({
       "packages/web",
       "packages/react",
       "integrations/convex",
+      "integrations/cloudflare",
     ].map((path) => ({
       test: {
         name: `parlor/${path}`,

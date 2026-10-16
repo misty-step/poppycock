@@ -69,3 +69,25 @@ Criteria:
 No-gos: no AI judging, no extra game modes.
 
 Evidence: `tests/game.test.ts`, `convex/rules.ts`
+
+## Capability: Continuity and operations
+
+## US-004 Keep an accepted game through service recovery
+
+Statement: When the service is upgraded or restored, I want my guest identity,
+seat and accepted answers, votes and scores to survive, so a technical change
+does not lose our game.
+
+Criteria:
+1. WHEN the backend restarts or is migrated, THE SYSTEM SHALL preserve accepted
+   records and allow an existing guest to reload into the same room and seat.
+2. WHEN a backend is frozen for recovery, THE SYSTEM SHALL refuse writes rather
+   than accept writes that recovery would discard; health SHALL report unavailable.
+3. WHEN a backend execution fails or the unattended-match sweep fails or misses
+   its schedule, THE SYSTEM SHALL report the environment and release to the owned
+   alert path without player, room, answer, vote, token or cookie content.
+4. IF the telemetry sink is unavailable, THEN THE SYSTEM SHALL continue gameplay
+   without waiting for that sink.
+
+No-gos: no account requirement, dual writable backends or private game content in
+diagnostics. External uptime coverage is not implied by the internal health route.

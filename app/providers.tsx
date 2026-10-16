@@ -4,6 +4,7 @@ import { ConvexProvider, ConvexReactClient } from "convex/react";
 import { useGuestCredential, type UseGuestCredentialResult } from "@parlor/react";
 import type { GuestCredentialIssuer } from "@parlor/web";
 import { createContext, useContext, useState, type ReactNode } from "react";
+import { browserBackendUrl } from "../lib/backend-url";
 
 const issuer: GuestCredentialIssuer = async (input) => {
   const response = await fetch("/api/guest", {
@@ -31,7 +32,10 @@ function GuestProvider({ children }: { children: ReactNode }) {
 }
 export function Providers({ children }: { children: ReactNode }) {
   const [client] = useState(() => {
-    const url = process.env.NEXT_PUBLIC_CONVEX_URL;
+    const url = browserBackendUrl(
+      process.env.NEXT_PUBLIC_CONVEX_URL,
+      typeof window === "undefined" ? "http://localhost" : window.location.origin,
+    );
     return url ? new ConvexReactClient(url) : null;
   });
   if (!client)

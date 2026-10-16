@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 import { readFileSync } from "node:fs";
+import { BACKEND_BASE_PATH } from "./lib/backend-url";
 const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 const allowedDevOrigins = ["poppycock.mistystep.io"];
-if (convexUrl) allowedDevOrigins.push(new URL(convexUrl).hostname);
+if (convexUrl && convexUrl !== BACKEND_BASE_PATH)
+  allowedDevOrigins.push(new URL(convexUrl).hostname);
 if (siteUrl) allowedDevOrigins.push(new URL(siteUrl).hostname);
 const config: NextConfig = {
   env: {

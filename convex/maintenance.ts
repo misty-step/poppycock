@@ -1,7 +1,15 @@
 import { sweepAbandonedMatches } from "@parlor/convex";
 import { v } from "convex/values";
 import { internal } from "./_generated/api";
-import { internalMutation } from "./_generated/server";
+import { internalAction, internalMutation } from "./_generated/server";
+
+// A scheduled completion runs only after the final sweep transaction commits.
+// The Cloudflare module observer owns its Sentry heartbeat; Convex runs a no-op.
+export const sweepCompleted = internalAction({
+  args: {},
+  returns: v.null(),
+  handler: async () => null,
+});
 
 /** Continue bounded pages, rather than repeatedly starving later active rooms. */
 export const sweepAbandoned = internalMutation({
@@ -26,6 +34,8 @@ export const sweepAbandoned = internalMutation({
       await ctx.scheduler.runAfter(0, internal.maintenance.sweepAbandoned, {
         cursor: result.continueCursor,
       });
+    } else if (!result.hasMore) {
+      await ctx.scheduler.runAfter(0, internal.maintenance.sweepCompleted, {});
     }
     return result;
   },

@@ -7,5 +7,12 @@
     "tsconfig.base.json",
     "LICENSE"
   ],
-  "modifications": []
+  "modifications": [],
+  "additionalSnapshots": [
+    {
+      "commit": "610f57104a9eb7ece5c9b39f8e822c99a17e1596",
+      "paths": ["integrations/cloudflare"],
+      "modifications": []
+    }
+  ]
 }

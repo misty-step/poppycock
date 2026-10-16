@@ -13,13 +13,15 @@
     "sources": "node scripts/check-sources.mjs",
     "dev:web": "next dev --hostname 0.0.0.0 --port 3210",
     "typecheck": "next typegen && tsc --noEmit",
+    "typecheck:worker": "mkdir -p .wrangler && wrangler types .wrangler/worker-env.d.ts && tsc --noEmit -p cloudflare/tsconfig.json",
     "test": "vitest run",
     "test:parlor": "vitest run --config scripts/vitest.vendor.mjs",
+    "test:backend:cloudflare": "vitest run --config scripts/vitest.cloudflare.mjs",
     "smoke": "node scripts/smoke.mjs",
     "smoke:local": "node scripts/smoke-local.mjs",
     "smoke:public": "node scripts/smoke-public.mjs",
-    "format": "oxfmt app components lib convex tests scripts *.json *.ts *.mjs .github DESIGN.md",
-    "format:check": "oxfmt --check app components lib convex tests scripts *.json *.ts *.mjs .github DESIGN.md",
+    "format": "oxfmt app components lib convex cloudflare tests scripts *.json *.ts *.mjs .github DESIGN.md",
+    "format:check": "oxfmt --check app components lib convex cloudflare tests scripts *.json *.ts *.mjs .github DESIGN.md",
     "check": "pnpm build:parlor && pnpm typecheck && pnpm test"
   },
   "dependencies": {
@@ -31,6 +33,7 @@
     "@parlor/core": "workspace:*",
     "@parlor/react": "workspace:*",
     "@parlor/web": "workspace:*",
+    "@sentry/cloudflare": "11.7.0",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.2.6",
     "convex": "1.45.0",
@@ -44,6 +47,7 @@
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "^1.20.6",
+    "@parlor/cloudflare": "workspace:*",
     "@playwright/test": "1.62.1",
     "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "26.0.0",
@@ -57,7 +61,7 @@
     "typescript": "7.0.2",
     "vite": "8.2.2",
     "vitest": "5.0.0",
-    "wrangler": "^4.129.0"
+    "wrangler": "4.151.0"
   },
   "engines": {
     "node": ">=22.12.0",

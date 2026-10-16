@@ -2,6 +2,7 @@ import { readdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import { spawn } from "node:child_process";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { BACKEND_BASE_PATH } from "../lib/backend-url.ts";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const localEnv = join(root, ".env.local");
@@ -43,10 +44,23 @@ async function disableOpenNextDebug(directory) {
   if (patched === 0) throw new Error("OpenNext debug flag was not present to disable.");
 }
 
+const preview = process.argv.includes("--backend-preview");
+const productionConfig = JSON.parse(await readFile(join(root, "wrangler.jsonc"), "utf8"));
+const cloudflareBackend =
+  preview ||
+  process.argv.includes("--cloudflare-backend") ||
+  productionConfig.vars.NEXT_PUBLIC_CONVEX_URL === BACKEND_BASE_PATH;
+let backendUrl = productionConfig.vars.NEXT_PUBLIC_CONVEX_URL;
+let backendSiteUrl = productionConfig.vars.NEXT_PUBLIC_CONVEX_SITE_URL;
+if (cloudflareBackend) {
+  backendUrl = BACKEND_BASE_PATH;
+  backendSiteUrl = `${BACKEND_BASE_PATH}/http`;
+}
+
 const env = {
   ...process.env,
-  NEXT_PUBLIC_CONVEX_URL: "https://fiery-spaniel-734.convex.cloud",
-  NEXT_PUBLIC_CONVEX_SITE_URL: "https://fiery-spaniel-734.convex.site",
+  NEXT_PUBLIC_CONVEX_URL: backendUrl,
+  NEXT_PUBLIC_CONVEX_SITE_URL: backendSiteUrl,
   PARLOR_GUEST_TOKEN_AUDIENCE: "poppycock",
   // Disables OpenNext esbuild minify; Effect TypeIds are Symbols.
   OPEN_NEXT_DEBUG: "1",
@@ -68,6 +82,33 @@ try {
   await rm(join(root, ".open-next"), { recursive: true, force: true });
   await run("pnpm", ["exec", "opennextjs-cloudflare", "build"], env);
   await disableOpenNextDebug(join(root, ".open-next"));
+  // Bundle the wrapper, SDK and unchanged adapter ONCE too. Both workerd and
+  // deployment use this output with no_bundle, not a second source compilation.
+  const sourceConfig = {
+    ...(preview
+      ? JSON.parse(await readFile(join(root, "wrangler.backend-preview.jsonc"), "utf8"))
+      : productionConfig),
+    main: join(root, "cloudflare/worker.ts"),
+    no_bundle: false,
+    assets: { directory: join(root, ".open-next/assets"), binding: "ASSETS" },
+  };
+  const sourceConfigPath = join(root, ".open-next/source-config.json");
+  await writeFile(sourceConfigPath, JSON.stringify(sourceConfig));
+  await run(
+    "pnpm",
+    [
+      "exec",
+      "wrangler",
+      "deploy",
+      "--dry-run",
+      "--config",
+      sourceConfigPath,
+      "--outdir",
+      join(root, ".open-next/backend-bundle"),
+    ],
+    env,
+  );
+  await rm(sourceConfigPath);
   if (!process.argv.includes("--build-only")) {
     throw new Error("Deploy through CI; use --build-only to prepare the tested artifact.");
   }

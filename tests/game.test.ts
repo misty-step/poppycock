@@ -207,7 +207,13 @@ describe("authoritative Poppycock rounds", () => {
     );
     expect((await gameView(clients[2]!, room.roomId)).voted).toBe(true);
     const truth = await optionId(t, gameId, (option) => option.truth);
-    const merged = await optionId(t, gameId, (option) => option.text === "A dancing teapot.");
+    // Duplicate submissions can have either spelling as their private representative:
+    // the compound index orders by player ID, not arrival. Public text is normalized.
+    const merged = await optionId(
+      t,
+      gameId,
+      (option) => normalizeAnswer(option.text) === "a dancing teapot",
+    );
     const lone = await optionId(t, gameId, (option) => option.text === "A moon-powered unicycle");
     await expect(
       clients[2]!.mutation(api.game.vote, { gameId, round: 1, optionId: lone }),

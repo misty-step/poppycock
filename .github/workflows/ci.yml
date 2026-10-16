@@ -9,6 +9,11 @@ on:
         description: Exact same-repository release PR commit to verify
         required: true
         type: string
+      backend_preview:
+        description: Deploy and exercise only the isolated synthetic Cloudflare backend preview
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: read
@@ -58,19 +63,40 @@ jobs:
         run: pnpm test:parlor
       - name: Typecheck Poppycock
         run: pnpm typecheck
+      - name: Typecheck the native Worker boundary
+        run: pnpm typecheck:worker
       - name: Exercise game and issuer contracts
         run: pnpm test
+      - name: Exercise the same game contracts on the Cloudflare adapter
+        run: pnpm test:backend:cloudflare
+        env:
+          POPPYCOCK_SYNTHETIC_FIXTURE: "1"
       - name: Build the deployable Worker once
-        run: POPPYCOCK_REVISION=$(git rev-parse HEAD) node scripts/deploy-cloudflare.mjs --build-only
+        run: |
+          if test "$BACKEND_PREVIEW" = true; then
+            node scripts/deploy-cloudflare.mjs --build-only --backend-preview
+          else
+            node scripts/deploy-cloudflare.mjs --build-only
+          fi
+        env:
+          POPPYCOCK_REVISION: ${{ inputs.ref || github.sha }}
+          BACKEND_PREVIEW: ${{ inputs.backend_preview || false }}
       - name: Verify the Worker artifact in an isolated runtime
         run: node scripts/verify-worker.mjs
         env:
           POPPYCOCK_REVISION: ${{ inputs.ref || github.sha }}
+          POPPYCOCK_BACKEND_PREVIEW: ${{ inputs.backend_preview || false }}
       - uses: actions/upload-artifact@v4
         with:
           name: worker-${{ inputs.ref || github.sha }}
           path: .open-next/
           include-hidden-files: true
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        if: inputs.backend_preview
+        with:
+          name: synthetic-catalog-${{ inputs.ref || github.sha }}
+          path: test-results/cloudflare-fixture/
           if-no-files-found: error
       - name: Install isolated browser runtime
         run: pnpm exec playwright install --with-deps chromium
@@ -85,6 +111,66 @@ jobs:
           name: multiplayer-evidence-${{ github.sha }}
           path: test-results/multiplayer/
           if-no-files-found: ignore
+
+  backend-preview:
+    needs: check
+    if: github.event_name == 'workflow_dispatch' && inputs.backend_preview
+    concurrency:
+      group: backend-preview
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CI: "true"
+      WRANGLER_SEND_METRICS: "false"
+      POPPYCOCK_CLOUDFLARE_PREVIEW_ORIGIN: https://poppycock-backend-preview.mistystep.io
+      POPPYCOCK_REVISION: ${{ inputs.ref }}
+      POPPYCOCK_EVIDENCE_DIR: test-results/backend-preview/browser
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+      - run: test "$(git rev-parse HEAD)" = "$POPPYCOCK_REVISION"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build:parlor
+      - uses: actions/download-artifact@v4
+        with:
+          name: worker-${{ inputs.ref }}
+          path: .open-next/
+      - uses: actions/download-artifact@v4
+        with:
+          name: synthetic-catalog-${{ inputs.ref }}
+          path: test-results/cloudflare-fixture/
+      - name: Deploy only the isolated preview and its preview-only bindings
+        run: |
+          pnpm exec wrangler deploy --config wrangler.backend-preview.jsonc --message "$POPPYCOCK_REVISION"
+          node scripts/backend-preview.mjs --bind-secrets
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          POPPYCOCK_PREVIEW_BACKEND_ADMIN_KEY: ${{ secrets.POPPYCOCK_PREVIEW_BACKEND_ADMIN_KEY }}
+          POPPYCOCK_PREVIEW_PARLOR_GUEST_TOKEN_KEYS: ${{ secrets.POPPYCOCK_PREVIEW_PARLOR_GUEST_TOKEN_KEYS }}
+          POPPYCOCK_PREVIEW_CONTINUITY_SECRET: ${{ secrets.POPPYCOCK_PREVIEW_CONTINUITY_SECRET }}
+          POPPYCOCK_SENTRY_DSN: ${{ secrets.POPPYCOCK_SENTRY_DSN }}
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: Prove hosted gameplay, rejection, repeatable recovery and PITR undo
+        run: node scripts/backend-preview.mjs
+        env:
+          POPPYCOCK_PREVIEW_BACKEND_ADMIN_KEY: ${{ secrets.POPPYCOCK_PREVIEW_BACKEND_ADMIN_KEY }}
+          POPPYCOCK_PREVIEW_ACCESS_CLIENT_ID: ${{ secrets.POPPYCOCK_PREVIEW_ACCESS_CLIENT_ID }}
+          POPPYCOCK_PREVIEW_ACCESS_CLIENT_SECRET: ${{ secrets.POPPYCOCK_PREVIEW_ACCESS_CLIENT_SECRET }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: backend-preview-evidence-${{ inputs.ref }}
+          path: test-results/backend-preview/
+          if-no-files-found: error
 
   deploy:
     needs: check
@@ -119,6 +205,10 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_DEPLOY_KEY }}
+          POPPYCOCK_PRODUCTION_BACKEND_ADMIN_KEY: ${{ secrets.POPPYCOCK_PRODUCTION_BACKEND_ADMIN_KEY }}
+          POPPYCOCK_PARLOR_GUEST_TOKEN_KEYS: ${{ secrets.POPPYCOCK_PARLOR_GUEST_TOKEN_KEYS }}
+          POPPYCOCK_CONTINUITY_SECRET: ${{ secrets.POPPYCOCK_CONTINUITY_SECRET }}
+          POPPYCOCK_SENTRY_DSN: ${{ secrets.POPPYCOCK_SENTRY_DSN }}
           POPPYCOCK_REVISION: ${{ github.sha }}
       - uses: actions/upload-artifact@v4
         if: always()

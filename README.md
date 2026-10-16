@@ -8,6 +8,12 @@ Hosted play: **https://poppycock.mistystep.io** — no account. The live [/healt
 
 ## Play
 
+The observable contract is [SPEC.md](SPEC.md). Cloudflare backend migration
+mapping and the not-yet-cut-over boundary are recorded in
+[ADR 002](docs/adr/002-cloudflare-backend.md).
+The [cutover/recovery runbook](docs/cloudflare-cutover.md) owns operator steps,
+including the dormant rollout, canonical reconciliation and data-safe rollback.
+
 1. One person starts a table and shares its four-character code or QR invite.
 2. Everyone joins on their own phone. The host starts when at least three players are present.
 3. **Write:** invent a plausible answer at your own pace. Once submitted, it stays locked.
