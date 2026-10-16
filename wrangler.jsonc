@@ -25,8 +25,8 @@
     }
   ],
   "vars": {
-    "NEXT_PUBLIC_CONVEX_URL": "https://fiery-spaniel-734.convex.cloud",
-    "NEXT_PUBLIC_CONVEX_SITE_URL": "https://fiery-spaniel-734.convex.site",
+    "NEXT_PUBLIC_CONVEX_URL": "/backend",
+    "NEXT_PUBLIC_CONVEX_SITE_URL": "/backend/http",
     "PARLOR_GUEST_TOKEN_AUDIENCE": "poppycock",
     "SENTRY_ENVIRONMENT": "production"
   }
