@@ -11,19 +11,24 @@ engine, shared-adapter fork, public production-data artifact or dual writer.
 1. Independently review the candidate and this runbook. Require exact-head green
    CI and the isolated `backend_preview` dispatch: real six-round/rematch play,
    rejection, three canonical restores and native PITR/undo. Inspect screenshots.
-2. Merge/promote the dormant slice through normal CI. `wrangler.jsonc` still names
+2. Before any production deployment or secret write, verify name-only CI bindings
+   and pass custody. The production admin entry is
+   `workstation/POPPYCOCK_PRODUCTION_BACKEND_ADMIN_KEY`; Phaedrus owns its escrow.
+   Original guest and continuity entries are `workstation/POPPYCOCK_PARLOR_GUEST_TOKEN_KEYS`
+   and `workstation/POPPYCOCK_CONTINUITY_SECRET`. Compare the proposed guest keys
+   to the serving Convex environment in-process. Acquire a synthetic cookie from
+   the currently serving Worker issuer and verify its signature and identity
+   continuity with the proposed continuity secret: Convex does not own this cookie.
+   Retain only boolean receipts, never cookie/token/key values. Carry original
+   values over unchanged; stop before promotion if either proof fails. Exclude
+   the similarly named non-serving Convex deployment key.
+3. Merge/promote the dormant slice through normal CI. `wrangler.jsonc` still names
    `fiery-spaniel-734` in both public URL vars; its frontend and `/health` remain
    Convex-bound. The new SQLite object starts frozen and cannot run its cron.
    Read back source, Worker version, namespace, public/backend authorization and
    the existing public game journey. Record this DO-capable version as the cold
    client rollback target. Cloudflare cannot roll across a class lifecycle change:
    this first dormant deployment is fix-forward, not a rollback to a pre-DO Worker.
-3. Verify name-only CI bindings and pass custody. The production admin entry is
-   `workstation/POPPYCOCK_PRODUCTION_BACKEND_ADMIN_KEY`; Phaedrus owns its escrow.
-   Original guest and continuity entries are `workstation/POPPYCOCK_PARLOR_GUEST_TOKEN_KEYS`
-   and `workstation/POPPYCOCK_CONTINUITY_SECRET`. Compare their values to the
-   serving Convex environment in-process, without printing them; carry them over
-   unchanged. Exclude the similarly named non-serving Convex deployment key.
 4. Use the approved chief/CI path for credentials and deploys. The repository is
    registered in the canonical t_142625ef consumer registry; the scoped CD token
    covers mistystep.io. Never use the broad account token for a write.
