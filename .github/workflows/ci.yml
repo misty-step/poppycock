@@ -79,11 +79,11 @@ jobs:
         env:
           POPPYCOCK_REVISION: ${{ inputs.ref || github.sha }}
           BACKEND_PREVIEW: ${{ inputs.backend_preview || false }}
-          POPPYCOCK_PREVIEW_ORIGIN: https://poppycock-backend-preview.mistystep.io
       - name: Verify the Worker artifact in an isolated runtime
         run: node scripts/verify-worker.mjs
         env:
           POPPYCOCK_REVISION: ${{ inputs.ref || github.sha }}
+          POPPYCOCK_BACKEND_PREVIEW: ${{ inputs.backend_preview || false }}
       - uses: actions/upload-artifact@v4
         with:
           name: worker-${{ inputs.ref || github.sha }}
@@ -148,7 +148,7 @@ jobs:
           path: test-results/cloudflare-fixture/
       - name: Deploy only the isolated preview and its preview-only bindings
         run: |
-          pnpm exec wrangler deploy --config wrangler.backend-preview.jsonc
+          pnpm exec wrangler deploy --config wrangler.backend-preview.jsonc --message "$POPPYCOCK_REVISION"
           node scripts/backend-preview.mjs --bind-secrets
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

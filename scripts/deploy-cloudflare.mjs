@@ -2,6 +2,7 @@ import { readdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import { spawn } from "node:child_process";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { BACKEND_BASE_PATH } from "../lib/backend-url.ts";
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const localEnv = join(root, ".env.local");
@@ -44,24 +45,12 @@ async function disableOpenNextDebug(directory) {
 }
 
 const preview = process.argv.includes("--backend-preview");
+const cloudflareBackend = preview || process.argv.includes("--cloudflare-backend");
 let backendUrl = "https://fiery-spaniel-734.convex.cloud";
 let backendSiteUrl = "https://fiery-spaniel-734.convex.site";
-if (preview) {
-  const origin = new URL(process.env.POPPYCOCK_PREVIEW_ORIGIN);
-  if (
-    origin.pathname !== "/" ||
-    origin.search ||
-    origin.hash ||
-    origin.username ||
-    origin.password ||
-    !(
-      origin.protocol === "https:" ||
-      (origin.protocol === "http:" && ["localhost", "127.0.0.1", "[::1]"].includes(origin.hostname))
-    )
-  )
-    throw new Error("Use a bare HTTPS preview origin or HTTP loopback origin.");
-  backendUrl = `${origin.origin}/backend`;
-  backendSiteUrl = `${origin.origin}/backend/http`;
+if (cloudflareBackend) {
+  backendUrl = BACKEND_BASE_PATH;
+  backendSiteUrl = `${BACKEND_BASE_PATH}/http`;
 }
 
 const env = {

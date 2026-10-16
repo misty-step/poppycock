@@ -79,17 +79,30 @@ if (process.argv.includes("--bind-secrets")) {
     const fixture = readConvexSnapshot(
       await readFile("test-results/cloudflare-fixture/catalog.zip"),
     );
-    const initial = await op.status();
     await op.freeze(true);
-    assert.equal(initial.runningActions, 0);
+    assert.equal((await op.status()).runningActions, 0);
     await op.importSnapshot(fixture);
     const catalog = await snapshotStats(fixture);
     assert.deepEqual((await op.stats()).tables, catalog);
+    const frozenHealth = await transport(`${base}/health`);
+    assert.equal(frozenHealth.status, 503);
+    assert.equal((await frozenHealth.json()).backendReady, false);
+    assert.equal((await transport(`${base}/health`, { method: "HEAD" })).status, 503);
     const target = await op.bookmark();
     report.checks.push(
       "Authored synthetic catalog imports with every table number/count/digest equal",
     );
     await op.freeze(false);
+    const health = await transport(`${base}/health`);
+    assert.equal(health.status, 200);
+    const live = await health.json();
+    assert.equal(live.revision, report.sourceRevision);
+    assert.equal(live.backend, "cloudflare-do");
+    assert.equal(live.backendReady, true);
+    assert.equal((await transport(`${base}/health`, { method: "HEAD" })).status, 200);
+    report.checks.push(
+      "Health identifies the exact source and detects frozen versus serving DO state",
+    );
     await run(["node", "scripts/smoke.mjs"]);
     report.checks.push("Hosted six-round18/8/0 and four-player rematch browser journey passes");
     await op.freeze(true);

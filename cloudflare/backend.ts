@@ -1,8 +1,8 @@
 import { createConvexBackend } from "@parlor/cloudflare";
 import crons from "../convex/crons";
 import schema from "../convex/schema";
-
-export const BACKEND_BASE_PATH = "/backend";
+export { BACKEND_BASE_PATH } from "../lib/backend-url";
+import { BACKEND_BASE_PATH } from "../lib/backend-url";
 
 // Only registered-function modules belong here. Pure deck/rules modules remain
 // their normal imports; no game logic, schema or identity handler is copied.

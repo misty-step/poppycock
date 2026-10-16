@@ -51,10 +51,14 @@ Local candidate commands (no production credentials):
 pnpm install --frozen-lockfile
 pnpm build:parlor
 POPPYCOCK_SYNTHETIC_FIXTURE=1 pnpm test:backend:cloudflare
-POPPYCOCK_PREVIEW_ORIGIN=http://127.0.0.1:3310 node scripts/deploy-cloudflare.mjs --build-only --backend-preview
+node scripts/deploy-cloudflare.mjs --build-only --backend-preview
 ```
 
-The opt-in build embeds that origin's `/backend`, not Convex Cloud. To run it,
+The opt-in build embeds the relative `/backend`, not a host or Convex Cloud.
+`lib/backend-url.ts` resolves it against the browser's own origin, so the
+same artifact can be tested on the isolated host and later promoted without
+rebaking a different frontend. Explicit local Convex URLs stay unchanged.
+To run it,
 use `wrangler dev --local --config wrangler.backend-preview.jsonc` on that
 loopback port with freshly generated synthetic guest, continuity and admin
 bindings; import `test-results/cloudflare-fixture/catalog.zip` with the existing
@@ -75,8 +79,8 @@ restart and three after restart. The full built OpenNext runtime also passes
 the six-round/rematch browser journey followed by the same six canonical
 restore checks. This isolates the observed failure to the old toolchain,
 not a local adapter patch; it does not establish the upstream internal defect.
-Native local PITR remains unsupported. Hosted restore/PITR and real-data
-reconciliation are separate required proofs.
+Native local PITR remains unsupported. Hosted preview CI separately proves
+PITR and undo; real-data reconciliation remains a different required proof.
 
 The existing CI's optional `backend_preview` dispatch builds the preview
 artifact once, retains it, deploys only the separate preview config, and
@@ -96,7 +100,8 @@ the existing Convex environment bindings, pause at the freeze, one final
 encrypted export, and replace-all only on rollback. The preview verifier is
 the one named `poppycock-preview-verifier-t_16b068bc` token adopted by Kaylee
 after her operator-side grant was corrected to GET-only. No additional token
-creation or account-token writes are authorized. Existing guest signing and continuity keys must
+creation or account-token writes are authorized. Existing guest signing and
+continuity keys must
 carry over unchanged. No further custody ruling is required for those grants.
 Never print keys, guest tokens, cookies or private records in evidence.
 
@@ -118,8 +123,12 @@ paused and intact after acceptance; deletion is not authorized.
 The existing CI/promote/release-please path remains the only CD owner.
 Backend cutover will extend it only after independent review and exact-head
 preview/data proof, retaining the same tested artifact and compatible rollback.
-The existing static `/health` identifies a build, not backend availability;
-it must not be relabelled as a live DO health check. Backend-aware health,
+The original static `/health` still identifies the legacy production build.
+The opt-in Worker wrapper adds an actual bounded DO maintenance-state read:
+it answers 503 with `backendReady: false` while frozen, importing, missing its
+admin binding or unreachable, and 200 only when the DO is writable. It exposes
+build identity and that readiness bit, never admin metadata or records.
+The hosted preview checks both states; it does not prove Sentry coverage.
 Sentry error/uptime/cron and backup/restore operation must be proved before
 production acceptance, not inferred from Wrangler observability being enabled.
 No DNS change is required for a same-origin production backend.

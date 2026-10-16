@@ -13,12 +13,14 @@ const port = await new Promise((resolve) => {
   });
 });
 const origin = `http://127.0.0.1:${port}`;
+const preview = process.env.POPPYCOCK_BACKEND_PREVIEW === "true";
 const child = spawn(
   "pnpm",
   [
     "exec",
     "wrangler",
     "dev",
+    ...(preview ? ["--config", "wrangler.backend-preview.jsonc"] : []),
     "--port",
     String(port),
     "--ip",
@@ -46,11 +48,15 @@ try {
   for (let attempt = 0; ; attempt++) {
     try {
       const response = await fetch(`${origin}/health`, { signal: AbortSignal.timeout(2000) });
-      assert.equal(response.status, 200);
+      assert.equal(response.status, preview ? 503 : 200);
       const health = await response.json();
       assert.equal(health.version, version);
       if (revision) assert.equal(health.revision, revision);
-      assert.equal(health.backend, "fiery-spaniel-734");
+      assert.equal(health.backend, preview ? "cloudflare-do" : "fiery-spaniel-734");
+      if (preview) {
+        assert.equal(health.status, "unavailable");
+        assert.equal(health.backendReady, false);
+      }
       break;
     } catch (error) {
       if (attempt === 59 || child.exitCode !== null) throw error;
