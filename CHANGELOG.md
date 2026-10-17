@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/misty-step/poppycock/compare/v1.3.0...v1.4.0) (2026-10-16)
+
+
+### Features
+
+* prepare Poppycock Cloudflare backend migration ([#15](https://github.com/misty-step/poppycock/issues/15)) ([855170b](https://github.com/misty-step/poppycock/commit/855170b05669180d9d3a14327a9b2585757fa89c))
+* switch party gameplay to the Cloudflare backend ([#17](https://github.com/misty-step/poppycock/issues/17)) ([195ec7f](https://github.com/misty-step/poppycock/commit/195ec7f55782a9aa3525c241879e57b6604c6cfd))
+
 ## [1.3.0](https://github.com/misty-step/poppycock/compare/v1.2.0...v1.3.0) (2026-10-15)
 
 
