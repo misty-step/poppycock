@@ -1,0 +1,8 @@
+{
+  "startedAt": "2026-10-21T00:51:23.041Z",
+  "checks": [
+    "Node and pinned Playwright present; loopback ports 3210/3220/3221 have no listener"
+  ],
+  "result": "passed",
+  "completedAt": "2026-10-21T00:51:23.045Z"
+}

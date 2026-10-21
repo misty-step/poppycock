@@ -1,0 +1,196 @@
+{
+  "sourceRevision": "efb45ade8105732a933ac51ee454182557159a53",
+  "parlorRevision": "2b8c5c4114368e40905232a733c4193e22baee03",
+  "startedAt": "2026-10-21T00:48:54.542Z",
+  "origin": "http://localhost:3210",
+  "rounds": [
+    {
+      "round": 1,
+      "question": "Why did some Victorian brooches need a tiny leash?",
+      "category": "Insect intrigues",
+      "truth": "They were living beetles, allowed to crawl over the wearer's clothes but tethered to a pin.",
+      "source": "https://daily.jstor.org/insect-jewelry-of-the-victorian-era/",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 3,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 1,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "question": "Why can fresh lava at Tanzania's Ol Doinyo Lengai look like a stream of runny mud in daylight?",
+      "category": "Geological wonders",
+      "truth": "Its unusual carbonate-rich lava erupts too cool to glow visibly by day; it flows black or brown instead.",
+      "source": "https://www.usgs.gov/news/volcano-watch-worlds-coolest-lava-africa",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 6,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 4,
+          "gained": 3
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "question": "What impossible-sounding feat can be performed on an imaginary solid ball in the Banach–Tarski paradox?",
+      "category": "Mathematical oddities",
+      "truth": "Its pieces can be rearranged into two complete balls, each as large as the original; this is mathematics, not a physical cutting trick.",
+      "source": "https://mathworld.wolfram.com/Banach-TarskiParadox.html",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 9,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 5,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "question": "In needlework, what is a pointed 'bodkin' used for?",
+      "category": "Curious objects",
+      "truth": "Piercing holes, or drawing tape or ribbon through a hem.",
+      "source": "https://www.websters1913.com/words/Bodkin",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 12,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 6,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "question": "What tiny act of tidying yourself earned the charge of 'extreme vulgarity' in Beadle's 1859 guide?",
+      "category": "Victorian etiquette",
+      "truth": "Brushing your hat with your hand.",
+      "source": "https://www.gutenberg.org/files/45591/45591-h/45591-h.htm#Page_17",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 15,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 7,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "question": "What unexpected sound did researchers hear a hunting margay make near pied tamarins?",
+      "category": "Beastly cheats",
+      "truth": "Calls resembling those of a baby tamarin.",
+      "source": "https://www.nationalgeographic.com/science/article/margays-mimick-monkey-calls-to-lure-their-prey",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 18,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 8,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Three independent guest identities join by code; real Parlor QR invitation renders in the lobby.",
+    "Unauthenticated room game read rejected; writing hides truth, source, and options.",
+    "Explicit host departure transfers host to Bea; rejoining Ada keeps identity, scores, and match eligibility.",
+    "Late joiner can watch but cannot submit; immutable three-player eligibility preserved.",
+    "Phone network interruption and reload preserve the same player and current turn.",
+    "Six rounds have authoritative expected scores18/8/0, private shuffled choices, duplicate-bluff attribution, rejected self-votes, and idempotent submission retries.",
+    "Rematch includes former spectator, resets all scores, draws unseen content, and fits390px screens without horizontal overflow."
+  ],
+  "screenshots": [
+    "front-door-desktop.png",
+    "front-door-phone.png",
+    "lobby-desktop.png",
+    "writing-phone.png",
+    "voting-phone.png",
+    "reveal-desktop.png",
+    "reveal-phone.png",
+    "host-change-phone.png",
+    "offline-phone.png",
+    "final-standings-desktop.png",
+    "final-standings-phone.png",
+    "rematch-phone.png"
+  ],
+  "browserSecurity": {
+    "secureContext": true,
+    "randomUuidAvailable": true,
+    "randomValuesAvailable": true
+  },
+  "finalScores": [
+    {
+      "name": "Ada",
+      "score": 18
+    },
+    {
+      "name": "Bea",
+      "score": 8
+    },
+    {
+      "name": "Cy",
+      "score": 0
+    }
+  ],
+  "completedAt": "2026-10-21T00:50:16.531Z",
+  "result": "passed"
+}

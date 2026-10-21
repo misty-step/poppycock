@@ -1,0 +1,66 @@
+- link "Skip to game":
+  - /url: "#main-content"
+- banner:
+  - text: poppycock
+  - navigation "Table controls":
+    - button "Room YV7Z. Invite friends":
+      - strong: YV7Z
+    - button "Table options"
+- status
+- main:
+  - region "Round results":
+    - paragraph:
+      - text: Round
+      - strong: "1"
+      - text: of 6
+    - heading "Round results" [level=1]
+    - paragraph: The truth, at last!
+    - heading "His skeleton was to be padded out, dressed in his own clothes and displayed as an image of himself." [level=2]
+    - paragraph:
+      - text: "Source:"
+      - link "Smithsonian Magazine — English Philosopher's Dressed-Up Skeleton Goes on View in New Glass Display (opens in a new tab)":
+        - /url: https://www.smithsonianmag.com/smart-news/philosophers-dressed-remains-get-new-display-university-college-london-180974347/
+    - group: About this source
+    - region "This round's question":
+      - paragraph: Eccentric people
+      - heading "What unusual future did Jeremy Bentham request for his body after it had served medical science?" [level=2]
+    - region "Answers and votes":
+      - heading "Answers and votes" [level=2]
+      - article:
+        - heading "his skeleton was to be padded out, dressed in his own clothes and displayed as an image of himself" [level=3]
+        - paragraph: The truth
+        - paragraph: No votes
+      - article:
+        - heading "a synthetic ceremonial teacup" [level=3]
+        - paragraph: Written by you
+        - paragraph: No votes
+    - region "Scores":
+      - heading "Scores" [level=2]
+      - text: Points
+      - list:
+        - listitem:
+          - text: Rank 1
+          - paragraph: Iris
+          - strong: 0 points
+        - listitem:
+          - text: Rank 1
+          - paragraph: Jun
+          - strong: 0 points
+        - listitem:
+          - text: Rank 1
+          - paragraph: Kit
+          - strong: 0 points
+    - button "Next round"
+- contentinfo:
+  - text: Good friends. Questionable answers.
+  - paragraph:
+    - text: A
+    - link "Misty Step (opens in a new tab)":
+      - /url: https://mistystep.io
+    - text: game. Built with
+    - link "Parlor (opens in a new tab)":
+      - /url: https://parlor.mistystep.io
+    - text: .
+    - link "Changelog":
+      - /url: /changelog
+- alert

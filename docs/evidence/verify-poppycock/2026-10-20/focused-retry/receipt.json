@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-10-21T00:43:47.198Z",
+  "checks": [
+    "local health identifies a usable target; local identity or production backend readiness checked",
+    "Empty name is rejected; one-player table cannot start"
+  ],
+  "sourceRevision": "efb45ade8105732a933ac51ee454182557159a53",
+  "origin": "http://localhost:3210",
+  "health": {
+    "status": "ok",
+    "version": "1.3.0",
+    "revision": "efb45ade8105732a933ac51ee454182557159a53",
+    "backend": "fiery-spaniel-734"
+  },
+  "result": "failed",
+  "failedStage": "avatar cancellation and saved persistence",
+  "errorType": "Error",
+  "failedLine": 82,
+  "completedAt": "2026-10-21T00:44:10.672Z"
+}

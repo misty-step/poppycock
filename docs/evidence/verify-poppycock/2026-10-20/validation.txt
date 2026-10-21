@@ -1,0 +1,70 @@
+Verification commands and results
+Base: efb45ade8105732a933ac51ee454182557159a53
+Host runtime: Node v26.12.0, pnpm 11.25.0; pinned Playwright 1.62.1
+Date: evening 2026-10-20 America/Chicago (2026-10-21 UTC)
+
+$ pnpm install --frozen-lockfile
+exit 0; locked workspace dependencies installed from fresh worktree.
+Initial Parlor CLI-bin warning resolved by the normal Parlor build.
+
+$ pnpm exec playwright install chromium
+exit 0; Chromium runtime available (fallback Ubuntu build on this host).
+
+$ .agents/skills/poppycock-verify/scripts/control.mjs doctor preflight
+exit 0 before initial launch, after each self-contained runtime teardown, and after final cleanup.
+
+$ POPPYCOCK_REVISION=efb45ade8105732a933ac51ee454182557159a53 .agents/skills/poppycock-verify/scripts/control.mjs production docs/evidence/verify-poppycock/2026-10-20/production
+exit 0; inspect production/receipt.json and screenshot/ARIA pairs.
+Production guest access only; owner-account sign-in n/a; backend seat intentionally unproven.
+
+$ POPPYCOCK_REVISION=efb45ade8105732a933ac51ee454182557159a53 POPPYCOCK_EVIDENCE_DIR=docs/evidence/verify-poppycock/2026-10-20/multiplayer-final pnpm smoke:local
+exit 0 from deleted .env.local/.convex state; real catalog seeded; six rounds;
+Ada/Bea/Cy 18/8/0; host departure/rejoin; late spectator rejection;
+offline/reload continuity; four-player rematch; mobile width assertions.
+Owned browser and servers stopped. Inspect multiplayer-final/multiplayer-smoke.json.
+
+$ POPPYCOCK_REVISION=efb45ade8105732a933ac51ee454182557159a53 pnpm dev
+Started the owned local pair for focused driving, then stopped its exact supervisor
+with SIGINT. Exit 130 reflects deliberate interruption and completed child teardown.
+
+$ .agents/skills/poppycock-verify/scripts/control.mjs doctor local
+exit 0 before each focused/diagnostic drive and after failures.
+
+$ POPPYCOCK_REVISION=efb45ade8105732a933ac51ee454182557159a53 .agents/skills/poppycock-verify/scripts/control.mjs focused docs/evidence/verify-poppycock/2026-10-20/focused-verified
+exit 0; final helper includes a saved roster portrait assertion after reload.
+Inspect focused-verified/receipt.json and screenshot/ARIA pairs.
+
+$ pnpm test -- tests/session.test.ts tests/game.test.ts
+exit 0; this package-script invocation actually selected the full suite:
+8 files passed, 52 tests passed. The exact narrow command follows.
+
+$ pnpm exec vitest run tests/session.test.ts tests/game.test.ts
+exit 0
+RUN  v5.0.0 /home/phaedrus/.cache/tmp/verify-poppycock/worktree
+
+
+ Test Files  2 passed (2)
+      Tests  21 passed (21)
+   Start at  19:48:31
+   Duration  5.56s (tests 86%, transform 9%, import 5%)
+
+$ pnpm format:check
+exit 0; all 139 configured files matched formatting.
+$ pnpm exec oxfmt --check .agents/skills/poppycock-verify/scripts/control.mjs
+exit 0; the new helper matched formatting.
+
+Evidence directory collision proof:
+Invoking production again against the existing production evidence directory
+exited 1 before browser launch; receipt SHA-256 remained unchanged.
+
+Final cleanup:
+Only this worktree's generated .convex and .env.local were deleted after the owned
+supervisor exited. Doctor preflight confirmed ports free. Every final screenshot
+listed in the multiplayer receipt and the production/focused receipt+ARIA pairs
+still existed after cleanup. Relative links, executable permission, and the
+relative Claude symlink were checked. Text evidence was scanned for token-shaped
+credentials; none found. No browser storage state, traces, or raw request payloads retained.
+
+Earlier failed runs are retained and explicitly labeled. The diagnosis copy was
+removed; scripts/smoke.mjs changes only the two receipt polls from 5 to 15 seconds.
+No independent QA/review/judge, PR polling, merge, deployment, or group reports were performed.

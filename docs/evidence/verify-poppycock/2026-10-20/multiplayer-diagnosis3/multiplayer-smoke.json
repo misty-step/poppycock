@@ -1,0 +1,196 @@
+{
+  "sourceRevision": "efb45ade8105732a933ac51ee454182557159a53",
+  "parlorRevision": "2b8c5c4114368e40905232a733c4193e22baee03",
+  "startedAt": "2026-10-21T00:46:10.039Z",
+  "origin": "http://localhost:3210",
+  "rounds": [
+    {
+      "round": 1,
+      "question": "What did Edwin Izod's factory shape by drying it on a steam-heated copper torso?",
+      "category": "Textile tales",
+      "truth": "A starched corset, moulded into the fashionable stiff, rounded silhouette.",
+      "source": "https://www.vam.ac.uk/articles/corsets-crinolines-and-bustles-fashionable-victorian-underwear",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 3,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 1,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "question": "Why is the remote South Pacific oceanic coordinate known as 'Point Nemo' famous among geographers?",
+      "category": "The sea",
+      "truth": "It is the point on Earth farthest from any land.",
+      "source": "https://oceanservice.noaa.gov/facts/nemo.html",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 6,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 4,
+          "gained": 3
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "question": "In historical warfare, what was the ingenious design of a four-pointed iron 'caltrop'?",
+      "category": "Lost gear",
+      "truth": "Whichever way it lands on the ground, one sharp point always sticks straight up.",
+      "source": "https://www.websters1913.com/words/Caltrop",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 9,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 5,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "question": "What must someone successfully climb and retrieve to trigger the start of Spain's La Tomatina tomato fight?",
+      "category": "Living traditions",
+      "truth": "A whole cured ham mounted at the top of a greased wooden pole.",
+      "source": "https://www.bbc.com/travel/article/20100816-spains-la-tomatina-festival",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 12,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 6,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "question": "In William Henry Furness’s account of Yap, where was a wealthy family’s enormous rai kept?",
+      "category": "Strange currency",
+      "truth": "At the bottom of the sea; the community still recognized the sunken stone as the family’s wealth.",
+      "source": "https://miltonfriedman.hoover.org/internal/media/dispatcher/215061/full",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 15,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 7,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "question": "What biological substance actually forms the costly nests used in Chinese bird's nest soup?",
+      "category": "Kitchen secrets",
+      "truth": "Solidified saliva regurgitated by cave-dwelling swiftlets.",
+      "source": "https://www.atlasobscura.com/foods/birds-nest-soup",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 18,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 8,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Three independent guest identities join by code; real Parlor QR invitation renders in the lobby.",
+    "Unauthenticated room game read rejected; writing hides truth, source, and options.",
+    "Explicit host departure transfers host to Bea; rejoining Ada keeps identity, scores, and match eligibility.",
+    "Late joiner can watch but cannot submit; immutable three-player eligibility preserved.",
+    "Phone network interruption and reload preserve the same player and current turn.",
+    "Six rounds have authoritative expected scores18/8/0, private shuffled choices, duplicate-bluff attribution, rejected self-votes, and idempotent submission retries.",
+    "Rematch includes former spectator, resets all scores, draws unseen content, and fits390px screens without horizontal overflow."
+  ],
+  "screenshots": [
+    "front-door-desktop.png",
+    "front-door-phone.png",
+    "lobby-desktop.png",
+    "writing-phone.png",
+    "voting-phone.png",
+    "reveal-desktop.png",
+    "reveal-phone.png",
+    "host-change-phone.png",
+    "offline-phone.png",
+    "final-standings-desktop.png",
+    "final-standings-phone.png",
+    "rematch-phone.png"
+  ],
+  "browserSecurity": {
+    "secureContext": true,
+    "randomUuidAvailable": true,
+    "randomValuesAvailable": true
+  },
+  "finalScores": [
+    {
+      "name": "Ada",
+      "score": 18
+    },
+    {
+      "name": "Bea",
+      "score": 8
+    },
+    {
+      "name": "Cy",
+      "score": 0
+    }
+  ],
+  "completedAt": "2026-10-21T00:47:07.241Z",
+  "result": "passed"
+}
