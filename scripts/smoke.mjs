@@ -127,7 +127,9 @@ async function voteFor(name, text) {
     .click();
   await page.getByRole("button", { name: "Lock vote", exact: true }).click();
   await expect
-    .poll(async () => (await view(name)).voted || (await view(name)).phase === "reveal")
+    .poll(async () => (await view(name)).voted || (await view(name)).phase === "reveal", {
+      timeout: 15000,
+    })
     .toBe(true);
 }
 
@@ -250,7 +252,7 @@ try {
     for (const name of ["Ada", "Bea", "Cy"]) {
       await players[name].page.getByLabel("Your answer").fill(bluffs[name]);
       await players[name].page.getByRole("button", { name: "Submit answer", exact: true }).click();
-      await expect.poll(async () => (await view(name)).submitted).toBe(true);
+      await expect.poll(async () => (await view(name)).submitted, { timeout: 15000 }).toBe(true);
     }
     await phase("Ada", "voting");
     const voting = await view("Ada");

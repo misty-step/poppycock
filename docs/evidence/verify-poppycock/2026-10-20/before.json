@@ -1,0 +1,9 @@
+{
+  "baseRevision": "efb45ade8105732a933ac51ee454182557159a53",
+  "baselineTrackedPaths": {
+    ".agents/skills/poppycock-verify/SKILL.md": true,
+    ".agents/skills/poppycock-verify/features/README.md": false,
+    ".agents/skills/poppycock-verify/scripts/control.mjs": false,
+    ".claude/skills/poppycock-verify": false
+  }
+}

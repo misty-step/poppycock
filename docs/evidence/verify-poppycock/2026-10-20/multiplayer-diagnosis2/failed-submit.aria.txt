@@ -1,0 +1,40 @@
+- link "Skip to game":
+  - /url: "#main-content"
+- banner:
+  - text: poppycock
+  - navigation "Table controls":
+    - button "Room LQLL. Invite friends":
+      - strong: LQLL
+    - button "Table options"
+- status
+- main:
+  - region "Write an answer":
+    - paragraph:
+      - text: Round
+      - strong: "2"
+      - text: of 6
+    - heading "Write an answer" [level=1]
+    - region "This round's question":
+      - paragraph: Living traditions
+      - heading "At the 750-year-old Egremont Crab Fair in England, how do competitors in the World Gurning Championship compete?" [level=2]
+    - region "Writing turn":
+      - text: Your answer
+      - textbox "Your answer": A small clock operated by beetles.
+      - paragraph: 34 / 180 characters
+      - paragraph: Make it believable enough to fool the table. Once submitted, your answer is locked.
+      - status: 1 answer submitted.
+    - status: Submitting your answer.
+    - button "Submit answer" [disabled]
+- contentinfo:
+  - text: Good friends. Questionable answers.
+  - paragraph:
+    - text: A
+    - link "Misty Step (opens in a new tab)":
+      - /url: https://mistystep.io
+    - text: game. Built with
+    - link "Parlor (opens in a new tab)":
+      - /url: https://parlor.mistystep.io
+    - text: .
+    - link "Changelog":
+      - /url: /changelog
+- alert

@@ -1,0 +1,66 @@
+- link "Skip to game":
+  - /url: "#main-content"
+- banner:
+  - text: poppycock
+  - navigation "Table controls":
+    - button "Room SSRX. Invite friends":
+      - strong: SSRX
+    - button "Table options"
+- status
+- main:
+  - region "Round results":
+    - paragraph:
+      - text: Round
+      - strong: "1"
+      - text: of 6
+    - heading "Round results" [level=1]
+    - paragraph: The truth, at last!
+    - heading "Turn its alphabet discs to match the received letters, then look around the cylinder for a row that made sense." [level=2]
+    - paragraph:
+      - text: "Source:"
+      - link "National Cryptologic Museum — Early Cryptography Cipher Devices (opens in a new tab)":
+        - /url: https://virmuze.com/m/crypto-museum/x/cipher-devices/
+    - group: About this source
+    - region "This round's question":
+      - paragraph: Cryptic codes
+      - heading "What would a recipient do with the apparently meaningless rows on Jefferson's proposed cipher device?" [level=2]
+    - region "Answers and votes":
+      - heading "Answers and votes" [level=2]
+      - article:
+        - heading "turn its alphabet discs to match the received letters, then look around the cylinder for a row that made sense" [level=3]
+        - paragraph: The truth
+        - paragraph: No votes
+      - article:
+        - heading "a synthetic ceremonial teacup" [level=3]
+        - paragraph: Written by you
+        - paragraph: No votes
+    - region "Scores":
+      - heading "Scores" [level=2]
+      - text: Points
+      - list:
+        - listitem:
+          - text: Rank 1
+          - paragraph: Iris
+          - strong: 0 points
+        - listitem:
+          - text: Rank 1
+          - paragraph: Jun
+          - strong: 0 points
+        - listitem:
+          - text: Rank 1
+          - paragraph: Kit
+          - strong: 0 points
+    - button "Next round"
+- contentinfo:
+  - text: Good friends. Questionable answers.
+  - paragraph:
+    - text: A
+    - link "Misty Step (opens in a new tab)":
+      - /url: https://mistystep.io
+    - text: game. Built with
+    - link "Parlor (opens in a new tab)":
+      - /url: https://parlor.mistystep.io
+    - text: .
+    - link "Changelog":
+      - /url: /changelog
+- alert

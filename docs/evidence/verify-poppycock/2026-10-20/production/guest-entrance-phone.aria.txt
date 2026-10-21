@@ -1,0 +1,41 @@
+- link "Skip to game":
+  - /url: "#main-content"
+- banner:
+  - text: poppycock
+  - button "How to play"
+- main:
+  - region "Your friends are full of it.":
+    - heading "Your friends are full of it." [level=1]
+    - paragraph: Invent a convincing answer to a weird question. Fool your friends, then find the truth hiding among the bluffs.
+    - list "Game details":
+      - listitem: 3–12 players
+      - listitem: Six untimed rounds
+      - listitem: One phone each
+    - heading "Pull up a chair." [level=2]
+    - paragraph: Create a table or join one with your room code.
+    - tablist "Choose how to play":
+      - tab "Create table" [selected]
+      - tab "Join table"
+    - tabpanel "Create table":
+      - form "Create table":
+        - text: Your name
+        - textbox "Your name"
+        - paragraph: Shown to other players.
+        - button "Create table"
+        - status
+    - figure "Example bluff for “What was a knocker-up?” “A carpenter who tested door knockers.”":
+      - paragraph: Example bluff for “What was a knocker-up?”
+      - blockquote: “A carpenter who tested door knockers.”
+- contentinfo:
+  - text: Good friends. Questionable answers.
+  - paragraph:
+    - text: A
+    - link "Misty Step (opens in a new tab)":
+      - /url: https://mistystep.io
+    - text: game. Built with
+    - link "Parlor (opens in a new tab)":
+      - /url: https://parlor.mistystep.io
+    - text: .
+    - link "Changelog":
+      - /url: /changelog
+- alert
