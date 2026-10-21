@@ -1,0 +1,99 @@
+--- /tmp/poppycock-smoke-original.mjs	2026-10-20 23:29:02
++++ /tmp/poppycock-smoke-presence-probe.mjs	2026-10-20 23:29:02
+@@ -66,6 +66,24 @@
+   ...(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {}),
+ });
+ const players = {};
++const probeSource = process.env.POPPYCOCK_PRESENCE_PROBE;
++let delayCy = false;
++let heldBeats = 0;
++const heldTimers = new Set();
++async function ageCy(label) {
++  await client.mutation(api.rooms.heartbeat, await credentials("Cy"));
++  delayCy = true;
++  const state = await room("Cy");
++  const member = state.members.find(p => p.playerId === state.viewerPlayerId);
++  await new Promise(resolve => setTimeout(resolve, 18_000));
++  const age = Date.now() - member.lastSeenAt;
++  expect(age).toBeGreaterThanOrEqual(18_000);
++  expect(age).toBeLessThan(22_000);
++  report.presenceProbes ??= [];
++  report.presenceProbes.push({label, source: probeSource, evidenceAgeMs: age, heldBeats,
++    visibility: await players.Cy.page.evaluate(() => document.visibilityState)});
++}
++
+ const report = {
+   sourceRevision: process.env.POPPYCOCK_REVISION ?? "working-tree",
+   parlorRevision: JSON.parse(await readFile(join(root, "vendor/parlor/UPSTREAM.json"), "utf8"))
+@@ -145,6 +163,18 @@
+         new URL(route.request().url()).origin === base ? route.continue() : route.abort(),
+       );
+     }
++    if (name === "Cy") await context.routeWebSocket(/127\.0\.0\.1:3220/, ws => {
++      const server = ws.connectToServer();
++      ws.onMessage(message => {
++        let frame; try { frame=JSON.parse(String(message)); } catch {}
++        if (delayCy && frame?.type === "Mutation" && frame.udfPath === "rooms:heartbeat") {
++          heldBeats++;
++          const timer=setTimeout(() => {heldTimers.delete(timer); server.send(message);},25_000);
++          heldTimers.add(timer); return;
++        }
++        server.send(message);
++      });
++    });
+     const page = await context.newPage();
+     page.setDefaultTimeout(15000);
+     players[name] = { context, page };
+@@ -177,8 +207,23 @@
+   report.checks.push(
+     "Three independent guest identities join by code; real Parlor QR invitation renders in the lobby.",
+   );
++  await ageCy("initial");
++  if (probeSource === "base") {
++    await expect(players.Ada.page.getByRole("button", {name:"Start game",exact:true})).toBeDisabled();
++    await expect(client.mutation(api.game.start,{...await credentials("Ada"),requestId:"presence-rejection"})).rejects.toThrow("NOT_ENOUGH_PRESENT_PLAYERS");
++    expect((await room("Ada")).activeMatch).toBeNull();
++    report.presenceProbes.at(-1).result="start rejected; no frozen roster";
++    await capture("Cy","presence-initial-rejected.png");
++    delayCy=false;
++    await client.mutation(api.rooms.heartbeat,await credentials("Cy"));
++  }
+   await players.Ada.page.getByRole("button", { name: "Start game", exact: true }).click();
+   await phase("Ada", "writing");
++  expect((await view("Cy")).participant).toBe(true);
++  expect((await room("Cy")).activeMatch.participantIds).toHaveLength(3);
++  if(probeSource!=="base") report.presenceProbes.at(-1).result="3 participants; Cy playing";
++  await capture("Cy","presence-initial-writing.png","writing");
++  delayCy=false;
+   const questions = new Set();
+   let host = "Ada";
+   let savedGameId;
+@@ -347,12 +392,20 @@
+   report.checks.push(
+     "Six rounds have authoritative expected scores18/8/0, private shuffled choices, duplicate-bluff attribution, rejected self-votes, and idempotent submission retries.",
+   );
++  await ageCy("rematch");
+   await players.Bea.page.getByRole("button", { name: "Play again", exact: true }).click();
+   await phase("Dax", "writing");
+   const rematch = await view("Dax");
+   expect(rematch.gameId).not.toBe(savedGameId);
+   expect(rematch.participant).toBe(true);
+-  expect(rematch.playerCount).toBe(4);
++  expect(rematch.playerCount).toBe(probeSource==="base"?3:4);
++  const cyRematch=await view("Cy");
++  expect(cyRematch.participant).toBe(probeSource!=="base");
++  const frozen=(await room("Cy")).activeMatch.participantIds;
++  expect(frozen).toHaveLength(probeSource==="base"?3:4);
++  report.presenceProbes.at(-1).result=probeSource==="base"?"3 participants; Cy excluded":"4 participants; Cy playing";
++  report.presenceProbes.at(-1).participantIds=frozen;
++  await capture("Cy","presence-rematch.png","writing");
+   expect(rematch.players.every((p) => p.score === 0)).toBe(true);
+   expect(questions.has(rematch.prompt.question)).toBe(false);
+   await capture("Dax", "rematch-phone.png", "writing");
+@@ -383,5 +436,6 @@
+     ),
+   );
+ } finally {
++  for(const timer of heldTimers)clearTimeout(timer);
+   await browser.close();
+ }

@@ -13,7 +13,7 @@ const modules = import.meta.glob("../convex/**/*.ts");
 type TestContext = TestConvex<typeof schema>;
 type Client = Omit<TestContext, "withIdentity" | "registerComponent">;
 
-async function fixture(count = 3) {
+async function fixture(count = 3, delayedPeerAge = 0) {
   const t = convexTest(schema, modules);
   await t.action(internal.seed.run, {});
   const clients = Array.from({ length: count }, (_, index) =>
@@ -29,6 +29,11 @@ async function fixture(count = 3) {
     });
     if (!joined.ok) throw new Error(joined.code);
     playerIds.push(joined.playerId);
+  }
+  if (delayedPeerAge > 0) {
+    vi.setSystemTime(Date.now() + delayedPeerAge);
+    for (const client of clients.slice(0, 2))
+      await client.mutation(api.rooms.heartbeat, { roomId: room.roomId });
   }
   const gameId = await host.mutation(api.game.start, {
     roomId: room.roomId,
@@ -79,6 +84,44 @@ afterEach(() => {
 });
 
 describe("authoritative Poppycock rounds", () => {
+  it.each([
+    [14_999, 3],
+    [15_000, 3],
+    [15_001, 3],
+    [18_000, 3],
+    [30_000, 3],
+  ])(
+    "freezes the bounded roster at peer evidence age %i on start and rematch",
+    async (age, count) => {
+      const { t, clients, host, room, gameId, playerIds } = await fixture(3, age);
+      const assertRoster = async () => {
+        const roomState = await host.query(api.rooms.getRoomState, { roomId: room.roomId });
+        expect(roomState.activeMatch?.participantIds).toEqual(playerIds.slice(0, count));
+        const peer = await gameView(clients[2]!, room.roomId);
+        expect(peer.playerCount).toBe(count);
+        expect(peer.participant).toBe(count === 3);
+      };
+      await assertRoster();
+      for (let round = 1; round <= TOTAL_ROUNDS; round += 1) {
+        await host.mutation(api.game.advance, { gameId, round, phase: "writing" });
+        await host.mutation(api.game.advance, { gameId, round, phase: "voting" });
+        await host.mutation(api.game.advance, { gameId, round, phase: "reveal" });
+      }
+      expect((await gameView(host, room.roomId)).phase).toBe("finished");
+      for (const client of clients)
+        await client.mutation(api.rooms.heartbeat, { roomId: room.roomId });
+      vi.setSystemTime(Date.now() + age);
+      for (const client of clients.slice(0, 2))
+        await client.mutation(api.rooms.heartbeat, { roomId: room.roomId });
+      await host.mutation(api.game.start, { roomId: room.roomId, requestId: "delayed-rematch" });
+      await assertRoster();
+    },
+  );
+
+  it("rejects a three-player start when a peer is beyond the presence grace", async () => {
+    await expect(fixture(3, 30_001)).rejects.toThrow("NOT_ENOUGH_PRESENT_PLAYERS");
+  });
+
   it("keeps chosen avatars attached to players, not seats or room membership", async () => {
     const { t, host, clients, room, playerIds } = await fixture();
     const original = await gameView(clients[1]!, room.roomId);

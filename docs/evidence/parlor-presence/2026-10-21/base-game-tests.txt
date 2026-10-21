@@ -1,0 +1,39 @@
+
+ RUN  v5.0.0 /Users/phaedrus/Documents/Codex/2026-10-20/task-7/poppycock
+
+ ❯ tests/game.test.ts (16 tests | 3 failed | 10 skipped) 2149ms
+   ❯ authoritative Poppycock rounds (16)
+     × freezes the bounded roster at peer evidence age 15001 on start and rematch 297ms
+     × freezes the bounded roster at peer evidence age 18000 on start and rematch 319ms
+     × freezes the bounded roster at peer evidence age 30000 on start and rematch 301ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/game.test.ts > authoritative Poppycock rounds > freezes the bounded roster at peer evidence age 15001 on start and rematch
+ FAIL  tests/game.test.ts > authoritative Poppycock rounds > freezes the bounded roster at peer evidence age 18000 on start and rematch
+ FAIL  tests/game.test.ts > authoritative Poppycock rounds > freezes the bounded roster at peer evidence age 30000 on start and rematch
+ConvexError: {"code":"NOT_ENOUGH_PRESENT_PLAYERS"}
+ ❯ parlorError vendor/parlor/integrations/convex/convex/helpers.ts:25:9
+ ❯ beginMatch vendor/parlor/integrations/convex/convex/matches.ts:143:14
+ ❯ handler convex/game.ts:369:19
+    367|     if (room.closedAt !== undefined) fail("ROOM_NOT_OPEN");
+    368|     const now = Date.now();
+    369|     const match = await beginMatch(ctx, {
+       |                   ^
+    370|       roomId: args.roomId,
+    371|       actor,
+ ❯ invokeFunction node_modules/.pnpm/convex@1.45.0_react@19.2.8/node_modules/convex/src/server/impl/registration_impl.ts:90:14
+ ❯ invokeMutation node_modules/.pnpm/convex@1.45.0_react@19.2.8/node_modules/convex/src/server/impl/registration_impl.ts:70:18
+ ❯ runMutationWithHandler node_modules/.pnpm/convex-test@0.0.56_convex@1.45.0_react@19.2.8_/node_modules/convex-test/dist/index.js:1672:31
+ ❯ Object.mutationFromPath node_modules/.pnpm/convex-test@0.0.56_convex@1.45.0_react@19.2.8_/node_modules/convex-test/dist/index.js:1813:32
+ ❯ mutation node_modules/.pnpm/convex-test@0.0.56_convex@1.45.0_react@19.2.8_/node_modules/convex-test/dist/index.js:1861:20
+ ❯ fixture tests/game.test.ts:38:18
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 3 passed | 10 skipped (16)
+   Start at  23:30:02
+   Duration  2.44s (tests 91%, import 6%, transform 4%)
+

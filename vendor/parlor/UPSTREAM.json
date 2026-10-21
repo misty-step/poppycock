@@ -1,17 +1,17 @@
 {
   "repository": "https://github.com/misty-step/parlor",
   "commit": "2b8c5c4114368e40905232a733c4193e22baee03",
-  "paths": [
-    "packages",
-    "integrations",
-    "tsconfig.base.json",
-    "LICENSE"
-  ],
+  "paths": ["packages", "integrations", "tsconfig.base.json", "LICENSE"],
   "modifications": [],
   "additionalSnapshots": [
     {
       "commit": "610f57104a9eb7ece5c9b39f8e822c99a17e1596",
       "paths": ["integrations/cloudflare"],
+      "modifications": []
+    },
+    {
+      "commit": "1611e2143d0d3dc8b3d7b39f7b568d1cd16c92fd",
+      "paths": ["packages/core", "integrations/convex/test/lifecycle.test.ts"],
       "modifications": []
     }
   ]
