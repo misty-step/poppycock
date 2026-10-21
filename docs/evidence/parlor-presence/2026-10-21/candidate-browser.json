@@ -1,0 +1,222 @@
+{
+  "sourceRevision": "9f33d2ddf38e7d4bf86ed6a09a60e2e9479e0e8b",
+  "parlorRevision": "2b8c5c4114368e40905232a733c4193e22baee03",
+  "startedAt": "2026-10-21T04:30:34.777Z",
+  "origin": "http://localhost:3210",
+  "rounds": [
+    {
+      "round": 1,
+      "question": "Under King Edward III's 1363 English sumptuary laws, what luxury material was strictly illegal for anyone below the rank of knight to wear?",
+      "category": "Uncanny laws",
+      "truth": "Expensive furs (such as ermine and miniver), reserved exclusively for the royal family and high nobility.",
+      "source": "https://www.britannica.com/topic/dress-clothing/Government-regulation-of-dress",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 3,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 1,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "question": "What did the Aberdeen Bestiary claim a boas was stealing from cattle?",
+      "category": "Mythical beasts",
+      "truth": "Milk: the huge snake supposedly fastened onto their udders and sucked.",
+      "source": "https://www.abdn.ac.uk/bestiary/ms24/f69r",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 6,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 4,
+          "gained": 3
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "question": "What unusual attraction brings visitors to Kentucky's Cumberland Falls after dark?",
+      "category": "Weather anomalies",
+      "truth": "A rainbow made by moonlight shining through the waterfall's mist.",
+      "source": "https://explorekyhistory.ky.gov/items/show/727",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 9,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 5,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "question": "What is Walter De Maria's 1977 New Mexico desert installation 'The Lightning Field' physically composed of?",
+      "category": "Art & music",
+      "truth": "A grid of 400 polished stainless steel poles spaced across a high desert plateau.",
+      "source": "https://www.diaart.org/visit/visit-our-locations-sites/walter-de-maria-the-lightning-field",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 12,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 6,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "question": "Why could letters reach New York before anyone on the liner carrying them was allowed ashore?",
+      "category": "Transport follies",
+      "truth": "Special mail boats collected the letters while the liner’s passengers and crew were still undergoing quarantine inspections.",
+      "source": "https://postalmuseum.si.edu/exhibition/customers-and-communities-serving-the-cities-overcoming-congestion/harbor-mail-boat",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 15,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 7,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "question": "A guest is offered 'cat lap' in the slang of 1811. What is actually being served?",
+      "category": "Linguistic gems",
+      "truth": "Tea, also nicknamed 'scandal broth'.",
+      "source": "https://www.gutenberg.org/cache/epub/5402/pg5402-images.html",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 18,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 8,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Three independent guest identities join by code; real Parlor QR invitation renders in the lobby.",
+    "Unauthenticated room game read rejected; writing hides truth, source, and options.",
+    "Explicit host departure transfers host to Bea; rejoining Ada keeps identity, scores, and match eligibility.",
+    "Late joiner can watch but cannot submit; immutable three-player eligibility preserved.",
+    "Phone network interruption and reload preserve the same player and current turn.",
+    "Six rounds have authoritative expected scores18/8/0, private shuffled choices, duplicate-bluff attribution, rejected self-votes, and idempotent submission retries.",
+    "Rematch includes former spectator, resets all scores, draws unseen content, and fits390px screens without horizontal overflow."
+  ],
+  "screenshots": [
+    "front-door-desktop.png",
+    "front-door-phone.png",
+    "lobby-desktop.png",
+    "presence-initial-writing.png",
+    "writing-phone.png",
+    "voting-phone.png",
+    "reveal-desktop.png",
+    "reveal-phone.png",
+    "host-change-phone.png",
+    "offline-phone.png",
+    "final-standings-desktop.png",
+    "final-standings-phone.png",
+    "presence-rematch.png",
+    "rematch-phone.png"
+  ],
+  "browserSecurity": {
+    "secureContext": true,
+    "randomUuidAvailable": true,
+    "randomValuesAvailable": true
+  },
+  "presenceProbes": [
+    {
+      "label": "initial",
+      "source": "candidate",
+      "evidenceAgeMs": 18047,
+      "heldBeats": 1,
+      "visibility": "visible",
+      "result": "3 participants; Cy playing"
+    },
+    {
+      "label": "rematch",
+      "source": "candidate",
+      "evidenceAgeMs": 18058,
+      "heldBeats": 2,
+      "visibility": "visible",
+      "result": "4 participants; Cy playing",
+      "participantIds": [
+        "k17fbgeaxpvyn31qtbcnfcnv4x8gqadc",
+        "k17fsjknk7mr7gwbpne90n2a1h8gp6yp",
+        "k177tkh6zy4dfr2vd8ckry8fdh8gpzy8",
+        "k1778dmancvdmmayz5ez36txrd8gqrjb"
+      ]
+    }
+  ],
+  "finalScores": [
+    {
+      "name": "Ada",
+      "score": 18
+    },
+    {
+      "name": "Bea",
+      "score": 8
+    },
+    {
+      "name": "Cy",
+      "score": 0
+    }
+  ],
+  "completedAt": "2026-10-21T04:31:33.925Z",
+  "result": "passed"
+}

@@ -1,0 +1,222 @@
+{
+  "sourceRevision": "9f33d2ddf38e7d4bf86ed6a09a60e2e9479e0e8b",
+  "parlorRevision": "2b8c5c4114368e40905232a733c4193e22baee03",
+  "startedAt": "2026-10-21T04:29:07.066Z",
+  "origin": "http://localhost:3210",
+  "rounds": [
+    {
+      "round": 1,
+      "question": "Why did miners killed in ancient collapses at Iran's Chehrabad mine become naturally mummified?",
+      "category": "Underground worlds",
+      "truth": "The surrounding salt drew water from their bodies and preserved them.",
+      "source": "https://www.nationalgeographic.com/science/article/natural-mummies-accident",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 3,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 1,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "question": "In 20th-century British coal mines, why did miners carry a specialized airtight brass cage equipped with a small gas cylinder?",
+      "category": "Working lives",
+      "truth": "To revive their sentinel canary with oxygen when it collapsed from toxic gas.",
+      "source": "https://collection.sciencemuseumgroup.org.uk/objects/co8412250/cage-for-reviving-canary",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 6,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 4,
+          "gained": 3
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "question": "Where must the leather tube end up for a side to win the Haxey Hood?",
+      "category": "Peculiar sports",
+      "truth": "At that side’s pub.",
+      "source": "https://www.bbc.co.uk/news/uk-england-humber-67905947",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 9,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 5,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "question": "How did Naples's police minister try to destroy the Carbonari after the Bourbon restoration?",
+      "category": "Secret societies",
+      "truth": "He founded a rival secret society and recruited brigands to attack suspected revolutionaries.",
+      "source": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Carbonari",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 12,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 6,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "question": "What unglamorous raw material supplied the prestigious dye made at ancient Tyre?",
+      "category": "Ancient secrets",
+      "truth": "A secretion from certain sea snails.",
+      "source": "https://www.britannica.com/animal/murex-mollusk-family",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 15,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 7,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "question": "What did physicists Andre Geim and Michael Berry persuade a magnet to do in the work that won their 2000 Ig Nobel Prize?",
+      "category": "Scholarly follies",
+      "truth": "Levitate a frog, leaving the animal suspended in midair without strings.",
+      "source": "https://improbable.com/ig/winners/#ig2000",
+      "scores": [
+        {
+          "name": "Ada",
+          "score": 18,
+          "gained": 3
+        },
+        {
+          "name": "Bea",
+          "score": 8,
+          "gained": 1
+        },
+        {
+          "name": "Cy",
+          "score": 0,
+          "gained": 0
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "Three independent guest identities join by code; real Parlor QR invitation renders in the lobby.",
+    "Unauthenticated room game read rejected; writing hides truth, source, and options.",
+    "Explicit host departure transfers host to Bea; rejoining Ada keeps identity, scores, and match eligibility.",
+    "Late joiner can watch but cannot submit; immutable three-player eligibility preserved.",
+    "Phone network interruption and reload preserve the same player and current turn.",
+    "Six rounds have authoritative expected scores18/8/0, private shuffled choices, duplicate-bluff attribution, rejected self-votes, and idempotent submission retries.",
+    "Rematch includes former spectator, resets all scores, draws unseen content, and fits390px screens without horizontal overflow."
+  ],
+  "screenshots": [
+    "front-door-desktop.png",
+    "front-door-phone.png",
+    "lobby-desktop.png",
+    "presence-initial-rejected.png",
+    "presence-initial-writing.png",
+    "writing-phone.png",
+    "voting-phone.png",
+    "reveal-desktop.png",
+    "reveal-phone.png",
+    "host-change-phone.png",
+    "offline-phone.png",
+    "final-standings-desktop.png",
+    "final-standings-phone.png",
+    "presence-rematch.png",
+    "rematch-phone.png"
+  ],
+  "browserSecurity": {
+    "secureContext": true,
+    "randomUuidAvailable": true,
+    "randomValuesAvailable": true
+  },
+  "presenceProbes": [
+    {
+      "label": "initial",
+      "source": "base",
+      "evidenceAgeMs": 18058,
+      "heldBeats": 1,
+      "visibility": "visible",
+      "result": "start rejected; no frozen roster"
+    },
+    {
+      "label": "rematch",
+      "source": "base",
+      "evidenceAgeMs": 18069,
+      "heldBeats": 2,
+      "visibility": "visible",
+      "result": "3 participants; Cy excluded",
+      "participantIds": [
+        "k17a94s0hcey6nnhxpjs9gqjpx8gqf03",
+        "k17bpe8d16rgqj3kms4gjvt8vh8gqkn1",
+        "k17160wbwfq8ztzte74janpnr98gpx3v"
+      ]
+    }
+  ],
+  "finalScores": [
+    {
+      "name": "Ada",
+      "score": 18
+    },
+    {
+      "name": "Bea",
+      "score": 8
+    },
+    {
+      "name": "Cy",
+      "score": 0
+    }
+  ],
+  "completedAt": "2026-10-21T04:30:15.144Z",
+  "result": "passed"
+}

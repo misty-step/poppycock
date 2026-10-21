@@ -1,0 +1,9 @@
+
+ RUN  v5.0.0 /Users/phaedrus/Documents/Codex/2026-10-20/task-7/poppycock
+
+
+ Test Files  1 passed (1)
+      Tests  6 passed | 10 skipped (16)
+   Start at  23:26:33
+   Duration  2.30s (tests 94%, import 4%, transform 2%)
+
