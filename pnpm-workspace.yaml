@@ -6,3 +6,5 @@ allowBuilds:
   esbuild: true
   sharp: true
   workerd: true
+overrides:
+  sharp: 0.35.5
