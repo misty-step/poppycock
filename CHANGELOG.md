@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.4.0](https://github.com/misty-step/poppycock/compare/v1.3.0...v1.4.0) (2026-10-23)
+
+
+### Features
+
+* prepare Poppycock Cloudflare backend migration ([#15](https://github.com/misty-step/poppycock/issues/15)) ([855170b](https://github.com/misty-step/poppycock/commit/855170b05669180d9d3a14327a9b2585757fa89c))
+* switch party gameplay to the Cloudflare backend ([#17](https://github.com/misty-step/poppycock/issues/17)) ([195ec7f](https://github.com/misty-step/poppycock/commit/195ec7f55782a9aa3525c241879e57b6604c6cfd))
+
+
+### Bug Fixes
+
+* adopt bounded Parlor presence grace ([#21](https://github.com/misty-step/poppycock/issues/21)) ([9b9f2c0](https://github.com/misty-step/poppycock/commit/9b9f2c0c33ee87f11b9c2f98259fc67eaf922cf0))
+* **deps:** patch Next.js for October 14 2026 security advisories ([#22](https://github.com/misty-step/poppycock/issues/22)) ([beac562](https://github.com/misty-step/poppycock/commit/beac5629f8b7a078f69a83989de3e498ed9db5ce))
+* recover first-visit guest acquisition from Reconnect ([#24](https://github.com/misty-step/poppycock/issues/24)) ([25f5dd6](https://github.com/misty-step/poppycock/commit/25f5dd61f6e1100c54f15ea66ada79aa5ffd1010)), closes [#23](https://github.com/misty-step/poppycock/issues/23)
+
 ## [1.3.0](https://github.com/misty-step/poppycock/compare/v1.2.0...v1.3.0) (2026-10-15)
 
 
