@@ -107,9 +107,25 @@ async function production() {
   const page = await context.newPage();
   evidencePage = page;
   page.setDefaultTimeout(15000);
-  stage = "production guest acquisition through rendered entrance";
+  stage = "production guest acquisition recovery through rendered Reconnect";
+  await page.route("**/api/guest", (route) => route.abort("failed"), { times: 1 });
   await page.goto(live);
+  const reconnect = page.getByRole("button", { name: "Reconnect", exact: true });
+  await expect(reconnect).toBeVisible();
+  assert.equal((await context.cookies()).length, 0);
+  await capture(page, "guest-acquire-interrupted");
+  const issuance = page.waitForResponse(
+    (response) => response.url() === `${live}/api/guest` && response.request().method() === "POST",
+  );
+  await reconnect.click();
+  const response = await issuance;
+  assert.deepEqual(response.request().postDataJSON(), { mode: "acquire" });
+  assert.equal(response.status(), 200);
+  await expect(reconnect).toBeHidden();
   await expect(page.getByLabel("Your name")).toBeVisible();
+  check(
+    "First guest request fails without a cookie; rendered Reconnect acquires a session without reload",
+  );
   const identity = () =>
     page.evaluate(() => {
       const credential = JSON.parse(localStorage.getItem("poppycock:credential"));

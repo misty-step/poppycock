@@ -145,7 +145,7 @@ export default function Home() {
       {Boolean(guest.error) && (
         <div className="mt-5 space-y-3">
           <ErrorNotice message={gameError(guest.error)} />
-          <Button variant="outline" onClick={() => void guest.refresh().catch(() => {})}>
+          <Button variant="outline" onClick={() => void guest.acquire().catch(() => {})}>
             Reconnect
           </Button>
         </div>

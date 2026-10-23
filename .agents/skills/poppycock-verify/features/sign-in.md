@@ -6,6 +6,7 @@ preserves the same identity across access-token refresh and page reloads.
 ## Sub-features
 
 - `sign-in` obtains a real deployed guest session and renders the entrance.
+- `retry-acquisition` recovers an interrupted first guest request without a reload.
 - `continuity` recovers the same identity after losing cached access credentials.
 - `reject-identity` rejects supplied identity, wrong origin, and invalid cookies.
 - `expired-session` enforces signed expiry and the continuity requirement.
@@ -21,6 +22,7 @@ preserves the same identity across access-token refresh and page reloads.
 Preconditions: production doctor passes; the local smoke has its isolated runtime.
 
 - **Real session.** Run `.agents/skills/poppycock-verify/scripts/control.mjs production test-results/sign-in-NEW`. The actual page renders `Your name` after guest acquisition; a Secure, HttpOnly, SameSite=Lax cookie exists.
+- **Interrupted first visit.** The production command and `pnpm smoke:local` abort only the first guest request in a fresh browser context, confirm no continuity cookie was set, then click the rendered Reconnect button. The retry must use acquisition and reach `Your name` without a reload. Room recovery still requires refresh with identity continuity.
 - **Recovery.** The same command removes only cached access credentials and reloads. The new credential has the same guest ID, and no room is created. Receipt records booleans/outcomes, never the identity or credential.
 - **Denied states.** The same command attempts refresh without a cookie (401), injected guest ID (400), wrong origin (403), and an invalid continuity signature (401).
 - **Usable seat.** Run `pnpm smoke:local`. Three distinct guests create/join a real local table, make accepted submissions/votes, and receive authorized projections. An unauthenticated room read fails.
