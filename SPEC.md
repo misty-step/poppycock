@@ -18,6 +18,8 @@ Criteria:
    start a match.
 3. IF fewer than three players are present, THEN THE SYSTEM SHALL refuse
    to start.
+4. IF initial guest access is interrupted, THEN THE SYSTEM SHALL let the visitor
+   retry and reach table creation without reloading or clearing browser data.
 
 No-gos: no accounts, payments, or AI service required to play.
 

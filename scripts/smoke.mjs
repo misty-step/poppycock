@@ -148,7 +148,30 @@ try {
     const page = await context.newPage();
     page.setDefaultTimeout(15000);
     players[name] = { context, page };
+    if (name === "Ada") {
+      await page.route("**/api/guest", (route) => route.abort("failed"), { times: 1 });
+    }
     await page.goto(base);
+    if (name === "Ada") {
+      const reconnect = page.getByRole("button", { name: "Reconnect", exact: true });
+      await expect(reconnect).toBeVisible();
+      expect((await context.cookies()).some((cookie) => cookie.name.includes("continuity"))).toBe(
+        false,
+      );
+      await capture("Ada", "guest-acquire-interrupted.png");
+      const issuance = page.waitForResponse(
+        (response) =>
+          response.url() === `${base}/api/guest` && response.request().method() === "POST",
+      );
+      await reconnect.click();
+      const response = await issuance;
+      expect(response.request().postDataJSON()).toEqual({ mode: "acquire" });
+      expect(response.status()).toBe(200);
+      await expect(reconnect).toBeHidden();
+      report.checks.push(
+        "First guest request fails before a cookie is set; Reconnect acquires a real session without reloading.",
+      );
+    }
     await expect(page.getByLabel("Your name")).toBeVisible();
   }
   report.browserSecurity = await players.Ada.page.evaluate(() => ({
