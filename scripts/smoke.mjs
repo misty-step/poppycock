@@ -133,6 +133,45 @@ async function voteFor(name, text) {
     .toBe(true);
 }
 
+async function firstVisitGuestRecovery(context, page) {
+  const isGuestRequest = (request) =>
+    new URL(request.url()).pathname === "/api/guest" && request.method() === "POST";
+  const continuityCookies = async () =>
+    (await context.cookies(base)).filter((cookie) => /poppycock-continuity$/u.test(cookie.name));
+  let interrupted = true;
+  let aborted = 0;
+  await context.route("**/api/guest", (route) => {
+    if (!interrupted) return route.continue();
+    aborted += 1;
+    return route.abort("connectionfailed");
+  });
+  await page.goto(base);
+  const reconnect = page.getByRole("button", { name: "Reconnect", exact: true });
+  await expect(reconnect).toBeVisible();
+  expect(aborted).toBeGreaterThan(0);
+  expect(await continuityCookies()).toEqual([]);
+  expect(await page.evaluate(() => localStorage.getItem("poppycock:credential"))).toBeNull();
+  await capture("Ada", "guest-interrupted-desktop.png");
+  interrupted = false;
+  const navigations = [];
+  page.on("framenavigated", (frame) => navigations.push(frame.url()));
+  const [response] = await Promise.all([
+    page.waitForResponse((candidate) => isGuestRequest(candidate.request())),
+    reconnect.click(),
+  ]);
+  expect(response.status()).toBe(200);
+  await expect(page.getByLabel("Your name")).toBeVisible();
+  await expect(reconnect).toHaveCount(0);
+  expect(navigations).toEqual([]);
+  expect(await continuityCookies()).toHaveLength(1);
+  expect(await page.evaluate(() => localStorage.getItem("poppycock:credential"))).not.toBeNull();
+  await context.unroute("**/api/guest");
+  await capture("Ada", "guest-recovered-desktop.png");
+  report.checks.push(
+    "First-visit guest request failed with no continuity cookie; Reconnect acquired the first session without reload and reached table creation.",
+  );
+}
+
 try {
   for (const name of ["Ada", "Bea", "Cy", "Dax"]) {
     const context = await browser.newContext({
@@ -148,7 +187,8 @@ try {
     const page = await context.newPage();
     page.setDefaultTimeout(15000);
     players[name] = { context, page };
-    await page.goto(base);
+    if (name === "Ada") await firstVisitGuestRecovery(context, page);
+    else await page.goto(base);
     await expect(page.getByLabel("Your name")).toBeVisible();
   }
   report.browserSecurity = await players.Ada.page.evaluate(() => ({

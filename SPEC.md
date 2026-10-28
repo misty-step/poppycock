@@ -18,10 +18,13 @@ Criteria:
    start a match.
 3. IF fewer than three players are present, THEN THE SYSTEM SHALL refuse
    to start.
+4. IF a first visitor's guest request fails before any credential exists, THEN
+   THE SYSTEM SHALL show Reconnect, and Reconnect SHALL acquire the first guest
+   session without a reload.
 
 No-gos: no accounts, payments, or AI service required to play.
 
-Evidence: `tests/game.test.ts`
+Evidence: `tests/game.test.ts`, `scripts/smoke.mjs`
 
 ## Capability: Round
 
