@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   check:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, hetzner-ci, poppycock-ci]
     timeout-minutes: 20
     env:
       CI: "true"
@@ -118,7 +118,7 @@ jobs:
     concurrency:
       group: backend-preview
       cancel-in-progress: false
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, hetzner-ci, poppycock-ci]
     timeout-minutes: 20
     env:
       CI: "true"
@@ -178,7 +178,7 @@ jobs:
     concurrency:
       group: production
       cancel-in-progress: false
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, hetzner-ci, poppycock-ci]
     timeout-minutes: 15
     permissions:
       contents: read

@@ -6,7 +6,7 @@ permissions:
   contents: read
 jobs:
   title:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, hetzner-ci, poppycock-ci]
     steps:
       - name: Conventional title is the release input
         env:

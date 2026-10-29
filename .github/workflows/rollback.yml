@@ -14,7 +14,7 @@ concurrency:
 jobs:
   rollback:
     if: github.ref == 'refs/heads/master'
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, hetzner-ci, poppycock-ci]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
