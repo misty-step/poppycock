@@ -22,8 +22,10 @@ jobs:
       github.event_name == 'workflow_dispatch' ||
       (github.event.workflow_run.event == 'push' &&
        github.event.workflow_run.conclusion == 'success')
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, hetzner-ci, poppycock-ci]
     steps:
+      - name: Install GitHub CLI
+        run: sudo apt-get update && sudo apt-get install -y gh
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
